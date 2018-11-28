@@ -1,0 +1,33 @@
+---
+---
+
+@import "minima";
+
+footer p {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.wrapper {
+    max-width: calc(1200px - (30px * 2))
+}
+
+.sidebar {
+    float: right;
+    padding: 15px;
+    margin: 0 15px 15px 15px;
+    border: 1px solid #aaa;
+    font-size: .9em;
+
+    p {
+        margin: 5px 0;
+        padding: 0;
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+.post-content h2 {
+    clear: both;
+}

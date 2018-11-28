@@ -7,7 +7,7 @@ Analytics stored in CAR contain the following information:
 * a *hypothesis* which explains the idea behind the analytic
 * the *information domain* or the primary domain the analytic is designed to operate within (e.g. host, network, process, external)
 * references to [ATT&CK](https://attack.mitre.org/) Techniques and Tactics that the analytic detexts
-* the [Glossary](Glossary.md)
+* the [Glossary](Glossary)
 * a pseudocode description of how the analytic might be implemented
 * a unit test which can be run to trigger the analytic
 
@@ -23,4 +23,4 @@ CAR is intended to be shared with cyber-defenders throughout the community.
 
 ## Contributing
 
-We would love your contributions, ideally via a pull request. Please see the [Contribution Guidance](CONTRIBUTING.md) for more information.
+We would love your contributions, ideally via a pull request. Please see the [Contribution Guidance](CONTRIBUTING) for more information.

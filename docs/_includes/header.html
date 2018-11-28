@@ -1,0 +1,17 @@
+<header class="site-header">
+    <a href="https://github.com/mitre-attack/car"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <div class="wrapper">
+      {%- assign default_paths = site.pages | map: "path" -%}
+      {%- assign page_paths = site.header_pages | default: default_paths -%}
+      {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+      <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+  
+        <nav class="site-nav">  
+          <div class="trigger">
+              <a class="page-link" href="{{ "/analytics" | relative_url }}">Analytics</a>
+              <a class="page-link" href="{{ "/data_model" | relative_url }}">Data Model</a>
+              <a class="page-link" href="{{ "/sensors" | relative_url }}">Sensors</a>
+          </div>
+        </nav>
+    </div>
+  </header>
