@@ -1,0 +1,1 @@
+Note: The data files in this directory are legacy -- they just serve to keep CARET running while we update our infrastructure to leverage structured data formats. Please do not write new code that depends on them!

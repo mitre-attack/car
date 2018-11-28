@@ -1,0 +1,235 @@
+{
+    "objects": [
+        {
+            "name": [
+                "driver"
+            ],
+            "fields": [
+                "base_address",
+                "fqdn",
+                "hostname",
+                "image_path",
+                "md5_hash",
+                "module_name",
+                "sha1_hash",
+                "sha256_hash",
+                "signer"
+            ],
+            "actions": [
+                "load",
+                "unload"
+            ]
+        },
+        {
+            "name": [
+                "file"
+            ],
+            "fields": [
+                "creation_time",
+                "file_name",
+                "fqdn",
+                "hostname",
+                "image_path",
+                "md5_hash",
+                "pid",
+                "ppid",
+                "previous_creation_time",
+                "signer",
+                "sha1_hash",
+                "sha256_hash",
+                "user",
+                "company",
+                "file_path"
+            ],
+            "actions": [
+                "timestomp",
+                "create",
+                "delete",
+                "modify",
+                "read",
+                "write"
+            ]
+        },
+        {
+            "name": [
+                "flow"
+            ],
+            "fields": [
+                "content",
+                "dest_fqdn",
+                "dest_hostname",
+                "dest_ip",
+                "dest_port",
+                "end_time",
+                "exe",
+                "flags",
+                "fqdn",
+                "hostname",
+                "image_path",
+                "packet_count",
+                "pid",
+                "ppid",
+                "proto_info",
+                "protocol",
+                "src_fqdn",
+                "src_hostname",
+                "src_ip",
+                "src_port",
+                "start_time",
+                "user"
+            ],
+            "actions": [
+                "end",
+                "message",
+                "start"
+            ]
+        },
+        {
+            "name": [
+                "module"
+            ],
+            "fields": [
+                "base_address",
+                "fqdn",
+                "hostname",
+                "image_path",
+                "md5_hash",
+                "module_path",
+                "module_name",
+                "pid",
+                "sha1_hash",
+                "sha256_hash",
+                "signer",
+                "tid"
+            ],
+            "actions": [
+                "load",
+                "unload"
+            ]
+        },
+        {
+            "name": [
+                "process"
+            ],
+            "fields": [
+                "command_line",
+                "exe",
+                "fqdn",
+                "hostname",
+                "image_path",
+                "md5_hash",
+                "parent_exe",
+                "parent_image_path",
+                "pid",
+                "ppid",
+                "sha1_hash",
+                "sha256_hash",
+                "sid",
+                "signer",
+                "user"
+            ],
+            "actions": [
+                "create",
+                "terminate"
+            ]
+        },
+        {
+            "name": [
+                "registry"
+            ],
+            "fields": [
+                "hostname",
+                "key",
+                "value",
+                "data",
+                "type",
+                "hive",
+                "image_path",
+                "pid",
+                "fqdn",
+                "user"
+            ],
+            "actions": [
+                "add",
+                "edit",
+                "remove"
+            ]
+        },
+        {
+            "name": [
+                "service"
+            ],
+            "fields": [
+                "command_line",
+                "exe",
+                "fqdn",
+                "hostname",
+                "image_path",
+                "name",
+                "ppid",
+                "pid",
+                "user"
+            ],
+            "actions": [
+                "create",
+                "delete",
+                "pause",
+                "start",
+                "stop"
+            ]
+        },
+        {
+            "name": [
+                "thread"
+            ],
+            "fields": [
+                "hostname",
+                "src_pid",
+                "src_tid",
+                "stack_base",
+                "stack_limit",
+                "start_address",
+                "subprocess_tag",
+                "tgt_pid",
+                "tgt_tid",
+                "user",
+                "user_stack_base",
+                "user_stack_limit",
+                "start_function",
+                "start_module",
+                "start_module_name"
+            ],
+            "actions": [
+                "create",
+                "suspend",
+                "terminate",
+                "remote_create"
+            ]
+        },
+        {
+            "name": [
+                "user_session"
+            ],
+            "fields": [
+                "dest_ip",
+                "dest_port",
+                "hostname",
+                "logon_id",
+                "src_ip",
+                "src_port",
+                "user"
+            ],
+            "actions": [
+                "interactive",
+                "local",
+                "lock",
+                "login",
+                "logout",
+                "rdp",
+                "reconnect",
+                "remote",
+                "unlock"
+            ]
+        }
+    ]
+}

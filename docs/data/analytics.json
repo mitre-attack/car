@@ -1,0 +1,1248 @@
+{
+    "analytics": [
+        {
+            "fields": [],
+            "attack": [
+                {
+                    "tactics": [
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1103",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1084",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1060",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1044",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1034",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1031",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1042",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1015",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1050",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1037",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Execution",
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1112",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1053",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1004",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Execution",
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1058",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1013",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Autorun Differences",
+            "name": "CAR-2013-01-002"
+        },
+        {
+            "fields": [
+                "flow/message/dest_port",
+                "flow/message/proto_info"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1078",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Exfiltration"
+                    ],
+                    "technique": "Technique/T1039",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1077",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "SMB Events Monitoring",
+            "name": "CAR-2013-01-003"
+        },
+        {
+            "fields": [
+                "process/create/exe",
+                "process/create/parent_exe"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Execution"
+                    ],
+                    "technique": "Technique/T1059",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Processes Spawning cmd.exe",
+            "name": "CAR-2013-02-003"
+        },
+        {
+            "fields": [
+                "user_session/login/user",
+                "user_session/login/hostname"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1078",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Simultaneous Logins on a Host",
+            "name": "CAR-2013-02-008"
+        },
+        {
+            "fields": [],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1078",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "User Logged in to Multiple Hosts",
+            "name": "CAR-2013-02-012"
+        },
+        {
+            "fields": [
+                "process/create/command_line",
+                "process/create/hostname",
+                "process/create/exe",
+                "process/create/parent_exe",
+                "process/create/pid",
+                "process/create/ppid"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1012",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1112",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1060",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1058",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Reg.exe called from Command Shell",
+            "name": "CAR-2013-03-001"
+        },
+        {
+            "fields": [
+                "process/create/hostname",
+                "process/create/ppid",
+                "process/create/exe"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1050",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1089",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1087",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1049",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Execution",
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1053",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1031",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Credential Access"
+                    ],
+                    "technique": "Technique/T1098",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Credential Access"
+                    ],
+                    "technique": "Technique/T1003",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1016",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Exfiltration"
+                    ],
+                    "technique": "Technique/T1029",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1112",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1054",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1069",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1010",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1033",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1058",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Execution"
+                    ],
+                    "technique": "Technique/T1059",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1057",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1063",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1007",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1018",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1012",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1077",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1046",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1082",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1035",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Quick execution of a series of suspicious commands",
+            "name": "CAR-2013-04-002"
+        },
+        {
+            "fields": [
+                "process/create/image_path"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1036",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Suspicious Run Locations",
+            "name": "CAR-2013-05-002"
+        },
+        {
+            "fields": [
+                "flow/message/proto_info",
+                "flow/message/dest_port"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1105",
+                    "coverage": "Complete"
+                },
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1077",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Defense Evasion",
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1078",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "SMB Write Request",
+            "name": "CAR-2013-05-003"
+        },
+        {
+            "fields": [
+                "process/create/command_line",
+                "process/create/exe"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Execution",
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1053",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Execution with AT",
+            "name": "CAR-2013-05-004"
+        },
+        {
+            "fields": [
+                "process/create/image_path",
+                "flow/message/proto_info",
+                "process/create/hostname"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Defense Evasion",
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1078",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1105",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1077",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "SMB Copy and Execution",
+            "name": "CAR-2013-05-005"
+        },
+        {
+            "fields": [
+                "process/create/exe",
+                "process/create/md5_hash"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1036",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Running executables with same hash and different names",
+            "name": "CAR-2013-05-009"
+        },
+        {
+            "fields": [
+                "process/create/command_line",
+                "process/create/exe"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1021",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Command and Control",
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1105",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Credential Access"
+                    ],
+                    "technique": "Technique/T1003",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1036",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Suspicious Arguments",
+            "name": "CAR-2013-07-001"
+        },
+        {
+            "fields": [
+                "flow/start/src_ip",
+                "flow/start/dest_ip",
+                "flow/start/dest_port",
+                "flow/end/dest_port"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1076",
+                    "coverage": "Complete"
+                }
+            ],
+            "shortName": "RDP Connection Detection",
+            "name": "CAR-2013-07-002"
+        },
+        {
+            "fields": [
+                "process/create/command_line"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Exfiltration"
+                    ],
+                    "technique": "Technique/T1002",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Command Line Usage of Archiving Software",
+            "name": "CAR-2013-07-005"
+        },
+        {
+            "fields": [
+                "process/create/exe",
+                "process/create/command_line"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1053",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Execution with schtasks",
+            "name": "CAR-2013-08-001"
+        },
+        {
+            "fields": [
+                "flow/message/proto_info",
+                "flow/message/dest_port",
+                "flow/message/protocol"
+            ],
+            "attack": [],
+            "shortName": "SMB Session Setups",
+            "name": "CAR-2013-09-003"
+        },
+        {
+            "fields": [
+                "process/create/parent_image_path"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1050",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1031",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Service Outlier Executables",
+            "name": "CAR-2013-09-005"
+        },
+        {
+            "fields": [],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1076",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1078",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "User Login Activity Monitoring",
+            "name": "CAR-2013-10-001"
+        },
+        {
+            "fields": [
+                "thread/remote_create/start_function",
+                "thread/remote_create/src_pid"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1055",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1088",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "DLL Injection via Load Library",
+            "name": "CAR-2013-10-002"
+        },
+        {
+            "fields": [
+                "file/create/file_path",
+                "process/create/parent_exe",
+                "process/create/image_path",
+                "file/create/image_path"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1050",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence"
+                    ],
+                    "technique": "Technique/T1031",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1044",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Execution",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1035",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Service Binary Modifications",
+            "name": "CAR-2014-02-001"
+        },
+        {
+            "fields": [
+                "flow/message/proto_info",
+                "flow/start/dest_port"
+            ],
+            "attack": [],
+            "shortName": "SMB Write Request - NamedPipes",
+            "name": "CAR-2014-03-001"
+        },
+        {
+            "fields": [
+                "process/create/parent_exe",
+                "flow/start/pid",
+                "process/create/pid"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Execution"
+                    ],
+                    "technique": "Technique/T1031",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Execution"
+                    ],
+                    "technique": "Technique/T1035",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Execution"
+                    ],
+                    "technique": "Technique/T1050",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Remotely Launched Executables via Services",
+            "name": "CAR-2014-03-005"
+        },
+        {
+            "fields": [
+                "process/create/exe",
+                "process/create/command_line"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1085",
+                    "coverage": "Complete"
+                }
+            ],
+            "shortName": "RunDLL32.exe monitoring",
+            "name": "CAR-2014-03-006"
+        },
+        {
+            "fields": [
+                "process/create/exe",
+                "process/create/parent_exe"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1086",
+                    "coverage": "Complete"
+                },
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1064",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Powershell Execution",
+            "name": "CAR-2014-04-003"
+        },
+        {
+            "fields": [
+                "flow/start/dest_port",
+                "flow/start/src_port"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1021",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1078",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "RPC Activity",
+            "name": "CAR-2014-05-001"
+        },
+        {
+            "fields": [
+                "process/create/parent_exe",
+                "process/create/exe"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1050",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Services launching Cmd",
+            "name": "CAR-2014-05-002"
+        },
+        {
+            "fields": [
+                "process/create/parent_exe",
+                "process/create/command_line",
+                "process/create/image_path"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1034",
+                    "coverage": "Complete"
+                }
+            ],
+            "shortName": "Service Search Path Interception",
+            "name": "CAR-2014-07-001"
+        },
+        {
+            "fields": [
+                "process/create/exe",
+                "process/create/parent_exe"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Execution"
+                    ],
+                    "technique": "Technique/T1059",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Outlier Parents of Cmd",
+            "name": "CAR-2014-11-002"
+        },
+        {
+            "fields": [
+                "process/create/exe",
+                "process/create/command_line"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Execution",
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1015",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Debuggers for Accessibility Applications",
+            "name": "CAR-2014-11-003"
+        },
+        {
+            "fields": [
+                "process/create/exe",
+                "process/create/parent_exe"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1028",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Execution"
+                    ],
+                    "technique": "Technique/T1086",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Remote PowerShell Sessions",
+            "name": "CAR-2014-11-004"
+        },
+        {
+            "fields": [
+                "flow/message/dest_port",
+                "flow/message/proto_info"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Defense Evasion",
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1112",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Remote Registry",
+            "name": "CAR-2014-11-005"
+        },
+        {
+            "fields": [
+                "flow/start/dest_port"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1028",
+                    "coverage": "Complete"
+                }
+            ],
+            "shortName": "Windows Remote Management (WinRM)",
+            "name": "CAR-2014-11-006"
+        },
+        {
+            "fields": [
+                "flow/message/proto_info"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1047",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Remote Windows Management Instrumentation (WMI) over RPC",
+            "name": "CAR-2014-11-007"
+        },
+        {
+            "fields": [
+                "process/create/parent_exe",
+                "process/create/exe"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Execution",
+                        "Persistence",
+                        "Privilege Escalation"
+                    ],
+                    "technique": "Technique/T1015",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Command Launched from WinLogon",
+            "name": "CAR-2014-11-008"
+        },
+        {
+            "fields": [
+                "flow/message/proto_info",
+                "process/create/parent_exe",
+                "process/create/exe",
+                "process/create/command_line",
+                "flow/message/dest_port",
+                "flow/message/src_port"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Execution"
+                    ],
+                    "technique": "Technique/T1047",
+                    "coverage": "Complete"
+                }
+            ],
+            "shortName": "Remotely Launched Executables via WMI",
+            "name": "CAR-2014-12-001"
+        },
+        {
+            "fields": [
+                "flow/message/proto_info"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Execution"
+                    ],
+                    "technique": "Technique/T1053",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Remotely Scheduled Tasks via AT",
+            "name": "CAR-2015-04-001"
+        },
+        {
+            "fields": [
+                "flow/message/dest_port",
+                "flow/message/src_port",
+                "flow/message/proto_info"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Execution"
+                    ],
+                    "technique": "Technique/T1053",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Remotely Scheduled Tasks via Schtasks",
+            "name": "CAR-2015-04-002"
+        },
+        {
+            "fields": [
+                "user_session/login/user"
+            ],
+            "attack": [],
+            "shortName": "All Logins Since Last Boot",
+            "name": "CAR-2015-07-001"
+        },
+        {
+            "fields": [
+                "process/create/command_line",
+                "process/create/exe"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1016",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1082",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1033",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1057",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1087",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1007",
+                    "coverage": "Partial"
+                },
+                {
+                    "tactics": [
+                        "Discovery"
+                    ],
+                    "technique": "Technique/T1069",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Host Discovery Commands",
+            "name": "CAR-2016-03-001"
+        },
+        {
+            "fields": [
+                "process/create/exe",
+                "process/create/command_line"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Execution"
+                    ],
+                    "technique": "Technique/T1047",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Create Remote Process via WMIC",
+            "name": "CAR-2016-03-002"
+        },
+        {
+            "fields": [],
+            "attack": [
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1054",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "User Activity from Clearing Event Logs",
+            "name": "CAR-2016-04-002"
+        },
+        {
+            "fields": [
+                "service/stop/name"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Defense Evasion"
+                    ],
+                    "technique": "Technique/T1054",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "User Activity from Stopping Windows Defensive Services",
+            "name": "CAR-2016-04-003"
+        },
+        {
+            "fields": [
+                "user session/local/logon type"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1075",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Successful Local Account Login",
+            "name": "CAR-2016-04-004"
+        },
+        {
+            "fields": [
+                "user session/interactive/logon type"
+            ],
+            "attack": [
+                {
+                    "tactics": [
+                        "Lateral Movement"
+                    ],
+                    "technique": "Technique/T1078",
+                    "coverage": "Partial"
+                }
+            ],
+            "shortName": "Remote Desktop Logon",
+            "name": "CAR-2016-04-005"
+        }
+    ]
+}
