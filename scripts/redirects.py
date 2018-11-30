@@ -12,10 +12,7 @@ for redirect in redirects:
     # Make the directory
     origpath = path.join(basedir, *redirect[0].split('/'))
 
-    if 'http' in redirect[1]:
-        targetpath = redirect[1]
-    else:
-        targetpath = "https://github.com/mitre-attack/car/blog/master{}".format(redirect[1])
+    targetpath = redirect[1]
     
     makedirs(origpath, exist_ok=True)
 
