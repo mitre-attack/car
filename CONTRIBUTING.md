@@ -3,7 +3,7 @@ You can help contribute to CAR. We're always on the lookout for new information 
 
 In particular, we're hoping that people can contribute new analytics, updates to the data model, and new sensor mappings.
 
-The best way to do all of that is to [open an issue](https://github.com/mitre-attack/car/issues/new). There are issue templates for analytics, data model additions, and sensor mappings. But first, please read the submission guidelines below!
+The best way to do all of that is to [open an issue](https://github.com/mitre-attack/car/issues/new/choose). There are issue templates for analytics, data model additions, and sensor mappings. But first, please read the submission guidelines below!
 
 ## Submission Guidelines
 

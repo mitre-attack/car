@@ -19,5 +19,5 @@ The other directories in `docs` are used to build the website and you shouldn't 
 ## How do I contribute?
 
 1. Read [CONTRIBUTING.md](CONTRIBUTING.md) to better understand what we're looking for. There's also a Developer Certificate of Origin that you'll need to sign off on.
-2. [Open an issue](issues/new). There are issue templates for adding an analytic, adding to the data model, and adding a new sensor mapping. If you have other changes, feel free to open a generic issue.
+2. [Open an issue](https://github.com/mitre-attack/car/issues/new/choose). There are issue templates for adding an analytic, adding to the data model, and adding a new sensor mapping. If you have other changes, feel free to open a generic issue.
 3. Wait for feedback on your issue. We may ask you for more information, or see what others in the community think. Once the issue is accepted and the change made, car.mitre.org will be automatically updated with your new content.
