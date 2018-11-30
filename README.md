@@ -1,26 +1,23 @@
 # Welcome to the Cyber Analytics Repository
-The Cyber Analytics Repository (CAR) is a knowledge base of analytics developed by [MITRE](https://www.mitre.org MITRE) based on the [MITRE ATT&CK](https://attack.mitre.org/) adversary model.
 
-If you want to start exploring, try viewing the [Full Analytic List](analytics) or use the [CAR Exploration Tool (CARET)](https://mitre-attack.github.io/caret/#/).
+The best way to view the analytics in this repository is via the [CAR website](https://car.mitre.org).
 
-Analytics stored in CAR contain the following information:
-* a *hypothesis* which explains the idea behind the analytic
-* the *information domain* or the primary domain the analytic is designed to operate within (e.g. host, network, process, external)
-* references to [ATT&CK](https://attack.mitre.org/) Techniques and Tactics that the analytic detexts
-* the [Glossary](Glossary)
-* a pseudocode description of how the analytic might be implemented
-* a unit test which can be run to trigger the analytic
+This repository is the way to contribute new analytics, data model changes, or sensor changes. Analytics contributed in this repo are automatically published in CAR.
 
+## Where is everything?
 
-## Methodology
-CAR analytics were developed to detect the adversary behaviors in [ATT&CK](https://attack.mitre.org/). Development of an analytic is based upon the following activities: 
-* identifying and prioritizing adversary behaviors from the ATT&CK adversary model 
-* identifying the data necessary to detect the adversary behavior
-* identification or creation of a sensor to collect the necessary data
-* the actual creation of the analytic to detect the identified behaviors
+Right now, all content in CAR is in the `docs` folder. This is because the car.mitre.org website is built from there. In the future, we hope to have structured content to represent the analytics, data model, and sensors that would then generate the website content. Please let us know if you're interested in helping out with that aspect!
 
-CAR is intended to be shared with cyber-defenders throughout the community.
+In the meantime, here's how to find the source for our content. Within `docs`:
 
-## Contributing
+* **analytics**: Contains the full list of analytics
+* **data_model**: Contains the data model pages
+* **sensors**: Contains the sensor pages
 
-We would love your contributions, ideally via a pull request. Please see the [Contribution Guidance](CONTRIBUTING) for more information.
+The other directories in `docs` are used to build the website and you shouldn't need to worry about them.
+
+## How do I contribute?
+
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md) to better understand what we're looking for. There's also a Developer Certificate of Origin that you'll need to sign off on.
+2. [Open an issue](issues/new). There are issue templates for adding an analytic, adding to the data model, and adding a new sensor mapping. If you have other changes, feel free to open a generic issue.
+3. Wait for feedback on your issue. We may ask you for more information, or see what others in the community think. Once the issue is accepted and the change made, car.mitre.org will be automatically updated with your new content.
