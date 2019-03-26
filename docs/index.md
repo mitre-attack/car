@@ -29,6 +29,10 @@ CAR is intended to be shared with cyber-defenders throughout the community.
 
 It's important to remember that ATT&CK and CAR are separate projects for good reason. It's critical to keep how we articulate threats with ATT&CK separate from a set of possible ways to detect them with the analytics. We don't want the defender content in ATT&CK to be overly prescriptive about how someone can defend against ATT&CK techniques because there could be many different ways, and it's up to the organization implementing them to determine what works best for their environment and the threats they face. This is why we didn't put the analytics in ATT&CK to begin with. CAR is a good starting point for many organizations and can be a great platform for open analytic collaboration - but it isn't the be-all/end-all for defending against the threats described by ATT&CK.
 
+## Analytic Source Code Libraries
+
+Some analytics are built as source code for specific products. In these cases, code might support a broad set of detections in a way that makes it hard to describe a set of distinct analytics. For these types of analytics, rather than integrating them into the main CAR site, we've collected them under a library of implementations. Currently, the only library is [BZAR](https://github.com/mitre-attack/car/tree/master/implementations/bzar), a collection of Zeek (Bro) scripts looking primarily at SMB and RPC traffic.
+
 ## Contributing
 
 We would love your contributions! Please see the [Contribution Guidance]({{ site.contributing }}) for more information.
