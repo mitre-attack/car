@@ -16,6 +16,8 @@ In the meantime, here's how to find the source for our content. Within `docs`:
 
 The other directories in `docs` are used to build the website and you shouldn't need to worry about them.
 
+The [implementations](implementations) directory contains libraries of analytics that are best represented as source code for specific tools. As an example, [BZAR](implementations/bzar) (Bro/Zeek ATT&CK-Based Analytics and Reporting) is a library of source code for Zeek (previously Bro).
+
 ## How do I contribute?
 
 1. Read [CONTRIBUTING.md](CONTRIBUTING.md) to better understand what we're looking for. There's also a Developer Certificate of Origin that you'll need to sign off on.
