@@ -18,9 +18,6 @@ export
 	# 
 	# Relevant ATT&CK Technique(s):
 	#    T1003 Credential Dumping
-	#
-	# Relevant Cyber Analytic(s):
-	#    CAR-2014-05-001 RPC Activity
 
 	const rpc_credential_access : set[string] =
 	{
@@ -38,9 +35,6 @@ export
 	# Relevant ATT&CK Technique(s):
 	#    T1070 Indicator Removal on Host
 	#
-	# Relevant Cyber Analytic(s):
-	#    CAR-2014-05-001 RPC Activity
-	#    CAR-2016-04-002 User Activity from Clearing Event Logs
 
 	const rpc_defense_evasion : set[string] =
 	{
@@ -78,11 +72,6 @@ export
 	#    T1087 Account Discovery
 	#    T1124 System Time Discovery
 	#    T1135 Network Share Discovery
-	#
-	# Relevant Cyber Analytic(s):
-	#    CAR-2013-04-002 Quick Execution Series of Suspicious Commands
-	#    CAR-2014-05-001 RPC Activity
-	#    CAR-2016-03-001 Host Discovery Commands
 
 	const rpc_discovery : set[string] =
 	{
@@ -185,13 +174,6 @@ export
 	#    T1047 Windows Management Instrumentation
 	#    T1053 Scheduled Tasks
 	#
-	# Relevant Cyber Analytic(s):
-	#    CAR-2014-03-005 Remotely Launched Executables via Services
-	#    CAR-2014-05-001 RPC Activity
-	#    CAR-2014-11-007 Remote Windows Management Instrumentation (WMI) over RPC
-	#    CAR-2014-12-001 Remotely Launched Executables via WMI
-	#    CAR-2015-04-001 Remotely Scheduled Tasks via AT
-	#    CAR-2015-04-002 Remotely Scheduled Tasks via Schtasks
 
 	const rpc_execution : set[string] = 
 	{
@@ -222,8 +204,6 @@ export
 	#    T1004 Winlogon Helper DLL
 	#    T1013 Port Monitors
 	#
-	# Relevant Cyber Analytic(s):
-	#    CAR-2014-05-001 RPC Activity
 
 	const rpc_persistence : set[string] = 
 	{

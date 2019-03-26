@@ -20,11 +20,6 @@ export
 	#    T1077 Windows Admin Shares [File Shares Only]
 	#    T1105 Remote File Copy
 	#
-	# Relevant Cyber Analytic(s):
-	#    CAR-2013-01-003: SMB Events Monitoring
-	#    CAR-2013-04-002: Quick Execution Series of Suspicious Commands
-	#    CAR-2013-05-003: SMB Write Request
-	#    CAR-2013-05-005: SMB Copy and Execution
 
 	const smb_admin_file_shares : set[string] = 
 	{

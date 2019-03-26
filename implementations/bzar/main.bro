@@ -87,17 +87,6 @@ event bro_init()
 	#       would confirm the file was actually written to the 
 	#       remote destination.  Unfortuantely, Bro/Zeek does 
 	#       not have an event for that SMB message-type yet.
-	# 
-	# Relevant Cyber Analytic(s):
-	#    CAR-2013-01-003 SMB Events Monitoring
-	#    CAR-2013-05-003 SMB Write Request
-	#    CAR-2013-05-005 SMB Copy and Execution
-	#    CAR-2014-05-001 RPC Activity
-	#    CAR-2015-04-001 Remotely Scheduled Tasks via AT
-	#    CAR-2015-04-002 Remotely Scheduled Tasks via Schtasks
-	#    CAR-2014-03-005 Remotely Launched Executables via Services
-	#    CAR-2014-11-007 Remote Windows Management Instrumentation (WMI) over RPC
-	#    CAR-2014-12-001 Remotely Launched Executables via WMI
 	#
 	# Globals (defined in main.bro above):
 	#    bzar1_epoch
@@ -152,10 +141,6 @@ event bro_init()
 	# Relevant Indicator(s) Detected by Bro/Zeek:
 	#    (a) smb1_tree_connect_andx_request::c$smb_state$path contains ADMIN$ or C$
 	#    (b) smb2_tree_connect_request::c$smb_state$path contains ADMIN$ or C$
-	# 
-	# Relevant Cyber Analytic(s):
-	#    CAR-2013-01-003 SMB Events Monitoring
-	#    CAR-2013-04-002 Quick execution of a series of suspicious commands
 	#
 	# Globals (defined in main.bro above):
 	#    bzar2_epoch
@@ -208,11 +193,6 @@ event bro_init()
 	# Relevant Indicator(s) Detected by Bro/Zeek:
 	#    (a) dce_rpc_response::c$dce_rpc$endpoint + c$dce_rpc$operation contains 
 	#        any of the following: (see BZAR::rpc_dicsovery set).
-	# 
-	# Relevant Cyber Analytic(s):
-	#    CAR-2013-04-002 Quick execution of a series of suspicious commands
-	#    CAR-2014-05-001 RPC Activity
-	#    CAR-2016-03-001 Host Discovery Commands
 	#
 	# Globals (defined in main.bro above):
 	#    bzar3_epoch
