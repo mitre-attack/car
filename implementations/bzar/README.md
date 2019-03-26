@@ -29,8 +29,9 @@ C$ only) is observed together with a DCE-RPC Execution indicator against
 the same (targeted) host, within a specified period of time.
 
 #### Relevant ATT&CK Techniques
-* [T1077 Windows Admin Shares](https://attack.mitre.org/techniques/T1077/) (file shares only, not named pipes)
-* [T1105 Remote File Copy](https://attack.mitre.org/techniques/T1105/) and one of
+* [T1077 Windows Admin Shares](https://attack.mitre.org/techniques/T1077/) (file shares only, not named pipes), and
+* [T1105 Remote File Copy](https://attack.mitre.org/techniques/T1105/), and
+* One of the following:
   * [T1035 Service Execution](https://attack.mitre.org/techniques/T1035/)
   * [T1047 Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047/)
   * [T1053 Scheduled Task](https://attack.mitre.org/techniques/T1053/)
@@ -281,7 +282,7 @@ The BZAR project also adds 1,145 Microsoft DCE-RPC Interface Methods
 
 ## Contributing
 
-Contributions are welcome. This code is licensed under the same terms as the CAR repository. See the [LICENSE](/LICENSE.txt) and Developer Certificate of Origin certification in the [CONTRIBUTING](/CONTRIBUTING.md) file in the root of the repository.
+Contributions are welcome. This code is licensed under the same terms as the CAR repository. See the [LICENSE](LICENSE.txt) file and the Developer Certificate of Origin certification in the [CONTRIBUTING](/CONTRIBUTING.md) file in the root of the repository.
 
 *Copyright 2018 The MITRE Corporation.  All Rights Reserved.  
 Approved for public release.  Distribution unlimited.  Case number 18-2489.*
