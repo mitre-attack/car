@@ -36,7 +36,6 @@ export
 	# overwritten in its entirety, or just a smaller sub-section is
 	# overwritten, which would be an interesting diagnostic to detect.
 
-	redef SMB::write_cmd_log	=  T &redef;
 	redef SMB::logged_file_actions	+= { SMB::FILE_WRITE, } &redef;
 
 	redef record SMB::FileInfo	+= 
@@ -119,7 +118,7 @@ function smb_full_path_and_file_name ( s : SMB::State ) : string
 # SMB1 Event Handlers
 #
 
-event smb1_tree_connect_andx_request(c: connection, hdr: SMB1::Header, path: string, svc: string) &priority=3
+event smb1_tree_connect_andx_request(c: connection, hdr: SMB1::Header, path: string, service: string) &priority=3
 {
 	# Check if SMB Tree Path is an Admin File Share
 
@@ -135,8 +134,7 @@ event smb1_tree_connect_andx_request(c: connection, hdr: SMB1::Header, path: str
 	}
 }
 
-
-event smb1_nt_create_andx_request(c: connection, hdr: SMB1::Header, name: string) &priority=3
+event smb1_nt_create_andx_request(c: connection, hdr: SMB1::Header, file_name: string) &priority=3
 {
 	# Copied this snippet from Bro default handler:
 	# policy/protocols/smb/smb1-main.bro#smb1_write_andx_request.
@@ -248,8 +246,7 @@ event smb2_tree_connect_request(c: connection, hdr: SMB2::Header, path: string) 
 	}
 }
 
-
-event smb2_create_request(c: connection, hdr: SMB2::Header, name: string) &priority=3
+event smb2_create_request(c: connection, hdr: SMB2::Header, request: SMB2::CreateRequest) &priority=3
 {
 	# Copied this snippet from Bro default handler:
 	# policy/protocols/smb/smb1-main.bro#smb1_write_andx_request.
@@ -261,18 +258,16 @@ event smb2_create_request(c: connection, hdr: SMB2::Header, name: string) &prior
 		c$smb_state$current_file$path = c$smb_state$current_tree$path; 
 }
 
-
-event smb2_write_request(c: connection, hdr: SMB2::Header, file_id: SMB2::GUID, offset: count, data_len: count) &priority=3 
+event smb2_write_request(c: connection, hdr: SMB2::Header, file_id: SMB2::GUID, offset: count, length: count) &priority=3
 { 
 	# Keep track of the number of bytes in the Write Response. 
 	# priority==3 ... We want to execute before writing to smb_files.log
 
 	c$smb_state$current_file$data_offset_req = offset;
-	c$smb_state$current_file$data_len_req    = data_len;
+	c$smb_state$current_file$data_len_req    = length;
 } 
 
-
-event smb2_write_request(c: connection, hdr: SMB2::Header, file_id: SMB2::GUID, offset: count, data_len: count) &priority=-7 
+event smb2_write_request(c: connection, hdr: SMB2::Header, file_id: SMB2::GUID, offset: count, length: count)
 {
 	# NOTE: Preference would be to detect 'smb2_write_response' 
 	#       event (instead of 'smb2_write_request'), because it 
