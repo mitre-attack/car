@@ -7,7 +7,7 @@
 # Approved for public release.  Distribution unlimited.  Case number 18-2489.
 #
 
-@load policy/protocols/smb
+@load base/protocols/smb
 @load base/protocols/dce-rpc
 @load base/frameworks/files
 @load base/frameworks/notice
@@ -57,7 +57,7 @@ export
 	const ignore_resp_h : set[addr] = {127.0.0.1,} &redef;
 
 	# Enable/Disable File Extraction
-	const file_extract_option = T &redef; 
+	const file_extract_option = T &redef;
 }
 #end export
 
@@ -67,9 +67,9 @@ event bro_init()
 	# 1- SumStats Analytics for ATT&CK Lateral Movement and Execution
 	#
 	# Description:
-	#    Use SumStats to raise a Bro/Zeek Notice event if an SMB Lateral Movement 
-	#    indicator (e.g., SMB File Write to a Windows Admin File Share: ADMIN$ or 
-	#    C$ only) is observed together with a DCE-RPC Execution indicator against 
+	#    Use SumStats to raise a Bro/Zeek Notice event if an SMB Lateral Movement
+	#    indicator (e.g., SMB File Write to a Windows Admin File Share: ADMIN$ or
+	#    C$ only) is observed together with a DCE-RPC Execution indicator against
 	#    the same (targeted) host, within a specified period of time.
 	#
 	# Relevant ATT&CK Technique(s):
@@ -79,13 +79,13 @@ event bro_init()
 	# Relevant Indicator(s) Detected by Bro/Zeek:
 	#    (a) smb1_write_andx_response::c$smb_state$path contains ADMIN$ or C$
 	#    (b) smb2_write_request::c$smb_state$path contains ADMIN$ or C$ *
-	#    (c) dce_rpc_response::c$dce_rpc$endpoint + c$dce_rpc$operation contains 
+	#    (c) dce_rpc_response::c$dce_rpc$endpoint + c$dce_rpc$operation contains
 	#        any of the following: (see BZAR::rpc_execution set).
-	# 
-	# NOTE: Preference would be to detect 'smb2_write_response' 
-	#       event (instead of 'smb2_write_request'), because it 
-	#       would confirm the file was actually written to the 
-	#       remote destination.  Unfortuantely, Bro/Zeek does 
+	#
+	# NOTE: Preference would be to detect 'smb2_write_response'
+	#       event (instead of 'smb2_write_request'), because it
+	#       would confirm the file was actually written to the
+	#       remote destination.  Unfortuantely, Bro/Zeek does
 	#       not have an event for that SMB message-type yet.
 	#
 	# Globals (defined in main.bro above):
@@ -106,7 +106,7 @@ event bro_init()
 		{
 			return result["attack_lm_ex"]$sum;
 		},
-		$threshold_crossed(key:SumStats::Key, result:SumStats::Result) = 
+		$threshold_crossed(key:SumStats::Key, result:SumStats::Result) =
 		{
 			local r = result["attack_lm_ex"];
 
@@ -114,7 +114,7 @@ event bro_init()
 			# at least one SMB_WRITE was observed
 
 			if ( r$max == 1000 && r$min == 1 )
-			{ 
+			{
 				local s = fmt("Detected activity against host %s, total score %.0f within timeframe %s", key$host, r$sum, bzar1_epoch);
 
 				# Raise Notice
@@ -129,9 +129,9 @@ event bro_init()
 	# 2- SumStats Analytics for ATTACK Lateral Movement (Multiple Attempts)
 	#
 	# Description:
-	#    Use SumStats to raise a Bro/Zeek Notice event if multiple SMB Lateral 
+	#    Use SumStats to raise a Bro/Zeek Notice event if multiple SMB Lateral
 	#    Movement indicators (e.g., multiple attempts to connect to a Windows Admin
-	#    File Share: ADMIN$ or C$ only) are observed originating from the same host, 
+	#    File Share: ADMIN$ or C$ only) are observed originating from the same host,
 	#    regardless of write-attempts and regardless of whether or not any connection
 	#    is successful --just connection attempts-- within a specified period of time.
 	#
@@ -160,7 +160,7 @@ event bro_init()
 		{
 			return result["attack_t1077"]$sum;
 		},
-		$threshold_crossed(key:SumStats::Key, result:SumStats::Result) = 
+		$threshold_crossed(key:SumStats::Key, result:SumStats::Result) =
 		{
 			local s = fmt("Detected T1077 Admin File Share activity from host %s, total attempts %.0f within timeframe %s", key$host, result["attack_t1077"]$sum, bzar2_epoch);
 
@@ -175,15 +175,15 @@ event bro_init()
 	# 3- SumStats Analytics for ATTACK Discovery
 	#
 	# Description:
-	#    Use SumStats to raise a Bro/Zeek Notice event if multiple instances of 
-	#    DCE-RPC Discovery indicators are observed originating from the same host, 
+	#    Use SumStats to raise a Bro/Zeek Notice event if multiple instances of
+	#    DCE-RPC Discovery indicators are observed originating from the same host,
 	#    within a specified period of time.
 	#
 	# Relevant ATT&CK Technique(s):
 	#    T1016 System Network Configuration Discovery
-	#    T1018 Remote System Discovery 
-	#    T1033 System Owner/User Discovery 
-	#    T1069 Permission Groups Discovery 
+	#    T1018 Remote System Discovery
+	#    T1033 System Owner/User Discovery
+	#    T1069 Permission Groups Discovery
 	#    T1082 System Information Discovery
 	#    T1083 File & Directory Discovery
 	#    T1087 Account Discovery
@@ -191,7 +191,7 @@ event bro_init()
 	#    T1135 Network Share Discovery
 	#
 	# Relevant Indicator(s) Detected by Bro/Zeek:
-	#    (a) dce_rpc_response::c$dce_rpc$endpoint + c$dce_rpc$operation contains 
+	#    (a) dce_rpc_response::c$dce_rpc$endpoint + c$dce_rpc$operation contains
 	#        any of the following: (see BZAR::rpc_dicsovery set).
 	#
 	# Globals (defined in main.bro above):
@@ -212,7 +212,7 @@ event bro_init()
 		{
 			return result["attack_discovery"]$sum;
 		},
-		$threshold_crossed(key:SumStats::Key, result:SumStats::Result) = 
+		$threshold_crossed(key:SumStats::Key, result:SumStats::Result) =
 		{
 			local s = fmt("Detected activity from host %s, total attempts %.0f within timeframe %s", key$host, result["attack_discovery"]$sum, bzar3_epoch);
 
