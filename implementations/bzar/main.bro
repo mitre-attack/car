@@ -1,17 +1,27 @@
 #
 # File: main.bro
 # Created: 20180701
-# Updated: 20190225
+# Updated: 20190409
 #
 # Copyright 2018 The MITRE Corporation.  All Rights Reserved.
 # Approved for public release.  Distribution unlimited.  Case number 18-2489.
 #
 
-@load base/protocols/smb
-@load base/protocols/dce-rpc
-@load base/frameworks/files
-@load base/frameworks/notice
-@load base/frameworks/sumstats
+@if ( ver <= 2.5.5 )
+		@load policy/protocols/smb
+		@load base/protocols/dce-rpc
+		@load base/frameworks/files
+		@load base/frameworks/notice
+		@load base/frameworks/sumstats
+@endif
+
+@if ( ver >= 2.6 )
+		@load base/protocols/smb
+		@load base/protocols/dce-rpc
+		@load base/frameworks/files
+		@load base/frameworks/notice
+		@load base/frameworks/sumstats
+@endif
 
 module BZAR;
 
