@@ -1,7 +1,7 @@
 #
 # File: bzar_smb.bro
 # Created: 20180701
-# Updated: 20190225
+# Updated: 20190403
 #
 # Copyright 2018 The MITRE Corporation.  All Rights Reserved.
 # Approved for public release.  Distribution unlimited.  Case number 18-2489.
@@ -19,7 +19,6 @@ export
 	# Relevant ATT&CK Technique(s):
 	#    T1077 Windows Admin Shares [File Shares Only]
 	#    T1105 Remote File Copy
-	#
 
 	const smb_admin_file_shares : set[string] = 
 	{
@@ -36,7 +35,10 @@ export
 	# overwritten in its entirety, or just a smaller sub-section is
 	# overwritten, which would be an interesting diagnostic to detect.
 
+@if ((Version::info$major == 2) && (Version::info$minor <= 5))
+	# Use this syntax for Bro v2.5.x and below
 	redef SMB::write_cmd_log	=  T &redef;
+@endif
 	redef SMB::logged_file_actions	+= { SMB::FILE_WRITE, } &redef;
 
 	redef record SMB::FileInfo	+= 
@@ -249,8 +251,19 @@ event smb2_tree_connect_request(c: connection, hdr: SMB2::Header, path: string) 
 }
 
 
+@if ((Version::info$major == 2) && (Version::info$minor <= 5))
+
+# Use this syntax for Bro v2.5.x and below
 event smb2_create_request(c: connection, hdr: SMB2::Header, name: string) &priority=3
 {
+
+@else
+
+# Use this syntax for Bro v2.6.x and above
+event smb2_create_request(c: connection, hdr: SMB2::Header, request: SMB2::CreateRequest) &priority=3
+{
+
+@endif
 	# Copied this snippet from Bro default handler:
 	# policy/protocols/smb/smb1-main.bro#smb1_write_andx_request.
 	# It is important to know the full file path at SMB::FILE_OPEN time,

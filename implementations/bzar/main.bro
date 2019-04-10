@@ -1,13 +1,24 @@
 #
 # File: main.bro
 # Created: 20180701
-# Updated: 20190225
+# Updated: 20190403
 #
 # Copyright 2018 The MITRE Corporation.  All Rights Reserved.
 # Approved for public release.  Distribution unlimited.  Case number 18-2489.
 #
 
+@if ((Version::info$major == 2) && (Version::info$minor <= 5))
+
+# Use this syntax for Bro v2.5.x and below
 @load policy/protocols/smb
+
+@else
+
+# Use this syntax for Bro v2.6.x and above
+@load base/protocols/smb
+
+@endif
+
 @load base/protocols/dce-rpc
 @load base/frameworks/files
 @load base/frameworks/notice
@@ -193,7 +204,7 @@ event bro_init()
 	# Relevant Indicator(s) Detected by Bro/Zeek:
 	#    (a) dce_rpc_response::c$dce_rpc$endpoint + c$dce_rpc$operation contains 
 	#        any of the following: (see BZAR::rpc_dicsovery set).
-	#
+	# 
 	# Globals (defined in main.bro above):
 	#    bzar3_epoch
 	#    bzar3_limit
