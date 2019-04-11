@@ -27,6 +27,7 @@ Modules correspond to executable (and potentially non-executable) content, and a
 |sha256_hash|The SHA256 hash of the contents of the file located at `image_path`.|`68e656b251e67e8358bef8483ab0d51c6619f3e7a1a9f0e75838d41ff368f728`|
 |signer|The name of the organization which signed the module.|`Microsoft Corporation`|
 |tid|The thread ID of the thread responsible for the load or unload event.|`50`|
+
 ## Coverage Map
 
 | | **base_address** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **module_name** | **module_path** | **pid** | **sha1_hash** | **sha256_hash** | **signer** | **tid** |
