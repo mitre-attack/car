@@ -31,6 +31,7 @@ A process is a running program on a computer.
 |signer|The company that signed the file.|`FooCorp`|
 |user|The user token that process was created with. May be a local, domain or SYSTEM user. Formatted with "\<DOMAIN>\\\<USER>". Individual threads in the process may gain more privilege or change tokens, so the active token in any thread is not necessarily the one the process was created under.|`HOST1\LOCALUSER`|
 |integrity_level|The Windows integrity level associated with the process. MUST be one of: low, medium, high, or system.|`high`|
+|parent_command_line|All of the arguments passed to the parent process upon execution.|`c:\\windows\\system32\\dism.exe foo.xml`|
 
 ## Coverage Map
 
