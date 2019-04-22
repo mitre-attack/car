@@ -90,16 +90,14 @@ function smb_admin_file_share_test ( s : SMB::State ) : bool
 	local a = 0;
 	local b = |tree_parts|;
 
-	local match = F;
-
 	while ( a < b )
 	{
 		if ( tree_parts[a] in BZAR::smb_admin_file_shares)
-			match = T;
+			return T;
 		++a;
 	}
 
-	return match;
+	return F;
 }
 
 function smb_full_path_and_file_name ( s : SMB::State ) : string
