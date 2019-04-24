@@ -50,3 +50,4 @@ title: "Analytics"
 |[CAR-2016-04-004: Successful Local Account Login](CAR-2016-04-004)
 |[CAR-2016-04-005: Remote Desktop Logon](CAR-2016-04-005)
 |[CAR-2019-04-001: UAC Bypass](CAR-2019-04-001)
+|[CAR-2019-04-002: Generic Regsvr32](CAR-2019-04-002)
