@@ -1,0 +1,4 @@
+[package]
+description = BZAR - Bro/Zeek ATT&CK-based Analytics and Reporting.
+tags = bzar, att&ck, attack, analytics, cyber analytics repository, car, smb, rpc, dce-rpc
+script_dir = scripts
