@@ -10,7 +10,7 @@
         }, 
         {
             "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-11-003: Debuggers for Accessibility Applications | CAR-2014-11-003: Debuggers for Accessibility Applications | CAR-2014-11-008: Command Launched from WinLogon", 
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-11-003: Debuggers for Accessibility Applications | CAR-2014-11-008: Command Launched from WinLogon", 
             "techniqueID": "T1015", 
             "enabled": true
         }, 
@@ -64,7 +64,7 @@
         }, 
         {
             "color": "#c6dbef", 
-            "comment": "CAR-2013-10-002: DLL Injection via Load Library | CAR-2013-10-002: DLL Injection via Load Library", 
+            "comment": "CAR-2013-10-002: DLL Injection via Load Library", 
             "techniqueID": "T1055", 
             "enabled": true
         }, 
@@ -100,7 +100,7 @@
         }, 
         {
             "color": "#c6dbef", 
-            "comment": "CAR-2016-04-004: Successful Local Account Login | CAR-2016-04-004: Successful Local Account Login", 
+            "comment": "CAR-2016-04-004: Successful Local Account Login", 
             "techniqueID": "T1075", 
             "enabled": true
         }, 
@@ -166,7 +166,7 @@
         }, 
         {
             "color": "#c6dbef", 
-            "comment": "CAR-2014-04-003: Powershell Execution | CAR-2014-04-003: Powershell Execution | CAR-2014-04-003: Powershell Execution | CAR-2014-11-004: Remote PowerShell Sessions | CAR-2014-11-004: Remote PowerShell Sessions | CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks", 
+            "comment": "CAR-2014-04-003: Powershell Execution | CAR-2014-11-004: Remote PowerShell Sessions | CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks", 
             "techniqueID": "T1086", 
             "enabled": true
         }, 
@@ -208,13 +208,13 @@
         }, 
         {
             "color": "#c6dbef", 
-            "comment": "CAR-2014-03-006: RunDLL32.exe monitoring | CAR-2014-03-006: RunDLL32.exe monitoring", 
+            "comment": "CAR-2014-03-006: RunDLL32.exe monitoring", 
             "techniqueID": "T1085", 
             "enabled": true
         }, 
         {
             "color": "#c6dbef", 
-            "comment": "CAR-2014-11-004: Remote PowerShell Sessions | CAR-2014-11-006: Windows Remote Management (WinRM) | CAR-2014-11-006: Windows Remote Management (WinRM)", 
+            "comment": "CAR-2014-11-004: Remote PowerShell Sessions | CAR-2014-11-006: Windows Remote Management (WinRM)", 
             "techniqueID": "T1028", 
             "enabled": true
         }, 
@@ -226,7 +226,7 @@
         }, 
         {
             "color": "#c6dbef", 
-            "comment": "CAR-2013-07-002: RDP Connection Detection | CAR-2013-07-002: RDP Connection Detection | CAR-2013-10-001: User Login Activity Monitoring | CAR-2014-11-008: Command Launched from WinLogon | CAR-2016-04-005: Remote Desktop Logon", 
+            "comment": "CAR-2013-07-002: RDP Connection Detection | CAR-2013-10-001: User Login Activity Monitoring | CAR-2014-11-008: Command Launched from WinLogon | CAR-2016-04-005: Remote Desktop Logon", 
             "techniqueID": "T1076", 
             "enabled": true
         }, 
@@ -238,7 +238,7 @@
         }, 
         {
             "color": "#c6dbef", 
-            "comment": "CAR-2014-11-007: Remote Windows Management Instrumentation (WMI) over RPC | CAR-2014-11-007: Remote Windows Management Instrumentation (WMI) over RPC | CAR-2014-12-001: Remotely Launched Executables via WMI | CAR-2016-03-002: Create Remote Process via WMIC | CAR-2016-03-002: Create Remote Process via WMIC", 
+            "comment": "CAR-2014-11-007: Remote Windows Management Instrumentation (WMI) over RPC | CAR-2014-12-001: Remotely Launched Executables via WMI | CAR-2016-03-002: Create Remote Process via WMIC", 
             "techniqueID": "T1047", 
             "enabled": true
         }, 
