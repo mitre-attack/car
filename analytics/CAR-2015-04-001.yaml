@@ -1,0 +1,31 @@
+title: Remotely Scheduled Tasks via AT
+submission_date: 2015/04/29
+information_domain: 'Host, Network'
+subtypes:
+  - File API
+  - PCAP
+analytic_types:
+  - TTP
+contributors:
+  - MITRE
+id: CAR-2015-04-001
+description: |-
+  When AT.exe is used to remotely [schedule tasks](https://attack.mitre.org/techniques/T1053), Windows uses named pipes over [SMB]\(<https://en.wikipedia.org/wiki/Server> Message Block) to communicate with the API on the remote machine. After authentication over SMB, the Named Pipe "ATSVC" is opened, over which the JobAdd function is called. On the remote host, the job files are created by the Task Scheduler and follow the convention `C:\Windows\System32\AT<job\_id>`. Unlike [CAR-2013-05-004](CAR-2013-05-004), this analytic specifically focuses on uses of AT that can be detected between hosts, indicating remotely gained [execution](https://attack.mitre.org/tactics/TA0002).
+
+  This pipe activity could be discovered with a network decoder, such as that in wireshark, that can inspect SMB traffic to identify the use of pipes. It could also be detected by looking for raw packet capture streams or from a custom sensor on the host that hooks the appropriate API functions. If no network or API level of visibility is possible, this traffic may inferred by looking at SMB connections over 445/tcp followed by the creation of files matching the pattern `C:\Windows\System32\AT\<job_id\>`.
+coverage:
+  - technique: T1053
+    tactics:
+      - TA0002
+    coverage: Moderate
+implementations:
+  - description: 'To detect AT via network traffic, a sensor is needed that has the ability to extract and decode PCAP information. Specifically, it needs to properly decode SMB and the functions that are implemented over it via NamedPipes. If a sensor meets these criteria, then the PCAP data needs to search for instances of the command '
+    code: |-
+      flows = search Flow:Message
+      at_proto = filter flows where (dest_port == 445 and proto_info.pipe == "ATSVC")
+      at_create = filter flows where (proto_info.function == "JobAdd")
+
+      output at_create
+    type: pseudocode
+data_model_references:
+  - flow/message/proto_info

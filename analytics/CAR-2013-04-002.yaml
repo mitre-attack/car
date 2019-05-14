@@ -1,0 +1,184 @@
+title: Quick execution of a series of suspicious commands
+submission_date: 2013/04/11
+information_domain: 'Analytic, Host'
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - MITRE
+id: CAR-2013-04-002
+description: |-
+  Certain commands are frequently used by malicious actors and infrequently used by normal users. By looking for execution of these commands in short periods of time, we can not only see when a malicious user was on the system but also get an idea of what they were doing.
+
+  ### Output Description
+
+  The host on which the commands were executed, the time of execution, and what commands were executed
+
+  Commands of interest:
+
+  -   arp.exe
+  -   at.exe
+  -   attrib.exe
+  -   cscript.exe
+  -   dsquery.exe
+  -   hostname.exe
+  -   ipconfig.exe
+  -   mimikatz.exe
+  -   nbstat.exe
+  -   net.exe
+  -   netsh.exe
+  -   nslookup.exe
+  -   ping.exe
+  -   quser.exe
+  -   qwinsta.exe
+  -   reg.exe
+  -   runas.exe
+  -   sc.exe
+  -   schtasks.exe
+  -   ssh.exe
+  -   systeminfo.exe
+  -   taskkill.exe
+  -   telnet.exe
+  -   tracert.exe
+  -   wscript.exe
+  -   xcopy.exe
+coverage:
+  - technique: T1087
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1003
+    tactics:
+      - TA0006
+    coverage: Moderate
+  - technique: T1069
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1057
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1077
+    tactics:
+      - TA0008
+    coverage: Moderate
+  - technique: T1050
+    tactics:
+      - TA0003
+      - TA0004
+    coverage: Moderate
+  - technique: T1031
+    tactics:
+      - TA0003
+      - TA0004
+    coverage: Moderate
+  - technique: T1112
+    tactics:
+      - TA0005
+    coverage: Moderate
+  - technique: T1058
+    tactics:
+      - TA0003
+      - TA0004
+    coverage: Moderate
+  - technique: T1018
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1035
+    tactics:
+      - TA0003
+      - TA0004
+    coverage: Moderate
+  - technique: T1053
+    tactics:
+      - TA0003
+      - TA0004
+      - TA0002
+    coverage: Moderate
+  - technique: T1029
+    tactics:
+      - TA0010
+    coverage: Moderate
+  - technique: T1033
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1007
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1082
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1049
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1016
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1010
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1063
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1046
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1089
+    tactics:
+      - TA0005
+    coverage: Moderate
+  - technique: T1098
+    tactics:
+      - TA0006
+    coverage: Moderate
+  - technique: T1054
+    tactics:
+      - TA0005
+    coverage: Moderate
+  - technique: T1059
+    tactics:
+      - TA0002
+    coverage: Moderate
+  - technique: T1012
+    tactics:
+      - TA0007
+    coverage: Moderate
+implementations:
+  - code: |-
+      processes = search Process:Create
+      reg_processes = filter processes where (exe == "arp.exe" or exe == "at.exe" or exe == "attrib.exe" 
+       or exe == "cscript.exe" or exe == "dsquery.exe" or exe == "hostname.exe" 
+       or exe == "ipconfig.exe" or exe == "mimikatz.exe" or exe == "nbstat.exe" 
+       or exe == "net.exe" or exe == "netsh.exe" or exe == "nslookup.exe" 
+       or exe == "ping.exe" or exe == "quser.exe" or exe == "qwinsta.exe" 
+       or exe == "reg.exe" or exe == "runas.exe" or exe == "sc.exe" 
+       or exe == "schtasks.exe" or exe == "ssh.exe" or exe == "systeminfo.exe" 
+       or exe == "taskkill.exe" or exe == "telnet.exe" or exe == tracert.exe" 
+       or exe == "wscript.exe" or exe == "xcopy.exe")
+      reg_grouped = group reg by hostname, ppid where(max time between two events is 30 minutes)
+      output reg_grouped
+    type: pseudocode
+data_model_references:
+  - process/create/hostname
+  - process/create/ppid
+  - process/create/exe
+unit_tests:
+  - configurations:
+      - Windows 7
+    description: 'Within a command window, execute several of the commands in quick succession.'
+    commands:
+      - ipconfig /all
+      - hostname
+      - systeminfo
+      - reg.exe Query HKLM\Software\Microsoft

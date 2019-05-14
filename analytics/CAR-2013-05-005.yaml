@@ -1,0 +1,44 @@
+title: SMB Copy and Execution
+submission_date: 2013/05/13
+information_domain: 'Host, Network'
+subtypes:
+  - Network Process File
+  - PCAP
+analytic_types:
+  - TTP
+contributors:
+  - MITRE
+id: CAR-2013-05-005
+description: |-
+  An adversary needs to gain access to other hosts to move throughout an environment. In many cases, this is a twofold process. First, a file is remotely written to a host via an SMB share (detected by [CAR-2013-05-003](CAR-2013-05-003)). Then, a variety of [Execution](https://attack.mitre.org/tactics/TA0002) techniques can be used to remotely establish execution of the file or script. To detect this behavior, look for files that are written to a host over SMB and then later run directly as a process or in the command line arguments. SMB File Writes and Remote Execution may happen normally in an environment, but the combination of the two behaviors is less frequent and more likely to indicate adversarial activity.
+
+  This can possibly extend to more copy protocols in order to widen its reach, or it could be tuned more finely to focus on specific program run locations (e.g. `%SYSTEMROOT%\system32`) to gain a higher detection rate.
+coverage:
+  - technique: T1077
+    tactics:
+      - TA0008
+    coverage: Moderate
+  - technique: T1078
+    tactics:
+      - TA0005
+      - TA0008
+    coverage: Moderate
+  - technique: T1105
+    tactics:
+      - TA0008
+    coverage: Moderate
+implementations:
+  - code: |-
+      process = search Process:Create
+      smb_write = run Analytic:CAR-2013-05-003
+      remote_start = join (smb_write, process) where (
+       smb_write.hostname == process.hostname and
+       smb_write.file_path == process.image_path
+       (smb_write.time < process.time)
+      )
+      output remote_start
+    type: pseudocode
+data_model_references:
+  - process/create/image_path
+  - process/create/proto_info
+  - process/create/hostname

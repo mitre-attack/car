@@ -1,0 +1,78 @@
+title: Host Discovery Commands
+submission_date: 2016/03/24
+information_domain: Host
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - MITRE
+id: CAR-2016-03-001
+description: |-
+  When entering on a host for the first time, an adversary may try to [discover](https://attack.mitre.org/tactics/TA0007) information about the host. There are several built-in Windows commands that can be used to learn about the software configurations, active users, administrators, and networking configuration. These commands should be monitored to identify when an adversary is learning information about the system and environment. The information returned may impact choices an adversary can make when [establishing persistence](https://attack.mitre.org/tactics/TA0003), [escalating privileges](https://attack.mitre.org/tactics/TA0004), or [moving laterally](https://attack.mitre.org/tactics/TA0008).
+
+  Because these commands are built in, they may be run frequently by power users or even by normal users. Thus, an analytic looking at this information should have well-defined white- or blacklists, and should consider looking at an anomaly detection approach, so that this information can be learned dynamically.
+
+  Within the built-in Windows Commands:
+
+  -   `hostname`
+  -   `ipconfig`
+  -   `net`
+  -   `quser`
+  -   `qwinsta`
+  -   `sc` with flags `query`, `queryex`, `qc`
+  -   `systeminfo`
+  -   `tasklist`
+  -   `dsquery`
+  -   `whoami`
+
+  **Note** `dsquery` is only pre-existing on Windows servers.
+coverage:
+  - technique: T1087
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1069
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1016
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1082
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1033
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1057
+    tactics:
+      - TA0007
+    coverage: Moderate
+  - technique: T1007
+    tactics:
+      - TA0007
+    coverage: Moderate
+implementations:
+  - description: 'To be effective in deciphering malicious and benign activity, the full '
+    code: |-
+      process = search Process:Create
+      info_command = filter process where (
+       exe == "hostname.exe" or 
+       exe == "ipconfig.exe" or 
+       exe == "net.exe" or 
+       exe == "quser.exe" or 
+       exe == "qwinsta.exe" or
+       exe == "sc" and (command_line match " query" or command_line match " qc")) or
+       exe == "systeminfo.exe" or 
+       exe == "tasklist.exe" or 
+       exe == "whoami.exe"
+      )
+      output info_command
+    type: pseudocode
+data_model_references:
+  - process/create/command_line
+  - process/create/exe

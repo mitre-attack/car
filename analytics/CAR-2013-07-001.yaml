@@ -1,0 +1,69 @@
+title: Suspicious Arguments
+submission_date: 2013/07/05
+information_domain: Host
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - MITRE
+id: CAR-2013-07-001
+description: |-
+  Malicious actors may rename built-in commands or external tools, such as those provided by SysInternals, to better [blend in](https://attack.mitre.org/tactics/TA0005) with the environment. In those cases, the file path name is arbitrary and may blend in well with the background. If the arguments are closely inspected, it may be possible to infer what tools are running and understand what an adversary is doing. When any legitimate software shares the same command lines, it must be whitelisted according to the expected parameters.
+
+  Any tool of interest with commonly known command line usage can be detecting by command line analysis. Known substrings of command lines include
+
+  -   PuTTY
+  -   port forwarding `-R * -pw`
+  -   secure copy (scp) `-pw * * *@*`
+  -   mimikatz `sekurlsa::`
+  -   RAR `* -hp *`
+  -   Archive`* a *`
+      Additionally, it may be useful to find IP addresses in the command line
+  -   `\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}`
+      Logically this analytic makes use of [CAR-2014-03-005](CAR-2014-03-005).
+coverage:
+  - technique: T1003
+    tactics:
+      - TA0006
+    coverage: Moderate
+  - technique: T1036
+    tactics:
+      - TA0005
+    coverage: Moderate
+  - technique: T1021
+    tactics:
+      - TA0008
+    coverage: Moderate
+  - technique: T1105
+    tactics:
+      - TA0011
+      - TA0008
+    coverage: Moderate
+implementations:
+  - description: 'Identify process launches that contain substrings that belong to known tools and do not match the expected process names. These will help to indicate instances of tools that have been renamed. '
+    code: |-
+      process = search Process:Create
+      port_fwd = filter process where (command_line match "-R .* -pw")
+      scp = filter process where (command_line match "-pw .* .* .*@.*"
+      mimikatz = filter process where (command_line match "sekurlsa")
+      rar = filter process where (command_line match " -hp ")
+      archive = filter process where (command_line match ".* a .*")
+      ip_addr = filter process where (command_line match \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+
+      output port_fwd, scp, mimikatz, rar, archive, ip_addr
+    type: pseudocode
+data_model_references:
+  - process/create/command_line
+  - process/create/exe
+unit_tests:
+  - configurations:
+      - Windows 7
+    description: 'Download and run Putty from the command line to connect to an SSH server using remote port forwarding. Note that this requires specifying your remote system password on the command line, where it will be logged and visible. It is highly recommended that you specify an incorrect password and not complete the login, or use a temporary password.'
+    commands:
+      - 'putty.exe -pw <password> -R <port>:<host> <user>@<host>'
+  - configurations:
+      - Windows 7
+    description: 'Download 7zip or other archiving software you plan to monitor. Create an innocuous text file for testing, or substitute an existing file.'
+    commands:
+      - 7z.exe a test.zip test.txt

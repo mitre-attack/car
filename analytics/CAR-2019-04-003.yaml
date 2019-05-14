@@ -1,0 +1,34 @@
+---
+title: Squiblydoo
+submission_date: 2019/04/24
+information_domain: 'Host'
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - MITRE
+id: CAR-2019-04-003
+description: |-
+  Squiblydoo is a specific usage of regsvr32.dll to load a COM scriptlet directly from the internet and execute it in a way that bypasses application whitelisting. It can be seen by looking for regsvr32.exe executions that load the scrobj.dll (which execute the COM scriptlet) or, if that is too noisy, those that also load content directly via HTTP or HTTPS.
+
+  Squiblydoo was first written up by Casey Smith at Red Canary, though that blog post is no longer accessible.
+coverage:
+  - technique: T1117
+    tactics:
+      - TA0005
+      - TA0002
+    coverage: Moderate
+implementations:
+  - description: This looks for any and all usage of the scrobj DLL, which is what is used to run COM scriptlets, so it'll detect both loading from network as well as filesystem. This will have almost zero false positives so is suitable for alerting.
+    code: |-
+      index=__your_sysmon_events__ EventCode=1 regsvr32.exe scrobj.dll | search Image="*regsvr32.exe"
+    type: splunk
+    data_model: Sysmon native
+unit_tests: 
+  - description: The [Atomic Red Team test for Squiblydoo](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1117/T1117.md#atomic-test-2---regsvr32-remote-com-scriptlet-execution) is a good test case for this.
+data_model_references:
+  - process/create/exe
+  - process/create/command_line
+references:
+  - As usual, credit to Roberto Rodriguez and the [ThreatHunter Playbook](https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/blob/master/playbooks/platforms/windows/05_defense_evasion/regsvr32/variants/bypass_whitelisting_regsvr32.md).

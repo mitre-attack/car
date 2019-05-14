@@ -1,0 +1,27 @@
+title: SMB Session Setups
+submission_date: 2013/09/12
+information_domain: Network
+subtypes:
+  - PCAP
+analytic_types:
+  - Situational Awareness
+contributors:
+  - MITRE
+id: CAR-2013-09-003
+description: |-
+  Account usage within SMB can be used to identify compromised credentials, and the hosts accessed with them.
+
+  This analytic monitors SMB activity that deals with user activity rather than file activity.
+coverage: []
+implementations:
+  - code: |-
+      flow = search Flow:Message
+      smb_setup = filter flow where (dest_port == 445 and protocol == smb.setup)
+      smb_setup.user = smb_write.proto_info.user_name
+      smb_setup.target_host = smb_write.proto_info.hostname
+      output smb_write
+    type: pseudocode
+data_model_references:
+  - flow/message/dest_port
+  - flow/message/proto_info
+  - flow/message/protocol

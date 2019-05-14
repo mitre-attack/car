@@ -1,0 +1,33 @@
+title: RunDLL32.exe monitoring
+submission_date: 2014/03/28
+information_domain: Host
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - MITRE
+id: CAR-2014-03-006
+description: 'Adversaries may find it necessary to use [Dyanamic-link Libraries](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682589.aspx) (DLLs) to [evade defenses](https://attack.mitre.org/tactics/TA0005). One way these DLLs can be "executed" is through the use of the built-in Windows utility [RunDLL32](https://attack.mitre.org/techniques/T1085), which allows a user to execute code in a DLL, providing the name and optional arguments to an exported entry point. Windows uses RunDll32 legitimately in its normal operation, but with a proper baseline and understanding of the environment, monitoring its usage could be fruitful.'
+coverage:
+  - technique: T1085
+    tactics:
+      - TA0005
+    coverage: High
+implementations:
+  - description: 'When looking for all instances of RunDLL32, it is imperative to also have the '
+    code: |-
+      process = search Process:Create
+      rundll32 = filter process where (exe == "rundll32.exe")
+      output rundll32
+    type: pseudocode
+data_model_references:
+  - process/create/exe
+  - process/create/command_line
+unit_tests:
+  - configurations:
+      - Windows 7
+    description: Execute rundll32.exe from a command window
+    commands:
+      - 'c:\windows\syswow64\rundll32.exe'
+      - 'RUNDLL32.EXE SHELL32.DLL,Control_RunDLL desk.cpl,,0'

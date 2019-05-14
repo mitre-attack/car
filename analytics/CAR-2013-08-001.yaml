@@ -1,0 +1,34 @@
+title: Execution with schtasks
+submission_date: 2013/08/07
+information_domain: Host
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - MITRE
+id: CAR-2013-08-001
+description: 'The Windows built-in tool `schtasks.exe` provides the creation, modification, and running of [scheduled tasks](https://attack.mitre.org/techniques/T1053) on a local or remote computer. It is provided as a more flexible alternative to `at.exe`, described in [CAR-2013-05-004](CAR-2013-05-004). Although used by adversaries, the tool is also legitimately used by administrators, scripts, and software configurations. The scheduled tasks tool can be used to gain [Persistence](https://attack.mitre.org/tactics/TA0003) and can be used in combination with a [Lateral Movement](https://attack.mitre.org/tactics/TA0008) technique to remotely gain [execution](https://attack.mitre.org/tactics/TA0002). Additionally, the command has parameters to specify the user and password responsible for creating the task, as well as the user and password combination that the task will run as. The `/s` flag will cause a task to run as the SYSTEM user, usually indicating [privilege escalation](https://attack.mitre.org/tactics/TA0004).'
+coverage:
+  - technique: T1053
+    tactics:
+      - TA0003
+    coverage: Moderate
+implementations:
+  - description: 'Look for instances of '
+    code: |-
+      process = search Process:Create
+      schtasks = filter process where (exe == "schtasks.exe")
+      output schtasks
+    type: pseudocode
+data_model_references:
+  - process/create/exe
+  - process/create/command_line
+unit_tests:
+  - configurations:
+      - Windows 7
+    requirements: Administrator account
+    description: schtasks.exe
+    commands:
+      - 'schtasks /Create /SC ONCE /ST 19:00 /TR C:\Windows\System32\calc.exe /TN calctask'
+      - schtasks /Delete /TN calctask
