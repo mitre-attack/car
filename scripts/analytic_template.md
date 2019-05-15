@@ -17,7 +17,7 @@ contributors: {{analytic['contributors']|join(', ')}}
 
 |Technique |Tactic |Level of Coverage |
 |---|---|---|{% for coverage_item in analytic['coverage'] %}
-|[{{techniques[coverage_item['technique']]}}](https://attack.mitre.org/techniques/{{coverage_item['technique']}}/)|{% for tactic in coverage_item['tactics'] %}[{{tactics[tactic]}}](https://attack.mitre.org/tactics/{{tactic}}/){% endfor %}|{{coverage_item['coverage']}}|{% endfor %}
+|[{{techniques[coverage_item['technique']]}}](https://attack.mitre.org/techniques/{{coverage_item['technique']}}/)|{% for tactic in coverage_item['tactics'] %}[{{tactics[tactic]}}](https://attack.mitre.org/tactics/{{tactic}}/){% if not loop.last %}, {% endif %}{% endfor %}|{{coverage_item['coverage']}}|{% endfor %}
 {% endif %}{% if 'data_model_references' in analytic %}
 ## Data Model References
 
@@ -28,7 +28,8 @@ contributors: {{analytic['contributors']|join(', ')}}
 {% if 'implementations' in analytic %}
 ## Implementations
 {% for impl in analytic['implementations'] %}
-### {{impl['type']|capitalize}}{% if 'data_model' in impl %} ({{impl['data_model']}}){% endif %}
+{% if 'name' in impl %}### {{impl['name']}} ({{impl['type']|capitalize}}{% if 'data_model' in impl %}, {{impl['data_model']}}{% endif %})
+{% else %}### {{impl['type']|capitalize}}{% if 'data_model' in impl %}, {{impl['data_model']}}{% endif %}{% endif %}
 {% if 'description' in impl %}
 {{impl['description']}}
 {% endif %}
@@ -41,7 +42,8 @@ contributors: {{analytic['contributors']|join(', ')}}
 {% for ut in analytic['unit_tests'] %}
 ### Test Case {{loop.index}}
 {% if 'configurations' in ut %}
-**Configurations:** {{ut['configurations']|join(', ')}}{% endif %}{% if 'description' in ut %}
+**Configurations:** {{ut['configurations']|join(', ')}}
+{% endif %}{% if 'description' in ut %}
 {{ut['description']}}{% endif %}
 {% if 'commands' in ut %}
 ```

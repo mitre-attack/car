@@ -20,4 +20,9 @@ implementations:
       EventCode == 4624 and [target_user_name] != "ANONYMOUS LOGON" and
       [authentication_package_name] == "NTLM"
     type: pseudocode
-unit_tests: []
+unit_tests:
+  - configuration: Windows 7
+    description: As an adminstrator, create a new user. Then, logon to the host with that new user. This is generate the event.
+    commands:
+      - net user 'test' 'test' /add
+

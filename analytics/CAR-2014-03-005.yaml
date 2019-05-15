@@ -29,7 +29,7 @@ coverage:
       - TA0002
     coverage: Moderate
 implementations:
-  - description: 'Look for processes launched from '
+  - description: 'Look for processes launched from `services.exe` within 1 second of services.exe receiving a network connection.'
     code: |-
       process = search Process:Create
       flow = search Flow:Start

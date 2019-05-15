@@ -43,9 +43,13 @@ for analytic in analytics:
     open('../docs/analytics/{}.md'.format(analytic['id']), 'w').write(markdown)
 
 # Generate the index.md file
+
+# Note that the "analytics-table" div is used only by the CSS in order to get a reference to just the analytics table (see main.scss)
+
 index_content = """---
 title: "Analytics"
 ---
+<div class="analytics-table"></div>
 
 |Analytic|ATT&CK Techniques|
 |---|---|
@@ -55,7 +59,7 @@ for analytic in sorted(analytics, key = lambda k: k['id']):
     coverage = ""
     if 'coverage' in analytic and len(analytic['coverage']) > 0:
         coverage = ", ".join(["[{}](https://attack.mitre.org/techniques/{}/)".format(techniques[coverage['technique']], coverage['technique']) for coverage in analytic['coverage']])
-    index_content += "|{}: {}|{}\n".format(analytic['id'], analytic['title'], coverage)
+    index_content += "|[{}: {}]({})|{}\n".format(analytic['id'], analytic['title'], analytic['id'], coverage)
 
 open('../docs/analytics/index.md', 'w').write(index_content)
 

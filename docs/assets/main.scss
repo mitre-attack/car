@@ -31,3 +31,22 @@ footer p {
 .post-content h2 {
     clear: both;
 }
+
+div.analytics-table + table {
+    table-layout: fixed;
+
+    thead tr th:first-child {
+        width: 600px;
+    }
+
+    tbody tr td:first-child {
+        width: 600px;
+    }
+
+    tbody tr td:last-child {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 500px;
+    }
+}

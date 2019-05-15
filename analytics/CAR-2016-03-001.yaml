@@ -57,7 +57,7 @@ coverage:
       - TA0007
     coverage: Moderate
 implementations:
-  - description: 'To be effective in deciphering malicious and benign activity, the full '
+  - description: 'To be effective in deciphering malicious and benign activity, the full command line is essential. Similarly, having information about the parent process can help with making decisions and tuning to an environment.'
     code: |-
       process = search Process:Create
       info_command = filter process where (

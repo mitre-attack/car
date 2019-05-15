@@ -19,7 +19,7 @@ coverage:
       - TA0004
     coverage: Moderate
 implementations:
-  - description: 'Instances of the process '
+  - description: 'Instances of the process `at.exe` running imply the querying or creation of tasks. Although the command_line is not essential for the analytic to run, it is critical when identifying the command that was scheduled.'
     code: |-
       process = search Process:Create
       at = filter process where (exe == "at.exe")
@@ -31,7 +31,6 @@ data_model_references:
 unit_tests:
   - configurations:
       - Windows 7
-    requirements: Administrator Account
     description: |-
       -   From an admin account, open Windows command prompt (right click, run as administrator).
       -   Execute "at 10:00 calc.exe," substituting a time in the near future for 10:00.

@@ -16,7 +16,7 @@ coverage:
       - TA0003
     coverage: High
 implementations:
-  - description: 'Look over all service creations that have a quoted path for the first argument. Assuming these still have an absolute path, look for cases in which the '
+  - description: 'Look over all service creations that have a quoted path for the first argument. Assuming these still have an absolute path, look for cases in which the command line has a space, but the exe field is not part of the command line. This would indicate that a different process was intended, but the path was intercepted at an earlier space.'
     code: |-
       process = search Process:Create
       services = filter processes where (parent_exe == "services.exe")

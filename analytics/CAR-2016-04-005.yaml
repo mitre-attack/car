@@ -15,11 +15,10 @@ coverage:
       - TA0008
     coverage: Moderate
 implementations:
-  - description: 'Look in the system logs for remote logons using RDP '
+  - description: 'Look in the system logs for remote logons using RDP.'
     code: |-
       [EventCode] == 4624 and
       [AuthenticationPackageName] == 'Negotiate' and
       [Severity] == "Information" and
       [LogonType] == 10
     type: pseudocode
-unit_tests: []

@@ -18,7 +18,10 @@ coverage:
       - TA0002
     coverage: Low
 implementations:
-  - description: 'Looks for instances of '
+  - description: |-
+      Looks for instances of wmic.exe as well as the substrings in the command line:
+      * `process call create`
+      * `/node:`
     code: |-
       processes = search Process:Create
       wmic = filter processes where (exe == "wmic.exe" and command_line == "* process call create *" and command_line == "* /node:*")

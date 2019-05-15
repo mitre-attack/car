@@ -20,4 +20,10 @@ implementations:
       ([log_name] == "System" and [event_code] in [1100, 1102]) or
       ([log_name] == "Security" and [event_code] == 104)
     type: pseudocode
-unit_tests: []
+unit_tests:
+  - configurations:
+    - Windows 7
+    description: You can use the powershell cmdlet “Clear-Eventlog” to clear event logs. Open Powershell as administrator and execute Clear-Eventlog `Clear-EventLog [-LogName] \<String[]\>`. [Additional information here](https://technet.microsoft.com/en-us/library/hh849789.aspx).
+    commands:
+      - Clear-Eventlog Security
+      - Clear-Eventlog System

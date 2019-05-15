@@ -11,8 +11,7 @@ id: CAR-2014-04-003
 description: |-
   [PowerShell](https://attack.mitre.org/techniques/T1086/) is a scripting environment included with Windows that is used by both attackers and administrators. Execution of PowerShell scripts in most Windows versions is opaque and not typically secured by antivirus which makes using PowerShell an easy way to circumvent security measures. This analytic detects execution of PowerShell scripts.
 
-  Powershell can be used to hide monitored command line execution such as 
-
+  Powershell can be used to hide monitored command line execution such as:
   -   `net use`
   -   `sc start`
 coverage:
@@ -25,7 +24,7 @@ coverage:
       - TA0005
     coverage: Moderate
 implementations:
-  - description: 'Look for versions of '
+  - description: 'Look for versions of `PowerShell` that were not launched interactively.'
     code: |-
       process = search Process:Create
       powershell = filter process where (exe == "powershell.exe" AND parent_exe != "explorer.exe" )

@@ -11,11 +11,7 @@ id: CAR-2013-04-002
 description: |-
   Certain commands are frequently used by malicious actors and infrequently used by normal users. By looking for execution of these commands in short periods of time, we can not only see when a malicious user was on the system but also get an idea of what they were doing.
 
-  ### Output Description
-
-  The host on which the commands were executed, the time of execution, and what commands were executed
-
-  Commands of interest:
+    Commands of interest:
 
   -   arp.exe
   -   at.exe
@@ -43,6 +39,11 @@ description: |-
   -   tracert.exe
   -   wscript.exe
   -   xcopy.exe
+
+  ### Output Description
+
+  The host on which the commands were executed, the time of execution, and what commands were executed
+
 coverage:
   - technique: T1087
     tactics:

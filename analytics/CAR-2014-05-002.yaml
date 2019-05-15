@@ -19,7 +19,7 @@ coverage:
       - TA0004
     coverage: Moderate
 implementations:
-  - description: 'Returns all processes named "cmd.exe" that have "services.exe" as a parent process. Because this should never happen, the '
+  - description: 'Returns all processes named `cmd.exe` that have `services.exe` as a parent process. Because this should never happen, the `/c` flag is redundant in the search.'
     code: |-
       process = search Process:Create
       cmd = filter process where (exe == "cmd.exe" and parent_exe == "services.exe")

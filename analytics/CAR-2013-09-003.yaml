@@ -12,7 +12,11 @@ description: |-
   Account usage within SMB can be used to identify compromised credentials, and the hosts accessed with them.
 
   This analytic monitors SMB activity that deals with user activity rather than file activity.
-coverage: []
+coverage:
+  - technique: T1187
+    tactics:
+      - TA0006
+    coverage: Low
 implementations:
   - code: |-
       flow = search Flow:Message

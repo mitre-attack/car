@@ -15,7 +15,7 @@ coverage:
       - TA0003
     coverage: Moderate
 implementations:
-  - description: 'Look for instances of '
+  - description: 'Look for instances of `schtasks.exe` running as processes. The `command_line` field is necessary to disambiguate between types of schtasks commands. These include the flags `/create`, `/run`, `/query`, `/delete`, `/change`, and `/end`.'
     code: |-
       process = search Process:Create
       schtasks = filter process where (exe == "schtasks.exe")
@@ -27,8 +27,14 @@ data_model_references:
 unit_tests:
   - configurations:
       - Windows 7
-    requirements: Administrator account
-    description: schtasks.exe
+    description: |-
+      Create a new scheduled task with schtasks.exe and verify the analytic fires when the task executes.
+      * From an admin account, open Windows command prompt (right click, run as administrator)
+      * Execute `schtasks /Create /SC ONCE /ST 19:00 /TR C:\Windows\System32\calc.exe /TN calctask`, substituting a time in the near future for 19:00
+      * The program should respond with “SUCCESS: The scheduled task “calctask” has successfully been created.”
+      * The program should execute at the time specified. This is what the analytic should fire on.
+      * To remove the scheduled task, execute `schtasks /Delete /TN calctask`.
+      * The program should respond with “SUCCESS: The scheduled task “calctask” was successfully deleted.”
     commands:
       - 'schtasks /Create /SC ONCE /ST 19:00 /TR C:\Windows\System32\calc.exe /TN calctask'
       - schtasks /Delete /TN calctask

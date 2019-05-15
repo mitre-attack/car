@@ -25,4 +25,10 @@ implementations:
       param1 in ["Windows Defender", "Windows Firewall"] AND
       param2 == "stopped"
     type: pseudocode
-unit_tests: []
+unit_tests:
+  - configuration: Windows 7
+    description: From an administrative user powershell console, run the Stop-Service command.
+    commands:
+      - Stop-Service -displayname "Windows Firewall"
+      - Stop-Service -displayname "Windows Defender"
+
