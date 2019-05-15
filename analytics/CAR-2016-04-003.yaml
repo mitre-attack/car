@@ -26,7 +26,8 @@ implementations:
       param2 == "stopped"
     type: pseudocode
 unit_tests:
-  - configuration: Windows 7
+  - configurations: 
+      - Windows 7
     description: From an administrative user powershell console, run the Stop-Service command.
     commands:
       - Stop-Service -displayname "Windows Firewall"
