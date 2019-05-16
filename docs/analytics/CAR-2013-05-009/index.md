@@ -26,7 +26,7 @@ A list of hashes and the different executables associated with each one
 
 |Object|Action|Field|
 |---|---|---|
-|[process](../data_model/process) | [create](../data_model/process#create) | [exe](../data_model/process#exe) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [md5_hash](../data_model/process#md5_hash) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [md5_hash](/data_model/process#md5_hash) |
 
 

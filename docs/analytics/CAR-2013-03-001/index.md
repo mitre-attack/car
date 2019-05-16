@@ -32,12 +32,12 @@ The sequence of processes that resulted in `reg.exe` being started from a shell.
 
 |Object|Action|Field|
 |---|---|---|
-|[process](../data_model/process) | [create](../data_model/process#create) | [command_line](../data_model/process#command_line) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [hostname](../data_model/process#hostname) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [exe](../data_model/process#exe) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [parent_exe](../data_model/process#parent_exe) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [pid](../data_model/process#pid) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [ppid](../data_model/process#ppid) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [hostname](/data_model/process#hostname) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [pid](/data_model/process#pid) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [ppid](/data_model/process#ppid) |
 
 
 ## Implementations

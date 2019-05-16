@@ -27,7 +27,7 @@ Identifies the connection in which WMI traffic is seen, as well as the process(e
 
 |Object|Action|Field|
 |---|---|---|
-|[flow](../data_model/flow) | [message](../data_model/flow#message) | [proto_info](../data_model/flow#proto_info) |
+|[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
 
 
 ## Implementations

@@ -20,7 +20,7 @@ When a [Windows Remote Management](https://attack.mitre.org/techniques/T1028/) c
 
 |Object|Action|Field|
 |---|---|---|
-|[flow](../data_model/flow) | [start](../data_model/flow#start) | [dest_port](../data_model/flow#dest_port) |
+|[flow](/data_model/flow) | [start](/data_model/flow#start) | [dest_port](/data_model/flow#dest_port) |
 
 
 ## Implementations

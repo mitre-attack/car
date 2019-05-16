@@ -22,8 +22,8 @@ Monitoring SMB write requests still creates some noise, particulary with named p
 
 |Object|Action|Field|
 |---|---|---|
-|[flow](../data_model/flow) | [message](../data_model/flow#message) | [proto_info](../data_model/flow#proto_info) |
-|[flow](../data_model/flow) | [start](../data_model/flow#start) | [dest_port](../data_model/flow#dest_port) |
+|[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
+|[flow](/data_model/flow) | [start](/data_model/flow#start) | [dest_port](/data_model/flow#dest_port) |
 
 
 ## Implementations

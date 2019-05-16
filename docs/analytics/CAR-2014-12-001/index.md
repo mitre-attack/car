@@ -47,12 +47,12 @@ Identifies the process that initiated the RPC request (such as wmic.exe or power
 
 |Object|Action|Field|
 |---|---|---|
-|[flow](../data_model/flow) | [message](../data_model/flow#message) | [dest_port](../data_model/flow#dest_port) |
-|[flow](../data_model/flow) | [message](../data_model/flow#message) | [proto_info](../data_model/flow#proto_info) |
-|[flow](../data_model/flow) | [message](../data_model/flow#message) | [src_port](../data_model/flow#src_port) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [command_line](../data_model/process#command_line) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [exe](../data_model/process#exe) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [parent_exe](../data_model/process#parent_exe) |
+|[flow](/data_model/flow) | [message](/data_model/flow#message) | [dest_port](/data_model/flow#dest_port) |
+|[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
+|[flow](/data_model/flow) | [message](/data_model/flow#message) | [src_port](/data_model/flow#src_port) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
 ## Implementations

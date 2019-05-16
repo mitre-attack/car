@@ -22,7 +22,7 @@ In addition to looking for RAR or 7z program names, command line usage of 7Zip o
 
 |Object|Action|Field|
 |---|---|---|
-|[process](../data_model/process) | [create](../data_model/process#create) | [command_line](../data_model/process#command_line) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
 ## Implementations

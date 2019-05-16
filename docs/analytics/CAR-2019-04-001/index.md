@@ -20,11 +20,11 @@ Bypassing user account control (UAC Bypass) is generally done by piggybacking on
 
 |Object|Action|Field|
 |---|---|---|
-|[process](../data_model/process) | [create](../data_model/process#create) | [image_path](../data_model/process#image_path) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [parent_image_path](../data_model/process#parent_image_path) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [integrity_level](../data_model/process#integrity_level) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [user](../data_model/process#user) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [parent_command_line](../data_model/process#parent_command_line) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [image_path](/data_model/process#image_path) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [parent_image_path](/data_model/process#parent_image_path) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [integrity_level](/data_model/process#integrity_level) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [user](/data_model/process#user) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [parent_command_line](/data_model/process#parent_command_line) |
 
 
 ## Implementations

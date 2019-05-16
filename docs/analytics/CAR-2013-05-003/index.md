@@ -22,8 +22,8 @@ As described in [CAR-2013-01-003](CAR-2013-01-003), SMB provides a means of remo
 
 |Object|Action|Field|
 |---|---|---|
-|[flow](../data_model/flow) | [message](../data_model/flow#message) | [proto_info](../data_model/flow#proto_info) |
-|[flow](../data_model/flow) | [message](../data_model/flow#message) | [dest_port](../data_model/flow#dest_port) |
+|[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
+|[flow](/data_model/flow) | [message](/data_model/flow#message) | [dest_port](/data_model/flow#dest_port) |
 
 
 ## Implementations

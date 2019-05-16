@@ -6,15 +6,7 @@ This repository is the way to contribute new analytics, data model changes, or s
 
 ## Where is everything?
 
-Right now, all content in CAR is in the `docs` folder. This is because the car.mitre.org website is built from there. In the future, we hope to have structured content to represent the analytics, data model, and sensors that would then generate the website content. Please let us know if you're interested in helping out with that aspect!
-
-In the meantime, here's how to find the source for our content. Within `docs`:
-
-* **analytics**: Contains the full list of analytics
-* **data_model**: Contains the data model pages
-* **sensors**: Contains the sensor pages
-
-The other directories in `docs` are used to build the website and you shouldn't need to worry about them.
+Analytics are in the `analytics` directory as YAML files. The website is built automatically from that structured content. Other content (sensors, the data model, etc.) are all in the `docs` folder. We hope to have more structured content to represent the data model and sensors but just aren't there yet. Please let us know if you're interested in helping out with that aspect!
 
 The [implementations](implementations) directory contains libraries of analytics that are best represented as source code for specific tools. As an example, [BZAR](implementations/bzar) (Bro/Zeek ATT&CK-Based Analytics and Reporting) is a library of source code for Zeek (previously Bro).
 

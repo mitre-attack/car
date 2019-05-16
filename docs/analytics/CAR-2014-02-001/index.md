@@ -27,10 +27,10 @@ The Service Name and approximate time in which changes occurred on each host
 
 |Object|Action|Field|
 |---|---|---|
-|[file](../data_model/file) | [create](../data_model/file#create) | [file_path](../data_model/file#file_path) |
-|[file](../data_model/file) | [create](../data_model/file#create) | [image_path](../data_model/file#image_path) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [image_path](../data_model/process#image_path) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [parent_exe](../data_model/process#parent_exe) |
+|[file](/data_model/file) | [create](/data_model/file#create) | [file_path](/data_model/file#file_path) |
+|[file](/data_model/file) | [create](/data_model/file#create) | [image_path](/data_model/file#image_path) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [image_path](/data_model/process#image_path) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
 ## Implementations

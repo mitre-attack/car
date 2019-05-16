@@ -22,7 +22,7 @@ This pipe activity could be discovered with a network decoder, such as that in w
 
 |Object|Action|Field|
 |---|---|---|
-|[flow](../data_model/flow) | [message](../data_model/flow#message) | [proto_info](../data_model/flow#proto_info) |
+|[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
 
 
 ## Implementations

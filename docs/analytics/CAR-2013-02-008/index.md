@@ -23,8 +23,8 @@ Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types
 
 |Object|Action|Field|
 |---|---|---|
-|[user_session](../data_model/user_session) | [login](../data_model/user_session#login) | [user](../data_model/user_session#user) |
-|[user_session](../data_model/user_session) | [login](../data_model/user_session#login) | [hostname](../data_model/user_session#hostname) |
+|[user_session](/data_model/user_session) | [login](/data_model/user_session#login) | [user](/data_model/user_session#user) |
+|[user_session](/data_model/user_session) | [login](/data_model/user_session#login) | [hostname](/data_model/user_session#hostname) |
 
 
 ## Implementations

@@ -28,8 +28,8 @@ The time and host the new process was started as well as its parent
 
 |Object|Action|Field|
 |---|---|---|
-|[process](../data_model/process) | [create](../data_model/process#create) | [exe](../data_model/process#exe) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [parent_exe](../data_model/process#parent_exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
 ## Implementations

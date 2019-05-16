@@ -49,6 +49,7 @@ for analytic in analytics:
 
 index_content = """---
 title: "Analytics"
+permalink: /analytics/
 ---
 <div class="analytics-table"></div>
 

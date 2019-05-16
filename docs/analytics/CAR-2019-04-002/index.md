@@ -20,11 +20,11 @@ Regsvr32 can be used to execute arbitrary code in the context of a Windows signe
 
 |Object|Action|Field|
 |---|---|---|
-|[process](../data_model/process) | [create](../data_model/process#create) | [exe](../data_model/process#exe) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [parent_exe](../data_model/process#parent_exe) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [command_line](../data_model/process#command_line) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [image](../data_model/process#image) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [parent_image](../data_model/process#parent_image) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [image](/data_model/process#image) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [parent_image](/data_model/process#parent_image) |
 
 
 ## Implementations

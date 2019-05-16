@@ -27,7 +27,7 @@ Monitors the directories
 
 |Object|Action|Field|
 |---|---|---|
-|[process](../data_model/process) | [create](../data_model/process#create) | [image_path](../data_model/process#image_path) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [image_path](/data_model/process#image_path) |
 
 
 ## Implementations

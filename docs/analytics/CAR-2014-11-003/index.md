@@ -22,8 +22,8 @@ This analytic could depend on the possibility of the known strings used as argum
 
 |Object|Action|Field|
 |---|---|---|
-|[process](../data_model/process) | [create](../data_model/process#create) | [command_line](../data_model/process#command_line) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [exe](../data_model/process#exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
 ## Implementations

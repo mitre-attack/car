@@ -26,9 +26,9 @@ This compound behavior can be detected by looking for `services.exe` receiving a
 
 |Object|Action|Field|
 |---|---|---|
-|[flow](../data_model/flow) | [start](../data_model/flow#start) | [pid](../data_model/flow#pid) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [parent_exe](../data_model/process#parent_exe) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [pid](../data_model/process#pid) |
+|[flow](/data_model/flow) | [start](/data_model/flow#start) | [pid](/data_model/flow#pid) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [pid](/data_model/process#pid) |
 
 
 ## Implementations

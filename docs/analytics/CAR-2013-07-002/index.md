@@ -33,10 +33,10 @@ The time of the Connection, the source, the destination, and the user name used
 
 |Object|Action|Field|
 |---|---|---|
-|[flow](../data_model/flow) | [end](../data_model/flow#end) | [dest_port](../data_model/flow#dest_port) |
-|[flow](../data_model/flow) | [start](../data_model/flow#start) | [dest_ip](../data_model/flow#dest_ip) |
-|[flow](../data_model/flow) | [start](../data_model/flow#start) | [dest_port](../data_model/flow#dest_port) |
-|[flow](../data_model/flow) | [start](../data_model/flow#start) | [src_ip](../data_model/flow#src_ip) |
+|[flow](/data_model/flow) | [end](/data_model/flow#end) | [dest_port](/data_model/flow#dest_port) |
+|[flow](/data_model/flow) | [start](/data_model/flow#start) | [dest_ip](/data_model/flow#dest_ip) |
+|[flow](/data_model/flow) | [start](/data_model/flow#start) | [dest_port](/data_model/flow#dest_port) |
+|[flow](/data_model/flow) | [start](/data_model/flow#start) | [src_ip](/data_model/flow#src_ip) |
 
 
 ## Implementations

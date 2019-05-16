@@ -27,8 +27,8 @@ This behavior can be detected by looking for thread creations across processes, 
 
 |Object|Action|Field|
 |---|---|---|
-|[thread](../data_model/thread) | [remote_create](../data_model/thread#remote_create) | [src_pid](../data_model/thread#src_pid) |
-|[thread](../data_model/thread) | [remote_create](../data_model/thread#remote_create) | [start_function](../data_model/thread#start_function) |
+|[thread](/data_model/thread) | [remote_create](/data_model/thread#remote_create) | [src_pid](/data_model/thread#src_pid) |
+|[thread](/data_model/thread) | [remote_create](/data_model/thread#remote_create) | [start_function](/data_model/thread#start_function) |
 
 
 ## Implementations

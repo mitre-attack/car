@@ -24,9 +24,9 @@ This can possibly extend to more copy protocols in order to widen its reach, or 
 
 |Object|Action|Field|
 |---|---|---|
-|[process](../data_model/process) | [create](../data_model/process#create) | [image_path](../data_model/process#image_path) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [proto_info](../data_model/process#proto_info) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [hostname](../data_model/process#hostname) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [image_path](/data_model/process#image_path) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [proto_info](/data_model/process#proto_info) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [hostname](/data_model/process#hostname) |
 
 
 ## Implementations

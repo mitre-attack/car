@@ -33,8 +33,8 @@ Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/article
 
 |Object|Action|Field|
 |---|---|---|
-|[flow](../data_model/flow) | [start](../data_model/flow#start) | [dest_port](../data_model/flow#dest_port) |
-|[flow](../data_model/flow) | [start](../data_model/flow#start) | [src_port](../data_model/flow#src_port) |
+|[flow](/data_model/flow) | [start](/data_model/flow#start) | [dest_port](/data_model/flow#dest_port) |
+|[flow](/data_model/flow) | [start](/data_model/flow#start) | [src_port](/data_model/flow#src_port) |
 
 
 ## Implementations

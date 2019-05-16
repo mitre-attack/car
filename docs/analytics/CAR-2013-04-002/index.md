@@ -78,9 +78,9 @@ The host on which the commands were executed, the time of execution, and what co
 
 |Object|Action|Field|
 |---|---|---|
-|[process](../data_model/process) | [create](../data_model/process#create) | [hostname](../data_model/process#hostname) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [ppid](../data_model/process#ppid) |
-|[process](../data_model/process) | [create](../data_model/process#create) | [exe](../data_model/process#exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [hostname](/data_model/process#hostname) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [ppid](/data_model/process#ppid) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
 ## Implementations

@@ -22,9 +22,9 @@ This analytic monitors SMB activity that deals with user activity rather than fi
 
 |Object|Action|Field|
 |---|---|---|
-|[flow](../data_model/flow) | [message](../data_model/flow#message) | [dest_port](../data_model/flow#dest_port) |
-|[flow](../data_model/flow) | [message](../data_model/flow#message) | [proto_info](../data_model/flow#proto_info) |
-|[flow](../data_model/flow) | [message](../data_model/flow#message) | [protocol](../data_model/flow#protocol) |
+|[flow](/data_model/flow) | [message](/data_model/flow#message) | [dest_port](/data_model/flow#dest_port) |
+|[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
+|[flow](/data_model/flow) | [message](/data_model/flow#message) | [protocol](/data_model/flow#protocol) |
 
 
 ## Implementations

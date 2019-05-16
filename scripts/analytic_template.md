@@ -23,7 +23,7 @@ contributors: {{analytic['contributors']|join(', ')}}
 
 |Object|Action|Field|
 |---|---|---|
-{% for dmr in analytic['data_model_references'] %}|[{{dmr[0]}}](../data_model/{{dmr[0]}}) | [{{dmr[1]}}](../data_model/{{dmr[0]}}#{{dmr[1]}}) | [{{dmr[2]}}](../data_model/{{dmr[0]}}#{{dmr[2]}}) |
+{% for dmr in analytic['data_model_references'] %}|[{{dmr[0]}}](/data_model/{{dmr[0]}}) | [{{dmr[1]}}](/data_model/{{dmr[0]}}#{{dmr[1]}}) | [{{dmr[2]}}](/data_model/{{dmr[0]}}#{{dmr[2]}}) |
 {% endfor %}{% endif %}
 {% if 'implementations' in analytic %}
 ## Implementations

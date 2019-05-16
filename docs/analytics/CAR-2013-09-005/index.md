@@ -21,7 +21,7 @@ New executables that are started as a service are suspicious. This analytic look
 
 |Object|Action|Field|
 |---|---|---|
-|[process](../data_model/process) | [create](../data_model/process#create) | [parent_image_path](../data_model/process#parent_image_path) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [parent_image_path](/data_model/process#parent_image_path) |
 
 
 ## Implementations
