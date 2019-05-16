@@ -11,7 +11,7 @@ import glob
 import yaml
 import requests
 from jinja2 import Template
-from os import path
+from os import path, makedirs
 import copy
 
 ATTACK_URL = "https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json"
@@ -40,7 +40,8 @@ for analytic in analytics:
     markdown = analytic_template.render(analytic=analytic_for_render, tactics=tactics, techniques=techniques)
 
     # Save to the analytic page
-    open('../docs/analytics/{}.md'.format(analytic['id']), 'w').write(markdown)
+    makedirs('../docs/analytics/{}'.format(analytic['id']), exist_ok=True)
+    open('../docs/analytics/{}/index.md'.format(analytic['id']), 'w').write(markdown)
 
 # Generate the index.md file
 
