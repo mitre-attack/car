@@ -16,8 +16,8 @@ description: |-
 coverage:
   - technique: T1078
     tactics:
-      - TA0008
-    coverage: Moderate
+      - TA0001
+    coverage: Low
 implementations:
   - code: |-
       users_list = search UserSession:Login
