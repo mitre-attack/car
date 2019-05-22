@@ -18,11 +18,11 @@ description: |-
 coverage:
   - technique: T1050
     tactics:
-      - TA0002
+      - TA0003
     coverage: Moderate
   - technique: T1031
     tactics:
-      - TA0002
+      - TA0003
     coverage: Moderate
   - technique: T1035
     tactics:
