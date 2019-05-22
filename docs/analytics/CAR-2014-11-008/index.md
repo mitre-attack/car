@@ -22,7 +22,7 @@ Several accessibility programs can be run using the Ease of Access center
 
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
-|[Accessibility Features](https://attack.mitre.org/techniques/T1015/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Execution](https://attack.mitre.org/tactics/TA0002/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
+|[Accessibility Features](https://attack.mitre.org/techniques/T1015/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 
 ## Data Model References
 

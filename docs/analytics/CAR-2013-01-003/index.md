@@ -18,8 +18,7 @@ The source, destination, content, and time of each event.
 
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
-|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
-|[Data from Network Shared Drive](https://attack.mitre.org/techniques/T1039/)|[Exfiltration](https://attack.mitre.org/tactics/TA0010/)|Moderate|
+|[Data from Network Shared Drive](https://attack.mitre.org/techniques/T1039/)|[Collection](https://attack.mitre.org/tactics/TA0009/)|Moderate|
 |[Windows Admin Shares](https://attack.mitre.org/techniques/T1077/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 ## Data Model References

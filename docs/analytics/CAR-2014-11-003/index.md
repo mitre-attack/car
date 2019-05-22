@@ -16,7 +16,7 @@ This analytic could depend on the possibility of the known strings used as argum
 
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
-|[Accessibility Features](https://attack.mitre.org/techniques/T1015/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Execution](https://attack.mitre.org/tactics/TA0002/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
+|[Accessibility Features](https://attack.mitre.org/techniques/T1015/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 
 ## Data Model References
 

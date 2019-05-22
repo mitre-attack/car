@@ -21,7 +21,7 @@ The Service Name and approximate time in which changes occurred on each host
 |[New Service](https://attack.mitre.org/techniques/T1050/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 |[Modify Existing Service](https://attack.mitre.org/techniques/T1031/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 |[File System Permissions Weakness](https://attack.mitre.org/techniques/T1044/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
-|[Service Execution](https://attack.mitre.org/techniques/T1035/)|[Execution](https://attack.mitre.org/tactics/TA0002/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
+|[Service Execution](https://attack.mitre.org/techniques/T1035/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
 ## Data Model References
 

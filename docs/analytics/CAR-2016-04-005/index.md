@@ -14,7 +14,7 @@ A remote desktop logon, through [RDP](https://attack.mitre.org/techniques/T1076/
 
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
-|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
+|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1076/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 
 ## Implementations

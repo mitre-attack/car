@@ -26,7 +26,6 @@ Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/article
 
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
-|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 |[Remote Services](https://attack.mitre.org/techniques/T1021/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 ## Data Model References

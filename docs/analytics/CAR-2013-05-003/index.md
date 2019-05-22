@@ -16,7 +16,7 @@ As described in [CAR-2013-01-003](CAR-2013-01-003), SMB provides a means of remo
 |---|---|---|
 |[Remote File Copy](https://attack.mitre.org/techniques/T1105/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|High|
 |[Windows Admin Shares](https://attack.mitre.org/techniques/T1077/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
-|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/), [Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
+|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 ## Data Model References
 

@@ -53,11 +53,11 @@ The host on which the commands were executed, the time of execution, and what co
 |[Process Discovery](https://attack.mitre.org/techniques/T1057/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 |[Windows Admin Shares](https://attack.mitre.org/techniques/T1077/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 |[New Service](https://attack.mitre.org/techniques/T1050/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
-|[Modify Existing Service](https://attack.mitre.org/techniques/T1031/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
+|[Modify Existing Service](https://attack.mitre.org/techniques/T1031/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 |[Modify Registry](https://attack.mitre.org/techniques/T1112/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 |[Service Registry Permissions Weakness](https://attack.mitre.org/techniques/T1058/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 |[Remote System Discovery](https://attack.mitre.org/techniques/T1018/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
-|[Service Execution](https://attack.mitre.org/techniques/T1035/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
+|[Service Execution](https://attack.mitre.org/techniques/T1035/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 |[Scheduled Task](https://attack.mitre.org/techniques/T1053/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 |[Scheduled Transfer](https://attack.mitre.org/techniques/T1029/)|[Exfiltration](https://attack.mitre.org/tactics/TA0010/)|Moderate|
 |[System Owner/User Discovery](https://attack.mitre.org/techniques/T1033/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|

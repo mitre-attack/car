@@ -17,7 +17,7 @@ Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types
 
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
-|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
+|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Initial Access](https://attack.mitre.org/tactics/TA0001/)|Low|
 
 ## Data Model References
 

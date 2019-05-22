@@ -7,7 +7,7 @@ permalink: /analytics/
 |Analytic|ATT&CK Techniques|
 |---|---|
 |[CAR-2013-01-002: Autorun Differences](CAR-2013-01-002)|[Modify Existing Service](https://attack.mitre.org/techniques/T1031/), [New Service](https://attack.mitre.org/techniques/T1050/), [Scheduled Task](https://attack.mitre.org/techniques/T1053/), [Port Monitors](https://attack.mitre.org/techniques/T1013/), [Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1060/), [Path Interception](https://attack.mitre.org/techniques/T1034/), [Accessibility Features](https://attack.mitre.org/techniques/T1015/), [Modify Registry](https://attack.mitre.org/techniques/T1112/), [Service Registry Permissions Weakness](https://attack.mitre.org/techniques/T1058/), [Windows Management Instrumentation Event Subscription](https://attack.mitre.org/techniques/T1084/), [File System Permissions Weakness](https://attack.mitre.org/techniques/T1044/), [Change Default File Association](https://attack.mitre.org/techniques/T1042/), [Logon Scripts](https://attack.mitre.org/techniques/T1037/), [Winlogon Helper DLL](https://attack.mitre.org/techniques/T1004/), [AppInit DLLs](https://attack.mitre.org/techniques/T1103/)
-|[CAR-2013-01-003: SMB Events Monitoring](CAR-2013-01-003)|[Valid Accounts](https://attack.mitre.org/techniques/T1078/), [Data from Network Shared Drive](https://attack.mitre.org/techniques/T1039/), [Windows Admin Shares](https://attack.mitre.org/techniques/T1077/)
+|[CAR-2013-01-003: SMB Events Monitoring](CAR-2013-01-003)|[Data from Network Shared Drive](https://attack.mitre.org/techniques/T1039/), [Windows Admin Shares](https://attack.mitre.org/techniques/T1077/)
 |[CAR-2013-02-003: Processes Spawning cmd.exe](CAR-2013-02-003)|[Command-Line Interface](https://attack.mitre.org/techniques/T1059/)
 |[CAR-2013-02-008: Simultaneous Logins on a Host](CAR-2013-02-008)|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)
 |[CAR-2013-02-012: User Logged in to Multiple Hosts](CAR-2013-02-012)|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)
@@ -31,7 +31,7 @@ permalink: /analytics/
 |[CAR-2014-03-005: Remotely Launched Executables via Services](CAR-2014-03-005)|[New Service](https://attack.mitre.org/techniques/T1050/), [Modify Existing Service](https://attack.mitre.org/techniques/T1031/), [Service Execution](https://attack.mitre.org/techniques/T1035/)
 |[CAR-2014-03-006: RunDLL32.exe monitoring](CAR-2014-03-006)|[Rundll32](https://attack.mitre.org/techniques/T1085/)
 |[CAR-2014-04-003: Powershell Execution](CAR-2014-04-003)|[PowerShell](https://attack.mitre.org/techniques/T1086/), [Scripting](https://attack.mitre.org/techniques/T1064/)
-|[CAR-2014-05-001: RPC Activity](CAR-2014-05-001)|[Valid Accounts](https://attack.mitre.org/techniques/T1078/), [Remote Services](https://attack.mitre.org/techniques/T1021/)
+|[CAR-2014-05-001: RPC Activity](CAR-2014-05-001)|[Remote Services](https://attack.mitre.org/techniques/T1021/)
 |[CAR-2014-05-002: Services launching Cmd](CAR-2014-05-002)|[New Service](https://attack.mitre.org/techniques/T1050/)
 |[CAR-2014-07-001: Service Search Path Interception](CAR-2014-07-001)|[Path Interception](https://attack.mitre.org/techniques/T1034/)
 |[CAR-2014-11-002: Outlier Parents of Cmd](CAR-2014-11-002)|[Command-Line Interface](https://attack.mitre.org/techniques/T1059/)
@@ -50,7 +50,7 @@ permalink: /analytics/
 |[CAR-2016-04-002: User Activity from Clearing Event Logs](CAR-2016-04-002)|[Indicator Blocking](https://attack.mitre.org/techniques/T1054/)
 |[CAR-2016-04-003: User Activity from Stopping Windows Defensive Services](CAR-2016-04-003)|[Indicator Blocking](https://attack.mitre.org/techniques/T1054/)
 |[CAR-2016-04-004: Successful Local Account Login](CAR-2016-04-004)|[Pass the Hash](https://attack.mitre.org/techniques/T1075/)
-|[CAR-2016-04-005: Remote Desktop Logon](CAR-2016-04-005)|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)
+|[CAR-2016-04-005: Remote Desktop Logon](CAR-2016-04-005)|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1076/)
 |[CAR-2019-04-001: UAC Bypass](CAR-2019-04-001)|[Bypass User Account Control](https://attack.mitre.org/techniques/T1088/)
 |[CAR-2019-04-002: Generic Regsvr32](CAR-2019-04-002)|[Regsvr32](https://attack.mitre.org/techniques/T1117/)
 |[CAR-2019-04-003: Squiblydoo](CAR-2019-04-003)|[Regsvr32](https://attack.mitre.org/techniques/T1117/)

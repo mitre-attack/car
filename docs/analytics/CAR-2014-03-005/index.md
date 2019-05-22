@@ -18,8 +18,8 @@ This compound behavior can be detected by looking for `services.exe` receiving a
 
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
-|[New Service](https://attack.mitre.org/techniques/T1050/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
-|[Modify Existing Service](https://attack.mitre.org/techniques/T1031/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
+|[New Service](https://attack.mitre.org/techniques/T1050/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
+|[Modify Existing Service](https://attack.mitre.org/techniques/T1031/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 |[Service Execution](https://attack.mitre.org/techniques/T1035/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
 ## Data Model References
