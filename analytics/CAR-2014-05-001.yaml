@@ -24,10 +24,6 @@ description: |-
 
   Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/articles/win_net_srv/well_known_named_pipes.html).
 coverage:
-  - technique: T1078
-    tactics:
-      - TA0008
-    coverage: Moderate
   - technique: T1021
     tactics:
       - TA0008
