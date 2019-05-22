@@ -17,7 +17,7 @@ description: |-
 coverage:
   - technique: T1086
     tactics:
-      - TA0005
+      - TA0002
     coverage: High
   - technique: T1064
     tactics:
