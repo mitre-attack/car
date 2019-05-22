@@ -15,13 +15,9 @@ description: |-
 
   The source, destination, content, and time of each event.
 coverage:
-  - technique: T1078
-    tactics:
-      - TA0008
-    coverage: Moderate
   - technique: T1039
     tactics:
-      - TA0010
+      - TA0009
     coverage: Moderate
   - technique: T1077
     tactics:
