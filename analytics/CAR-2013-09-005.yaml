@@ -13,7 +13,6 @@ coverage:
   - technique: T1031
     tactics:
       - TA0003
-      - TA0004
     coverage: Moderate
   - technique: T1050
     tactics:
