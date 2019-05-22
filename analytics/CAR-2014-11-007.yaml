@@ -22,7 +22,7 @@ description: |-
 coverage:
   - technique: T1047
     tactics:
-      - TA0008
+      - TA0002
     coverage: Moderate
 implementations:
   - description: 'To detect WMI over RPC (using DCOM), a sensor needs to exist that has the insight into individual connections and can actually decode and make sense of RPC traffic. Specifically, WMI can be detected by looking at RPC traffic where the target interface matches that of WMI, which is IRemUnknown2. '
