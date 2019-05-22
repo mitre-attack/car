@@ -22,7 +22,6 @@ coverage:
   - technique: T1015
     tactics:
       - TA0004
-      - TA0002
       - TA0003
     coverage: Moderate
 implementations:
