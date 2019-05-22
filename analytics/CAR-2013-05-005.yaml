@@ -21,7 +21,6 @@ coverage:
   - technique: T1078
     tactics:
       - TA0005
-      - TA0008
     coverage: Moderate
   - technique: T1105
     tactics:
