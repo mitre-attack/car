@@ -24,7 +24,6 @@ coverage:
   - technique: T1078
     tactics:
       - TA0005
-      - TA0008
     coverage: Moderate
 implementations:
   - code: |-
