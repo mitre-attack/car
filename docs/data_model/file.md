@@ -8,7 +8,7 @@ A resource for storing information available to a computer program.
 
 |Action|Description|
 |---|---|
-|timestamp|The modification of an attribute, such as creation time. The file metadata may change, but the contents of the file remain the same.|
+|timestomp|The modification of an attribute, such as creation time. The file metadata may change, but the contents of the file remain the same.|
 |create|The event corresponding to the creation of a file.|
 |delete|The event corresponding to the deletion of a file.|
 |modify|The event corresponding to the modification of a file or its metadata.|
