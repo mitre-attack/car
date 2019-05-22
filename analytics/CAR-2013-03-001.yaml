@@ -22,17 +22,15 @@ description: |-
 coverage:
   - technique: T1012
     tactics:
-      - TA0005
+      - TA0007
     coverage: Moderate
   - technique: T1112
     tactics:
-      - TA0003
-      - TA0004
+      - TA0005
     coverage: Moderate
   - technique: T1060
     tactics:
       - TA0003
-      - TA0004
     coverage: Moderate
   - technique: T1058
     tactics:
