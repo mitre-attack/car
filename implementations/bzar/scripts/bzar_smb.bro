@@ -127,11 +127,10 @@ event smb1_tree_connect_andx_request(c: connection, hdr: SMB1::Header, path: str
 	     c$id$orig_h !in BZAR::ignore_orig_h )
 	{
 		# ATT&CK Technique - T1077 Windows Admin Share (File Shares Only)
-		# Set Observation
-		SumStats::observe("attack_t1077",
-		 	  SumStats::Key($host=c$id$orig_h),
-			  SumStats::Observation($num=1)
-		);
+		SumStats::observe("attack_t1077", 
+						  [$host=c$id$orig_h], 
+						  [$str=c$uid, 
+						   $num=1]);
 	}
 }
 
@@ -190,11 +189,11 @@ event smb1_write_andx_response(c: connection, hdr: SMB1::Header, written_bytes: 
 			$conn=c]
 		);
 
-		# Set Observation, Score == 1 for SMB::FILE_WRITE
-		SumStats::observe("attack_lm_ex",
-				  SumStats::Key($host=c$id$resp_h),
-				  SumStats::Observation($num=1)
-		);
+		# Set Observation - Score == 1 for SMB::FILE_WRITE
+		SumStats::observe("attack_lm_ex", 
+						  [$host=c$id$resp_h], 
+						  [$str=c$uid, 
+						   $num=1]);
 	}
 }
 
@@ -240,11 +239,10 @@ event smb2_tree_connect_request(c: connection, hdr: SMB2::Header, path: string) 
 	     c$id$orig_h !in BZAR::ignore_orig_h )
 	{
 		# ATT&CK Technique - T1077 Windows Admin Share (File Shares Only)
-		# Set Observation
-		SumStats::observe("attack_t1077",
-				  SumStats::Key($host=c$id$orig_h),
-				  SumStats::Observation($num=1)
-		);
+		SumStats::observe("attack_t1077", 
+						  [$host=c$id$orig_h], 
+						  [$str=c$uid, 
+						   $num=1]);
 	}
 }
 
@@ -262,6 +260,7 @@ event smb2_create_request(c: connection, hdr: SMB2::Header, request: SMB2::Creat
 {
 
 @endif
+
 	# Copied this snippet from Bro default handler:
 	# policy/protocols/smb/smb1-main.bro#smb1_write_andx_request.
 	# It is important to know the full file path at SMB::FILE_OPEN time,
@@ -309,10 +308,10 @@ event smb2_write_request(c: connection, hdr: SMB2::Header, file_id: SMB2::GUID, 
 		);
 
 		# Set Observation, Score == 1 for SMB::FILE_WRITE
-		SumStats::observe("attack_lm_ex",
-				  SumStats::Key($host=c$id$resp_h),
-				  SumStats::Observation($num=1)
-		);
+		SumStats::observe("attack_lm_ex", 
+						  [$host=c$id$resp_h], 
+						  [$str=c$uid, 
+						   $num=1]);
 	}
 }
 

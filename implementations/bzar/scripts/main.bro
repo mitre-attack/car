@@ -48,18 +48,21 @@ export
 	# 1- SumStats Analytics for ATT&CK Lateral Movement and Execution
 	const bzar1_epoch = 10min &redef;
 	const bzar1_limit = 1001.0 &redef; # SMB_WRITE == 1; RPC_EXEC == 1000;
+	const bzar1_samples = 5 &redef;
 
 	# 2- SumStats Analytics for ATTACK Lateral Movement (Multiple Attempts)
 	# Use threshold vector for greater fidelity and to assist in tuning the
 	# threshold for each unique environment.
 	const bzar2_epoch = 5min &redef;
 	const bzar2_limit = vector(5.0, 10.0, 15.0, 20.0, 30.0, 40.0, 50.0, 100.0) &redef;
+	const bzar2_samples = 5 &redef;
 
 	# 3- SumStats Analytics for ATTACK Discovery
 	# Use threshold vector for greater fidelity and to assist in tuning the
 	# threshold for each unique environment.
 	const bzar3_epoch = 5min &redef;
 	const bzar3_limit = vector(5.0, 10.0, 15.0, 20.0, 30.0, 40.0, 50.0, 100.0) &redef;
+	const bzar3_samples = 5 &redef;
 
 	# Ignore Activity from these Originating IP Addresses
 	const ignore_orig_h : set[addr] = {127.0.0.1,} &redef;
@@ -105,7 +108,8 @@ event bro_init()
 
 	local bzar1 = SumStats::Reducer(
 		$stream="attack_lm_ex",
-		$apply=set(SumStats::SUM, SumStats::MAX, SumStats::MIN)
+		$apply=set(SumStats::SUM, SumStats::MAX, SumStats::MIN, SumStats::SAMPLE), 
+		$num_samples=bzar1_samples
 	);
 
 	SumStats::create([
@@ -126,11 +130,20 @@ event bro_init()
 
 			if ( r$max == 1000 && r$min == 1 )
 			{ 
-				local s = fmt("Detected activity against host %s, total score %.0f within timeframe %s", key$host, r$sum, bzar1_epoch);
+				local uids: string = "";
+				for(smpl in r$samples) {
+					uids += r$samples[smpl]$str;
+					if((smpl % 2) == 1 || (smpl % 2) == 0 && (smpl < |r$samples|-1)) {
+						uids += ", ";
+					}
+				}
+			
+				local s = fmt("Detected activity against host %s, total score %.0f within timeframe %s (uids: %s)", 
+							  key$host, r$sum, bzar1_epoch, uids);
 
 				# Raise Notice
 				NOTICE([$note=ATTACK::Lateral_Movement_and_Execution,
-					$msg=s]
+						$msg=s]
 				);
 			}
 		}
@@ -159,7 +172,8 @@ event bro_init()
 
 	local bzar2 = SumStats::Reducer(
 		$stream="attack_t1077",
-		$apply=set(SumStats::SUM)
+		$apply=set(SumStats::SUM, SumStats::SAMPLE),
+		$num_samples = bzar2_samples
 	);
 
 	SumStats::create([
@@ -173,11 +187,20 @@ event bro_init()
 		},
 		$threshold_crossed(key:SumStats::Key, result:SumStats::Result) = 
 		{
-			local s = fmt("Detected T1077 Admin File Share activity from host %s, total attempts %.0f within timeframe %s", key$host, result["attack_t1077"]$sum, bzar2_epoch);
+			local uids: string = "";
+			for(smpl in result["attack_t1077"]$samples) {
+				uids += result["attack_t1077"]$samples[smpl]$str;
+				if((smpl % 2) == 1 || (smpl % 2) == 0 && (smpl < |result["attack_t1077"]$samples|-1)) {
+					uids += ", ";
+				}
+			}
 
+			local s = fmt("Detected T1077 Admin File Share activity from host %s, total attempts %.0f within timeframe %s (uids: %s)", 
+					  key$host, result["attack_t1077"]$sum, bzar2_epoch, uids);
+			
 			# Raise Notice
 			NOTICE([$note=ATTACK::Lateral_Movement,
-				$msg=s]
+					$msg=s]
 			);
 		}
 	]);
@@ -211,7 +234,8 @@ event bro_init()
 
 	local bzar3 = SumStats::Reducer(
 		$stream="attack_discovery",
-		$apply=set(SumStats::SUM)
+		$apply=set(SumStats::SUM, SumStats::SAMPLE),
+		$num_samples = bzar3_samples
 	);
 
 	SumStats::create([
@@ -225,11 +249,20 @@ event bro_init()
 		},
 		$threshold_crossed(key:SumStats::Key, result:SumStats::Result) = 
 		{
-			local s = fmt("Detected activity from host %s, total attempts %.0f within timeframe %s", key$host, result["attack_discovery"]$sum, bzar3_epoch);
+			local uids: string = "";
+			for(smpl in result["attack_discovery"]$samples) {
+				uids += result["attack_discovery"]$samples[smpl]$str;
+				if((smpl % 2) == 1 || (smpl % 2) == 0 && (smpl < |result["attack_discovery"]$samples|-1)) {
+					uids += ", ";
+				}
+			}
+
+			local s = fmt("Detected activity from host %s, total attempts %.0f within timeframe %s (uids: %s)", 
+						  key$host, result["attack_discovery"]$sum, bzar3_epoch, uids);
 
 			# Raise Notice
 			NOTICE([$note=ATTACK::Discovery,
-				$msg=s]
+					$msg=s]
 			);
 		}
 	]);

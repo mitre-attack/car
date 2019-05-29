@@ -266,11 +266,10 @@ event dce_rpc_response(c: connection, fid: count, ctx_id: count, opnum: count, s
 	     c$id$orig_h !in BZAR::ignore_orig_h )
 	{
 		# Looks like DCE-RPC Discovery
-		# Set Observation
-		SumStats::observe("attack_discovery",
-				  SumStats::Key($host=c$id$orig_h),
-				  SumStats::Observation($num=1)
-		);
+		SumStats::observe("attack_discovery", 
+						  [$host=c$id$orig_h], 
+						  [$str=c$uid, 
+						   $num=1]);
 	}
 
 	if ( rpc in BZAR::rpc_execution &&
@@ -285,10 +284,10 @@ event dce_rpc_response(c: connection, fid: count, ctx_id: count, opnum: count, s
 		);
 
 		# Set Observation, Score == 1000 for RPC_EXEC
-		SumStats::observe("attack_lm_ex",
-				  SumStats::Key($host=c$id$resp_h),
-				  SumStats::Observation($num=1000)
-		);
+		SumStats::observe("attack_lm_ex", 
+						  [$host=c$id$resp_h], 
+						  [$str=c$uid, 
+						   $num=1000]);
 	}
 
 	if ( rpc in BZAR::rpc_persistence )
