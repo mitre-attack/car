@@ -24,10 +24,10 @@ Information about the latest CAR updates and changes can be found in this sectio
 
 ### April 2019
 * Four new Analytics were added
-  * [CAR-2019-04-001: UAC Bypass](CAR-2019-04-001)
-  * [CAR-2019-04-002: Generic Regsvr32](CAR-2019-04-002)
-  * [CAR-2019-04-003: Squiblydoo](CAR-2019-04-003)
-  * [CAR-2019-04-004: Credential Dumping via Mimikatz](CAR-2019-04-004)
+  * [CAR-2019-04-001: UAC Bypass](/analytics/CAR-2019-04-001)
+  * [CAR-2019-04-002: Generic Regsvr32](/analytics/CAR-2019-04-002)
+  * [CAR-2019-04-003: Squiblydoo](/analytics/CAR-2019-04-003)
+  * [CAR-2019-04-004: Credential Dumping via Mimikatz](/analytics/CAR-2019-04-004)
 * Three new fields were added to the [Process object](/data_model/process)
   * `integrity_level`
   * `parent_command_line`
