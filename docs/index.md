@@ -20,10 +20,10 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 Information about the latest CAR updates and changes can be found in this section.
 
 ### May 2019
-* All CAR analytic have been converted to YAML; the YAML versions can be found [here](https://github.com/mitre-attack/car/tree/master/analytics).
+* All CAR analytics have been converted to YAML; the YAML versions can be found [here](https://github.com/mitre-attack/car/tree/master/analytics).
 
 ### April 2019
-* Four new Analytics were added
+* Four new analytics were added
   * [CAR-2019-04-001: UAC Bypass](/analytics/CAR-2019-04-001)
   * [CAR-2019-04-002: Generic Regsvr32](/analytics/CAR-2019-04-002)
   * [CAR-2019-04-003: Squiblydoo](/analytics/CAR-2019-04-003)
