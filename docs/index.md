@@ -16,6 +16,23 @@ Analytics stored in CAR contain the following information:
 
 In addition to the analytics, CAR also contains a [data model](data_model) for observable data used to run the analytics and [sensors](sensors) that are used to collect that data.
 
+## News
+Information about the latest CAR updates and changes can be found in this section.
+
+### May 2019
+* All CAR analytic have been converted to YAML; the YAML versions can be found [here](https://github.com/mitre-attack/car/tree/master/analytics).
+
+### April 2019
+* Four new Analytics were added
+  * [CAR-2019-04-001: UAC Bypass](CAR-2019-04-001)
+  * [CAR-2019-04-002: Generic Regsvr32](CAR-2019-04-002)
+  * [CAR-2019-04-003: Squiblydoo](CAR-2019-04-003)
+  * [CAR-2019-04-004: Credential Dumping via Mimikatz](CAR-2019-04-004)
+* Three new fields were added to the [Process object](/data_model/process)
+  * `integrity_level`
+  * `parent_command_line`
+  * `current_working_directory`
+
 ## Methodology
 CAR analytics were developed to detect the adversary behaviors in [ATT&CK](https://attack.mitre.org/). Development of an analytic is based upon the following activities: 
 * identifying and prioritizing adversary behaviors from the ATT&CK adversary model 
