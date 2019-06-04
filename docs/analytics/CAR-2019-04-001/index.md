@@ -37,3 +37,22 @@ This Splunk query looks for specific invocations of UACME, representing differen
 index=_your_sysmon_index_ EventCode=1 IntegrityLevel=High|search (ParentCommandLine="\"c:\\windows\\system32\\dism.exe\"*""*.xml" AND Image!="c:\\users\\*\\appdata\\local\\temp\\*\\dismhost.exe") OR ParentImage=c:\\windows\\system32\\fodhelper.exe OR (CommandLine="\"c:\\windows\\system32\\wusa.exe\"*/quiet*" AND User!=NOT_TRANSLATED AND CurrentDirectory=c:\\windows\\system32\\ AND ParentImage!=c:\\windows\\explorer.exe) OR CommandLine="*.exe\"*cleanmgr.exe /autoclean*" OR (ParentImage="c:\\windows\\*dccw.exe" AND Image!="c:\\windows\\system32\\cttune.exe") OR Image="c:\\program files\\windows media player\\osk.exe" OR ParentImage="c:\\windows\\system32\\slui.exe"|eval PossibleTechniques=case(like(lower(ParentCommandLine),"%c:\\windows\\system32\\dism.exe%"), "UACME #23", like(lower(Image),"c:\\program files\\windows media player\\osk.exe"), "UACME #32", like(lower(ParentImage),"c:\\windows\\system32\\fodhelper.exe"),  "UACME #33", like(lower(CommandLine),"%.exe\"%cleanmgr.exe /autoclean%"), "UACME #34", like(lower(Image),"c:\\windows\\system32\\wusa.exe"), "UACME #36", like(lower(ParentImage),"c:\\windows\\%dccw.exe"), "UACME #37", like(lower(ParentImage),"c:\\windows\\system32\\slui.exe"), "UACME #45")
 ```
 
+### Pseudocode, CAR
+
+This is a pseudocode version of the above Splunk query.
+
+```
+processes = search Process:Create
+possible_uac_bypass = filter processes where (
+  integrity_level == "High" and
+  (parent_image_path == "c:\windows\system32\fodhelper.exe") or
+  (command_line == "*.exe\"*cleanmgr.exe /autoclean*") or
+  (image_path == "c:\program files\windows media player\osk.exe") or
+  (parent_image_path == "c:\windows\system32\slui.exe") or
+  (parent_command_line == '"c:\windows\system32\dism.exe"*""*.xml"' and image_path != "c:\users\*\appdata\local\temp\*\dismhost.exe") or
+  (command_line == '"c:\windows\system32\wusa.exe"*/quiet*' and user != "NOT_TRANSLATED" and current_working_directory == "c:\windows\system32\" and parent_image_path != "c:\windows\explorer.exe") or 
+  (parent_image_path == "c:\windows\*dccw.exe" and image_path != "c:\windows\system32\cttune.exe") 
+)
+output possible_uac_bypass
+```
+
