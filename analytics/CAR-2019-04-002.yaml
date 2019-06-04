@@ -54,8 +54,8 @@ implementations:
       regsvr_processes = filter processes where (
         (parent_image_path == "C:\Windows\System32\regsvr32.exe" or parent_image_path == "C:\Windows\SysWOW64\regsvr32.exe") and
         image_path != "C:\Windows\System32\regsvr32.exe" and
-        image_path != "C:\Windows\\SysWOW64\regsvr32.exe" and
-        image_path != "C:\Windows\\SysWOW64\WerFault.exe" and
+        image_path != "C:\Windows\SysWOW64\regsvr32.exe" and
+        image_path != "C:\Windows\SysWOW64\WerFault.exe" and
         image_path != "C:\Windows\System32\WerFault.exe" and
         image_path != "C:\Windows\System32\wevtutil.exe"
        )
