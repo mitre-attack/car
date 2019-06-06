@@ -21,6 +21,14 @@ coverage:
     tactics:
       - TA0005
     coverage: Moderate
+implementations:
+  - name: Basic Query
+    description: This is a basic Splunk search that will output all of the sysmon-reported process images and their respective hashes, for cases where an image has more than one set of hashes. Thus, this will output a large amount of data and should be filtered by the analyst in order to make the results more useful.
+    code: |-
+      index=__your_sysmon_index__ EventCode=1|stats dc(Hashes) as Num_Hashes values(Hashes) as "Hashes" by Image|where Num_Hashes > 1
+    type: splunk
+    data_model: Sysmon native
 data_model_references:
   - process/create/exe
   - process/create/md5_hash
+
