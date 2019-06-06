@@ -17,7 +17,7 @@ permalink: /analytics/
 |[CAR-2013-05-003: SMB Write Request](CAR-2013-05-003)|[Remote File Copy](https://attack.mitre.org/techniques/T1105/), [Windows Admin Shares](https://attack.mitre.org/techniques/T1077/), [Valid Accounts](https://attack.mitre.org/techniques/T1078/)|Pseudocode|
 |[CAR-2013-05-004: Execution with AT](CAR-2013-05-004)|[Scheduled Task](https://attack.mitre.org/techniques/T1053/)|Pseudocode|
 |[CAR-2013-05-005: SMB Copy and Execution](CAR-2013-05-005)|[Windows Admin Shares](https://attack.mitre.org/techniques/T1077/), [Valid Accounts](https://attack.mitre.org/techniques/T1078/), [Remote File Copy](https://attack.mitre.org/techniques/T1105/)|Pseudocode|
-|[CAR-2013-05-009: Running executables with same hash and different names](CAR-2013-05-009)|[Masquerading](https://attack.mitre.org/techniques/T1036/)||
+|[CAR-2013-05-009: Running executables with same hash and different names](CAR-2013-05-009)|[Masquerading](https://attack.mitre.org/techniques/T1036/)|Splunk|
 |[CAR-2013-07-001: Suspicious Arguments](CAR-2013-07-001)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/), [Masquerading](https://attack.mitre.org/techniques/T1036/), [Remote Services](https://attack.mitre.org/techniques/T1021/), [Remote File Copy](https://attack.mitre.org/techniques/T1105/)|Pseudocode|
 |[CAR-2013-07-002: RDP Connection Detection](CAR-2013-07-002)|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1076/)|Pseudocode|
 |[CAR-2013-07-005: Command Line Usage of Archiving Software](CAR-2013-07-005)|[Data Compressed](https://attack.mitre.org/techniques/T1002/)|Pseudocode|
