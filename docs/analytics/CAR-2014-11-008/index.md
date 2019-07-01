@@ -44,3 +44,11 @@ winlogon_cmd = filter processes where (parent_exe == "winlogon.exe" and exe == "
 output winlogon_cmd
 ```
 
+### Splunk, Sysmon native
+
+Splunk version of the above pseudocode.
+
+```
+index=__your_sysmon_index__ EventCode=1 ParentImage="C:\\Windows\\*\\winlogon.exe" Image="C:\\Windows\\*\\cmd.exe"
+```
+

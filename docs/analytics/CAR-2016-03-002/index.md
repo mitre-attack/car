@@ -40,3 +40,11 @@ wmic = filter processes where (exe == "wmic.exe" and command_line == "* process 
 output wmic
 ```
 
+### Splunk
+
+Splunk version of the above pseudocode.
+
+```
+index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\wmic.exe" CommandLine="* process call create *"|search CommandLine="* /node:*"
+```
+

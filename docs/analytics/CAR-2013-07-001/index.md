@@ -57,6 +57,22 @@ ip_addr = filter process where (command_line match \d{1,3}\.\d{1,3}\.\d{1,3}\.\d
 output port_fwd, scp, mimikatz, rar, archive, ip_addr
 ```
 
+### Splunk, Sysmon native
+
+Splunk version of the above pseudocode, excluding the IP address search.
+
+```
+index=__your_sysmon_index__ EventCode=1 (CommandLine="* -R * -pw*" OR CommandLine="* -pw * *@*" OR CommandLine="*sekurlsa*" OR CommandLine="* -hp *" OR CommandLine="* a *")
+```
+
+### Splunk, Sysmon native
+
+Splunk version of the above pseudocode, solely for the IP address search. Note that this will likely result in many false positives, since things like software version numbers can also be valid IPv4 addresses.
+
+```
+index=__your_sysmon_index__ EventCode=1 |regex CommandLine=".*\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}\b.*"
+```
+
 
 ## Unit Tests
 
