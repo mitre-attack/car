@@ -26,6 +26,11 @@ implementations:
       process = search Process:Create
       wsmprovhost = filter process where (exe == "wsmprovhost.exe" and parent_exe == "svchost.exe")
     type: pseudocode
+  - description: Splunk version of the above pseudocode.
+    code: |-
+      index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\wsmprovhost.exe" ParentImage="C:\\Windows\\*\\svchost.exe"
+    type: Splunk
+    data_model: Sysmon native
 data_model_references:
   - process/create/exe
   - process/create/parent_exe
