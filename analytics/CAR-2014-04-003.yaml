@@ -30,6 +30,11 @@ implementations:
       powershell = filter process where (exe == "powershell.exe" AND parent_exe != "explorer.exe" )
       output powershell
     type: pseudocode
+  - description: Splunk version of the above pseudocode.
+    code: |-
+      index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\powershell.exe" ParentImage!="C:\\Windows\\explorer.exe"|stats values(CommandLine) as "Command Lines" values(ParentImage) as "Parent Images" by ComputerName
+    type: Splunk
+    data_model: Sysmon native
 data_model_references:
   - process/create/exe
   - process/create/parent_exe
