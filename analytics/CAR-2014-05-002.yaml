@@ -25,6 +25,11 @@ implementations:
       cmd = filter process where (exe == "cmd.exe" and parent_exe == "services.exe")
       output cmd
     type: pseudocode
+  - description: The Splunk version of the above pseudocode.
+    code: |-
+      index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\cmd.exe" ParentImage="C:\\Windows\\*\\services.exe"
+    type: Splunk
+    data_model: Sysmon native
 data_model_references:
   - process/create/exe
   - process/create/parent_exe
