@@ -19,6 +19,9 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
+### July 2019
+* Added Splunk/Sysmon implementations to several analytics
+
 ### May 2019
 * All CAR analytics have been converted to YAML; the YAML versions can be found [here](https://github.com/mitre-attack/car/tree/master/analytics).
 * Added an [ATT&CK Navigator Layer](https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcar_attack%2Fcar_attack.json) for capturing the current set of ATT&CK tactics/techniques covered by CAR analytics.
