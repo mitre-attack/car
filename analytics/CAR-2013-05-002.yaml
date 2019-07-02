@@ -34,9 +34,7 @@ implementations:
       )
       output suspicious_locations
     type: pseudocode
-  - description: Sigma version of the above pseudocode, with some modifications.
-    code: |-
-      See - https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_susp_run_locations.yml
+  - description: Sigma version of the above pseudocode, with some modifications. See: https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_susp_run_locations.yml
     type: Sigma
 data_model_references:
   - process/create/image_path
