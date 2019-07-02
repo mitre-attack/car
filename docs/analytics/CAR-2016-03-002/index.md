@@ -48,3 +48,13 @@ Splunk version of the above pseudocode.
 index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\wmic.exe" CommandLine="* process call create *"|search CommandLine="* /node:*"
 ```
 
+### Eql
+
+EQL version of the above pseudocode.
+
+```
+process where subtype.create and
+  (process_name == "wmic.exe" and command_line == "* process call create ")
+  |filter command_line == "* /node:*"
+```
+

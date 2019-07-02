@@ -52,3 +52,12 @@ Splunk version of the above pseudocode.
 index=__your_sysmon_index__ EventCode=1 ParentImage="C:\\Windows\\*\\winlogon.exe" Image="C:\\Windows\\*\\cmd.exe"
 ```
 
+### Eql, EQL native
+
+EQL version of the above pseudocode.
+
+```
+process where subtype.create and
+  (process_name == "cmd.exe" and parent_process_name == "winlogon.exe")
+```
+

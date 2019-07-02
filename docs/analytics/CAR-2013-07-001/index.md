@@ -65,6 +65,15 @@ Splunk version of the above pseudocode, excluding the IP address search.
 index=__your_sysmon_index__ EventCode=1 (CommandLine="* -R * -pw*" OR CommandLine="* -pw * *@*" OR CommandLine="*sekurlsa*" OR CommandLine="* -hp *" OR CommandLine="* a *")
 ```
 
+### Eql, EQL native
+
+EQL version of the above pseudocode, excluding the IP address search.
+
+```
+process where subtype.create and
+  (command_line == "* -R * -pw*" or command_line == "* -pw * *@*" or command_line == "*sekurlsa*" or command_line == "* -hp *" or command_line == "* a *")
+```
+
 ### Splunk, Sysmon native
 
 Splunk version of the above pseudocode, solely for the IP address search. Note that this will likely result in many false positives, since things like software version numbers can also be valid IPv4 addresses.

@@ -37,6 +37,22 @@ at = filter process where (exe == "at.exe")
 output at
 ```
 
+### Splunk, Sysmon native
+
+Splunk version of the above pseudocode.
+
+```
+index=__your_sysmon_index__ Image="C:\\Windows\\*\\at.exe"|stats values(CommandLine) as "Command Lines" by ComputerName
+```
+
+### Eql, EQL native
+
+EQL version of the above pseudocode.
+
+```
+process where subtype.create and process_name == "at.exe"
+```
+
 
 ## Unit Tests
 

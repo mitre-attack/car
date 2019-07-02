@@ -49,3 +49,12 @@ Splunk version of the above pseudocode.
 index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\powershell.exe" ParentImage!="C:\\Windows\\explorer.exe"|stats values(CommandLine) as "Command Lines" values(ParentImage) as "Parent Images" by ComputerName
 ```
 
+### Eql, EQL native
+
+EQL version of the above pseudocode.
+
+```
+process where subtype.create and
+  (process_name == "powershell.exe" and parent_process_name != "explorer.exe")    
+```
+

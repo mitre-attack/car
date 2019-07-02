@@ -39,9 +39,18 @@ This looks for any and all usage of the scrobj DLL, which is what is used to run
 index=__your_sysmon_events__ EventCode=1 regsvr32.exe scrobj.dll | search Image="*regsvr32.exe"
 ```
 
+### Eql, EQL native
+
+EQL version of the above Splunk search.
+
+```
+process where subtype.create and
+  (process_path == "*regsvr32.exe" and command_line == "*scrobj.dll")
+```
+
 ### Psuedocode, CAR
 
-This is a pseudocode version of the above Splunk search.
+Pseudocode version of the above Splunk search.
 
 ```
 processes = search Process:Create
