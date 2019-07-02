@@ -22,3 +22,5 @@ implementations:
       [Severity] == "Information" and
       [LogonType] == 10
     type: pseudocode
+  - description: [Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_admin_rdp_login.yml) of the above pseudocode, with some modifications. 
+    type: Sigma
