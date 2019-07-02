@@ -28,9 +28,10 @@ implementations:
     type: pseudocode
   - description: Splunk version of the above pseudocode.
     code: |-
-      index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\wsmprovhost.exe" ParentImage="C:\\Windows\\*\\svchost.exe"
-    type: Splunk
-    data_model: Sysmon native
+      process where subtype.create and
+        (process_name == "wsmprovhost.exe" and parent_process_name == "svchost.exe")    
+    type: EQL
+    data_model: EQL native
 data_model_references:
   - process/create/exe
   - process/create/parent_exe
