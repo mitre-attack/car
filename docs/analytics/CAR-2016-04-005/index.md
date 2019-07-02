@@ -32,9 +32,9 @@ Look in the system logs for remote logons using RDP.
 
 ### Sigma
 
-Sigma version of the above pseudocode, with some modifications.
+[Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_admin_rdp_login.yml) of the above pseudocode, with some modifications.
 
 ```
-See - https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_admin_rdp_login.yml
+
 ```
 

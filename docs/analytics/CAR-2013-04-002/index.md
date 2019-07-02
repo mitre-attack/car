@@ -104,10 +104,10 @@ output reg_grouped
 
 ### Sigma
 
-Sigma version of the above pseudocode, with some modifications.
+[Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_multiple_suspicious_cli.yml) of the above pseudocode, with some modifications.
 
 ```
-See - https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_multiple_suspicious_cli.yml
+
 ```
 
 
