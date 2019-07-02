@@ -102,6 +102,14 @@ reg_grouped = group reg by hostname, ppid where(max time between two events is 3
 output reg_grouped
 ```
 
+### Sigma
+
+Sigma version of the above pseudocode, with some modifications.
+
+```
+See - https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_multiple_suspicious_cli.yml
+```
+
 
 ## Unit Tests
 

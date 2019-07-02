@@ -47,6 +47,14 @@ suspicious_locations = filter process where (
 output suspicious_locations
 ```
 
+### Sigma
+
+Sigma version of the above pseudocode, with some modifications.
+
+```
+See - https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_susp_run_locations.yml
+```
+
 
 ## Unit Tests
 

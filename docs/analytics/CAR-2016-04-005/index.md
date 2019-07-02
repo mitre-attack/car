@@ -30,3 +30,11 @@ Look in the system logs for remote logons using RDP.
 [LogonType] == 10
 ```
 
+### Sigma
+
+Sigma version of the above pseudocode, with some modifications.
+
+```
+See - https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_admin_rdp_login.yml
+```
+
