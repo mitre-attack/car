@@ -61,7 +61,7 @@ implementations:
   - description: EQL version of the above pseudocode, excluding the IP address search.
     code: |-
       process where subtype.create and
-        (command_line == "* -R * -pw*" or command_line == "* -pw * *@*" or command_line == "*sekurlsa*" or command_line == "* -hp *" or command_line == "* a *")    type: splunk
+        (command_line == "* -R * -pw*" or command_line == "* -pw * *@*" or command_line == "*sekurlsa*" or command_line == "* -hp *" or command_line == "* a *")
     type: EQL
     data_model: EQL native
   - description: Splunk version of the above pseudocode, solely for the IP address search. Note that this will likely result in many false positives, since things like software version numbers can also be valid IPv4 addresses.
