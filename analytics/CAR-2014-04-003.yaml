@@ -35,6 +35,12 @@ implementations:
       index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\powershell.exe" ParentImage!="C:\\Windows\\explorer.exe"|stats values(CommandLine) as "Command Lines" values(ParentImage) as "Parent Images" by ComputerName
     type: Splunk
     data_model: Sysmon native
+  - description: EQL version of the above pseudocode.
+    code: |-
+      process where subtype.create and
+        (process_name == "powershell.exe" and parent_process_name != "explorer.exe")    
+    type: EQL
+    data_model: EQL native
 data_model_references:
   - process/create/exe
   - process/create/parent_exe
