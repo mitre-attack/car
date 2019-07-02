@@ -36,9 +36,11 @@ Identifies the connection in which WMI traffic is seen, as well as the process(e
 
 To detect WMI over RPC (using DCOM), a sensor needs to exist that has the insight into individual connections and can actually decode and make sense of RPC traffic. Specifically, WMI can be detected by looking at RPC traffic where the target interface matches that of WMI, which is IRemUnknown2. 
 
+
 ```
 flows = search Flow:Message
 wmi_flow = filter flows where (dest_port == 135 and proto_info.rpc_interface == "IRemUnknown2")
 output wmi_flow
 ```
+
 

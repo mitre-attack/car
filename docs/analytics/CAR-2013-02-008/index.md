@@ -31,6 +31,7 @@ Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types
 
 ### Pseudocode
 
+
 ```
 users_list = search UserSession:Login
 users_grouped = group users_list by hostname
@@ -38,4 +39,5 @@ users_grouped = from users_grouped select min(time) as earliest_time, max(time) 
 multiple_logins = filter users_grouped where (latest_time - earliest_time <= 1 hour and user_count > 1)
 output multiple_logins
 ```
+
 

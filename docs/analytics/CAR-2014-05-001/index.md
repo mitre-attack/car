@@ -42,6 +42,7 @@ Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/article
 
 Traffic to the RPC Endpoint Mapper will always have the destination port of 135. Assuming success, RPC traffic will continue to the endpoint. The endpoint and the client both bind to dynamically assigned ports (on Windows, this is typically greater than 49152). The traffic between the client and endpoint can be detected by looking at traffic to 135 followed by traffic where the source and destination ports are at least 49152. 
 
+
 ```
 flows = search Flow:Start
 rpc_mapper = filter flows where (dest_port == 135)
@@ -52,4 +53,5 @@ rpc = join rpc_mapper, rpc_endpoint where (
 )
 output rpc
 ```
+
 

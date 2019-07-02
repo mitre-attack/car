@@ -36,6 +36,7 @@ Monitors the directories
 
 The RECYCLER and SystemVolumeInformation directories will be present on every drive. Replace %systemroot% and %windir% with the actual paths as configured by the endpoints. 
 
+
 ```
 processes = search Process:Create
 suspicious_locations = filter process where (
@@ -47,13 +48,12 @@ suspicious_locations = filter process where (
 output suspicious_locations
 ```
 
+
 ### Sigma
 
 [Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_susp_run_locations.yml) of the above pseudocode, with some modifications.
 
-```
 
-```
 
 
 ## Unit Tests

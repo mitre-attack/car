@@ -23,10 +23,12 @@ The successful use of [Pass The Hash](https://attack.mitre.org/techniques/T1075/
 
 This analytic will look for remote logins, using a non domain login, from one host to another, using NTL authentication where the account is not "ANONYMOUS LOGON" 
 
+
 ```
 EventCode == 4624 and [target_user_name] != "ANONYMOUS LOGON" and
 [authentication_package_name] == "NTLM"
 ```
+
 
 
 ## Unit Tests

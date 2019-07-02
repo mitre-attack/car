@@ -32,26 +32,32 @@ To survive the timeout, [adversaries and red teams](https://www.operationblockbu
 
 Returns all processes named `cmd.exe` that have `services.exe` as a parent process. Because this should never happen, the `/c` flag is redundant in the search.
 
+
 ```
 process = search Process:Create
 cmd = filter process where (exe == "cmd.exe" and parent_exe == "services.exe")
 output cmd
 ```
 
+
 ### Splunk, Sysmon native
 
 The Splunk version of the above pseudocode.
+
 
 ```
 index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\cmd.exe" ParentImage="C:\\Windows\\*\\services.exe"
 ```
 
+
 ### Eql, EQL native
 
 EQL version of the above pseudocode.
+
 
 ```
 process where subtype.create and
   (process_name == "cmd.exe" and parent_process_name == "services.exe")
 ```
+
 

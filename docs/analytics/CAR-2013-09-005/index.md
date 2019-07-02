@@ -30,6 +30,7 @@ New executables that are started as a service are suspicious. This analytic look
 
 Create a baseline of services seen over the last 30 days and a list of services seen today. Remove services in the baseline from services seen today, leaving a list of new services.
 
+
 ```
 processes = search Process:Create
 services = filter processes where (parent_image_path == "C:\Windows\System32\services.exe")
@@ -38,4 +39,5 @@ current_services = filter services (where timestamp >= now - 1 day)
 new_services = historic_services - current_services
 output new_services
 ```
+
 

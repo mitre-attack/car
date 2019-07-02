@@ -30,11 +30,13 @@ The Windows built-in tool `schtasks.exe` provides the creation, modification, an
 
 Look for instances of `schtasks.exe` running as processes. The `command_line` field is necessary to disambiguate between types of schtasks commands. These include the flags `/create`, `/run`, `/query`, `/delete`, `/change`, and `/end`.
 
+
 ```
 process = search Process:Create
 schtasks = filter process where (exe == "schtasks.exe")
 output schtasks
 ```
+
 
 
 ## Unit Tests

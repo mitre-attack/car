@@ -33,6 +33,7 @@ This can possibly extend to more copy protocols in order to widen its reach, or 
 
 ### Pseudocode
 
+
 ```
 process = search Process:Create
 smb_write = run Analytic:CAR-2013-05-003
@@ -43,4 +44,5 @@ remote_start = join (smb_write, process) where (
 )
 output remote_start
 ```
+
 

@@ -38,26 +38,32 @@ Several accessibility programs can be run using the Ease of Access center
 
 Look for instances of processes where the parent executable is winlogon.exe and the child is an instance of a command prompt. 
 
+
 ```
 processes = search Process:Create
 winlogon_cmd = filter processes where (parent_exe == "winlogon.exe" and exe == "cmd.exe")
 output winlogon_cmd
 ```
 
+
 ### Splunk, Sysmon native
 
 Splunk version of the above pseudocode.
+
 
 ```
 index=__your_sysmon_index__ EventCode=1 ParentImage="C:\\Windows\\*\\winlogon.exe" Image="C:\\Windows\\*\\cmd.exe"
 ```
 
+
 ### Eql, EQL native
 
 EQL version of the above pseudocode.
+
 
 ```
 process where subtype.create and
   (process_name == "cmd.exe" and parent_process_name == "winlogon.exe")
 ```
+
 

@@ -39,6 +39,7 @@ The Service Name and approximate time in which changes occurred on each host
 
 Look for events where a file was created and then later run as a service. In these cases, a new service has been created or the binary has been modified. Many programs, such as `msiexec.exe`, do these behaviors legitimately and can be used to help validate legitimate service creations/modifications.
 
+
 ```
 legitimate_installers = ["C:\windows\system32\msiexec.exe", "C:\windows\syswow64\msiexec.exe", ...]
 
@@ -53,4 +54,5 @@ modified_service = join (search, filter) where (
 modified_service = filter modified_service where (modified_service.file_change.image_path not in legitimate_installers)
 output modified_service
 ```
+
 

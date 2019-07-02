@@ -53,5 +53,5 @@ permalink: /analytics/
 |[CAR-2016-04-005: Remote Desktop Logon](CAR-2016-04-005)|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1076/)|Sigma, Pseudocode|
 |[CAR-2019-04-001: UAC Bypass](CAR-2019-04-001)|[Bypass User Account Control](https://attack.mitre.org/techniques/T1088/)|Splunk, Pseudocode|
 |[CAR-2019-04-002: Generic Regsvr32](CAR-2019-04-002)|[Regsvr32](https://attack.mitre.org/techniques/T1117/)|Splunk, Pseudocode|
-|[CAR-2019-04-003: Squiblydoo](CAR-2019-04-003)|[Regsvr32](https://attack.mitre.org/techniques/T1117/)|Psuedocode, Splunk, Eql|
+|[CAR-2019-04-003: Squiblydoo](CAR-2019-04-003)|[Regsvr32](https://attack.mitre.org/techniques/T1117/)|Splunk, Eql, Psuedocode|
 |[CAR-2019-04-004: Credential Dumping via Mimikatz](CAR-2019-04-004)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Splunk|

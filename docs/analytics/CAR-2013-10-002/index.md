@@ -37,6 +37,7 @@ This behavior can be detected by looking for thread creations across processes, 
 
 Search for remote thread creations that start at LoadLibraryA or LoadLibraryW. Depending on the tool, it may provide additional information about the DLL string that is an argument to the function. If there is any security software that legitimately injects DLLs, it must be carefully whitelisted. 
 
+
 ```
 remote_thread = search Thread:RemoteCreate
 remote_thread = filter (start_function == "LoadLibraryA" or start_function == "LoadLibraryW")
@@ -44,4 +45,5 @@ remote_thread = filter (src_image_path != "C:\Path\To\TrustedProgram.exe")
 
 output remote_thread
 ```
+
 

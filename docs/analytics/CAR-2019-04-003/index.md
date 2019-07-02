@@ -35,22 +35,27 @@ As usual, credit to Roberto Rodriguez and the [ThreatHunter Playbook](https://gi
 
 This looks for any and all usage of the scrobj DLL, which is what is used to run COM scriptlets, so it'll detect both loading from network as well as filesystem. This will have almost zero false positives so is suitable for alerting.
 
+
 ```
 index=__your_sysmon_events__ EventCode=1 regsvr32.exe scrobj.dll | search Image="*regsvr32.exe"
 ```
 
+
 ### Eql, EQL native
 
 EQL version of the above Splunk search.
+
 
 ```
 process where subtype.create and
   (process_path == "*regsvr32.exe" and command_line == "*scrobj.dll")
 ```
 
+
 ### Psuedocode, CAR
 
 Pseudocode version of the above Splunk search.
+
 
 ```
 processes = search Process:Create
@@ -59,6 +64,7 @@ squiblydoo_processes = filter processes where (
   )
 output squiblydoo_processes
 ```
+
 
 
 ## Unit Tests

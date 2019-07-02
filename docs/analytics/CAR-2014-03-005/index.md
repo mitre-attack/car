@@ -37,6 +37,7 @@ This compound behavior can be detected by looking for `services.exe` receiving a
 
 Look for processes launched from `services.exe` within 1 second of services.exe receiving a network connection.
 
+
 ```
 process = search Process:Create
 flow = search Flow:Start
@@ -48,4 +49,5 @@ remote_start = join (flow, service ) where (
 )
 output remote_start
 ```
+
 

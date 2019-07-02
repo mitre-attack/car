@@ -34,27 +34,33 @@ Looks for instances of wmic.exe as well as the substrings in the command line:
 * `process call create`
 * `/node:`
 
+
 ```
 processes = search Process:Create
 wmic = filter processes where (exe == "wmic.exe" and command_line == "* process call create *" and command_line == "* /node:*")
 output wmic
 ```
 
+
 ### Splunk
 
 Splunk version of the above pseudocode.
+
 
 ```
 index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\wmic.exe" CommandLine="* process call create *"|search CommandLine="* /node:*"
 ```
 
+
 ### Eql
 
 EQL version of the above pseudocode.
+
 
 ```
 process where subtype.create and
   (process_name == "wmic.exe" and command_line == "* process call create ")
   |filter command_line == "* /node:*"
 ```
+
 

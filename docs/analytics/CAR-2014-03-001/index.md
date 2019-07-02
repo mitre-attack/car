@@ -35,10 +35,12 @@ Look for SMB network connections over port 445. Using a sensor that can decode p
 * `WINREG` - Windows Remote Registry ([CAR-2014-11-005](CAR-2014-11-005))
 * `ATSVC` - Windows AT command ([CAR-2015-04-001](CAR-2015-04-001))
 
+
 ```
 flow = search Flow:Message
 smb_write = filter flow where (dest_port == "445" and protocol == "smb.write_pipe")
 smb_write.pipe_name = smb_write.proto_info.pipe_name
 output smb_write
 ```
+
 

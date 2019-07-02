@@ -38,6 +38,7 @@ The time and host the new process was started as well as its parent
 
 Create a baseline of parents of `cmd.exe` seen over the last 30 days and a list of parents of `cmd.exe` seen today. Remove parents in the baseline from parents seen today, leaving a list of new parents.
 
+
 ```
 processes = search Process:Create
 cmd = filter processes where (exe == "cmd.exe")
@@ -47,4 +48,5 @@ current_cmd = filter cmd (where timestamp >= now - 1 day)
 new_cmd = historic_cmd - current_cmd
 output new_cmd
 ```
+
 

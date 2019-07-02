@@ -23,10 +23,12 @@ It is unlikely that event log data would be cleared during normal operations, an
 
 When an eventlog is cleared, a new event is created that alerts that the eventlog was cleared. For Security logs, its event code 1100 and 1102. For System logs, it is event code 104.
 
+
 ```
 ([log_name] == "Security" and [event_code] in [1100, 1102]) or
 ([log_name] == "System" and [event_code] == 104)
 ```
+
 
 
 ## Unit Tests

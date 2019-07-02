@@ -29,6 +29,7 @@ Credit to [Cyb3rWard0g](https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/blo
 
 This is specific to the way Mimikatz works currently, and thus is fragile to both future updates and non-default configurations of Mimikatz.
 
+
 ```
 index=__your_sysmon_data__ EventCode=10 
 TargetImage="C:\\WINDOWS\\system32\\lsass.exe"
@@ -37,10 +38,12 @@ CallTrace="C:\\windows\\SYSTEM32\\ntdll.dll+*|C:\\windows\\System32\\KERNELBASE.
 | table _time hostname user SourceImage GrantedAccess
 ```
 
+
 ### Outliers (Splunk, Sysmon native)
 
 
 This is an outlier version of the above without including the specific call trace. This should work in more (but not all) situations however runs more slowly and will have more false positives - typically installers.
+
 
 ```
 earliest=-d@d latest=now() index=__your_sysmon_data__
@@ -52,4 +55,5 @@ earliest=-d@d latest=now() index=__your_sysmon_data__
   | fields SourceImage ]
 | table  _time hostname user SourceImage GrantedAccess
 ```
+
 
