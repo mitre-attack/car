@@ -168,7 +168,9 @@ implementations:
       reg_grouped = group reg by hostname, ppid where(max time between two events is 30 minutes)
       output reg_grouped
     type: pseudocode
-  - description: [Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_multiple_suspicious_cli.yml) of the above pseudocode, with some modifications.
+  - description: Sigma version of the above pseudocode, with some modifications.
+    code: |-
+      See - https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_multiple_suspicious_cli.yml
     type: Sigma
 data_model_references:
   - process/create/hostname
