@@ -21,6 +21,7 @@ Information about the latest CAR updates and changes can be found in this sectio
 
 ### July 2019
 * Added Splunk/Sysmon implementations to several analytics
+* Added [EQL](https://eqllib.readthedocs.io/en/latest/index.html) implementations to several analytics
 
 ### May 2019
 * All CAR analytics have been converted to YAML; the YAML versions can be found [here](https://github.com/mitre-attack/car/tree/master/analytics).
