@@ -34,14 +34,17 @@ Regsvr32 can be used to execute arbitrary code in the context of a Windows signe
 
 This just looks for all executions of regsvr32.exe that have a parent of regsvr32.exe but are not regsvr32.exe themselves (which happens). This will have a very high FP rate, but likely not on the order of millions.
 
+
 ```
 index=__your_sysmon_data__ EventCode=1 regsvr32.exe | search ParentImage="*regsvr32.exe" AND Image!="*regsvr32.exe*"
 ```
+
 
 ### Main Pattern - pseudocode (Pseudocode, CAR)
 
 
 This is a pseudocode version of the above main pattern.
+
 
 ```
 processes = search Process:Create
@@ -51,29 +54,35 @@ regsvr_processes = filter processes where (
 output regsvr_processes
 ```
 
+
 ### New items since last month (Splunk, Sysmon native)
 
 
 This uses the same logic as above, but adds lightweight baselining by ignoring all results that also showed up in the previous 30 days (it runs over 1 day).
+
 
 ```
 index=__your_sysmon_data__ earliest=-d@d latest=now() EventCode=1 regsvr32.exe | search ParentImage="*regsvr32.exe" AND Image!="*regsvr32.exe*" | search NOT [
 search index=__your_sysmon_data__ earliest=-60d@d latest=-30d@d EventCode=1 regsvr32.exe | search ParentImage="*regsvr32.exe" AND Image!="*regsvr32.exe*" | dedup CommandLine | fields CommandLine ]
 ```
 
+
 ### Spawning child processes (Splunk, Sysmon native)
 
 
 This looks for child processes that may be spawend by regsvr32, while attempting to eliminate some of the common false positives such as werfault (Windows Error Reporting).
 
+
 ```
 index=__your_sysmon_data__ EventCode=1 (ParentImage="C:\\Windows\\System32\\regsvr32.exe" OR ParentImage="C:\\Windows\\SysWOW64\\regsvr32.exe") AND Image!="C:\\Windows\\System32\\regsvr32.exe" AND Image!="C:\\Windows\\SysWOW64\\regsvr32.exe" AND Image!="C:\\WINDOWS\\System32\\regsvr32.exe" AND Image!="C:\\WINDOWS\\SysWOW64\\regsvr32.exe" AND Image!="C:\\Windows\\SysWOW64\\WerFault.exe" AND Image!="C:\\Windows\\System32\\wevtutil.exe" AND Image!="C:\\Windows\\System32\\WerFault.exe"|stats values(ComputerName) as "Computer Name" values(ParentCommandLine) as "Parent Command Line" count(Image) as ImageCount by Image
 ```
+
 
 ### Spawning child processes - pseudocode (Pseudocode, CAR)
 
 
 This is a pseudocode version of the above Splunk query for spawning child processes.
+
 
 ```
 processes = search Process:Create
@@ -88,19 +97,23 @@ regsvr_processes = filter processes where (
 output regsvr_processes
 ```
 
+
 ### Loading unsigned images (Splunk, Sysmon native)
 
 
 This looks for unsigned images that may be loaded by regsvr32, while attempting to eliminate false positives stemming from Windows/Program Files binaries.
 
+
 ```
 index=__your_sysmon_data__ EventCode=7 (Image="C:\\Windows\\System32\\regsvr32.exe" OR Image="C:\\Windows\\SysWOW64\\regsvr32.exe") Signed=false ImageLoaded!="C:\\Program Files*" ImageLoaded!="C:\\Windows\\*"|stats values(ComputerName) as "Computer Name" count(ImageLoaded) as ImageLoadedCount by ImageLoaded    
 ```
+
 
 ### Loading unsigned images - pseudocode (Pseudocode, CAR)
 
 
 This is a pseudocode version of the above Splunk query for loading unsigned images.
+
 
 ```
 modules = search Module:Load
@@ -112,6 +125,7 @@ unsigned_modules = filter modules where (
 )
 output unsigned_modules
 ```
+
 
 
 ## Unit Tests

@@ -31,6 +31,7 @@ This analytic monitors SMB activity that deals with user activity rather than fi
 
 ### Pseudocode
 
+
 ```
 flow = search Flow:Message
 smb_setup = filter flow where (dest_port == 445 and protocol == smb.setup)
@@ -38,4 +39,5 @@ smb_setup.user = smb_write.proto_info.user_name
 smb_setup.target_host = smb_write.proto_info.hostname
 output smb_write
 ```
+
 

@@ -31,8 +31,21 @@ For this to work, certain registry keys must be set, and the WinRM service must 
 
 ### Pseudocode
 
+
 ```
 process = search Process:Create
 wsmprovhost = filter process where (exe == "wsmprovhost.exe" and parent_exe == "svchost.exe")
 ```
+
+
+### Eql, EQL native
+
+Splunk version of the above pseudocode.
+
+
+```
+process where subtype.create and
+  (process_name == "wsmprovhost.exe" and parent_process_name == "svchost.exe")    
+```
+
 

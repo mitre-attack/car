@@ -46,6 +46,7 @@ The sequence of processes that resulted in `reg.exe` being started from a shell.
 
 To gain better context, it may be useful to also get information about the cmd process to know its parent. This may be helpful when tuning the analytic to an environment, if this behavior happens frequently. This may also help to rule out instances of users running 
 
+
 ```
 processes = search Process:Create
 reg = filter processes where (exe == "reg.exe" and parent_exe == "cmd.exe")
@@ -53,6 +54,7 @@ cmd = filter processes where (exe == "cmd.exe" and parent_exe != "explorer.exe""
 reg_and_cmd = join (reg, cmd) where (reg.ppid == cmd.pid and reg.hostname == cmd.hostname)
 output reg_and_cmd
 ```
+
 
 
 ## Unit Tests

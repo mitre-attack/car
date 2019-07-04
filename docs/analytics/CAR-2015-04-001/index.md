@@ -31,6 +31,7 @@ This pipe activity could be discovered with a network decoder, such as that in w
 
 To detect AT via network traffic, a sensor is needed that has the ability to extract and decode PCAP information. Specifically, it needs to properly decode SMB and the functions that are implemented over it via NamedPipes. If a sensor meets these criteria, then the PCAP data needs to search for instances of the command `JobAdd` over the pipe `ATSVC`, which is all implemented over Windows SMB 445/tcp.
 
+
 ```
 flows = search Flow:Message
 at_proto = filter flows where (dest_port == 445 and proto_info.pipe == "ATSVC")
@@ -38,4 +39,5 @@ at_create = filter flows where (proto_info.function == "JobAdd")
 
 output at_create
 ```
+
 

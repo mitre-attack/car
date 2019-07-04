@@ -31,6 +31,7 @@ A list of hostnames and the users that had been logged into the system at some p
 
 This analytic requires some means of accessing system logs to get records of boot times for hosts (in the example as `SystemLogs:Bootup`. It looks for the latest boot time to happen before some user-defined point in time. Once the boot time is identified, all of the important user login events can be gathered to create a list of potentially compromised accounts. This could be critical for identifying steps an adversary could have taken after stealing credentials with a tool that operates like [mimikatz](https://attack.mitre.org/software/S0002/).
 
+
 ```
 input target_host
 input event_time
@@ -44,4 +45,5 @@ compromised_accounts = unique(user_logins.user)
 
 output users
 ```
+
 

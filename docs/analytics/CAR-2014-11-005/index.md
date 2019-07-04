@@ -36,6 +36,7 @@ All of these behaviors call into the Windows API, which uses the NamedPipe `WINR
 
 ### Pseudocode
 
+
 ```
 flows = search Flow:Message
 winreg = filter flows where (dest_port == 445 and proto_info.pipe == "WINREG")
@@ -43,4 +44,5 @@ winreg_modify = filter flows where (proto_info.function == "Create*" or proto_in
 
 output winreg_modify
 ```
+
 

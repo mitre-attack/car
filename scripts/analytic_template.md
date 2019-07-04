@@ -33,9 +33,11 @@ contributors: {{analytic['contributors']|join(', ')}}
 {% if 'description' in impl %}
 {{impl['description']}}
 {% endif %}
+{% if 'code' in impl %}
 ```
 {{impl['code']}}
 ```
+{% endif %}
 {% endfor %}{% endif %}
 {% if 'unit_tests' in analytic %}
 ## Unit Tests

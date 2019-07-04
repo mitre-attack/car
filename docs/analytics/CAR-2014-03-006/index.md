@@ -30,11 +30,13 @@ Adversaries may find it necessary to use [Dyanamic-link Libraries](https://msdn.
 
 When looking for all instances of RunDLL32, it is imperative to also have the `command_line` information, which contains the DLL information, including the name, entry point, and optional arguments.
 
+
 ```
 process = search Process:Create
 rundll32 = filter process where (exe == "rundll32.exe")
 output rundll32
 ```
+
 
 
 ## Unit Tests

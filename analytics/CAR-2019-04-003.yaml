@@ -25,7 +25,13 @@ implementations:
       index=__your_sysmon_events__ EventCode=1 regsvr32.exe scrobj.dll | search Image="*regsvr32.exe"
     type: splunk
     data_model: Sysmon native
-  - description: This is a pseudocode version of the above Splunk search.
+  - description: EQL version of the above Splunk search. 
+    code: |-
+      process where subtype.create and
+        (process_path == "*regsvr32.exe" and command_line == "*scrobj.dll")
+    type: EQL
+    data_model: EQL native
+  - description: Pseudocode version of the above Splunk search.
     code: |-
       processes = search Process:Create
       squiblydoo_processes = filter processes where (

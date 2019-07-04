@@ -39,6 +39,7 @@ This identifier is present three times during the RPC request phase. Any sensor 
 
 Look for RPC traffic after being mapped, which implies a destination port of at least 49152. If network inspection is available via packet captures or a NIDS, then traffic through the `ITaskSchedulerService` interface can be detected. Microsoft has a list of the possible methods that are implemented for the `ITaskSchedulerService` interface, which may be useful in differentiating read and query operations from creations and modifications.
 
+
 ```
 flows = search Flow:Message
 schtasks_rpc = filter flows where (
@@ -48,4 +49,5 @@ schtasks_rpc = filter flows where (
 
 output schtasks_rpc
 ```
+
 

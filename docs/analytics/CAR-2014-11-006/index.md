@@ -29,10 +29,12 @@ When a [Windows Remote Management](https://attack.mitre.org/techniques/T1028/) c
 
 Look for network connections to port 5985 and 5986. To really decipher what is going on, these outputs should be fed into something that can do packet analysis. 
 
+
 ```
 flow = search Flow:Start
 winrm = filter flow where (dest_port == 5985)
 winrm_s = filter flow where (dest_port == 5986)
 output winrm, winrm_s
 ```
+
 

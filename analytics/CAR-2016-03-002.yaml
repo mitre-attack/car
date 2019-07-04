@@ -27,6 +27,18 @@ implementations:
       wmic = filter processes where (exe == "wmic.exe" and command_line == "* process call create *" and command_line == "* /node:*")
       output wmic
     type: pseudocode
+  - description: Splunk version of the above pseudocode.
+    code: |-
+      index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\wmic.exe" CommandLine="* process call create *"|search CommandLine="* /node:*"
+    type: Splunk
+    data_mode: Sysmon native
+  - description: EQL version of the above pseudocode.
+    code: |-
+      process where subtype.create and
+        (process_name == "wmic.exe" and command_line == "* process call create ")
+        |filter command_line == "* /node:*"
+    type: EQL
+    data_mode: EQL native
 data_model_references:
   - process/create/exe
   - process/create/command_line

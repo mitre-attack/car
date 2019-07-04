@@ -53,6 +53,22 @@ implementations:
 
       output port_fwd, scp, mimikatz, rar, archive, ip_addr
     type: pseudocode
+  - description: Splunk version of the above pseudocode, excluding the IP address search.
+    code: |-
+      index=__your_sysmon_index__ EventCode=1 (CommandLine="* -R * -pw*" OR CommandLine="* -pw * *@*" OR CommandLine="*sekurlsa*" OR CommandLine="* -hp *" OR CommandLine="* a *")
+    type: splunk
+    data_model: Sysmon native
+  - description: EQL version of the above pseudocode, excluding the IP address search.
+    code: |-
+      process where subtype.create and
+        (command_line == "* -R * -pw*" or command_line == "* -pw * *@*" or command_line == "*sekurlsa*" or command_line == "* -hp *" or command_line == "* a *")
+    type: EQL
+    data_model: EQL native
+  - description: Splunk version of the above pseudocode, solely for the IP address search. Note that this will likely result in many false positives, since things like software version numbers can also be valid IPv4 addresses.
+    code: |-
+      index=__your_sysmon_index__ EventCode=1 |regex CommandLine=".*\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}\b.*"
+    type: splunk
+    data_model: Sysmon native
 data_model_references:
   - process/create/command_line
   - process/create/exe

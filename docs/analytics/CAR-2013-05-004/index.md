@@ -31,11 +31,33 @@ The built-in Windows tool schtasks.exe ([CAR-2013-08-001](CAR-2013-08-001)) offe
 
 Instances of the process `at.exe` running imply the querying or creation of tasks. Although the command_line is not essential for the analytic to run, it is critical when identifying the command that was scheduled.
 
+
 ```
 process = search Process:Create
 at = filter process where (exe == "at.exe")
 output at
 ```
+
+
+### Splunk, Sysmon native
+
+Splunk version of the above pseudocode.
+
+
+```
+index=__your_sysmon_index__ Image="C:\\Windows\\*\\at.exe"|stats values(CommandLine) as "Command Lines" by ComputerName
+```
+
+
+### Eql, EQL native
+
+EQL version of the above pseudocode.
+
+
+```
+process where subtype.create and process_name == "at.exe"
+```
+
 
 
 ## Unit Tests

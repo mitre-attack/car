@@ -87,6 +87,7 @@ The host on which the commands were executed, the time of execution, and what co
 
 ### Pseudocode
 
+
 ```
 processes = search Process:Create
 reg_processes = filter processes where (exe == "arp.exe" or exe == "at.exe" or exe == "attrib.exe" 
@@ -101,6 +102,13 @@ reg_processes = filter processes where (exe == "arp.exe" or exe == "at.exe" or e
 reg_grouped = group reg by hostname, ppid where(max time between two events is 30 minutes)
 output reg_grouped
 ```
+
+
+### Sigma
+
+[Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_multiple_suspicious_cli.yml) of the above pseudocode, with some modifications.
+
+
 
 
 ## Unit Tests

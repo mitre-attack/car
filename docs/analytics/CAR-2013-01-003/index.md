@@ -35,10 +35,12 @@ The source, destination, content, and time of each event.
 
 Although there may be more native ways to detect detailed SMB events on the host, they can be extracted out of network traffic. With the right protocol decoders, port 445 traffic can be filtered and even the file path (relative to the share) can be retrieved. 
 
+
 ```
 flow = search Flow:Message
 smb_events = filter flow where (dest_port == "445" and protocol == "smb")
 smb_events.file_name = smb_events.proto_info.file_name
 output smb_write
 ```
+
 

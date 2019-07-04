@@ -43,6 +43,7 @@ The time of the Connection, the source, the destination, and the user name used
 
 ### Pseudocode
 
+
 ```
 flow_start = search Flow:Start
 flow_end = search Flow:End
@@ -51,4 +52,5 @@ rdp_end = filter flow_start where (port == "3389")
 rdp = group flow_start, flow_end by src_ip, src_port, dest_ip, dest_port
 output rdp
 ```
+
 

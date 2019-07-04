@@ -30,10 +30,12 @@ As described in [CAR-2013-01-003](CAR-2013-01-003), SMB provides a means of remo
 
 ### Pseudocode
 
+
 ```
 flow = search Flow:Message
 smb_write = filter flow where (dest_port == "445" and protocol == "smb.write")
 smb_write.file_name = smb_write.proto_info.file_name
 output smb_write
 ```
+
 

@@ -25,12 +25,14 @@ Stopping services events are Windows Event Code 7036.
 
 Windows Event code 7036 from the System log identifies if a service has stopped or started. This analytic looks for "Windows Defender" or "Windows Firewall" that has stopped.
 
+
 ```
 log_name == "System" AND
 event_code == "7036"
 param1 in ["Windows Defender", "Windows Firewall"] AND
 param2 == "stopped"
 ```
+
 
 
 ## Unit Tests

@@ -32,11 +32,13 @@ This analytic could depend on the possibility of the known strings used as argum
 
 One simple way to implement this technique is to note that in a default Windows configuration there are no spaces in the path to the `system32` folder. If the accessibility programs are ever run with a Debugger set, then Windows will launch the Debugger process and append the command line to the accessibility program. As a result, a space is inserted in the command line before the path. Looking for any instances of a space in the command line before the name of an accessibility program will help identify when Debuggers are set.
 
+
 ```
 process = search Process:Create
 debuggers = filter process where (command_line match "$.* .*(sethc{{pipe}}utilman{{pipe}}osk{{pipe}}narrator{{pipe}}magnify)\.exe")
 output debuggers
 ```
+
 
 
 ## Unit Tests

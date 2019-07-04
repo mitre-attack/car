@@ -61,6 +61,7 @@ Identifies the process that initiated the RPC request (such as wmic.exe or power
 
 Look for instances of the WMI querying in network traffic, and find the cases where a process is launched immediately after a connection is seen. This essentially merges the request to start a remote process via WMI with the process execution. If other processes are spawned from `wmiprvse.exe` in this time frame, it is possible for race conditions to occur, and the wrong process may be merged. If this is the case, it may be useful to look deeper into the network traffic to see if the desired command can be extracted.
 
+
 ```
 processes = search Process:Create
 wmi_children = filter processes where (parent_exe == "wmiprvse.exe")
@@ -75,4 +76,5 @@ remote_wmi_process = join wmi_children, wmi_flow where (
 
 output remote_wmi_process
 ```
+
 

@@ -31,11 +31,13 @@ In addition to looking for RAR or 7z program names, command line usage of 7Zip o
 
 This analytic looks for the command line argument `a`, which is used by RAR. However, there may be other programs that have this as a legitimate argument and may need to be filtered out.
 
+
 ```
 processes = search Process:Create
 rar_argument = filter processes where (command_line == "* a *")
 output rar_argument
 ```
+
 
 
 ## Unit Tests
