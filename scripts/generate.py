@@ -64,7 +64,7 @@ for analytic in sorted(analytics, key = lambda k: k['id']):
         coverage = ", ".join(["[{}](https://attack.mitre.org/techniques/{}/)".format(techniques[coverage['technique']], coverage['technique']) for coverage in analytic['coverage']])
     if 'implementations' in analytic and len(analytic['implementations']) > 0: 
         imp_list =  [str.capitalize(implementation['type']) for implementation in analytic['implementations']]
-        implementations = ", ".join(set(imp_list))
+        implementations = ", ".join(sorted(set(imp_list)))
     index_content += "|[{}: {}]({})|{}|{}|\n".format(analytic['id'], analytic['title'], analytic['id'], coverage, implementations)
 
 open('../docs/analytics/index.md', 'w').write(index_content)
