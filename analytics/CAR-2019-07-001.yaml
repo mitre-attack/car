@@ -45,6 +45,6 @@ implementations:
       output chmod_processes
     type: Pseudocode
 unit_tests:
-  - 'For Windows - right click on any file and change its permissions under properties. Or, execute the following command: `icacls "C:\<fileName>" /grant :F`'
-  - 'For Linux - execute the following command: `chmod 777 "fileName"`'
+  - description: 'For Windows - right click on any file and change its permissions under properties. Or, execute the following command: `icacls "C:\<fileName>" /grant :F`'
+  - description: 'For Linux - execute the following command: `chmod 777 "fileName"`'
 

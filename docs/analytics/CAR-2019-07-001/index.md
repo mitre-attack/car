@@ -67,6 +67,8 @@ output chmod_processes
 
 ### Test Case 1
 
+For Windows - right click on any file and change its permissions under properties. Or, execute the following command: `icacls "C:\<fileName>" /grant :F`
 
 ### Test Case 2
 
+For Linux - execute the following command: `chmod 777 "fileName"`
