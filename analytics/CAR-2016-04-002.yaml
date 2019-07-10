@@ -20,8 +20,11 @@ implementations:
       ([log_name] == "Security" and [event_code] in [1100, 1102]) or
       ([log_name] == "System" and [event_code] == 104)
     type: pseudocode
-  - name: Sigma rule
-    description: '[Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_susp_eventlog_cleared.yml) of the above pseudocode, focusing only on event 104.'
+  - name: Sigma rule (System log)
+    description: '[Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_susp_eventlog_cleared.yml) of the above pseudocode, focusing only on the System log.'
+    type: Sigma
+  - name: Sigma rule (Security log)
+    description: '[Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_susp_security_eventlog_cleared.yml) of the above pseudocode, focusing only on the Security log.'
     type: Sigma
 unit_tests:
   - configurations:
