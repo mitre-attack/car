@@ -28,6 +28,15 @@ implementations:
       index=__your_sysmon_index__ EventCode=1|stats dc(Hashes) as Num_Hashes values(Hashes) as "Hashes" by Image|where Num_Hashes > 1
     type: splunk
     data_model: Sysmon native
+  - name: Sigma/Sysmon
+    description: '[Sigma includes](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_renamed_binary.yml) a Sysmon-specific rule for detecting this, using the OriginalFilename field.'
+    type: Sigma
+  - name: Sigma (renamed powershell)
+    description: '[Sigma includes](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_powershell_renamed_ps.yml) a rule specifically for detecting instances of Powershell being renamed.'
+    type: Sigma
+  - name: Sigma (renamed paexec)
+    description: '[Sigma includes](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_renamed_paexec.yml) a rule specifically for detecting instances of paexec being renamed.'
+    type: Sigma
 data_model_references:
   - process/create/exe
   - process/create/md5_hash
