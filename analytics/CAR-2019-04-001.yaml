@@ -38,6 +38,12 @@ implementations:
       output possible_uac_bypass
     type: pseudocode
     data_model: CAR
+  - name: Sigma/Sysmon (Eventvwr)
+    description: '[Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sysmon/sysmon_uac_bypass_eventvwr.yml) rule for detecting eventvwr-based UAC bypass.'
+    type: Sigma
+  - name: Sigma/Sysmon (sdclt)
+    description: '[Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sysmon/sysmon_uac_bypass_sdclt.yml) rule for detecting sdclt-based UAC bypass.'
+    type: Sigma    
 data_model_references:
   - process/create/image_path
   - process/create/parent_image_path
