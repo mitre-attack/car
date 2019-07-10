@@ -41,3 +41,10 @@ output new_services
 ```
 
 
+### Sigma (Windows Event Log) (Sigma)
+
+
+[Sigma/Windows Event Log](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_rare_service_installs.yml) rule with similar logic to the above pseudocode
+
+
+

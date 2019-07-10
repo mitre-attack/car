@@ -43,3 +43,24 @@ index=__your_sysmon_index__ EventCode=1|stats dc(Hashes) as Num_Hashes values(Ha
 ```
 
 
+### Sigma/Sysmon (Sigma)
+
+
+[Sigma includes](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_renamed_binary.yml) a Sysmon-specific rule for detecting this, using the OriginalFilename field.
+
+
+
+### Sigma (renamed powershell) (Sigma)
+
+
+[Sigma includes](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_powershell_renamed_ps.yml) a rule specifically for detecting instances of Powershell being renamed.
+
+
+
+### Sigma (renamed paexec) (Sigma)
+
+
+[Sigma includes](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_renamed_paexec.yml) a rule specifically for detecting instances of paexec being renamed.
+
+
+

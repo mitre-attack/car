@@ -60,3 +60,17 @@ output possible_uac_bypass
 ```
 
 
+### Sigma/Sysmon (Eventvwr) (Sigma)
+
+
+[Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sysmon/sysmon_uac_bypass_eventvwr.yml) rule for detecting eventvwr-based UAC bypass.
+
+
+
+### Sigma/Sysmon (sdclt) (Sigma)
+
+
+[Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sysmon/sysmon_uac_bypass_sdclt.yml) rule for detecting sdclt-based UAC bypass.
+
+
+

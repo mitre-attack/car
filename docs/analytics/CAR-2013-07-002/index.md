@@ -54,3 +54,10 @@ output rdp
 ```
 
 
+### Sigma (Localhost Login) (Sigma)
+
+
+[Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_rdp_localhost_login.yml) rule, focusing on RDP localhost login.
+
+
+

@@ -30,6 +30,20 @@ When an eventlog is cleared, a new event is created that alerts that the eventlo
 ```
 
 
+### Sigma rule (System log) (Sigma)
+
+
+[Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_susp_eventlog_cleared.yml) of the above pseudocode, focusing only on the System log.
+
+
+
+### Sigma rule (Security log) (Sigma)
+
+
+[Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_susp_security_eventlog_cleared.yml) of the above pseudocode, focusing only on the Security log.
+
+
+
 
 ## Unit Tests
 
