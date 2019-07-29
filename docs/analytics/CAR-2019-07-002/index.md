@@ -1,5 +1,5 @@
 ---
-title: "CAR-2019-07-002: Access Permission Modification"
+title: "CAR-2019-07-002: Lsass Process Dump via Procdump"
 layout: analytic
 submission_date: 2019/07/29
 information_domain: Host
