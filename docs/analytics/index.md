@@ -56,3 +56,4 @@ permalink: /analytics/
 |[CAR-2019-04-003: Squiblydoo](CAR-2019-04-003)|[Regsvr32](https://attack.mitre.org/techniques/T1117/)|Eql, Psuedocode, Splunk|
 |[CAR-2019-04-004: Credential Dumping via Mimikatz](CAR-2019-04-004)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Splunk|
 |[CAR-2019-07-001: Access Permission Modification](CAR-2019-07-001)|[File Permissions Modification](https://attack.mitre.org/techniques/T1222/)|Pseudocode, Splunk|
+|[CAR-2019-07-002: Access Permission Modification](CAR-2019-07-002)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Eql, Splunk|
