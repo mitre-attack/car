@@ -46,3 +46,10 @@ An [EQL Version](https://eqllib.readthedocs.io/en/latest/analytics/1e1ef6be-12fc
 
 
 
+### Common Procdump Lsass Access Pattern (Sigma)
+
+
+A [Sigma Version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sysmon/sysmon_lsass_memdump.yml) of the above Splunk search, with some more stringent criteria around calltrace.
+
+
+
