@@ -35,6 +35,10 @@ implementations:
   - name: Common Procdump Lsass Access Pattern
     description: 'An [EQL Version](https://eqllib.readthedocs.io/en/latest/analytics/1e1ef6be-12fc-11e9-8d76-4d6bb837cda4.html), similar to the above Splunk search, but one that looks for process create events around procdump that contain lsass in the command line.'
     type: EQL
+  - name: Common Procdump Lsass Access Pattern
+    description: 'A [Sigma Version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sysmon/sysmon_lsass_memdump.yml) of the above Splunk search, with some more stringent criteria around calltrace.'
+    type: Sigma
+
 
 
 
