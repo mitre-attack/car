@@ -25,6 +25,8 @@ Information about the latest CAR updates and changes can be found in this sectio
 * Added corresponding [Sigma](https://github.com/Neo23x0/sigma) rule references to several analytics
 * New analytics added
   * [CAR-2019-07-001: Access Permission Modification](/analytics/CAR-2019-07-001)
+  * [CAR-2019-07-002: Lsass Process Dump via Procdump](/analytics/CAR-2019-07-002)
+
 
 ### May 2019
 * All CAR analytics have been converted to YAML; the YAML versions can be found [here](https://github.com/mitre-attack/car/tree/master/analytics).
