@@ -19,7 +19,6 @@ API (Application Programming Interface) is a set of functions and the procedures
 |---|---|---|
 |auth_token|The user authentication token of an API. Applicable to the user session and will persist until logout occurs.|`4ercs243-retr34t-3refer5`
 |api_key|The api_key to generate an authentication token or to access the content of the user data .|`453hdsgqdsk243kfd`
-|endpoint_url|The url used for accessing the specific services or data|`https://www.dummy.com/restapi/v3/threat-data`
 
 ## Coverage Map
 
@@ -27,7 +26,6 @@ API (Application Programming Interface) is a set of functions and the procedures
 |---|---|---|---|---|
 | **auth_token** | | | | |
 | **api_key** | | | | |
-| **endpoint_url** | | | | |
 
 ## Developer Certificate of Origin
 ---
