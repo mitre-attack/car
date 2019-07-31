@@ -5,7 +5,7 @@ submission_date: 2019/07/29
 information_domain: Host
 subtypes: Process
 analytic_type: TTP
-contributors: Kaushal Parikh, MITRE
+contributors: Kaushal Parikh, Cyware Labs, MITRE
 ---
 
 [ProcDump](https://docs.microsoft.com/en-us/sysinternals/downloads/procdump) is a sysinternal command-line utility whose primary purpose is monitoring an application for CPU spikes and generating crash dumps during a spike that an administrator or developer can use to determine the cause of the spike. 
