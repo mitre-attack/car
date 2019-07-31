@@ -10,21 +10,21 @@ contributors: MITRE
 
 New executables that are started as a service are suspicious. This analytic looks for anomalous service executables.
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Modify Existing Service](https://attack.mitre.org/techniques/T1031/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 |[New Service](https://attack.mitre.org/techniques/T1050/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 
-## Data Model References
+#### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_image_path](/data_model/process#parent_image_path) |
 
 
-## Implementations
+#### Implementations
 
 ### Pseudocode
 

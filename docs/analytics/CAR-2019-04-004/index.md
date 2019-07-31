@@ -12,17 +12,17 @@ Credential dumpers like Mimikatz can be loaded into memory and from there read d
 
 *This requires information about process access, e.g. Sysmon Event ID 10. That currently doesn’t have a CAR data model mapping, since we currently lack any open/access actions for Processes. If this changes, we will update the data model requirements.*
 
-### References
+##### References
 Credit to [Cyb3rWard0g](https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/blob/master/playbooks/windows/06_credential_access/credential_dumping_T1003/credentials_from_memory/mimikatz_logonpasswords.md), dim0x69 (blog.3or.de), and Mark Russinovich for providing much of the information used to construct these analytics.
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
 
 
-## Implementations
+#### Implementations
 
 ### Common Mimikatz GrantedAccess Patterns (Splunk, Sysmon native)
 

@@ -18,13 +18,13 @@ It is very common for some programs to spawn cmd.exe as a subprocess, for exampl
 
 The time and host the new process was started as well as its parent
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Command-Line Interface](https://attack.mitre.org/techniques/T1059/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
-## Data Model References
+#### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -32,7 +32,7 @@ The time and host the new process was started as well as its parent
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
-## Implementations
+#### Implementations
 
 ### Pseudocode
 

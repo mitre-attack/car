@@ -10,13 +10,13 @@ contributors: MITRE
 
 Adversaries may find it necessary to use [Dyanamic-link Libraries](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682589.aspx) (DLLs) to [evade defenses](https://attack.mitre.org/tactics/TA0005). One way these DLLs can be "executed" is through the use of the built-in Windows utility [RunDLL32](https://attack.mitre.org/techniques/T1085), which allows a user to execute code in a DLL, providing the name and optional arguments to an exported entry point. Windows uses RunDll32 legitimately in its normal operation, but with a proper baseline and understanding of the environment, monitoring its usage could be fruitful.
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Rundll32](https://attack.mitre.org/techniques/T1085/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|High|
 
-## Data Model References
+#### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -24,7 +24,7 @@ Adversaries may find it necessary to use [Dyanamic-link Libraries](https://msdn.
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
-## Implementations
+#### Implementations
 
 ### Pseudocode
 
@@ -39,9 +39,9 @@ output rundll32
 
 
 
-## Unit Tests
+#### Unit Tests
 
-### Test Case 1
+##### Test Case 1
 
 **Configurations:** Windows 7
 

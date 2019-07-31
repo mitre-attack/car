@@ -10,13 +10,13 @@ contributors: MITRE
 
 According to [ATT&CK](https://attack.mitre.org/), an adversary may [escalate privileges](https://attack.mitre.org/tactics/TA0004) by [intercepting the search path](https://attack.mitre.org/techniques/T1034) for legitimately installed services. As a result, Windows will launch the target executable instead of the desired binary and command line. This can be done when there are spaces in the binary path and the path is unquoted. Search path interception should never happen legitimately and will likely be the result of an adversary abusing a system misconfiguration. With a few regular expressions, it is possible to identify the execution of services with intercepted search paths.
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Path Interception](https://attack.mitre.org/techniques/T1034/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|High|
 
-## Data Model References
+#### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -25,7 +25,7 @@ According to [ATT&CK](https://attack.mitre.org/), an adversary may [escalate pri
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
-## Implementations
+#### Implementations
 
 ### Pseudocode
 

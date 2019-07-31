@@ -14,13 +14,13 @@ ProcDump may be used to dump the memory space of lsass.exe to disk for processin
 
 Note - the CAR data model currently does not support process access actions, so the pseudocode implementation is based around process creates.
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
 
-## Data Model References
+#### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -28,7 +28,7 @@ Note - the CAR data model currently does not support process access actions, so 
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
-## Implementations
+#### Implementations
 
 ### Procdump - Process Create (Pseudocode)
 
@@ -82,9 +82,9 @@ A [Sigma Version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sys
 
 
 
-## Unit Tests
+#### Unit Tests
 
-### Test Case 1
+##### Test Case 1
 
 1. Open a Windows Command Prompt or PowerShell instance.
 2. Navigate to folder containing ProcDump.

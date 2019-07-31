@@ -14,14 +14,14 @@ contributors: MITRE
 
 The source, destination, content, and time of each event.
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Data from Network Shared Drive](https://attack.mitre.org/techniques/T1039/)|[Collection](https://attack.mitre.org/tactics/TA0009/)|Moderate|
 |[Windows Admin Shares](https://attack.mitre.org/techniques/T1077/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
-## Data Model References
+#### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -29,7 +29,7 @@ The source, destination, content, and time of each event.
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
 
 
-## Implementations
+#### Implementations
 
 ### Pseudocode
 

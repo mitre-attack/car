@@ -12,13 +12,13 @@ Account usage within SMB can be used to identify compromised credentials, and th
 
 This analytic monitors SMB activity that deals with user activity rather than file activity.
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Forced Authentication](https://attack.mitre.org/techniques/T1187/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
 
-## Data Model References
+#### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -27,7 +27,7 @@ This analytic monitors SMB activity that deals with user activity rather than fi
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [protocol](/data_model/flow#protocol) |
 
 
-## Implementations
+#### Implementations
 
 ### Pseudocode
 

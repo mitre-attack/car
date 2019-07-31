@@ -16,13 +16,13 @@ Although this analytic was initially based on MD5 hashes, it is equally applicab
 
 A list of hashes and the different executables associated with each one
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
-## Data Model References
+#### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -30,7 +30,7 @@ A list of hashes and the different executables associated with each one
 |[process](/data_model/process) | [create](/data_model/process#create) | [md5_hash](/data_model/process#md5_hash) |
 
 
-## Implementations
+#### Implementations
 
 ### Basic Query (Splunk, Sysmon native)
 

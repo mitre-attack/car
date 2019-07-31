@@ -19,8 +19,8 @@ The sequence of processes that resulted in `reg.exe` being started from a shell.
 -   `parent.exe`
 -   `reg.exe`
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Query Registry](https://attack.mitre.org/techniques/T1012/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
@@ -28,7 +28,7 @@ The sequence of processes that resulted in `reg.exe` being started from a shell.
 |[Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1060/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 |[Service Registry Permissions Weakness](https://attack.mitre.org/techniques/T1058/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 
-## Data Model References
+#### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -40,7 +40,7 @@ The sequence of processes that resulted in `reg.exe` being started from a shell.
 |[process](/data_model/process) | [create](/data_model/process#create) | [ppid](/data_model/process#ppid) |
 
 
-## Implementations
+#### Implementations
 
 ### Pseudocode
 
@@ -57,9 +57,9 @@ output reg_and_cmd
 
 
 
-## Unit Tests
+#### Unit Tests
 
-### Test Case 1
+##### Test Case 1
 
 **Configurations:** Windows 7
 

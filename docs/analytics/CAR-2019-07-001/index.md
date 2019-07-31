@@ -12,14 +12,14 @@ Adversaries sometimes modify object access rights at the operating system level.
 
 Note - this analytic references file permissions, which are not currently in the CAR data model.
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[File Permissions Modification](https://attack.mitre.org/techniques/T1222/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
-## Implementations
+#### Implementations
 
 ### Windows - Pseudocode (Pseudocode)
 
@@ -63,12 +63,12 @@ output chmod_processes
 
 
 
-## Unit Tests
+#### Unit Tests
 
-### Test Case 1
+##### Test Case 1
 
 For Windows - right click on any file and change its permissions under properties. Or, execute the following command: `icacls "C:\<fileName>" /grant :F`
 
-### Test Case 2
+##### Test Case 2
 
 For Linux - execute the following command: `chmod 777 "fileName"`

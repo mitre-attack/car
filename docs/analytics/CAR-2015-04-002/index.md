@@ -18,13 +18,13 @@ Certain strings can be identifiers of the schtasks, by looking up the interface 
 
 This identifier is present three times during the RPC request phase. Any sensor that has access to the byte code as raw, decoded, or ASCII could implement this analytic.
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Scheduled Task](https://attack.mitre.org/techniques/T1053/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
-## Data Model References
+#### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -33,7 +33,7 @@ This identifier is present three times during the RPC request phase. Any sensor 
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
 
 
-## Implementations
+#### Implementations
 
 ### Pseudocode
 

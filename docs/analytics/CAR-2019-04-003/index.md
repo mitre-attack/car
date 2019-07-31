@@ -12,16 +12,16 @@ Squiblydoo is a specific usage of regsvr32.dll to load a COM scriptlet directly 
 
 Squiblydoo was first written up by Casey Smith at Red Canary, though that blog post is no longer accessible.
 
-### References
+##### References
 As usual, credit to Roberto Rodriguez and the [ThreatHunter Playbook](https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/blob/master/playbooks/platforms/windows/05_defense_evasion/regsvr32/variants/bypass_whitelisting_regsvr32.md).
 
-## ATT&CK Detection
 
+#### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Regsvr32](https://attack.mitre.org/techniques/T1117/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/), [Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
-## Data Model References
+#### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -29,7 +29,7 @@ As usual, credit to Roberto Rodriguez and the [ThreatHunter Playbook](https://gi
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
-## Implementations
+#### Implementations
 
 ### Splunk, Sysmon native
 
@@ -67,8 +67,8 @@ output squiblydoo_processes
 
 
 
-## Unit Tests
+#### Unit Tests
 
-### Test Case 1
+##### Test Case 1
 
 The [Atomic Red Team test for Squiblydoo](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1117/T1117.md#atomic-test-2---regsvr32-remote-com-scriptlet-execution) is a good test case for this.
