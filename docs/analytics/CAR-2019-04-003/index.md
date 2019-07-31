@@ -17,11 +17,13 @@ As usual, credit to Roberto Rodriguez and the [ThreatHunter Playbook](https://gi
 
 
 ### ATT&CK Detection
+
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Regsvr32](https://attack.mitre.org/techniques/T1117/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/), [Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
 ### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |

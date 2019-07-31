@@ -14,11 +14,13 @@ To survive the timeout, [adversaries and red teams](https://www.operationblockbu
 
 
 ### ATT&CK Detection
+
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[New Service](https://attack.mitre.org/techniques/T1050/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 
 ### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |

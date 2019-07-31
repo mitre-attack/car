@@ -12,11 +12,13 @@ Regsvr32 can be used to execute arbitrary code in the context of a Windows signe
 
 
 ### ATT&CK Detection
+
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Regsvr32](https://attack.mitre.org/techniques/T1117/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/), [Execution](https://attack.mitre.org/tactics/TA0002/)|Low|
 
 ### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |

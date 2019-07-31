@@ -14,11 +14,13 @@ In addition to looking for RAR or 7z program names, command line usage of 7Zip o
 
 
 ### ATT&CK Detection
+
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Data Compressed](https://attack.mitre.org/techniques/T1002/)|[Exfiltration](https://attack.mitre.org/tactics/TA0010/)|Moderate|
 
 ### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |

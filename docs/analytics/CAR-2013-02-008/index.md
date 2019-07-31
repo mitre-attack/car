@@ -15,11 +15,13 @@ Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types
 
 
 ### ATT&CK Detection
+
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Initial Access](https://attack.mitre.org/tactics/TA0001/)|Low|
 
 ### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
 |[user_session](/data_model/user_session) | [login](/data_model/user_session#login) | [user](/data_model/user_session#user) |

@@ -12,6 +12,7 @@ As described in [CAR-2013-01-003](CAR-2013-01-003), SMB provides a means of remo
 
 
 ### ATT&CK Detection
+
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Remote File Copy](https://attack.mitre.org/techniques/T1105/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|High|
@@ -19,6 +20,7 @@ As described in [CAR-2013-01-003](CAR-2013-01-003), SMB provides a means of remo
 |[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 ### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |

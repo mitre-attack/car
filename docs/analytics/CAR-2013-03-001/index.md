@@ -21,6 +21,7 @@ The sequence of processes that resulted in `reg.exe` being started from a shell.
 
 
 ### ATT&CK Detection
+
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Query Registry](https://attack.mitre.org/techniques/T1012/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
@@ -29,6 +30,7 @@ The sequence of processes that resulted in `reg.exe` being started from a shell.
 |[Service Registry Permissions Weakness](https://attack.mitre.org/techniques/T1058/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 
 ### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |

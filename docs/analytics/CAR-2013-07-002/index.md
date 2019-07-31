@@ -25,11 +25,13 @@ The time of the Connection, the source, the destination, and the user name used
 
 
 ### ATT&CK Detection
+
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1076/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|High|
 
 ### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
 |[flow](/data_model/flow) | [end](/data_model/flow#end) | [dest_port](/data_model/flow#dest_port) |

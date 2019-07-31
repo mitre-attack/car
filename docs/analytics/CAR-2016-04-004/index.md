@@ -12,6 +12,7 @@ The successful use of [Pass The Hash](https://attack.mitre.org/techniques/T1075/
 
 
 ### ATT&CK Detection
+
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Pass the Hash](https://attack.mitre.org/techniques/T1075/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|

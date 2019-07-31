@@ -20,6 +20,7 @@ A list of hostnames and the users that had been logged into the system at some p
 
 
 ### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
 |[user_session](/data_model/user_session) | [login](/data_model/user_session#login) | [user](/data_model/user_session#user) |

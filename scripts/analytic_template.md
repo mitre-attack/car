@@ -15,11 +15,13 @@ contributors: {{analytic['contributors']|join(', ')}}
 {% endif %}
 {% if 'coverage' in analytic %}
 ### ATT&CK Detection
+
 |Technique|Tactic|Level of Coverage|
 |---|---|---|{% for coverage_item in analytic['coverage'] %}
 |[{{techniques[coverage_item['technique']]}}](https://attack.mitre.org/techniques/{{coverage_item['technique']}}/)|{% for tactic in coverage_item['tactics'] %}[{{tactics[tactic]}}](https://attack.mitre.org/tactics/{{tactic}}/){% if not loop.last %}, {% endif %}{% endfor %}|{{coverage_item['coverage']}}|{% endfor %}{% endif %}
 {% if 'data_model_references' in analytic %}
 ### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
 {% for dmr in analytic['data_model_references'] %}|[{{dmr[0]}}](/data_model/{{dmr[0]}}) | [{{dmr[1]}}](/data_model/{{dmr[0]}}#{{dmr[1]}}) | [{{dmr[2]}}](/data_model/{{dmr[0]}}#{{dmr[2]}}) |

@@ -18,12 +18,14 @@ This behavior can be detected by looking for thread creations across processes, 
 
 
 ### ATT&CK Detection
+
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Process Injection](https://attack.mitre.org/techniques/T1055/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 |[Bypass User Account Control](https://attack.mitre.org/techniques/T1088/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 
 ### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
 |[thread](/data_model/thread) | [remote_create](/data_model/thread#remote_create) | [src_pid](/data_model/thread#src_pid) |
