@@ -44,7 +44,7 @@ implementations:
   - name: Procdump - Process Access
     description: A related Splunk search, which instead of looking for process create events looks for process access events that target lsass.exe.
     code: |-
-      index=__your_sysmon_data__ EventCode=10 TargetImage="C:\\WINDOWS\\system32\\lsass.exe" GrantedAccess="0x1FFFFF" ("procdump")
+      index=__your_sysmon_index__ EventCode=10 TargetImage="C:\\WINDOWS\\system32\\lsass.exe" GrantedAccess="0x1FFFFF" ("procdump")
     type: Splunk
     data_model: Sysmon native
   - name: Procdump - Process Access

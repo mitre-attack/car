@@ -70,7 +70,7 @@ A related Splunk search, which instead of looking for process create events look
 
 
 ```
-index=__your_sysmon_data__ EventCode=10 TargetImage="C:\\WINDOWS\\system32\\lsass.exe" GrantedAccess="0x1FFFFF" ("procdump")
+index=__your_sysmon_index__ EventCode=10 TargetImage="C:\\WINDOWS\\system32\\lsass.exe" GrantedAccess="0x1FFFFF" ("procdump")
 ```
 
 
