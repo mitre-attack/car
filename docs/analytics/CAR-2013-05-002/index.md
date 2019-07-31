@@ -17,22 +17,21 @@ Monitors the directories
 -   `%systemroot%\Tasks`
 -   `%systemroot%\debug`
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [image_path](/data_model/process#image_path) |
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 The RECYCLER and SystemVolumeInformation directories will be present on every drive. Replace %systemroot% and %windir% with the actual paths as configured by the endpoints. 
 
@@ -49,16 +48,16 @@ output suspicious_locations
 ```
 
 
-### Sigma
+#### Sigma
 
 [Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_susp_run_locations.yml) of the above pseudocode, with some modifications.
 
 
 
 
-#### Unit Tests
+### Unit Tests
 
-##### Test Case 1
+#### Test Case 1
 
 **Configurations:** Windows 7
 

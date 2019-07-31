@@ -12,13 +12,12 @@ The Windows Registry location `HKLM\Software\Microsoft\Windows NT\CurrentVersion
 
 This analytic could depend on the possibility of the known strings used as arguments for other applications used in the day-to-day environment. Although the chance of the string "sethc.exe" being used as an argument for another application is unlikely, it still is a possibility.
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Accessibility Features](https://attack.mitre.org/techniques/T1015/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -26,9 +25,9 @@ This analytic could depend on the possibility of the known strings used as argum
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 One simple way to implement this technique is to note that in a default Windows configuration there are no spaces in the path to the `system32` folder. If the accessibility programs are ever run with a Debugger set, then Windows will launch the Debugger process and append the command line to the accessibility program. As a result, a space is inserted in the command line before the path. Looking for any instances of a space in the command line before the name of an accessibility program will help identify when Debuggers are set.
 
@@ -41,9 +40,9 @@ output debuggers
 
 
 
-#### Unit Tests
+### Unit Tests
 
-##### Test Case 1
+#### Test Case 1
 
 **Configurations:** Windows 7
 

@@ -18,16 +18,16 @@ The time field indicates the first and last time a system reported a user logged
 A list of hostnames and the users that had been logged into the system at some point after to the system's last restart.
 
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
 |[user_session](/data_model/user_session) | [login](/data_model/user_session#login) | [user](/data_model/user_session#user) |
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 This analytic requires some means of accessing system logs to get records of boot times for hosts (in the example as `SystemLogs:Bootup`. It looks for the latest boot time to happen before some user-defined point in time. Once the boot time is identified, all of the important user login events can be gathered to create a list of potentially compromised accounts. This could be critical for identifying steps an adversary could have taken after stealing credentials with a tool that operates like [mimikatz](https://attack.mitre.org/software/S0002/).
 

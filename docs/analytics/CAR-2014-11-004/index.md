@@ -12,14 +12,13 @@ According to [ATT&CK](https://attack.mitre.org/), [PowerShell](https://attack.mi
 
 For this to work, certain registry keys must be set, and the WinRM service must be enabled. The PowerShell command `Enter-PSSession -ComputerName \<RemoteHost\>` creates a remote PowerShell session.
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[PowerShell](https://attack.mitre.org/techniques/T1086/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 |[Windows Remote Management](https://attack.mitre.org/techniques/T1028/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -27,9 +26,9 @@ For this to work, certain registry keys must be set, and the WinRM service must 
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 
 ```
@@ -38,7 +37,7 @@ wsmprovhost = filter process where (exe == "wsmprovhost.exe" and parent_exe == "
 ```
 
 
-### Eql, EQL native
+#### Eql, EQL native
 
 Splunk version of the above pseudocode.
 

@@ -18,13 +18,12 @@ Remote access to the registry can be achieved via
 
 All of these behaviors call into the Windows API, which uses the NamedPipe `WINREG` over SMB to handle the protocol information. This network can be decoded with wireshark or a similar sensor, and can also be detected by hooking the API function.
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Modify Registry](https://attack.mitre.org/techniques/T1112/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -32,9 +31,9 @@ All of these behaviors call into the Windows API, which uses the NamedPipe `WINR
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 
 ```

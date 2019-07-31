@@ -16,13 +16,12 @@ Although this analytic was initially based on MD5 hashes, it is equally applicab
 
 A list of hashes and the different executables associated with each one
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -30,9 +29,9 @@ A list of hashes and the different executables associated with each one
 |[process](/data_model/process) | [create](/data_model/process#create) | [md5_hash](/data_model/process#md5_hash) |
 
 
-#### Implementations
+### Implementations
 
-### Basic Query (Splunk, Sysmon native)
+#### Basic Query (Splunk, Sysmon native)
 
 
 This is a basic Splunk search that will output all of the sysmon-reported process images and their respective hashes, for cases where an image has more than one set of hashes. Thus, this will output a large amount of data and should be filtered by the analyst in order to make the results more useful.
@@ -43,21 +42,21 @@ index=__your_sysmon_index__ EventCode=1|stats dc(Hashes) as Num_Hashes values(Ha
 ```
 
 
-### Sigma/Sysmon (Sigma)
+#### Sigma/Sysmon (Sigma)
 
 
 [Sigma includes](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_renamed_binary.yml) a Sysmon-specific rule for detecting this, using the OriginalFilename field.
 
 
 
-### Sigma (renamed powershell) (Sigma)
+#### Sigma (renamed powershell) (Sigma)
 
 
 [Sigma includes](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_powershell_renamed_ps.yml) a rule specifically for detecting instances of Powershell being renamed.
 
 
 
-### Sigma (renamed paexec) (Sigma)
+#### Sigma (renamed paexec) (Sigma)
 
 
 [Sigma includes](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_renamed_paexec.yml) a rule specifically for detecting instances of paexec being renamed.

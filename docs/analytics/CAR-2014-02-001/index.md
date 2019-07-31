@@ -14,8 +14,7 @@ Adversaries may modify the binary file for an existing service to achieve [Persi
 
 The Service Name and approximate time in which changes occurred on each host
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[New Service](https://attack.mitre.org/techniques/T1050/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
@@ -23,7 +22,7 @@ The Service Name and approximate time in which changes occurred on each host
 |[File System Permissions Weakness](https://attack.mitre.org/techniques/T1044/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 |[Service Execution](https://attack.mitre.org/techniques/T1035/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -33,9 +32,9 @@ The Service Name and approximate time in which changes occurred on each host
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Look for events where a file was created and then later run as a service. In these cases, a new service has been created or the binary has been modified. Many programs, such as `msiexec.exe`, do these behaviors legitimately and can be used to help validate legitimate service creations/modifications.
 

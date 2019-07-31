@@ -27,8 +27,7 @@ Within the built-in Windows Commands:
 
 **Note** `dsquery` is only pre-existing on Windows servers.
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Account Discovery](https://attack.mitre.org/techniques/T1087/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
@@ -39,7 +38,7 @@ Within the built-in Windows Commands:
 |[Process Discovery](https://attack.mitre.org/techniques/T1057/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 |[System Service Discovery](https://attack.mitre.org/techniques/T1007/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -47,9 +46,9 @@ Within the built-in Windows Commands:
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 To be effective in deciphering malicious and benign activity, the full command line is essential. Similarly, having information about the parent process can help with making decisions and tuning to an environment.
 
@@ -71,7 +70,7 @@ output info_command
 ```
 
 
-### Splunk
+#### Splunk
 
 Splunk version of the above pseudocode search.
 
@@ -81,7 +80,7 @@ index=__your_sysmon_index__ EventCode=1 (Image="C:\\Windows\\*\\hostname.exe" OR
 ```
 
 
-### Eql
+#### Eql
 
 EQL version of the above pseudocode search.
 

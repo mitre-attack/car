@@ -37,13 +37,12 @@ Thus, a great ASCII based signature is
 
 Identifies the process that initiated the RPC request (such as wmic.exe or powershell.exe), as well as the source and destination information of the network connection that triggered the alert.
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|High|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -55,9 +54,9 @@ Identifies the process that initiated the RPC request (such as wmic.exe or power
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Look for instances of the WMI querying in network traffic, and find the cases where a process is launched immediately after a connection is seen. This essentially merges the request to start a remote process via WMI with the process execution. If other processes are spawned from `wmiprvse.exe` in this time frame, it is possible for race conditions to occur, and the wrong process may be merged. If this is the case, it may be useful to look deeper into the network traffic to see if the desired command can be extracted.
 

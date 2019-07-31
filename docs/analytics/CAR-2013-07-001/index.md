@@ -22,8 +22,7 @@ Any tool of interest with commonly known command line usage can be detecting by 
 -   `\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}`
     Logically this analytic makes use of [CAR-2014-03-005](CAR-2014-03-005).
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Moderate|
@@ -31,7 +30,7 @@ Any tool of interest with commonly known command line usage can be detecting by 
 |[Remote Services](https://attack.mitre.org/techniques/T1021/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 |[Remote File Copy](https://attack.mitre.org/techniques/T1105/)|[Command and Control](https://attack.mitre.org/tactics/TA0011/), [Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -39,9 +38,9 @@ Any tool of interest with commonly known command line usage can be detecting by 
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Identify process launches that contain substrings that belong to known tools and do not match the expected process names. These will help to indicate instances of tools that have been renamed. 
 
@@ -59,7 +58,7 @@ output port_fwd, scp, mimikatz, rar, archive, ip_addr
 ```
 
 
-### Splunk, Sysmon native
+#### Splunk, Sysmon native
 
 Splunk version of the above pseudocode, excluding the IP address search.
 
@@ -69,7 +68,7 @@ index=__your_sysmon_index__ EventCode=1 (CommandLine="* -R * -pw*" OR CommandLin
 ```
 
 
-### Eql, EQL native
+#### Eql, EQL native
 
 EQL version of the above pseudocode, excluding the IP address search.
 
@@ -80,7 +79,7 @@ process where subtype.create and
 ```
 
 
-### Splunk, Sysmon native
+#### Splunk, Sysmon native
 
 Splunk version of the above pseudocode, solely for the IP address search. Note that this will likely result in many false positives, since things like software version numbers can also be valid IPv4 addresses.
 
@@ -91,9 +90,9 @@ index=__your_sysmon_index__ EventCode=1 |regex CommandLine=".*\b(25[0-5]|2[0-4][
 
 
 
-#### Unit Tests
+### Unit Tests
 
-##### Test Case 1
+#### Test Case 1
 
 **Configurations:** Windows 7
 
@@ -103,7 +102,7 @@ Download and run Putty from the command line to connect to an SSH server using r
 putty.exe -pw <password> -R <port>:<host> <user>@<host>
 ```
 
-##### Test Case 2
+#### Test Case 2
 
 **Configurations:** Windows 7
 

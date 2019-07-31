@@ -17,22 +17,21 @@ More about RPCSS at : [rpcss_dcom_interfaces.html](http://www.hsc.fr/ressources/
 
 Identifies the connection in which WMI traffic is seen, as well as the process(es) responsible for owning the connection.
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 To detect WMI over RPC (using DCOM), a sensor needs to exist that has the insight into individual connections and can actually decode and make sense of RPC traffic. Specifically, WMI can be detected by looking at RPC traffic where the target interface matches that of WMI, which is IRemUnknown2. 
 

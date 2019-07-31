@@ -10,16 +10,15 @@ contributors: MITRE/NSA
 
 It is unlikely that event log data would be cleared during normal operations, and it is likely that malicious attackers may try to cover their tracks by clearing an event log. When an event log gets cleared, it is suspicious. Alerting when a "Clear Event Log" is generated could point to this intruder technique. Centrally collecting events has the added benefit of making it much harder for attackers to cover their tracks. Event Forwarding permits sources to forward multiple copies of a collected event to multiple collectors, thus enabling redundant event collection. Using a redundant event collection model can minimize the single point of failure risk.
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Indicator Blocking](https://attack.mitre.org/techniques/T1054/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 When an eventlog is cleared, a new event is created that alerts that the eventlog was cleared. For Security logs, its event code 1100 and 1102. For System logs, it is event code 104.
 
@@ -30,14 +29,14 @@ When an eventlog is cleared, a new event is created that alerts that the eventlo
 ```
 
 
-### Sigma rule (System log) (Sigma)
+#### Sigma rule (System log) (Sigma)
 
 
 [Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_susp_eventlog_cleared.yml) of the above pseudocode, focusing only on the System log.
 
 
 
-### Sigma rule (Security log) (Sigma)
+#### Sigma rule (Security log) (Sigma)
 
 
 [Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_susp_security_eventlog_cleared.yml) of the above pseudocode, focusing only on the Security log.
@@ -45,9 +44,9 @@ When an eventlog is cleared, a new event is created that alerts that the eventlo
 
 
 
-#### Unit Tests
+### Unit Tests
 
-##### Test Case 1
+#### Test Case 1
 
 **Configurations:** Windows 7
 

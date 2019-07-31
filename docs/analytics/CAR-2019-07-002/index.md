@@ -14,13 +14,12 @@ ProcDump may be used to dump the memory space of lsass.exe to disk for processin
 
 Note - the CAR data model currently does not support process access actions, so the pseudocode implementation is based around process creates.
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -28,9 +27,9 @@ Note - the CAR data model currently does not support process access actions, so 
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
-#### Implementations
+### Implementations
 
-### Procdump - Process Create (Pseudocode)
+#### Procdump - Process Create (Pseudocode)
 
 
 This base pseudocode looks for process create events where an instance of procdump is executed that references lsass in the command-line.
@@ -45,7 +44,7 @@ output procdump_lsass
 ```
 
 
-### Procdump - Process Create (Splunk, Sysmon native)
+#### Procdump - Process Create (Splunk, Sysmon native)
 
 
 A Splunk/Sysmon version of the above pseudocode.
@@ -56,14 +55,14 @@ index=__your_sysmon_index__ EventCode=1 Image="*\\procdump*.exe" CommandLine="*l
 ```
 
 
-### Procdump - Process Create (Eql)
+#### Procdump - Process Create (Eql)
 
 
 An [EQL Version](https://eqllib.readthedocs.io/en/latest/analytics/1e1ef6be-12fc-11e9-8d76-4d6bb837cda4.html) of the above pseudocode.
 
 
 
-### Procdump - Process Access (Splunk, Sysmon native)
+#### Procdump - Process Access (Splunk, Sysmon native)
 
 
 A related Splunk search, which instead of looking for process create events looks for process access events that target lsass.exe.
@@ -74,7 +73,7 @@ index=__your_sysmon_index__ EventCode=10 TargetImage="C:\\WINDOWS\\system32\\lsa
 ```
 
 
-### Procdump - Process Access (Sigma)
+#### Procdump - Process Access (Sigma)
 
 
 A [Sigma Version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sysmon/sysmon_lsass_memdump.yml) of the above Splunk search, with some more stringent criteria around calltrace.
@@ -82,9 +81,9 @@ A [Sigma Version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sys
 
 
 
-#### Unit Tests
+### Unit Tests
 
-##### Test Case 1
+#### Test Case 1
 
 1. Open a Windows Command Prompt or PowerShell instance.
 2. Navigate to folder containing ProcDump.

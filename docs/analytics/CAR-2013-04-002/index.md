@@ -43,8 +43,7 @@ Certain commands are frequently used by malicious actors and infrequently used b
 
 The host on which the commands were executed, the time of execution, and what commands were executed
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Account Discovery](https://attack.mitre.org/techniques/T1087/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
@@ -74,7 +73,7 @@ The host on which the commands were executed, the time of execution, and what co
 |[Command-Line Interface](https://attack.mitre.org/techniques/T1059/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 |[Query Registry](https://attack.mitre.org/techniques/T1012/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -83,9 +82,9 @@ The host on which the commands were executed, the time of execution, and what co
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 
 ```
@@ -104,16 +103,16 @@ output reg_grouped
 ```
 
 
-### Sigma
+#### Sigma
 
 [Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_multiple_suspicious_cli.yml) of the above pseudocode, with some modifications.
 
 
 
 
-#### Unit Tests
+### Unit Tests
 
-##### Test Case 1
+#### Test Case 1
 
 **Configurations:** Windows 7
 

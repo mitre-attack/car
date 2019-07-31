@@ -22,13 +22,12 @@ According to ATT&CK, adversaries frequently use RPC connections to remotely
 
 Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/articles/win_net_srv/well_known_named_pipes.html).
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[Remote Services](https://attack.mitre.org/techniques/T1021/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
-#### Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -36,9 +35,9 @@ Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/article
 |[flow](/data_model/flow) | [start](/data_model/flow#start) | [src_port](/data_model/flow#src_port) |
 
 
-#### Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Traffic to the RPC Endpoint Mapper will always have the destination port of 135. Assuming success, RPC traffic will continue to the endpoint. The endpoint and the client both bind to dynamically assigned ports (on Windows, this is typically greater than 49152). The traffic between the client and endpoint can be detected by looking at traffic to 135 followed by traffic where the source and destination ports are at least 49152. 
 

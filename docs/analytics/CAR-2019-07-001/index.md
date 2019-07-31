@@ -12,16 +12,15 @@ Adversaries sometimes modify object access rights at the operating system level.
 
 Note - this analytic references file permissions, which are not currently in the CAR data model.
 
-
-#### ATT&CK Detection
+### ATT&CK Detection
 |Technique |Tactic |Level of Coverage |
 |---|---|---|
 |[File Permissions Modification](https://attack.mitre.org/techniques/T1222/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
-#### Implementations
+### Implementations
 
-### Windows - Pseudocode (Pseudocode)
+#### Windows - Pseudocode (Pseudocode)
 
 
 Windows environment logs can be noisy, so we take the following into consideration:
@@ -38,7 +37,7 @@ subject_security_id != "NT AUTHORITY\SYSTEM"
 ```
 
 
-### Windows - Splunk (Splunk)
+#### Windows - Splunk (Splunk)
 
 
 Splunk version of the above pseudocode.
@@ -49,7 +48,7 @@ index=__your_windows_security_log_index__ EventCode=4670 Object_Type="File" Secu
 ```
 
 
-### Linux - Pseudocode (Pseudocode)
+#### Linux - Pseudocode (Pseudocode)
 
 
 This looks for any invocations of chmod. Note that this is likely to be more noisy than the Windows-specific implementation, although Linux does not generate logs for system triggered activities like in Windows. In addition, it may be necessary to whitelist cron jobs that regularly run and execute `chmod`.
@@ -63,12 +62,12 @@ output chmod_processes
 
 
 
-#### Unit Tests
+### Unit Tests
 
-##### Test Case 1
+#### Test Case 1
 
 For Windows - right click on any file and change its permissions under properties. Or, execute the following command: `icacls "C:\<fileName>" /grant :F`
 
-##### Test Case 2
+#### Test Case 2
 
 For Linux - execute the following command: `chmod 777 "fileName"`
