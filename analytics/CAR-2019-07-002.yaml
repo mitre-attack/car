@@ -8,6 +8,7 @@ analytic_types:
   - TTP
 contributors:
   - Kaushal Parikh
+  - Cyware Labs
   - MITRE
 id: CAR-2019-07-002
 description: |-
