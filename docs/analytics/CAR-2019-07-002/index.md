@@ -16,11 +16,13 @@ Note - the CAR data model currently does not support process access actions, so 
 
 
 ### ATT&CK Detection
+
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
 
 ### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
