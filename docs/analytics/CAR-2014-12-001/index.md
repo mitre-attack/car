@@ -37,13 +37,13 @@ Thus, a great ASCII based signature is
 
 Identifies the process that initiated the RPC request (such as wmic.exe or powershell.exe), as well as the source and destination information of the network connection that triggered the alert.
 
+
 ### ATT&CK Detection
-|Technique |Tactic |Level of Coverage |
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|High|
 
 ### Data Model References
-
 |Object|Action|Field|
 |---|---|---|
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [dest_port](/data_model/flow#dest_port) |

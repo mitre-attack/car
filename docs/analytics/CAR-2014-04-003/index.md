@@ -14,14 +14,14 @@ Powershell can be used to hide monitored command line execution such as:
 -   `net use`
 -   `sc start`
 
+
 ### ATT&CK Detection
-|Technique |Tactic |Level of Coverage |
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[PowerShell](https://attack.mitre.org/techniques/T1086/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|High|
 |[Scripting](https://attack.mitre.org/techniques/T1064/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 ### Data Model References
-
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |

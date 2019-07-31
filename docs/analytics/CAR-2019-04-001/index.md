@@ -10,13 +10,13 @@ contributors: MITRE
 
 Bypassing user account control (UAC Bypass) is generally done by piggybacking on a system process that has auto-escalate privileges. This analytic looks to detect those cases as described by the open-source [UACME](https://github.com/hfiref0x/UACME) tool.
 
+
 ### ATT&CK Detection
-|Technique |Tactic |Level of Coverage |
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Bypass User Account Control](https://attack.mitre.org/techniques/T1088/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 ### Data Model References
-
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [image_path](/data_model/process#image_path) |

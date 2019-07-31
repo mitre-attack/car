@@ -22,8 +22,9 @@ Any tool of interest with commonly known command line usage can be detecting by 
 -   `\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}`
     Logically this analytic makes use of [CAR-2014-03-005](CAR-2014-03-005).
 
+
 ### ATT&CK Detection
-|Technique |Tactic |Level of Coverage |
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Moderate|
 |[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
@@ -31,7 +32,6 @@ Any tool of interest with commonly known command line usage can be detecting by 
 |[Remote File Copy](https://attack.mitre.org/techniques/T1105/)|[Command and Control](https://attack.mitre.org/tactics/TA0011/), [Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 ### Data Model References
-
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |

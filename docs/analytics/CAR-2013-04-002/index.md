@@ -43,8 +43,9 @@ Certain commands are frequently used by malicious actors and infrequently used b
 
 The host on which the commands were executed, the time of execution, and what commands were executed
 
+
 ### ATT&CK Detection
-|Technique |Tactic |Level of Coverage |
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Account Discovery](https://attack.mitre.org/techniques/T1087/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 |[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Moderate|
@@ -74,7 +75,6 @@ The host on which the commands were executed, the time of execution, and what co
 |[Query Registry](https://attack.mitre.org/techniques/T1012/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 
 ### Data Model References
-
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [hostname](/data_model/process#hostname) |

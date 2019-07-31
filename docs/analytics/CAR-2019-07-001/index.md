@@ -12,8 +12,9 @@ Adversaries sometimes modify object access rights at the operating system level.
 
 Note - this analytic references file permissions, which are not currently in the CAR data model.
 
+
 ### ATT&CK Detection
-|Technique |Tactic |Level of Coverage |
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[File Permissions Modification](https://attack.mitre.org/techniques/T1222/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 

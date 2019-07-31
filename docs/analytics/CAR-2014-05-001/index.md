@@ -22,13 +22,13 @@ According to ATT&CK, adversaries frequently use RPC connections to remotely
 
 Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/articles/win_net_srv/well_known_named_pipes.html).
 
+
 ### ATT&CK Detection
-|Technique |Tactic |Level of Coverage |
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Remote Services](https://attack.mitre.org/techniques/T1021/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 ### Data Model References
-
 |Object|Action|Field|
 |---|---|---|
 |[flow](/data_model/flow) | [start](/data_model/flow#start) | [dest_port](/data_model/flow#dest_port) |

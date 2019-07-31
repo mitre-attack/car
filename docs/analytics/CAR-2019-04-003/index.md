@@ -15,13 +15,13 @@ Squiblydoo was first written up by Casey Smith at Red Canary, though that blog p
 #### References
 As usual, credit to Roberto Rodriguez and the [ThreatHunter Playbook](https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/blob/master/playbooks/platforms/windows/05_defense_evasion/regsvr32/variants/bypass_whitelisting_regsvr32.md).
 
+
 ### ATT&CK Detection
-|Technique |Tactic |Level of Coverage |
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Regsvr32](https://attack.mitre.org/techniques/T1117/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/), [Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
 ### Data Model References
-
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |

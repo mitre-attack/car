@@ -27,8 +27,9 @@ Within the built-in Windows Commands:
 
 **Note** `dsquery` is only pre-existing on Windows servers.
 
+
 ### ATT&CK Detection
-|Technique |Tactic |Level of Coverage |
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Account Discovery](https://attack.mitre.org/techniques/T1087/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 |[Permission Groups Discovery](https://attack.mitre.org/techniques/T1069/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
@@ -39,7 +40,6 @@ Within the built-in Windows Commands:
 |[System Service Discovery](https://attack.mitre.org/techniques/T1007/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 
 ### Data Model References
-
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |

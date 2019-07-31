@@ -18,8 +18,8 @@ The time field indicates the first and last time a system reported a user logged
 A list of hostnames and the users that had been logged into the system at some point after to the system's last restart.
 
 
-### Data Model References
 
+### Data Model References
 |Object|Action|Field|
 |---|---|---|
 |[user_session](/data_model/user_session) | [login](/data_model/user_session#login) | [user](/data_model/user_session#user) |

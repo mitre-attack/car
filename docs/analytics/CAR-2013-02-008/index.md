@@ -13,13 +13,13 @@ Multiple users logged into a single machine at the same time, or even within the
 Logon events are Windows Event Code 4624 for Windows Vista and above, 518 for pre-Vista. Logoff events are 4634 for Windows Vista and above, 538 for pre-Vista.
 Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types table on Microsoft's [Audit Logon Events](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc787567(v=ws.10)) page.
 
+
 ### ATT&CK Detection
-|Technique |Tactic |Level of Coverage |
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Initial Access](https://attack.mitre.org/tactics/TA0001/)|Low|
 
 ### Data Model References
-
 |Object|Action|Field|
 |---|---|---|
 |[user_session](/data_model/user_session) | [login](/data_model/user_session#login) | [user](/data_model/user_session#user) |

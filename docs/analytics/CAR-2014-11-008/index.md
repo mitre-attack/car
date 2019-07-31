@@ -18,13 +18,13 @@ Several accessibility programs can be run using the Ease of Access center
 -   `narrator.exe` reads screen text over audio
 -   `magnify.exe` magnifies the view of the screen near the cursor
 
+
 ### ATT&CK Detection
-|Technique |Tactic |Level of Coverage |
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Accessibility Features](https://attack.mitre.org/techniques/T1015/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 
 ### Data Model References
-
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
