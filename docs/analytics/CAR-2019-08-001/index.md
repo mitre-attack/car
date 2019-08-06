@@ -3,7 +3,7 @@ title: "CAR-2019-08-001: Credential Dumping via Windows Task Manager"
 layout: analytic
 submission_date: 2019/08/05
 information_domain: Host
-subtypes: Process
+subtypes: File
 analytic_type: TTP
 contributors: Tony Lambert/Red Canary
 ---
