@@ -1,0 +1,59 @@
+---
+title: Credential Dumping via Windows Task Manager
+submission_date: 2019/08/05
+information_domain: 'Host'
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - Tony Lambert/Red Canary
+id: CAR-2019-08-001
+description: |-
+  The Windows Task Manager may be used to dump the memory space of `lsass.exe` to disk for processing with a credential access tool such as Mimikatz. This is performed by launching Task Manager as a privileged user, selecting `lsass.exe`, and clicking "Create dump file". This saves a dump file to disk with a deterministic name that includes the name of the process being dumped.
+
+  This requires filesystem data to determine whether files have been created.
+coverage:
+  - technique: T1003
+    tactics:
+      - TA0006
+    coverage: Low
+implementations:
+  - name: Procdump - File Create
+    description: This base pseudocode looks for file create events where a file with a name similar to lsass.dmp is created by the Windows task manager process.
+    code: |-
+      files = search File:Create
+      lsass_dump = filter files where (
+        file_name = "lsass*.dmp"  and
+        image_path = "C:\Windows\*\taskmgr.exe")
+      output lsass_dump
+    type: Pseudocode
+  - name: Procdump - File Create
+    description: A Splunk/Sysmon version of the above pseudocode.
+    code: |-
+      index=__your_sysmon_index__ EventCode=11 TargetFilename="*lsass*.dmp" Image="C:\\Windows\\*\\taskmgr.exe"
+    type: Splunk
+    data_model: Sysmon native
+  - name: Procdump - File Create
+    description: An EQL version of the above pseudocode.
+    code: |-
+      file where file_name == "lsass*.dmp" and process_name == "taskmgr.exe"
+    type: EQL
+    data_model: EQL native
+data_model_references:
+  - file/create/file_name
+  - file/create/image_path
+unit_tests: 
+  - description: |-
+      1. Open Windows Task Manager as Administrator
+      2. Select lsass.exe
+      3. Right-click on lsass.exe and select "Create dump file".
+
+
+
+
+
+
+
+
+
