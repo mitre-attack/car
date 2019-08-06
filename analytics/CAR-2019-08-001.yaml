@@ -3,7 +3,7 @@ title: Credential Dumping via Windows Task Manager
 submission_date: 2019/08/05
 information_domain: 'Host'
 subtypes:
-  - Process
+  - File
 analytic_types:
   - TTP
 contributors:
