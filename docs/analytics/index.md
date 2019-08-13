@@ -58,3 +58,4 @@ permalink: /analytics/
 |[CAR-2019-07-001: Access Permission Modification](CAR-2019-07-001)|[File Permissions Modification](https://attack.mitre.org/techniques/T1222/)|Pseudocode, Splunk|
 |[CAR-2019-07-002: Lsass Process Dump via Procdump](CAR-2019-07-002)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Eql, Pseudocode, Sigma, Splunk|
 |[CAR-2019-08-001: Credential Dumping via Windows Task Manager](CAR-2019-08-001)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Eql, Pseudocode, Splunk|
+|[CAR-2019-08-002: Active Directory Dumping via NTDSUtil](CAR-2019-08-002)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Eql, Pseudocode, Splunk|
