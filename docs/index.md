@@ -22,7 +22,8 @@ Information about the latest CAR updates and changes can be found in this sectio
 ### August 2019
 * New analytics added
   * [CAR-2019-08-001: Credential Dumping via Windows Task Manager](/analytics/CAR-2019-08-001)
-  
+  * [CAR-2019-08-002: Active Directory Dumping via NTDSUtil](/analytics/CAR-2019-08-002)
+    
 ### July 2019
 * Added Splunk/Sysmon implementations to several analytics
 * Added [EQL](https://eqllib.readthedocs.io/en/latest/index.html) implementations to several analytics
