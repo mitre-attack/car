@@ -26,3 +26,30 @@ The time of login events for distinct users on individual systems
 |[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
+### Implementations
+
+#### Account Logon with Filtering (Pseudocode)
+
+
+This base pseudocode looks for user logon events and filters out the top 30 account names to reduce the occurrence of noisy service accounts and the like. It is meant as a starting point for situational awareness around such events.
+
+
+```
+logon_events = search User_Session:Login
+filtered_logons = filter logon_events where (
+  user NOT IN TOP30(user))
+output filtered_logons
+```
+
+
+#### Account Logon with Filtering (Splunk)
+
+
+Splunk version of the above pseudocode. NOTE - this is liable to be quite noisy and will need tweaking, especially in terms of the number of top users filtered out.
+
+
+```
+index=__your_win_event_log_index__ EventCode=4624|search NOT [search index=__your_win_event_log_index__ EventCode=4624|top 30 Account_Name|table Account_Name]
+```
+
+

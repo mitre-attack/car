@@ -24,7 +24,7 @@ permalink: /analytics/
 |[CAR-2013-08-001: Execution with schtasks](CAR-2013-08-001)|[Scheduled Task](https://attack.mitre.org/techniques/T1053/)|Pseudocode|
 |[CAR-2013-09-003: SMB Session Setups](CAR-2013-09-003)|[Forced Authentication](https://attack.mitre.org/techniques/T1187/)|Pseudocode|
 |[CAR-2013-09-005: Service Outlier Executables](CAR-2013-09-005)|[Modify Existing Service](https://attack.mitre.org/techniques/T1031/), [New Service](https://attack.mitre.org/techniques/T1050/)|Pseudocode, Sigma|
-|[CAR-2013-10-001: User Login Activity Monitoring](CAR-2013-10-001)|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1076/), [Valid Accounts](https://attack.mitre.org/techniques/T1078/)||
+|[CAR-2013-10-001: User Login Activity Monitoring](CAR-2013-10-001)|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1076/), [Valid Accounts](https://attack.mitre.org/techniques/T1078/)|Pseudocode, Splunk|
 |[CAR-2013-10-002: DLL Injection via Load Library](CAR-2013-10-002)|[Process Injection](https://attack.mitre.org/techniques/T1055/), [Bypass User Account Control](https://attack.mitre.org/techniques/T1088/)|Pseudocode|
 |[CAR-2014-02-001: Service Binary Modifications](CAR-2014-02-001)|[New Service](https://attack.mitre.org/techniques/T1050/), [Modify Existing Service](https://attack.mitre.org/techniques/T1031/), [File System Permissions Weakness](https://attack.mitre.org/techniques/T1044/), [Service Execution](https://attack.mitre.org/techniques/T1035/)|Pseudocode|
 |[CAR-2014-03-001: SMB Write Request - NamedPipes](CAR-2014-03-001)|[Remote File Copy](https://attack.mitre.org/techniques/T1105/)|Pseudocode|
