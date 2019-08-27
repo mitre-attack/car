@@ -27,3 +27,19 @@ coverage:
     tactics:
       - TA0005
     coverage: Moderate
+implementations:
+  - name: Account Logon with Filtering
+    description: This base pseudocode looks for user logon events and filters out the top 30 account names to reduce the occurrence of noisy service accounts and the like. It is meant as a starting point for situational awareness around such events.
+    code: |-
+      logon_events = search User_Session:Login
+      filtered_logons = filter logon_events where (
+        user NOT IN TOP30(user))
+      output filtered_logons
+    type: Pseudocode  
+  - name: Account Logon with Filtering
+    description: Splunk version of the above pseudocode. NOTE - this is liable to be quite noisy and will need tweaking, especially in terms of the number of top users filtered out.
+    code: |-
+      index=__your_win_event_log_index__ EventCode=4624|search NOT [search index=__your_win_event_log_index__ EventCode=4624|top 30 Account_Name|table Account_Name]
+    type: Splunk  
+        
+
