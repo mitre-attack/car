@@ -17,7 +17,7 @@ Stopping services events are Windows Event Code 7036.
 
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
-|[Indicator Blocking](https://attack.mitre.org/techniques/T1054/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+|[Disabling Security Tools](https://attack.mitre.org/techniques/T1089/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
 
 
 ### Implementations

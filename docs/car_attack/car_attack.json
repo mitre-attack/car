@@ -7,7 +7,7 @@
         {
             "techniqueID": "T1003",
             "color": "#c6dbef",
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-07-001: Suspicious Arguments | CAR-2019-04-004: Credential Dumping via Mimikatz | CAR-2019-07-002: Lsass Process Dump via Procdump | CAR-2019-08-001: Credential Dumping via Windows Task Manager",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-07-001: Suspicious Arguments | CAR-2019-04-004: Credential Dumping via Mimikatz | CAR-2019-07-002: Lsass Process Dump via Procdump | CAR-2019-08-001: Credential Dumping via Windows Task Manager | CAR-2019-08-002: Active Directory Dumping via NTDSUtil",
             "enabled": true
         },
         {
@@ -205,7 +205,7 @@
         {
             "techniqueID": "T1089",
             "color": "#c6dbef",
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-04-003: User Activity from Stopping Windows Defensive Services",
             "enabled": true
         },
         {
@@ -217,7 +217,7 @@
         {
             "techniqueID": "T1054",
             "color": "#c6dbef",
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-04-002: User Activity from Clearing Event Logs | CAR-2016-04-003: User Activity from Stopping Windows Defensive Services",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands",
             "enabled": true
         },
         {
@@ -236,6 +236,12 @@
             "techniqueID": "T1222",
             "color": "#c6dbef",
             "comment": "CAR-2019-07-001: Access Permission Modification",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070",
+            "color": "#c6dbef",
+            "comment": "CAR-2016-04-002: User Activity from Clearing Event Logs",
             "enabled": true
         },
         {

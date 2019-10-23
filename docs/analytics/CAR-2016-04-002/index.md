@@ -15,7 +15,7 @@ It is unlikely that event log data would be cleared during normal operations, an
 
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
-|[Indicator Blocking](https://attack.mitre.org/techniques/T1054/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+|[Indicator Removal on Host](https://attack.mitre.org/techniques/T1070/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
 ### Implementations
