@@ -47,8 +47,8 @@ permalink: /analytics/
 |[CAR-2015-07-001: All Logins Since Last Boot](CAR-2015-07-001)||Pseudocode|
 |[CAR-2016-03-001: Host Discovery Commands](CAR-2016-03-001)|[Account Discovery](https://attack.mitre.org/techniques/T1087/), [Permission Groups Discovery](https://attack.mitre.org/techniques/T1069/), [System Network Configuration Discovery](https://attack.mitre.org/techniques/T1016/), [System Information Discovery](https://attack.mitre.org/techniques/T1082/), [System Owner/User Discovery](https://attack.mitre.org/techniques/T1033/), [Process Discovery](https://attack.mitre.org/techniques/T1057/), [System Service Discovery](https://attack.mitre.org/techniques/T1007/)|Eql, Pseudocode, Splunk|
 |[CAR-2016-03-002: Create Remote Process via WMIC](CAR-2016-03-002)|[Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047/)|Eql, Pseudocode, Splunk|
-|[CAR-2016-04-002: User Activity from Clearing Event Logs](CAR-2016-04-002)|[Indicator Blocking](https://attack.mitre.org/techniques/T1054/)|Pseudocode, Sigma|
-|[CAR-2016-04-003: User Activity from Stopping Windows Defensive Services](CAR-2016-04-003)|[Indicator Blocking](https://attack.mitre.org/techniques/T1054/)|Pseudocode|
+|[CAR-2016-04-002: User Activity from Clearing Event Logs](CAR-2016-04-002)|[Indicator Removal on Host](https://attack.mitre.org/techniques/T1070/)|Pseudocode, Sigma|
+|[CAR-2016-04-003: User Activity from Stopping Windows Defensive Services](CAR-2016-04-003)|[Disabling Security Tools](https://attack.mitre.org/techniques/T1089/)|Pseudocode|
 |[CAR-2016-04-004: Successful Local Account Login](CAR-2016-04-004)|[Pass the Hash](https://attack.mitre.org/techniques/T1075/)|Pseudocode|
 |[CAR-2016-04-005: Remote Desktop Logon](CAR-2016-04-005)|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1076/)|Pseudocode, Sigma|
 |[CAR-2019-04-001: UAC Bypass](CAR-2019-04-001)|[Bypass User Account Control](https://attack.mitre.org/techniques/T1088/)|Pseudocode, Sigma, Splunk|
