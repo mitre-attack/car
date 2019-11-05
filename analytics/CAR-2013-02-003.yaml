@@ -20,6 +20,11 @@ implementations:
       cmd = filter process where (exe == "cmd.exe")
       output cmd
     type: pseudocode
+  - description: DNIF version of the above pseudocode.
+    code: |-
+      _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*cmd\.exe.*)i limit 100
+    type: DNIF
+    data_model: Sysmon native
 data_model_references:
   - process/create/exe
   - process/create/parent_exe
