@@ -46,7 +46,7 @@ implementations:
     code: |-
       _fetch * from event where $LogName=WINDOWS-NXLOG-AUDIT AND $SubSystem=AUTHENTICATION AND $Action=LOGIN group count_unique $ScopeID, $User limit 30
       >>_store in_disk david_test win_top_30 stack_replace
-      >>_fetch * from event where $LogName=WINDOWS-NXLOG-AUDIT AND $SubSystem=AUTHENTICATION AND $Action=LOGIN limit 100
+      >>_fetch * from event where $LogName=WINDOWS-NXLOG-AUDIT AND $SubSystem=AUTHENTICATION AND $Action=LOGIN limit 10000
       >>_checkif lookup david_test win_top_30 join $ScopeID = $ScopeID str_compare $User eq $User exclude
     type: DNIF
     data_model: Sysmon native
