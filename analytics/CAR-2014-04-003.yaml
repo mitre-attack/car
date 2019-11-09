@@ -38,9 +38,14 @@ implementations:
   - description: EQL version of the above pseudocode.
     code: |-
       process where subtype.create and
-        (process_name == "powershell.exe" and parent_process_name != "explorer.exe")    
+        (process_name == "powershell.exe" and parent_process_name != "explorer.exe")
     type: EQL
     data_model: EQL native
+  - description: DNIF version of the above pseudocode.
+    code: |-
+      _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=powershell.exe NOT $ParentProcess=regex(.*explorer.exe.*)i limit 30
+    type: DNIF
+    data_model: Sysmon native
 data_model_references:
   - process/create/exe
   - process/create/parent_exe
