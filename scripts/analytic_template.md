@@ -53,3 +53,17 @@ contributors: {{analytic['contributors']|join(', ')}}
 {{ut['commands']|join("\n")}}
 ```
 {% endif %}{% endfor %}{% endif %}
+
+{% if 'true_positives' in analytic %}
+### True Positives
+{% for tp in analytic['true_positives'] %}
+#### {{tp['source']|capitalize}}
+{% if 'description' in tp %}
+{{tp['description']}}
+{% endif %}
+{% if 'event' in tp %}
+```json
+{{tp['event']}}
+```
+{% endif %}
+{% endfor %}{% endif %}
