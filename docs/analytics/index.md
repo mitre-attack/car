@@ -55,7 +55,7 @@ permalink: /analytics/
 |[CAR-2019-04-002: Generic Regsvr32](CAR-2019-04-002)|[Regsvr32](https://attack.mitre.org/techniques/T1117/)|Pseudocode, Splunk|
 |[CAR-2019-04-003: Squiblydoo](CAR-2019-04-003)|[Regsvr32](https://attack.mitre.org/techniques/T1117/)|Eql, Psuedocode, Splunk|
 |[CAR-2019-04-004: Credential Dumping via Mimikatz](CAR-2019-04-004)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Splunk|
-|[CAR-2019-07-001: Access Permission Modification](CAR-2019-07-001)|[File Permissions Modification](https://attack.mitre.org/techniques/T1222/)|Pseudocode, Splunk|
+|[CAR-2019-07-001: Access Permission Modification](CAR-2019-07-001)|[File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/)|Pseudocode, Splunk|
 |[CAR-2019-07-002: Lsass Process Dump via Procdump](CAR-2019-07-002)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Eql, Pseudocode, Sigma, Splunk|
 |[CAR-2019-08-001: Credential Dumping via Windows Task Manager](CAR-2019-08-001)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Eql, Pseudocode, Splunk|
 |[CAR-2019-08-002: Active Directory Dumping via NTDSUtil](CAR-2019-08-002)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Eql, Pseudocode, Splunk|

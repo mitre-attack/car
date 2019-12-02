@@ -65,3 +65,5 @@ index=__your_sysmon_index__ EventCode=1|stats dc(Hashes) as Num_Hashes values(Ha
 
 
 
+
+

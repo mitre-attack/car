@@ -73,3 +73,5 @@ file where file_name == "ntds.dit" and process_name == "ntdsutil.exe"
 
 1. Open a Windows Command Prompt or PowerShell instance as Administrator
 2. Execute `ntdsutil.exe “ac i ntds” “ifm” “create full c:\temp” q q`
+
+

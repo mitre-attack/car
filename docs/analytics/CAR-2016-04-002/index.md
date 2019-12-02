@@ -58,3 +58,5 @@ You can use the powershell cmdlet “Clear-Eventlog” to clear event logs. Open
 Clear-Eventlog Security
 Clear-Eventlog System
 ```
+
+

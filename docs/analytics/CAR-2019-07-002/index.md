@@ -90,3 +90,5 @@ A [Sigma Version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sys
 1. Open a Windows Command Prompt or PowerShell instance.
 2. Navigate to folder containing ProcDump.
 3. Execute procdump.exe -ma lsass.exe lsass_dump
+
+

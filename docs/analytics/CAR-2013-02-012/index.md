@@ -24,3 +24,5 @@ User Name, Machines logged into, the earliest and latest times in which users we
 |[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 
+
+
