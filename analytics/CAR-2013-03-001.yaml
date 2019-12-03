@@ -47,12 +47,12 @@ implementations:
       output reg_and_cmd
     type: pseudocode
   - description: DNIF version of the above pseudocode.
-      code: |-
+    code: |-
       _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*reg\.exe.*)i AND $ParentProcess=regex(.*cmd\.exe.*)i as #A limit 100
       >>_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*cmd\.exe.*)i NOT $ParentProcess=regex(.*explorer\.exe.*)i as #B limit 100
       >>_checkif sjoin #B.$PPID = #A.$CPID str_compare #B.$SystemName eq #A.$SystemName include
-      type: DNIF
-      data_model: Sysmon native
+    type: DNIF
+    data_model: Sysmon native
 data_model_references:
   - process/create/command_line
   - process/create/hostname

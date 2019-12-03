@@ -171,12 +171,12 @@ implementations:
   - description: '[Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_multiple_suspicious_cli.yml) of the above pseudocode, with some modifications.'
     type: Sigma
   - description: DNIF version of the above pseudocode.
-      code: |-
+    code: |-
         _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=regex(arp\.exe|at\.exe|attrib\.exe|cscript\.exe|dsquery\.exe|hostname\.exe|ipconfig\.exe|mimikatz.exe|nbstat\.exe|net\.exe|netsh\.exe|nslookup\.exe|ping\.exe|quser\.exe|qwinsta\.exe|reg\.exe|runas\.exe|sc\.exe|schtasks\.exe|ssh\.exe|systeminfo\.exe|taskkill\.exe|telnet\.exe|tracert\.exe|wscript\.exe|xcopy\.exe)i group count_unique $App limit 100
         >>_agg count
         >>_checkif int_compare Count > 1 include
-      type: DNIF
-      data_model: Sysmon native
+    type: DNIF
+    data_model: Sysmon native
 data_model_references:
   - process/create/hostname
   - process/create/ppid
