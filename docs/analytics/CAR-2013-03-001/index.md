@@ -57,6 +57,18 @@ output reg_and_cmd
 ```
 
 
+#### Dnif, Sysmon native
+
+DNIF version of the above pseudocode.
+
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*reg\.exe.*)i AND $ParentProcess=regex(.*cmd\.exe.*)i as #A limit 100
+>>_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*cmd\.exe.*)i NOT $ParentProcess=regex(.*explorer\.exe.*)i as #B limit 100
+>>_checkif sjoin #B.$PPID = #A.$CPID str_compare #B.$SystemName eq #A.$SystemName include
+```
+
+
 
 ### Unit Tests
 

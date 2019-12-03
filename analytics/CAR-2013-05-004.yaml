@@ -35,6 +35,11 @@ implementations:
       process where subtype.create and process_name == "at.exe"
     type: EQL
     data_model: EQL native
+  - description: DNIF version of the above pseudocode.
+    code: |-
+      _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=at.exe limit 100
+    type: DNIF
+    data_model: Sysmon native
 data_model_references:
   - process/create/command_line
   - process/create/exe

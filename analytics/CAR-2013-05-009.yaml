@@ -37,7 +37,13 @@ implementations:
   - name: Sigma (renamed paexec)
     description: '[Sigma includes](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_renamed_paexec.yml) a rule specifically for detecting instances of paexec being renamed.'
     type: Sigma
+  - description: DNIF version of the above pseudocode.
+    code: |-
+      _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 group count_unique $App, $HashMD5 limit 100
+      >>_agg count_unique $HashMD5
+      >>_checkif int_compare count_unique > 1 include
+    type: DNIF
+    data_model: Sysmon native
 data_model_references:
   - process/create/exe
   - process/create/md5_hash
-

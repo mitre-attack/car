@@ -40,6 +40,16 @@ output rar_argument
 ```
 
 
+#### Dnif, Sysmon native
+
+DNIF version of the above pseudocode.
+
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.* a .*)i limit 100
+```
+
+
 
 ### Unit Tests
 

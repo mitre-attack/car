@@ -91,6 +91,16 @@ index=__your_sysmon_index__ EventCode=1 |regex CommandLine=".*\b(25[0-5]|2[0-4][
 ```
 
 
+#### Dnif, Sysmon native
+
+DNIF version of the above pseudocode.
+
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*(\-r.*\-pw|\-pw.*\@|sekurlsa|\-hp| a |\\d\{1\,3\}\\\.\\d\{1\,3\}\\\.\\d\{1\,3\}).*)i limit 100
+```
+
+
 
 ### Unit Tests
 
