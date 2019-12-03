@@ -63,7 +63,7 @@ contributors: {{analytic['contributors']|join(', ')}}
 {% endif %}
 {% if 'event' in tp %}
 ```json
-{{tp['event']}}
+{{tp['event'] | replace("'","")}}
 ```
 {% endif %}
 {% endfor %}{% endif %}
