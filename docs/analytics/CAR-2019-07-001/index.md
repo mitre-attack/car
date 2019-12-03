@@ -17,7 +17,7 @@ Note - this analytic references file permissions, which are not currently in the
 
 |Technique|Tactic|Level of Coverage|
 |---|---|---|
-|[File Permissions Modification](https://attack.mitre.org/techniques/T1222/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+|[File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
 ### Implementations

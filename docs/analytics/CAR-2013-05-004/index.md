@@ -60,6 +60,16 @@ process where subtype.create and process_name == "at.exe"
 ```
 
 
+#### Dnif, Sysmon native
+
+DNIF version of the above pseudocode.
+
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=at.exe limit 100
+```
+
+
 
 ### Unit Tests
 

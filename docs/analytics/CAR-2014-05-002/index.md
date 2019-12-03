@@ -62,3 +62,13 @@ process where subtype.create and
 ```
 
 
+#### Dnif, Sysmon native
+
+DNIF version of the above pseudocode.
+
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=cmd.exe AND $ParentProcess=regex(.*services.exe.*)i limit 30
+```
+
+

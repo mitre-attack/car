@@ -61,7 +61,17 @@ EQL version of the above pseudocode.
 
 ```
 process where subtype.create and
-  (process_name == "powershell.exe" and parent_process_name != "explorer.exe")    
+  (process_name == "powershell.exe" and parent_process_name != "explorer.exe")
+```
+
+
+#### Dnif, Sysmon native
+
+DNIF version of the above pseudocode.
+
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=powershell.exe NOT $ParentProcess=regex(.*explorer.exe.*)i limit 30
 ```
 
 

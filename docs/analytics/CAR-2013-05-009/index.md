@@ -65,3 +65,15 @@ index=__your_sysmon_index__ EventCode=1|stats dc(Hashes) as Num_Hashes values(Ha
 
 
 
+#### Dnif, Sysmon native
+
+DNIF version of the above pseudocode.
+
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 group count_unique $App, $HashMD5 limit 100
+>>_agg count_unique $HashMD5
+>>_checkif int_compare count_unique > 1 include
+```
+
+

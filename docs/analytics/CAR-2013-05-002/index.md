@@ -43,10 +43,20 @@ processes = search Process:Create
 suspicious_locations = filter process where (
  image_path == "*:\RECYCLER\*" or
  image_path == "*:\SystemVolumeInformation\*" or
- image_path == "%windir%\Tasks\*" or 
+ image_path == "%windir%\Tasks\*" or
  image_path == "%systemroot%\debug\*"
 )
 output suspicious_locations
+```
+
+
+#### Dnif, Sysmon native
+
+DNIF version of the above pseudocode.
+
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*(\:\\recycler\\|\:\\systemvolumeinformation\\|\%windir\%\\tasks\\|\%systemroot\%\\debug\\).*)i group count_unique $App limit 100
 ```
 
 
