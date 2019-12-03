@@ -21,6 +21,11 @@ implementations:
       rundll32 = filter process where (exe == "rundll32.exe")
       output rundll32
     type: pseudocode
+  - description: DNIF version of the above pseudocode.
+    code: |-
+      _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=rundll32.exe limit 100
+    type: DNIF
+    data_model: Sysmon native
 data_model_references:
   - process/create/exe
   - process/create/command_line

@@ -36,6 +36,11 @@ implementations:
         (process_name == "cmd.exe" and parent_process_name == "services.exe")
     type: EQL
     data_model: EQL native
+  - description: DNIF version of the above pseudocode.
+    code: |-
+      _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=cmd.exe AND $ParentProcess=regex(.*services.exe.*)i limit 30
+    type: DNIF
+    data_model: Sysmon native
 data_model_references:
   - process/create/exe
   - process/create/parent_exe
