@@ -40,90 +40,92 @@ data_model_references:
 true_positives:
   - source: 'Mordor (Sysmon)'
     description: 'Sysmon event from the Mordor [Empire DLL Injection dataset](https://github.com/hunters-forge/mordor/blob/master/small_datasets/windows/defense_evasion/process_injection_T1055/empire_dll_injection.md).'
-    event: '{"_index": "logs-endpoint-winevent-sysmon-2019.05.18",
-              "_type": "_doc",
-              "_id": "b3c3006563ea4a0c2cb4c43191ea10c28f794fbb",
-              "_score": 1,
-              "_source": {
-                "process_guid": "03ba39f5-50b2-5ce0-0000-00109995c501",
-                "user_reporter_domain": "NT AUTHORITY",
-                "process_target_id": "3124",
-                "beat_name": "WECserver",
-                "beat_version": "6.7.0",
-                "user_reporter_type": "User",
-                "thread_id": 3144,
-                "log_name": "Microsoft-Windows-Sysmon/Operational",
-                "record_number": "2273503",
-                "@event_date_creation": "2019-05-18T22:15:33.007Z",
-                "log_ingest_timestamp": "2019-05-18T22:15:33.697Z",
-                "@version": "1",
-                "type": "wineventlog",
-                "level": "Information",
-                "user_reporter_name": "SYSTEM",
-                "z_logstash_type": "wineventlog",
-                "process_target_path": "c:\\windows\\system32\\notepad.exe",
-                "process_target_guid": "03ba39f5-8320-5ce0-0000-00101ec72502",
-                "version": 2,
-                "@timestamp": "2019-05-18T22:15:33.697Z",
-                "thread_start_address": "0x00007FFECED8F220",
-                "process_target_name": "notepad.exe",
-                "z_logstash_pipeline": [
-                  "0098",
-                  "fingerprint-0099-001",
-                  "fingerprint-0099-003",
-                  "winlogbeat_6-field_nest_cleanup",
-                  "1500",
-                  "1521",
-                  "1522",
-                  "1523_7",
-                  "1523_8",
-                  "1524_8",
-                  "1524_11",
-                  "1524_12",
-                  "1524_15",
-                  "1531",
-                  "1541_1",
-                  "1541_3",
-                  "1544_2",
-                  "1544_3",
-                  "1544_5",
-                  "1544_7",
-                  "winevent-hostname-cleanup",
-                  "winevent-user_reporter_name-is-machine-account",
-                  "copy-8802-001",
-                  "copy-8802-002"
-                ],
-                "task": "CreateRemoteThread detected (rule: CreateRemoteThread)",
-                "opcode": "Info",
-                "process_id": "5452",
-                "host": {
-                  "name": "WECserver"
-                },
-                "source_name": "Microsoft-Windows-Sysmon",
-                "event_id": 8,
-                "provider_guid": "5770385f-c22a-43e0-bf4c-06f5698ffbd9",
-                "thread_start_function": "LoadLibraryA",
-                "action": "createremotethread",
-                "process_name": "powershell.exe",
-                "thread_new_id": "7940",
-                "meta_user_reporter_name_is_machine": "false",
-                "beat_hostname": "WECserver",
-                "user_reporter_sid": "S-1-5-18",
-                "process_path": "c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe",
-                "z_original_message": "CreateRemoteThread detected:\nRuleName: \nUtcTime: 2019-05-18 22:15:33.007\nSourceProcessGuid: {03ba39f5-50b2-5ce0-0000-00109995c501}\nSourceProcessId: 5452\nSourceImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\nTargetProcessGuid: {03ba39f5-8320-5ce0-0000-00101ec72502}\nTargetProcessId: 3124\nTargetImage: C:\\Windows\\System32\\notepad.exe\nNewThreadId: 7940\nStartAddress: 0x00007FFECED8F220\nStartModule: C:\\Windows\\System32\\KERNEL32.DLL\nStartFunction: LoadLibraryA",
-                "user": {},
-                "host_name": "hr001.shire.com",
-                "thread_start_module": "C:\\Windows\\System32\\KERNEL32.DLL"
-              },
-              "fields": {
-                "@timestamp": [
-                  "2019-05-18T22:15:33.697Z"
-                ],
-                "@event_date_creation": [
-                  "2019-05-18T22:15:33.007Z"
-                ],
-                "log_ingest_timestamp": [
-                  "2019-05-18T22:15:33.697Z"
-                ]
-              }
-            }'
+    event: |-
+      {"_index": "logs-endpoint-winevent-sysmon-2019.05.18",
+      "_type": "_doc",
+      "_id": "b3c3006563ea4a0c2cb4c43191ea10c28f794fbb",
+      "_score": 1,
+      "_source": {
+      "process_guid": "03ba39f5-50b2-5ce0-0000-00109995c501",
+      "user_reporter_domain": "NT AUTHORITY",
+      "process_target_id": "3124",
+      "beat_name": "WECserver",
+      "beat_version": "6.7.0",
+      "user_reporter_type": "User",
+      "thread_id": 3144,
+      "log_name": "Microsoft-Windows-Sysmon/Operational",
+      "record_number": "2273503",
+      "@event_date_creation": "2019-05-18T22:15:33.007Z",
+      "log_ingest_timestamp": "2019-05-18T22:15:33.697Z",
+      "@version": "1",
+      "type": "wineventlog",
+      "level": "Information",
+      "user_reporter_name": "SYSTEM",
+      "z_logstash_type": "wineventlog",
+      "process_target_path": "c:\\windows\\system32\\notepad.exe",
+      "process_target_guid": "03ba39f5-8320-5ce0-0000-00101ec72502",
+      "version": 2,
+      "@timestamp": "2019-05-18T22:15:33.697Z",
+      "thread_start_address": "0x00007FFECED8F220",
+      "process_target_name": "notepad.exe",
+      "z_logstash_pipeline": [
+        "0098",
+        "fingerprint-0099-001",
+        "fingerprint-0099-003",
+        "winlogbeat_6-field_nest_cleanup",
+        "1500",
+        "1521",
+        "1522",
+        "1523_7",
+        "1523_8",
+        "1524_8",
+        "1524_11",
+        "1524_12",
+        "1524_15",
+        "1531",
+        "1541_1",
+        "1541_3",
+        "1544_2",
+        "1544_3",
+        "1544_5",
+        "1544_7",
+        "winevent-hostname-cleanup",
+        "winevent-user_reporter_name-is-machine-account",
+        "copy-8802-001",
+        "copy-8802-002"
+      ],
+      "task": "CreateRemoteThread detected (rule: CreateRemoteThread)",
+      "opcode": "Info",
+      "process_id": "5452",
+      "host": {
+        "name": "WECserver"
+      },
+      "source_name": "Microsoft-Windows-Sysmon",
+      "event_id": 8,
+      "provider_guid": "5770385f-c22a-43e0-bf4c-06f5698ffbd9",
+      "thread_start_function": "LoadLibraryA",
+      "action": "createremotethread",
+      "process_name": "powershell.exe",
+      "thread_new_id": "7940",
+      "meta_user_reporter_name_is_machine": "false",
+      "beat_hostname": "WECserver",
+      "user_reporter_sid": "S-1-5-18",
+      "process_path": "c:\\windows\\system32\\windowspowershell\\v1.0\\powershell.exe",
+      "z_original_message": "CreateRemoteThread detected:\nRuleName: \nUtcTime: 2019-05-18 22:15:33.007\nSourceProcessGuid: {03ba39f5-50b2-5ce0-0000-00109995c501}\nSourceProcessId: 5452\nSourceImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\nTargetProcessGuid: {03ba39f5-8320-5ce0-0000-00101ec72502}\nTargetProcessId: 3124\nTargetImage: C:\\Windows\\System32\\notepad.exe\nNewThreadId: 7940\nStartAddress: 0x00007FFECED8F220\nStartModule: C:\\Windows\\System32\\KERNEL32.DLL\nStartFunction: LoadLibraryA",
+      "user": {},
+      "host_name": "hr001.shire.com",
+      "thread_start_module": "C:\\Windows\\System32\\KERNEL32.DLL"
+    },
+    "fields": {
+      "@timestamp": [
+        "2019-05-18T22:15:33.697Z"
+      ],
+      "@event_date_creation": [
+        "2019-05-18T22:15:33.007Z"
+      ],
+      "log_ingest_timestamp": [
+        "2019-05-18T22:15:33.697Z"
+      ]
+    }
+  }
+
