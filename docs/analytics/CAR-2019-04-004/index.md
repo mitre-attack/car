@@ -69,6 +69,123 @@ Sysmon event from the Mordor [Interactive Task Manager lsass dump dataset](https
 
 
 ```json
-{"_index": "logs-endpoint-winevent-sysmon-2019.10.27", "_type": "_doc", "_id": "29110e17682dc9d2cf1ec61a77061c0c876d1d6b", "_score": 1, "_source": { "process_guid": "a158f72c-2ef4-5db5-0000-00100fb48f00", "user_reporter_domain": "NT AUTHORITY", "process_target_id": "808", "log": { "level": "information" }, "beat_version": "7.4.0", "user_reporter_type": "User", "log_name": "Microsoft-Windows-Sysmon/Operational", "ecs": { "version": "1.1.0" }, "thread_id": "9380", "record_number": 256899, "log_ingest_timestamp": "2019-10-27T05:45:25.245Z", "@version": "1", "@event_date_creation": "2019-10-27T05:45:25.226Z", "type": "wineventlog", "level": "information", "user_reporter_name": "SYSTEM", "process_call_trace": "C:\\Windows\\SYSTEM32\\ntdll.dll+9c524|C:\\Windows\\System32\\KERNELBASE.dll+2730e|C:\\Windows\\system32\\taskmgr.exe+2e47e|C:\\Windows\\system32\\taskmgr.exe+7abcc|C:\\Windows\\system32\\taskmgr.exe+7b2e9|C:\\Windows\\system32\\taskmgr.exe+78653|C:\\Windows\\system32\\taskmgr.exe+7768e|C:\\Windows\\system32\\taskmgr.exe+38da8|C:\\Windows\\system32\\taskmgr.exe+3a14d|C:\\Windows\\System32\\KERNEL32.DLL+17944|C:\\Windows\\SYSTEM32\\ntdll.dll+6ce71", "process_target_path": "c:\\windows\\system32\\lsass.exe", "process_target_guid": "a158f72c-0aba-5db5-0000-00105d6c0000", "version": 3, "@timestamp": "2019-10-27T05:45:25.245Z", "process_target_name": "lsass.exe", "z_logstash_pipeline": [ "0098", "fingerprint-winlogbeats7", "winlogbeat_7-field_nest_cleanup", "winlogbeat_7-copy_to_originals", "1500", "1521", "1522", "1523_7", "1523_8", "1524_9", "1524_11", "1524_13", "1524_15", "1531", "1541_1", "1541_3", "process_granted_access_hex2dec", "1544_2", "1544_3", "1544_5", "1544_7", "winevent-hostname-cleanup", "winevent-user_reporter_name-is-machine-account", "copy-8802-001", "copy-8802-002" ], "opcode": "Info", "task": "Process accessed (rule: ProcessAccess)", "agent": { "type": "winlogbeat", "ephemeral_id": "81582c0c-9ac2-4a94-ad39-6e6f4ce9d096", "hostname": "WECServer", "id": "72887cd5-18d3-415c-ada9-cfb237f9309f", "version": "7.4.0" }, "source_name": "Microsoft-Windows-Sysmon", "process_id": "2408", "provider_guid": "5770385f-c22a-43e0-bf4c-06f5698ffbd9", "event_id": 10, "meta_user_reporter_name_is_machine": "false", "action": "processaccess", "process_name": "taskmgr.exe", "beat_hostname": "WECServer", "event": { "created": "2019-10-27T05:45:27.328Z", "code": 10, "action": "Process accessed (rule: ProcessAccess)", "kind": "event" }, "process_path": "c:\\windows\\system32\\taskmgr.exe", "user_reporter_sid": "S-1-5-18", "process_granted_access": 5136, "z_original_message": "Process accessed:\nRuleName: \nUtcTime: 2019-10-27 05:45:25.226\nSourceProcessGUID: {a158f72c-2ef4-5db5-0000-00100fb48f00}\nSourceProcessId: 2408\nSourceThreadId: 9380\nSourceImage: C:\\Windows\\system32\\taskmgr.exe\nTargetProcessGUID: {a158f72c-0aba-5db5-0000-00105d6c0000}\nTargetProcessId: 808\nTargetImage: C:\\Windows\\system32\\lsass.exe\nGrantedAccess: 0x1410\nCallTrace: C:\\Windows\\SYSTEM32\\ntdll.dll+9c524|C:\\Windows\\System32\\KERNELBASE.dll+2730e|C:\\Windows\\system32\\taskmgr.exe+2e47e|C:\\Windows\\system32\\taskmgr.exe+7abcc|C:\\Windows\\system32\\taskmgr.exe+7b2e9|C:\\Windows\\system32\\taskmgr.exe+78653|C:\\Windows\\system32\\taskmgr.exe+7768e|C:\\Windows\\system32\\taskmgr.exe+38da8|C:\\Windows\\system32\\taskmgr.exe+3a14d|C:\\Windows\\System32\\KERNEL32.DLL+17944|C:\\Windows\\SYSTEM32\\ntdll.dll+6ce71", "winlog": { "api": "wineventlog", "opcode": "Info", "task": "Process accessed (rule: ProcessAccess)", "computer_name": "it001.shire.com", "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}", "process": { "thread": { "id": 3760 }, "pid": 3168 }, "channel": "Microsoft-Windows-Sysmon/Operational", "event_id": 10, "record_id": 256899, "provider_name": "Microsoft-Windows-Sysmon", "version": 3 }, "user": {}, "host_name": "it001.shire.com" }, "fields": { "@timestamp": [ "2019-10-27T05:45:25.245Z" ], "@event_date_creation": [ "2019-10-27T05:45:25.226Z" ], "log_ingest_timestamp": [ "2019-10-27T05:45:25.245Z" ] } }
+{"_index": "logs-endpoint-winevent-sysmon-2019.10.27",
+"_type": "_doc",
+"_id": "29110e17682dc9d2cf1ec61a77061c0c876d1d6b",
+"_score": 1,
+"_source": {
+    "process_guid": "a158f72c-2ef4-5db5-0000-00100fb48f00",
+    "user_reporter_domain": "NT AUTHORITY",
+    "process_target_id": "808",
+    "log": {
+    "level": "information"
+    },
+    "beat_version": "7.4.0",
+    "user_reporter_type": "User",
+    "log_name": "Microsoft-Windows-Sysmon/Operational",
+    "ecs": {
+    "version": "1.1.0"
+    },
+    "thread_id": "9380",
+    "record_number": 256899,
+    "log_ingest_timestamp": "2019-10-27T05:45:25.245Z",
+    "@version": "1",
+    "@event_date_creation": "2019-10-27T05:45:25.226Z",
+    "type": "wineventlog",
+    "level": "information",
+    "user_reporter_name": "SYSTEM",
+    "process_call_trace": "C:\\\\Windows\\\\SYSTEM32\\\\ntdll.dll+9c524|C:\\\\Windows\\\\System32\\\\KERNELBASE.dll+2730e|C:\\\\Windows\\\\system32\\\\taskmgr.exe+2e47e|C:\\\\Windows\\\\system32\\\\taskmgr.exe+7abcc|C:\\\\Windows\\\\system32\\\\taskmgr.exe+7b2e9|C:\\\\Windows\\\\system32\\\\taskmgr.exe+78653|C:\\\\Windows\\\\system32\\\\taskmgr.exe+7768e|C:\\\\Windows\\\\system32\\\\taskmgr.exe+38da8|C:\\\\Windows\\\\system32\\\\taskmgr.exe+3a14d|C:\\\\Windows\\\\System32\\\\KERNEL32.DLL+17944|C:\\\\Windows\\\\SYSTEM32\\\\ntdll.dll+6ce71",
+    "process_target_path": "c:\\\\windows\\\\system32\\\\lsass.exe",
+    "process_target_guid": "a158f72c-0aba-5db5-0000-00105d6c0000",
+    "version": 3,
+    "@timestamp": "2019-10-27T05:45:25.245Z",
+    "process_target_name": "lsass.exe",
+    "z_logstash_pipeline": [
+    "0098",
+    "fingerprint-winlogbeats7",
+    "winlogbeat_7-field_nest_cleanup",
+    "winlogbeat_7-copy_to_originals",
+    "1500",
+    "1521",
+    "1522",
+    "1523_7",
+    "1523_8",
+    "1524_9",
+    "1524_11",
+    "1524_13",
+    "1524_15",
+    "1531",
+    "1541_1",
+    "1541_3",
+    "process_granted_access_hex2dec",
+    "1544_2",
+    "1544_3",
+    "1544_5",
+    "1544_7",
+    "winevent-hostname-cleanup",
+    "winevent-user_reporter_name-is-machine-account",
+    "copy-8802-001",
+    "copy-8802-002"
+    ],
+    "opcode": "Info",
+    "task": "Process accessed (rule: ProcessAccess)",
+    "agent": {
+    "type": "winlogbeat",
+    "ephemeral_id": "81582c0c-9ac2-4a94-ad39-6e6f4ce9d096",
+    "hostname": "WECServer",
+    "id": "72887cd5-18d3-415c-ada9-cfb237f9309f",
+    "version": "7.4.0"
+    },
+    "source_name": "Microsoft-Windows-Sysmon",
+    "process_id": "2408",
+    "provider_guid": "5770385f-c22a-43e0-bf4c-06f5698ffbd9",
+    "event_id": 10,
+    "meta_user_reporter_name_is_machine": "false",
+    "action": "processaccess",
+    "process_name": "taskmgr.exe",
+    "beat_hostname": "WECServer",
+    "event": {
+    "created": "2019-10-27T05:45:27.328Z",
+    "code": 10,
+    "action": "Process accessed (rule: ProcessAccess)",
+    "kind": "event"
+    },
+    "process_path": "c:\\\\windows\\\\system32\\\\taskmgr.exe",
+    "user_reporter_sid": "S-1-5-18",
+    "process_granted_access": 5136,
+    "z_original_message": "Process accessed:\\nRuleName: \\nUtcTime: 2019-10-27 05:45:25.226\\nSourceProcessGUID: {a158f72c-2ef4-5db5-0000-00100fb48f00}\\nSourceProcessId: 2408\\nSourceThreadId: 9380\\nSourceImage: C:\\\\Windows\\\\system32\\\\taskmgr.exe\\nTargetProcessGUID: {a158f72c-0aba-5db5-0000-00105d6c0000}\\nTargetProcessId: 808\\nTargetImage: C:\\\\Windows\\\\system32\\\\lsass.exe\\nGrantedAccess: 0x1410\\nCallTrace: C:\\\\Windows\\\\SYSTEM32\\\\ntdll.dll+9c524|C:\\\\Windows\\\\System32\\\\KERNELBASE.dll+2730e|C:\\\\Windows\\\\system32\\\\taskmgr.exe+2e47e|C:\\\\Windows\\\\system32\\\\taskmgr.exe+7abcc|C:\\\\Windows\\\\system32\\\\taskmgr.exe+7b2e9|C:\\\\Windows\\\\system32\\\\taskmgr.exe+78653|C:\\\\Windows\\\\system32\\\\taskmgr.exe+7768e|C:\\\\Windows\\\\system32\\\\taskmgr.exe+38da8|C:\\\\Windows\\\\system32\\\\taskmgr.exe+3a14d|C:\\\\Windows\\\\System32\\\\KERNEL32.DLL+17944|C:\\\\Windows\\\\SYSTEM32\\\\ntdll.dll+6ce71",
+    "winlog": {
+    "api": "wineventlog",
+    "opcode": "Info",
+    "task": "Process accessed (rule: ProcessAccess)",
+    "computer_name": "it001.shire.com",
+    "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+    "process": {
+        "thread": {
+        "id": 3760
+        },
+        "pid": 3168
+    },
+    "channel": "Microsoft-Windows-Sysmon/Operational",
+    "event_id": 10,
+    "record_id": 256899,
+    "provider_name": "Microsoft-Windows-Sysmon",
+    "version": 3
+    },
+    "user": {},
+    "host_name": "it001.shire.com"
+},
+"fields": {
+    "@timestamp": [
+    "2019-10-27T05:45:25.245Z"
+    ],
+    "@event_date_creation": [
+    "2019-10-27T05:45:25.226Z"
+    ],
+    "log_ingest_timestamp": [
+    "2019-10-27T05:45:25.245Z"
+    ]
+    }
+}
 ```
 
