@@ -84,117 +84,40 @@ file where file_name == "lsass*.dmp" and process_name == "taskmgr.exe"
 Sysmon event from the Mordor [Interactive Task Manager lsass dump dataset](https://github.com/hunters-forge/mordor/blob/master/small_datasets/windows/credential_access/credential_dumping_T1003/interactive_taskmngr_lsass_dump.md).
 
 
+##### [Full Event](/true_positives/CAR-2019-08-001-mordor-01.json)
+
+
+##### Event Snippet
 ```json
-{"_index": "logs-endpoint-winevent-sysmon-2019.10.27",
-"_type": "_doc",
-"_id": "4d45a9bde6a5ce765a7d9765b13e0446c44dd005",
-"_score": 1,
-"_source": {
-    "process_guid": "a158f72c-2ef4-5db5-0000-00100fb48f00",
-    "user_reporter_domain": "NT AUTHORITY",
-    "log": {
-    "level": "information"
-    },
-    "beat_version": "7.4.0",
-    "user_reporter_type": "User",
-    "log_name": "Microsoft-Windows-Sysmon/Operational",
-    "ecs": {
-    "version": "1.1.0"
-    },
-    "thread_id": 3760,
-    "record_number": 258042,
-    "log_ingest_timestamp": "2019-10-27T05:45:39.858Z",
-    "@version": "1",
-    "@event_date_creation": "2019-10-27T05:45:39.851Z",
-    "type": "wineventlog",
-    "level": "information",
-    "user_reporter_name": "SYSTEM",
-    "version": 2,
-    "@timestamp": "2019-10-27T05:45:39.858Z",
-    "z_logstash_pipeline": [
-    "0098",
-    "fingerprint-winlogbeats7",
-    "winlogbeat_7-field_nest_cleanup",
-    "winlogbeat_7-copy_to_originals",
-    "1500",
-    "1521",
-    "1522",
-    "1523_1",
-    "1524_2",
-    "1524_6",
-    "1531",
-    "1541_1",
-    "1544_2",
-    "1544_3",
-    "1544_7",
-    "winevent-hostname-cleanup",
-    "winevent-user_reporter_name-is-machine-account",
-    "copy-8802-001",
-    "copy-8802-002"
-    ],
-    "opcode": "Info",
-    "task": "File created (rule: FileCreate)",
-    "agent": {
-    "ephemeral_id": "81582c0c-9ac2-4a94-ad39-6e6f4ce9d096",
-    "type": "winlogbeat",
-    "hostname": "WECServer",
-    "id": "72887cd5-18d3-415c-ada9-cfb237f9309f",
-    "version": "7.4.0"
-    },
-    "source_name": "Microsoft-Windows-Sysmon",
-    "process_id": "2408",
-    "provider_guid": "5770385f-c22a-43e0-bf4c-06f5698ffbd9",
-    "event_id": 11,
-    "@file_date_creation": "2019-10-27T05:45:39.851Z",
-    "action": "filecreate",
-    "meta_user_reporter_name_is_machine": "false",
-    "process_name": "taskmgr.exe",
-    "beat_hostname": "WECServer",
-    "event": {
-    "created": "2019-10-27T05:45:40.940Z",
-    "code": 11,
-    "action": "File created (rule: FileCreate)",
-    "kind": "event"
-    },
-    "process_path": "c:\\\\windows\\\\system32\\\\taskmgr.exe",
-    "user_reporter_sid": "S-1-5-18",
-    "file_name": "c:\\\\users\\\\pgustavo\\\\appdata\\\\local\\\\temp\\\\lsass.dmp",
-    "z_original_message": "File created:\\nRuleName: \\nUtcTime: 2019-10-27 05:45:39.851\\nProcessGuid: {a158f72c-2ef4-5db5-0000-00100fb48f00}\\nProcessId: 2408\\nImage: C:\\\\Windows\\\\system32\\\\taskmgr.exe\\nTargetFilename: C:\\\\Users\\\\pgustavo\\\\AppData\\\\Local\\\\Temp\\\\lsass.DMP\\nCreationUtcTime: 2019-10-27 05:45:39.851",
-    "winlog": {
-    "api": "wineventlog",
-    "opcode": "Info",
-    "task": "File created (rule: FileCreate)",
-    "computer_name": "it001.shire.com",
-    "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
-    "event_id": 11,
-    "process": {
-        "thread": {
-        "id": 3760
-        },
-        "pid": 3168
-    },
-    "channel": "Microsoft-Windows-Sysmon/Operational",
-    "record_id": 258042,
-    "provider_name": "Microsoft-Windows-Sysmon",
-    "version": 2
-    },
-    "user": {},
-    "host_name": "it001.shire.com"
-},
-"fields": {
-    "@file_date_creation": [
-    "2019-10-27T05:45:39.851Z"
-    ],
-    "@timestamp": [
-    "2019-10-27T05:45:39.858Z"
-    ],
-    "@event_date_creation": [
-    "2019-10-27T05:45:39.851Z"
-    ],
-    "log_ingest_timestamp": [
-    "2019-10-27T05:45:39.858Z"
-    ]
-    }
+{
+	"@event_date_creation": "2019-10-27T05:45:39.851Z",
+	"@file_date_creation": "2019-10-27T05:45:39.851Z",
+	"@timestamp": "2019-10-27T05:45:39.858Z",
+	"@version": "1",
+	"action": "filecreate",
+	"event_id": 11,
+	"file_name": "c:\\\\users\\\\pgustavo\\\\appdata\\\\local\\\\temp\\\\lsass.dmp",
+	"host_name": "it001.shire.com",
+	"level": "information",
+	"log_ingest_timestamp": "2019-10-27T05:45:39.858Z",
+	"log_name": "Microsoft-Windows-Sysmon/Operational",
+	"meta_user_reporter_name_is_machine": "false",
+	"opcode": "Info",
+	"process_guid": "a158f72c-2ef4-5db5-0000-00100fb48f00",
+	"process_id": "2408",
+	"process_name": "taskmgr.exe",
+	"process_path": "c:\\\\windows\\\\system32\\\\taskmgr.exe",
+	"provider_guid": "5770385f-c22a-43e0-bf4c-06f5698ffbd9",
+	"record_number": 258042,
+	"source_name": "Microsoft-Windows-Sysmon",
+	"task": "File created (rule: FileCreate)",
+	"thread_id": 3760,
+	"type": "wineventlog",
+	"user_reporter_domain": "NT AUTHORITY",
+	"user_reporter_name": "SYSTEM",
+	"user_reporter_sid": "S-1-5-18",
+	"user_reporter_type": "User",
+	"version": 2
 }
 ```
 
