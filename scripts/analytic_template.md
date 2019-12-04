@@ -61,9 +61,13 @@ contributors: {{analytic['contributors']|join(', ')}}
 {% if 'description' in tp %}
 {{tp['description']}}
 {% endif %}
-{% if 'event' in tp %}
+{% if 'full_event' in tp %}
+##### [Full Event](/true_positives/{{tp['full_event']}})
+{% endif %}
+{% if 'event_snippet' in tp %}
+##### Event Snippet
 ```json
-{{tp['event'] | replace("'","")}}
+{% include tp['event_snippet'] %}
 ```
 {% endif %}
 {% endfor %}{% endif %}
