@@ -156,7 +156,7 @@ Sysmon net.exe event from the Mordor [Empire Net Start dataset](https://github.c
 	"user_reporter_sid": "S-1-5-18",
 	"user_reporter_type": "User",
 	"user_session_id": "1",
-    "version": 5
+	"version": 5
 }
 ```
 
