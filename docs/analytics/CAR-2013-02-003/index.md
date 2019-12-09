@@ -55,3 +55,5 @@ _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=re
 **Configurations:** Windows 7
 
 Within a command prompt or powershell, run cmd.exe
+
+

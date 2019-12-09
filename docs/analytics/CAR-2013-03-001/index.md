@@ -81,3 +81,5 @@ Execute reg.exe from cmd.exe. Note that the analytic joins back to the grandpare
 ```
 reg.exe QUERY HKLM\Software\Microsoft
 ```
+
+

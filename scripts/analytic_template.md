@@ -53,3 +53,21 @@ contributors: {{analytic['contributors']|join(', ')}}
 {{ut['commands']|join("\n")}}
 ```
 {% endif %}{% endfor %}{% endif %}
+
+{% if 'true_positives' in analytic %}
+### True Positives
+{% for tp in analytic['true_positives'] %}
+#### {{tp['source']|capitalize}}
+{% if 'description' in tp %}
+{{tp['description']}}
+{% endif %}
+{% if 'full_event' in tp %}
+##### [Full Event](/true_positives/{{tp['full_event']}})
+{% endif %}
+{% if 'event_snippet' in tp %}
+##### Event Snippet
+```json
+{% include tp['event_snippet'] %}
+```
+{% endif %}
+{% endfor %}{% endif %}

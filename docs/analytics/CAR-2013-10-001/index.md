@@ -52,7 +52,6 @@ Splunk version of the above pseudocode. NOTE - this is liable to be quite noisy 
 index=__your_win_event_log_index__ EventCode=4624|search NOT [search index=__your_win_event_log_index__ EventCode=4624|top 30 Account_Name|table Account_Name]
 ```
 
-
 #### Account Logon with Filtering (Dnif, Sysmon native)
 
 
@@ -65,5 +64,3 @@ _fetch * from event where $LogName=WINDOWS-NXLOG-AUDIT AND $SubSystem=AUTHENTICA
 >>_fetch * from event where $LogName=WINDOWS-NXLOG-AUDIT AND $SubSystem=AUTHENTICATION AND $Action=LOGIN limit 10000
 >>_checkif lookup david_test win_top_30 join $ScopeID = $ScopeID str_compare $User eq $User exclude
 ```
-
-

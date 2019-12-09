@@ -34,3 +34,5 @@ Utilizes the Sysinternals autoruns tool (ignoring validated Microsoft entries). 
 |[AppInit DLLs](https://attack.mitre.org/techniques/T1103/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 
 
+
+

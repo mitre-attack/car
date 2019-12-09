@@ -10,7 +10,7 @@ import json
 import glob
 import yaml
 import requests
-from jinja2 import Template
+from jinja2 import Environment, Template, FileSystemLoader
 from os import path, makedirs
 import copy
 
@@ -26,7 +26,8 @@ techniques = {ap['external_references'][0]['external_id']: ap['name'] for ap in 
 tactics = {ap['external_references'][0]['external_id']: ap['name'] for ap in attack['objects'] if ap['type'] == 'x-mitre-tactic'}
 
 # Get the template file for the analytic page. Note that this is a markdown template which will be rendered by GH Pages.
-analytic_template = Template(open('analytic_template.md').read())
+env = Environment(loader=FileSystemLoader('../docs/true_positives'))
+analytic_template = env.from_string(open('analytic_template.md').read())
 
 # Generate the analytic page for each analytic
 for analytic in analytics:

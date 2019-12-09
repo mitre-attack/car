@@ -138,3 +138,5 @@ hostname
 systeminfo
 reg.exe Query HKLM\Software\Microsoft
 ```
+
+

@@ -53,3 +53,5 @@ Although it does not actually utilize the Debugging command line, an easy way to
 ```
 cmd.exe Magnify.exe
 ```
+
+
