@@ -24,7 +24,6 @@ Information about the latest CAR updates and changes can be found in this sectio
   * [CAR-2013-10-002: DLL Injection via LoadLibrary](/analytics/CAR-2013-10-002)
   * [CAR-2014-04-003: Powershell Execution](/analytics/CAR-2014-04-003)
   * [CAR-2016-03-001: Host Discovery Commands](/analytics/CAR-2016-03-001)
-  * [CAR-2019-04-004: Credential Dumping via Mimikatz](/analytics/CAR-2019-04-004)  
   * [CAR-2019-08-001: Credential Dumping via Window Task Manager](/analytics/CAR-2019-08-001) 
   
 ### August 2019
