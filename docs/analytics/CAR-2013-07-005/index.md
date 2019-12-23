@@ -12,22 +12,23 @@ Before [exfiltrating data](https://attack.mitre.org/tactics/TA0010) that an adve
 
 In addition to looking for RAR or 7z program names, command line usage of 7Zip or RAR can be detected with the flag usage of "`\* a \*`". This is helpful, as adversaries may change program names.
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Data Compressed](https://attack.mitre.org/techniques/T1002/)|[Exfiltration](https://attack.mitre.org/tactics/TA0010/)|Moderate|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 This analytic looks for the command line argument `a`, which is used by RAR. However, there may be other programs that have this as a legitimate argument and may need to be filtered out.
 
@@ -39,10 +40,20 @@ output rar_argument
 ```
 
 
+#### Dnif, Sysmon native
 
-## Unit Tests
+DNIF version of the above pseudocode.
 
-### Test Case 1
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.* a .*)i limit 100
+```
+
+
+
+### Unit Tests
+
+#### Test Case 1
 
 **Configurations:** Windows 7
 
@@ -51,3 +62,5 @@ Download 7zip or other archiving software you plan to monitor. Create an innocuo
 ```
 7z.exe a test.zip test.txt
 ```
+
+

@@ -10,23 +10,24 @@ contributors: MITRE
 
 New executables that are started as a service are suspicious. This analytic looks for anomalous service executables.
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Modify Existing Service](https://attack.mitre.org/techniques/T1031/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 |[New Service](https://attack.mitre.org/techniques/T1050/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_image_path](/data_model/process#parent_image_path) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Create a baseline of services seen over the last 30 days and a list of services seen today. Remove services in the baseline from services seen today, leaving a list of new services.
 
@@ -39,5 +40,14 @@ current_services = filter services (where timestamp >= now - 1 day)
 new_services = historic_services - current_services
 output new_services
 ```
+
+
+#### Sigma (Windows Event Log) (Sigma)
+
+
+[Sigma/Windows Event Log](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_rare_service_installs.yml) rule with similar logic to the above pseudocode
+
+
+
 
 

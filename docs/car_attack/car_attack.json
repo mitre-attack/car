@@ -1,314 +1,338 @@
 {
-    "domain": "mitre-enterprise", 
-    "version": "2.1", 
+    "version": "2.1",
+    "name": "CAR ATT&CK",
+    "description": "CAR Analytics ATT&CK Coverage",
+    "domain": "mitre-enterprise",
     "techniques": [
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-003: SMB Events Monitoring | CAR-2013-02-008: Simultaneous Logins on a Host | CAR-2013-02-012: User Logged in to Multiple Hosts | CAR-2013-05-003: SMB Write Request | CAR-2013-05-005: SMB Copy and Execution | CAR-2013-10-001: User Login Activity Monitoring | CAR-2014-05-001: RPC Activity | CAR-2016-04-005: Remote Desktop Logon", 
-            "techniqueID": "T1078", 
+            "techniqueID": "T1003",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-07-001: Suspicious Arguments | CAR-2019-04-004: Credential Dumping via Mimikatz | CAR-2019-07-002: Lsass Process Dump via Procdump | CAR-2019-08-001: Credential Dumping via Windows Task Manager | CAR-2019-08-002: Active Directory Dumping via NTDSUtil",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-11-003: Debuggers for Accessibility Applications | CAR-2014-11-008: Command Launched from WinLogon", 
-            "techniqueID": "T1015", 
+            "techniqueID": "T1036",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-05-002: Suspicious Run Locations | CAR-2013-05-009: Running executables with same hash and different names | CAR-2013-07-001: Suspicious Arguments",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences", 
-            "techniqueID": "T1037", 
+            "techniqueID": "T1021",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-07-001: Suspicious Arguments | CAR-2014-05-001: RPC Activity",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-05-002: Suspicious Run Locations | CAR-2013-05-009: Running executables with same hash and different names | CAR-2013-07-001: Suspicious Arguments", 
-            "techniqueID": "T1036", 
+            "techniqueID": "T1105",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-05-003: SMB Write Request | CAR-2013-05-005: SMB Copy and Execution | CAR-2013-07-001: Suspicious Arguments | CAR-2014-03-001: SMB Write Request - NamedPipes",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services", 
-            "techniqueID": "T1035", 
+            "techniqueID": "T1187",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-09-003: SMB Session Setups",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-07-001: Service Search Path Interception", 
-            "techniqueID": "T1034", 
+            "techniqueID": "T1053",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-05-004: Execution with AT | CAR-2013-08-001: Execution with schtasks | CAR-2015-04-001: Remotely Scheduled Tasks via AT | CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-09-005: Service Outlier Executables | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services", 
-            "techniqueID": "T1031", 
+            "techniqueID": "T1117",
+            "color": "#c6dbef",
+            "comment": "CAR-2019-04-002: Generic Regsvr32 | CAR-2019-04-003: Squiblydoo",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2019-04-002: Generic Regsvr32 | CAR-2019-04-003: Squiblydoo", 
-            "techniqueID": "T1117", 
+            "techniqueID": "T1047",
+            "color": "#c6dbef",
+            "comment": "CAR-2014-11-007: Remote Windows Management Instrumentation (WMI) over RPC | CAR-2014-12-001: Remotely Launched Executables via WMI | CAR-2016-03-002: Create Remote Process via WMIC",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands", 
-            "techniqueID": "T1063", 
+            "techniqueID": "T1015",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-11-003: Debuggers for Accessibility Applications | CAR-2014-11-008: Command Launched from WinLogon",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-003: SMB Events Monitoring", 
-            "techniqueID": "T1039", 
+            "techniqueID": "T1076",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-07-002: RDP Connection Detection | CAR-2013-10-001: User Login Activity Monitoring | CAR-2016-04-005: Remote Desktop Logon",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-10-002: DLL Injection via Load Library", 
-            "techniqueID": "T1055", 
+            "techniqueID": "T1059",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-02-003: Processes Spawning cmd.exe | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-11-002: Outlier Parents of Cmd",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands", 
-            "techniqueID": "T1018", 
+            "techniqueID": "T1050",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-09-005: Service Outlier Executables | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services | CAR-2014-05-002: Services launching Cmd",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands", 
-            "techniqueID": "T1057", 
+            "techniqueID": "T1031",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-09-005: Service Outlier Executables | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-003: SMB Events Monitoring | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-05-003: SMB Write Request | CAR-2013-05-005: SMB Copy and Execution", 
-            "techniqueID": "T1077", 
+            "techniqueID": "T1044",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-02-001: Service Binary Modifications",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-09-005: Service Outlier Executables | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services | CAR-2014-05-001: RPC Activity | CAR-2014-05-002: Services launching Cmd", 
-            "techniqueID": "T1050", 
+            "techniqueID": "T1035",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-05-004: Execution with AT | CAR-2013-08-001: Execution with schtasks | CAR-2014-05-001: RPC Activity | CAR-2015-04-001: Remotely Scheduled Tasks via AT | CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks", 
-            "techniqueID": "T1053", 
+            "techniqueID": "T1078",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-02-008: Simultaneous Logins on a Host | CAR-2013-02-012: User Logged in to Multiple Hosts | CAR-2013-05-003: SMB Write Request | CAR-2013-05-005: SMB Copy and Execution | CAR-2013-10-001: User Login Activity Monitoring",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2016-04-004: Successful Local Account Login", 
-            "techniqueID": "T1075", 
+            "techniqueID": "T1075",
+            "color": "#c6dbef",
+            "comment": "CAR-2016-04-004: Successful Local Account Login",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands", 
-            "techniqueID": "T1010", 
+            "techniqueID": "T1077",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-003: SMB Events Monitoring | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-05-003: SMB Write Request | CAR-2013-05-005: SMB Copy and Execution",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences", 
-            "techniqueID": "T1013", 
+            "techniqueID": "T1087",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands", 
-            "techniqueID": "T1012", 
+            "techniqueID": "T1069",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-02-003: Processes Spawning cmd.exe | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-11-002: Outlier Parents of Cmd", 
-            "techniqueID": "T1059", 
+            "techniqueID": "T1057",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands", 
-            "techniqueID": "T1058", 
+            "techniqueID": "T1112",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-11-005: Remote Registry",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-11-005: Remote Registry", 
-            "techniqueID": "T1112", 
+            "techniqueID": "T1058",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands", 
-            "techniqueID": "T1016", 
+            "techniqueID": "T1018",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands", 
-            "techniqueID": "T1098", 
+            "techniqueID": "T1029",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands", 
-            "techniqueID": "T1082", 
+            "techniqueID": "T1033",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands", 
-            "techniqueID": "T1046", 
+            "techniqueID": "T1007",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2014-04-003: Powershell Execution | CAR-2014-11-004: Remote PowerShell Sessions | CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks", 
-            "techniqueID": "T1086", 
+            "techniqueID": "T1082",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands", 
-            "techniqueID": "T1087", 
+            "techniqueID": "T1049",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences", 
-            "techniqueID": "T1084", 
+            "techniqueID": "T1016",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-04-002: User Activity from Clearing Event Logs | CAR-2016-04-003: User Activity from Stopping Windows Defensive Services", 
-            "techniqueID": "T1054", 
+            "techniqueID": "T1010",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-10-002: DLL Injection via Load Library | CAR-2019-04-001: UAC Bypass", 
-            "techniqueID": "T1088", 
+            "techniqueID": "T1063",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands", 
-            "techniqueID": "T1089", 
+            "techniqueID": "T1046",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-07-001: Suspicious Arguments | CAR-2014-05-001: RPC Activity", 
-            "techniqueID": "T1021", 
+            "techniqueID": "T1089",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-04-003: User Activity from Stopping Windows Defensive Services",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2014-03-006: RunDLL32.exe monitoring", 
-            "techniqueID": "T1085", 
+            "techniqueID": "T1098",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2014-11-004: Remote PowerShell Sessions | CAR-2014-11-006: Windows Remote Management (WinRM)", 
-            "techniqueID": "T1028", 
+            "techniqueID": "T1054",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands", 
-            "techniqueID": "T1029", 
+            "techniqueID": "T1012",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-09-003: SMB Session Setups", 
-            "techniqueID": "T1187", 
+            "techniqueID": "T1085",
+            "color": "#c6dbef",
+            "comment": "CAR-2014-03-006: RunDLL32.exe monitoring",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-07-002: RDP Connection Detection | CAR-2013-10-001: User Login Activity Monitoring | CAR-2014-11-008: Command Launched from WinLogon | CAR-2016-04-005: Remote Desktop Logon", 
-            "techniqueID": "T1076", 
+            "techniqueID": "T1222",
+            "color": "#c6dbef",
+            "comment": "CAR-2019-07-001: Access Permission Modification",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences", 
-            "techniqueID": "T1103", 
+            "techniqueID": "T1070",
+            "color": "#c6dbef",
+            "comment": "CAR-2016-04-002: User Activity from Clearing Event Logs",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2014-11-007: Remote Windows Management Instrumentation (WMI) over RPC | CAR-2014-12-001: Remotely Launched Executables via WMI | CAR-2016-03-002: Create Remote Process via WMIC", 
-            "techniqueID": "T1047", 
+            "techniqueID": "T1086",
+            "color": "#c6dbef",
+            "comment": "CAR-2014-04-003: Powershell Execution | CAR-2014-11-004: Remote PowerShell Sessions",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-02-001: Service Binary Modifications", 
-            "techniqueID": "T1044", 
+            "techniqueID": "T1028",
+            "color": "#c6dbef",
+            "comment": "CAR-2014-11-004: Remote PowerShell Sessions | CAR-2014-11-006: Windows Remote Management (WinRM)",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences", 
-            "techniqueID": "T1042", 
+            "techniqueID": "T1064",
+            "color": "#c6dbef",
+            "comment": "CAR-2014-04-003: Powershell Execution",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands", 
-            "techniqueID": "T1069", 
+            "techniqueID": "T1013",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-05-003: SMB Write Request | CAR-2013-05-005: SMB Copy and Execution | CAR-2013-07-001: Suspicious Arguments | CAR-2014-03-001: SMB Write Request - NamedPipes", 
-            "techniqueID": "T1105", 
+            "techniqueID": "T1060",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-07-005: Command Line Usage of Archiving Software", 
-            "techniqueID": "T1002", 
+            "techniqueID": "T1034",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-07-001: Service Search Path Interception",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-07-001: Suspicious Arguments | CAR-2019-04-004: Credential Dumping via Mimikatz", 
-            "techniqueID": "T1003", 
+            "techniqueID": "T1084",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-03-001: Host Discovery Commands", 
-            "techniqueID": "T1007", 
+            "techniqueID": "T1042",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-01-002: Autorun Differences", 
-            "techniqueID": "T1004", 
+            "techniqueID": "T1037",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands", 
-            "techniqueID": "T1049", 
+            "techniqueID": "T1004",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences",
             "enabled": true
-        }, 
+        },
         {
-            "color": "#c6dbef", 
-            "comment": "CAR-2014-04-003: Powershell Execution", 
-            "techniqueID": "T1064", 
+            "techniqueID": "T1103",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1002",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-07-005: Command Line Usage of Archiving Software",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1039",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-003: SMB Events Monitoring",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1055",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-10-002: DLL Injection via Load Library",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1088",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-10-002: DLL Injection via Load Library | CAR-2019-04-001: UAC Bypass",
             "enabled": true
         }
-    ], 
-    "name": "CAR ATT&CK", 
-    "description": "CAR Analytics ATT&CK Coverage"
+    ]
 }

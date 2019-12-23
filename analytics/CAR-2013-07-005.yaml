@@ -24,6 +24,11 @@ implementations:
       rar_argument = filter processes where (command_line == "* a *")
       output rar_argument
     type: pseudocode
+  - description: DNIF version of the above pseudocode.
+    code: |-
+      _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.* a .*)i limit 100
+    type: DNIF
+    data_model: Sysmon native
 data_model_references:
   - process/create/command_line
 unit_tests:

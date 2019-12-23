@@ -87,3 +87,12 @@ implementations:
 data_model_references:
   - process/create/command_line
   - process/create/exe
+true_positives:
+  - source: 'Mordor (Sysmon) - net.exe'
+    description: 'Sysmon net.exe event from the Mordor [Empire Net Start dataset](https://github.com/hunters-forge/mordor/blob/master/small_datasets/windows/discovery/system_service_discovery_T1007/empire_net_start.md).'
+    event_snippet: 'CAR-2016-03-001-mordor-01-snippet.json'
+    full_event: 'CAR-2016-03-001-mordor-01.json'
+  - source: 'Mordor (Sysmon) - whoami.exe'
+    description: 'Sysmon whoami.exe event from the Mordor [Empire Net Start dataset](https://github.com/hunters-forge/mordor/blob/master/small_datasets/windows/discovery/system_service_discovery_T1007/empire_net_start.md).'
+    event_snippet: 'CAR-2016-03-001-mordor-02-snippet.json'
+    full_event: 'CAR-2016-03-001-mordor-02.json'

@@ -17,22 +17,23 @@ Monitors the directories
 -   `%systemroot%\Tasks`
 -   `%systemroot%\debug`
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [image_path](/data_model/process#image_path) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 The RECYCLER and SystemVolumeInformation directories will be present on every drive. Replace %systemroot% and %windir% with the actual paths as configured by the endpoints. 
 
@@ -42,23 +43,33 @@ processes = search Process:Create
 suspicious_locations = filter process where (
  image_path == "*:\RECYCLER\*" or
  image_path == "*:\SystemVolumeInformation\*" or
- image_path == "%windir%\Tasks\*" or 
+ image_path == "%windir%\Tasks\*" or
  image_path == "%systemroot%\debug\*"
 )
 output suspicious_locations
 ```
 
 
-### Sigma
+#### Dnif, Sysmon native
+
+DNIF version of the above pseudocode.
+
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*(\:\\recycler\\|\:\\systemvolumeinformation\\|\%windir\%\\tasks\\|\%systemroot\%\\debug\\).*)i group count_unique $App limit 100
+```
+
+
+#### Sigma
 
 [Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_susp_run_locations.yml) of the above pseudocode, with some modifications.
 
 
 
 
-## Unit Tests
+### Unit Tests
 
-### Test Case 1
+#### Test Case 1
 
 **Configurations:** Windows 7
 
@@ -72,3 +83,5 @@ copy C:\windows\system32\notepad.exe C:\windows\tasks
 start C:\windows\tasks\notepad.exe
 del C:\windows\tasks\notepad.exe
 ```
+
+

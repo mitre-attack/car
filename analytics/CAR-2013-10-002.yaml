@@ -37,3 +37,8 @@ implementations:
 data_model_references:
   - thread/remote_create/src_pid
   - thread/remote_create/start_function
+true_positives:
+  - source: 'Mordor (Sysmon)'
+    description: 'Sysmon event from the Mordor [Empire DLL Injection dataset](https://github.com/hunters-forge/mordor/blob/master/small_datasets/windows/defense_evasion/process_injection_T1055/empire_dll_injection.md).'
+    event_snippet: 'CAR-2013-10-002-mordor-01-snippet.json'
+    full_event: 'CAR-2013-10-002-mordor-01.json'

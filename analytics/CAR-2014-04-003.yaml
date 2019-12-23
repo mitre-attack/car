@@ -38,9 +38,19 @@ implementations:
   - description: EQL version of the above pseudocode.
     code: |-
       process where subtype.create and
-        (process_name == "powershell.exe" and parent_process_name != "explorer.exe")    
+        (process_name == "powershell.exe" and parent_process_name != "explorer.exe")
     type: EQL
     data_model: EQL native
+  - description: DNIF version of the above pseudocode.
+    code: |-
+      _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=powershell.exe NOT $ParentProcess=regex(.*explorer.exe.*)i limit 30
+    type: DNIF
+    data_model: Sysmon native
 data_model_references:
   - process/create/exe
   - process/create/parent_exe
+true_positives:
+  - source: 'Mordor (Sysmon)'
+    description: 'Sysmon event from the Mordor [Empire Userland Registry dataset](https://github.com/hunters-forge/mordor/blob/master/small_datasets/windows/persistence/registry_run_keys_startup_folder_T1060/empire_userland_registry.md).'
+    event_snippet: 'CAR-2014-04-003-mordor-01-snippet.json'
+    full_event: 'CAR-2014-04-003-mordor-01.json'

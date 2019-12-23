@@ -17,11 +17,50 @@ Logon events are Windows Event Code 4624 for Windows Vista and above, 518 for pr
 
 The time of login events for distinct users on individual systems
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1076/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 |[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
+### Implementations
+
+#### Account Logon with Filtering (Pseudocode)
+
+
+This base pseudocode looks for user logon events and filters out the top 30 account names to reduce the occurrence of noisy service accounts and the like. It is meant as a starting point for situational awareness around such events.
+
+
+```
+logon_events = search User_Session:Login
+filtered_logons = filter logon_events where (
+  user NOT IN TOP30(user))
+output filtered_logons
+```
+
+
+#### Account Logon with Filtering (Splunk)
+
+
+Splunk version of the above pseudocode. NOTE - this is liable to be quite noisy and will need tweaking, especially in terms of the number of top users filtered out.
+
+
+```
+index=__your_win_event_log_index__ EventCode=4624|search NOT [search index=__your_win_event_log_index__ EventCode=4624|top 30 Account_Name|table Account_Name]
+```
+
+#### Account Logon with Filtering (Dnif, Sysmon native)
+
+
+DNIF version of the above pseudocode.
+
+
+```
+_fetch * from event where $LogName=WINDOWS-NXLOG-AUDIT AND $SubSystem=AUTHENTICATION AND $Action=LOGIN group count_unique $ScopeID, $User limit 30
+>>_store in_disk david_test win_top_30 stack_replace
+>>_fetch * from event where $LogName=WINDOWS-NXLOG-AUDIT AND $SubSystem=AUTHENTICATION AND $Action=LOGIN limit 10000
+>>_checkif lookup david_test win_top_30 join $ScopeID = $ScopeID str_compare $User eq $User exclude
+```

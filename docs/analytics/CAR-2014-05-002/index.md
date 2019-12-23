@@ -12,13 +12,14 @@ Windows runs the [Service Control Manager](https://en.wikipedia.org/wiki/Service
 
 To survive the timeout, [adversaries and red teams](https://www.operationblockbuster.com/wp-content/uploads/2016/02/Operation-Blockbuster-RAT-and-Staging-Report.pdf) can create services that direct to `cmd.exe` with the flag `/c`, followed by the desired command. The `/c` flag causes the command shell to run a command and immediately exit. As a result, the desired program will remain running and it will report an error starting the service. This analytic will catch that command prompt instance that is used to launch the actual malicious executable. Additionally, the children and descendants of services.exe will run as a SYSTEM user by default. Thus, services are a convenient way for an adversary to gain [Persistence](https://attack.mitre.org/tactics/TA0003) and [Privilege Escalation](https://attack.mitre.org/tactics/TA0004).
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[New Service](https://attack.mitre.org/techniques/T1050/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -26,9 +27,9 @@ To survive the timeout, [adversaries and red teams](https://www.operationblockbu
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Returns all processes named `cmd.exe` that have `services.exe` as a parent process. Because this should never happen, the `/c` flag is redundant in the search.
 
@@ -40,7 +41,7 @@ output cmd
 ```
 
 
-### Splunk, Sysmon native
+#### Splunk, Sysmon native
 
 The Splunk version of the above pseudocode.
 
@@ -50,7 +51,7 @@ index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\cmd.exe" ParentIm
 ```
 
 
-### Eql, EQL native
+#### Eql, EQL native
 
 EQL version of the above pseudocode.
 
@@ -60,4 +61,11 @@ process where subtype.create and
   (process_name == "cmd.exe" and parent_process_name == "services.exe")
 ```
 
+#### Dnif, Sysmon native
 
+DNIF version of the above pseudocode.
+
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=cmd.exe AND $ParentProcess=regex(.*services.exe.*)i limit 30
+```

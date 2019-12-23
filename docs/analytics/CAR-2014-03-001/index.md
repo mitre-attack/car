@@ -12,13 +12,14 @@ An SMB write can be an indicator of lateral movement, especially when combined w
 
 Monitoring SMB write requests still creates some noise, particulary with named pipes. As a result, SMB is now split between writing named pipes and writing other files.
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Remote File Copy](https://attack.mitre.org/techniques/T1105/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Low|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -26,9 +27,9 @@ Monitoring SMB write requests still creates some noise, particulary with named p
 |[flow](/data_model/flow) | [start](/data_model/flow#start) | [dest_port](/data_model/flow#dest_port) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Look for SMB network connections over port 445. Using a sensor that can decode protocol information, extract out the name of the pipe and potentially other information. This happens legitimately so certain pipes, such as `spoolss` should be appropriately white-listed. Certain pipes do correspond to adversary activity, including:
 
@@ -42,5 +43,7 @@ smb_write = filter flow where (dest_port == "445" and protocol == "smb.write_pip
 smb_write.pipe_name = smb_write.proto_info.pipe_name
 output smb_write
 ```
+
+
 
 

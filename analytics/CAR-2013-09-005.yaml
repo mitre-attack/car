@@ -29,5 +29,8 @@ implementations:
       new_services = historic_services - current_services
       output new_services
     type: pseudocode
+  - name: Sigma (Windows Event Log)
+    description: '[Sigma/Windows Event Log](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_rare_service_installs.yml) rule with similar logic to the above pseudocode'
+    type: Sigma
 data_model_references:
   - process/create/parent_image_path

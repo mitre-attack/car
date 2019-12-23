@@ -12,16 +12,17 @@ Spyware and malware remain a serious problem and Microsoft developed security se
 
 Stopping services events are Windows Event Code 7036.
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
-|[Indicator Blocking](https://attack.mitre.org/techniques/T1054/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+|[Disabling Security Tools](https://attack.mitre.org/techniques/T1089/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Windows Event code 7036 from the System log identifies if a service has stopped or started. This analytic looks for "Windows Defender" or "Windows Firewall" that has stopped.
 
@@ -35,9 +36,9 @@ param2 == "stopped"
 
 
 
-## Unit Tests
+### Unit Tests
 
-### Test Case 1
+#### Test Case 1
 
 **Configurations:** Windows 7
 
@@ -47,3 +48,5 @@ From an administrative user powershell console, run the Stop-Service command.
 Stop-Service -displayname "Windows Firewall"
 Stop-Service -displayname "Windows Defender"
 ```
+
+

@@ -10,13 +10,14 @@ contributors: MITRE
 
 Adversaries may find it necessary to use [Dyanamic-link Libraries](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682589.aspx) (DLLs) to [evade defenses](https://attack.mitre.org/tactics/TA0005). One way these DLLs can be "executed" is through the use of the built-in Windows utility [RunDLL32](https://attack.mitre.org/techniques/T1085), which allows a user to execute code in a DLL, providing the name and optional arguments to an exported entry point. Windows uses RunDll32 legitimately in its normal operation, but with a proper baseline and understanding of the environment, monitoring its usage could be fruitful.
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Rundll32](https://attack.mitre.org/techniques/T1085/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|High|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -24,9 +25,9 @@ Adversaries may find it necessary to use [Dyanamic-link Libraries](https://msdn.
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 When looking for all instances of RunDLL32, it is imperative to also have the `command_line` information, which contains the DLL information, including the name, entry point, and optional arguments.
 
@@ -38,10 +39,20 @@ output rundll32
 ```
 
 
+#### Dnif, Sysmon native
 
-## Unit Tests
+DNIF version of the above pseudocode.
 
-### Test Case 1
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=rundll32.exe limit 100
+```
+
+
+
+### Unit Tests
+
+#### Test Case 1
 
 **Configurations:** Windows 7
 
@@ -51,3 +62,5 @@ Execute rundll32.exe from a command window
 c:\windows\syswow64\rundll32.exe
 RUNDLL32.EXE SHELL32.DLL,Control_RunDLL desk.cpl,,0
 ```
+
+

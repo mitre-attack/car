@@ -10,13 +10,14 @@ contributors: MITRE
 
 Bypassing user account control (UAC Bypass) is generally done by piggybacking on a system process that has auto-escalate privileges. This analytic looks to detect those cases as described by the open-source [UACME](https://github.com/hfiref0x/UACME) tool.
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Bypass User Account Control](https://attack.mitre.org/techniques/T1088/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -27,9 +28,9 @@ Bypassing user account control (UAC Bypass) is generally done by piggybacking on
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_command_line](/data_model/process#parent_command_line) |
 
 
-## Implementations
+### Implementations
 
-### Splunk, Sysmon native
+#### Splunk, Sysmon native
 
 This Splunk query looks for specific invocations of UACME, representing different ways to bypass user account control.
 
@@ -39,7 +40,7 @@ index=_your_sysmon_index_ EventCode=1 IntegrityLevel=High|search (ParentCommandL
 ```
 
 
-### Pseudocode, CAR
+#### Pseudocode, CAR
 
 This is a pseudocode version of the above Splunk query.
 
@@ -58,5 +59,21 @@ possible_uac_bypass = filter processes where (
 )
 output possible_uac_bypass
 ```
+
+
+#### Sigma/Sysmon (Eventvwr) (Sigma)
+
+
+[Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sysmon/sysmon_uac_bypass_eventvwr.yml) rule for detecting eventvwr-based UAC bypass.
+
+
+
+#### Sigma/Sysmon (sdclt) (Sigma)
+
+
+[Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sysmon/sysmon_uac_bypass_sdclt.yml) rule for detecting sdclt-based UAC bypass.
+
+
+
 
 

@@ -23,13 +23,14 @@ Remote Desktop can be detected in several ways
 
 The time of the Connection, the source, the destination, and the user name used
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1076/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|High|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -39,9 +40,9 @@ The time of the Connection, the source, the destination, and the user name used
 |[flow](/data_model/flow) | [start](/data_model/flow#start) | [src_ip](/data_model/flow#src_ip) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 
 ```
@@ -52,5 +53,14 @@ rdp_end = filter flow_start where (port == "3389")
 rdp = group flow_start, flow_end by src_ip, src_port, dest_ip, dest_port
 output rdp
 ```
+
+
+#### Sigma (Localhost Login) (Sigma)
+
+
+[Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_rdp_localhost_login.yml) rule, focusing on RDP localhost login.
+
+
+
 
 

@@ -18,13 +18,14 @@ Several accessibility programs can be run using the Ease of Access center
 -   `narrator.exe` reads screen text over audio
 -   `magnify.exe` magnifies the view of the screen near the cursor
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Accessibility Features](https://attack.mitre.org/techniques/T1015/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -32,9 +33,9 @@ Several accessibility programs can be run using the Ease of Access center
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Look for instances of processes where the parent executable is winlogon.exe and the child is an instance of a command prompt. 
 
@@ -46,7 +47,7 @@ output winlogon_cmd
 ```
 
 
-### Splunk, Sysmon native
+#### Splunk, Sysmon native
 
 Splunk version of the above pseudocode.
 
@@ -56,7 +57,7 @@ index=__your_sysmon_index__ EventCode=1 ParentImage="C:\\Windows\\*\\winlogon.ex
 ```
 
 
-### Eql, EQL native
+#### Eql, EQL native
 
 EQL version of the above pseudocode.
 
@@ -65,5 +66,7 @@ EQL version of the above pseudocode.
 process where subtype.create and
   (process_name == "cmd.exe" and parent_process_name == "winlogon.exe")
 ```
+
+
 
 
