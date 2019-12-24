@@ -46,6 +46,13 @@ implementations:
       reg_and_cmd = join (reg, cmd) where (reg.ppid == cmd.pid and reg.hostname == cmd.hostname)
       output reg_and_cmd
     type: pseudocode
+  - description: DNIF version of the above pseudocode.
+    code: |-
+      _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*reg\.exe.*)i AND $ParentProcess=regex(.*cmd\.exe.*)i as #A limit 100
+      >>_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*cmd\.exe.*)i NOT $ParentProcess=regex(.*explorer\.exe.*)i as #B limit 100
+      >>_checkif sjoin #B.$PPID = #A.$CPID str_compare #B.$SystemName eq #A.$SystemName include
+    type: DNIF
+    data_model: Sysmon native
 data_model_references:
   - process/create/command_line
   - process/create/hostname
@@ -57,5 +64,5 @@ unit_tests:
   - configurations:
       - Windows 7
     description: 'Execute reg.exe from cmd.exe. Note that the analytic joins back to the grandparent process, which in this case is explorer.exe. The query time window must include the user log on. For example, if you logged in at 8am and tested the analytic at 10am, the query needs to search from 8am to 10am, not just at 10am. Within a command window, run the command.'
-    commands: 
+    commands:
       - reg.exe QUERY HKLM\Software\Microsoft

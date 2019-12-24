@@ -16,14 +16,15 @@ Microsoft Windows allows for processes to remotely create threads within other p
 
 This behavior can be detected by looking for thread creations across processes, and resolving the entry point to determine the function name. If the function is `LoadLibraryA` or `LoadLibraryW`, then the intent of the remote thread is clearly to inject a DLL. When this is the case, the source process must be examined so that it can be ignored when it is both expected and a trusted process.
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Process Injection](https://attack.mitre.org/techniques/T1055/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 |[Bypass User Account Control](https://attack.mitre.org/techniques/T1088/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -31,9 +32,9 @@ This behavior can be detected by looking for thread creations across processes, 
 |[thread](/data_model/thread) | [remote_create](/data_model/thread#remote_create) | [start_function](/data_model/thread#start_function) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Search for remote thread creations that start at LoadLibraryA or LoadLibraryW. Depending on the tool, it may provide additional information about the DLL string that is an argument to the function. If there is any security software that legitimately injects DLLs, it must be carefully whitelisted. 
 
@@ -46,4 +47,53 @@ remote_thread = filter (src_image_path != "C:\Path\To\TrustedProgram.exe")
 output remote_thread
 ```
 
+
+
+
+
+### True Positives
+
+#### Mordor (sysmon)
+
+Sysmon event from the Mordor [Empire DLL Injection dataset](https://github.com/hunters-forge/mordor/blob/master/small_datasets/windows/defense_evasion/process_injection_T1055/empire_dll_injection.md).
+
+
+##### [Full Event](/true_positives/CAR-2013-10-002-mordor-01.json)
+
+
+##### Event Snippet
+```json
+{
+	"@event_date_creation": "2019-05-18T22:15:33.007Z",
+	"@timestamp": "2019-05-18T22:15:33.697Z",
+	"@version": "1",
+	"action": "createremotethread",
+	"event_id": 8,
+	"log_ingest_timestamp": "2019-05-18T22:15:33.697Z",
+	"log_name": "Microsoft-Windows-Sysmon/Operational",
+	"opcode": "Info",
+	"process_guid": "03ba39f5-50b2-5ce0-0000-00109995c501",
+	"process_id": "5452",
+	"process_name": "powershell.exe",
+	"process_path": "c:\\\\windows\\\\system32\\\\windowspowershell\\\\v1.0\\\\powershell.exe",
+	"process_target_guid": "03ba39f5-8320-5ce0-0000-00101ec72502",
+	"process_target_id": "3124",
+	"process_target_name": "notepad.exe",
+	"process_target_path": "c:\\\\windows\\\\system32\\\\notepad.exe",
+	"provider_guid": "5770385f-c22a-43e0-bf4c-06f5698ffbd9",
+	"record_number": "2273503",
+	"source_name": "Microsoft-Windows-Sysmon",
+	"task": "CreateRemoteThread detected (rule: CreateRemoteThread)",
+	"thread_id": 3144,
+	"thread_new_id": "7940",
+	"thread_start_address": "0x00007FFECED8F220",
+	"thread_start_function": "LoadLibraryA",
+	"thread_start_module": "C:\\\\Windows\\\\System32\\\\KERNEL32.DLL",
+	"type": "wineventlog",
+	"user_reporter_domain": "NT AUTHORITY",
+	"user_reporter_name": "SYSTEM",
+	"user_reporter_sid": "S-1-5-18",
+	"user_reporter_type": "User"
+}
+```
 

@@ -11,13 +11,14 @@ contributors: MITRE
 In order to gain [persistence](https://attack.mitre.org/tactics/TA0003/), [privilege escalation](https://attack.mitre.org/tactics/TA0004/), or [remote execution](https://attack.mitre.org/tactics/TA0002/), an adversary may use the Windows built-in command AT (at.exe) to [schedule a command](https://attack.mitre.org/techniques/T1053/) to be run at a specified time, date, and even host. This method has been used by adversaries and administrators alike. Its use may lead to detection of compromised hosts and compromised users if it is used to move laterally.
 The built-in Windows tool schtasks.exe ([CAR-2013-08-001](CAR-2013-08-001)) offers greater flexibility when creating, modifying, and enumerating tasks. For these reasons, schtasks.exe is more commonly used by administrators, tools/scripts, and power users.
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Scheduled Task](https://attack.mitre.org/techniques/T1053/)|[Execution](https://attack.mitre.org/tactics/TA0002/), [Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -25,9 +26,9 @@ The built-in Windows tool schtasks.exe ([CAR-2013-08-001](CAR-2013-08-001)) offe
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Instances of the process `at.exe` running imply the querying or creation of tasks. Although the command_line is not essential for the analytic to run, it is critical when identifying the command that was scheduled.
 
@@ -39,7 +40,7 @@ output at
 ```
 
 
-### Splunk, Sysmon native
+#### Splunk, Sysmon native
 
 Splunk version of the above pseudocode.
 
@@ -49,7 +50,7 @@ index=__your_sysmon_index__ Image="C:\\Windows\\*\\at.exe"|stats values(CommandL
 ```
 
 
-### Eql, EQL native
+#### Eql, EQL native
 
 EQL version of the above pseudocode.
 
@@ -59,10 +60,20 @@ process where subtype.create and process_name == "at.exe"
 ```
 
 
+#### Dnif, Sysmon native
 
-## Unit Tests
+DNIF version of the above pseudocode.
 
-### Test Case 1
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=at.exe limit 100
+```
+
+
+
+### Unit Tests
+
+#### Test Case 1
 
 **Configurations:** Windows 7
 
@@ -76,3 +87,5 @@ process where subtype.create and process_name == "at.exe"
 at 10:00 calc.exe // returns a job number X
 at X /delete
 ```
+
+

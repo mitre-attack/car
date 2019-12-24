@@ -18,13 +18,14 @@ It is very common for some programs to spawn cmd.exe as a subprocess, for exampl
 
 The time and host the new process was started as well as its parent
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Command-Line Interface](https://attack.mitre.org/techniques/T1059/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -32,9 +33,9 @@ The time and host the new process was started as well as its parent
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Create a baseline of parents of `cmd.exe` seen over the last 30 days and a list of parents of `cmd.exe` seen today. Remove parents in the baseline from parents seen today, leaving a list of new parents.
 
@@ -48,5 +49,7 @@ current_cmd = filter cmd (where timestamp >= now - 1 day)
 new_cmd = historic_cmd - current_cmd
 output new_cmd
 ```
+
+
 
 

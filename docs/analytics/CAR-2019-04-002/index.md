@@ -10,13 +10,14 @@ contributors: MITRE
 
 Regsvr32 can be used to execute arbitrary code in the context of a Windows signed binary, which can be used to bypass application whitelisting. This analytic looks for suspicious usage of the tool. It's not likely that you'll get millions of hits, but it does occur during normal activity so some form of baselining would be necessary for this to be an alerting analytic. Alternatively, it can be used for hunt by looking for new or anomalous DLLs manually.
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Regsvr32](https://attack.mitre.org/techniques/T1117/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/), [Execution](https://attack.mitre.org/tactics/TA0002/)|Low|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -27,9 +28,9 @@ Regsvr32 can be used to execute arbitrary code in the context of a Windows signe
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_image](/data_model/process#parent_image) |
 
 
-## Implementations
+### Implementations
 
-### Main Pattern (Splunk, Sysmon native)
+#### Main Pattern (Splunk, Sysmon native)
 
 
 This just looks for all executions of regsvr32.exe that have a parent of regsvr32.exe but are not regsvr32.exe themselves (which happens). This will have a very high FP rate, but likely not on the order of millions.
@@ -40,7 +41,7 @@ index=__your_sysmon_data__ EventCode=1 regsvr32.exe | search ParentImage="*regsv
 ```
 
 
-### Main Pattern - pseudocode (Pseudocode, CAR)
+#### Main Pattern - pseudocode (Pseudocode, CAR)
 
 
 This is a pseudocode version of the above main pattern.
@@ -55,7 +56,7 @@ output regsvr_processes
 ```
 
 
-### New items since last month (Splunk, Sysmon native)
+#### New items since last month (Splunk, Sysmon native)
 
 
 This uses the same logic as above, but adds lightweight baselining by ignoring all results that also showed up in the previous 30 days (it runs over 1 day).
@@ -67,7 +68,7 @@ search index=__your_sysmon_data__ earliest=-60d@d latest=-30d@d EventCode=1 regs
 ```
 
 
-### Spawning child processes (Splunk, Sysmon native)
+#### Spawning child processes (Splunk, Sysmon native)
 
 
 This looks for child processes that may be spawend by regsvr32, while attempting to eliminate some of the common false positives such as werfault (Windows Error Reporting).
@@ -78,7 +79,7 @@ index=__your_sysmon_data__ EventCode=1 (ParentImage="C:\\Windows\\System32\\regs
 ```
 
 
-### Spawning child processes - pseudocode (Pseudocode, CAR)
+#### Spawning child processes - pseudocode (Pseudocode, CAR)
 
 
 This is a pseudocode version of the above Splunk query for spawning child processes.
@@ -98,7 +99,7 @@ output regsvr_processes
 ```
 
 
-### Loading unsigned images (Splunk, Sysmon native)
+#### Loading unsigned images (Splunk, Sysmon native)
 
 
 This looks for unsigned images that may be loaded by regsvr32, while attempting to eliminate false positives stemming from Windows/Program Files binaries.
@@ -109,7 +110,7 @@ index=__your_sysmon_data__ EventCode=7 (Image="C:\\Windows\\System32\\regsvr32.e
 ```
 
 
-### Loading unsigned images - pseudocode (Pseudocode, CAR)
+#### Loading unsigned images - pseudocode (Pseudocode, CAR)
 
 
 This is a pseudocode version of the above Splunk query for loading unsigned images.
@@ -128,8 +129,10 @@ output unsigned_modules
 
 
 
-## Unit Tests
+### Unit Tests
 
-### Test Case 1
+#### Test Case 1
 
 Any of the [Atomic Red Team tests for regsvr32.exe](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1117/T1117.md) should trigger this.
+
+

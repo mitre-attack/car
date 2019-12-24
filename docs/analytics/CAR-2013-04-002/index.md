@@ -43,9 +43,10 @@ Certain commands are frequently used by malicious actors and infrequently used b
 
 The host on which the commands were executed, the time of execution, and what commands were executed
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Account Discovery](https://attack.mitre.org/techniques/T1087/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 |[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Moderate|
@@ -74,7 +75,7 @@ The host on which the commands were executed, the time of execution, and what co
 |[Command-Line Interface](https://attack.mitre.org/techniques/T1059/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 |[Query Registry](https://attack.mitre.org/techniques/T1012/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -83,37 +84,49 @@ The host on which the commands were executed, the time of execution, and what co
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 
 ```
 processes = search Process:Create
-reg_processes = filter processes where (exe == "arp.exe" or exe == "at.exe" or exe == "attrib.exe" 
- or exe == "cscript.exe" or exe == "dsquery.exe" or exe == "hostname.exe" 
- or exe == "ipconfig.exe" or exe == "mimikatz.exe" or exe == "nbstat.exe" 
- or exe == "net.exe" or exe == "netsh.exe" or exe == "nslookup.exe" 
- or exe == "ping.exe" or exe == "quser.exe" or exe == "qwinsta.exe" 
- or exe == "reg.exe" or exe == "runas.exe" or exe == "sc.exe" 
- or exe == "schtasks.exe" or exe == "ssh.exe" or exe == "systeminfo.exe" 
- or exe == "taskkill.exe" or exe == "telnet.exe" or exe == tracert.exe" 
+reg_processes = filter processes where (exe == "arp.exe" or exe == "at.exe" or exe == "attrib.exe"
+ or exe == "cscript.exe" or exe == "dsquery.exe" or exe == "hostname.exe"
+ or exe == "ipconfig.exe" or exe == "mimikatz.exe" or exe == "nbstat.exe"
+ or exe == "net.exe" or exe == "netsh.exe" or exe == "nslookup.exe"
+ or exe == "ping.exe" or exe == "quser.exe" or exe == "qwinsta.exe"
+ or exe == "reg.exe" or exe == "runas.exe" or exe == "sc.exe"
+ or exe == "schtasks.exe" or exe == "ssh.exe" or exe == "systeminfo.exe"
+ or exe == "taskkill.exe" or exe == "telnet.exe" or exe == tracert.exe"
  or exe == "wscript.exe" or exe == "xcopy.exe")
 reg_grouped = group reg by hostname, ppid where(max time between two events is 30 minutes)
 output reg_grouped
 ```
 
 
-### Sigma
+#### Sigma
 
 [Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_multiple_suspicious_cli.yml) of the above pseudocode, with some modifications.
 
 
 
+#### Dnif, Sysmon native
 
-## Unit Tests
+DNIF version of the above pseudocode.
 
-### Test Case 1
+
+```
+_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=regex(arp\.exe|at\.exe|attrib\.exe|cscript\.exe|dsquery\.exe|hostname\.exe|ipconfig\.exe|mimikatz.exe|nbstat\.exe|net\.exe|netsh\.exe|nslookup\.exe|ping\.exe|quser\.exe|qwinsta\.exe|reg\.exe|runas\.exe|sc\.exe|schtasks\.exe|ssh\.exe|systeminfo\.exe|taskkill\.exe|telnet\.exe|tracert\.exe|wscript\.exe|xcopy\.exe)i group count_unique $App limit 100
+>>_agg count
+>>_checkif int_compare Count > 1 include
+```
+
+
+
+### Unit Tests
+
+#### Test Case 1
 
 **Configurations:** Windows 7
 
@@ -125,3 +138,5 @@ hostname
 systeminfo
 reg.exe Query HKLM\Software\Microsoft
 ```
+
+

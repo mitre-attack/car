@@ -10,26 +10,27 @@ contributors: {{analytic['contributors']|join(', ')}}
 
 {{analytic['description']}}
 {% if 'references' in analytic %}
-### References
+#### References
 {{ analytic['references']|join("\n") }}
-{%endif %}
-{% if 'coverage' in analytic %}## ATT&CK Detection
+{% endif %}
+{% if 'coverage' in analytic %}
+### ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+|Technique|Tactic|Level of Coverage|
 |---|---|---|{% for coverage_item in analytic['coverage'] %}
-|[{{techniques[coverage_item['technique']]}}](https://attack.mitre.org/techniques/{{coverage_item['technique']}}/)|{% for tactic in coverage_item['tactics'] %}[{{tactics[tactic]}}](https://attack.mitre.org/tactics/{{tactic}}/){% if not loop.last %}, {% endif %}{% endfor %}|{{coverage_item['coverage']}}|{% endfor %}
-{% endif %}{% if 'data_model_references' in analytic %}
-## Data Model References
+|[{{techniques[coverage_item['technique']]}}](https://attack.mitre.org/techniques/{{coverage_item['technique']}}/)|{% for tactic in coverage_item['tactics'] %}[{{tactics[tactic]}}](https://attack.mitre.org/tactics/{{tactic}}/){% if not loop.last %}, {% endif %}{% endfor %}|{{coverage_item['coverage']}}|{% endfor %}{% endif %}
+{% if 'data_model_references' in analytic %}
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
 {% for dmr in analytic['data_model_references'] %}|[{{dmr[0]}}](/data_model/{{dmr[0]}}) | [{{dmr[1]}}](/data_model/{{dmr[0]}}#{{dmr[1]}}) | [{{dmr[2]}}](/data_model/{{dmr[0]}}#{{dmr[2]}}) |
 {% endfor %}{% endif %}
 {% if 'implementations' in analytic %}
-## Implementations
+### Implementations
 {% for impl in analytic['implementations'] %}
-{% if 'name' in impl %}### {{impl['name']}} ({{impl['type']|capitalize}}{% if 'data_model' in impl %}, {{impl['data_model']}}{% endif %})
-{% else %}### {{impl['type']|capitalize}}{% if 'data_model' in impl %}, {{impl['data_model']}}{% endif %}{% endif %}
+{% if 'name' in impl %}#### {{impl['name']}} ({{impl['type']|capitalize}}{% if 'data_model' in impl %}, {{impl['data_model']}}{% endif %})
+{% else %}#### {{impl['type']|capitalize}}{% if 'data_model' in impl %}, {{impl['data_model']}}{% endif %}{% endif %}
 {% if 'description' in impl %}
 {{impl['description']}}
 {% endif %}
@@ -40,9 +41,9 @@ contributors: {{analytic['contributors']|join(', ')}}
 {% endif %}
 {% endfor %}{% endif %}
 {% if 'unit_tests' in analytic %}
-## Unit Tests
+### Unit Tests
 {% for ut in analytic['unit_tests'] %}
-### Test Case {{loop.index}}
+#### Test Case {{loop.index}}
 {% if 'configurations' in ut %}
 **Configurations:** {{ut['configurations']|join(', ')}}
 {% endif %}{% if 'description' in ut %}
@@ -52,3 +53,21 @@ contributors: {{analytic['contributors']|join(', ')}}
 {{ut['commands']|join("\n")}}
 ```
 {% endif %}{% endfor %}{% endif %}
+
+{% if 'true_positives' in analytic %}
+### True Positives
+{% for tp in analytic['true_positives'] %}
+#### {{tp['source']|capitalize}}
+{% if 'description' in tp %}
+{{tp['description']}}
+{% endif %}
+{% if 'full_event' in tp %}
+##### [Full Event](/true_positives/{{tp['full_event']}})
+{% endif %}
+{% if 'event_snippet' in tp %}
+##### Event Snippet
+```json
+{% include tp['event_snippet'] %}
+```
+{% endif %}
+{% endfor %}{% endif %}

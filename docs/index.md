@@ -19,10 +19,26 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
+### December 2019
+* Added true positives (examples of real events that the analytic should successfully detect) to:
+  * [CAR-2013-10-002: DLL Injection via LoadLibrary](/analytics/CAR-2013-10-002)
+  * [CAR-2014-04-003: Powershell Execution](/analytics/CAR-2014-04-003)
+  * [CAR-2016-03-001: Host Discovery Commands](/analytics/CAR-2016-03-001)
+  * [CAR-2019-08-001: Credential Dumping via Window Task Manager](/analytics/CAR-2019-08-001) 
+  
+### August 2019
+* New analytics added
+  * [CAR-2019-08-001: Credential Dumping via Windows Task Manager](/analytics/CAR-2019-08-001)
+  * [CAR-2019-08-002: Active Directory Dumping via NTDSUtil](/analytics/CAR-2019-08-002)
+    
 ### July 2019
 * Added Splunk/Sysmon implementations to several analytics
 * Added [EQL](https://eqllib.readthedocs.io/en/latest/index.html) implementations to several analytics
 * Added corresponding [Sigma](https://github.com/Neo23x0/sigma) rule references to several analytics
+* New analytics added
+  * [CAR-2019-07-001: Access Permission Modification](/analytics/CAR-2019-07-001)
+  * [CAR-2019-07-002: Lsass Process Dump via Procdump](/analytics/CAR-2019-07-002)
+
 
 ### May 2019
 * All CAR analytics have been converted to YAML; the YAML versions can be found [here](https://github.com/mitre-attack/car/tree/master/analytics).

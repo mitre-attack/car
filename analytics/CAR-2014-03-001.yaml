@@ -25,10 +25,10 @@ implementations:
       * `WINREG` - Windows Remote Registry ([CAR-2014-11-005](CAR-2014-11-005))
       * `ATSVC` - Windows AT command ([CAR-2015-04-001](CAR-2015-04-001))
     code: |-
-      flow = search Flow:Message
-      smb_write = filter flow where (dest_port == "445" and protocol == "smb.write_pipe")
-      smb_write.pipe_name = smb_write.proto_info.pipe_name
-      output smb_write
+        flow = search Flow:Message
+        smb_write = filter flow where (dest_port == "445" and protocol == "smb.write_pipe")
+        smb_write.pipe_name = smb_write.proto_info.pipe_name
+        output smb_write
     type: pseudocode
 data_model_references:
   - flow/message/proto_info

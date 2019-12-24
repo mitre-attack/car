@@ -12,13 +12,14 @@ Adversaries may use [Windows Management Instrumentation](https://attack.mitre.or
 
 Although this analytic was created after [CAR-2014-12-001](CAR-2014-12-001), it is a much simpler (although more limited) approach. Processes can be created remotely via WMI in a few other ways, such as more direct API access or the built-in utility [PowerShell](https://attack.mitre.org/T1086).
 
-## ATT&CK Detection
 
-|Technique |Tactic |Level of Coverage |
+### ATT&CK Detection
+
+|Technique|Tactic|Level of Coverage|
 |---|---|---|
 |[Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Low|
 
-## Data Model References
+### Data Model References
 
 |Object|Action|Field|
 |---|---|---|
@@ -26,9 +27,9 @@ Although this analytic was created after [CAR-2014-12-001](CAR-2014-12-001), it 
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
-## Implementations
+### Implementations
 
-### Pseudocode
+#### Pseudocode
 
 Looks for instances of wmic.exe as well as the substrings in the command line:
 * `process call create`
@@ -42,7 +43,7 @@ output wmic
 ```
 
 
-### Splunk
+#### Splunk
 
 Splunk version of the above pseudocode.
 
@@ -52,7 +53,7 @@ index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\wmic.exe" Command
 ```
 
 
-### Eql
+#### Eql
 
 EQL version of the above pseudocode.
 
@@ -62,5 +63,7 @@ process where subtype.create and
   (process_name == "wmic.exe" and command_line == "* process call create ")
   |filter command_line == "* /node:*"
 ```
+
+
 
 

@@ -41,6 +41,9 @@ implementations:
       rdp = group flow_start, flow_end by src_ip, src_port, dest_ip, dest_port
       output rdp
     type: pseudocode
+  - name: Sigma (Localhost Login)
+    description: '[Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_rdp_localhost_login.yml) rule, focusing on RDP localhost login.'
+    type: Sigma
 data_model_references:
   - flow/end/dest_port
   - flow/start/dest_ip

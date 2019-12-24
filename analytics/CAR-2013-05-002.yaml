@@ -29,11 +29,16 @@ implementations:
       suspicious_locations = filter process where (
        image_path == "*:\RECYCLER\*" or
        image_path == "*:\SystemVolumeInformation\*" or
-       image_path == "%windir%\Tasks\*" or 
+       image_path == "%windir%\Tasks\*" or
        image_path == "%systemroot%\debug\*"
       )
       output suspicious_locations
     type: pseudocode
+  - description: DNIF version of the above pseudocode.
+    code: |-
+      _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*(\:\\recycler\\|\:\\systemvolumeinformation\\|\%windir\%\\tasks\\|\%systemroot\%\\debug\\).*)i group count_unique $App limit 100
+    type: DNIF
+    data_model: Sysmon native
   - description: '[Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_susp_run_locations.yml) of the above pseudocode, with some modifications.'
     type: Sigma
 data_model_references:
