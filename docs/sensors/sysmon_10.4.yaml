@@ -1,0 +1,116 @@
+---
+sensor_name: Sysmon
+sensor_version: 10.4
+sensor_developer: Microsoft
+sensor_url: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon 
+  file:
+    create:
+      notes: 'Mapped to Event 11: SYSMON_FILE_CREATE.'
+      fields:
+        - image_path
+        - pid
+        - file_name
+        - creation_time
+    timestomp:
+      notes: 'Mapped to Event 2: SYSMON_FILE_TIME.'
+      fields:
+        - image_path
+        - pid
+        - file_name
+        - creation_time
+        - previous_creation_time
+  driver:
+    load:
+      notes: 'Mapped to Event 6: SYSMON_DRIVER_LOAD.' 
+      fields:
+        - image_path
+        - sha1_hash
+        - sha256_hash
+        - md5_hash
+        - signer  
+    unload: none
+  flow:
+    start: 
+      notes: 'Mapped to Event 3: SYSMON_NETWORK_CONNECT, which may not be 100% semantically identical to the start of a network flow.'
+      fields:
+        - image_path
+        - pid
+        - protocol
+        - src_ip
+        - src_hostname
+        - src_port
+        - dest_ip
+        - dest_hostname
+        - dest_port
+        - user
+  module:
+    load:
+      notes: 'Mapped to Event 7: SYSMON_IMAGE_LOAD.'  
+      fields:
+        - pid
+        - image_path
+        - module_path
+        - sha1_hash
+        - sha256_hash
+        - md5_hash
+        - signer
+  process:
+    create:
+      notes: 'Mapped to Event 1: SYSMON_CREATE_PROCESS.'  
+      fields:
+        - pid
+        - ppid
+        - command_line
+        - current_working_directory
+        - image_path
+        - sha1_hash
+        - sha256_hash
+        - md5_hash
+        - integrity_level
+        - parent_command_line
+        - parent_image_path
+        - user
+    terminate:
+      notes: 'Mapped to Event 5: SYSMON_PROCESS_TERMINATE.'  
+      fields:
+        - pid
+        - image_path
+  registry:
+    add:
+      notes: 'Mapped to Event 12: SYSMON_REG_KEY (captures both adding & deleting).'  
+      fields:
+        - pid
+        - image_path
+        - hive
+        - key
+        - value
+    edit: 
+      notes: 'Mapped to Event 13: SYSMON_REG_SETVALUE.' 
+      fields:
+        - pid
+        - image_path
+        - hive
+        - key
+        - value
+    remove:
+      notes: 'Mapped to Event 12: SYSMON_REG_KEY (captures both adding & deleting).'  
+      fields:
+        - pid
+        - image_path
+        - hive
+        - key
+        - value    
+  service:
+    create: none
+  thread:
+    create: none
+    remote_create:
+      notes: 'Mapped to Event 8: SYSMON_CREATE_REMOTE_THREAD.'  
+      fields:
+        - src_pid
+        - tgt_pid
+        - start_function
+        - start_address
+        - start_module 
+  user_session:
+    local: none
