@@ -100,10 +100,7 @@ registry:
             - hive
             - key
             - value
-service:
-    create: none
 thread:
-    create: none
     remote_create:
         notes: 'Mapped to Event 8: SYSMON_CREATE_REMOTE_THREAD.'
         fields:
@@ -112,5 +109,3 @@ thread:
             - start_function
             - start_address
             - start_module
-user_session:
-    local: none
