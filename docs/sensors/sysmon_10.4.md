@@ -57,7 +57,7 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 ### [process](../data_model/process)
 
 | |`command_line` | `exe` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `parent_exe` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signer` | `user` | `integrity_level` | `parent_command_line` |  `current_working_directory` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `create` | ✓ | | ✓ |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | | | ✓ | ✓ | ✓ | |
 | `terminate` | | | ✓ | | ✓ | | | | ✓ | | | | | | | | | |
 
