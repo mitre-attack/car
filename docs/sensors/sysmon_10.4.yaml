@@ -9,6 +9,7 @@ mappings:
     action: create
     notes: 'Mapped to Event 11: SYSMON_FILE_CREATE.'
     fields:
+      - fqdn
       - image_path
       - pid
       - file_name
@@ -17,6 +18,7 @@ mappings:
     action: timestomp
     notes: 'Mapped to Event 2: SYSMON_FILE_TIME.'
     fields:
+      - fqdn
       - image_path
       - pid
       - file_name
@@ -26,6 +28,7 @@ mappings:
     action: load
     notes: 'Mapped to Event 6: SYSMON_DRIVER_LOAD.'
     fields:
+      - fqdn
       - image_path
       - sha1_hash
       - sha256_hash
@@ -44,11 +47,13 @@ mappings:
       - dest_ip
       - dest_hostname
       - dest_port
+      - start_time
       - user
   - object: module
     action: load
     notes: 'Mapped to Event 7: SYSMON_IMAGE_LOAD.'
     fields:
+      - fqdn
       - pid
       - image_path
       - module_path
@@ -60,6 +65,7 @@ mappings:
     action: create
     notes: 'Mapped to Event 1: SYSMON_CREATE_PROCESS.'
     fields:
+      - fqdn
       - pid
       - ppid
       - command_line
@@ -76,12 +82,14 @@ mappings:
     action: terminate
     notes: 'Mapped to Event 5: SYSMON_PROCESS_TERMINATE.'
     fields:
+      - fqdn
       - pid
       - image_path
   - object: registry
     action: add
     notes: 'Mapped to Event 12: SYSMON_REG_KEY (captures both adding & deleting).'
     fields:
+      - fqdn
       - pid
       - image_path
       - hive
@@ -91,6 +99,7 @@ mappings:
     action: edit
     notes: 'Mapped to Event 13: SYSMON_REG_SETVALUE.'
     fields:
+      - fqdn
       - pid
       - image_path
       - hive
@@ -100,6 +109,7 @@ mappings:
     action: remove
     notes: 'Mapped to Event 12: SYSMON_REG_KEY (captures both adding & deleting).'
     fields:
+      - fqdn
       - pid
       - image_path
       - hive
@@ -109,8 +119,10 @@ mappings:
     action: remote_create
     notes: 'Mapped to Event 8: SYSMON_CREATE_REMOTE_THREAD.'
     fields:
+      - hostname
       - src_pid
       - tgt_pid
+      - tgt_tid
       - start_function
       - start_address
       - start_module
