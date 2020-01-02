@@ -49,7 +49,7 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 ### [registry](../data_model/registry)
 
 | | `fqdn` | `data` | `hive` | `hostname` |`image_path` | `key` | `pid` | `type` | `user` | `value` |
-|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|---|
 | `add` | ✓| |✓| |✓|✓|✓| | |✓|
 | `edit` | ✓| |✓| |✓|✓|✓| | |✓|
 | `remove` | ✓| |✓| |✓|✓|✓| | |✓|
