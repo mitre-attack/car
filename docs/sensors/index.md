@@ -9,3 +9,4 @@ CAR currently has a limited number of sensors mapped to the CAR [Data Model](../
 * [Sysmon (2.0)](sysmon_2.0)
 * [Sysmon (3.1)](sysmon_3.1)
 * [Sysmon (3.2)](sysmon_3.2)
+* [Sysmon (10.4)](sysmon_10.4)
