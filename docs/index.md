@@ -19,6 +19,9 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
+### January 2020
+* Added [Sysmon 10.4](/sensors/sysmon_10.4) sensor with data model mappings and CAR analytic coverage.
+
 ### December 2019
 * Added true positives (examples of real events that the analytic should successfully detect) to:
   * [CAR-2013-10-002: DLL Injection via LoadLibrary](/analytics/CAR-2013-10-002)
