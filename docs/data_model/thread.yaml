@@ -1,0 +1,55 @@
+---
+name: Thread
+description: A thread of execution is the smallest sequence of programmed instructions that can be managed independently by a scheduler, which is typically part of the operating system. A thread is typically a component of a process. Multiple threads can exist within the same process and share resources such as memory, while different processes do not share these resources. The threads of a process share executable code instructions and context, such as the values of variables at any given moment.
+actions:
+  - name: create
+    description: The event corresponding to the act of creating a new thread.
+  - name: suspend
+    description: The event corresponding to the act of suspending a thread which is currently running.
+  - name: terminate
+    description: The event corresponding to the act of terminating a running thread.
+  - name: remote_create
+    description: A subset of thread create events that correspond to thread injection, that is, when a process creates a thread in another process. For a remote_create event the src_pid and tgt_pid are different.
+fields:
+  - name: hostname
+    description: The hostname of the active host, without the domain.
+    example: HOST1
+  - name: src_pid
+    description: The process ID of the process that created the thread.
+    example: 6016
+  - name: src_tid
+    description: The thread ID of the thread that created the event.
+    example: 9012
+  - name: tgt_pid
+    description: The process ID of the process in which the new thread runs.
+    example: 232
+  - name: tgt_tid
+    description: The thread ID of the new thread that was created.
+    example: 6964
+  - name: stack_base
+    description: The base address of the thread’s stack.
+    example: 	0xfffff880081a9000
+  - name: stack_limit
+    description: The limit of the thread’s stack.	
+    example: 	0xfffff880081a3000
+  - name: start_address
+    description: The memory address at which the thread’s execution starts.
+    example: 	0xfffff880046dc3e0
+  - name: user
+    description: The user context in which the source thread was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
+    example: HOST1\LOCALUSER
+  - name: user_stack_base
+    description: The base address of the thread’s stack.
+    example: 0x0
+  - name: user_stack_limit
+    description: The limit of the thread’s stack.
+    example: 0x0
+  - name: start_function
+    description: The function at `start_address`.
+    example: LoadLibrary
+  - name: start_module
+    description: The module in which `start_address` resides.
+    example: C:\windows\system32\ntdll.dll
+  - name: start_module_name
+    description: The short name of the `start_module`.
+    example: ntdll.dll

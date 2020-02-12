@@ -1,0 +1,48 @@
+---
+name: User Sesssion
+description: User sessions are the user activities undertaken on the computer in the course of conducting standard user actions.
+actions:
+  - name: interactive
+    description: The event corresponding to the act of a user conducting a local login. The logon session used requires a GUI.
+  - name: local
+    description: The event corresponding to the act of a user logging on locally to the machine.
+  - name: lock
+    description: The event corresponding to the act of a user locking a machine such that they are still logged into the machine but unable to access it without re-entering credentials, effectively entering the machine into a locked state.
+  - name: login
+    description: The event corresponding to the act of a user logging into a machine.
+  - name: logout
+    description: The event corresponding to the act of a user logging out of a machine.
+  - name: rdp
+    description: The event corresponding to the act of a user accessing a machine remotely.
+  - name: reconnect
+    description: The event corresponding to the act of a user reconnecting when an RDP session disconnects but the user is not logged off.
+  - name: remote
+    description: The event corresponding to the act of a user conducting a network logon.
+  - name: unlock
+    description: The event corresponding to the act of a user unlocking a machine currently in a locked state.
+fields:
+  - name: user
+    description: The user affiliated with the session. May be a local, domain or SYSTEM user.	
+    example: HOST1\LOCALUSER
+  - name: dest_ip
+    description: The destination IP address of the user session. Only applicable to remote or RDP sessions.	
+    example: 192.168.1.5
+  - name: dest_port
+    description: The destination port of the user session. Only applicable to remote or RDP sessions.
+    example: 1900
+  - name: hostname
+    description: The hostname of the host, without the domain.	
+    example: HOST1
+  - name: logon_id
+    description: A hex value corresponding to the session. The logon id will persist until logout occurs.		
+    example: 0xf61f3
+  - name: src_ip
+    description: The source IP address of the user session. Only applicable to remote or RDP sessions.			
+    example: 10.0.0.54
+  - name: src_port
+    description: The source port of the user session. Only applicable to remote or RDP sessions.			
+    example: 50438
+  - name: user
+    description: The user affiliated with the session. May be a local, domain or SYSTEM user.			
+    example: HOST1\LOCALUSER
+
