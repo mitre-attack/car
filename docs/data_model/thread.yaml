@@ -28,13 +28,13 @@ fields:
     example: 6964
   - name: stack_base
     description: The base address of the thread’s stack.
-    example: 	0xfffff880081a9000
+    example: 0xfffff880081a9000
   - name: stack_limit
-    description: The limit of the thread’s stack.	
-    example: 	0xfffff880081a3000
+    description: The limit of the thread’s stack.
+    example: 0xfffff880081a3000
   - name: start_address
     description: The memory address at which the thread’s execution starts.
-    example: 	0xfffff880046dc3e0
+    example: 0xfffff880046dc3e0
   - name: user
     description: The user context in which the source thread was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
     example: HOST1\LOCALUSER

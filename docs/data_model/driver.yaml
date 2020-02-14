@@ -8,7 +8,7 @@ actions:
     description: The event corresponding to the operating system kernel unloading a driver from memory.
 fields:
   - name: fqdn
-    description: The fully qualified domain name of the host in which the process ran. Contains the hostname appended with the domain.		
+    description: The fully qualified domain name of the host in which the process ran. Contains the hostname appended with the domain.
     example: HOST1.EXAMPLE_DOMAIN.COM
   - name: hostname
     description: The hostname of the host, without the domain.

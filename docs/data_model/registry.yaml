@@ -10,7 +10,7 @@ actions:
     description: The event corresponding to the act of deleting an existing registry key, hive, type, or value.
 fields:
   - name: fqdn
-    description: The fully qualified domain name for the host on which the registry access took place.	
+    description: The fully qualified domain name for the host on which the registry access took place.
     example: HOST1.EXAMPLE_DOMAIN.COM
   - name: hostname
     description: The hostname of the host, without the domain.
@@ -37,6 +37,6 @@ fields:
     description: Inherited from the [process](https://car.mitre.org/wiki/Data_Model/process) that made the registry access.
     example: 738
   - name: user
-    description: 	The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
+    description: The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
     example: HOST1\LOCALUSER
 

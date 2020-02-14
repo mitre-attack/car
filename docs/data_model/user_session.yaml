@@ -22,27 +22,27 @@ actions:
     description: The event corresponding to the act of a user unlocking a machine currently in a locked state.
 fields:
   - name: user
-    description: The user affiliated with the session. May be a local, domain or SYSTEM user.	
+    description: The user affiliated with the session. May be a local, domain or SYSTEM user.
     example: HOST1\LOCALUSER
   - name: dest_ip
-    description: The destination IP address of the user session. Only applicable to remote or RDP sessions.	
+    description: The destination IP address of the user session. Only applicable to remote or RDP sessions.
     example: 192.168.1.5
   - name: dest_port
     description: The destination port of the user session. Only applicable to remote or RDP sessions.
     example: 1900
   - name: hostname
-    description: The hostname of the host, without the domain.	
+    description: The hostname of the host, without the domain.
     example: HOST1
   - name: logon_id
-    description: A hex value corresponding to the session. The logon id will persist until logout occurs.		
+    description: A hex value corresponding to the session. The logon id will persist until logout occurs.
     example: 0xf61f3
   - name: src_ip
-    description: The source IP address of the user session. Only applicable to remote or RDP sessions.			
+    description: The source IP address of the user session. Only applicable to remote or RDP sessions.
     example: 10.0.0.54
   - name: src_port
-    description: The source port of the user session. Only applicable to remote or RDP sessions.			
+    description: The source port of the user session. Only applicable to remote or RDP sessions.
     example: 50438
   - name: user
-    description: The user affiliated with the session. May be a local, domain or SYSTEM user.			
+    description: The user affiliated with the session. May be a local, domain or SYSTEM user.
     example: HOST1\LOCALUSER
 

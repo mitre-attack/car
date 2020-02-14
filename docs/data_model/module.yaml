@@ -11,13 +11,13 @@ fields:
     description: The fully qualified domain name of the host. Contains the hostname appended with the domain.
     example: HOST1.EXAMPLE_DOMAIN.COM
   - name: hostname
-    description: The hostname of the host, without the domain.	
+    description: The hostname of the host, without the domain.
     example: HOST1
   - name: base_address
-    description: A hex address indicating where the module is loaded into the process’s virtual address space. 
+    description: A hex address indicating where the module is loaded into the process’s virtual address space.
     example: 0xFFFFF8000405F000
   - name: image_path
-    description: The file system location of the process image.	
+    description: The file system location of the process image.
     example: C:\path\to\example.exe
   - name: md5_hash
     description: The MD5 hash of the contents of the file located at `module_path`. The field is in hex notation, without the 0x prefix.

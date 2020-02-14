@@ -17,22 +17,22 @@ fields:
     description: The fully qualified domain name of the host. Contains the hostname appended with the domain.
     example: HOST1.EXAMPLE_DOMAIN.COM
   - name: hostname
-    description: The hostname of the host, without the domain.	
+    description: The hostname of the host, without the domain.
     example: HOST1
   - name: user
-    description: The user token that service was created with. 
+    description: The user token that service was created with.
     example: HOST1\LOCALUSER
   - name: command_line
-    description: The command line that service is started with.	
+    description: The command line that service is started with.
     example: C:\windows\system32\svchost.exe -k rpcss
   - name: exe
     description: The executable for the service.
     example: svchost.exe
   - name: image_path
-    description: Where in the file system the service executable is located.	
+    description: Where in the file system the service executable is located.
     example: C:\path\to\example.exe
   - name: name
-    description: The name of the service.		
+    description: The name of the service.
     example: RpcSs
   - name: pid
     description: The process ID for the process of the service, represented in decimal notation.

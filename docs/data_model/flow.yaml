@@ -7,13 +7,13 @@ actions:
   - name: end
     description: The event corresponding to the ending of collection of flow data in a given time period.
   - name: message
-    description: 	A flow message pertains to any event between start and end when content is sent over the connection (may imply TCP). This often implies use of traffic content collected via PCAP or a similar mechanism.
+    description: A flow message pertains to any event between start and end when content is sent over the connection (may imply TCP). This often implies use of traffic content collected via PCAP or a similar mechanism.
 fields:
   - name: fqdn
     description: The fully qualified domain name of the host. Contains the hostname appended with the domain.
     example: HOST1.EXAMPLE_DOMAIN.COM
   - name: hostname
-    description: The hostname of the host, without the domain.	
+    description: The hostname of the host, without the domain.
     example: HOST1
   - name: content
     description: The ASCII printable characters of the flow. This corresponds to content from PCAP data or similar formats.
@@ -37,7 +37,7 @@ fields:
     description: The datetime stamp, in UTC, when the flow ended.
     example: 05/15/2015 03:59:53.176 AM
   - name: exe
-    description: The basename of the `image_path`. This will need to be collected from the host.	
+    description: The basename of the `image_path`. This will need to be collected from the host.
     example: Chrome.exe
   - name: flags
     description: TCP flags.

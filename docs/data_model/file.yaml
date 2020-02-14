@@ -22,7 +22,7 @@ fields:
     description: The name of the file.
     example: MyWordDoc.docx
   - name: fqdn
-    description: The fully qualified domain name of the host. Contains the hostname appended with the domain.	
+    description: The fully qualified domain name of the host. Contains the hostname appended with the domain.
     example: HOST1.EXAMPLE_DOMAIN.COM
   - name: hostname
     description: The hostname of the host, without the domain.
@@ -43,19 +43,19 @@ fields:
     description: The process ID for the process that generated this file event, represented in decimal notation.
     example: 738
   - name: ppid
-    description: The process ID of the parent process of the process associated with this file event, represented in decimal notation.	
+    description: The process ID of the parent process of the process associated with this file event, represented in decimal notation.
     example: 1860
   - name: previous_creation_time
-    description: The creation_time associated with the file before it was changed for this file event.	
+    description: The creation_time associated with the file before it was changed for this file event.
     example: 05/14/2015 12:47:06
   - name: signer
-    description: The company listed on the certificate of the program at `image_path` if that program is signed.	
+    description: The company listed on the certificate of the program at `image_path` if that program is signed.
     example: Microsoft Corporation
   - name: user
-    description: The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.	
+    description: The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
     example: HOST1\LOCALUSER
   - name: company
-    description: The name of the organization listed in the file located at `image_path`.	
+    description: The name of the organization listed in the file located at `image_path`.
   - name: file_path
     description: The full path to the file.
     example: C:\users\fakeuser\documents\MyFile.doc
