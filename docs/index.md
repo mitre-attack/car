@@ -19,6 +19,9 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
+### February 2020
+* Added [OSQuery 4.1.2](/sensors/osquery_4.1.2)) sensor with data model mappings and CAR analytic coverage.
+
 ### January 2020
 * Added [Sysmon 10.4](/sensors/sysmon_10.4) sensor with data model mappings and CAR analytic coverage.
 
