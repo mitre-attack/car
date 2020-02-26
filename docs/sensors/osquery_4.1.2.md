@@ -13,7 +13,7 @@ osquery exposes an operating system as a high-performance relational database. T
 
 ## Data Model Coverage
 
-### [Registry](../data_model/Registry)
+### [Registry](../data_model/registry)
 
 | | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `pid` | `type` | `user` | `value` |
 |---|---|---|---|---|---|---|---|---|---|
@@ -21,7 +21,7 @@ osquery exposes an operating system as a high-performance relational database. T
 | `edit` | ✓| | | | |✓| |✓| |✓|
 | `remove` |  | | | | | | | | | |
 
-### [File](../data_model/File)
+### [File](../data_model/file)
 
 | | `company` | `creation_time` | `file_name` | `file_path` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signer` | `user` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -32,14 +32,14 @@ osquery exposes an operating system as a high-performance relational database. T
 | `timestomp` |  |✓|✓|✓| | |✓|✓|✓|✓| |✓|✓| |✓|
 | `write` |  |✓|✓|✓| | |✓|✓|✓|✓| |✓|✓| |✓|
 
-### [Driver](../data_model/Driver)
+### [Driver](../data_model/driver)
 
 | | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `sha1_hash` | `sha256_hash` | `signer` |
 |---|---|---|---|---|---|---|---|---|
 | `load` |  | | |✓|✓|✓|✓|✓| |
 | `unload` |  | | | | | | | | |
 
-### [Flow](../data_model/Flow)
+### [Flow](../data_model/flow)
 
 | | `content` | `dest_fqdn` | `dest_hostname` | `dest_ip` | `dest_port` | `end_time` | `exe` | `flags` | `fqdn` | `hostname` | `image_path` | `packet_count` | `pid` | `ppid` | `proto_info` | `protocol` | `src_fqdn` | `src_hostname` | `src_ip` | `src_port` | `start_time` | `user` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -47,7 +47,7 @@ osquery exposes an operating system as a high-performance relational database. T
 | `message` |  | | | | | | | | | | | | | | | | | | | | | |
 | `start` |  | | |✓|✓| | | | | |✓| |✓| | |✓| | |✓|✓|✓|✓|
 
-### [Process](../data_model/Process)
+### [Process](../data_model/process)
 
 | | `command_line` | `current_working_directory` | `exe` | `fqdn` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signer` | `user` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
