@@ -18,7 +18,7 @@ def generateDataModelCoverage(name, coverage):
   actions = [x["name"] for x in current_model["actions"]]
   fields = [x["name"] for x in current_model["fields"]] 
   # Build the MD Table
-  header_str = "### [{0}](../data_model/{0})\n\n".format(name)
+  header_str = "### [{0}](../data_model/{0})\n\n".format(name.lower())
   # Build the MD table header
   md_header = "| |"
   for field in sorted(fields):
