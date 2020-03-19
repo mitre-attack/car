@@ -76,7 +76,7 @@ It's important to remember that ATT&CK and CAR are separate projects for good re
 
 ## Analytic Source Code Libraries
 
-Some analytics are built as source code for specific products. In these cases, code might support a broad set of detections in a way that makes it hard to describe a set of distinct analytics. For these types of analytics, rather than integrating them into the main CAR site, we've collected them under a library of implementations. Currently, the only library is [BZAR](https://github.com/mitre-attack/car/tree/master/implementations/bzar), a collection of Zeek (Bro) scripts looking primarily at SMB and RPC traffic.
+Some analytics are built as source code for specific products. In these cases, code might support a broad set of detections in a way that makes it hard to describe a set of distinct analytics. For these types of analytics, rather than integrating them into the main CAR site, we've collected them under a library of implementations. Currently, the only library is [BZAR](https://github.com/mitre-attack/bzar), a collection of Zeek (Bro) scripts looking primarily at SMB and RPC traffic.
 
 ## Contributing
 
