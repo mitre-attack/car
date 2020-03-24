@@ -26,7 +26,7 @@ implementations:
       process = search Process:Create
       wsmprovhost = filter process where (exe == "wsmprovhost.exe" and parent_exe == "svchost.exe")
     type: pseudocode
-  - description: Splunk version of the above pseudocode.
+  - description: EQL version of the above pseudocode.
     code: |-
       process where subtype.create and
         (process_name == "wsmprovhost.exe" and parent_process_name == "svchost.exe")    
