@@ -41,7 +41,7 @@ wsmprovhost = filter process where (exe == "wsmprovhost.exe" and parent_exe == "
 
 #### Eql, EQL native
 
-Splunk version of the above pseudocode.
+EQL version of the above pseudocode.
 
 
 ```
