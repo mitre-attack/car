@@ -11,8 +11,12 @@ title: "{{sensor['sensor_name']}} ({{sensor['sensor_version']}})"
 {{ sensor['sensor_description']}}
 {% endif %}
 
+{% if 'data_model_coverage' in sensor %}
 ## Data Model Coverage
-
+{% for coverage in sensor['data_model_coverage'] %}
+{{coverage}}
+{%- endfor %}
+{% endif %}
 
 {% if 'analytic_coverage' in sensor %}
 ## Analytic Coverage
