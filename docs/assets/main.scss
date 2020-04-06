@@ -44,9 +44,7 @@ div.analytics-table + table {
     }
 
     tbody tr td:last-child {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        overflow-wrap: normal;
         width: 500px;
     }
 }
