@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: Process
 analytic_type: TTP
 contributors: MITRE
+applicable_platforms: Windows, Linux, macOS
 ---
 
 Malicious actors may rename built-in commands or external tools, such as those provided by SysInternals, to better [blend in](https://attack.mitre.org/tactics/TA0005) with the environment. In those cases, the file path name is arbitrary and may blend in well with the background. If the arguments are closely inspected, it may be possible to infer what tools are running and understand what an adversary is doing. When any legitimate software shares the same command lines, it must be whitelisted according to the expected parameters.

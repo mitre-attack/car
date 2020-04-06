@@ -6,6 +6,7 @@ information_domain: Host, Network
 subtypes: File API, PCAP
 analytic_type: TTP
 contributors: MITRE
+applicable_platforms: Windows
 ---
 
 When AT.exe is used to remotely [schedule tasks](https://attack.mitre.org/techniques/T1053), Windows uses named pipes over [SMB](https://en.wikipedia.org/wiki/Server_Message_Block) to communicate with the API on the remote machine. After authentication over SMB, the Named Pipe "ATSVC" is opened, over which the JobAdd function is called. On the remote host, the job files are created by the Task Scheduler and follow the convention `C:\Windows\System32\AT<job\_id>`. Unlike [CAR-2013-05-004](CAR-2013-05-004), this analytic specifically focuses on uses of AT that can be detected between hosts, indicating remotely gained [execution](https://attack.mitre.org/tactics/TA0002).

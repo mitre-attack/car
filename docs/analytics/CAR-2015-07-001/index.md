@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: Login
 analytic_type: Situational Awareness
 contributors: MITRE
+applicable_platforms: Windows, Linux, macOS
 ---
 
 Once a credential dumper like [mimikatz](https://attack.mitre.org/software/S0002) runs, every user logged on since boot is potentially compromised, because the credentials were accessed via the memory of `lsass.exe`. When such an event occurs, this analytic will give the forensic context to identify compromised users. Those users could potentially be used in later events for additional logons.

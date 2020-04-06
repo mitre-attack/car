@@ -6,6 +6,7 @@ information_domain: Host, Network
 subtypes: Network Registry File, PCAP
 analytic_type: TTP
 contributors: MITRE
+applicable_platforms: Windows
 ---
 
 An adversary can remotely [manipulate the registry](https://attack.mitre.org/techniques/T1112) of another machine if the RemoteRegistry service is enabled and valid credentials are obtained. While the registry is remotely accessed, it can be used to prepare a [Lateral Movement](https://attack.mitre.org/tactics/TA0008) technique, [discover](https://attack.mitre.org/tactics/TA0007) the configuration of a host, achieve [Persistence](https://attack.mitre.org/tactics/TA0003), or anything that aids an adversary in achieving the mission. Like most ATT&CK techniques, this behavior can be used legitimately, and the reliability of an analytic depends on the proper identification of the pre-existing legitimate behaviors. Although this behavior is disabled in many Windows configurations, it is possible to [remotely enable](https://attack.mitre.org/techniques/T1035) the RemoteRegistry service, which can be detected with [CAR-2014-03-005](CAR-2014-03-005).

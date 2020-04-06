@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: File
 analytic_type: TTP
 contributors: Tony Lambert/Red Canary
+applicable_platforms: Windows
 ---
 
 The NTDSUtil tool may be used to dump a Microsoft Active Directory database to disk for processing with a credential access tool such as Mimikatz. This is performed by launching `ntdsutil.exe` as a privileged user with command line arguments indicating that media should be created for offline Active Directory installation and specifying a folder path. This process will create a copy of the Active Directory database, `ntds.dit`, to the specified folder path.

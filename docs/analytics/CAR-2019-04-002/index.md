@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: Process
 analytic_type: Situational Awareness
 contributors: MITRE
+applicable_platforms: Windows
 ---
 
 Regsvr32 can be used to execute arbitrary code in the context of a Windows signed binary, which can be used to bypass application whitelisting. This analytic looks for suspicious usage of the tool. It's not likely that you'll get millions of hits, but it does occur during normal activity so some form of baselining would be necessary for this to be an alerting analytic. Alternatively, it can be used for hunt by looking for new or anomalous DLLs manually.

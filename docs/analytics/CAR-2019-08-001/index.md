@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: File
 analytic_type: TTP
 contributors: Tony Lambert/Red Canary
+applicable_platforms: Windows
 ---
 
 The Windows Task Manager may be used to dump the memory space of `lsass.exe` to disk for processing with a credential access tool such as Mimikatz. This is performed by launching Task Manager as a privileged user, selecting `lsass.exe`, and clicking "Create dump file". This saves a dump file to disk with a deterministic name that includes the name of the process being dumped.

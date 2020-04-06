@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: Process
 analytic_type: Detection
 contributors: MITRE
+applicable_platforms: Windows
 ---
 
 New executables that are started as a service are suspicious. This analytic looks for anomalous service executables.

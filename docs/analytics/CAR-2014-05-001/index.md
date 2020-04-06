@@ -6,6 +6,7 @@ information_domain: Network
 subtypes: Netflow
 analytic_type: TTP, Situational Awareness
 contributors: MITRE
+applicable_platforms: Windows, Linux, macOS
 ---
 
 Microsoft Windows uses its implementation of [Distributed Computing Environment/Remote Procedure Call](https://en.wikipedia.org/wiki/DCE/RPC) (DCE/RPC), which it calls [Microsoft RPC](https://en.wikipedia.org/wiki/Microsoft_RPC), to call certain APIs remotely.

@@ -6,6 +6,7 @@ information_domain: Analytic, Host
 subtypes: Process
 analytic_type: TTP
 contributors: MITRE
+applicable_platforms: Windows, Linux, macOS
 ---
 
 Certain commands are frequently used by malicious actors and infrequently used by normal users. By looking for execution of these commands in short periods of time, we can not only see when a malicious user was on the system but also get an idea of what they were doing.

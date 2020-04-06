@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: Login
 analytic_type: Situational Awareness
 contributors: MITRE/NSA
+applicable_platforms: Windows
 ---
 
 A remote desktop logon, through [RDP](https://attack.mitre.org/techniques/T1076/), may be typical of a system administrator or IT support, but only from select workstations. Monitoring remote desktop logons and comparing to known/approved originating systems can detect lateral movement of an adversary.
