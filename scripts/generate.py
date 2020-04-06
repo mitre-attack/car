@@ -54,8 +54,8 @@ permalink: /analytics/
 ---
 <div class="analytics-table"></div>
 
-|Analytic|ATT&CK Techniques|Implementations|
-|---|---|---|
+|Analytic|ATT&CK Techniques|Implementations|Applicable Platform(s)|
+|---|---|---|---|
 """
 
 for analytic in sorted(analytics, key = lambda k: k['id']):
@@ -66,7 +66,11 @@ for analytic in sorted(analytics, key = lambda k: k['id']):
     if 'implementations' in analytic and len(analytic['implementations']) > 0: 
         imp_list =  [str.capitalize(implementation['type']) for implementation in analytic['implementations']]
         implementations = ", ".join(sorted(set(imp_list)))
-    index_content += "|[{}: {}]({})|{}|{}|\n".format(analytic['id'], analytic['title'], analytic['id'], coverage, implementations)
+    if 'platforms' in analytic and len(analytic['platforms']) > 0: 
+        applicable_platforms = ", ".join(analytic['platforms'])
+    else:
+        applicable_platforms = "N/A"
+    index_content += "|[{}: {}]({})|{}|{}|{}|\n".format(analytic['id'], analytic['title'], analytic['id'], coverage, implementations, applicable_platforms)
 
 open('../docs/analytics/index.md', 'w').write(index_content)
 
