@@ -1,6 +1,8 @@
 title: Processes Spawning cmd.exe
 submission_date: 2013/02/05
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:

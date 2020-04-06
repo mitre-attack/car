@@ -1,6 +1,8 @@
 title: Create Remote Process via WMIC
 submission_date: 2016/03/28
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:

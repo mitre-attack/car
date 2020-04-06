@@ -1,6 +1,8 @@
 title: User Activity from Stopping Windows Defensive Services
 submission_date: 2016/04/15
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:

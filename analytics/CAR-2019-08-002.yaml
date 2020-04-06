@@ -2,6 +2,8 @@
 title: Active Directory Dumping via NTDSUtil
 submission_date: 2019/08/13
 information_domain: 'Host'
+platforms:
+  - Windows
 subtypes:
   - File
 analytic_types:

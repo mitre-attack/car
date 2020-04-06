@@ -1,6 +1,8 @@
 title: RunDLL32.exe monitoring
 submission_date: 2014/03/28
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:

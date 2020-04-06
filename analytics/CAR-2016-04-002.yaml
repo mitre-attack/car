@@ -1,6 +1,10 @@
 title: User Activity from Clearing Event Logs
 submission_date: 2016/04/14
 information_domain: Host
+platforms:
+  - Windows
+  - Linux
+  - macOS
 subtypes:
   - Event Records
 analytic_types:

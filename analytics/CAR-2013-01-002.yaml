@@ -1,6 +1,8 @@
 title: Autorun Differences
 submission_date: 2013/01/25
 information_domain: 'Analytic, Host'
+platforms:
+  - Windows
 subtypes:
   - Registry
 analytic_types:

@@ -1,6 +1,8 @@
 title: Debuggers for Accessibility Applications
 submission_date: 2014/11/21
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:

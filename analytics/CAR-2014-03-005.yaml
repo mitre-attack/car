@@ -1,6 +1,8 @@
 title: Remotely Launched Executables via Services
 submission_date: 2014/03/18
 information_domain: 'Host, Network'
+platforms:
+  - Windows
 subtypes:
   - Network Process
   - Hostflow

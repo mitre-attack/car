@@ -1,6 +1,10 @@
 title: All Logins Since Last Boot
 submission_date: 2015/07/17
 information_domain: Host
+platforms:
+  - Windows
+  - Linux
+  - macOS
 subtypes:
   - Login
 analytic_types:

@@ -1,6 +1,8 @@
 title: Reg.exe called from Command Shell
 submission_date: 2013/03/28
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:

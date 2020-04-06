@@ -1,6 +1,10 @@
 title: Suspicious Arguments
 submission_date: 2013/07/05
 information_domain: Host
+platforms:
+  - Windows
+  - Linux
+  - macOS
 subtypes:
   - Process
 analytic_types:

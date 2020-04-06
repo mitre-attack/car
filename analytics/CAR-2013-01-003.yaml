@@ -1,6 +1,8 @@
 title: SMB Events Monitoring
 submission_date: 2013/01/25
 information_domain: Network
+platforms:
+  - N/A
 subtypes:
   - PCAP
 analytic_types:

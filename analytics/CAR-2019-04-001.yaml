@@ -2,6 +2,8 @@
 title: UAC Bypass
 submission_date: 2019/04/19
 information_domain: 'Host'
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:
