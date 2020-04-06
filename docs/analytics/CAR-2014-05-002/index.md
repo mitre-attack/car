@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: Process
 analytic_type: TTP
 contributors: MITRE
+applicable_platforms: Windows
 ---
 
 Windows runs the [Service Control Manager](https://en.wikipedia.org/wiki/Service_Control_Manager) (SCM) within the process `services.exe`. Windows launches services as independent processes or DLL loads within a [svchost.exe](https://en.wikipedia.org/wiki/svchost.exe) group. To be a legitimate service, a process (or DLL) must have the appropriate service entry point [SvcMain](https://msdn.microsoft.com/en-us/library/windows/desktop/ms687414.aspx). If an application does not have the entry point, then it will timeout (default is 30 seconds) and the process will be killed.
@@ -61,6 +62,7 @@ process where subtype.create and
   (process_name == "cmd.exe" and parent_process_name == "services.exe")
 ```
 
+
 #### Dnif, Sysmon native
 
 DNIF version of the above pseudocode.
@@ -69,3 +71,7 @@ DNIF version of the above pseudocode.
 ```
 _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=cmd.exe AND $ParentProcess=regex(.*services.exe.*)i limit 30
 ```
+
+
+
+

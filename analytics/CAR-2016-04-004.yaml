@@ -1,6 +1,8 @@
 title: Successful Local Account Login
 submission_date: 2016/04/18
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Login
 analytic_types:

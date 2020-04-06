@@ -6,6 +6,7 @@ information_domain: {{analytic['information_domain']}}
 subtypes: {{analytic['subtypes']|join(', ')}}
 analytic_type: {{analytic['analytic_types']|join(', ')}}
 contributors: {{analytic['contributors']|join(', ')}}
+{% if 'platforms' in analytic %}applicable_platforms: {{analytic['platforms']|join(', ')}}{% else %}applicable_platforms: N/A{% endif %}
 ---
 
 {{analytic['description']}}

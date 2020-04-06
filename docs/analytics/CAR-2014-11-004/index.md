@@ -6,6 +6,7 @@ information_domain: Host, Network
 subtypes: Process
 analytic_type: TTP
 contributors: MITRE
+applicable_platforms: Windows
 ---
 
 According to [ATT&CK](https://attack.mitre.org/), [PowerShell](https://attack.mitre.org/techniques/T1086/) can be used over WinRM to remotely run commands on a host. When a remote PowerShell session starts, svchost.exe executes wsmprovhost.exe

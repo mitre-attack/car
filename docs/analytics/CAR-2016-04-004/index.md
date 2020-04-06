@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: Login
 analytic_type: Situational Awareness
 contributors: MITRE/NSA
+applicable_platforms: Windows
 ---
 
 The successful use of [Pass The Hash](https://attack.mitre.org/techniques/T1075/) for lateral movement between workstations would trigger event ID 4624, with an event level of Information, from the security log. This behavior would be a LogonType of 3 using NTLM authentication where it is not a domain logon and not the ANONYMOUS LOGON account.

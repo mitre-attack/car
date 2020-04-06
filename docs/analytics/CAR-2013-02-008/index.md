@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: Login
 analytic_type: Situational Awareness
 contributors: MITRE
+applicable_platforms: Windows, Linux, macOS
 ---
 
 Multiple users logged into a single machine at the same time, or even within the same hour, do not typically occur in networks we have observed.

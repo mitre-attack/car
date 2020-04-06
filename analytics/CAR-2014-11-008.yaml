@@ -1,6 +1,8 @@
 title: Command Launched from WinLogon
 submission_date: 2014/11/19
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:

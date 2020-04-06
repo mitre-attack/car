@@ -6,6 +6,7 @@ information_domain: Host, Network
 subtypes: Network Process, Hostflow
 analytic_type: TTP
 contributors: MITRE
+applicable_platforms: Windows
 ---
 
 There are several ways to cause code to [execute](https://attack.mitre.org/tactics/TA0002) on a remote host. One of the most common methods is via the Windows [Service Control Manager](https://en.wikipedia.org/wiki/Service_Control_Manager) (SCM), which allows authorized users to remotely create and modify services. Several tools, such as [PsExec](https://attack.mitre.org/software/S0029), use this functionality. 

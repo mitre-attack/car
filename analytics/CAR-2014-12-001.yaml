@@ -1,6 +1,8 @@
 title: Remotely Launched Executables via WMI
 submission_date: 2014/12/02
 information_domain: 'Host, Network'
+platforms:
+  - Windows
 subtypes:
   - PCAP
 analytic_types:

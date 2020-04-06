@@ -1,6 +1,8 @@
 title: Execution with schtasks
 submission_date: 2013/08/07
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:

@@ -1,6 +1,8 @@
 title: DLL Injection via Load Library
 submission_date: 2013/10/07
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process DLL
 analytic_types:

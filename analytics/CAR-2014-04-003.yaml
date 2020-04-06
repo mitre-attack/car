@@ -1,6 +1,8 @@
 title: Powershell Execution
 submission_date: 2014/04/11
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:

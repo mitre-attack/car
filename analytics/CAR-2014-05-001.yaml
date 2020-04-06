@@ -1,6 +1,10 @@
 title: RPC Activity
 submission_date: 2014/05/01
 information_domain: Network
+platforms:
+  - Windows
+  - Linux
+  - macOS
 subtypes:
   - Netflow
 analytic_types:

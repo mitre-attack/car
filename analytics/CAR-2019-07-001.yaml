@@ -2,6 +2,10 @@
 title: Access Permission Modification
 submission_date: 2019/07/08
 information_domain: 'Host'
+platforms:
+  - Windows
+  - Linux
+  - macOS
 subtypes:
   - File
 analytic_types:

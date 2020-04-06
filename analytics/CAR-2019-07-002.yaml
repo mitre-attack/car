@@ -2,6 +2,8 @@
 title: Lsass Process Dump via Procdump
 submission_date: 2019/07/29
 information_domain: 'Host'
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:

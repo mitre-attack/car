@@ -1,6 +1,8 @@
 title: Service Binary Modifications
 submission_date: 2014/02/14
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Registry File Process
 analytic_types:

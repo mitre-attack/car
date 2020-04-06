@@ -1,6 +1,8 @@
 title: Remote Desktop Logon
 submission_date: 2016/04/19
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Login
 analytic_types:

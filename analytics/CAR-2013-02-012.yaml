@@ -1,6 +1,10 @@
 title: User Logged in to Multiple Hosts
 submission_date: 2013/02/27
 information_domain: Host
+platforms:
+  - Windows
+  - Linux
+  - macOS
 subtypes:
   - Login
 analytic_types:

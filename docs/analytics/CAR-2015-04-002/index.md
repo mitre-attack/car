@@ -6,6 +6,7 @@ information_domain: Host, Network
 subtypes: Network API RPC, PCAP
 analytic_type: TTP
 contributors: MITRE
+applicable_platforms: Windows
 ---
 
 An adversary can [move laterally](https://attack.mitre.org/tactics/TA0008) using the `schtasks` command to remotely [schedule tasks](https://attack.mitre.org/techniques/T1053). Although these events can be detected with command line analytics [CAR-2013-08-001](https://car.mitre.org/wiki/CAR-2013-08-001), it is possible for an adversary to use the API directly, via the Task Scheduler GUI or with a scripting language such as [PowerShell](https://attack.mitre.org/techniques/T1086). In this cases, an additional source of data becomes necessary to detect adversarial behavior. When scheduled tasks are created remotely, Windows uses RPC (135/tcp) to communicate with the Task Scheduler on the remote machine. Once an RPC connection is established ([CAR-2014-05-001](CAR-2014-05-001)), the client communicates with the Scheduled Tasks endpoint, which runs within the service group netsvcs. With packet capture and the right packet decoders or byte-stream based signatures, remote invocations of these functions can be identified.

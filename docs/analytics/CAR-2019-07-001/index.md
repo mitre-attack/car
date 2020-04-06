@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: File
 analytic_type: Situational Awareness
 contributors: Meric Degirmenci, MITRE
+applicable_platforms: Windows, Linux, macOS
 ---
 
 Adversaries sometimes modify object access rights at the operating system level. There are varying motivations behind this action -  they may not want some files/objects to be changed on systems for persistence reasons and therefore provide admin only rights; also, they may want files to be accessible with lower levels of permissions.

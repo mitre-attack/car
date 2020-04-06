@@ -6,6 +6,7 @@ information_domain: Host, Network
 subtypes: PCAP
 analytic_type: TTP
 contributors: MITRE
+applicable_platforms: Windows
 ---
 
 Adversaries can use [Windows Management Instrumentation (WMI)](https://attack.mitre.org/techniques/T1047) to move laterally by launching executables remotely. For adversaries to achieve this, they must open a WMI connection to a remote host. This RPC activity is currently detected by [CAR-2014-11-007](CAR-2014-11-007). After the WMI connection has been initialized, a process can be remotely launched using the command: `wmic /node:"<hostname>" process call create "<command line>"`, which is detected via [CAR-2016-03-002](CAR-2016-03-002).

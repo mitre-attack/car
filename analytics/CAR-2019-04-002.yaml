@@ -2,6 +2,8 @@
 title: Generic Regsvr32
 submission_date: 2019/04/24
 information_domain: 'Host'
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:

@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: Process
 analytic_type: Anomaly, TTP
 contributors: MITRE
+applicable_platforms: Windows
 ---
 
 Many programs create command prompts as part of their normal operation including malware used by attackers. This analytic attempts to identify suspicious programs spawning `cmd.exe` by looking for programs that do not normally create `cmd.exe`.

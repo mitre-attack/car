@@ -1,6 +1,10 @@
 title: User Login Activity Monitoring
 submission_date: 2013/10/03
 information_domain: 'Host, Network'
+platforms: 
+  - Windows
+  - Linux
+  - macOS
 subtypes:
   - Login
   - Netflow

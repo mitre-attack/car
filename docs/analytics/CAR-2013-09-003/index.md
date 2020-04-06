@@ -6,6 +6,7 @@ information_domain: Network
 subtypes: PCAP
 analytic_type: Situational Awareness
 contributors: MITRE
+applicable_platforms: N/A
 ---
 
 Account usage within SMB can be used to identify compromised credentials, and the hosts accessed with them.

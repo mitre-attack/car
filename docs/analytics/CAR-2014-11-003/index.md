@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: Process
 analytic_type: TTP
 contributors: MITRE
+applicable_platforms: Windows
 ---
 
 The Windows Registry location `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options` allows for parameters to be set for applications during execution. One feature used by malicious actors is the "Debugger" option. When a key has this value enabled, a Debugging command line can be specified. Windows will launch the Debugging command line, and pass the original command line in as an argument. Adversaries can set a Debugger for [Accessibility Applications](https://attack.mitre.org/techniques/T1015). The analytic looks for the original command line as an argument to the Debugger. When the strings "sethc.exe", "utilman.exe", "osk.exe", "narrator.exe", and "Magnify.exe" are detected in the arguments, but not as the main executable, it is very likely that a Debugger is set. 
