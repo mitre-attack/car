@@ -6,7 +6,7 @@ This repository is the way to contribute new analytics, data model changes, or s
 
 ## Where is everything?
 
-Analytics are in the `analytics` directory as YAML files. The website is built automatically from that structured content. Other content (sensors, the data model, etc.) are all in the `docs` folder. We hope to have more structured content to represent the data model and sensors but just aren't there yet. Please let us know if you're interested in helping out with that aspect!
+Analytics are in the `analytics` directory as YAML files; the same is true for the YAML representations of `sensors` and the `data_model`. The website is built automatically from that structured content. Other content is all in the `docs` folder. 
 
 The [implementations](implementations) directory contains libraries of analytics that are best represented as source code for specific tools. As an example, [BZAR](implementations/bzar) (Bro/Zeek ATT&CK-Based Analytics and Reporting) is a library of source code for Zeek (previously Bro).
 
