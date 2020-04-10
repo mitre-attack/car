@@ -50,11 +50,11 @@ analytics_files = glob.glob(path.join(path.dirname(__file__), "..", "analytics",
 analytics = [yaml.load(open(analytic_file).read()) for analytic_file in analytics_files]
 
 # Get all sensor mappings and load as a list of dicts
-mapping_files = glob.glob(path.join(path.dirname(__file__), "..", "docs", "sensors", "*.yaml"))
+mapping_files = glob.glob(path.join(path.dirname(__file__), "..", "sensors", "*.yaml"))
 mappings = [yaml.load(open(mapping_file).read()) for mapping_file in mapping_files]
 
 # Get all data models and load as list of dicts
-data_model_files = glob.glob(path.join(path.dirname(__file__), "..", "docs", "data_model", "*.yaml"))
+data_model_files = glob.glob(path.join(path.dirname(__file__), "..", "data_model", "*.yaml"))
 data_models = [yaml.load(open(data_model_file).read()) for data_model_file in data_model_files]
 
 # Parse each analytic to find its data model references (if any)
