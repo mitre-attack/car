@@ -1,0 +1,84 @@
+---
+title: Shadow Copy Deletion
+submission_date: 2020/04/10
+information_domain: 'Host'
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+id: CAR-2020-04-001
+description: |-
+  The Windows [Volume Shadow Copy Service](https://docs.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service) is a built-in OS feature that can be used to create backup copies of files and volumes.
+
+  Adversaries may delete these shadow copies, typically through the usage of system utilities such as vssadmin.exe or wmic.exe, in order prevent file and data recovery. This technique is commonly employed for this purpose by ransomware. 
+coverage:
+  - technique: T1490
+    tactics:
+      - TA0040
+    coverage: Medium
+implementations:
+  - name: Vssadmin.exe delete shadows
+    description: This pseudocode looks for process event creates around the vssadmin.exe utility with a specific set of command-line parameters for deleting shadow copies.
+    code: |-
+      processes = search Process:Create
+      vssadmin_processes = filter processes where (
+        command_line = "*delete shadows*"  and
+        image_path = "C:\Windows\System32\vssadmin.exe")
+      output vssadmin_processes
+    type: Pseudocode
+  - name: WMIC shadowcopy delete
+    description: This pseudocode looks for process event creates around wmic.exe with a specific set of command-line parameters for deleting shadow copies.
+    code: |-
+      processes = search Process:Create
+      wmic_processes = filter processes where (
+        command_line = "*shadowcopy delete*"  and
+        image_path = "C:\Windows\*\wmic.exe")
+      output wmic_processes
+    type: Pseudocode
+  - name: Vssadmin.exe delete shadows
+    description: Splunk version of the CAR pseudocode.
+    code: |-
+      index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\System32\\vssadmin.exe" CommandLine="*delete shadows*"
+    type: Splunk
+    data_model: Sysmon native
+  - name: WMIC shadowcopy delete
+    description: Splunk version of the CAR pseudocode.
+    code: |-
+      index=client EventCode=1 Image="C:\\Windows\\*\\wmic.exe" CommandLine="*shadowcopy delete*"
+    type: Splunk
+    data_model: Sysmon native
+  - name: Vssadmin.exe delete shadows
+    description: [EQL](https://eqllib.readthedocs.io/en/latest/analytics/d3a327b6-c517-43f2-8e97-1f06b7370705.html) version of the CAR pseudocode.
+    type: EQL
+    data_model: EQL native
+  - name: WMIC shadowcopy delete
+    description: [EQL](https://eqllib.readthedocs.io/en/latest/analytics/7163f069-a756-4edc-a9f2-28546dcb04b0.html) version of the CAR pseudocode.
+    type: EQL
+    data_model: EQL native
+  - name: Vssadmin.exe delete shadows
+    description: [Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_shadow_copies_deletion.yml) version of the CAR pseudocode.
+    type: Sigma
+    data_model: Sigma native
+  - name: WMIC shadowcopy delete
+    description: [Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_shadow_copies_deletion.yml) version of the CAR pseudocode.
+    type: Sigma
+    data_model: Sigma native
+data_model_references:
+  - process/create/image_path
+  - process/create/command_line
+references:
+  - [Red Canary](https://redcanary.com/blog/its-all-fun-and-games-until-ransomware-deletes-the-shadow-copies/)
+  
+
+
+
+
+
+
+
+
+
+
+
