@@ -22,6 +22,8 @@ Information about the latest CAR updates and changes can be found in this sectio
 ### April 2020
 * Added Applicable Platforms to all analytics. This captures the set of platforms the analytic may be applicable for; note that this does not necessarily mean that an implementation for a particular platform exists for a given analytic.
 * Added YAML for [sensors](https://github.com/mitre-attack/car/tree/master/sensors) (those added recently) and [data models](https://github.com/mitre-attack/car/tree/master/data_model) on Github.
+* New analytics added
+  * [CAR-2020-04-001: Shadow Copy Deletion](/analytics/CAR-2020-04-001)
 
 ### February 2020
 * Added [OSQuery 4.1.2](/sensors/osquery_4.1.2) sensor with data model mappings and CAR analytic coverage.
