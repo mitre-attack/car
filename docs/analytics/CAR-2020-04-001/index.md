@@ -5,7 +5,6 @@ submission_date: 2020/04/10
 information_domain: Host
 subtypes: Process
 analytic_type: TTP
-contributors: 
 applicable_platforms: Windows
 ---
 
