@@ -81,7 +81,7 @@ Splunk version of the CAR pseudocode.
 
 
 ```
-index=client EventCode=1 Image="C:\\Windows\\*\\wmic.exe" CommandLine="*shadowcopy delete*"
+index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\wmic.exe" CommandLine="*shadowcopy delete*"
 ```
 
 
