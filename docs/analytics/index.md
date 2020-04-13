@@ -59,3 +59,4 @@ permalink: /analytics/
 |[CAR-2019-07-002: Lsass Process Dump via Procdump](CAR-2019-07-002)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Eql, Pseudocode, Sigma, Splunk|Windows|
 |[CAR-2019-08-001: Credential Dumping via Windows Task Manager](CAR-2019-08-001)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Eql, Pseudocode, Splunk|Windows|
 |[CAR-2019-08-002: Active Directory Dumping via NTDSUtil](CAR-2019-08-002)|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|Eql, Pseudocode, Splunk|Windows|
+|[CAR-2020-04-001: Shadow Copy Deletion](CAR-2020-04-001)|[Inhibit System Recovery](https://attack.mitre.org/techniques/T1490/)|Eql, Pseudocode, Sigma, Splunk|Windows|
