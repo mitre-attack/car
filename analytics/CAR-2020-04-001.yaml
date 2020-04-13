@@ -46,7 +46,7 @@ implementations:
   - name: WMIC shadowcopy delete
     description: Splunk version of the CAR pseudocode.
     code: |-
-      index=client EventCode=1 Image="C:\\Windows\\*\\wmic.exe" CommandLine="*shadowcopy delete*"
+      index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\wmic.exe" CommandLine="*shadowcopy delete*"
     type: Splunk
     data_model: Sysmon native
   - name: Vssadmin.exe delete shadows
@@ -57,12 +57,8 @@ implementations:
     description: An [EQL](https://eqllib.readthedocs.io/en/latest/analytics/7163f069-a756-4edc-a9f2-28546dcb04b0.html) version of the CAR pseudocode.
     type: EQL
     data_model: EQL native
-  - name: Vssadmin.exe delete shadows
-    description: A [Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_shadow_copies_deletion.yml) version of the CAR pseudocode.
-    type: Sigma
-    data_model: Sigma native
-  - name: WMIC shadowcopy delete
-    description: A [Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_shadow_copies_deletion.yml) version of the CAR pseudocode.
+  - name: Vssadmin.exe delete shadows & WMIC shadowcopy delete
+    description: A [Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_shadow_copies_deletion.yml) version of the CAR pseudocode for both vssadmin.exe and wmic.exe approaches.
     type: Sigma
     data_model: Sigma native
 data_model_references:
