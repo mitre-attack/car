@@ -99,17 +99,10 @@ An [EQL](https://eqllib.readthedocs.io/en/latest/analytics/7163f069-a756-4edc-a9
 
 
 
-#### Vssadmin.exe delete shadows (Sigma, Sigma native)
+#### Vssadmin.exe delete shadows & WMIC shadowcopy delete (Sigma, Sigma native)
 
 
-A [Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_shadow_copies_deletion.yml) version of the CAR pseudocode.
-
-
-
-#### WMIC shadowcopy delete (Sigma, Sigma native)
-
-
-A [Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_shadow_copies_deletion.yml) version of the CAR pseudocode.
+A [Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_shadow_copies_deletion.yml) version of the CAR pseudocode for both vssadmin.exe and wmic.exe approaches.
 
 
 
