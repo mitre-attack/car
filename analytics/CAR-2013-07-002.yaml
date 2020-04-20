@@ -28,10 +28,12 @@ description: |-
   The time of the Connection, the source, the destination, and the user name used
 
 coverage:
-  - technique: T1076
+  - technique: T1021
     tactics:
       - TA0008
-    coverage: High
+    subtechniques:
+      - T1021.001
+    coverage: Medium
 implementations:
   - code: |-
       flow_start = search Flow:Start

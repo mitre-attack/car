@@ -3,8 +3,6 @@ submission_date: 2014/05/01
 information_domain: Network
 platforms:
   - Windows
-  - Linux
-  - macOS
 subtypes:
   - Netflow
 analytic_types:
@@ -31,6 +29,10 @@ coverage:
   - technique: T1021
     tactics:
       - TA0008
+    subtechniques:
+      - T1021.002
+      - T1021.003
+      - T1021.006
     coverage: Moderate
 implementations:
   - description: 'Traffic to the RPC Endpoint Mapper will always have the destination port of 135. Assuming success, RPC traffic will continue to the endpoint. The endpoint and the client both bind to dynamically assigned ports (on Windows, this is typically greater than 49152). The traffic between the client and endpoint can be detected by looking at traffic to 135 followed by traffic where the source and destination ports are at least 49152. '

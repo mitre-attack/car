@@ -18,23 +18,25 @@ description: |-
 
   The Service Name and approximate time in which changes occurred on each host
 coverage:
-  - technique: T1050
+  - technique: T1543
     tactics:
       - TA0003
       - TA0004
+    subtechniques:
+      - T1543.003
     coverage: Moderate
-  - technique: T1031
-    tactics:
-      - TA0003
-    coverage: Moderate
-  - technique: T1044
+  - technique: T1574
     tactics:
       - TA0003
       - TA0004
+    subtechniques:
+      - T1574.010
     coverage: Moderate
-  - technique: T1035
+  - technique: T1569
     tactics:
       - TA0002
+    subtechniques:
+      - T1569.002
     coverage: Moderate
 implementations:
   - description: 'Look for events where a file was created and then later run as a service. In these cases, a new service has been created or the binary has been modified. Many programs, such as `msiexec.exe`, do these behaviors legitimately and can be used to help validate legitimate service creations/modifications.'

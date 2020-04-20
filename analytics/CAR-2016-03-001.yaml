@@ -35,10 +35,16 @@ coverage:
   - technique: T1087
     tactics:
       - TA0007
+    subtechniques:
+      - T1087.001
+      - T1087.002
     coverage: Moderate
   - technique: T1069
     tactics:
       - TA0007
+    subtechniques:
+      - T1069.001
+      - T1069.002
     coverage: Moderate
   - technique: T1016
     tactics:

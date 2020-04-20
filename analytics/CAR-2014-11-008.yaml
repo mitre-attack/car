@@ -21,10 +21,12 @@ description: |-
   -   `narrator.exe` reads screen text over audio
   -   `magnify.exe` magnifies the view of the screen near the cursor
 coverage:
-  - technique: T1015
+  - technique: T1546
     tactics:
       - TA0004
       - TA0003
+    subtechniques:
+      - T1546.008
     coverage: Moderate
 implementations:
   - description: 'Look for instances of processes where the parent executable is winlogon.exe and the child is an instance of a command prompt. '

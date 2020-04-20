@@ -18,17 +18,17 @@ description: |-
 
   This compound behavior can be detected by looking for `services.exe` receiving a network connection and immediately spawning a child process.
 coverage:
-  - technique: T1050
+  - technique: T1543
     tactics:
       - TA0003
+    subtechniques:
+      - T1543.003
     coverage: Moderate
-  - technique: T1031
-    tactics:
-      - TA0003
-    coverage: Moderate
-  - technique: T1035
+  - technique: T1569
     tactics:
       - TA0002
+    subtechniques:
+      - T1569.002
     coverage: Moderate
 implementations:
   - description: 'Look for processes launched from `services.exe` within 1 second of services.exe receiving a network connection.'

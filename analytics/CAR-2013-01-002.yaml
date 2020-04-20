@@ -16,68 +16,55 @@ description: |-
 
   Utilizes the Sysinternals autoruns tool (ignoring validated Microsoft entries). Primarily not a detection analytic by itself but through analysis of results by an analyst can be used for such. Building another analytic on top of this one identifying unusual entries would likely be a beneficial alternative.
 coverage:
-  - technique: T1031
+  - technique: T1543
     tactics:
       - TA0003
-    coverage: Moderate
-  - technique: T1050
-    tactics:
-      - TA0003
+    subtechniques:
+      - T1543.003
     coverage: Moderate
   - technique: T1053
     tactics:
       - TA0003
+    subtechniques:
+      - T1053.005
     coverage: Moderate
-  - technique: T1013
+  - technique: T1547
     tactics:
       - TA0003
+    subtechniques:
+      - T1547.001
+      - T1547.010
+      - T1547.004
     coverage: Moderate
-  - technique: T1060
-    tactics:
-      - TA0003
-    coverage: Moderate
-  - technique: T1034
+  - technique: T1574
     tactics:
       - TA0003
       - TA0004
+    subtechniques:
+      - T1574.007
+      - T1574.008
+      - T1574.009
+      - T1574.010
+      - T1574.011
     coverage: Moderate
-  - technique: T1015
+  - technique: T1546
     tactics:
       - TA0004
       - TA0003
+    subtechniques:
+      - T1546.001
+      - T1546.003
+      - T1546.008
+      - T1546.010
     coverage: Moderate
   - technique: T1112
     tactics:
       - TA0003
       - TA0002
     coverage: Moderate
-  - technique: T1058
-    tactics:
-      - TA0003
-      - TA0002
-    coverage: Moderate
-  - technique: T1084
-    tactics:
-      - TA0003
-    coverage: Moderate
-  - technique: T1044
-    tactics:
-      - TA0004
-      - TA0003
-    coverage: Moderate
-  - technique: T1042
-    tactics:
-      - TA0003
-    coverage: Moderate
   - technique: T1037
     tactics:
       - TA0003
-    coverage: Moderate
-  - technique: T1004
-    tactics:
-      - TA0003
-    coverage: Moderate
-  - technique: T1103
-    tactics:
-      - TA0003
+    subtechniques:
+      - T1037.001
     coverage: Moderate

@@ -15,13 +15,17 @@ description: |-
 
   For this to work, certain registry keys must be set, and the WinRM service must be enabled. The PowerShell command `Enter-PSSession -ComputerName \<RemoteHost\>` creates a remote PowerShell session.
 coverage:
-  - technique: T1086
+  - technique: T1059
     tactics:
       - TA0002
+    subtechniques:
+      - T1059.001
     coverage: Moderate
-  - technique: T1028
+  - technique: T1021
     tactics:
       - TA0008
+    subtechniques:
+      - T1021.006
     coverage: Moderate
 implementations:
   - code: |-

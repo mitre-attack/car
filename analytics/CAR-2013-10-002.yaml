@@ -22,10 +22,14 @@ coverage:
   - technique: T1055
     tactics:
       - TA0005
+    subtechniques:
+      - T1055.001
     coverage: Moderate
-  - technique: T1088
+  - technique: T1548
     tactics:
       - TA0004
+    subtechniques:
+      - T1548.002
     coverage: Moderate
 implementations:
   - description: 'Search for remote thread creations that start at LoadLibraryA or LoadLibraryW. Depending on the tool, it may provide additional information about the DLL string that is an argument to the function. If there is any security software that legitimately injects DLLs, it must be carefully whitelisted. '

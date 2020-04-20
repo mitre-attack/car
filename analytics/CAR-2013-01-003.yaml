@@ -21,9 +21,11 @@ coverage:
     tactics:
       - TA0009
     coverage: Moderate
-  - technique: T1077
+  - technique: T1021
     tactics:
       - TA0008
+    subtechniques:
+      - T1021.002
     coverage: Moderate
 implementations:
   - description: 'Although there may be more native ways to detect detailed SMB events on the host, they can be extracted out of network traffic. With the right protocol decoders, port 445 traffic can be filtered and even the file path (relative to the share) can be retrieved. '

@@ -24,6 +24,8 @@ coverage:
   - technique: T1036
     tactics:
       - TA0005
+    subtechniques:
+      - T1036.003
     coverage: Moderate
 implementations:
   - name: Basic Query

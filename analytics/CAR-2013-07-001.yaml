@@ -30,11 +30,9 @@ coverage:
   - technique: T1003
     tactics:
       - TA0006
-    coverage: Moderate
-  - technique: T1036
-    tactics:
-      - TA0005
-    coverage: Moderate
+    subtechniques:
+      - T1003.001
+    coverage: Low
   - technique: T1021
     tactics:
       - TA0008

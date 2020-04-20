@@ -21,6 +21,9 @@ coverage:
   - technique: T1078
     tactics:
       - TA0001
+    subtechniques:
+      - T1078.002
+      - T1078.003
     coverage: Low
 implementations:
   - code: |-

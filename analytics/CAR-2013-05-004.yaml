@@ -19,6 +19,8 @@ coverage:
       - TA0002
       - TA0003
       - TA0004
+    subtechniques:
+      - T1053.002
     coverage: Moderate
 implementations:
   - description: 'Instances of the process `at.exe` running imply the querying or creation of tasks. Although the command_line is not essential for the analytic to run, it is critical when identifying the command that was scheduled.'

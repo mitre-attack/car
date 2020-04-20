@@ -18,7 +18,7 @@ description: |-
 
   Monitoring SMB write requests still creates some noise, particulary with named pipes. As a result, SMB is now split between writing named pipes and writing other files.
 coverage:
-  - technique: T1105
+  - technique: T1570
     tactics:
       - TA0008
     coverage: Low

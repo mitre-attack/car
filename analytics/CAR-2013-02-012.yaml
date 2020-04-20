@@ -24,4 +24,7 @@ coverage:
   - technique: T1078
     tactics:
       - TA0008
+    subtechniques:
+       - T1078.002
+       - T1078.003
     coverage: Moderate

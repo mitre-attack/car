@@ -17,13 +17,17 @@ description: |-
   -   `net use`
   -   `sc start`
 coverage:
-  - technique: T1086
+  - technique: T1059
     tactics:
       - TA0002
+    subtechniques:
+      - T1059.001
     coverage: High
-  - technique: T1064
+  - technique: T1059
     tactics:
       - TA0005
+    subtechniques:
+      - T1059.001
     coverage: Moderate
 implementations:
   - description: 'Look for versions of `PowerShell` that were not launched interactively.'

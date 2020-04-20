@@ -16,10 +16,11 @@ description: |-
 
   Squiblydoo was first written up by Casey Smith at Red Canary, though that blog post is no longer accessible.
 coverage:
-  - technique: T1117
+  - technique: T1218
     tactics:
       - TA0005
-      - TA0002
+    subtechniques:
+      - T1218.010
     coverage: Moderate
 implementations:
   - description: This looks for any and all usage of the scrobj DLL, which is what is used to run COM scriptlets, so it'll detect both loading from network as well as filesystem. This will have almost zero false positives so is suitable for alerting.

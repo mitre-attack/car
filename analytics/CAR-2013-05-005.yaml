@@ -18,13 +18,18 @@ description: |-
 
   This can possibly extend to more copy protocols in order to widen its reach, or it could be tuned more finely to focus on specific program run locations (e.g. `%SYSTEMROOT%\system32`) to gain a higher detection rate.
 coverage:
-  - technique: T1077
+  - technique: T1021
     tactics:
       - TA0008
+    subtechniques:
+      - T1021.002
     coverage: Moderate
   - technique: T1078
     tactics:
       - TA0005
+    subtechniques:
+      - T1078.002
+      - T1078.003
     coverage: Moderate
   - technique: T1105
     tactics:

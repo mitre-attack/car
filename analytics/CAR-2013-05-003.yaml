@@ -21,13 +21,18 @@ coverage:
     tactics:
       - TA0008
     coverage: High
-  - technique: T1077
+  - technique: T1021
     tactics:
       - TA0008
+    subtechniques:
+      - T1021.002
     coverage: Moderate
   - technique: T1078
     tactics:
       - TA0005
+    subtechniques:
+      - T1078.002
+      - T1078.003
     coverage: Moderate
 implementations:
   - code: |-

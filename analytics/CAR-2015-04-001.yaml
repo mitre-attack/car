@@ -19,6 +19,8 @@ coverage:
   - technique: T1053
     tactics:
       - TA0002
+    subtechniques:
+      - T1053.002
     coverage: Moderate
 implementations:
   - description: 'To detect AT via network traffic, a sensor is needed that has the ability to extract and decode PCAP information. Specifically, it needs to properly decode SMB and the functions that are implemented over it via NamedPipes. If a sensor meets these criteria, then the PCAP data needs to search for instances of the command `JobAdd` over the pipe `ATSVC`, which is all implemented over Windows SMB 445/tcp.'
