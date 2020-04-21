@@ -17,7 +17,7 @@ coverage:
   - technique: T1548
     tactics:
       - TA0005
-    techniques:
+    subtechniques:
       - T1548.002
     coverage: Low
 implementations:
