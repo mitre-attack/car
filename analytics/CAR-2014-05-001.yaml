@@ -20,9 +20,9 @@ description: |-
 
   According to ATT&CK, adversaries frequently use RPC connections to remotely
 
-  -   [Create](https://attack.mitre.org/techniques/T1050), [modify](https://attack.mitre.org/techniques/T1031), and [manipulate](https://attack.mitre.org/techniques/T1035) sevices ([CAR-2014-03-005](CAR-2014-03-005))
-  -   [Schedule Tasks](https://attack.mitre.org/techniques/T1053) ([CAR-2015-04-002](CAR-2015-04-002))
-  -   Query ([CAR-2014-11-007](CAR-2014-11-007)) and Invoke ([CAR-2014-12-001](CAR-2014-12-001)) - [Windows Management Instrumentation (WMI)](https://attack.mitre.org/techniques/T1047)
+  -   [Create/modify](https://attack.mitre.org/beta/techniques/T1543/003) and [execute](https://attack.mitre.org/beta/techniques/T1569/002) services ([CAR-2014-03-005](CAR-2014-03-005))
+  -   [Schedule Tasks](https://attack.mitre.org/beta/techniques/T1053) ([CAR-2015-04-002](CAR-2015-04-002))
+  -   Query ([CAR-2014-11-007](CAR-2014-11-007)) and Invoke ([CAR-2014-12-001](CAR-2014-12-001)) - [Windows Management Instrumentation (WMI)](https://attack.mitre.org/beta/techniques/T1047)
 
   Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/articles/win_net_srv/well_known_named_pipes.html).
 coverage:
