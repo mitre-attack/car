@@ -20,7 +20,7 @@ coverage:
     tactics:
       - TA0006
     subtechniques:
-      - TA1003.001
+      - T1003.001
     coverage: Low
 implementations:
   - name: Procdump - File Create
