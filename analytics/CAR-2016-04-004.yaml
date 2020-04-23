@@ -16,7 +16,7 @@ coverage:
     tactics:
       - TA0008
     subtechniques:
-      - T1550.02
+      - T1550.002
     coverage: Moderate
 implementations:
   - description: 'This analytic will look for remote logins, using a non domain login, from one host to another, using NTL authentication where the account is not "ANONYMOUS LOGON" '
