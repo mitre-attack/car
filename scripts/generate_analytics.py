@@ -109,12 +109,17 @@ for tid in table_techniques:
                     break
     # Write the base technique to the table
     none_str = ""
+    none_sub_str = "(N/A - see below)"
     if none_bucket:
         none_str += "<ul>"
         for analytic in sorted(none_bucket, key = lambda k: k['id']):
             none_str += "<li>[{}: {}]({})</li>".format(analytic['id'], analytic['title'], analytic['id'])
         none_str += "</ul>"
-    subtechnique_table += "|[{}](https://attack.mitre.org/beta/techniques/{}/)||{}|\n".format(techniques[tid],tid,none_str)
+        none_sub_str = "(N/A - technique only)"
+    else:
+        none_str = "(N/A - see below)"
+    if len(sub_bucket.keys()) > 1:
+      subtechnique_table += "|[{}](https://attack.mitre.org/beta/techniques/{}/)|{}|{}|\n".format(techniques[tid],tid,none_sub_str,none_str)
     # Write the subtechniques to the table
     if sub_bucket:
         for sub_tid, car_list in sub_bucket.items():
@@ -124,10 +129,14 @@ for tid in table_techniques:
                 sub_str += "<li>[{}: {}]({})</li>".format(analytic['id'], analytic['title'], analytic['id'])
             sub_str += "</ul>"
             # Write the sub-technique entry to the table
-            subtechnique_table += "||[{}](https://attack.mitre.org/beta/techniques/{}/{}/)|{}|\n".format(techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
+            # Corner case where there is only one sub-technique and no technique-only analytics
+            if not none_bucket and len(sub_bucket.keys()) == 1:
+              subtechnique_table += "|[{}](https://attack.mitre.org/beta/techniques/{}/)|[{}](https://attack.mitre.org/beta/techniques/{}/{}/)|{}|\n".format(techniques[tid],tid,techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
+            else:
+              subtechnique_table += "|...|[{}](https://attack.mitre.org/beta/techniques/{}/{}/)|{}|\n".format(techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
     # Write a horizontal rule to split up techniques
-    if table_techniques.index(tid) != len(table_techniques) - 1:
-        subtechnique_table += "||||\n"
+    #if table_techniques.index(tid) != len(table_techniques) - 1:
+    #    subtechnique_table += "||||\n"
 
 # Write the tables
 index_file = open('../docs/analytics/index.md', 'w')
