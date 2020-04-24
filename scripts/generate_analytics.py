@@ -133,7 +133,7 @@ for tid in table_techniques:
             if not none_bucket and len(sub_bucket.keys()) == 1:
               subtechnique_table += "|[{}](https://attack.mitre.org/beta/techniques/{}/)|[{}](https://attack.mitre.org/beta/techniques/{}/{}/)|{}|\n".format(techniques[tid],tid,techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
             else:
-              subtechnique_table += "|...|[{}](https://attack.mitre.org/beta/techniques/{}/{}/)|{}|\n".format(techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
+              subtechnique_table += "|<div style=\"text-align:center;\">...</div>|[{}](https://attack.mitre.org/beta/techniques/{}/{}/)|{}|\n".format(techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
     # Write a horizontal rule to split up techniques
     #if table_techniques.index(tid) != len(table_techniques) - 1:
     #    subtechnique_table += "||||\n"
