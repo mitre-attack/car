@@ -16,9 +16,9 @@ This analytic monitors SMB activity that deals with user activity rather than fi
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Forced Authentication](https://attack.mitre.org/techniques/T1187/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Forced Authentication](https://attack.mitre.org/beta/techniques/T1187/)|N/A|[Credential Access](https://attack.mitre.org/beta/tactics/TA0006/)|Low|
 
 ### Data Model References
 

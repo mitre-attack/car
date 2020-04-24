@@ -6,29 +6,29 @@ information_domain: Network
 subtypes: Netflow
 analytic_type: TTP, Situational Awareness
 contributors: MITRE
-applicable_platforms: Windows, Linux, macOS
+applicable_platforms: Windows
 ---
 
 Microsoft Windows uses its implementation of [Distributed Computing Environment/Remote Procedure Call](https://en.wikipedia.org/wiki/DCE/RPC) (DCE/RPC), which it calls [Microsoft RPC](https://en.wikipedia.org/wiki/Microsoft_RPC), to call certain APIs remotely.
 
 A Remote Procedure Call is initiated by communicating to the RPC Endpoint Mapper, which exists as the Windows service RpcEptMapper and listens on the port 135/tcp. The endpoint mapper resolves a requested endpoint/interface and responds to the client with the port that the service is listening on. Since the RPC endpoints are assigned ports when the services start, these ports are dynamically assigned from 49152 to 65535. The connection to the endpoint mapper then terminates and the client program can communicate directly with the requested service.
 
-RPC is a legitimate functionality of Windows that allows remote interaction with a variety of services. For a Windows environment to be properly configured, several programs use RPC to communicate legitimately with servers. The background and benign RPC activity may be enormous, but must be learned, especially peer-to-peer RPC between workstations, which is often indicative of [Lateral Movement](https://attack.mitre.org/tactics/TA0008).
+RPC is a legitimate functionality of Windows that allows remote interaction with a variety of services. For a Windows environment to be properly configured, several programs use RPC to communicate legitimately with servers. The background and benign RPC activity may be enormous, but must be learned, especially peer-to-peer RPC between workstations, which is often indicative of [Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008).
 
 According to ATT&CK, adversaries frequently use RPC connections to remotely
 
--   [Create](https://attack.mitre.org/techniques/T1050), [modify](https://attack.mitre.org/techniques/T1031), and [manipulate](https://attack.mitre.org/techniques/T1035) sevices ([CAR-2014-03-005](CAR-2014-03-005))
--   [Schedule Tasks](https://attack.mitre.org/techniques/T1053) ([CAR-2015-04-002](CAR-2015-04-002))
--   Query ([CAR-2014-11-007](CAR-2014-11-007)) and Invoke ([CAR-2014-12-001](CAR-2014-12-001)) - [Windows Management Instrumentation (WMI)](https://attack.mitre.org/techniques/T1047)
+-   [Create/modify](https://attack.mitre.org/beta/techniques/T1543/003) and [execute](https://attack.mitre.org/beta/techniques/T1569/002) services ([CAR-2014-03-005](CAR-2014-03-005))
+-   [Schedule Tasks](https://attack.mitre.org/beta/techniques/T1053) ([CAR-2015-04-002](CAR-2015-04-002))
+-   Query ([CAR-2014-11-007](CAR-2014-11-007)) and Invoke ([CAR-2014-12-001](CAR-2014-12-001)) - [Windows Management Instrumentation (WMI)](https://attack.mitre.org/beta/techniques/T1047)
 
 Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/articles/win_net_srv/well_known_named_pipes.html).
 
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Remote Services](https://attack.mitre.org/techniques/T1021/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|[SMB/Windows Admin Shares](https://attack.mitre.org/beta/techniques/T1021/002/), [Distributed Component Object Model](https://attack.mitre.org/beta/techniques/T1021/003/), [Windows Remote Management](https://attack.mitre.org/beta/techniques/T1021/006/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
 
 ### Data Model References
 

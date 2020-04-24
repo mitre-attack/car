@@ -9,16 +9,16 @@ contributors: MITRE
 applicable_platforms: Windows
 ---
 
-The Windows Registry location `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options` allows for parameters to be set for applications during execution. One feature used by malicious actors is the "Debugger" option. When a key has this value enabled, a Debugging command line can be specified. Windows will launch the Debugging command line, and pass the original command line in as an argument. Adversaries can set a Debugger for [Accessibility Applications](https://attack.mitre.org/techniques/T1015). The analytic looks for the original command line as an argument to the Debugger. When the strings "sethc.exe", "utilman.exe", "osk.exe", "narrator.exe", and "Magnify.exe" are detected in the arguments, but not as the main executable, it is very likely that a Debugger is set. 
+The Windows Registry location `HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options` allows for parameters to be set for applications during execution. One feature used by malicious actors is the "Debugger" option. When a key has this value enabled, a Debugging command line can be specified. Windows will launch the Debugging command line, and pass the original command line in as an argument. Adversaries can set a Debugger for [Accessibility Applications](https://attack.mitre.org/beta/techniques/T1546/008). The analytic looks for the original command line as an argument to the Debugger. When the strings "sethc.exe", "utilman.exe", "osk.exe", "narrator.exe", and "Magnify.exe" are detected in the arguments, but not as the main executable, it is very likely that a Debugger is set. 
 
 This analytic could depend on the possibility of the known strings used as arguments for other applications used in the day-to-day environment. Although the chance of the string "sethc.exe" being used as an argument for another application is unlikely, it still is a possibility.
 
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Accessibility Features](https://attack.mitre.org/techniques/T1015/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Event Triggered Execution](https://attack.mitre.org/beta/techniques/T1546/)|[Accessibility Features](https://attack.mitre.org/beta/techniques/T1546/008/)|[Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/), [Persistence](https://attack.mitre.org/beta/tactics/TA0003/)|Moderate|
 
 ### Data Model References
 

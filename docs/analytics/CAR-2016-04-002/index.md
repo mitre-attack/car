@@ -14,9 +14,9 @@ It is unlikely that event log data would be cleared during normal operations, an
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Indicator Removal on Host](https://attack.mitre.org/techniques/T1070/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Indicator Removal on Host](https://attack.mitre.org/beta/techniques/T1551/)|N/A|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
 
 
 ### Implementations

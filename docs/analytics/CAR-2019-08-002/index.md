@@ -16,9 +16,9 @@ This requires filesystem data to determine whether files have been created.
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[OS Credential Dumping](https://attack.mitre.org/beta/techniques/T1003/)|[NTDS](https://attack.mitre.org/beta/techniques/T1003/003/)|[Credential Access](https://attack.mitre.org/beta/tactics/TA0006/)|Low|
 
 ### Data Model References
 

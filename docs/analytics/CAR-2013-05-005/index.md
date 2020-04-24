@@ -9,18 +9,18 @@ contributors: MITRE
 applicable_platforms: Windows, Linux, macOS
 ---
 
-An adversary needs to gain access to other hosts to move throughout an environment. In many cases, this is a twofold process. First, a file is remotely written to a host via an SMB share (detected by [CAR-2013-05-003](CAR-2013-05-003)). Then, a variety of [Execution](https://attack.mitre.org/tactics/TA0002) techniques can be used to remotely establish execution of the file or script. To detect this behavior, look for files that are written to a host over SMB and then later run directly as a process or in the command line arguments. SMB File Writes and Remote Execution may happen normally in an environment, but the combination of the two behaviors is less frequent and more likely to indicate adversarial activity.
+An adversary needs to gain access to other hosts to move throughout an environment. In many cases, this is a twofold process. First, a file is remotely written to a host via an SMB share (detected by [CAR-2013-05-003](CAR-2013-05-003)). Then, a variety of [Execution](https://attack.mitre.org/beta/tactics/TA0002) techniques can be used to remotely establish execution of the file or script. To detect this behavior, look for files that are written to a host over SMB and then later run directly as a process or in the command line arguments. SMB File Writes and Remote Execution may happen normally in an environment, but the combination of the two behaviors is less frequent and more likely to indicate adversarial activity.
 
 This can possibly extend to more copy protocols in order to widen its reach, or it could be tuned more finely to focus on specific program run locations (e.g. `%SYSTEMROOT%\system32`) to gain a higher detection rate.
 
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Windows Admin Shares](https://attack.mitre.org/techniques/T1077/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
-|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
-|[Remote File Copy](https://attack.mitre.org/techniques/T1105/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|[SMB/Windows Admin Shares](https://attack.mitre.org/beta/techniques/T1021/002/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
+|[Valid Accounts](https://attack.mitre.org/beta/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/beta/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/beta/techniques/T1078/003/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
+|[Ingress Tool Transfer](https://attack.mitre.org/beta/techniques/T1105/)|N/A|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
 
 ### Data Model References
 

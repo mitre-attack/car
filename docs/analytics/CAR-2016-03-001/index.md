@@ -9,7 +9,7 @@ contributors: MITRE
 applicable_platforms: Windows, Linux, macOS
 ---
 
-When entering on a host for the first time, an adversary may try to [discover](https://attack.mitre.org/tactics/TA0007) information about the host. There are several built-in Windows commands that can be used to learn about the software configurations, active users, administrators, and networking configuration. These commands should be monitored to identify when an adversary is learning information about the system and environment. The information returned may impact choices an adversary can make when [establishing persistence](https://attack.mitre.org/tactics/TA0003), [escalating privileges](https://attack.mitre.org/tactics/TA0004), or [moving laterally](https://attack.mitre.org/tactics/TA0008).
+When entering on a host for the first time, an adversary may try to [discover](https://attack.mitre.org/beta/tactics/TA0007) information about the host. There are several built-in Windows commands that can be used to learn about the software configurations, active users, administrators, and networking configuration. These commands should be monitored to identify when an adversary is learning information about the system and environment. The information returned may impact choices an adversary can make when [establishing persistence](https://attack.mitre.org/beta/tactics/TA0003), [escalating privileges](https://attack.mitre.org/beta/tactics/TA0004), or [moving laterally](https://attack.mitre.org/beta/tactics/TA0008).
 
 Because these commands are built in, they may be run frequently by power users or even by normal users. Thus, an analytic looking at this information should have well-defined white- or blacklists, and should consider looking at an anomaly detection approach, so that this information can be learned dynamically.
 
@@ -31,15 +31,15 @@ Within the built-in Windows Commands:
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Account Discovery](https://attack.mitre.org/techniques/T1087/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
-|[Permission Groups Discovery](https://attack.mitre.org/techniques/T1069/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
-|[System Network Configuration Discovery](https://attack.mitre.org/techniques/T1016/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
-|[System Information Discovery](https://attack.mitre.org/techniques/T1082/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
-|[System Owner/User Discovery](https://attack.mitre.org/techniques/T1033/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
-|[Process Discovery](https://attack.mitre.org/techniques/T1057/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
-|[System Service Discovery](https://attack.mitre.org/techniques/T1007/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Account Discovery](https://attack.mitre.org/beta/techniques/T1087/)|[Local Account](https://attack.mitre.org/beta/techniques/T1087/001/), [Domain Account](https://attack.mitre.org/beta/techniques/T1087/002/)|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
+|[Permission Groups Discovery](https://attack.mitre.org/beta/techniques/T1069/)|[Local Groups](https://attack.mitre.org/beta/techniques/T1069/001/), [Domain Groups](https://attack.mitre.org/beta/techniques/T1069/002/)|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
+|[System Network Configuration Discovery](https://attack.mitre.org/beta/techniques/T1016/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
+|[System Information Discovery](https://attack.mitre.org/beta/techniques/T1082/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
+|[System Owner/User Discovery](https://attack.mitre.org/beta/techniques/T1033/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
+|[Process Discovery](https://attack.mitre.org/beta/techniques/T1057/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
+|[System Service Discovery](https://attack.mitre.org/beta/techniques/T1007/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
 
 ### Data Model References
 

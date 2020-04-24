@@ -9,17 +9,17 @@ contributors: MITRE
 applicable_platforms: Windows
 ---
 
-According to [ATT&CK](https://attack.mitre.org/), [PowerShell](https://attack.mitre.org/techniques/T1086/) can be used over WinRM to remotely run commands on a host. When a remote PowerShell session starts, svchost.exe executes wsmprovhost.exe
+According to [ATT&CK](https://attack.mitre.org/), [PowerShell](https://attack.mitre.org/beta/techniques/T1059/001) can be used over WinRM to remotely run commands on a host. When a remote PowerShell session starts, svchost.exe executes wsmprovhost.exe
 
 For this to work, certain registry keys must be set, and the WinRM service must be enabled. The PowerShell command `Enter-PSSession -ComputerName \<RemoteHost\>` creates a remote PowerShell session.
 
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[PowerShell](https://attack.mitre.org/techniques/T1086/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
-|[Windows Remote Management](https://attack.mitre.org/techniques/T1028/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Command and Scripting Interpreter](https://attack.mitre.org/beta/techniques/T1059/)|[PowerShell](https://attack.mitre.org/beta/techniques/T1059/001/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
+|[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|[Windows Remote Management](https://attack.mitre.org/beta/techniques/T1021/006/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
 
 ### Data Model References
 

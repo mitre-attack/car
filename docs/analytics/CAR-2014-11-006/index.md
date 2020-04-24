@@ -9,14 +9,14 @@ contributors: MITRE
 applicable_platforms: Windows
 ---
 
-When a [Windows Remote Management](https://attack.mitre.org/techniques/T1028/) connection is opened, the client sends HTTP requests to port 5985 for HTTP or 5986 for HTTPS on the target host. Each HTTP(S) request to the URI "/wsman" is called, and other information is set in the headers. Depending on the operation, the HTTP method may vary (i.e., GET, POST, etc.). This analytic would detect Remote PowerShell, as well as other communications that rely on WinRM. Additionally, it outputs the executable on the client host, the connection information, and the hostname of the target host.
+When a [Windows Remote Management](https://attack.mitre.org/beta/techniques/T1021/006) connection is opened, the client sends HTTP requests to port 5985 for HTTP or 5986 for HTTPS on the target host. Each HTTP(S) request to the URI "/wsman" is called, and other information is set in the headers. Depending on the operation, the HTTP method may vary (i.e., GET, POST, etc.). This analytic would detect Remote PowerShell, as well as other communications that rely on WinRM. Additionally, it outputs the executable on the client host, the connection information, and the hostname of the target host.
 
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Windows Remote Management](https://attack.mitre.org/techniques/T1028/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|High|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|[Windows Remote Management](https://attack.mitre.org/beta/techniques/T1021/006/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
 
 ### Data Model References
 

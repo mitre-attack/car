@@ -9,14 +9,14 @@ contributors: MITRE
 applicable_platforms: Windows
 ---
 
-According to [ATT&CK](https://attack.mitre.org/), an adversary may [escalate privileges](https://attack.mitre.org/tactics/TA0004) by [intercepting the search path](https://attack.mitre.org/techniques/T1034) for legitimately installed services. As a result, Windows will launch the target executable instead of the desired binary and command line. This can be done when there are spaces in the binary path and the path is unquoted. Search path interception should never happen legitimately and will likely be the result of an adversary abusing a system misconfiguration. With a few regular expressions, it is possible to identify the execution of services with intercepted search paths.
+According to [ATT&CK](https://attack.mitre.org/), an adversary may [escalate privileges](https://attack.mitre.org/beta/tactics/TA0004) by [intercepting the search path](https://attack.mitre.org/beta/techniques/T1579/009) for legitimately installed services. As a result, Windows will launch the target executable instead of the desired binary and command line. This can be done when there are spaces in the binary path and the path is unquoted. Search path interception should never happen legitimately and will likely be the result of an adversary abusing a system misconfiguration. With a few regular expressions, it is possible to identify the execution of services with intercepted search paths.
 
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Path Interception](https://attack.mitre.org/techniques/T1034/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|High|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Hijack Execution Flow](https://attack.mitre.org/beta/techniques/T1574/)|[Path Interception by Unquoted Path](https://attack.mitre.org/beta/techniques/T1574/009/)|[Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/), [Persistence](https://attack.mitre.org/beta/tactics/TA0003/)|High|
 
 ### Data Model References
 

@@ -9,16 +9,16 @@ contributors: MITRE
 applicable_platforms: N/A
 ---
 
-Before [exfiltrating data](https://attack.mitre.org/tactics/TA0010) that an adversary has [collected](https://attack.mitre.org/tactics/TA0009), it is very likely that a [compressed archive](https://attack.mitre.org/techniques/T1002) will be created, so that transfer times are minimized and fewer files are transmitted. There is variety between the tools used to compress data, but the command line usage and context of archiving tools, such as ZIP, RAR, and 7ZIP, should be monitored.
+Before [exfiltrating data](https://attack.mitre.org/beta/tactics/TA0010) that an adversary has [collected](https://attack.mitre.org/beta/tactics/TA0009), it is very likely that a [compressed archive](https://attack.mitre.org/beta/techniques/T1560) will be created, so that transfer times are minimized and fewer files are transmitted. There is variety between the tools used to compress data, but the command line usage and context of archiving tools, such as ZIP, RAR, and 7ZIP, should be monitored.
 
 In addition to looking for RAR or 7z program names, command line usage of 7Zip or RAR can be detected with the flag usage of "`\* a \*`". This is helpful, as adversaries may change program names.
 
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Data Compressed](https://attack.mitre.org/techniques/T1002/)|[Exfiltration](https://attack.mitre.org/tactics/TA0010/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Archive Collected Data](https://attack.mitre.org/beta/techniques/T1560/)|[Archive via Utility](https://attack.mitre.org/beta/techniques/T1560/001/)|[Exfiltration](https://attack.mitre.org/beta/tactics/TA0010/)|Moderate|
 
 ### Data Model References
 

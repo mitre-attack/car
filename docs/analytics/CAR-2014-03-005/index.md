@@ -9,7 +9,7 @@ contributors: MITRE
 applicable_platforms: Windows
 ---
 
-There are several ways to cause code to [execute](https://attack.mitre.org/tactics/TA0002) on a remote host. One of the most common methods is via the Windows [Service Control Manager](https://en.wikipedia.org/wiki/Service_Control_Manager) (SCM), which allows authorized users to remotely create and modify services. Several tools, such as [PsExec](https://attack.mitre.org/software/S0029), use this functionality. 
+There are several ways to cause code to [execute](https://attack.mitre.org/beta/tactics/TA0002) on a remote host. One of the most common methods is via the Windows [Service Control Manager](https://en.wikipedia.org/wiki/Service_Control_Manager) (SCM), which allows authorized users to remotely create and modify services. Several tools, such as [PsExec](https://attack.mitre.org/software/S0029), use this functionality. 
 
 When a client remotely communicates with the Service Control Manager, there are two observable behaviors. First, the client connects to the [RPC Endpoint Mapper](CAR-2014-05-001) over 135/tcp. This handles authentication, and tells the client what port the endpoint—in this case the SCM—is listening on. Then, the client connects directly to the listening port on `services.exe`. If the request is to start an existing service with a known command line, the the SCM process will run the corresponding command.
 
@@ -18,11 +18,10 @@ This compound behavior can be detected by looking for `services.exe` receiving a
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[New Service](https://attack.mitre.org/techniques/T1050/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
-|[Modify Existing Service](https://attack.mitre.org/techniques/T1031/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
-|[Service Execution](https://attack.mitre.org/techniques/T1035/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Create or Modify System Process](https://attack.mitre.org/beta/techniques/T1543/)|[Windows Service](https://attack.mitre.org/beta/techniques/T1543/003/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/)|Moderate|
+|[System Services](https://attack.mitre.org/beta/techniques/T1569/)|[Service Execution](https://attack.mitre.org/beta/techniques/T1569/002/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
 
 ### Data Model References
 
