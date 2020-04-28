@@ -52,6 +52,7 @@ index_content = """---
 title: "Analytics"
 permalink: /analytics/
 ---
+<div class="analytics-table"></div> 
 
 ## Analytic List (by date added)
 
@@ -72,14 +73,14 @@ for analytic in sorted(analytics, key = lambda k: k['id']):
     coverage = ""
     implementations = ""
     if 'coverage' in analytic and len(analytic['coverage']) > 0:
-        coverage += "<ul>"
+        coverage += "{::nomarkdown}<ul>"
         for cov in analytic['coverage']:
-          coverage += "<li>[{}](https://attack.mitre.org/beta/techniques/{}/)</li>".format(techniques[cov['technique']], cov['technique']) 
+          coverage += "<li><a href=\"https://attack.mitre.org/beta/techniques/{}/\">{}</a></li>".format(cov['technique'], techniques[cov['technique']]) 
           # Get all of the techniques seen in all analytics
           # This is for building the second (subtechniques based) table
           if cov['technique'] not in table_techniques:
               table_techniques.append(cov['technique'])
-        coverage += "</ul>" 
+        coverage += "</ul>{:/}" 
     if 'implementations' in analytic and len(analytic['implementations']) > 0: 
         imp_list =  [str.capitalize(implementation['type']) for implementation in analytic['implementations']]
         implementations = ", ".join(sorted(set(imp_list)))
@@ -114,7 +115,7 @@ for tid in table_techniques:
     if none_bucket:
         none_str += "{::nomarkdown}<ul>"
         for analytic in sorted(none_bucket, key = lambda k: k['id']):
-            none_str += "<li>[{}: {}]({})</li>".format(analytic['id'], analytic['title'], analytic['id'])
+            none_str += "<li><a href=\"{}\">{}: {}</a></li>".format(analytic['id'], analytic['id'], analytic['title'])
         none_str += "</ul>{:/}"
         none_sub_str = "(N/A - technique only)"
     else:
@@ -127,7 +128,7 @@ for tid in table_techniques:
             sub_str = "{::nomarkdown}<ul>"
             # Build the list of CAR analytics
             for analytic in sorted(car_list, key = lambda k: k['id']):
-                sub_str += "<li>[{}: {}]({})</li>".format(analytic['id'], analytic['title'], analytic['id'])
+                sub_str += "<li><a href=\"{}\">{}: {}</a></li>".format(analytic['id'], analytic['id'], analytic['title'])
             sub_str += "</ul>{:/}"
             # Write the sub-technique entry to the table
             # Corner case where there is only one sub-technique and no technique-only analytics
@@ -135,9 +136,6 @@ for tid in table_techniques:
               subtechnique_table += "|[{}](https://attack.mitre.org/beta/techniques/{}/)|[{}](https://attack.mitre.org/beta/techniques/{}/{}/)|{}|\n".format(techniques[tid],tid,techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
             else:
               subtechnique_table += "|...|[{}](https://attack.mitre.org/beta/techniques/{}/{}/)|{}|\n".format(techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
-    # Write a horizontal rule to split up techniques
-    #if table_techniques.index(tid) != len(table_techniques) - 1:
-    #    subtechnique_table += "||||\n"
 
 # Write the tables
 index_file = open('../docs/analytics/index.md', 'w')
