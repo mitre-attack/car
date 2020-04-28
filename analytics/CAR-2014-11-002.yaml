@@ -26,6 +26,8 @@ coverage:
   - technique: T1059
     tactics:
       - TA0002
+    subtechniques:
+      - T1059.003
     coverage: Moderate
 implementations:
   - description: 'Create a baseline of parents of `cmd.exe` seen over the last 30 days and a list of parents of `cmd.exe` seen today. Remove parents in the baseline from parents seen today, leaving a list of new parents.'

@@ -14,9 +14,9 @@ The Windows [Command Prompt](https://en.wikipedia.org/wiki/cmd.exe) (`cmd.exe`) 
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Command-Line Interface](https://attack.mitre.org/techniques/T1059/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Command and Scripting Interpreter](https://attack.mitre.org/beta/techniques/T1059/)|[Windows Command Shell](https://attack.mitre.org/beta/techniques/T1059/003/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
 
 ### Data Model References
 

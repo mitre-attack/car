@@ -12,14 +12,11 @@ contributors:
 id: CAR-2013-09-005
 description: New executables that are started as a service are suspicious. This analytic looks for anomalous service executables.
 coverage:
-  - technique: T1031
+  - technique: T1543
     tactics:
       - TA0003
-    coverage: Moderate
-  - technique: T1050
-    tactics:
-      - TA0003
-      - TA0004
+    subtechniques:
+      - T1543.003
     coverage: Moderate
 implementations:
   - description: 'Create a baseline of services seen over the last 30 days and a list of services seen today. Remove services in the baseline from services seen today, leaving a list of new services.'

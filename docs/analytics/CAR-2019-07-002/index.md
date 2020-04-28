@@ -18,9 +18,9 @@ Note - the CAR data model currently does not support process access actions, so 
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[OS Credential Dumping](https://attack.mitre.org/beta/techniques/T1003/)|[LSASS Memory](https://attack.mitre.org/beta/techniques/T1003/001/)|[Credential Access](https://attack.mitre.org/beta/tactics/TA0006/)|Low|
 
 ### Data Model References
 

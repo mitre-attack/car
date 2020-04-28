@@ -19,9 +19,9 @@ As usual, credit to Roberto Rodriguez and the [ThreatHunter Playbook](https://gi
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Regsvr32](https://attack.mitre.org/techniques/T1117/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/), [Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Signed Binary Proxy Execution](https://attack.mitre.org/beta/techniques/T1218/)|[Regsvr32](https://attack.mitre.org/beta/techniques/T1218/010/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
 
 ### Data Model References
 

@@ -16,9 +16,9 @@ Note - this analytic references file permissions, which are not currently in the
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[File and Directory Permissions Modification](https://attack.mitre.org/beta/techniques/T1222/)|[Windows File and Directory Permissions Modification](https://attack.mitre.org/beta/techniques/T1222/001/), [Linux and Mac File and Directory Permissions Modification](https://attack.mitre.org/beta/techniques/T1222/002/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
 
 
 ### Implementations

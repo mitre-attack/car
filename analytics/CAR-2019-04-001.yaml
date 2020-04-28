@@ -14,10 +14,12 @@ id: CAR-2019-04-001
 description: |-
   Bypassing user account control (UAC Bypass) is generally done by piggybacking on a system process that has auto-escalate privileges. This analytic looks to detect those cases as described by the open-source [UACME](https://github.com/hfiref0x/UACME) tool.
 coverage:
-  - technique: T1088
+  - technique: T1548
     tactics:
       - TA0005
-    coverage: Moderate
+    subtechniques:
+      - T1548.002
+    coverage: Low
 implementations:
   - description: This Splunk query looks for specific invocations of UACME, representing different ways to bypass user account control.
     code: |-

@@ -23,12 +23,12 @@ The sequence of processes that resulted in `reg.exe` being started from a shell.
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Query Registry](https://attack.mitre.org/techniques/T1012/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
-|[Modify Registry](https://attack.mitre.org/techniques/T1112/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
-|[Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1060/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
-|[Service Registry Permissions Weakness](https://attack.mitre.org/techniques/T1058/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Query Registry](https://attack.mitre.org/beta/techniques/T1012/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
+|[Modify Registry](https://attack.mitre.org/beta/techniques/T1112/)|N/A|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
+|[Boot or Logon Autostart Execution](https://attack.mitre.org/beta/techniques/T1547/)|[Registry Run Keys / Startup Folder](https://attack.mitre.org/beta/techniques/T1547/001/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/)|Moderate|
+|[Hijack Execution Flow](https://attack.mitre.org/beta/techniques/T1574/)|[Services Registry Permissions Weakness](https://attack.mitre.org/beta/techniques/T1574/011/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/)|Moderate|
 
 ### Data Model References
 

@@ -21,10 +21,10 @@ The time of login events for distinct users on individual systems
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1076/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
-|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|[Remote Desktop Protocol](https://attack.mitre.org/beta/techniques/T1021/001/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
+|[Valid Accounts](https://attack.mitre.org/beta/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/beta/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/beta/techniques/T1078/003/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
 
 
 ### Implementations
