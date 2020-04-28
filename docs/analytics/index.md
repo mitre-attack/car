@@ -2,7 +2,6 @@
 title: "Analytics"
 permalink: /analytics/
 ---
-<div class="analytics-table"></div>
 
 ## Analytic List (by date added)
 
