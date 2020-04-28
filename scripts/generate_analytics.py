@@ -52,15 +52,16 @@ index_content = """---
 title: "Analytics"
 permalink: /analytics/
 ---
-<div class="analytics-table"></div>
 
 ## Analytic List (by date added)
+
 |Analytic|ATT&CK Techniques|Implementations|Applicable Platform(s)|
 |---|---|---|---|
 """
 
 subtechnique_table = """---
 ## Analytic List (by technique/sub-technique coverage)
+
 |ATT&CK Technique|ATT&CK Sub-technique(s)|CAR Analytic(s)|
 |---|---|---|
 """
@@ -111,10 +112,10 @@ for tid in table_techniques:
     none_str = ""
     none_sub_str = "(N/A - see below)"
     if none_bucket:
-        none_str += "<ul>"
+        none_str += "{::nomarkdown}<ul>"
         for analytic in sorted(none_bucket, key = lambda k: k['id']):
             none_str += "<li>[{}: {}]({})</li>".format(analytic['id'], analytic['title'], analytic['id'])
-        none_str += "</ul>"
+        none_str += "</ul>{:/}"
         none_sub_str = "(N/A - technique only)"
     else:
         none_str = "(N/A - see below)"
@@ -123,17 +124,17 @@ for tid in table_techniques:
     # Write the subtechniques to the table
     if sub_bucket:
         for sub_tid, car_list in sub_bucket.items():
-            sub_str = "<ul>"
+            sub_str = "{::nomarkdown}<ul>"
             # Build the list of CAR analytics
             for analytic in sorted(car_list, key = lambda k: k['id']):
                 sub_str += "<li>[{}: {}]({})</li>".format(analytic['id'], analytic['title'], analytic['id'])
-            sub_str += "</ul>"
+            sub_str += "</ul>{:/}"
             # Write the sub-technique entry to the table
             # Corner case where there is only one sub-technique and no technique-only analytics
             if not none_bucket and len(sub_bucket.keys()) == 1:
               subtechnique_table += "|[{}](https://attack.mitre.org/beta/techniques/{}/)|[{}](https://attack.mitre.org/beta/techniques/{}/{}/)|{}|\n".format(techniques[tid],tid,techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
             else:
-              subtechnique_table += "|<div style=\"text-align:center;\">...</div>|[{}](https://attack.mitre.org/beta/techniques/{}/{}/)|{}|\n".format(techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
+              subtechnique_table += "|...|[{}](https://attack.mitre.org/beta/techniques/{}/{}/)|{}|\n".format(techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
     # Write a horizontal rule to split up techniques
     #if table_techniques.index(tid) != len(table_techniques) - 1:
     #    subtechnique_table += "||||\n"
