@@ -5,6 +5,7 @@ permalink: /analytics/
 <div class="analytics-table"></div>
 
 ## Analytic List (by date added)
+
 |Analytic|ATT&CK Techniques|Implementations|Applicable Platform(s)|
 |---|---|---|---|
 |[CAR-2013-01-002: Autorun Differences](CAR-2013-01-002)|<ul><li>[Create or Modify System Process](https://attack.mitre.org/beta/techniques/T1543/)</li><li>[Scheduled Task/Job](https://attack.mitre.org/beta/techniques/T1053/)</li><li>[Boot or Logon Autostart Execution](https://attack.mitre.org/beta/techniques/T1547/)</li><li>[Hijack Execution Flow](https://attack.mitre.org/beta/techniques/T1574/)</li><li>[Event Triggered Execution](https://attack.mitre.org/beta/techniques/T1546/)</li><li>[Modify Registry](https://attack.mitre.org/beta/techniques/T1112/)</li><li>[Boot or Logon Initialization Scripts](https://attack.mitre.org/beta/techniques/T1037/)</li></ul>||Windows|
@@ -64,6 +65,7 @@ permalink: /analytics/
 
 ---
 ## Analytic List (by technique/sub-technique coverage)
+
 |ATT&CK Technique|ATT&CK Sub-technique(s)|CAR Analytic(s)|
 |---|---|---|
 |[Create or Modify System Process](https://attack.mitre.org/beta/techniques/T1543/)|[Windows Service](https://attack.mitre.org/beta/techniques/T1543/003/)|<ul><li>[CAR-2013-01-002: Autorun Differences](CAR-2013-01-002)</li><li>[CAR-2013-04-002: Quick execution of a series of suspicious commands](CAR-2013-04-002)</li><li>[CAR-2013-09-005: Service Outlier Executables](CAR-2013-09-005)</li><li>[CAR-2014-02-001: Service Binary Modifications](CAR-2014-02-001)</li><li>[CAR-2014-03-005: Remotely Launched Executables via Services](CAR-2014-03-005)</li><li>[CAR-2014-05-002: Services launching Cmd](CAR-2014-05-002)</li></ul>|
