@@ -1,0 +1,41 @@
+---
+title: Credential Dumping via SafetyKatz
+submission_date: 2020/05/04
+information_domain: 'Host'
+platforms:
+  - Windows
+subtypes:
+  - File
+analytic_types:
+  - TTP
+contributors:
+  - MITRE
+id: CAR-2020-05-001
+description: |-
+  Description text goes here
+coverage:
+  - technique: T1003
+    tactics:
+      - TA0006
+    subtechniques:
+      - T1003.003
+    coverage: Low
+implementations:
+  - name: Lsass Process Access
+    description: This Splunk query looks for process access events where lsass.exe is accessed with a specific call trace. 
+    code: |-
+      index=__your_sysmon_index__ EventID=10 TargetImage="C:\\windows\\system32\\lsass.exe" (CallTrace="*dbghelp.dll*" OR CallTrace="*dbgcore.dll*")| table _time host SourceProcessId SourceImage
+    type: Splunk
+    data_model: Sysmon native
+unit_tests: 
+  - description: |-
+
+
+
+
+
+
+
+
+
+
