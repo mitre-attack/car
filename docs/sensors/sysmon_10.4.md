@@ -14,7 +14,7 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 
 ## Data Model Coverage
 
-### [Thread](../data_model/Thread)
+### [thread](../data_model/thread)
 
 | | `hostname` | `src_pid` | `src_tid` | `stack_base` | `stack_limit` | `start_address` | `start_function` | `start_module` | `start_module_name` | `tgt_pid` | `tgt_tid` | `user` | `user_stack_base` | `user_stack_limit` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -23,7 +23,7 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `suspend` |  | | | | | | | | | | | | | |
 | `terminate` |  | | | | | | | | | | | | | |
 
-### [Registry](../data_model/Registry)
+### [registry](../data_model/registry)
 
 | | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `pid` | `type` | `user` | `value` |
 |---|---|---|---|---|---|---|---|---|---|
@@ -31,7 +31,7 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `edit` |  |✓|✓| |✓|✓|✓| | |✓|
 | `remove` |  |✓|✓| |✓|✓|✓| | |✓|
 
-### [File](../data_model/File)
+### [file](../data_model/file)
 
 | | `company` | `creation_time` | `file_name` | `file_path` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signer` | `user` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -42,21 +42,21 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `timestomp` |  |✓|✓| |✓| |✓| |✓| |✓| | | | |
 | `write` |  | | | | | | | | | | | | | | |
 
-### [Driver](../data_model/Driver)
+### [driver](../data_model/driver)
 
 | | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `sha1_hash` | `sha256_hash` | `signer` |
 |---|---|---|---|---|---|---|---|---|
 | `load` |  |✓| |✓|✓| |✓|✓|✓|
 | `unload` |  | | | | | | | | |
 
-### [Module](../data_model/Module)
+### [module](../data_model/module)
 
 | | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `module_path` | `pid` | `sha1_hash` | `sha256_hash` | `signer` | `signer` |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | `load` |  |✓| |✓|✓| |✓|✓|✓|✓|✓| |
 | `unload` |  | | | | | | | | | | | |
 
-### [Flow](../data_model/Flow)
+### [flow](../data_model/flow)
 
 | | `content` | `dest_fqdn` | `dest_hostname` | `dest_ip` | `dest_port` | `end_time` | `exe` | `flags` | `fqdn` | `hostname` | `image_path` | `packet_count` | `pid` | `ppid` | `proto_info` | `protocol` | `src_fqdn` | `src_hostname` | `src_ip` | `src_port` | `start_time` | `user` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -64,7 +64,7 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `message` |  | | | | | | | | | | | | | | | | | | | | | |
 | `start` |  | |✓|✓|✓| | | | | |✓| |✓| | |✓| |✓|✓|✓|✓|✓|
 
-### [Process](../data_model/Process)
+### [process](../data_model/process)
 
 | | `command_line` | `current_working_directory` | `exe` | `fqdn` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signer` | `user` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -106,3 +106,4 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
  - [CAR-2019-07-002: Lsass Process Dump via Procdump](../analytics/CAR-2019-07-002)
  - [CAR-2019-08-001: Credential Dumping via Windows Task Manager](../analytics/CAR-2019-08-001)
  - [CAR-2019-08-002: Active Directory Dumping via NTDSUtil](../analytics/CAR-2019-08-002)
+ - [CAR-2020-04-001: Shadow Copy Deletion](../analytics/CAR-2020-04-001)
