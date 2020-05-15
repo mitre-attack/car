@@ -4,7 +4,7 @@ title: Welcome to the Cyber Analytics Repository
 
 The MITRE Cyber Analytics Repository (CAR) is a knowledge base of analytics developed by [MITRE](https://www.mitre.org) based on the [MITRE ATT&CK](https://attack.mitre.org/) adversary model.
 
-If you want to start exploring, try viewing the [Full Analytic List](analytics) or use the [CAR Exploration Tool (CARET)](https://mitre-attack.github.io/caret/#/). Also, check out the new [ATT&CK Navigator Layer](https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcar_attack%2Fcar_attack.json) that captures the current set of ATT&CK tactics and techniques covered by CAR.
+If you want to start exploring, try viewing the [Full Analytic List](analytics) or use the [CAR Exploration Tool (CARET)](https://mitre-attack.github.io/caret/#/). Also, check out the [ATT&CK Navigator layer](https://mitre-attack.github.io/attack-navigator/beta/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcar_attack%2Fcar_attack.json) that captures the current set of ATT&CK tactics and techniques covered by CAR.
 
 Analytics stored in CAR contain the following information:
 * a *hypothesis* which explains the idea behind the analytic
@@ -18,6 +18,9 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 
 ## News
 Information about the latest CAR updates and changes can be found in this section.
+
+### May 2020
+* Updated [ATT&CK Navigator layer](https://mitre-attack.github.io/attack-navigator/beta/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcar_attack%2Fcar_attack.json) to incorporate sub-technique mappings for all CAR analytics.
 
 ### April 2020
 * All analytics have been updated to account for ATT&CK sub-techniques (wherever applicable). Check out the new sub-technique based coverage table [here](/analytics/index.html#analytic-list-by-techniquesub-technique-coverage).
