@@ -61,3 +61,6 @@ fields:
   - name: current_working_directory
     description: The absolute path to the current working directory of the process.
     example: c:\temp
+  - name: env_vars
+    description: The environment variables within a process's memory space, as a string.
+    example: SHELL=/bin/zsh
