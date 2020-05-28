@@ -17,6 +17,7 @@ A process is a running program on a computer.
 |---|---|---|
 |command_line|The command line string contains all arguments passed to the process upon execution.|`example arg1 arg2`, `example.exe`, `C:\path\example.exe /flag1`|
 |exe|The basename of the `image_path`.|`example.exe`|
+|env_var|The environment variables within a process's memory space.|`SHELL=/bin/zsh`|
 |fqdn|The fully qualified domain name of the host in which the process ran. Contains the hostname appended with the domain.|`HOST1.EXAMPLE_DOMAIN.COM`|
 |hostname|The hostname of the host, without the domain.|`HOST1`|
 |image_path|The file path of the executable associated with this process. This may act as a pivot to [`file:file_path`](https://car.mitre.org/wiki/Data_Model/file#file_path).|`C:\path\to\example.exe`|
