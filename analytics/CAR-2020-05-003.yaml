@@ -17,6 +17,8 @@ description: |-
   This analytic takes all instances of LoLBAS execution and then looks for instances of command lines that are not normal in the environment. This can detect attackers (which will tend to need the binaries for something different than normal usage) but will also tend to have false positives.
 
   The analytic needs to be tuned. The `1.5` in the query is the number of standard deviations away to look. It can be tuned up to filter out more noise and tuned down to get more results. This means it is probably best as a hunting analytic when you have analysts looking at the screen and able to tune the analytic up and down, because the threshold may not be stable for very long.
+  
+  Note - this analytic is related to [CAR-2013-04-002](/analytics/CAR-2013-04-002), but differs by looking for a different set of binaries and also looking at standard deviation across command lines of these binaries instead of their execution within a short time window. 
 coverage:
   - technique: T1012
     tactics:
