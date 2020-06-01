@@ -24,6 +24,9 @@ Information about the latest CAR updates and changes can be found in this sectio
 * Added [Sysmon 11.0](/sensors/sysmon_11.0) sensor with data model mappings and CAR analytic coverage.
 * Added one new field to the [Process object](/data_model/process)
   * `env_vars`
+* New analytics added
+  * [CAR-2020-05-001: MiniDump of LSASS](/analytics/CAR-2020-05-001)
+  * [CAR-2020-05-003: Rare LolBAS Command Lines](/analytics/CAR-2020-05-003)
 
 ### April 2020
 * All analytics have been updated to account for ATT&CK sub-techniques (wherever applicable). Check out the new sub-technique based coverage table [here](/analytics/index.html#analytic-list-by-techniquesub-technique-coverage).
