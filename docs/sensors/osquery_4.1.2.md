@@ -50,10 +50,10 @@ osquery exposes an operating system as a high-performance relational database. T
 
 ### [process](../data_model/process)
 
-| | `command_line` | `current_working_directory` | `exe` | `fqdn` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signer` | `user` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `create` | ✓|✓|✓| | |✓| |✓| | | |✓|✓|✓|✓| | |✓|
-| `terminate` |  | | | | | | | | | | | | | | | | | |
+| | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signer` | `user` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `create` | ✓|✓| |✓| | |✓| |✓| | | |✓|✓|✓|✓| | |✓|
+| `terminate` |  | | | | | | | | | | | | | | | | | | |
 
 
 
