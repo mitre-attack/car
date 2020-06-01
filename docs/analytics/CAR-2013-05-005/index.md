@@ -20,7 +20,7 @@ This can possibly extend to more copy protocols in order to widen its reach, or 
 |---|---|---|---|
 |[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|[SMB/Windows Admin Shares](https://attack.mitre.org/beta/techniques/T1021/002/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
 |[Valid Accounts](https://attack.mitre.org/beta/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/beta/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/beta/techniques/T1078/003/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
-|[Ingress Tool Transfer](https://attack.mitre.org/beta/techniques/T1105/)|N/A|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
+|[Lateral Tool Transfer](https://attack.mitre.org/beta/techniques/T1570/)|N/A|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
 
 ### Data Model References
 
