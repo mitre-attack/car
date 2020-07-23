@@ -71,7 +71,7 @@ The host on which the commands were executed, the time of execution, and what co
 |[Network Service Scanning](https://attack.mitre.org/beta/techniques/T1046/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
 |[Impair Defenses](https://attack.mitre.org/beta/techniques/T1562/)|[Disable or Modify Tools](https://attack.mitre.org/beta/techniques/T1562/001/), [Indicator Blocking](https://attack.mitre.org/beta/techniques/T1562/006/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Low|
 |[Account Manipulation](https://attack.mitre.org/beta/techniques/T1098/)|N/A|[Credential Access](https://attack.mitre.org/beta/tactics/TA0006/)|Low|
-|[Command and Scripting Interpreter](https://attack.mitre.org/beta/techniques/T1059/)|[VBScript](https://attack.mitre.org/beta/techniques/T1059/005/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
+|[Command and Scripting Interpreter](https://attack.mitre.org/beta/techniques/T1059/)|[Visual Basic](https://attack.mitre.org/beta/techniques/T1059/005/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
 |[Query Registry](https://attack.mitre.org/beta/techniques/T1012/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
 
 ### Data Model References
