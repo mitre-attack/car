@@ -18,7 +18,7 @@ This pipe activity could be discovered with a network decoder, such as that in w
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Scheduled Task/Job](https://attack.mitre.org/beta/techniques/T1053/)|[At (Windows)](https://attack.mitre.org/beta/techniques/T1053/002/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
+|[Scheduled Task/Job](https://attack.mitre.org/techniques/T1053/)|[At (Windows)](https://attack.mitre.org/techniques/T1053/002/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
 ### Data Model References
 

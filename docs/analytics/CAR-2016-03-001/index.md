@@ -33,13 +33,13 @@ Within the built-in Windows Commands:
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Account Discovery](https://attack.mitre.org/beta/techniques/T1087/)|[Local Account](https://attack.mitre.org/beta/techniques/T1087/001/), [Domain Account](https://attack.mitre.org/beta/techniques/T1087/002/)|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
-|[Permission Groups Discovery](https://attack.mitre.org/beta/techniques/T1069/)|[Local Groups](https://attack.mitre.org/beta/techniques/T1069/001/), [Domain Groups](https://attack.mitre.org/beta/techniques/T1069/002/)|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
-|[System Network Configuration Discovery](https://attack.mitre.org/beta/techniques/T1016/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
-|[System Information Discovery](https://attack.mitre.org/beta/techniques/T1082/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
-|[System Owner/User Discovery](https://attack.mitre.org/beta/techniques/T1033/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
-|[Process Discovery](https://attack.mitre.org/beta/techniques/T1057/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
-|[System Service Discovery](https://attack.mitre.org/beta/techniques/T1007/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Moderate|
+|[Account Discovery](https://attack.mitre.org/techniques/T1087/)|[Local Account](https://attack.mitre.org/techniques/T1087/001/), [Domain Account](https://attack.mitre.org/techniques/T1087/002/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
+|[Permission Groups Discovery](https://attack.mitre.org/techniques/T1069/)|[Local Groups](https://attack.mitre.org/techniques/T1069/001/), [Domain Groups](https://attack.mitre.org/techniques/T1069/002/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
+|[System Network Configuration Discovery](https://attack.mitre.org/techniques/T1016/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
+|[System Information Discovery](https://attack.mitre.org/techniques/T1082/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
+|[System Owner/User Discovery](https://attack.mitre.org/techniques/T1033/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
+|[Process Discovery](https://attack.mitre.org/techniques/T1057/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
+|[System Service Discovery](https://attack.mitre.org/techniques/T1007/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 
 ### Data Model References
 

@@ -20,8 +20,8 @@ The source, destination, content, and time of each event.
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Data from Network Shared Drive](https://attack.mitre.org/beta/techniques/T1039/)|N/A|[Collection](https://attack.mitre.org/beta/tactics/TA0009/)|Moderate|
-|[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|[SMB/Windows Admin Shares](https://attack.mitre.org/beta/techniques/T1021/002/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
+|[Data from Network Shared Drive](https://attack.mitre.org/techniques/T1039/)|N/A|[Collection](https://attack.mitre.org/tactics/TA0009/)|Moderate|
+|[Remote Services](https://attack.mitre.org/techniques/T1021/)|[SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 ### Data Model References
 

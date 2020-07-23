@@ -18,8 +18,8 @@ For this to work, certain registry keys must be set, and the WinRM service must 
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Command and Scripting Interpreter](https://attack.mitre.org/beta/techniques/T1059/)|[PowerShell](https://attack.mitre.org/beta/techniques/T1059/001/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
-|[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|[Windows Remote Management](https://attack.mitre.org/beta/techniques/T1021/006/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
+|[Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)|[PowerShell](https://attack.mitre.org/techniques/T1059/001/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
+|[Remote Services](https://attack.mitre.org/techniques/T1021/)|[Windows Remote Management](https://attack.mitre.org/techniques/T1021/006/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 ### Data Model References
 

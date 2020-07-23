@@ -28,7 +28,7 @@ Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/article
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|[SMB/Windows Admin Shares](https://attack.mitre.org/beta/techniques/T1021/002/), [Distributed Component Object Model](https://attack.mitre.org/beta/techniques/T1021/003/), [Windows Remote Management](https://attack.mitre.org/beta/techniques/T1021/006/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
+|[Remote Services](https://attack.mitre.org/techniques/T1021/)|[SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002/), [Distributed Component Object Model](https://attack.mitre.org/techniques/T1021/003/), [Windows Remote Management](https://attack.mitre.org/techniques/T1021/006/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 ### Data Model References
 

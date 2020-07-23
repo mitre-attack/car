@@ -22,8 +22,8 @@ This behavior can be detected by looking for thread creations across processes, 
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Process Injection](https://attack.mitre.org/beta/techniques/T1055/)|[Dynamic-link Library Injection](https://attack.mitre.org/beta/techniques/T1055/001/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
-|[Abuse Elevation Control Mechanism](https://attack.mitre.org/beta/techniques/T1548/)|[Bypass User Access Control](https://attack.mitre.org/beta/techniques/T1548/002/)|[Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/)|Moderate|
+|[Process Injection](https://attack.mitre.org/techniques/T1055/)|[Dynamic-link Library Injection](https://attack.mitre.org/techniques/T1055/001/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+|[Abuse Elevation Control Mechanism](https://attack.mitre.org/techniques/T1548/)|[Bypass User Access Control](https://attack.mitre.org/techniques/T1548/002/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 
 ### Data Model References
 

@@ -16,7 +16,7 @@ The successful use of [Pass The Hash](https://attack.mitre.org/beta/techniques/T
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Use Alternate Authentication Material](https://attack.mitre.org/beta/techniques/T1550/)|[Pass the Hash](https://attack.mitre.org/beta/techniques/T1550/002/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
+|[Use Alternate Authentication Material](https://attack.mitre.org/techniques/T1550/)|[Pass the Hash](https://attack.mitre.org/techniques/T1550/002/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 
 ### Implementations

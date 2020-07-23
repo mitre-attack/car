@@ -16,7 +16,7 @@ The Windows built-in tool `schtasks.exe` provides the creation, modification, an
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Scheduled Task/Job](https://attack.mitre.org/beta/techniques/T1053/)|[Scheduled Task](https://attack.mitre.org/beta/techniques/T1053/005/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/)|Moderate|
+|[Scheduled Task/Job](https://attack.mitre.org/techniques/T1053/)|[Scheduled Task](https://attack.mitre.org/techniques/T1053/005/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 
 ### Data Model References
 

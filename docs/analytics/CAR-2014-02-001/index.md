@@ -20,9 +20,9 @@ The Service Name and approximate time in which changes occurred on each host
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Create or Modify System Process](https://attack.mitre.org/beta/techniques/T1543/)|[Windows Service](https://attack.mitre.org/beta/techniques/T1543/003/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/)|Moderate|
-|[Hijack Execution Flow](https://attack.mitre.org/beta/techniques/T1574/)|[Services File Permissions Weakness](https://attack.mitre.org/beta/techniques/T1574/010/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/)|Moderate|
-|[System Services](https://attack.mitre.org/beta/techniques/T1569/)|[Service Execution](https://attack.mitre.org/beta/techniques/T1569/002/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
+|[Create or Modify System Process](https://attack.mitre.org/techniques/T1543/)|[Windows Service](https://attack.mitre.org/techniques/T1543/003/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
+|[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|[Services File Permissions Weakness](https://attack.mitre.org/techniques/T1574/010/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
+|[System Services](https://attack.mitre.org/techniques/T1569/)|[Service Execution](https://attack.mitre.org/techniques/T1569/002/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
 ### Data Model References
 

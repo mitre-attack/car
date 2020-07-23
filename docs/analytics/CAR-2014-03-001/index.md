@@ -18,7 +18,7 @@ Monitoring SMB write requests still creates some noise, particulary with named p
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Lateral Tool Transfer](https://attack.mitre.org/beta/techniques/T1570/)|N/A|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Low|
+|[Lateral Tool Transfer](https://attack.mitre.org/techniques/T1570/)|N/A|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Low|
 
 ### Data Model References
 

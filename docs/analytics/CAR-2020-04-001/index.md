@@ -21,7 +21,7 @@ This [Red Canary](https://redcanary.com/blog/its-all-fun-and-games-until-ransomw
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Inhibit System Recovery](https://attack.mitre.org/beta/techniques/T1490/)|N/A|[Impact](https://attack.mitre.org/beta/tactics/TA0040/)|Medium|
+|[Inhibit System Recovery](https://attack.mitre.org/techniques/T1490/)|N/A|[Impact](https://attack.mitre.org/tactics/TA0040/)|Medium|
 
 ### Data Model References
 

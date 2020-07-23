@@ -28,9 +28,9 @@ Any tool of interest with commonly known command line usage can be detecting by 
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[OS Credential Dumping](https://attack.mitre.org/beta/techniques/T1003/)|[LSASS Memory](https://attack.mitre.org/beta/techniques/T1003/001/)|[Credential Access](https://attack.mitre.org/beta/tactics/TA0006/)|Low|
-|[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|N/A|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
-|[Ingress Tool Transfer](https://attack.mitre.org/beta/techniques/T1105/)|N/A|[Command and Control](https://attack.mitre.org/beta/tactics/TA0011/), [Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
+|[OS Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[LSASS Memory](https://attack.mitre.org/techniques/T1003/001/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
+|[Remote Services](https://attack.mitre.org/techniques/T1021/)|N/A|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
+|[Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105/)|N/A|[Command and Control](https://attack.mitre.org/tactics/TA0011/), [Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 ### Data Model References
 

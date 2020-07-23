@@ -20,8 +20,8 @@ Powershell can be used to hide monitored command line execution such as:
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Command and Scripting Interpreter](https://attack.mitre.org/beta/techniques/T1059/)|[PowerShell](https://attack.mitre.org/beta/techniques/T1059/001/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|High|
-|[Command and Scripting Interpreter](https://attack.mitre.org/beta/techniques/T1059/)|[PowerShell](https://attack.mitre.org/beta/techniques/T1059/001/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
+|[Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)|[PowerShell](https://attack.mitre.org/techniques/T1059/001/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|High|
+|[Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)|[PowerShell](https://attack.mitre.org/techniques/T1059/001/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 ### Data Model References
 

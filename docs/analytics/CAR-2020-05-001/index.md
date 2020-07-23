@@ -22,7 +22,7 @@ NOTE - this analytic has no corresponding pseudocode implementation because the 
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[OS Credential Dumping](https://attack.mitre.org/beta/techniques/T1003/)|[NTDS](https://attack.mitre.org/beta/techniques/T1003/003/)|[Credential Access](https://attack.mitre.org/beta/tactics/TA0006/)|Low|
+|[OS Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[NTDS](https://attack.mitre.org/techniques/T1003/003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
 
 
 ### Implementations

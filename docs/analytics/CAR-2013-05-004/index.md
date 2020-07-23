@@ -17,7 +17,7 @@ The built-in Windows tool schtasks.exe ([CAR-2013-08-001](CAR-2013-08-001)) offe
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Scheduled Task/Job](https://attack.mitre.org/beta/techniques/T1053/)|[At (Windows)](https://attack.mitre.org/beta/techniques/T1053/002/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/), [Persistence](https://attack.mitre.org/beta/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/)|Moderate|
+|[Scheduled Task/Job](https://attack.mitre.org/techniques/T1053/)|[At (Windows)](https://attack.mitre.org/techniques/T1053/002/)|[Execution](https://attack.mitre.org/tactics/TA0002/), [Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 
 ### Data Model References
 

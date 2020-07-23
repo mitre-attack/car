@@ -20,8 +20,8 @@ This compound behavior can be detected by looking for `services.exe` receiving a
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Create or Modify System Process](https://attack.mitre.org/beta/techniques/T1543/)|[Windows Service](https://attack.mitre.org/beta/techniques/T1543/003/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/)|Moderate|
-|[System Services](https://attack.mitre.org/beta/techniques/T1569/)|[Service Execution](https://attack.mitre.org/beta/techniques/T1569/002/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
+|[Create or Modify System Process](https://attack.mitre.org/techniques/T1543/)|[Windows Service](https://attack.mitre.org/techniques/T1543/003/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
+|[System Services](https://attack.mitre.org/techniques/T1569/)|[Service Execution](https://attack.mitre.org/techniques/T1569/002/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
 ### Data Model References
 

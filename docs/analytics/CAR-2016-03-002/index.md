@@ -18,7 +18,7 @@ Although this analytic was created after [CAR-2014-12-001](CAR-2014-12-001), it 
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Windows Management Instrumentation](https://attack.mitre.org/beta/techniques/T1047/)|N/A|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Low|
+|[Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047/)|N/A|[Execution](https://attack.mitre.org/tactics/TA0002/)|Low|
 
 ### Data Model References
 

@@ -19,7 +19,7 @@ Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Valid Accounts](https://attack.mitre.org/beta/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/beta/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/beta/techniques/T1078/003/)|[Initial Access](https://attack.mitre.org/beta/tactics/TA0001/)|Low|
+|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/techniques/T1078/003/)|[Initial Access](https://attack.mitre.org/tactics/TA0001/)|Low|
 
 ### Data Model References
 

@@ -18,7 +18,7 @@ Note - this analytic references file permissions, which are not currently in the
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[File and Directory Permissions Modification](https://attack.mitre.org/beta/techniques/T1222/)|[Windows File and Directory Permissions Modification](https://attack.mitre.org/beta/techniques/T1222/001/), [Linux and Mac File and Directory Permissions Modification](https://attack.mitre.org/beta/techniques/T1222/002/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
+|[File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/)|[Windows File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/001/), [Linux and Mac File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/002/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
 ### Implementations

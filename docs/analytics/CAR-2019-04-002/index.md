@@ -16,7 +16,7 @@ Regsvr32 can be used to execute arbitrary code in the context of a Windows signe
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Signed Binary Proxy Execution](https://attack.mitre.org/beta/techniques/T1218/)|[Regsvr32](https://attack.mitre.org/beta/techniques/T1218/010/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Low|
+|[Signed Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|[Regsvr32](https://attack.mitre.org/techniques/T1218/010/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
 
 ### Data Model References
 

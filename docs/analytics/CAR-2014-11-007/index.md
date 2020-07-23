@@ -23,7 +23,7 @@ Identifies the connection in which WMI traffic is seen, as well as the process(e
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Windows Management Instrumentation](https://attack.mitre.org/beta/techniques/T1047/)|N/A|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
+|[Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047/)|N/A|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
 ### Data Model References
 

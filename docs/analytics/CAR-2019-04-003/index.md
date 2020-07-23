@@ -21,7 +21,7 @@ As usual, credit to Roberto Rodriguez and the [ThreatHunter Playbook](https://gi
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Signed Binary Proxy Execution](https://attack.mitre.org/beta/techniques/T1218/)|[Regsvr32](https://attack.mitre.org/beta/techniques/T1218/010/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
+|[Signed Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|[Regsvr32](https://attack.mitre.org/techniques/T1218/010/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 ### Data Model References
 

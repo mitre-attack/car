@@ -24,7 +24,7 @@ All of these behaviors call into the Windows API, which uses the NamedPipe `WINR
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Modify Registry](https://attack.mitre.org/beta/techniques/T1112/)|N/A|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
+|[Modify Registry](https://attack.mitre.org/techniques/T1112/)|N/A|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 ### Data Model References
 

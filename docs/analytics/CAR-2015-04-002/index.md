@@ -24,7 +24,7 @@ This identifier is present three times during the RPC request phase. Any sensor 
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Scheduled Task/Job](https://attack.mitre.org/beta/techniques/T1053/)|[Scheduled Task](https://attack.mitre.org/beta/techniques/T1053/005/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
+|[Scheduled Task/Job](https://attack.mitre.org/techniques/T1053/)|[Scheduled Task](https://attack.mitre.org/techniques/T1053/005/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
 ### Data Model References
 

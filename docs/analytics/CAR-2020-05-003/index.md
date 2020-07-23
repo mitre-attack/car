@@ -22,10 +22,10 @@ Note - this analytic is related to [CAR-2013-04-002](/analytics/CAR-2013-04-002)
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Query Registry](https://attack.mitre.org/beta/techniques/T1012/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[Modify Registry](https://attack.mitre.org/beta/techniques/T1112/)|N/A|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Low|
-|[Boot or Logon Autostart Execution](https://attack.mitre.org/beta/techniques/T1547/)|[Registry Run Keys / Startup Folder](https://attack.mitre.org/beta/techniques/T1547/001/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/)|Low|
-|[Hijack Execution Flow](https://attack.mitre.org/beta/techniques/T1574/)|[Services Registry Permissions Weakness](https://attack.mitre.org/beta/techniques/T1574/011/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/)|Low|
+|[Query Registry](https://attack.mitre.org/techniques/T1012/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[Modify Registry](https://attack.mitre.org/techniques/T1112/)|N/A|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
+|[Boot or Logon Autostart Execution](https://attack.mitre.org/techniques/T1547/)|[Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Low|
+|[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|[Services Registry Permissions Weakness](https://attack.mitre.org/techniques/T1574/011/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Low|
 
 
 ### Implementations

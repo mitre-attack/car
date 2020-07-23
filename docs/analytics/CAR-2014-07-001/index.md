@@ -16,7 +16,7 @@ According to [ATT&CK](https://attack.mitre.org/), an adversary may [escalate pri
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Hijack Execution Flow](https://attack.mitre.org/beta/techniques/T1574/)|[Path Interception by Unquoted Path](https://attack.mitre.org/beta/techniques/T1574/009/)|[Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/), [Persistence](https://attack.mitre.org/beta/tactics/TA0003/)|High|
+|[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|[Path Interception by Unquoted Path](https://attack.mitre.org/techniques/T1574/009/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|High|
 
 ### Data Model References
 

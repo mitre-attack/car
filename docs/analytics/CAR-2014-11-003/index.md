@@ -18,7 +18,7 @@ This analytic could depend on the possibility of the known strings used as argum
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Event Triggered Execution](https://attack.mitre.org/beta/techniques/T1546/)|[Accessibility Features](https://attack.mitre.org/beta/techniques/T1546/008/)|[Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/), [Persistence](https://attack.mitre.org/beta/tactics/TA0003/)|Moderate|
+|[Event Triggered Execution](https://attack.mitre.org/techniques/T1546/)|[Accessibility Features](https://attack.mitre.org/techniques/T1546/008/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 
 ### Data Model References
 

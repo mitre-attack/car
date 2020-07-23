@@ -29,7 +29,7 @@ The time of the Connection, the source, the destination, and the user name used
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|[Remote Desktop Protocol](https://attack.mitre.org/beta/techniques/T1021/001/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Medium|
+|[Remote Services](https://attack.mitre.org/techniques/T1021/)|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1021/001/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Medium|
 
 ### Data Model References
 

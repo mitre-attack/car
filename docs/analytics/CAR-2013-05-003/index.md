@@ -16,9 +16,9 @@ As described in [CAR-2013-01-003](CAR-2013-01-003), SMB provides a means of remo
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Lateral Tool Transfer](https://attack.mitre.org/beta/techniques/T1570/)|N/A|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
-|[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|[SMB/Windows Admin Shares](https://attack.mitre.org/beta/techniques/T1021/002/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
-|[Valid Accounts](https://attack.mitre.org/beta/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/beta/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/beta/techniques/T1078/003/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
+|[Lateral Tool Transfer](https://attack.mitre.org/techniques/T1570/)|N/A|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
+|[Remote Services](https://attack.mitre.org/techniques/T1021/)|[SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
+|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/techniques/T1078/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 ### Data Model References
 

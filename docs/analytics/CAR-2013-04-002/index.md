@@ -49,30 +49,30 @@ The host on which the commands were executed, the time of execution, and what co
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Account Discovery](https://attack.mitre.org/beta/techniques/T1087/)|[Local Account](https://attack.mitre.org/beta/techniques/T1087/001/), [Domain Account](https://attack.mitre.org/beta/techniques/T1087/002/)|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[OS Credential Dumping](https://attack.mitre.org/beta/techniques/T1003/)|[Security Account Manager](https://attack.mitre.org/beta/techniques/T1003/002/)|[Credential Access](https://attack.mitre.org/beta/tactics/TA0006/)|Low|
-|[Permission Groups Discovery](https://attack.mitre.org/beta/techniques/T1069/)|[Local Groups](https://attack.mitre.org/beta/techniques/T1069/001/), [Domain Groups](https://attack.mitre.org/beta/techniques/T1069/002/)|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[Process Discovery](https://attack.mitre.org/beta/techniques/T1057/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[Remote Services](https://attack.mitre.org/beta/techniques/T1021/)|[SMB/Windows Admin Shares](https://attack.mitre.org/beta/techniques/T1021/002/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Low|
-|[Create or Modify System Process](https://attack.mitre.org/beta/techniques/T1543/)|[Windows Service](https://attack.mitre.org/beta/techniques/T1543/003/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/)|Low|
-|[Modify Registry](https://attack.mitre.org/beta/techniques/T1112/)|N/A|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Low|
-|[Hijack Execution Flow](https://attack.mitre.org/beta/techniques/T1574/)|[Services Registry Permissions Weakness](https://attack.mitre.org/beta/techniques/T1574/011/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/)|Low|
-|[Remote System Discovery](https://attack.mitre.org/beta/techniques/T1018/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[System Services](https://attack.mitre.org/beta/techniques/T1569/)|[Service Execution](https://attack.mitre.org/beta/techniques/T1569/002/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Low|
-|[Scheduled Task/Job](https://attack.mitre.org/beta/techniques/T1053/)|[At (Windows)](https://attack.mitre.org/beta/techniques/T1053/002/), [Scheduled Task](https://attack.mitre.org/beta/techniques/T1053/005/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/beta/tactics/TA0004/), [Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Low|
-|[Scheduled Transfer](https://attack.mitre.org/beta/techniques/T1029/)|N/A|[Exfiltration](https://attack.mitre.org/beta/tactics/TA0010/)|Low|
-|[System Owner/User Discovery](https://attack.mitre.org/beta/techniques/T1033/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[System Service Discovery](https://attack.mitre.org/beta/techniques/T1007/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[System Information Discovery](https://attack.mitre.org/beta/techniques/T1082/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[System Network Connections Discovery](https://attack.mitre.org/beta/techniques/T1049/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[System Network Configuration Discovery](https://attack.mitre.org/beta/techniques/T1016/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[Application Window Discovery](https://attack.mitre.org/beta/techniques/T1010/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[Software Discovery](https://attack.mitre.org/beta/techniques/T1518/)|[Security Software Discovery](https://attack.mitre.org/beta/techniques/T1518/001/)|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[Network Service Scanning](https://attack.mitre.org/beta/techniques/T1046/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
-|[Impair Defenses](https://attack.mitre.org/beta/techniques/T1562/)|[Disable or Modify Tools](https://attack.mitre.org/beta/techniques/T1562/001/), [Indicator Blocking](https://attack.mitre.org/beta/techniques/T1562/006/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Low|
-|[Account Manipulation](https://attack.mitre.org/beta/techniques/T1098/)|N/A|[Credential Access](https://attack.mitre.org/beta/tactics/TA0006/)|Low|
-|[Command and Scripting Interpreter](https://attack.mitre.org/beta/techniques/T1059/)|[Visual Basic](https://attack.mitre.org/beta/techniques/T1059/005/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
-|[Query Registry](https://attack.mitre.org/beta/techniques/T1012/)|N/A|[Discovery](https://attack.mitre.org/beta/tactics/TA0007/)|Low|
+|[Account Discovery](https://attack.mitre.org/techniques/T1087/)|[Local Account](https://attack.mitre.org/techniques/T1087/001/), [Domain Account](https://attack.mitre.org/techniques/T1087/002/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[OS Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[Security Account Manager](https://attack.mitre.org/techniques/T1003/002/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
+|[Permission Groups Discovery](https://attack.mitre.org/techniques/T1069/)|[Local Groups](https://attack.mitre.org/techniques/T1069/001/), [Domain Groups](https://attack.mitre.org/techniques/T1069/002/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[Process Discovery](https://attack.mitre.org/techniques/T1057/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[Remote Services](https://attack.mitre.org/techniques/T1021/)|[SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Low|
+|[Create or Modify System Process](https://attack.mitre.org/techniques/T1543/)|[Windows Service](https://attack.mitre.org/techniques/T1543/003/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Low|
+|[Modify Registry](https://attack.mitre.org/techniques/T1112/)|N/A|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
+|[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|[Services Registry Permissions Weakness](https://attack.mitre.org/techniques/T1574/011/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Low|
+|[Remote System Discovery](https://attack.mitre.org/techniques/T1018/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[System Services](https://attack.mitre.org/techniques/T1569/)|[Service Execution](https://attack.mitre.org/techniques/T1569/002/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Low|
+|[Scheduled Task/Job](https://attack.mitre.org/techniques/T1053/)|[At (Windows)](https://attack.mitre.org/techniques/T1053/002/), [Scheduled Task](https://attack.mitre.org/techniques/T1053/005/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Execution](https://attack.mitre.org/tactics/TA0002/)|Low|
+|[Scheduled Transfer](https://attack.mitre.org/techniques/T1029/)|N/A|[Exfiltration](https://attack.mitre.org/tactics/TA0010/)|Low|
+|[System Owner/User Discovery](https://attack.mitre.org/techniques/T1033/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[System Service Discovery](https://attack.mitre.org/techniques/T1007/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[System Information Discovery](https://attack.mitre.org/techniques/T1082/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[System Network Connections Discovery](https://attack.mitre.org/techniques/T1049/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[System Network Configuration Discovery](https://attack.mitre.org/techniques/T1016/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[Application Window Discovery](https://attack.mitre.org/techniques/T1010/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[Software Discovery](https://attack.mitre.org/techniques/T1518/)|[Security Software Discovery](https://attack.mitre.org/techniques/T1518/001/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[Network Service Scanning](https://attack.mitre.org/techniques/T1046/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[Impair Defenses](https://attack.mitre.org/techniques/T1562/)|[Disable or Modify Tools](https://attack.mitre.org/techniques/T1562/001/), [Indicator Blocking](https://attack.mitre.org/techniques/T1562/006/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
+|[Account Manipulation](https://attack.mitre.org/techniques/T1098/)|N/A|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
+|[Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)|[Visual Basic](https://attack.mitre.org/techniques/T1059/005/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
+|[Query Registry](https://attack.mitre.org/techniques/T1012/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
 
 ### Data Model References
 

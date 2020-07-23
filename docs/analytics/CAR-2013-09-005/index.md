@@ -16,7 +16,7 @@ New executables that are started as a service are suspicious. This analytic look
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Create or Modify System Process](https://attack.mitre.org/beta/techniques/T1543/)|[Windows Service](https://attack.mitre.org/beta/techniques/T1543/003/)|[Persistence](https://attack.mitre.org/beta/tactics/TA0003/)|Moderate|
+|[Create or Modify System Process](https://attack.mitre.org/techniques/T1543/)|[Windows Service](https://attack.mitre.org/techniques/T1543/003/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 
 ### Data Model References
 

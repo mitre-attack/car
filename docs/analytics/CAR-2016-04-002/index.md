@@ -16,7 +16,7 @@ It is unlikely that event log data would be cleared during normal operations, an
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Indicator Removal on Host](https://attack.mitre.org/beta/techniques/T1070/)|[Clear Windows Event Logs](https://attack.mitre.org/beta/techniques/T1070/001/)|[Defense Evasion](https://attack.mitre.org/beta/tactics/TA0005/)|Moderate|
+|[Indicator Removal on Host](https://attack.mitre.org/techniques/T1070/)|[Clear Windows Event Logs](https://attack.mitre.org/techniques/T1070/001/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
 ### Implementations

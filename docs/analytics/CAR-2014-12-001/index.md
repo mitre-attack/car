@@ -43,7 +43,7 @@ Identifies the process that initiated the RPC request (such as wmic.exe or power
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Windows Management Instrumentation](https://attack.mitre.org/beta/techniques/T1047/)|N/A|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|High|
+|[Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047/)|N/A|[Execution](https://attack.mitre.org/tactics/TA0002/)|High|
 
 ### Data Model References
 

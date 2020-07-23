@@ -18,7 +18,7 @@ In addition to looking for RAR or 7z program names, command line usage of 7Zip o
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Archive Collected Data](https://attack.mitre.org/beta/techniques/T1560/)|[Archive via Utility](https://attack.mitre.org/beta/techniques/T1560/001/)|[Exfiltration](https://attack.mitre.org/beta/tactics/TA0010/)|Moderate|
+|[Archive Collected Data](https://attack.mitre.org/techniques/T1560/)|[Archive via Utility](https://attack.mitre.org/techniques/T1560/001/)|[Exfiltration](https://attack.mitre.org/tactics/TA0010/)|Moderate|
 
 ### Data Model References
 

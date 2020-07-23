@@ -22,7 +22,7 @@ User Name, Machines logged into, the earliest and latest times in which users we
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Valid Accounts](https://attack.mitre.org/beta/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/beta/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/beta/techniques/T1078/003/)|[Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008/)|Moderate|
+|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/techniques/T1078/003/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 
 

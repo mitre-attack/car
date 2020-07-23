@@ -24,7 +24,7 @@ The time and host the new process was started as well as its parent
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Command and Scripting Interpreter](https://attack.mitre.org/beta/techniques/T1059/)|[Windows Command Shell](https://attack.mitre.org/beta/techniques/T1059/003/)|[Execution](https://attack.mitre.org/beta/tactics/TA0002/)|Moderate|
+|[Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)|[Windows Command Shell](https://attack.mitre.org/techniques/T1059/003/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
 ### Data Model References
 
