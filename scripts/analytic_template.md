@@ -19,7 +19,7 @@ contributors: {{analytic['contributors']|join(', ')}}
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|{% for coverage_item in analytic['coverage'] %}
-|[{{techniques[coverage_item['technique']]}}](https://attack.mitre.org/beta/techniques/{{coverage_item['technique']}}/)|{% if 'subtechniques' in coverage_item %}{% for subtechnique in coverage_item['subtechniques'] %}[{{techniques[subtechnique]}}](https://attack.mitre.org/beta/techniques/{{subtechnique | replace(".","/")}}/){% if not loop.last %}, {% endif %}{% endfor %}{% else %}N/A{% endif %}|{% for tactic in coverage_item['tactics'] %}[{{tactics[tactic]}}](https://attack.mitre.org/beta/tactics/{{tactic}}/){% if not loop.last %}, {% endif %}{% endfor %}|{{coverage_item['coverage']}}|{% endfor %}{% endif %}
+|[{{techniques[coverage_item['technique']]}}](https://attack.mitre.org/techniques/{{coverage_item['technique']}}/)|{% if 'subtechniques' in coverage_item %}{% for subtechnique in coverage_item['subtechniques'] %}[{{techniques[subtechnique]}}](https://attack.mitre.org/techniques/{{subtechnique | replace(".","/")}}/){% if not loop.last %}, {% endif %}{% endfor %}{% else %}N/A{% endif %}|{% for tactic in coverage_item['tactics'] %}[{{tactics[tactic]}}](https://attack.mitre.org/tactics/{{tactic}}/){% if not loop.last %}, {% endif %}{% endfor %}|{{coverage_item['coverage']}}|{% endfor %}{% endif %}
 {% if 'data_model_references' in analytic %}
 ### Data Model References
 
