@@ -19,6 +19,9 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
+### July 2020
+* Updated ATT&CK Detection for all analytics for [latest ATT&CK release](https://attack.mitre.org/resources/updates/updates-july-2020/).
+
 ### May 2020
 * Updated [ATT&CK Navigator layer](https://mitre-attack.github.io/attack-navigator/beta/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcar_attack%2Fcar_attack.json) to incorporate sub-technique mappings for all CAR analytics.
 * Added [Sysmon 11.0](/sensors/sysmon_11.0) sensor with data model mappings and CAR analytic coverage.
