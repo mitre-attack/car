@@ -64,6 +64,8 @@ permalink: /analytics/
 |[CAR-2020-04-001: Shadow Copy Deletion](CAR-2020-04-001)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1490/">Inhibit System Recovery</a></li></ul>{:/}|Eql, Pseudocode, Sigma, Splunk|Windows|
 |[CAR-2020-05-001: MiniDump of LSASS](CAR-2020-05-001)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul>{:/}|Splunk|Windows|
 |[CAR-2020-05-003: Rare LolBAS Command Lines](CAR-2020-05-003)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1012/">Query Registry</a></li><li><a href="https://attack.mitre.org/techniques/T1112/">Modify Registry</a></li><li><a href="https://attack.mitre.org/techniques/T1547/">Boot or Logon Autostart Execution</a></li><li><a href="https://attack.mitre.org/techniques/T1574/">Hijack Execution Flow</a></li></ul>{:/}|Pseudocode, Splunk|Windows|
+|[CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities](CAR-2020-08-001)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1564/">Hide Artifacts</a></li></ul>{:/}|Pseudocode, Splunk|Windows|
+|[CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS](CAR-2020-08-002)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1564/">Hide Artifacts</a></li></ul>{:/}|Pseudocode, Splunk|Windows|
 
 ---
 ## Analytic List (by technique/sub-technique coverage)
@@ -129,3 +131,4 @@ permalink: /analytics/
 |[File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/)|(N/A - see below)|(N/A - see below)|
 |...|[Windows File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/001/)|{::nomarkdown}<ul><li><a href="CAR-2019-07-001">CAR-2019-07-001: Access Permission Modification</a></li></ul>{:/}|
 |...|[Linux and Mac File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/002/)|{::nomarkdown}<ul><li><a href="CAR-2019-07-001">CAR-2019-07-001: Access Permission Modification</a></li></ul>{:/}|
+|[Hide Artifacts](https://attack.mitre.org/techniques/T1564/)|[NTFS File Attributes](https://attack.mitre.org/techniques/T1564/004/)|{::nomarkdown}<ul><li><a href="CAR-2020-08-001">CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities</a></li><li><a href="CAR-2020-08-002">CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS</a></li></ul>{:/}|
