@@ -19,6 +19,11 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
+### August 2020
+* New analytics added
+  * [CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities](/analytics/CAR-2020-08-001)
+  * [CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS](/analytics/CAR-2020-08-002)
+  
 ### July 2020
 * Updated ATT&CK Detection for all analytics for [latest ATT&CK release](https://attack.mitre.org/resources/updates/updates-july-2020/).
 
