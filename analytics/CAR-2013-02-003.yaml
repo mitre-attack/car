@@ -1,6 +1,8 @@
 title: Processes Spawning cmd.exe
 submission_date: 2013/02/05
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:
@@ -13,6 +15,8 @@ coverage:
   - technique: T1059
     tactics:
       - TA0002
+    subtechniques:
+      - T1059.003
     coverage: Moderate
 implementations:
   - code: |-

@@ -6,9 +6,10 @@ information_domain: Host
 subtypes: Process
 analytic_type: TTP
 contributors: MITRE
+applicable_platforms: Windows, Linux, macOS
 ---
 
-Executables are generally not renamed, thus a given hash of an executable should only have ever one name. Identifying instances where multiple process names share the same hash may find cases where tools are copied by attackers to different folders or hosts to [avoid detection](https://attack.mitre.org/tactics/TA0005).
+Executables are generally not renamed, thus a given hash of an executable should only have ever one name. Identifying instances where multiple process names share the same hash may find cases where tools are copied by attackers to different folders or hosts to [avoid detection](https://attack.mitre.org/beta/tactics/TA0005).
 
 Although this analytic was initially based on MD5 hashes, it is equally applicable to any hashing convention.
 
@@ -19,9 +20,9 @@ A list of hashes and the different executables associated with each one
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Rename System Utilities](https://attack.mitre.org/techniques/T1036/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 ### Data Model References
 
@@ -64,6 +65,7 @@ index=__your_sysmon_index__ EventCode=1|stats dc(Hashes) as Num_Hashes values(Ha
 [Sigma includes](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_renamed_paexec.yml) a rule specifically for detecting instances of paexec being renamed.
 
 
+
 #### Dnif, Sysmon native
 
 DNIF version of the above pseudocode.
@@ -74,3 +76,7 @@ _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 group count_uni
 >>_agg count_unique $HashMD5
 >>_checkif int_compare count_unique > 1 include
 ```
+
+
+
+

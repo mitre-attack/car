@@ -1,0 +1,77 @@
+---
+name: Flow
+description: A sequence of packets from a source computer to a destination, which may be another host, a multicast group, or a broadcast domain. This may be captured at network or host level.
+actions:
+  - name: start
+    description: The event corresponding to the beginning of collection of flow data in a given time period.
+  - name: end
+    description: The event corresponding to the ending of collection of flow data in a given time period.
+  - name: message
+    description: A flow message pertains to any event between start and end when content is sent over the connection (may imply TCP). This often implies use of traffic content collected via PCAP or a similar mechanism.
+fields:
+  - name: fqdn
+    description: The fully qualified domain name of the host. Contains the hostname appended with the domain.
+    example: HOST1.EXAMPLE_DOMAIN.COM
+  - name: hostname
+    description: The hostname of the host, without the domain.
+    example: HOST1
+  - name: content
+    description: The ASCII printable characters of the flow. This corresponds to content from PCAP data or similar formats.
+    example: GET https://www.google.com/ HTTP/1.1
+  - name: dest_ip
+    description: The destination IP address of the flow.
+    example: 192.168.1.5
+  - name: dest_port
+    description: The destination port of the flow.
+    example: 192.168.1.5
+  - name: src_ip
+    description: The source IP address of the flow.
+    example: 10.0.0.54
+  - name: src_port
+    description: The source port of the flow.
+    example: 50438
+  - name: start_time
+    description: The starting time date stamp, in UTC, of the flow data.
+    example: 05/14/2015 11:59:59 PM
+  - name: end_time
+    description: The datetime stamp, in UTC, when the flow ended.
+    example: 05/15/2015 03:59:53.176 AM
+  - name: exe
+    description: The basename of the `image_path`. This will need to be collected from the host.
+    example: Chrome.exe
+  - name: flags
+    description: TCP flags.
+    example: SYN, ACK, PSH
+  - name: image_path
+    description: The file system path of the process that opened the flow. This will need to be collected from the host.
+    example: C:\path\to\example.exe
+  - name: packet_count
+    description: The total packet count seen at time of logging.
+    example: 4
+  - name: pid
+    description: The total packet count seen at time of logging.
+    example: 738
+  - name: ppid
+    description: The process ID for the process’s parent that owns the socket responsible for the flow, represented in decimal notation. This will need to be collected from the host.
+    example: 1860
+  - name: proto_info
+    description: A text decoded version of traffic in the flow specific to the protocol. The application layer information from the flow parsed according to the protocol in question. For instance, SMB information or HTTP headers and content.
+    example: SMB2 Write Request Len:165 Off:0 Fileusername\private\filename.pptx, SRVSVC NetShareGetInfo response
+  - name: protocol
+    description: The application layer protocol for the flow.
+    example: SMB, HTTP
+  - name: user
+    description: The user that ran the process.
+    example: HOST1\LOCALUSER
+  - name: src_fqdn
+    description: The fully qualified domain name that corresponds to `src_ip`.
+    example: src_domain.example.com
+  - name: src_hostname
+    description: The hostname that corresponds to `src_ip`.
+    example: src_example
+  - name: dest_fqdn
+    description: The fully qualified domain name that corresponds to `dest_ip`.
+    example: dest_example.example.com
+  - name: dest_hostname
+    description: The hostname that corresponds to `dest_ip`.
+    example: dest_example

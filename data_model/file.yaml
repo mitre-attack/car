@@ -1,0 +1,61 @@
+---
+name: File
+description: A resource for storing information available to a computer program.
+actions:
+  - name: timestomp
+    description: The modification of an attribute, such as creation time. The file metadata may change, but the contents of the file remain the same.
+  - name: create
+    description: The event corresponding to the creation of a file.
+  - name: delete
+    description: The event corresponding to the deletion of a file.
+  - name: modify
+    description: The event corresponding to the modification of a file or its metadata.
+  - name: read
+    description: The event corresponding to the accessing of a file to be read.
+  - name: write
+    description: The event corresponding to the accessing of a file in order to write new instructions or information into a file.
+fields:
+  - name: creation_time
+    description: The creation time of the file as described in UTC and including the date.
+    example: 05/14/2015 12:47:06
+  - name: file_name
+    description: The name of the file.
+    example: MyWordDoc.docx
+  - name: fqdn
+    description: The fully qualified domain name of the host. Contains the hostname appended with the domain.
+    example: HOST1.EXAMPLE_DOMAIN.COM
+  - name: hostname
+    description: The hostname of the host, without the domain.
+    example: HOST1
+  - name: image_path
+    description: The file system location of the executable that is associated with the pid that generated this event.
+    example: C:\Windows\system32\notepad.exe
+  - name: md5_hash
+    description: An MD5 hash of the contents of the file located at `image_path`. The field is in hex notation, without the 0x prefix.
+    example: 5eb63bbbe01eeed093cb22bb8f5acdc3
+  - name: sha1_hash
+    description: The SHA1 hash of the contents of the file located at `image_path`.
+    example: 2aae6c35c94fcfb415dbe95f408b9ce91ee846ed
+  - name: sha256_hash
+    description: The SHA256 hash of the contents of the file located at `image_path`.
+    example: 68e656b251e67e8358bef8483ab0d51c6619f3e7a1a9f0e75838d41ff368f728
+  - name: pid
+    description: The process ID for the process that generated this file event, represented in decimal notation.
+    example: 738
+  - name: ppid
+    description: The process ID of the parent process of the process associated with this file event, represented in decimal notation.
+    example: 1860
+  - name: previous_creation_time
+    description: The creation_time associated with the file before it was changed for this file event.
+    example: 05/14/2015 12:47:06
+  - name: signer
+    description: The company listed on the certificate of the program at `image_path` if that program is signed.
+    example: Microsoft Corporation
+  - name: user
+    description: The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
+    example: HOST1\LOCALUSER
+  - name: company
+    description: The name of the organization listed in the file located at `image_path`.
+  - name: file_path
+    description: The full path to the file.
+    example: C:\users\fakeuser\documents\MyFile.doc

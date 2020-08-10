@@ -1,0 +1,46 @@
+---
+name: Module
+description: Services, or a service application, can be started automatically at system boot, by a user through the services control panel applet, or by an application that uses service functions. Services can execute even when no user is logged into the system.
+actions:
+  - name: load
+    description: A module load event occurs when a PE image (dll or exe) is loaded into a process.
+  - name: unload
+    description: When the module is unloaded from memory, upon destruction of the process or by calling an API such as FreeLibrary, the unload event is triggered.
+fields:
+  - name: fqdn
+    description: The fully qualified domain name of the host. Contains the hostname appended with the domain.
+    example: HOST1.EXAMPLE_DOMAIN.COM
+  - name: hostname
+    description: The hostname of the host, without the domain.
+    example: HOST1
+  - name: base_address
+    description: A hex address indicating where the module is loaded into the process’s virtual address space.
+    example: 0xFFFFF8000405F000
+  - name: image_path
+    description: The file system location of the process image.
+    example: C:\path\to\example.exe
+  - name: md5_hash
+    description: The MD5 hash of the contents of the file located at `module_path`. The field is in hex notation, without the 0x prefix.
+    example: 5eb63bbbe01eeed093cb22bb8f5acdc3
+  - name: sha1_hash
+    description: The SHA1 hash of the contents of the file located at `image_path`.
+    example: 2aae6c35c94fcfb415dbe95f408b9ce91ee846ed
+  - name: sha256_hash
+    description: The SHA256 hash of the contents of the file located at `image_path`.
+    example: 68e656b251e67e8358bef8483ab0d51c6619f3e7a1a9f0e75838d41ff368f728
+  - name: module_path
+    description: The full file system path to the module loaded into the memory space of the process.
+    example: C:\windows\system32\kernel32.exe
+  - name: module_name
+    description: The name of the file where the module is loaded on disk. This is also the string that is used internally by the program to lookup information about the module.
+    example: kernel32.exe
+  - name: pid
+    description: Process ID of the process in which the module is loaded (or unloaded).
+    example: 738
+  - name: signer
+    description: The name of the organization which signed the module.
+    example: Microsoft Corporation
+  - name: signer
+    description: The thread ID of the thread responsible for the load or unload event.
+    example: 50
+

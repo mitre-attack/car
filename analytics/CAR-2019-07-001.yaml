@@ -2,6 +2,10 @@
 title: Access Permission Modification
 submission_date: 2019/07/08
 information_domain: 'Host'
+platforms:
+  - Windows
+  - Linux
+  - macOS
 subtypes:
   - File
 analytic_types:
@@ -18,6 +22,9 @@ coverage:
   - technique: T1222
     tactics:
       - TA0005
+    subtechniques:
+      - T1222.001
+      - T1222.002
     coverage: Moderate
 implementations:
   - name: Windows - Pseudocode

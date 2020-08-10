@@ -2,6 +2,8 @@
 title: Lsass Process Dump via Procdump
 submission_date: 2019/07/29
 information_domain: 'Host'
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:
@@ -21,6 +23,8 @@ coverage:
   - technique: T1003
     tactics:
       - TA0006
+    subtechniques:
+      - T1003.001
     coverage: Low
 implementations:
   - name: Procdump - Process Create

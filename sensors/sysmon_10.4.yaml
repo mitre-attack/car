@@ -1,0 +1,130 @@
+---
+sensor_name: Sysmon
+sensor_version: 10.4
+sensor_developer: Microsoft
+sensor_url: 'https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon'
+sensor_description: 'Sysmon is a freely available program from Microsoft that is provided as part of the Windows Sysinternals suite of tools. It collects system information while running in the background and supports storing it in the Windows Event Log.'
+mappings:
+  - object: file
+    action: create
+    notes: 'Mapped to Event 11: SYSMON_FILE_CREATE.'
+    fields:
+      - fqdn
+      - image_path
+      - pid
+      - file_name
+      - creation_time
+  - object: file
+    action: timestomp
+    notes: 'Mapped to Event 2: SYSMON_FILE_TIME.'
+    fields:
+      - fqdn
+      - image_path
+      - pid
+      - file_name
+      - creation_time
+      - previous_creation_time
+  - object: driver
+    action: load
+    notes: 'Mapped to Event 6: SYSMON_DRIVER_LOAD.'
+    fields:
+      - fqdn
+      - image_path
+      - sha1_hash
+      - sha256_hash
+      - md5_hash
+      - signer
+  - object: flow
+    action: start
+    notes: 'Mapped to Event 3: SYSMON_NETWORK_CONNECT, which may not be 100% semantically identical to the start of a network flow.'
+    fields:
+      - image_path
+      - pid
+      - protocol
+      - src_ip
+      - src_hostname
+      - src_port
+      - dest_ip
+      - dest_hostname
+      - dest_port
+      - start_time
+      - user
+  - object: module
+    action: load
+    notes: 'Mapped to Event 7: SYSMON_IMAGE_LOAD.'
+    fields:
+      - fqdn
+      - pid
+      - image_path
+      - module_path
+      - sha1_hash
+      - sha256_hash
+      - md5_hash
+      - signer
+  - object: process
+    action: create
+    notes: 'Mapped to Event 1: SYSMON_CREATE_PROCESS.'
+    fields:
+      - fqdn
+      - pid
+      - ppid
+      - command_line
+      - current_working_directory
+      - image_path
+      - sha1_hash
+      - sha256_hash
+      - md5_hash
+      - integrity_level
+      - parent_command_line
+      - parent_image_path
+      - user
+  - object: process
+    action: terminate
+    notes: 'Mapped to Event 5: SYSMON_PROCESS_TERMINATE.'
+    fields:
+      - fqdn
+      - pid
+      - image_path
+  - object: registry
+    action: add
+    notes: 'Mapped to Event 12: SYSMON_REG_KEY (captures both adding & deleting).'
+    fields:
+      - fqdn
+      - pid
+      - image_path
+      - hive
+      - key
+      - value
+  - object: registry
+    action: edit
+    notes: 'Mapped to Event 13: SYSMON_REG_SETVALUE.'
+    fields:
+      - fqdn
+      - pid
+      - image_path
+      - hive
+      - key
+      - value
+  - object: registry
+    action: remove
+    notes: 'Mapped to Event 12: SYSMON_REG_KEY (captures both adding & deleting).'
+    fields:
+      - fqdn
+      - pid
+      - image_path
+      - hive
+      - key
+      - value
+  - object: thread
+    action: remote_create
+    notes: 'Mapped to Event 8: SYSMON_CREATE_REMOTE_THREAD.'
+    fields:
+      - hostname
+      - src_pid
+      - tgt_pid
+      - tgt_tid
+      - start_function
+      - start_address
+      - start_module
+other_coverage:
+  - 'CAR-2019-04-004: Credential Dumping via Mimikatz'      

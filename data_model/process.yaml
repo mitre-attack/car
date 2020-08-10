@@ -1,0 +1,66 @@
+---
+name: Process
+description: A process is a running program on a computer.
+actions:
+  - name: create
+    description: The event corresponding to a process creation in Windows. In the kernel, these are often captured with the callback [PsSetCreateProcessNotifyRoutine](https://msdn.microsoft.com/en-us/library/windows/hardware/ff559951%28v=vs.85%29.aspx).
+  - name: terminate
+    description: The event corresponding to a process destruction in Windows. In the kernel, these are also captured with the callback [PsSetCreateProcessNotifyRoutine](https://msdn.microsoft.com/en-us/library/windows/hardware/ff559951%28v=vs.85%29.aspx), but with a pointer to a NULL structure.
+fields:
+  - name: fqdn
+    description: The fully qualified domain name of the host in which the process ran. Contains the hostname appended with the domain.
+    example: HOST1.EXAMPLE_DOMAIN.COM
+  - name: hostname
+    description: The hostname of the host, without the domain.
+    example: HOST1
+  - name: command_line
+    description: The command line string contains all arguments passed to the process upon execution.
+    example: example.exe arg1 arg2
+  - name: exe
+    description: The basename of the `image_path`.
+    example: example.exe
+  - name: image_path
+    description: The file path of the executable associated with this process. This may act as a pivot to [file:file_path](https://car.mitre.org/wiki/Data_Model/file#file_path).
+    example: C:\path\to\example.exe
+  - name: md5_hash
+    description: The MD5 hash of the contents of the file located at `image_path`. The field is in hex notation, without the 0x prefix.
+    example: 5eb63bbbe01eeed093cb22bb8f5acdc3
+  - name: sha1_hash
+    description: The SHA1 hash of the contents of the file located at `image_path`.
+    example: 2aae6c35c94fcfb415dbe95f408b9ce91ee846ed
+  - name: sha256_hash
+    description: The SHA256 hash of the contents of the file located at `image_path`.
+    example: 68e656b251e67e8358bef8483ab0d51c6619f3e7a1a9f0e75838d41ff368f728
+  - name: parent_exe
+    description: The `exe` field of the parent process. This is a substring of `parent_image_path`.
+    example: example_parent.exe
+  - name: parent_image_path
+    description: The `image_path` field of the parent process.
+    example: C:\path\to\example_parent.exe
+  - name: pid
+    description: The process ID for the process, represented in decimal notation.
+    example: 738
+  - name: ppid
+    description: The process ID for the process's parent, represented in decimal notation. In the parent process, this will be the `pid` field.
+    example: 1860
+  - name: sid
+    description: The Windows security identifier of the `user` token that the process is running under.
+    example: S-1-5-18
+  - name: signer
+    description: The name of the company that signed the file.
+    example: FooCorp
+  - name: user
+    description: The user token that process was created with. May be a local, domain or SYSTEM user. Formatted with "<DOMAIN>\<USER>". Individual threads in the process may gain more privilege or change tokens, so the active token in any thread is not necessarily the one the process was created under.
+    example: HOST1\LOCALUSER
+  - name: integrity_level
+    description: The Windows integrity level associated with the process. MUST be one of low, medium, high, or system.
+    example: High
+  - name: parent_command_line
+    description: All of the arguments passed to the parent process upon execution.
+    example: c:\windows\system32\dism.exe foo.xml
+  - name: current_working_directory
+    description: The absolute path to the current working directory of the process.
+    example: c:\temp
+  - name: env_vars
+    description: The environment variables within a process's memory space, as a string.
+    example: SHELL=/bin/zsh

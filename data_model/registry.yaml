@@ -1,0 +1,42 @@
+---
+name: Registry
+description: The registry is a system-defined database in which applications and system components store and retrieve configuration data. The data stored in the registry varies according to the version of Microsoft Windows. Applications use the registry API to retrieve, modify, or delete registry data.
+actions:
+  - name: add
+    description: The event corresponding to the act of adding a registry key, hive, type, or value.
+  - name: edit
+    description: The event corresponding to the act of modifying an existing registry key, hive, type, or value.
+  - name: remove
+    description: The event corresponding to the act of deleting an existing registry key, hive, type, or value.
+fields:
+  - name: fqdn
+    description: The fully qualified domain name for the host on which the registry access took place.
+    example: HOST1.EXAMPLE_DOMAIN.COM
+  - name: hostname
+    description: The hostname of the host, without the domain.
+    example: HOST1
+  - name: key
+    description: The registry key of the event. Similar to a folder in a traditional file system.
+    example: HKLM\SYSTEM\CurrentControlSet\services\RpcSs
+  - name: value
+    description: The descriptive name for the data being stored.
+    example: InstalledVersion
+  - name: data
+    description: The content of `value`, typically a text string.
+    example: \%SystemRoot%\system32\svchost.exe -k rpcss
+  - name: type
+    description: The type of data being stored in `value`. Types include binary data, 32 bit numbers, strings, etc.
+    example: REG_BINARY
+  - name: hive
+    description: The logical group of keys, subkeys, and values in the registry.
+    example: HKEY_CURRENT_USER
+  - name: image_path
+    description: Inherited from the [process](https://car.mitre.org/wiki/Data_Model/process) that made the registry access.
+    example: C:\path\to\example.exe
+  - name: pid
+    description: Inherited from the [process](https://car.mitre.org/wiki/Data_Model/process) that made the registry access.
+    example: 738
+  - name: user
+    description: The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
+    example: HOST1\LOCALUSER
+

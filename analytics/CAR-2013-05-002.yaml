@@ -1,6 +1,8 @@
 title: Suspicious Run Locations
 submission_date: 2013/05/07
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:
@@ -21,7 +23,7 @@ coverage:
   - technique: T1036
     tactics:
       - TA0005
-    coverage: Moderate
+    coverage: Low
 implementations:
   - description: 'The RECYCLER and SystemVolumeInformation directories will be present on every drive. Replace %systemroot% and %windir% with the actual paths as configured by the endpoints. '
     code: |-

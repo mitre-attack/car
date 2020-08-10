@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: File
 analytic_type: Situational Awareness
 contributors: Meric Degirmenci, MITRE
+applicable_platforms: Windows, Linux, macOS
 ---
 
 Adversaries sometimes modify object access rights at the operating system level. There are varying motivations behind this action -  they may not want some files/objects to be changed on systems for persistence reasons and therefore provide admin only rights; also, they may want files to be accessible with lower levels of permissions.
@@ -15,9 +16,9 @@ Note - this analytic references file permissions, which are not currently in the
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/)|[Windows File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/001/), [Linux and Mac File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/002/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
 ### Implementations

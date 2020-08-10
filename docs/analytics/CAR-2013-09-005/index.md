@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: Process
 analytic_type: Detection
 contributors: MITRE
+applicable_platforms: Windows
 ---
 
 New executables that are started as a service are suspicious. This analytic looks for anomalous service executables.
@@ -13,10 +14,9 @@ New executables that are started as a service are suspicious. This analytic look
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Modify Existing Service](https://attack.mitre.org/techniques/T1031/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
-|[New Service](https://attack.mitre.org/techniques/T1050/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Create or Modify System Process](https://attack.mitre.org/techniques/T1543/)|[Windows Service](https://attack.mitre.org/techniques/T1543/003/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 
 ### Data Model References
 

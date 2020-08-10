@@ -1,6 +1,10 @@
 title: Quick execution of a series of suspicious commands
 submission_date: 2013/04/11
 information_domain: 'Analytic, Host'
+platforms:
+  - Windows
+  - Linux
+  - macOS
 subtypes:
   - Process
 analytic_types:
@@ -48,111 +52,129 @@ coverage:
   - technique: T1087
     tactics:
       - TA0007
-    coverage: Moderate
+    subtechniques:
+      - T1087.001
+      - T1087.002
+    coverage: Low
   - technique: T1003
     tactics:
       - TA0006
-    coverage: Moderate
+    subtechniques:
+      - T1003.002
+    coverage: Low
   - technique: T1069
     tactics:
       - TA0007
-    coverage: Moderate
+    subtechniques:
+      - T1069.001
+      - T1069.002
+    coverage: Low
   - technique: T1057
     tactics:
       - TA0007
-    coverage: Moderate
-  - technique: T1077
+    coverage: Low
+  - technique: T1021
     tactics:
       - TA0008
-    coverage: Moderate
-  - technique: T1050
+    subtechniques:
+      - T1021.002
+    coverage: Low
+  - technique: T1543
     tactics:
       - TA0003
       - TA0004
-    coverage: Moderate
-  - technique: T1031
-    tactics:
-      - TA0003
-    coverage: Moderate
+    subtechniques:
+      - T1543.003
+    coverage: Low
   - technique: T1112
     tactics:
       - TA0005
-    coverage: Moderate
-  - technique: T1058
+    coverage: Low
+  - technique: T1574
     tactics:
       - TA0003
       - TA0004
-    coverage: Moderate
+    subtechniques:
+      - T1574.011
+    coverage: Low
   - technique: T1018
     tactics:
       - TA0007
-    coverage: Moderate
-  - technique: T1035
+    coverage: Low
+  - technique: T1569
     tactics:
       - TA0002
-    coverage: Moderate
+    subtechniques:
+      - T1569.002
+    coverage: Low
   - technique: T1053
     tactics:
       - TA0003
       - TA0004
       - TA0002
-    coverage: Moderate
+    subtechniques:
+      - T1053.002
+      - T1053.005
+    coverage: Low
   - technique: T1029
     tactics:
       - TA0010
-    coverage: Moderate
+    coverage: Low
   - technique: T1033
     tactics:
       - TA0007
-    coverage: Moderate
+    coverage: Low
   - technique: T1007
     tactics:
       - TA0007
-    coverage: Moderate
+    coverage: Low
   - technique: T1082
     tactics:
       - TA0007
-    coverage: Moderate
+    coverage: Low
   - technique: T1049
     tactics:
       - TA0007
-    coverage: Moderate
+    coverage: Low
   - technique: T1016
     tactics:
       - TA0007
-    coverage: Moderate
+    coverage: Low
   - technique: T1010
     tactics:
       - TA0007
-    coverage: Moderate
-  - technique: T1063
+    coverage: Low
+  - technique: T1518
     tactics:
       - TA0007
-    coverage: Moderate
+    subtechniques:
+      - T1518.001
+    coverage: Low
   - technique: T1046
     tactics:
       - TA0007
-    coverage: Moderate
-  - technique: T1089
+    coverage: Low
+  - technique: T1562
     tactics:
       - TA0005
-    coverage: Moderate
+    subtechniques:
+      - T1562.001
+      - T1562.006
+    coverage: Low
   - technique: T1098
     tactics:
       - TA0006
-    coverage: Moderate
-  - technique: T1054
-    tactics:
-      - TA0005
-    coverage: Moderate
+    coverage: Low
   - technique: T1059
     tactics:
       - TA0002
+    subtechniques:
+      - T1059.005
     coverage: Moderate
   - technique: T1012
     tactics:
       - TA0007
-    coverage: Moderate
+    coverage: Low
 implementations:
   - code: |-
       processes = search Process:Create
@@ -163,7 +185,7 @@ implementations:
        or exe == "ping.exe" or exe == "quser.exe" or exe == "qwinsta.exe"
        or exe == "reg.exe" or exe == "runas.exe" or exe == "sc.exe"
        or exe == "schtasks.exe" or exe == "ssh.exe" or exe == "systeminfo.exe"
-       or exe == "taskkill.exe" or exe == "telnet.exe" or exe == tracert.exe"
+       or exe == "taskkill.exe" or exe == "telnet.exe" or exe == "tracert.exe"
        or exe == "wscript.exe" or exe == "xcopy.exe")
       reg_grouped = group reg by hostname, ppid where(max time between two events is 30 minutes)
       output reg_grouped

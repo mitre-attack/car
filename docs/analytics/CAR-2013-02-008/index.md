@@ -6,6 +6,7 @@ information_domain: Host
 subtypes: Login
 analytic_type: Situational Awareness
 contributors: MITRE
+applicable_platforms: Windows, Linux, macOS
 ---
 
 Multiple users logged into a single machine at the same time, or even within the same hour, do not typically occur in networks we have observed.
@@ -16,9 +17,9 @@ Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types
 
 ### ATT&CK Detection
 
-|Technique|Tactic|Level of Coverage|
-|---|---|---|
-|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Initial Access](https://attack.mitre.org/tactics/TA0001/)|Low|
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/techniques/T1078/003/)|[Initial Access](https://attack.mitre.org/tactics/TA0001/)|Low|
 
 ### Data Model References
 

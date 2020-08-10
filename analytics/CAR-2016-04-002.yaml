@@ -1,6 +1,10 @@
 title: User Activity from Clearing Event Logs
 submission_date: 2016/04/14
 information_domain: Host
+platforms:
+  - Windows
+  - Linux
+  - macOS
 subtypes:
   - Event Records
 analytic_types:
@@ -13,6 +17,8 @@ coverage:
   - technique: T1070
     tactics:
       - TA0005
+    subtechniques:
+      - T1070.001
     coverage: Moderate
 implementations:
   - description: 'When an eventlog is cleared, a new event is created that alerts that the eventlog was cleared. For Security logs, its event code 1100 and 1102. For System logs, it is event code 104.'

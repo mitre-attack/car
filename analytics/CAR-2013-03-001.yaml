@@ -1,6 +1,8 @@
 title: Reg.exe called from Command Shell
 submission_date: 2013/03/28
 information_domain: Host
+platforms:
+  - Windows
 subtypes:
   - Process
 analytic_types:
@@ -28,14 +30,18 @@ coverage:
     tactics:
       - TA0005
     coverage: Moderate
-  - technique: T1060
+  - technique: T1547
     tactics:
       - TA0003
+    subtechniques:
+      - T1547.001
     coverage: Moderate
-  - technique: T1058
+  - technique: T1574
     tactics:
       - TA0003
       - TA0004
+    subtechniques:
+      - T1574.011
     coverage: Moderate
 implementations:
   - description: 'To gain better context, it may be useful to also get information about the cmd process to know its parent. This may be helpful when tuning the analytic to an environment, if this behavior happens frequently. This may also help to rule out instances of users running '

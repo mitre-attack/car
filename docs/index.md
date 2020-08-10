@@ -4,7 +4,7 @@ title: Welcome to the Cyber Analytics Repository
 
 The MITRE Cyber Analytics Repository (CAR) is a knowledge base of analytics developed by [MITRE](https://www.mitre.org) based on the [MITRE ATT&CK](https://attack.mitre.org/) adversary model.
 
-If you want to start exploring, try viewing the [Full Analytic List](analytics) or use the [CAR Exploration Tool (CARET)](https://mitre-attack.github.io/caret/#/). Also, check out the new [ATT&CK Navigator Layer](https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcar_attack%2Fcar_attack.json) that captures the current set of ATT&CK tactics and techniques covered by CAR.
+If you want to start exploring, try viewing the [Full Analytic List](analytics) or use the [CAR Exploration Tool (CARET)](https://mitre-attack.github.io/caret/#/). Also, check out the [ATT&CK Navigator layer](https://mitre-attack.github.io/attack-navigator/beta/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcar_attack%2Fcar_attack.json) that captures the current set of ATT&CK tactics and techniques covered by CAR.
 
 Analytics stored in CAR contain the following information:
 * a *hypothesis* which explains the idea behind the analytic
@@ -18,6 +18,37 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 
 ## News
 Information about the latest CAR updates and changes can be found in this section.
+
+### August 2020
+* New analytics added
+  * [CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities](/analytics/CAR-2020-08-001)
+  * [CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS](/analytics/CAR-2020-08-002)
+  
+### July 2020
+* Updated ATT&CK Detection for all analytics for [latest ATT&CK release](https://attack.mitre.org/resources/updates/updates-july-2020/).
+
+### May 2020
+* Updated [ATT&CK Navigator layer](https://mitre-attack.github.io/attack-navigator/beta/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcar_attack%2Fcar_attack.json) to incorporate sub-technique mappings for all CAR analytics.
+* Added [Sysmon 11.0](/sensors/sysmon_11.0) sensor with data model mappings and CAR analytic coverage.
+* Added one new field to the [Process object](/data_model/process)
+  * `env_vars`
+* New analytics added
+  * [CAR-2020-05-001: MiniDump of LSASS](/analytics/CAR-2020-05-001)
+  * [CAR-2020-05-003: Rare LolBAS Command Lines](/analytics/CAR-2020-05-003)
+
+### April 2020
+* All analytics have been updated to account for ATT&CK sub-techniques (wherever applicable). Check out the new sub-technique based coverage table [here](/analytics/index.html#analytic-list-by-techniquesub-technique-coverage).
+* Added Applicable Platforms to all analytics. This captures the set of platforms the analytic may be applicable for; note that this does not necessarily mean that an implementation for a particular platform exists for a given analytic.
+* Added YAML for [sensors](https://github.com/mitre-attack/car/tree/master/sensors) (those added recently) and [data models](https://github.com/mitre-attack/car/tree/master/data_model) on Github.
+* New analytics added
+  * [CAR-2020-04-001: Shadow Copy Deletion](/analytics/CAR-2020-04-001)
+
+
+### February 2020
+* Added [OSQuery 4.1.2](/sensors/osquery_4.1.2) sensor with data model mappings and CAR analytic coverage.
+
+### January 2020
+* Added [Sysmon 10.4](/sensors/sysmon_10.4) sensor with data model mappings and CAR analytic coverage.
 
 ### December 2019
 * Added true positives (examples of real events that the analytic should successfully detect) to:
@@ -70,7 +101,7 @@ It's important to remember that ATT&CK and CAR are separate projects for good re
 
 ## Analytic Source Code Libraries
 
-Some analytics are built as source code for specific products. In these cases, code might support a broad set of detections in a way that makes it hard to describe a set of distinct analytics. For these types of analytics, rather than integrating them into the main CAR site, we've collected them under a library of implementations. Currently, the only library is [BZAR](https://github.com/mitre-attack/car/tree/master/implementations/bzar), a collection of Zeek (Bro) scripts looking primarily at SMB and RPC traffic.
+Some analytics are built as source code for specific products. In these cases, code might support a broad set of detections in a way that makes it hard to describe a set of distinct analytics. For these types of analytics, rather than integrating them into the main CAR site, we've collected them under a library of implementations. Currently, the only library is [BZAR](https://github.com/mitre-attack/bzar), a collection of Zeek (Bro) scripts looking primarily at SMB and RPC traffic.
 
 ## Contributing
 
