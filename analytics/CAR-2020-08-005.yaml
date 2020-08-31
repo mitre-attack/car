@@ -1,0 +1,29 @@
+---
+title: Indicator Blocking - Driver Unloaded
+submission_date: 2020/08/31
+information_domain: 'Host'
+platforms:
+  - Windows
+subtypes: 
+  - Process
+analytic_types:
+  - TTP
+contributors:
+- Olaf Hartong
+id: CAR-2020-08-005
+description: |-
+  Description text goes here.
+coverage:
+- coverage: Low
+  subtechniques: 
+    - T1562.006
+  tactics: []
+  technique: T1562
+implementations:
+- name: 
+  description: ''
+  code: |- 
+    index=__your_sysmon_index__ event_id=1 process_name="fltmc.exe" OR process_command_line="*fltmc*unload*"
+  data_model: Sysmon native
+  type: Splunk
+
