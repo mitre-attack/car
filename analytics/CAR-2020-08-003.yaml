@@ -19,11 +19,11 @@ coverage:
   tactics: []
   technique: T1053
 implementations:
-- name: 
+- name: Splunk search
   description: ''
   code: |- 
-    index=__your_sysmon_index__ event_id=11 process_path!="C:\\\\WINDOWS\\\\\system32\\\\svchost.exe" (file_path="C:\\\\Windows\\\\System32\\\\Tasks\\\\\
-    *\" OR file_path=\"C:\\\\Windows\\\\Tasks\\\\*")
+    index=__your_sysmon_index__ EventCode=11 Image!="C:\\WINDOWS\\system32\\svchost.exe" (TargetFilename="C:\\Windows\\System32\\Tasks\\
+    *" OR TargetFilename="C:\\Windows\\Tasks\\*")
   data_model: Sysmon native
   type: Splunk
 

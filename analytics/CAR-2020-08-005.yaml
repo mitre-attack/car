@@ -20,7 +20,7 @@ coverage:
   tactics: []
   technique: T1562
 implementations:
-- name: 
+- name: Splunk search
   description: ''
   code: |- 
     index=__your_sysmon_index__ event_id=1 process_name="fltmc.exe" OR process_command_line="*fltmc*unload*"

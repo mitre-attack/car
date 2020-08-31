@@ -1,0 +1,30 @@
+---
+title: Credentials in Registry
+submission_date: 2020/08/31
+information_domain: 'Host'
+platforms:
+  - Windows
+subtypes:
+  - Process 
+  - Registry
+analytic_types:
+  - TTP
+contributors:
+- Olaf Hartong
+id: CAR-2020-08-006
+description: |-
+  Description text goes here.
+coverage:
+- coverage: Low
+  subtechniques: 
+    - T1552.002
+  tactics: []
+  technique: T1552
+implementations:
+- name: Splunk Search
+  description: ''
+  code: |- 
+    ((index=__your_sysmon_index__ EventCode=1) OR (index=__your_win_syslog_index__ EventCode=4688)) (CommandLine="*reg* query HKLM \\/f password \\/t REG_SZ \\/s*" OR CommandLine="reg* query HKCU \\/f password \\/t REG_SZ \\/s" OR CommandLine="*Get-UnattendedInstallFile*" OR CommandLine="*Get-Webconfig*" OR CommandLine="*Get-ApplicationHost*" OR CommandLine="*Get-SiteListPassword*" OR CommandLine="*Get-CachedGPPPassword*" OR CommandLine="*Get-RegistryAutoLogon*") | eval mitre_technique_id="T1214" | eval file_hash_sha256= lower(file_hash_sha256)| eval indextime = _indextime | convert ctime(indextime) | table _time indextime TaskCategory file_hash_sha256 ComputerName User OriginalFileName Image ProcessGuid ParentImage ProcessId ParentProcessId CommandLine ParentCommandLine ParentProcessGuid
+  data_model: Sysmon native
+  type: Splunk
+

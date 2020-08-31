@@ -1,29 +1,29 @@
 ---
-title: Component Object Model Hijacking
+title: AppInit DLLs
 submission_date: 2020/08/31
 information_domain: 'Host'
 platforms:
   - Windows
-subtypes: 
+subtypes:
   - Registry
 analytic_types:
   - TTP
 contributors:
 - Olaf Hartong
-id: CAR-2020-08-004
+id: CAR-2020-08-006
 description: |-
   Description text goes here.
 coverage:
 - coverage: Low
   subtechniques: 
-    - T1546.015
+    - T1546.010
   tactics: []
   technique: T1546
 implementations:
 - name: Splunk search
   description: ''
   code: |- 
-    index=__your_sysmon_index__ (EventCode=12 OR EventCode=13 OR EventCode=14) TargetObject="*\\Software\\Classes\\CLSID\\*"
+    index=__your_sysmon_index__ (EventCode=12 OR EventCode=13 OR EventCode=14) (TargetObject="*\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\Appinit_Dlls\\*" OR TargetObject="*\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\Appinit_Dlls\\*")
   data_model: Sysmon native
   type: Splunk
 
