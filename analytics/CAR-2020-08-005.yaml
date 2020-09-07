@@ -12,7 +12,7 @@ contributors:
 - Olaf Hartong
 id: CAR-2020-08-005
 description: |-
-  Adversaries may attempt to devade system defenses by unloading minifilter drivers used by host-based sensors such as Sysmon through the use of the fltmc command-line utility. Accordingly, this analytic looks for command-line invocations of this utility when used to unload minifilter drivers.
+  Adversaries may attempt to evade system defenses by unloading minifilter drivers used by host-based sensors such as Sysmon through the use of the fltmc command-line utility. Accordingly, this analytic looks for command-line invocations of this utility when used to unload minifilter drivers.
 coverage:
 - coverage: Low
   subtechniques: 
@@ -24,7 +24,7 @@ implementations:
 - name: Splunk search
   description: This Splunk search looks for process create events for the fltmc.exe utility and the specific command line used to unload minifilter drivers.
   code: |- 
-    index=__your_sysmon_index__ event_id=1 process_name="fltmc.exe" OR process_command_line="*fltmc*unload*"
+    index=__your_sysmon_index__ event_id=1 (process_name="fltmc.exe" AND process_command_line="*unload*") OR process_command_line="*fltmc*unload*"
   data_model: Sysmon native
   type: Splunk
 
