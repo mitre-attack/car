@@ -24,7 +24,7 @@ implementations:
 - name: Splunk search
   description: This Splunk search looks for process create events for the fltmc.exe utility and the specific command line used to unload minifilter drivers.
   code: |- 
-    index=__your_sysmon_index__ event_id=1 (process_name="fltmc.exe" AND process_command_line="*unload*") OR process_command_line="*fltmc*unload*"
+    index=__your_sysmon_index__ event_id=1 (Image="fltmc.exe" AND CommandLine="*unload*") OR CommandLine="*fltmc*unload*"
   data_model: Sysmon native
   type: Splunk
 
