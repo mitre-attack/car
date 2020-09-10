@@ -14,13 +14,13 @@ id: CAR-2020-09-002
 description: |-
   Adversaries may establish persistence or escalate privileges by executing malicious content triggered by hijacked references to Component Object Model (COM) objects. This is typically done by replacing COM object registry entries under the HKEY_CURRENT_USER\Software\Classes\CLSID or HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID keys. Accordingly, this analytic looks for any changes under these keys. 
 coverage:
-- coverage: Moderate
-  subtechniques: 
-    - T1546.015
-  tactics: 
-    - TA0003
-    - TA0004
-  technique: T1546
+  - technique: T1546 
+    coverage: Moderate
+    subtechniques: 
+      - T1546.015
+    tactics: 
+      - TA0003
+      - TA0004
 implementations:
 - name: Pseudocode - COM object registry entry modification
   description: This is a pseudocdoe representation of the below splunk search.
@@ -37,7 +37,7 @@ implementations:
     index=__your_sysmon_index__ (EventCode=12 OR EventCode=13 OR EventCode=14) TargetObject="*\\Software\\Classes\\CLSID\\*"
   data_model: Sysmon native
   type: Splunk
-- data_model_references:
+data_model_references:
   - registry/add/key
   - registry/remove/key
   - registry/edit/key

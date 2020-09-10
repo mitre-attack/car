@@ -13,14 +13,15 @@ contributors:
 id: CAR-2020-09-001
 description: |-
   In order to gain persistence, privilege escalation, or remote execution, an adversary may use the Windows Task Scheduler to schedule a command to be run at a specified time, date, and even host. Task Scheduler stores tasks as files in two locations - C:\Windows\Tasks (legacy) or C:\Windows\System32\Tasks. Accordingly, this analytic looks for the creation of task files in these two locations.
-- coverage: Low
-  subtechniques: 
-    - T1053.005
-  tactics: 
-    - TA0002
-    - TA0003
-    - TA0004
-  technique: T1053
+coverage: 
+  - technique: T1053
+    subtechniques: 
+      - T1053.005
+    tactics: 
+      - TA0002
+      - TA0003
+      - TA0004
+    coverage: Low
 implementations:
 - name: Pseudocode - Windows task file creation
   description: This is a pseudocdoe representation of the below splunk search.
@@ -39,7 +40,7 @@ implementations:
     *" OR TargetFilename="C:\\Windows\\Tasks\\*")
   data_model: Sysmon native
   type: Splunk
-- data_model_references:
+data_model_references:
   - file/create/file_path
   - file/create/image_path
 
