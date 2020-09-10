@@ -19,6 +19,14 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
+### September 2020
+* New analytics added
+  * [CAR-2020-09-001: Scheduled Task - File Access](/analytics/CAR-2020-09-001)
+  * [CAR-2020-09-002: Component Object Model Hijacking](/analytics/CAR-2020-09-002)
+  * [CAR-2020-09-003: Indicator Blocking - Driver Unloaded](/analytics/CAR-2020-09-003)
+  * [CAR-2020-09-004: Credentials in Files & Registry](/analytics/CAR-2020-09-004)
+  * [CAR-2020-09-005: AppInit DLLs](/analytics/CAR-2020-09-005)
+
 ### August 2020
 * New analytics added
   * [CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities](/analytics/CAR-2020-08-001)
