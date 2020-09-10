@@ -30,7 +30,7 @@ Adversaries may search the Windows Registry on compromised systems for insecurel
 #### Pseudocode - reg.exe password search & powersploit modules (Pseudocode, CAR native)
 
 
-This is a pseudocdoe representation of the below splunk search.
+This is a pseudocode representation of the below splunk search.
 
 
 ```

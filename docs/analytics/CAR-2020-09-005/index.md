@@ -32,7 +32,7 @@ Adversaries may establish persistence and/or elevate privileges by executing mal
 #### Pseudocode - AppInit DLL registry modification (Pseudocode, CAR native)
 
 
-This is a pseudocdoe representation of the below splunk search.
+This is a pseudocode representation of the below splunk search.
 
 
 ```

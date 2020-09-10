@@ -31,7 +31,7 @@ In order to gain persistence, privilege escalation, or remote execution, an adve
 #### Pseudocode - Windows task file creation (Pseudocode, CAR native)
 
 
-This is a pseudocdoe representation of the below splunk search.
+This is a pseudocode representation of the below splunk search.
 
 
 ```

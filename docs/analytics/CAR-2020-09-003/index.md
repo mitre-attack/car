@@ -31,7 +31,7 @@ Adversaries may attempt to evade system defenses by unloading minifilter drivers
 #### Pseudocode - fltmc invocation (Pseudocode, CAR native)
 
 
-This is a pseudocdoe representation of the below splunk search.
+This is a pseudocode representation of the below splunk search.
 
 
 ```

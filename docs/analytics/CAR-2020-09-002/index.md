@@ -32,7 +32,7 @@ Adversaries may establish persistence or escalate privileges by executing malici
 #### Pseudocode - COM object registry entry modification (Pseudocode, CAR native)
 
 
-This is a pseudocdoe representation of the below splunk search.
+This is a pseudocode representation of the below splunk search.
 
 
 ```
