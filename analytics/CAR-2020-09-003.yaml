@@ -1,6 +1,6 @@
 ---
 title: Indicator Blocking - Driver Unloaded
-submission_date: 2020/08/31
+submission_date: 2020/09/10
 information_domain: 'Host'
 platforms:
   - Windows
@@ -9,8 +9,8 @@ subtypes:
 analytic_types:
   - TTP
 contributors:
-- Olaf Hartong
-id: CAR-2020-08-005
+  - Olaf Hartong
+id: CAR-2020-09-003
 description: |-
   Adversaries may attempt to devade system defenses by unloading minifilter drivers used by host-based sensors such as Sysmon through the use of the fltmc command-line utility. Accordingly, this analytic looks for command-line invocations of this utility when used to unload minifilter drivers.
 coverage:
@@ -21,10 +21,23 @@ coverage:
     - TA0030
   technique: T1562
 implementations:
-- name: Splunk search
+- name: Pseudocode - fltmc invocation
+  description: This is a pseudocdoe representation of the below splunk search.
+  code: |- 
+    processes = search Process:Create
+    fltmc_processes = filter processes where (
+      exe = "fltmc.exe" OR command_line = "*fltmc*unload*")
+    output fltmc_processes
+  data_model: CAR native
+  type: Pseudocode
+- name: Splunk search - fltmc invocation
   description: This Splunk search looks for process create events for the fltmc.exe utility and the specific command line used to unload minifilter drivers.
   code: |- 
-    index=__your_sysmon_index__ event_id=1 process_name="fltmc.exe" OR process_command_line="*fltmc*unload*"
+    index=client EventCode=1 (Image="C:\\Windows\\SysWOW64\\fltMC.exe" OR Image="C:\\Windows\\System32\\fltMC.exe") OR CommandLine="*fltmc*unload*"
   data_model: Sysmon native
   type: Splunk
+- data_model_references:
+  - process/create/exe
+  - process/create/command_line
+
 
