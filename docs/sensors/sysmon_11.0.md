@@ -51,7 +51,7 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 
 ### [module](../data_model/module)
 
-| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `module_path` | `pid` | `sha1_hash` | `sha256_hash` | `signer` | `signer` |
+| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `module_path` | `pid` | `sha1_hash` | `sha256_hash` | `signer` | `tid` |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | `load` |  |✓| |✓|✓| |✓|✓|✓|✓|✓| |
 | `unload` |  | | | | | | | | | | | |
@@ -107,3 +107,10 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
  - [CAR-2019-08-001: Credential Dumping via Windows Task Manager](../analytics/CAR-2019-08-001)
  - [CAR-2019-08-002: Active Directory Dumping via NTDSUtil](../analytics/CAR-2019-08-002)
  - [CAR-2020-04-001: Shadow Copy Deletion](../analytics/CAR-2020-04-001)
+ - [CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities](../analytics/CAR-2020-08-001)
+ - [CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS](../analytics/CAR-2020-08-002)
+ - [CAR-2020-09-001: Scheduled Task - FileAccess](../analytics/CAR-2020-09-001)
+ - [CAR-2020-09-002: Component Object Model Hijacking](../analytics/CAR-2020-09-002)
+ - [CAR-2020-09-003: Indicator Blocking - Driver Unloaded](../analytics/CAR-2020-09-003)
+ - [CAR-2020-09-004: Credentials in Files & Registry](../analytics/CAR-2020-09-004)
+ - [CAR-2020-09-005: AppInit DLLs](../analytics/CAR-2020-09-005)
