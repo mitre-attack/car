@@ -21,7 +21,7 @@ coverage:
       - T1552.001
       - T1552.002
     tactics: 
-      - TA0031
+      - TA0006
 implementations:
 - name: Pseudocode - reg.exe password search & powersploit modules
   description: This is a pseudocdoe representation of the below splunk search.
