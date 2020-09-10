@@ -19,7 +19,7 @@ coverage:
     subtechniques: 
       - T1562.006
     tactics: 
-      - TA0030
+      - TA0005
 implementations:
 - name: Pseudocode - fltmc invocation
   description: This is a pseudocdoe representation of the below splunk search.
