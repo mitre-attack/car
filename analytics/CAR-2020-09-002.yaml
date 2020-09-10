@@ -23,7 +23,7 @@ coverage:
       - TA0004
 implementations:
 - name: Pseudocode - COM object registry entry modification
-  description: This is a pseudocdoe representation of the below splunk search.
+  description: This is a pseudocode representation of the below splunk search.
   code: |- 
     registry_keys = search (Registry:Create AND Registry:Remove AND Registry:Edit) 
     clsid_keys = filter registry_keys where (

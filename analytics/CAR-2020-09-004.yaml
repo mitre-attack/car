@@ -24,7 +24,7 @@ coverage:
       - TA0006
 implementations:
 - name: Pseudocode - reg.exe password search & powersploit modules
-  description: This is a pseudocdoe representation of the below splunk search.
+  description: This is a pseudocode representation of the below splunk search.
   code: |- 
     processes = search Process:Create
       cred_processes = filter processes where (

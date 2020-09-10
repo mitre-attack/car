@@ -22,7 +22,7 @@ coverage:
       - TA0005
 implementations:
 - name: Pseudocode - fltmc invocation
-  description: This is a pseudocdoe representation of the below splunk search.
+  description: This is a pseudocode representation of the below splunk search.
   code: |- 
     processes = search Process:Create
     fltmc_processes = filter processes where (
