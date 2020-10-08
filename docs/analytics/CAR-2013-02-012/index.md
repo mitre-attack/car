@@ -9,7 +9,7 @@ contributors: MITRE
 applicable_platforms: Windows, Linux, macOS
 ---
 
-Most users use only one or two machines during the normal course of business. User accounts that log in to multiple machines, especially over a short period of time, may be compromised. Remote logins among multiple machines may be an indicator of [Lateral Movement](https://attack.mitre.org/beta/tactics/TA0008).
+Most users use only one or two machines during the normal course of business. User accounts that log in to multiple machines, especially over a short period of time, may be compromised. Remote logins among multiple machines may be an indicator of [Lateral Movement](https://attack.mitre.org/tactics/TA0008).
 
 Certain users will likely appear as being logged into several machines and may need to be "whitelisted." Such users would include network admins or user names that are common to many hosts.
 

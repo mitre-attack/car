@@ -9,7 +9,7 @@ contributors: MITRE/NSA
 applicable_platforms: Windows
 ---
 
-A remote desktop logon, through [RDP](https://attack.mitre.org/beta/techniques/T1021/001), may be typical of a system administrator or IT support, but only from select workstations. Monitoring remote desktop logons and comparing to known/approved originating systems can detect lateral movement of an adversary.
+A remote desktop logon, through [RDP](https://attack.mitre.org/techniques/T1021/001), may be typical of a system administrator or IT support, but only from select workstations. Monitoring remote desktop logons and comparing to known/approved originating systems can detect lateral movement of an adversary.
 
 
 ### ATT&CK Detection

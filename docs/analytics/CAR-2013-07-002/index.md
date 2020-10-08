@@ -9,7 +9,7 @@ contributors: MITRE
 applicable_platforms: N/A
 ---
 
-The [Remote Desktop Protocol](https://attack.mitre.org/beta/techniques/T1021/001) (RDP), built in to Microsoft operating systems, allows a user to remotely log in to the desktop of another host. It allows for interactive access of the running windows, and forwards key presses, mouse clicks, etc. Network administrators, power users, and end-users may use RDP for day-to-day operations. From an adversary's perspective, RDP provides a means to [laterally move](https://attack.mitre.org/beta/tactics/TA0008) to a new host. Determining which RDP connections correspond to adversary activity can be a difficult problem in highly dynamic environments, but will be useful in identifying the scope of a compromise.
+The [Remote Desktop Protocol](https://attack.mitre.org/techniques/T1021/001) (RDP), built in to Microsoft operating systems, allows a user to remotely log in to the desktop of another host. It allows for interactive access of the running windows, and forwards key presses, mouse clicks, etc. Network administrators, power users, and end-users may use RDP for day-to-day operations. From an adversary's perspective, RDP provides a means to [laterally move](https://attack.mitre.org/tactics/TA0008) to a new host. Determining which RDP connections correspond to adversary activity can be a difficult problem in highly dynamic environments, but will be useful in identifying the scope of a compromise.
 
 Remote Desktop can be detected in several ways
 
