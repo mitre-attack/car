@@ -9,7 +9,7 @@ contributors: MITRE
 applicable_platforms: Windows
 ---
 
-According to [ATT&CK](https://attack.mitre.org/), [PowerShell](https://attack.mitre.org/beta/techniques/T1059/001) can be used over WinRM to remotely run commands on a host. When a remote PowerShell session starts, svchost.exe executes wsmprovhost.exe
+According to [ATT&CK](https://attack.mitre.org/), [PowerShell](https://attack.mitre.org/techniques/T1059/001) can be used over WinRM to remotely run commands on a host. When a remote PowerShell session starts, svchost.exe executes wsmprovhost.exe
 
 For this to work, certain registry keys must be set, and the WinRM service must be enabled. The PowerShell command `Enter-PSSession -ComputerName \<RemoteHost\>` creates a remote PowerShell session.
 
@@ -49,7 +49,3 @@ EQL version of the above pseudocode.
 process where subtype.create and
   (process_name == "wsmprovhost.exe" and parent_process_name == "svchost.exe")    
 ```
-
-
-
-

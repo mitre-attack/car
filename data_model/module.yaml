@@ -1,6 +1,6 @@
 ---
 name: Module
-description: Services, or a service application, can be started automatically at system boot, by a user through the services control panel applet, or by an application that uses service functions. Services can execute even when no user is logged into the system.
+description: Modules correspond to executable (and potentially non-executable) content, and are loaded as a contiguous region of memory into the address space of a process. Each process will have the main image loaded as a module and shared libraries (DLLs in Windows) and their dependencies.
 actions:
   - name: load
     description: A module load event occurs when a PE image (dll or exe) is loaded into a process.
@@ -40,7 +40,10 @@ fields:
   - name: signer
     description: The name of the organization which signed the module.
     example: Microsoft Corporation
+<<<<<<< HEAD
   - name: signer
+=======
+  - name: tid
+>>>>>>> b874070d50c6c3d026f468f9082479ec2d4eedfa
     description: The thread ID of the thread responsible for the load or unload event.
     example: 50
-

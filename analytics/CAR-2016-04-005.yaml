@@ -10,7 +10,7 @@ analytic_types:
 contributors:
   - MITRE/NSA
 id: CAR-2016-04-005
-description: 'A remote desktop logon, through [RDP](https://attack.mitre.org/beta/techniques/T1021/001), may be typical of a system administrator or IT support, but only from select workstations. Monitoring remote desktop logons and comparing to known/approved originating systems can detect lateral movement of an adversary.'
+description: 'A remote desktop logon, through [RDP](https://attack.mitre.org/techniques/T1021/001), may be typical of a system administrator or IT support, but only from select workstations. Monitoring remote desktop logons and comparing to known/approved originating systems can detect lateral movement of an adversary.'
 coverage:
   - technique: T1021
     tactics:

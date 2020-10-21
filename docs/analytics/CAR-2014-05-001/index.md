@@ -17,9 +17,9 @@ RPC is a legitimate functionality of Windows that allows remote interaction with
 
 According to ATT&CK, adversaries frequently use RPC connections to remotely
 
--   [Create/modify](https://attack.mitre.org/beta/techniques/T1543/003) and [execute](https://attack.mitre.org/beta/techniques/T1569/002) services ([CAR-2014-03-005](CAR-2014-03-005))
--   [Schedule Tasks](https://attack.mitre.org/beta/techniques/T1053) ([CAR-2015-04-002](CAR-2015-04-002))
--   Query ([CAR-2014-11-007](CAR-2014-11-007)) and Invoke ([CAR-2014-12-001](CAR-2014-12-001)) - [Windows Management Instrumentation (WMI)](https://attack.mitre.org/beta/techniques/T1047)
+-   [Create/modify](https://attack.mitre.org/techniques/T1543/003) and [execute](https://attack.mitre.org/techniques/T1569/002) services ([CAR-2014-03-005](CAR-2014-03-005))
+-   [Schedule Tasks](https://attack.mitre.org/techniques/T1053) ([CAR-2015-04-002](CAR-2015-04-002))
+-   Query ([CAR-2014-11-007](CAR-2014-11-007)) and Invoke ([CAR-2014-12-001](CAR-2014-12-001)) - [Windows Management Instrumentation (WMI)](https://attack.mitre.org/techniques/T1047)
 
 Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/articles/win_net_srv/well_known_named_pipes.html).
 
@@ -42,7 +42,7 @@ Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/article
 
 #### Pseudocode
 
-Traffic to the RPC Endpoint Mapper will always have the destination port of 135. Assuming success, RPC traffic will continue to the endpoint. The endpoint and the client both bind to dynamically assigned ports (on Windows, this is typically greater than 49152). The traffic between the client and endpoint can be detected by looking at traffic to 135 followed by traffic where the source and destination ports are at least 49152. 
+Traffic to the RPC Endpoint Mapper will always have the destination port of 135. Assuming success, RPC traffic will continue to the endpoint. The endpoint and the client both bind to dynamically assigned ports (on Windows, this is typically greater than 49152). The traffic between the client and endpoint can be detected by looking at traffic to 135 followed by traffic where the source and destination ports are at least 49152.
 
 
 ```
@@ -55,7 +55,3 @@ rpc = join rpc_mapper, rpc_endpoint where (
 )
 output rpc
 ```
-
-
-
-
