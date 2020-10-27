@@ -1,21 +1,39 @@
-## Identifying Internal hosts and services for lateral movement
+---
+title: "CAR-2020-10-001: Identifying Internal hosts and services for lateral movement"
+layout: analytic
+submission_date: 2020/10/23
+information_domain: Network
+subtypes: Flow
+analytic_type: TTP
+contributors: Cyware Labs
+applicable_platforms: Windows, Linux
+---
+
 After compromising an initial machine, adversaries commonly attempt to laterally move across the network. The first step to attempt the lateral movement often involves conducting host identification, port and service scans on the internal network via the compromised machine using tools such as Nmap, Cobalt Strike, etc.
-### ATT&CK Coverage
-|Technique |Level of Coverage |
-|---|---|
-|[Network Service Scanning](https://attack.mitre.org/techniques/T1046/)|Moderate|
-### Analytic Code
-It should be noted that when a host/ port/ service scan is performed from a compromised machine, a single machine makes multiple calls to other hosts in the network to identify live hosts and services. This can be detected using the following query:
-Splunk Query
-|---|
-sourcetype='firewall_logs' dest_ip = 'internal_subnet' \| stats dc(dest_port) as pcount by source_ip \| where pcount >5
-### Test Cases
-To trigger this as an alert, we can run a test port scan from inside the network. To avoid generating unnecessary files on a host system, it is advised to run the following commands from a virtual machine or a docker instance connected via a bridged adaptor.
-sudo apt-get install nmap
-nmap -sn 0.0.0.0/24
-Note: [Replace the 0.0.0.0 with relevant subnet address].
-### Data Model Mappings
+
+
+### ATT&CK Detection
+
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Network Service Scanning](https://attack.mitre.org/techniques/T1046/)|None|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
+
+### Data Model References
+
 |Object|Action|Field|
 |---|---|---|
-|flow | start | dest_ip |
-| flow | stop | dest_ip |
+|[flow](/data_model/flow) | [start](/data_model/flow#start) | [dest_ip](/data_model/registry#dest_ip) |
+|[flow](/data_model/flow) | [stop](/data_model/flow#stop) | [dest_ip](/data_model/flow#dest_ip) |
+
+
+### Implementations
+
+#### Splunk search - Splunk search - Identifying Internal hosts and services for lateral movement
+
+
+It should be noted that when a host/ port/ service scan is performed from a compromised machine, a single machine makes multiple calls to other hosts in the network to identify live hosts and services. This can be detected using the following query:
+
+
+```
+sourcetype='firewall_logs' dest_ip = 'internal_subnet' | stats dc(dest_port) as pcount by source_ip | where pcount >5
+```
