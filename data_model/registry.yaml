@@ -4,10 +4,12 @@ description: The registry is a system-defined database in which applications and
 actions:
   - name: add
     description: The event corresponding to the act of adding a registry key, hive, type, or value.
-  - name: edit
-    description: The event corresponding to the act of modifying an existing registry key, hive, type, or value.
   - name: remove
     description: The event corresponding to the act of deleting an existing registry key, hive, type, or value.
+  - name: value_edit
+    description: The event corresponding to the act of editing the content of an existing registry value.
+  - name: key_edit
+    description: The event corresponding to the act of editing the name of an existing registry key.
 fields:
   - name: fqdn
     description: The fully qualified domain name for the host on which the registry access took place.
@@ -39,4 +41,7 @@ fields:
   - name: user
     description: The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
     example: HOST1\LOCALUSER
+  - name: new_content
+    description: The data within the new value, or the new name of a key, after an edit event
+    example: \%SystemRoot%\system32\svchost.exe, HKLM\SYSTEM\CurrentControlSet\services\RpcSs
 

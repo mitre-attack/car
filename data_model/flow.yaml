@@ -39,9 +39,6 @@ fields:
   - name: exe
     description: The basename of the `image_path`. This will need to be collected from the host.
     example: Chrome.exe
-  - name: flags
-    description: TCP flags.
-    example: SYN, ACK, PSH
   - name: image_path
     description: The file system path of the process that opened the flow. This will need to be collected from the host.
     example: C:\path\to\example.exe
@@ -57,9 +54,6 @@ fields:
   - name: proto_info
     description: A text decoded version of traffic in the flow specific to the protocol. The application layer information from the flow parsed according to the protocol in question. For instance, SMB information or HTTP headers and content.
     example: SMB2 Write Request Len:165 Off:0 Fileusername\private\filename.pptx, SRVSVC NetShareGetInfo response
-  - name: protocol
-    description: The application layer protocol for the flow.
-    example: SMB, HTTP
   - name: user
     description: The user that ran the process.
     example: HOST1\LOCALUSER
@@ -75,3 +69,23 @@ fields:
   - name: dest_hostname
     description: The hostname that corresponds to `dest_ip`.
     example: dest_example
+  - name: application_protocol
+    description: Name of the layer 7 protocol contained within the flow.
+    example: HTTP
+  - name: in_bytes
+    description: Integer value of total number of bytes received.
+    example: 13200
+  - name: out_bytes
+    description: Integer value of total number of bytes sent.
+  - name: network_direction
+    description: Direction of the original of the flow initiator, relative to network perimiter.
+    example: in (flow originated outside the network and was directed into it)
+  - name: tcp_flags
+    description: flags turned on in the TCP header
+    example: ACK, PSH
+  - name: transport_protocol
+    description: Layer 4 protocol contained within the flow
+    example: TCP
+  - name: uid
+    description: User ID or SID of the flow-handling entity
+    example: S-1-5-18, 509

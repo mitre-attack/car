@@ -34,3 +34,9 @@ fields:
   - name: signer
     description: The name of the organization which signed the driver.
     example: Microsoft Corporation
+  - name: pid
+    description: The Process ID that loaded or unloaded the driver
+    example: 1533
+  - name: signature_valid
+    description: Boolean indicator of whether the driver is signed and whether the signature is current and not revoked
+    example: True

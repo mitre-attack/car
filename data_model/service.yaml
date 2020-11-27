@@ -40,3 +40,6 @@ fields:
   - name: ppid
     description: The process ID of the process’s parent or the service, represented in decimal notation. In the parent process, this will be the pid field.
     example: 1860
+  - name: uid
+    description: The ID of SID of the user who acted on the service
+    example: S-1-5-18

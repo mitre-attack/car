@@ -1,0 +1,58 @@
+---
+name: Socket
+description: Socket events are low-level events that may or may not result in a flow. Socket listenining events in particular can be helpful in detecting malicious activity.
+actions:
+  - name: bind
+    description: The event corresponding to a socket binding to a specific address
+  - name: listen
+    description: The event corresponding to a socket being opened into a listening status, usually on a specific local port.
+  - name: put
+    description: The event corresponding to a socket being closed.
+fields:
+  - name: pid
+    description: ID of the process that acted on the socket
+    example: 3930
+  - name:  image_path
+    description: Path to the executable that initiated the socket event.
+    example: C:/user/adam/malware.exe
+  - name: success
+    description: Boolean indicator of whether the socket event was successful (e.g. the socket was created as requested)
+    example: True
+  - name: family
+    description: The type of socket in question
+    example: AF_UNIX, AF_INET, AF_INET6
+  - name: protocol
+    description: The type of connection that was attempted on the socket
+    example: TCP
+  - name: local_address
+    description: IP address on which the socket will accept connections; does not include the port number.
+    example: 10.0.211.200
+  - name: local_port
+    description: Port number on which the socket is bound at the local end. This pertains to TCP and UDP sockets but not IP sockets.
+    example: 48777
+  - name: remote_port
+    description: Port number on which the socket is bound at the remote end.
+    example: 559
+  - name: remote_address
+    description: IP address with which the socket is communicating on the remote end.
+    example: 199.121.21.20
+  - name: local_path
+    description: In the case that a socket is used for local interprocess communication, the socket binds to a local filepath, and will usually be visible in the filesystem. This is the case with AF_UNIX type sockets.
+    example: "/tmp/foo"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
