@@ -1,0 +1,46 @@
+title: Local Permission Group Discovery
+submission_date: 2020/11/30
+information_domain: Host
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - Olaf Hartong
+id: CAR-2020-11-006
+description: |-
+  Cyber actors frequently enumerate local or domain permissions groups. The net utility is usually used for this purpose. This analytic looks for any instances of net.exe, which is not normally used for benign purposes, although system administrator actions may trigger false positives.
+coverage:
+  - technique: T1069
+    tactics:
+      - TA0007
+    subtechniques:
+      - T1069.001
+      - T1069.002
+    coverage: Moderate
+implementations:
+  - name: Pseudocode - net.exe instances
+  description: This is a pseudocode representation of the below splunk search.
+  code: |- 
+   processes = search Process:Create
+   net_processes = filter processes where (
+     exe = "net.exe" AND (
+     command_line="*net* user*" OR
+     command_line="*net* group*" OR
+     command_line="*net* localgroup*" OR
+     command_line="*get-localgroup*" OR
+     command_line="*get-ADPrincipalGroupMembership*" )
+     output net_processes
+  data_model: CAR native
+  type: Pseudocode
+- name: Splunk Search - net.exe instances
+  description: Look for instances of net.exe
+  code: |- 
+    (index=__your_sysmon_index__ EventCode=1) Image="C:\\Windows\\System32\\net.exe" AND (CommandLine="* user*" OR CommandLine="* group*" OR CommandLine="* localgroup*" OR CommandLine="*get-localgroup*" OR CommandLine="*get-ADPrincipalGroupMembership*")
+  data_model: Sysmon native
+  type: Splunk
+data_model_references:
+  - process/create/exe
+  - process/create/command_line

@@ -1,0 +1,43 @@
+title: CMSTP
+submission_date: 2020/11/30
+information_domain: Host
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - Olaf Hartong
+  - MITRE
+id: CAR-2020-11-010
+description: |-
+  CMSTP.exe is the Microsoft Connection Manager Profile Installer, which can be leveraged to setup listeners that will receive and install malware from remote sources in trusted fashion.
+  When CMSTP.exe is seen in combination with an external connection, it is a good indication of this TTP.
+coverage:
+  - technique: T1218
+    tactics:
+      - TA0005
+    subtechniques:
+      - T1218.003
+    coverage: High
+implementations:
+  - name: Pseudocode - CMSTP
+  description: This is a pseudocode representation of the below splunk search.
+  code: |- 
+   processes = search Process:Create
+   target_processes = filter processes where (
+     exe="C:\Windows\System32\CMSTP.exe" AND
+     src_ip NOT IN [10.0.0.0/8,192.168.0.0/16, 172.16.0.0/12] )
+   output target_processes
+  data_model: CAR native
+  type: Pseudocode
+- name: Splunk Search - CMSTP
+  description: looks for instances of CMSTP.exe that are combined with external communication
+  code: |- 
+    (index=__your_sysmon_index__ EventCode=3) Image="C:\\Windows\\System32\\CMSTP.exe" | where  AND (!cidrmatch("10.0.0.0/8", SourceIp) AND !cidrmatch("192.168.0.0/16", SourceIp) AND !cidrmatch("172.16.0.0/12", SourceIp))
+  data_model: Sysmon native
+  type: Splunk
+data_model_references:
+  - process/create/exe
+  - process/create/src_ip

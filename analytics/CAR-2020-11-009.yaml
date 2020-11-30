@@ -1,0 +1,38 @@
+title: Compiled HTML Access
+submission_date: 2020/11/30
+information_domain: Host
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - Olaf Hartong
+id: CAR-2020-11-009
+description: |-
+  Adversaries may hide malicious code in .chm compiled HTML files. When these files are read, Windows uses the HTML help executable named hh.exe, which is the signature for this analytic.
+coverage:
+  - technique: T1218
+    tactics:
+      - TA0005
+    subtechniques:
+      - T1218.001
+    coverage: High
+implementations:
+  - name: Pseudocode - instances of hh.exe
+  description: This is a pseudocode representation of the below splunk search.
+  code: |- 
+   processes = search Process:Create
+   target_processes = filter processes where (exe="C:\Windows\syswow64\hh.exe" OR exe="C:\Windows\system32\hh.exe")
+  output target_processes
+  data_model: CAR native
+  type: Pseudocode
+- name: Splunk Search - hh.exe
+  description: looks all instances of hh.exe
+  code: |- 
+    (index=__your_sysmon_index__ EventCode=1) (Image="C:\\Windows\\syswow64\\hh.exe" OR Image="C:\\Windows\\system32\\hh.exe")
+  data_model: Sysmon native
+  type: Splunk
+data_model_references:
+  - process/create/exe
