@@ -14,6 +14,8 @@ actions:
     description: The event corresponding to the accessing of a file to be read.
   - name: write
     description: The event corresponding to the accessing of a file in order to write new instructions or information into a file.
+  - name: acl_modify
+    description: The event corresponding with changing permissions on a file
 fields:
   - name: creation_time
     description: The creation time of the file as described in UTC and including the date.
@@ -58,4 +60,37 @@ fields:
     description: The name of the organization listed in the file located at `image_path`.
   - name: file_path
     description: The full path to the file.
-    example: C:\users\fakeuser\documents\MyFile.doc
+    example: C:\users\fakeuser\documents\MyFile.
+  - name: file_uid
+    description: The user ID of the owner of the file
+    example: 501
+  - name: file_user
+    description: The username of the owner of the file
+    example: adam
+  - name: content
+    description: The contents of the file
+    example: "Hello World\n"
+  - name: file_extension
+    description: The file extension of the file in question
+    example: .docx
+  - name: file_gid
+    description: The group ID of the file
+    example: 801
+  - name: file_group
+    description: The group name of the file
+    example: .docx
+  - name: link_target
+    description: The target path of a symbolic link
+    example: C:\my_special_file.exe
+  - name: mime_type
+    description: The MIME type of the file
+    example: PE
+  - name: mode
+    description: The mode or permissions set of the file
+    example: 0644 (linux) or NTFS ACL
+  - name: signature_valid
+    description: Boolean indicator of whether the signature is valid; empty if file is not signed.
+    example: True
+  - name: uid
+    description: The user ID or SID for the acting entity
+    example: S-1-5-18

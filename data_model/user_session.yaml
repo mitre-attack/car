@@ -45,4 +45,13 @@ fields:
   - name: user
     description: The user affiliated with the session. May be a local, domain or SYSTEM user.
     example: HOST1\LOCALUSER
+  - name: login_type
+    description: The type of login that was accomplished or attempted
+    example: interactive,local,rdp,remote
+  - name: uid
+    description: ID or SID of the user for which a session event ocurred
+    example: S-1-5-18
+  - name: login_successful
+    description: Boolean indicator of whether a login attempt was successful
+    example: False
 
