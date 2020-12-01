@@ -1,0 +1,41 @@
+title: MSBuild and msxsl
+submission_date: 2020/11/30
+information_domain: Host
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - Olaf Hartong
+id: CAR-2020-11-008
+description: |-
+  Trusted developer utilities such as MSBuild may be leveraged to run malicious code with elevated privileges. This analytic looks for any instances of msbuild.exe, which will execute any C# code placed within a given XML document; and msxsl.exe, which processes xsl transformation specifications for XML files and will execute a variaty of scripting languages contained within the XSL file. Both of these executables are rarely used outside of Visual Studio.
+coverage:
+  - technique: T1127
+    tactics:
+      - TA0005
+    subtechniques:
+      - T1127.001
+    coverage: High
+implementations:
+  - name: Pseudocode - network shares being removed via the command line
+  description: This is a pseudocode representation of the below splunk search.
+  code: |- 
+   processes = search Process:Create
+   target_processes = filter processes where (
+     (exe="C:\Program Files (x86)\Microsoft Visual Studio\*\bin\MSBuild.exe" OR exe="C:\Windows\Microsoft.NET\Framework*\msbuild.exe" OR exe="C:\users\*\appdata\roaming\microsoft\msxsl.exe") AND
+     image_path!="*Microsoft Visual Studio*")
+  output target_processes
+  data_model: CAR native
+  type: Pseudocode
+- name: Splunk Search - msbuild
+  description: looks for all instances of msbuild.exe or msxsl.exe
+  code: |- 
+    (index=__your_sysmon_index__ EventCode=1) (Image="C:\\Program Files (x86)\\Microsoft Visual Studio\\*\\bin\\MSBuild.exe" OR Image="C:\\Windows\\Microsoft.NET\\Framework*\\msbuild.exe" OR Image="C:\\users\\*\\appdata\\roaming\\microsoft\\msxsl.exe") ParentImage!="*\\Microsoft Visual Studio*")
+  data_model: Sysmon native
+  type: Splunk
+data_model_references:
+  - process/create/exe
+  - process/create/image_path

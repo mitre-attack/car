@@ -1,0 +1,44 @@
+title: Local Network Sniffing
+submission_date: 2020/11/30
+information_domain: Host
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - Situational Awareness
+contributors:
+  - Olaf Hartong
+id: CAR-2020-11-002
+description: |-
+  Adversaries may use a variety of tools to gain visibility on the current status of things on the network: which processes are listening on which ports, which services are running on other hosts, etc. This analytic looks for the names of the most common network sniffing tools. While this may be noisy on networks where sysadmins are using any of these tools on a regular basis, in most networks their use is noteworthy.
+coverage:
+  - technique: T1040
+    tactics:
+      - TA0006
+      - TA0007
+    coverage: Moderate
+implementations:
+  - name: Pseudocode - commands containing known network sniffing application names
+  description: This is a pseudocode representation of the below splunk search.
+  code: |- 
+   processes = search Process:Create
+   sniffer_processes = filter processes where (
+     exe = "tshark.exe" OR
+     exe = "windump.exe" OR
+     (exe = "logman.exe" AND parent_exe exists AND parent_exe!="C:\Program Files\Windows Event Reporting\Core\EventReporting.AgentService.exe") OR
+     exe = "tcpdump.exe" OR
+     exe = "wprui.exe" OR
+     exe = "wpr.exe" )
+   output sniffer_processes
+  data_model: CAR native
+  type: Pseudocode
+- name: Splunk Search - common network traffic sniffing apps being run
+  description: look for common network traffic sniffing apps being run
+  code: |- 
+    (index=__your_sysmon_index__ EventCode=1) (Image="*tshark.exe" OR Image="*windump.exe" OR (Image="*logman.exe" AND ParentImage!="?" AND ParentImage!="C:\\Program Files\\Windows Event Reporting\\Core\\EventReporting.AgentService.exe") OR Image="*tcpdump.exe" OR Image="*wprui.exe" OR Image="*wpr.exe")
+  data_model: Sysmon native
+  type: Splunk
+data_model_references:
+  - process/create/exe
+  - process/create/parent_exe
