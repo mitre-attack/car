@@ -33,10 +33,10 @@ fields:
     description: The logical group of keys, subkeys, and values in the registry.
     example: HKEY_CURRENT_USER
   - name: image_path
-    description: Inherited from the [process](https://car.mitre.org/wiki/Data_Model/process) that made the registry access.
+    description: Inherited from the [process](https://car.mitre.org/data_model/process) that made the registry access.
     example: C:\path\to\example.exe
   - name: pid
-    description: Inherited from the [process](https://car.mitre.org/wiki/Data_Model/process) that made the registry access.
+    description: Inherited from the [process](https://car.mitre.org/data_model/process) that made the registry access.
     example: 738
   - name: user
     description: The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
