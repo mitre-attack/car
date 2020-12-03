@@ -39,7 +39,7 @@ fields:
     description: Inherited from the [process](https://car.mitre.org/data_model/process) that made the registry access.
     example: 738
   - name: user
-    description: The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
+    description: The user in the context of the process that performed the action on the registry key.
     example: HOST1\LOCALUSER
   - name: new_content
     description: The data within the new value, or the new name of a key, after an edit event.
