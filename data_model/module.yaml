@@ -46,4 +46,3 @@ fields:
   - name: signature_valid
     description: Boolean indicator of whether the signature is current and not revoked
     example: True
-

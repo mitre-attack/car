@@ -42,6 +42,5 @@ fields:
     description: The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
     example: HOST1\LOCALUSER
   - name: new_content
-    description: The data within the new value, or the new name of a key, after an edit event
+    description: The data within the new value, or the new name of a key, after an edit event.
     example: \%SystemRoot%\system32\svchost.exe, HKLM\SYSTEM\CurrentControlSet\services\RpcSs
-

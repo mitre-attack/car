@@ -1,6 +1,6 @@
 ---
 name: HTTP
-description: HTTP events represents a request made over the network via the HTTP protocol.
+description: HTTP events represents requests made over the network via the HTTP protocol.
 actions:
   - name: get
     description: The event corresponding to an HTTP GET request.
@@ -59,9 +59,7 @@ fields:
     example: SM-G930VC (Samgsung Galaxy S7)
   - name: user_agent_version
     description: User Agent Version. Note that some User Agent strings may not label versions in the same way.
-  - example: 4.0
-
-
+    example: 4.0
 
 
 

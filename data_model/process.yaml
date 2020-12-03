@@ -70,27 +70,26 @@ fields:
     description: Permissions level at which the target process is accessed.
     example: 0x40
   - name: call_trace
-    description: stack trace showing context of process open/access call
+    description: Stack trace showing context of process open/access call.
   - name: guid
-    description: Global unique identifier for the initiating process
-    example: {f81d4fae-7dec-11d0-a765-00a0c91e6bf6}
+    description: Global unique identifier for the initiating process.
+    example: "{f81d4fae-7dec-11d0-a765-00a0c91e6bf6}"
   - name: parent_guid
-    description: Global unique identifier of the parent of the initiating process
-    example: {f81d4fae-7dec-11d0-a765-00a0c91e6bf6}
-    name: signature_valid
-    description: Boolean indicator of whether signature is current and not revoked
+    description: Global unique identifier of the parent of the initiating process.
+    example: "{f81d4fae-7dec-11d0-a765-00a0c91e6bf6}"
+  - name: signature_valid
+    description: Boolean indicator of whether signature is current and not revoked.
     example: True
   - name: target_guid
-    description: Global Unique Identifier for the target process (only for process access events)
+    description: Global Unique Identifier for the target process (only for process access events).
   - name: target_pid
-    description: ID of the target process (only for process access events)
+    description: ID of the target process (only for process access events).
   - name: target_address
-    description: Specific address range which is accessed by another process
+    description: Specific address range which is accessed by another process.
     example: 08048000-0804c000
   - name: target_name
-    description: Name of the process that is accessed
+    description: Name of the process that is accessed.
     example: C:\Windows\System32\winlogon.exe
   - name: uid
-    description: User ID under which original process is running
+    description: User ID under which original process is running.
     example: 509
-

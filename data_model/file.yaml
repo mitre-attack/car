@@ -62,35 +62,35 @@ fields:
     description: The full path to the file.
     example: C:\users\fakeuser\documents\MyFile.
   - name: file_uid
-    description: The user ID of the owner of the file
+    description: The user ID of the owner of the file.
     example: 501
   - name: file_user
-    description: The username of the owner of the file
+    description: The username of the owner of the file.
     example: adam
   - name: content
-    description: The contents of the file
-    example: "Hello World\n"
+    description: The contents of the file.
+    example: "Hello World"
   - name: file_extension
-    description: The file extension of the file in question
+    description: The file extension of the file.
     example: .docx
   - name: file_gid
-    description: The group ID of the file
+    description: The group ID of the file.
     example: 801
   - name: file_group
-    description: The group name of the file
+    description: The group name of the file.
     example: .docx
   - name: link_target
-    description: The target path of a symbolic link
+    description: The target path of a symbolic link.
     example: C:\my_special_file.exe
   - name: mime_type
-    description: The MIME type of the file
+    description: The MIME type of the file.
     example: PE
   - name: mode
-    description: The mode or permissions set of the file
+    description: The mode or permissions set of the file.
     example: 0644 (linux) or NTFS ACL
   - name: signature_valid
     description: Boolean indicator of whether the signature is valid; empty if file is not signed.
     example: True
   - name: uid
-    description: The user ID or SID for the acting entity
+    description: The user ID or SID for the acting entity.
     example: S-1-5-18

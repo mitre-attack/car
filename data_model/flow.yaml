@@ -77,15 +77,16 @@ fields:
     example: 13200
   - name: out_bytes
     description: Integer value of total number of bytes sent.
+    example: 1337
   - name: network_direction
     description: Direction of the original of the flow initiator, relative to network perimiter.
     example: in (flow originated outside the network and was directed into it)
   - name: tcp_flags
-    description: flags turned on in the TCP header
+    description: flags turned on in the TCP header.
     example: ACK, PSH
   - name: transport_protocol
-    description: Layer 4 protocol contained within the flow
+    description: Layer 4 protocol contained within the flow.
     example: TCP
   - name: uid
-    description: User ID or SID of the flow-handling entity
-    example: S-1-5-18, 509
+    description: User ID or SID of the flow-handling entity.
+    example: S-1-5-18
