@@ -56,6 +56,6 @@ implementations:
       (Image="C:\\Windows\System32\\userinit.exe" AND (ParentImage!="C:\\Windows\\System32\\dwm.exe" AND ParentImage!="C:\\Windows\\System32\\winlogon.exe")))
     data_model: Sysmon native
     type: Splunk
-  data_model_references:
+data_model_references:
   - process/create/exe
   - process/create/parent_exe
