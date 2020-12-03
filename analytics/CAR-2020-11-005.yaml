@@ -21,20 +21,20 @@ coverage:
     coverage: Low
 implementations:
   - name: Pseudocode - clear or disable Powershell console history via commandline
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-   processes = search Process:Create
-   clear_commands = filter processes where (
-     command_line ="*rm (Get-PSReadlineOption).HistorySavePath*" OR command_line="*del (Get-PSReadlineOption).HistorySavePath*" OR command_line="*Set-PSReadlineOption –HistorySaveStyle SaveNothing*" OR command_line="*Remove-Item (Get-PSReadlineOption).HistorySavePath*")  OR command_linee="del*Microsoft\Windows\Powershell\PSReadline\ConsoleHost_history.txt")
-   output clear_commands
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk Search - clear command history via Powershell
-  description: Look for powershell commands that would clear command history
-  code: |- 
-    (index=__your_sysmon_index__ EventCode=1) (CommandLine="*rm (Get-PSReadlineOption).HistorySavePath*" OR CommandLine="*del (Get-PSReadlineOption).HistorySavePath*" OR CommandLine="*Set-PSReadlineOption –HistorySaveStyle SaveNothing*" OR CommandLine="*Remove-Item (Get-PSReadlineOption).HistorySavePath*" OR CommandLine="del*Microsoft\\Windows\\Powershell\\PSReadline\\ConsoleHost_history.txt")
-  data_model: Sysmon native
-  type: Splunk
+    description: This is a pseudocode representation of the below splunk search.
+    code: |- 
+      processes = search Process:Create
+      clear_commands = filter processes where (
+        command_line ="*rm (Get-PSReadlineOption).HistorySavePath*" OR command_line="*del (Get-PSReadlineOption).HistorySavePath*" OR command_line="*Set-PSReadlineOption –HistorySaveStyle SaveNothing*" OR command_line="*Remove-Item (Get-PSReadlineOption).HistorySavePath*")  OR command_linee="del*Microsoft\Windows\Powershell\PSReadline\ConsoleHost_history.txt")
+      output clear_commands
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk Search - clear command history via Powershell
+    description: Look for powershell commands that would clear command history
+    code: |- 
+      (index=__your_sysmon_index__ EventCode=1) (CommandLine="*rm (Get-PSReadlineOption).HistorySavePath*" OR CommandLine="*del (Get-PSReadlineOption).HistorySavePath*" OR CommandLine="*Set-PSReadlineOption –HistorySaveStyle SaveNothing*" OR CommandLine="*Remove-Item (Get-PSReadlineOption).HistorySavePath*" OR CommandLine="del*Microsoft\\Windows\\Powershell\\PSReadline\\ConsoleHost_history.txt")
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - process/create/exe
   - process/create/command_line

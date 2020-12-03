@@ -20,22 +20,22 @@ coverage:
       - T1127.001
     coverage: High
 implementations:
-  - name: Pseudocode - network shares being removed via the command line
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-   processes = search Process:Create
-   target_processes = filter processes where (
-     (exe="C:\Program Files (x86)\Microsoft Visual Studio\*\bin\MSBuild.exe" OR exe="C:\Windows\Microsoft.NET\Framework*\msbuild.exe" OR exe="C:\users\*\appdata\roaming\microsoft\msxsl.exe") AND
-     image_path!="*Microsoft Visual Studio*")
-  output target_processes
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk Search - msbuild
-  description: looks for all instances of msbuild.exe or msxsl.exe
-  code: |- 
-    (index=__your_sysmon_index__ EventCode=1) (Image="C:\\Program Files (x86)\\Microsoft Visual Studio\\*\\bin\\MSBuild.exe" OR Image="C:\\Windows\\Microsoft.NET\\Framework*\\msbuild.exe" OR Image="C:\\users\\*\\appdata\\roaming\\microsoft\\msxsl.exe") ParentImage!="*\\Microsoft Visual Studio*")
-  data_model: Sysmon native
-  type: Splunk
+  - name: Pseudocode - msbuild
+    description: This is a pseudocode representation of the below splunk search.
+    code: |- 
+      processes = search Process:Create
+      target_processes = filter processes where (
+        (exe="C:\Program Files (x86)\Microsoft Visual Studio\*\bin\MSBuild.exe" OR exe="C:\Windows\Microsoft.NET\Framework*\msbuild.exe" OR exe="C:\users\*\appdata\roaming\microsoft\msxsl.exe") AND
+        image_path!="*Microsoft Visual Studio*")
+      output target_processes
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk Search - msbuild
+    description: Looks for all instances of msbuild.exe or msxsl.exe
+    code: |- 
+      (index=__your_sysmon_index__ EventCode=1) (Image="C:\\Program Files (x86)\\Microsoft Visual Studio\\*\\bin\\MSBuild.exe" OR Image="C:\\Windows\\Microsoft.NET\\Framework*\\msbuild.exe" OR Image="C:\\users\\*\\appdata\\roaming\\microsoft\\msxsl.exe") ParentImage!="*\\Microsoft Visual Studio*")
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - process/create/exe
   - process/create/image_path

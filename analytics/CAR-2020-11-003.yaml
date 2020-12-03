@@ -22,20 +22,20 @@ coverage:
     coverage: Low
 implementations:
   - name: Pseudocode - mavinject process and its common argument
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-   processes = search Process:Create
-   mavinject_processes = filter processes where (
-     exe = "C:\\Windows\\SysWOW64\\mavinject.exe" OR Image="C:\\Windows\\System32\\mavinject.exe" OR command_line = "*/INJECTRUNNING*"
-   output mavinject_processes
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk Search - mavinject
-  description: search for instances of mavinject.exe or mavinject32.exe
-  code: |- 
-    (index=__your_sysmon_index__ EventCode=1) (Image="C:\\Windows\\SysWOW64\\mavinject.exe" OR Image="C:\\Windows\\System32\\mavinject.exe" OR CommandLine="*\INJECTRUNNING*")
-  data_model: Sysmon native
-  type: Splunk
+    description: This is a pseudocode representation of the below splunk search.
+    code: |- 
+      processes = search Process:Create
+      mavinject_processes = filter processes where (
+        exe = "C:\\Windows\\SysWOW64\\mavinject.exe" OR Image="C:\\Windows\\System32\\mavinject.exe" OR command_line = "*/INJECTRUNNING*"
+      output mavinject_processes
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk Search - mavinject
+    description: Search for instances of mavinject.exe or mavinject32.exe
+    code: |- 
+      (index=__your_sysmon_index__ EventCode=1) (Image="C:\\Windows\\SysWOW64\\mavinject.exe" OR Image="C:\\Windows\\System32\\mavinject.exe" OR CommandLine="*\INJECTRUNNING*")
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - process/create/exe
   - process/create/command_line

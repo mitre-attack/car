@@ -22,20 +22,20 @@ coverage:
     coverage: High
 implementations:
   - name: Pseudocode - Screensaver
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-   reg_events = search Registry:add or Registry:edit
-   scr_reg_events = filter processes where (
-     key="*\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop\\SCRNSAVE.EXE" AND
-   output scr_reg_events
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk Search - Screensaver
-  description: looks creations of edits of the SCRNSAVE.exe registry key
-  code: |- 
-    index=your_sysmon_index (EventCode=12 OR EventCode=13 OR EventCode=14) TargetObject="*\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop\\SCRNSAVE.EXE"
-  data_model: Sysmon native
-  type: Splunk
+    description: This is a pseudocode representation of the below splunk search.
+    code: |- 
+      reg_events = search Registry:add or Registry:edit
+      scr_reg_events = filter processes where (
+        key="*\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop\\SCRNSAVE.EXE" AND
+      output scr_reg_events
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk Search - Screensaver
+    description: looks creations of edits of the SCRNSAVE.exe registry key
+    code: |- 
+      index=your_sysmon_index (EventCode=12 OR EventCode=13 OR EventCode=14) TargetObject="*\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop\\SCRNSAVE.EXE"
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - registry/edit/key
   - registry/add/key

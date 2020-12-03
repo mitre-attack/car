@@ -23,21 +23,21 @@ coverage:
     coverage: High
 implementations:
   - name: Pseudocode - CMSTP
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-   processes = search Process:Create
-   target_processes = filter processes where (
-     exe="C:\Windows\System32\CMSTP.exe" AND
-     src_ip NOT IN [10.0.0.0/8,192.168.0.0/16, 172.16.0.0/12] )
-   output target_processes
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk Search - CMSTP
-  description: looks for instances of CMSTP.exe that are combined with external communication
-  code: |- 
-    (index=__your_sysmon_index__ EventCode=3) Image="C:\\Windows\\System32\\CMSTP.exe" | where  AND (!cidrmatch("10.0.0.0/8", SourceIp) AND !cidrmatch("192.168.0.0/16", SourceIp) AND !cidrmatch("172.16.0.0/12", SourceIp))
-  data_model: Sysmon native
-  type: Splunk
+    description: This is a pseudocode representation of the below splunk search.
+    code: |- 
+      processes = search Process:Create
+      target_processes = filter processes where (
+        exe="C:\Windows\System32\CMSTP.exe" AND
+        src_ip NOT IN [10.0.0.0/8,192.168.0.0/16, 172.16.0.0/12] )
+      output target_processes
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk Search - CMSTP
+    description: looks for instances of CMSTP.exe that are combined with external communication
+    code: |- 
+      (index=__your_sysmon_index__ EventCode=3) Image="C:\\Windows\\System32\\CMSTP.exe" | where ((!cidrmatch("10.0.0.0/8", SourceIp) AND !cidrmatch("192.168.0.0/16", SourceIp) AND !cidrmatch("172.16.0.0/12", SourceIp))
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - process/create/exe
   - process/create/src_ip

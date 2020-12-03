@@ -22,25 +22,25 @@ coverage:
     coverage: Moderate
 implementations:
   - name: Pseudocode - net.exe instances
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-   processes = search Process:Create
-   net_processes = filter processes where (
-     exe = "net.exe" AND (
-     command_line="*net* user*" OR
-     command_line="*net* group*" OR
-     command_line="*net* localgroup*" OR
-     command_line="*get-localgroup*" OR
-     command_line="*get-ADPrincipalGroupMembership*" )
-     output net_processes
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk Search - net.exe instances
-  description: Look for instances of net.exe
-  code: |- 
-    (index=__your_sysmon_index__ EventCode=1) Image="C:\\Windows\\System32\\net.exe" AND (CommandLine="* user*" OR CommandLine="* group*" OR CommandLine="* localgroup*" OR CommandLine="*get-localgroup*" OR CommandLine="*get-ADPrincipalGroupMembership*")
-  data_model: Sysmon native
-  type: Splunk
+    description: This is a pseudocode representation of the below splunk search.
+    code: |- 
+      processes = search Process:Create
+      net_processes = filter processes where (
+        exe = "net.exe" AND (
+        command_line="*net* user*" OR
+        command_line="*net* group*" OR
+        command_line="*net* localgroup*" OR
+        command_line="*get-localgroup*" OR
+        command_line="*get-ADPrincipalGroupMembership*" )
+      output net_processes
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk Search - net.exe instances
+    description: Look for instances of net.exe
+    code: |- 
+      (index=__your_sysmon_index__ EventCode=1) Image="C:\\Windows\\System32\\net.exe" AND (CommandLine="* user*" OR CommandLine="* group*" OR CommandLine="* localgroup*" OR CommandLine="*get-localgroup*" OR CommandLine="*get-ADPrincipalGroupMembership*")
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - process/create/exe
   - process/create/command_line

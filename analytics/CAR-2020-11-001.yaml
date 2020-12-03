@@ -23,23 +23,23 @@ coverage:
     coverage: Moderate
 implementations:
   - name: Pseudocode - logon run script key added to registry using reg.exe on commandline, or new logon scipt keys in registry from any source.
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-   processes = search Process:Create
-   logon_script_key_processes = filter processes where (
-     command_line = "*reg*add*\Environment*UserInitMprLogonScript")
-   registry = search (Registry:Add OR Registry:Edit)
-   registry_logon_key_events = filter registry where (
-     key = "*\Environment*UserInitMprLogonScript")
-   output (logon_script_key_processes, registry_logon_key_events)
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk Search -- logon scripts
-  description: Look for commands for adding a logon script as a registry value, as well as direct registry events for the same thing.
-  code: |- 
-    (index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\System32\\reg.exe" CommandLine="*add*\\Environment*UserInitMprLogonScript") OR (index=__your_sysmon_index__ (EventCode=12 OR EventCode=14 OR EventCode=13) TargetObject="*\\Environment*UserInitMprLogonScript")
-  data_model: Sysmon native
-  type: Splunk
+    description: This is a pseudocode representation of the below splunk search.
+    code: |- 
+      processes = search Process:Create
+      logon_script_key_processes = filter processes where (
+        command_line = "*reg*add*\Environment*UserInitMprLogonScript")
+      registry = search (Registry:Add OR Registry:Edit)
+      registry_logon_key_events = filter registry where (
+        key = "*\Environment*UserInitMprLogonScript")
+      output (logon_script_key_processes, registry_logon_key_events)
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk Search -- logon scripts
+    description: Look for commands for adding a logon script as a registry value, as well as direct registry events for the same thing.
+    code: |- 
+      (index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\System32\\reg.exe" CommandLine="*add*\\Environment*UserInitMprLogonScript") OR (index=__your_sysmon_index__ (EventCode=12 OR EventCode=14 OR EventCode=13) TargetObject="*\\Environment*UserInitMprLogonScript")
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - process/create/command_line
   - process/create/exe

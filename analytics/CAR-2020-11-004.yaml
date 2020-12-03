@@ -21,41 +21,41 @@ Coverage:
     coverage: Low
 implementations:
   - name: Pseudocode - common processes that do not have the correct parent
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-   processes = search Process:Create
-   mismatch_processes = filter processes where ( parent_exe exists AND
-     (exe="smss.exe" AND (parent_exe!="smss.exe" AND parent_exe!="System") OR
-     (exe="csrss.exe" AND (parent_exe!="smss.exe" AND parent_exe!="svchost.exe")) OR
-     (exe="wininit.exe" AND parent_exe!="smss.exe") OR
-     (exe="winlogon.exe" AND parent_exe!="smss.exe") OR
-     (exe="lsass.exe" AND (parent_exe!="wininit.exe" AND parent_exe!="winlogon.exe")) OR
-     (exe="LogonUI.exe" AND (parent_exe!="winlogon.exe" AND parent_exe!="wininit.exe")) OR
-     (exe="services.exe" AND parent_exe!="wininit.exe") OR
-     (exe="spoolsv.exe" AND parent_exe!="services.exe") OR
-     (exe="taskhost.exe" AND (parent_exe!="services.exe" AND parent_exe!="svchost.exe")) OR
-     (exe="taskhostw.exe" AND (parent_exe!="services.exe" AND parent_exe!="svchost.exe")) OR
-     (exe="userinit.exe" AND (parent_exe!="dwm.exe" AND parent_exe!="winlogon.exe"))
-   output mismatch_processes
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk Search - parent/child mismatch
-  description: Looks for processes that do not have the expected parent. Common Splunk forwarder applications that break these rules are whitelisted; unique environments may require additional whitelist items.
-  code: |-
-    (index=__your_sysmon_index__ EventCode=1) AND ParentImage!="?" AND ParentImage!="C:\\Program Files\\SplunkUniversalForwarder\\bin\\splunk-regmon.exe" AND ParentImage!="C:\\Program Files\\SplunkUniversalForwarder\\bin\\splunk-powershell.exe" AND
-    ((Image="C:\\Windows\System32\\smss.exe" AND (ParentImage!="C:\\Windows\\System32\\smss.exe" AND ParentImage!="System")) OR
-    (Image="C:\\Windows\\System32\\csrss.exe" AND (ParentImage!="C:\\Windows\\System32\\smss.exe" AND ParentImage!="C:\\Windows\\System32\\svchost.exe")) OR
-    (Image="C:\\Windows\\System32\\wininit.exe" AND ParentImage!="C:\\Windows\\System32\\smss.exe") OR
-    (Image="C:\\Windows\\System32\\winlogon.exe" AND ParentImage!="C:\\Windows\\System32\\smss.exe") OR
-    (Image="C:\\Windows\\System32\\lsass.exe" and ParentImage!="C:\\Windows\\System32\\wininit.exe") OR
-    (Image="C:\\Windows\\System32\\LogonUI.exe" AND (ParentImage!="C:\\Windows\\System32\\winlogon.exe" AND ParentImage!="C:\\Windows\\System32\\wininit.exe")) OR
-    (Image="C:\\Windows\\System32\\services.exe" AND ParentImage!="C:\\Windows\\System32\\wininit.exe") OR
-    (Image="C:\\Windows\\System32\\spoolsv.exe" AND ParentImage!="C:\\Windows\\System32\\services.exe") OR
-    (Image="C:\\Windows\\System32\\taskhost.exe" AND (ParentImage!="C:\\Windows\\System32\\services.exe" AND ParentImage!="C:\\Windows\\System32\\svchost.exe")) OR
-    (Image="C:\\Windows\\System32\\taskhostw.exe" AND (ParentImage!="C:\\Windows\\System32\\services.exe" AND ParentImage!="C:\\Windows\\System32\\svchost.exe")) OR
-    (Image="C:\\Windows\System32\\userinit.exe" AND (ParentImage!="C:\\Windows\\System32\\dwm.exe" AND ParentImage!="C:\\Windows\\System32\\winlogon.exe")))
-  data_model: Sysmon native
-  type: Splunk
-data_model_references:
+    description: This is a pseudocode representation of the below splunk search.
+    code: |- 
+      processes = search Process:Create
+      mismatch_processes = filter processes where ( parent_exe exists AND
+        (exe="smss.exe" AND (parent_exe!="smss.exe" AND parent_exe!="System") OR
+        (exe="csrss.exe" AND (parent_exe!="smss.exe" AND parent_exe!="svchost.exe")) OR
+        (exe="wininit.exe" AND parent_exe!="smss.exe") OR
+        (exe="winlogon.exe" AND parent_exe!="smss.exe") OR
+        (exe="lsass.exe" AND (parent_exe!="wininit.exe" AND parent_exe!="winlogon.exe")) OR
+        (exe="LogonUI.exe" AND (parent_exe!="winlogon.exe" AND parent_exe!="wininit.exe")) OR
+        (exe="services.exe" AND parent_exe!="wininit.exe") OR
+        (exe="spoolsv.exe" AND parent_exe!="services.exe") OR
+        (exe="taskhost.exe" AND (parent_exe!="services.exe" AND parent_exe!="svchost.exe")) OR
+        (exe="taskhostw.exe" AND (parent_exe!="services.exe" AND parent_exe!="svchost.exe")) OR
+        (exe="userinit.exe" AND (parent_exe!="dwm.exe" AND parent_exe!="winlogon.exe"))
+      output mismatch_processes
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk Search - parent/child mismatch
+    description: Looks for processes that do not have the expected parent. Common Splunk forwarder applications that break these rules are whitelisted; unique environments may require additional whitelist items.
+    code: |-
+      (index=__your_sysmon_index__ EventCode=1) AND ParentImage!="?" AND ParentImage!="C:\\Program Files\\SplunkUniversalForwarder\\bin\\splunk-regmon.exe" AND ParentImage!="C:\\Program Files\\SplunkUniversalForwarder\\bin\\splunk-powershell.exe" AND
+      ((Image="C:\\Windows\System32\\smss.exe" AND (ParentImage!="C:\\Windows\\System32\\smss.exe" AND ParentImage!="System")) OR
+      (Image="C:\\Windows\\System32\\csrss.exe" AND (ParentImage!="C:\\Windows\\System32\\smss.exe" AND ParentImage!="C:\\Windows\\System32\\svchost.exe")) OR
+      (Image="C:\\Windows\\System32\\wininit.exe" AND ParentImage!="C:\\Windows\\System32\\smss.exe") OR
+      (Image="C:\\Windows\\System32\\winlogon.exe" AND ParentImage!="C:\\Windows\\System32\\smss.exe") OR
+      (Image="C:\\Windows\\System32\\lsass.exe" and ParentImage!="C:\\Windows\\System32\\wininit.exe") OR
+      (Image="C:\\Windows\\System32\\LogonUI.exe" AND (ParentImage!="C:\\Windows\\System32\\winlogon.exe" AND ParentImage!="C:\\Windows\\System32\\wininit.exe")) OR
+      (Image="C:\\Windows\\System32\\services.exe" AND ParentImage!="C:\\Windows\\System32\\wininit.exe") OR
+      (Image="C:\\Windows\\System32\\spoolsv.exe" AND ParentImage!="C:\\Windows\\System32\\services.exe") OR
+      (Image="C:\\Windows\\System32\\taskhost.exe" AND (ParentImage!="C:\\Windows\\System32\\services.exe" AND ParentImage!="C:\\Windows\\System32\\svchost.exe")) OR
+      (Image="C:\\Windows\\System32\\taskhostw.exe" AND (ParentImage!="C:\\Windows\\System32\\services.exe" AND ParentImage!="C:\\Windows\\System32\\svchost.exe")) OR
+      (Image="C:\\Windows\System32\\userinit.exe" AND (ParentImage!="C:\\Windows\\System32\\dwm.exe" AND ParentImage!="C:\\Windows\\System32\\winlogon.exe")))
+    data_model: Sysmon native
+    type: Splunk
+  data_model_references:
   - process/create/exe
   - process/create/parent_exe

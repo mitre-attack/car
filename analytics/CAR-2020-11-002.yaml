@@ -20,25 +20,25 @@ coverage:
     coverage: Moderate
 implementations:
   - name: Pseudocode - commands containing known network sniffing application names
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-   processes = search Process:Create
-   sniffer_processes = filter processes where (
-     exe = "tshark.exe" OR
-     exe = "windump.exe" OR
-     (exe = "logman.exe" AND parent_exe exists AND parent_exe!="C:\Program Files\Windows Event Reporting\Core\EventReporting.AgentService.exe") OR
-     exe = "tcpdump.exe" OR
-     exe = "wprui.exe" OR
-     exe = "wpr.exe" )
-   output sniffer_processes
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk Search - common network traffic sniffing apps being run
-  description: look for common network traffic sniffing apps being run
-  code: |- 
-    (index=__your_sysmon_index__ EventCode=1) (Image="*tshark.exe" OR Image="*windump.exe" OR (Image="*logman.exe" AND ParentImage!="?" AND ParentImage!="C:\\Program Files\\Windows Event Reporting\\Core\\EventReporting.AgentService.exe") OR Image="*tcpdump.exe" OR Image="*wprui.exe" OR Image="*wpr.exe")
-  data_model: Sysmon native
-  type: Splunk
+    description: This is a pseudocode representation of the below splunk search.
+    code: |- 
+      processes = search Process:Create
+      sniffer_processes = filter processes where (
+        exe = "tshark.exe" OR
+        exe = "windump.exe" OR
+        (exe = "logman.exe" AND parent_exe exists AND parent_exe!="C:\Program Files\Windows Event Reporting\Core\EventReporting.AgentService.exe") OR
+        exe = "tcpdump.exe" OR
+        exe = "wprui.exe" OR
+        exe = "wpr.exe" )
+      output sniffer_processes
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk Search - common network traffic sniffing apps being run
+    description: look for common network traffic sniffing apps being run
+    code: |- 
+      (index=__your_sysmon_index__ EventCode=1) (Image="*tshark.exe" OR Image="*windump.exe" OR (Image="*logman.exe" AND ParentImage!="?" AND ParentImage!="C:\\Program Files\\Windows Event Reporting\\Core\\EventReporting.AgentService.exe") OR Image="*tcpdump.exe" OR Image="*wprui.exe" OR Image="*wpr.exe")
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - process/create/exe
   - process/create/parent_exe

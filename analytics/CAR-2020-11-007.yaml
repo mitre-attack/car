@@ -21,22 +21,22 @@ coverage:
     coverage: High
 implementations:
   - name: Pseudocode - network shares being removed via the command line
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-   processes = search Process:Create
-   target_processes = filter processes where (
-     (exe="C:\\Windows\\System32\\net.exe" AND command_line="*delete*") OR
-     command_line="*Remove-SmbShare*" OR
-     comman_line="*Remove-FileShare*" )
-  output target_processes
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk Search - delete network shares
-  description: looks network shares being deleted from the command line
-  code: |- 
-    (index=__your_sysmon_index__ EventCode=1) ((Image="C:\\Windows\\System32\\net.exe" AND CommandLine="*delete*") OR CommandLine="*Remove-SmbShare*" OR CommandLine="*Remove-FileShare*")
-  data_model: Sysmon native
-  type: Splunk
+    description: This is a pseudocode representation of the below splunk search.
+    code: |- 
+      processes = search Process:Create
+      target_processes = filter processes where (
+        (exe="C:\\Windows\\System32\\net.exe" AND command_line="*delete*") OR
+        command_line="*Remove-SmbShare*" OR
+        comman_line="*Remove-FileShare*" )
+      output target_processes
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk Search - delete network shares
+    description: looks network shares being deleted from the command line
+    code: |- 
+      (index=__your_sysmon_index__ EventCode=1) ((Image="C:\\Windows\\System32\\net.exe" AND CommandLine="*delete*") OR CommandLine="*Remove-SmbShare*" OR CommandLine="*Remove-FileShare*")
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - process/create/exe
   - process/create/command_line

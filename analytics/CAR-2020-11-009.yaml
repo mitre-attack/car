@@ -21,18 +21,18 @@ coverage:
     coverage: High
 implementations:
   - name: Pseudocode - instances of hh.exe
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-   processes = search Process:Create
-   target_processes = filter processes where (exe="C:\Windows\syswow64\hh.exe" OR exe="C:\Windows\system32\hh.exe")
-  output target_processes
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk Search - hh.exe
-  description: looks all instances of hh.exe
-  code: |- 
-    (index=__your_sysmon_index__ EventCode=1) (Image="C:\\Windows\\syswow64\\hh.exe" OR Image="C:\\Windows\\system32\\hh.exe")
-  data_model: Sysmon native
-  type: Splunk
+    description: This is a pseudocode representation of the below splunk search.
+    code: |- 
+      processes = search Process:Create
+      target_processes = filter processes where (exe="C:\Windows\syswow64\hh.exe" OR exe="C:\Windows\system32\hh.exe")
+      output target_processes
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk Search - hh.exe
+    description: looks all instances of hh.exe
+    code: |- 
+      (index=__your_sysmon_index__ EventCode=1) (Image="C:\\Windows\\syswow64\\hh.exe" OR Image="C:\\Windows\\system32\\hh.exe")
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - process/create/exe
