@@ -51,49 +51,6 @@ Information about the latest CAR updates and changes can be found in this sectio
 * New analytics added
   * [CAR-2020-04-001: Shadow Copy Deletion](/analytics/CAR-2020-04-001)
 
-
-### February 2020
-* Added [OSQuery 4.1.2](/sensors/osquery_4.1.2) sensor with data model mappings and CAR analytic coverage.
-
-### January 2020
-* Added [Sysmon 10.4](/sensors/sysmon_10.4) sensor with data model mappings and CAR analytic coverage.
-
-### December 2019
-* Added true positives (examples of real events that the analytic should successfully detect) to:
-  * [CAR-2013-10-002: DLL Injection via LoadLibrary](/analytics/CAR-2013-10-002)
-  * [CAR-2014-04-003: Powershell Execution](/analytics/CAR-2014-04-003)
-  * [CAR-2016-03-001: Host Discovery Commands](/analytics/CAR-2016-03-001)
-  * [CAR-2019-08-001: Credential Dumping via Window Task Manager](/analytics/CAR-2019-08-001) 
-  
-### August 2019
-* New analytics added
-  * [CAR-2019-08-001: Credential Dumping via Windows Task Manager](/analytics/CAR-2019-08-001)
-  * [CAR-2019-08-002: Active Directory Dumping via NTDSUtil](/analytics/CAR-2019-08-002)
-    
-### July 2019
-* Added Splunk/Sysmon implementations to several analytics
-* Added [EQL](https://eqllib.readthedocs.io/en/latest/index.html) implementations to several analytics
-* Added corresponding [Sigma](https://github.com/Neo23x0/sigma) rule references to several analytics
-* New analytics added
-  * [CAR-2019-07-001: Access Permission Modification](/analytics/CAR-2019-07-001)
-  * [CAR-2019-07-002: Lsass Process Dump via Procdump](/analytics/CAR-2019-07-002)
-
-
-### May 2019
-* All CAR analytics have been converted to YAML; the YAML versions can be found [here](https://github.com/mitre-attack/car/tree/master/analytics).
-* Added an [ATT&CK Navigator Layer](https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcar_attack%2Fcar_attack.json) for capturing the current set of ATT&CK tactics/techniques covered by CAR analytics.
-
-### April 2019
-* Four new analytics were added
-  * [CAR-2019-04-001: UAC Bypass](/analytics/CAR-2019-04-001)
-  * [CAR-2019-04-002: Generic Regsvr32](/analytics/CAR-2019-04-002)
-  * [CAR-2019-04-003: Squiblydoo](/analytics/CAR-2019-04-003)
-  * [CAR-2019-04-004: Credential Dumping via Mimikatz](/analytics/CAR-2019-04-004)
-* Three new fields were added to the [Process object](/data_model/process)
-  * `integrity_level`
-  * `parent_command_line`
-  * `current_working_directory`
-
 ## Methodology
 CAR analytics were developed to detect the adversary behaviors in [ATT&CK](https://attack.mitre.org/). Development of an analytic is based upon the following activities: 
 * identifying and prioritizing adversary behaviors from the ATT&CK adversary model 
@@ -102,6 +59,8 @@ CAR analytics were developed to detect the adversary behaviors in [ATT&CK](https
 * the actual creation of the analytic to detect the identified behaviors
 
 CAR is intended to be shared with cyber-defenders throughout the community.
+
+[This](https://www.mitre.org/publications/technical-papers/ttp-based-hunting) white paper on TTP-based hunting provides some useful insight into many of these activities.
 
 ## CAR and ATT&CK
 
