@@ -19,7 +19,7 @@ coverage:
       - TA0003
       - TA0008
     subtechniques:
-      - T11037.001
+      - T1037.001
     coverage: Moderate
 implementations:
   - name: Pseudocode - logon run script key added to registry using reg.exe on commandline, or new logon scipt keys in registry from any source.

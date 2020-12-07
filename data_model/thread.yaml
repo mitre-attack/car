@@ -27,22 +27,22 @@ fields:
     description: The thread ID of the new thread that was created.
     example: 6964
   - name: stack_base
-    description: The base address of the thread’s stack.
+    description: The base address of the thread's stack.
     example: 0xfffff880081a9000
   - name: stack_limit
-    description: The limit of the thread’s stack.
+    description: The limit of the thread's stack.
     example: 0xfffff880081a3000
   - name: start_address
-    description: The memory address at which the thread’s execution starts.
+    description: The memory address at which the thread's execution starts.
     example: 0xfffff880046dc3e0
   - name: user
-    description: The user context in which the source thread was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
+    description: The user context in which the source thread was running. May be a local, domain or SYSTEM user. Formatted as <DOMAIN>\<USER>. Because threads are allowed to impersonate users, this may be different than the user context of the process.
     example: HOST1\LOCALUSER
   - name: user_stack_base
-    description: The base address of the thread’s stack.
+    description: The base address of the thread's stack.
     example: 0x0
   - name: user_stack_limit
-    description: The limit of the thread’s stack.
+    description: The limit of the thread's stack.
     example: 0x0
   - name: start_function
     description: The function at `start_address`.

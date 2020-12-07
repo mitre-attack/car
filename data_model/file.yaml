@@ -19,7 +19,7 @@ actions:
 fields:
   - name: creation_time
     description: The creation time of the file as described in UTC and including the date.
-    example: 05/14/2015 12:47:06
+    example: "05/14/2015 12:47:06"
   - name: file_name
     description: The name of the file.
     example: MyWordDoc.docx
@@ -49,12 +49,12 @@ fields:
     example: 1860
   - name: previous_creation_time
     description: The creation_time associated with the file before it was changed for this file event.
-    example: 05/14/2015 12:47:06
+    example: "05/14/2015 12:47:06"
   - name: signer
     description: The company listed on the certificate of the program at `image_path` if that program is signed.
     example: Microsoft Corporation
   - name: user
-    description: The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as “<DOMAIN>\<USER>”. Because threads are allowed to impersonate users, this may be different than the user context of the process.
+    description: The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as <DOMAIN>\<USER>. Because threads are allowed to impersonate users, this may be different than the user context of the process.
     example: HOST1\LOCALUSER
   - name: company
     description: The name of the organization listed in the file located at `image_path`.

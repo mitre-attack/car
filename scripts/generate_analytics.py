@@ -18,7 +18,11 @@ ATTACK_URL = "https://raw.githubusercontent.com/mitre/cti/subtechniques/enterpri
 
 # Get all analytics and load as list of dicts
 analytics_files = glob.glob(path.join(path.dirname(__file__), "..", "analytics", "*.yaml"))
-analytics = [yaml.load(open(analytic_file).read()) for analytic_file in analytics_files]
+analytics = []
+for af in analytics_files:
+    print("working on {}".format(af))
+    analytics.append(yaml.load(open(af).read()))
+#analytics = [yaml.load(open(analytic_file).read()) for analytic_file in analytics_files]
 
 # Load ATT&CK content, which is needed to get names for technique IDs
 attack = requests.get(ATTACK_URL).json()
