@@ -1,5 +1,5 @@
 ---
-title: "CAR-2020-11-011: CMSTP"
+title: "CAR-2020-11-011: Registry Edit from Screensaver"
 layout: analytic
 submission_date: 2020/11/30
 information_domain: Host
