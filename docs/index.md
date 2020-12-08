@@ -19,6 +19,28 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
+### November 2020
+* Data Model update! We're excited to roll out these changes, and we think you will like the new capabilities.
+  * [See the full new data model](data_model)
+  * Added Authentication, Email, HTTP, and Socket objects
+  * Updated other objects: 
+    * Removed several unnecessary fields
+    * Renamed some fields to make their intent more clear
+    * Added several fields that have become necessary for modern analytics
+    * Removed and added some Event types
+* New analytics added
+  * [CAR-2020-11-001: Boot or Logon Initialization Scripts](/analytics/CAR-2020-11-001)
+  * [CAR-2020-11-002: Local Network Sniffing](/analytics/CAR-2020-11-002)
+  * [CAR-2020-11-003: DLL Injection with Mavinject](/analytics/CAR-2020-11-003)
+  * [CAR-2020-11-004: Processes Started From Irregular Parent](/analytics/CAR-2020-11-004)
+  * [CAR-2020-11-005: Clear Powershell Console Command History](/analytics/CAR-2020-11-005)
+  * [CAR-2020-11-006: Local Permission Group Discovery](/analytics/CAR-2020-11-006)
+  * [CAR-2020-11-007: Network Share Connection Removal](/analytics/CAR-2020-11-007)
+  * [CAR-2020-11-008: MSBuild and msxsl](/analytics/CAR-2020-11-008)
+  * [CAR-2020-11-009: Compiled HTML Access](/analytics/CAR-2020-11-009)
+  * [CAR-2020-11-010: CMSTP](/analytics/CAR-2020-11-010)
+  * [CAR-2020-11-011: Registry Edit from Screensaver](/analytics/CAR-2020-11-011)
+  
 ### September 2020
 * New analytics added
   * [CAR-2020-09-001: Scheduled Task - File Access](/analytics/CAR-2020-09-001)
