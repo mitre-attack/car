@@ -1,0 +1,136 @@
+---
+sensor_name: auditd
+sensor_version: 2.8
+sensor_developer: Red Hat
+sensor_url: 'https://people.redhat.com/sgrubb/audit/'
+sensor_description: 'auditd is the userspace component to the Linux Auditing System. It's responsible for writing audit records to the disk'
+mappings:
+  - object: file
+    action: create
+    notes: 'Mapped to the process_file_events, file, and file_events tables.'
+    fields:
+      - creation_time
+      - file_name
+      - file_path
+      - image_path
+      - md5_hash
+      - pid
+      - ppid
+      - sha1_hash
+      - sha256_hash
+      - user
+  - object: file
+    action: delete
+    notes: 'Mapped to the process_file_events, file, and file_events tables.'
+    fields:
+      - creation_time
+      - file_name
+      - file_path
+      - image_path
+      - md5_hash
+      - pid
+      - ppid
+      - sha1_hash
+      - sha256_hash
+      - user
+  - object: file
+    action: modify
+    notes: 'Mapped to the process_file_events, file, and file_events tables.'
+    fields:
+      - creation_time
+      - file_name
+      - file_path
+      - image_path
+      - md5_hash
+      - pid
+      - ppid
+      - sha1_hash
+      - sha256_hash
+      - user
+  - object: file
+    action: timestomp
+    notes: 'Mapped to the process_file_events, file, and file_events tables.'
+    fields:
+      - creation_time
+      - file_name
+      - file_path
+      - image_path
+      - md5_hash
+      - pid
+      - ppid
+      - sha1_hash
+      - sha256_hash
+      - user
+  - object: file
+    action: write
+    notes: 'Mapped to the process_file_events, file, and file_events tables.'
+    fields:
+      - creation_time
+      - file_name
+      - file_path
+      - image_path
+      - md5_hash
+      - pid
+      - ppid
+      - sha1_hash
+      - sha256_hash
+      - user
+  - object: flow
+    action: end
+    notes: 'Mapped to the socket_events table'
+    fields:
+      - dest_ip
+      - dest_port
+      - image_path
+      - pid
+      - protocol
+      - src_ip
+      - src_port
+      - start_time
+      - user
+  - object: flow
+    action: start
+    notes: 'Mapped to the socket_events table'
+    fields:
+      - dest_ip
+      - dest_port
+      - image_path
+      - pid
+      - protocol
+      - src_ip
+      - src_port
+      - start_time
+      - user
+  - object: process
+    action: create
+    notes: 'Mapped to the process_events, file, and hash tables.'
+    fields:
+      - command_line
+      - exe
+      - image_path
+      - md5_hash
+      - pid
+      - ppid
+      - sha1_hash
+      - sha256_hash
+      - user
+      - current_working_directory
+  - object: driver
+    action: load
+    notes: 'Mapped to the drivers and hash tables.'
+    fields:
+      - image_path
+      - md5_hash
+      - module_name
+      - sha1_hash
+      - sha256_hash
+  - object: registry
+    action: edit
+    notes: 'Mapped to the registry table.'
+    fields:
+      - key
+      - type
+      - value
+      - data
+other_coverage:
+  - 'N/A'
