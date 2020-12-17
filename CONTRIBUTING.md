@@ -17,6 +17,23 @@ The following criteria are a consideration for us when vetting analytic submissi
 - An analytic should only be shared if it has been used in an operational setting.
 - An analytic must detect behaviors, not a specific artifact or nuance of a RAT or piece of malware. This is important! A detection for a piece of malware that executes a technique is great, but not a fit for CAR. Consider [Sigma](https://github.com/Neo23x0/sigma).
 - We reserve the right to add new criteria over time as the vetting process evolves.
+- One analytic per pull request (this makes it easier to review).
+
+#### YAML Submissions
+
+We definitely appreciate submissions in our [YAML](https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-11-011.yaml) format. However, when doing so, please ensure that:
+
+* The submitted YAML file is valid YAML. Tools like [yamllint](http://www.yamllint.com/) can help you test this.
+* The submitted YAML file conforms to our [format](https://github.com/mitre-attack/car/blob/master/analytics/CAR-2020-11-011.yaml). At minimum, it must include the following fields (we also encourage including implementations, though this is not mandatory):
+  * title
+  * id
+  * platforms
+  * submission_date
+  * information_domain
+  * subtypes
+  * contributors
+  * description
+  * coverage
 
 ### Contributing to the Data Model
 We're also looking for help extending the CAR data model.
