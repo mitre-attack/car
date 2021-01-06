@@ -1,0 +1,32 @@
+---
+title: Unusual Child Process spawned using DDE exploit
+submission_date: 2020/12/03
+information_domain: 'Host'
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - Cyware Labs
+id: CAR-2021-01-006
+description: |-
+  Adversaries may use Windows Dynamic Data Exchange (DDE) to execute arbitrary commands. DDE is a client-server protocol for one-time and/or continuous inter-process communication (IPC) between             applications. Once a link is established, applications can autonomously exchange transactions consisting of strings, warm data links (notifications when a data item changes), hot data links               (duplications of changes to a data item), and requests for command execution.
+  - technique: T1559
+    coverage: Low
+    subtechniques:
+      - T1559.002
+    tactics:
+      - TA0002
+implementations:
+- name: Splunk search - Unusual Child Process spawned using DDE exploit
+
+  description:  This Splunk query looks for any executable invocations from an Excel file.
+
+  code: |-
+    index = * ParentImage="*excel.exe*" Image="*.exe" | table _raw, ParentImage, Image
+  data_model: Sysmon native
+  type: Splunk
+data_model_references:
+  - process/create/command_line
