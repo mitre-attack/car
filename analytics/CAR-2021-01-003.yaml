@@ -1,0 +1,30 @@
+---
+title: Detecting windows log clearing with wevtutil
+submission_date: 2020/12/02
+information_domain: 'Host'
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - Cyware Labs
+id: CAR-2021-01-003
+description: |-
+  In an attempt to clear traces after compromising a machine, threat actors often try to clear Windows Event logs. This is often done using “wevtutil”, a legitimate tool provided by Microsoft. This action interferes with event collection and notification, and may lead to a security event going undetected, thereby potentially leading to further compromise of the network.
+  - technique: T1070
+    coverage: Low
+    subtechniques:
+      - T1070.001
+    tactics:
+      - TA0005
+implementations:
+- name: Splunk search - Detecting log clearing with wevtutil
+  description:  This search query looks for an instance where wevtutil is invoked along with a command that may cause the system to remove Windows Event logs.
+  code: |-
+    index=* sourcetype= __your__windows__sysmon__sourcetype EventCode=1 Image=*wevtutil* CommandLine=*cl* (CommandLine=*System* OR CommandLine=*Security* OR CommandLine=*Setup* OR CommandLine=*Application*) | table _time host Image CommandLine
+  data_model: Sysmon native
+  type: Splunk
+data_model_references:
+  - process/create/command_line
