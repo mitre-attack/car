@@ -1,0 +1,31 @@
+---
+title: CAR-2020-12-003: Non Standard User Agent Strings used to make outbound connections
+submission_date: 2020/12/03
+information_domain: 'Host'
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - Cyware Labs
+id: CAR-2020-12-003
+description: |-
+   Adversaries may steal data by exfiltrating it over an existing command and control (C2) channel. They may try to use existing tools or custom scripts to exfiltrate data to a C2 channel. Such scripts may  use non standard user agent strings while establishing the C2 communication. This analytics tries to detect the non-standard user agent strings used to make C2 communications.
+  - technique: T1041
+    coverage: Low
+    subtechniques:
+      - None
+    tactics:
+      - TA0010
+implementations:
+- name: Non Standard User Agent Strings used to make outbound connections
+
+  description:   This Splunk query looks for unusual or non standard user agent strings used to make outbound communications.
+
+  code: |-
+    index=__proxy_logs__  | table clientip, useragent | lookup user_agent.csv user_agent as useragent outputnew user_agent as user_agent | fillnull value=NULL user_agent| where user_agent="NULL" | stats      count,values(useragent) as useragents by clientip | where count > 15
+  type: Splunk
+data_model_references:
+  - process/create/command_line
