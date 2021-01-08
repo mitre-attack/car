@@ -43,7 +43,7 @@ implementations:
     data_mode: EQL native
   - description: LogPoint version of the above pseudocode.
     code: |-
-      norm_id=WindowsSysmon event_id=1 image="*\wmic.exe" command="* process call create *" command="* /node:*"
+      norm_id=WindowsSysmon event_id=1 image="C:\\Windows\\*\\wmic.exe" command="* process call create *" command="* /node:*"
     type: LogPoint
     data_mode: LogPoint native
 data_model_references:
