@@ -50,6 +50,13 @@ implementations:
       >>_checkif int_compare count_unique > 1 include
     type: DNIF
     data_model: Sysmon native
+  - description: LogPoint version of the above pseudocode.
+    code: |-
+      norm_id=WindowsSysmon event_id=1
+      | chart distinct_count(hash) as cnt by image
+      | search cnt > 1
+    type: LogPoint
+    data_model: LogPoint native
 data_model_references:
   - process/create/exe
   - process/create/md5_hash
