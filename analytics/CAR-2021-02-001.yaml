@@ -1,0 +1,40 @@
+
+title: Web Shell Suspicious Process Tree
+submission_date: 2020/11/29
+information_domain: Host
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - Nichols Jasper
+id: CAR-2021-02-001
+description: |-
+  TODO
+Coverage:
+  - technique: T1505
+    tactics:
+      - TODO
+    subtechniques:
+      - T1505.003
+    coverage: High
+implementations:
+  - name: Pseudocode - common processes that do not have the correct parent
+    description: This is a pseudocode representation of the below splunk search.
+    code: |- 
+      processes = search Process:Create
+      mismatch_processes = filter processes where ( TODO)
+      output mismatch_processes
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk Search - TODO
+    description: TODO
+    code: |-
+      TODO
+    data_model: Sysmon native
+    type: Splunk
+data_model_references:
+  - process/create/exe
+  - process/create/parent_exe
