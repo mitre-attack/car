@@ -1,0 +1,32 @@
+---
+title: Identifying Port scanning activity
+submission_date: 2020/10/23
+information_domain: 'Network'
+platforms:
+  - Windows
+  - Linux
+subtypes:
+  - Flow
+analytic_types:
+  - TTP
+contributors:
+  - Cyware Labs
+id: CAR-2021-01-001
+description: |-
+  After compromising an initial machine, adversaries commonly attempt to laterally move across the network. The first step to attempt the lateral movement often involves conducting host identification, port and service scans on the internal network via the compromised machine using tools such as Nmap, Cobalt Strike, etc.
+coverage:
+  - technique: T1046
+    coverage: Moderate
+    subtechniques:
+      - No sub-techniques
+    tactics:
+      - TA0007
+implementations:
+- name: Splunk search - Identifying Internal hosts and services for lateral movement
+  description: It should be noted that when a host/ port/ service scan is performed from a compromised machine, a single machine makes multiple calls to other hosts in the network to identify live hosts and services. This can be detected using the following query
+  code: |-
+    sourcetype='firewall_logs' dest_ip = 'internal_subnet' | stats dc(dest_port) as pcount by src_ip | where pcount >5
+  data_model: Sysmon native
+  type: Splunk
+data_model_references:
+  - flow/start/dest_ip
