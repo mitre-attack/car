@@ -31,5 +31,12 @@ implementations:
   - name: Sigma (Windows Event Log)
     description: '[Sigma/Windows Event Log](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_rare_service_installs.yml) rule with similar logic to the above pseudocode'
     type: Sigma
+  - description: LogPoint version of the above sigma rule.
+    code: |-
+      norm_id=WinServer event_id=7045
+      | chart count() as cnt by file
+      | search cnt < 5
+    type: LogPoint
+    data_model: LogPoint native
 data_model_references:
   - process/create/parent_image_path

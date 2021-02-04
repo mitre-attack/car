@@ -40,6 +40,11 @@ implementations:
 
       output remote_thread
     type: pseudocode
+  - description: LogPoint version of the above pseudocode.
+    code: |-
+      norm_id=WindowsSysmon event_id=8 start_function IN ["LoadLibraryA", "LoadLibraryW"] -source_image="C:\Path\To\TrustedProgram.exe"
+    type: LogPoint
+    data_model: LogPoint native
 data_model_references:
   - thread/remote_create/src_pid
   - thread/remote_create/start_function
