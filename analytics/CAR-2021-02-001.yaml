@@ -1,5 +1,5 @@
 
-title: Web Shell Suspicious Process Tree
+title: Webshell-Indicative Process Tree
 submission_date: 2020/11/29
 information_domain: Host
 platforms:
@@ -12,21 +12,32 @@ contributors:
   - Nichols Jasper
 id: CAR-2021-02-001
 description: |-
-  TODO
+  A web shell is a web script placed on an openly accessible web server to allow an adversary to use the server as a gatway in a network. As the shell operates, commands will be issued from within the web application into the broader server operating system. This analytic looks for host enumeration executables initiated by any web service that would not normally be executed within that environment. 
 Coverage:
   - technique: T1505
     tactics:
-      - TODO
+      - TA0003
     subtechniques:
       - T1505.003
-    coverage: High
+    coverage: Moderate
 implementations:
-  - name: Pseudocode - common processes that do not have the correct parent
+  - name: Pseudocode - Loook for suspicious process tree beginning with web service
     description: This is a pseudocode representation of the below splunk search.
     code: |- 
       processes = search Process:Create
-      mismatch_processes = filter processes where ( TODO)
-      output mismatch_processes
+      suspicious_processes = filter processes where (
+        (parent_exe == "w3wp.exe" OR
+         parent_exe == "httpd.exe" OR
+         parent_exe == "tomcat*.exe" OR 
+         parent_exe == "nginx.exe" ) AND
+        (exe == "cmd.exe" OR
+         exe == "powershell.exe" OR
+         exe == "net.exe" OR
+         exe == "whoami.exe" OR
+         exe == "hostname.exe" OR
+         exe == "systeminfo.exe" OR
+         exe == "ipconfig.exe) )
+      output suspicious_processes
     data_model: CAR native
     type: Pseudocode
   - name: Splunk Search - TODO
