@@ -49,7 +49,7 @@ A resource for storing information available to a computer program.
 
 ## Coverage Map
 
-| | **company** | **content** | **creation_time** | **file_name** | **file_path** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **pid** | **ppid** | **previous_creation_time** | **sha1_hash** | **sha256_hash** | **signer** | **user** | **file_uid** | **file_gid** | **file_group** | **file_user** | **file_extension** | **link_target** | **mime_type** | **mode** | **signature_valid*** |
+| | **company** | **content** | **creation_time** | **file_name** | **file_path** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **pid** | **ppid** | **previous_creation_time** | **sha1_hash** | **sha256_hash** | **signer** | **user** | **file_uid** | **file_gid** | **file_group** | **file_user** | **file_extension** | **link_target** | **mime_type** | **mode** | **signature_valid** |
 | ---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | **create** | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | | | | | | | | | | | | | | | | |
 | **delete** | | | | | | | | | | | | | | | | | | | | | | | | | | |
