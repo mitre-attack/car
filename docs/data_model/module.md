@@ -25,12 +25,13 @@ Modules correspond to executable (and potentially non-executable) content, and a
 |pid|Process ID of the process in which the module is loaded (or unloaded).|`738`|
 |sha1_hash|The SHA1 hash of the contents of the file located at `image_path`.|`2aae6c35c94fcfb415dbe95f408b9ce91ee846ed`|
 |sha256_hash|The SHA256 hash of the contents of the file located at `image_path`.|`68e656b251e67e8358bef8483ab0d51c6619f3e7a1a9f0e75838d41ff368f728`|
+|signature_valid|Boolean indicator of whether the signature is current and not revoked.|`True`|
 |signer|The name of the organization which signed the module.|`Microsoft Corporation`|
 |tid|The thread ID of the thread responsible for the load or unload event.|`50`|
 
 ## Coverage Map
 
-| | **base_address** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **module_name** | **module_path** | **pid** | **sha1_hash** | **sha256_hash** | **signer** | **tid** |
+| | **base_address** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **module_name** | **module_path** | **pid** | **sha1_hash** | **sha256_hash** | **signature_valid** | **signer** | **tid** |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **load** | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | |
-| **unload** | | | | | | | | | | | | |
+| **load** | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) | [Sysmon (2.0)]( ../sensors/sysmon_2.0)  | [Sysmon (2.0)]( ../sensors/sysmon_2.0)  | [Sysmon (2.0)]( ../sensors/sysmon_2.0) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) | [Sysmon (2.0)]( ../sensors/sysmon_2.0)  | [Sysmon (2.0)]( ../sensors/sysmon_2.0) | | | |
+| **unload** | | | | | | | | | | | | | |
