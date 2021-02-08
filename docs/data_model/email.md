@@ -41,9 +41,7 @@ to|The content of the To field in the email header; does not necessarily match u
 
 ## Coverage Map
 
-| | **action_reason** | **attachment_mime_type** | **attachment_name** | **attachment_size** | **date** | **dest_address** | **dest_ip** | **dest_port** | **from** |
-**message_body** | **message_links** | **message_type** | **return_address** | **server_relay** | **smtp_uid** | **src_address** | **src_domain** | **src_ip** | **src_port** |
-**subject** | **to** |
+| | **action_reason** | **attachment_mime_type** | **attachment_name** | **attachment_size** | **date** | **dest_address** | **dest_ip** | **dest_port** | **from** | **message_body** | **message_links** | **message_type** | **return_address** | **server_relay** | **smtp_uid** | **src_address** | **src_domain** | **src_ip** | **src_port** | **subject** | **to** |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|--|--|
 | **block** | | | | | | | | | | | | | | | | | | | | | |
 | **delete** | | | | | | | | | | | | | | | | | | | | | |
