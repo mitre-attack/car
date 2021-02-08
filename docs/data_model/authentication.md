@@ -38,9 +38,7 @@ user_type|type of user that initiated the request.|`Administrator, Standard, Gue
 
 ## Coverage Map
 
-| | **ad_domain** | **app_name** | **auth_service** | **auth_target** | **decision_reason** | **fqdn** | **hostname** | **method** | 
-**response_time** | **target_ad_domain** | **target_uid** | **target_user** | **target_user_role** | **target_user_type** | **uid** | 
-**user** | **user_agent** | **user_role** | **user_type |
+| | **ad_domain** | **app_name** | **auth_service** | **auth_target** | **decision_reason** | **fqdn** | **hostname** | **method** | **response_time** | **target_ad_domain** | **target_uid** | **target_user** | **target_user_role** | **target_user_type** | **uid** | **user** | **user_agent** | **user_role** | **user_type |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | **failure** | | | | | | | | | | | | | | | | | | | |
 | **error** | | | | | | | | | | | | | | | | | | | |
