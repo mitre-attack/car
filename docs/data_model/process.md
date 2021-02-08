@@ -48,7 +48,7 @@ A process is a running program on a computer.
 ## Coverage Map
 
 | | **access_level** | **call_trace** | **command_line** | **current_working_directory** | **exe** | **env_vars** | **fqdn** | **guid** | **hostname** | **image_path** | **integrity_level** | **md5_hash** | **parent_command_line** | **parent_exe** | **parent_guid** | **parent_image_path** | **pid** | **ppid** | **sha1_hash** | **sha256_hash** | **sid** | **signer** | **signature_valid** | **target_address** | **target_guid** | **target_pid** | **target_name** | **user** |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **access** | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| **create** | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| **terminate** | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **access** | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| **create** | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| **terminate** | | | | | | | | | | | | | | | | | | | | | | | | | | | |
