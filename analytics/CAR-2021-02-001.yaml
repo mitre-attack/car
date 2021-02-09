@@ -21,7 +21,7 @@ Coverage:
       - T1505.003
     coverage: Moderate
 implementations:
-  - name: Pseudocode - Loook for suspicious process tree beginning with web service
+  - name: Pseudocode - Look for suspicious process tree beginning with web service
     description: This is a pseudocode representation of the below splunk search.
     code: |- 
       processes = search Process:Create
@@ -40,10 +40,12 @@ implementations:
       output suspicious_processes
     data_model: CAR native
     type: Pseudocode
-  - name: Splunk Search - TODO
-    description: TODO
+  - name: Splunk Search - webshell-indicative process tree
+    description: Look for host enumeration commands spawned by web services. 
     code: |-
-      TODO
+      (index=__your_sysmon_index__ EventCode=1) 
+      (ParentImage="C:\\Windows\\System32\\*w3wp.exe" OR ParentImage="*httpd.exe" OR ParentImage="*tomcat*.exe" OR ParentImage="*nginx.exe")
+      (Image="C:\\Windows\\System32\\cmd.exe OR Image="C:\\Windows\\SysWOW64\\cmd.exe" OR Image="C:\\Windows\\System32\\*\\powershell.exe OR Image="C:\\Windows\SysWOW64\\*\powershell.exe OR Image="C:\\Windows\\System32\\net.exe" OR Image="C:\\Windows\\System32\\hostname.exe" OR Image="C:\\Windows\\System32\\whoami.exe" OR Image="*systeminfo.exe OR Image="C:\\Windows\\System32\\ipconfig.exe") 
     data_model: Sysmon native
     type: Splunk
 data_model_references:
