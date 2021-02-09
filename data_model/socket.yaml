@@ -6,7 +6,7 @@ actions:
     description: The event corresponding to a socket binding to a specific address
   - name: listen
     description: The event corresponding to a socket being opened into a listening status, usually on a specific local port.
-  - name: put
+  - name: close
     description: The event corresponding to a socket being closed.
 fields:
   - name: pid
