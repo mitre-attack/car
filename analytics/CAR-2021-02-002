@@ -1,5 +1,5 @@
-title: Local Permission Group Discovery
-submission_date: 2020/11/30
+title: Get System
+submission_date: 2021/01/15
 information_domain: Host
 platforms:
   - Windows
@@ -8,25 +8,29 @@ subtypes:
 analytic_types:
   - TTP
 contributors:
-  - Olaf Hartong
-id: CAR-2020-11-006
+  - Sebastian Damaye
+id: CAR-2020-02-002
 description: |-
-  Cyber actors frequently enumerate local or domain permissions groups. The net utility is usually used for this purpose. This analytic looks for any instances of net.exe, which is not normally used for benign purposes, although system administrator actions may trigger false positives.
-coverage:
-  - technique: T1069
+  Cyber actors frequently escalate to the SYSTEM account after gaining entry to a Windows host, to enable them to carry out various attacks more effectively. Tools such as Meterpreter, Cobalt Strike, and Empire carry out automated steps to "Get System", which is the same as switching over to the System user account. Most of these tools utilize multiple techniques to try and attain SYSTEM: in the first technique, they create a named pipe and connects an instance of cmd.exe to it, which allows them to impersonate the security context of cmd.exe, which is SYSTEM. In the second technique, a malicious DLL is injected into a process that is running as SYSTEM; the injected DLL steals the SYSTEM token and applies it where necessary to escalate privileges. This analytic looks for both of these techniques. 
+  - technique: T1548
     tactics:
-      - TA0007
+      - TA0004
+      - TA0005
+    coverage: Moderate
+  - technique: T1134
+    tactics:
+      - TA0004
+      - TA0005
     subtechniques:
-      - T1069.001
-      - T1069.002
+      - T1134.001
     coverage: Moderate
 implementations:
-  - name: Pseudocode - net.exe instances
+  - name: Pseudocode - getsystem
     description: This is a pseudocode representation of the below splunk search.
     code: |- 
       processes = search Process:Create
       net_processes = filter processes where (
-        exe = "net.exe" AND (
+        (parent_exe="services.exe" exe="cmd.exe" command_line="*echo*\pipe\*") OR (exe="rundll32.exe" command_line="*,a /p*"
         command_line="*net* user*" OR
         command_line="*net* group*" OR
         command_line="*net* localgroup*" OR
