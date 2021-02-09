@@ -55,6 +55,6 @@ A resource for storing information available to a computer program.
 | **delete** | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | **modify** | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | | | | | | | | | | | | | | | | |
 | **read** | | | | | | | | | | | | | | | | | | | | | | | | | |
-| **timestomp** | | | [Sysmon (2.0)](../sensors/sysmon_2.0) | [Sysmon (2.0)](../sensors/sysmon_2.0) | | | [Sysmon (2.0)](../sensors/sysmon_2.0) | |  [Sysmon (2.0)](../sensors/sysmon_2.0) | | [Sysmon (2.0)](../sensors/sysmon_2.0) | | [Sysmon (2.0)](../sensors/sysmon_2.0)<br />[Sysmon (3.1)](../sensors/sysmon_3.1)<br />[Sysmon (3.2)](../sensors/sysmon_3.2) | | | | | | | | | | | | | | |
+| **timestomp** | | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) | |  [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | | | | | | | | | | | | | |
 | **write** | | | | | | | | | | | | | | | | | | | | | | | | | |
 | **acl_modify** | | | | | | | | | | | | | | | | | | | | | | | | | |

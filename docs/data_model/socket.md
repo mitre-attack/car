@@ -31,6 +31,6 @@ Socket events are low-level events that may or may not result in a flow. Socket 
 
 | | **family** | **image_path** | **local_address** | **local_path** | **local_port** | **pid** | **protocol** | **remote_address** | **remote_port** | **success** |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **bind** | | | | | | | | | |
-| **listen** | | | | | | | | | | 
+| **bind** | osquery | | osquery | osquery | osquery | osquery | osquery | osquery | osquery |
+| **listen** | osquery | | osquery | osquery | osquery | osquery | osquery | osquery | osquery |
 | **close** | | | | | | | | | | 

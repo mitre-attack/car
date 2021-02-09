@@ -33,7 +33,7 @@ The registry is a system-defined database in which applications and system compo
 
 | | **data** | **fqdn** | **hostname** | **hive** | **key** | **image_path** | **new_content** | **pid** | **type** | **user** | **value** |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| **add** | | | | | | | | | | | |
-| **key_edit** | | | | | | | | | | | |
-| **remove** | | | | | | | | | | | |
-| **value_edit** | | | | | | | | | | | |
+| **add** | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) |
+| **key_edit** | | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | | |
+| **remove** | | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) |
+| **value_edit** | | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) |
