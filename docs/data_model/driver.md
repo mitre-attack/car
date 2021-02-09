@@ -31,5 +31,5 @@ signer|The name of the organization which signed the driver.|`Microsoft Corporat
 
 | | **base_address** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **module_name** | **pid** | **sha1_hash** | **sha256_hash** | **signature_valid** | **signer** |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| **load** | | [Sysmon](../sensors/sysmon_2.0)) | [Sysmon](../sensors/sysmon_2.0) | [Sysmon](../sensors/sysmon_2.0) | | | [Sysmon](../sensors/sysmon_2.0) | | [Sysmon](../sensors/sysmon_2.0) | [Sysmon](../sensors/sysmon_2.0) | [Sysmon](../sensors/sysmon_2.0) | [Sysmon](../sensors/sysmon_2.0) |
+| **load** | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) |
 | **unload**| | | | | | | | | | | |
