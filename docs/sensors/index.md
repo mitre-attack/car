@@ -8,5 +8,5 @@ CAR currently has a limited number of sensors mapped to the CAR [Data Model](../
 * [Autoruns](autoruns)
 * [Sysmon (10.4)](sysmon_10.4)
 * [Sysmon (11.0)](sysmon_11.0)
-* [Sysmon (11.0)](sysmon_13.0)
+* [Sysmon (13.0)](sysmon_13.0)
 * [OSQuery (4.1.2)](osquery_4.1.2)
