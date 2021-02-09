@@ -11,7 +11,7 @@ contributors:
   - Sebastian Damaye
 id: CAR-2020-02-002
 description: |-
-  Cyber actors frequently escalate to the SYSTEM account after gaining entry to a Windows host, to enable them to carry out various attacks more effectively. Tools such as Meterpreter, Cobalt Strike, and Empire carry out automated steps to "Get System", which is the same as switching over to the System user account. Most of these tools utilize multiple techniques to try and attain SYSTEM: in the first technique, they create a named pipe and connects an instance of cmd.exe to it, which allows them to impersonate the security context of cmd.exe, which is SYSTEM. In the second technique, a malicious DLL is injected into a process that is running as SYSTEM; the injected DLL steals the SYSTEM token and applies it where necessary to escalate privileges. This analytic looks for both of these techniques. 
+  Cyber actors frequently escalate to the SYSTEM account after gaining entry to a Windows host, to enable them to carry out various attacks more effectively. Tools such as Meterpreter, Cobalt Strike, and Empire carry out automated steps to "Get System", which is the same as switching over to the System user account. Most of these tools utilize multiple techniques to try and attain SYSTEM: in the first technique, they create a named pipe and connects an instance of cmd.exe to it, which allows them to impersonate the security context of cmd.exe, which is SYSTEM. In the second technique, a malicious DLL is injected into a process that is running as SYSTEM; the injected DLL steals the SYSTEM token and applies it where necessary to escalate privileges. This analytic looks for both of these techniques.  
   - technique: T1548
     tactics:
       - TA0004
@@ -29,22 +29,23 @@ implementations:
     description: This is a pseudocode representation of the below splunk search.
     code: |- 
       processes = search Process:Create
-      net_processes = filter processes where (
-        (parent_exe="services.exe" exe="cmd.exe" command_line="*echo*\pipe\*") OR (exe="rundll32.exe" command_line="*,a /p*"
-        command_line="*net* user*" OR
-        command_line="*net* group*" OR
-        command_line="*net* localgroup*" OR
-        command_line="*get-localgroup*" OR
-        command_line="*get-ADPrincipalGroupMembership*" )
-      output net_processes
+      suspicious_processes = filter processes where (
+          (parent_exe="services.exe" exe="cmd.exe" command_line="*echo*\pipe\*") OR (exe="rundll32.exe" command_line="*,a /p:*") )
+      services = search Service:Create
+      suspicious_services = filter services where (
+          (command_line="*cmd.exe*echo*\\pipe\\*" OR command_line="*\%COMSPEC\%*echo*\\pipe\\*")
+      output suspicious_services, suspicious_processes
     data_model: CAR native
     type: Pseudocode
   - name: Splunk Search - net.exe instances
     description: Look for instances of net.exe
     code: |- 
-      (index=__your_sysmon_index__ EventCode=1) Image="C:\\Windows\\System32\\net.exe" AND (CommandLine="* user*" OR CommandLine="* group*" OR CommandLine="* localgroup*" OR CommandLine="*get-localgroup*" OR CommandLine="*get-ADPrincipalGroupMembership*")
+      ((index=__your_sysmon_index__ EventCode=1) ((ParentImage="C:\\Windows\\System32\\services.exe Image="C:\\Windows\\System32\\cmd.exe" CommandLine="*echo*\\pipe\\*") OR (Image="C:\\Windows\\System32\\rundll32.exe" CommandLine="*,a /p:*"))) OR
+      ((index=__your_windows_event_logs__ EventCode=4697) (Service_File_Name="*cmd.exe*echo*\\pipe\\*" OR Service_File_Name="*\%COMSPEC\%*echo*\\pipe\\*") )
     data_model: Sysmon native
     type: Splunk
 data_model_references:
   - process/create/exe
+  - process/create/parent_exe
   - process/create/command_line
+  - service/create/command_line
