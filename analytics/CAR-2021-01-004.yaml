@@ -25,7 +25,7 @@ implementations:
   description:  This query looks for processes spawned by spoolsv.exe or connhost.exe externally, thus alerting us of potentially malicious activity.
 
   code: |-
-    index=* EventCode=1 (spoolsv.exe Image=*spoolsv.exe*) OR (connhost.exe Image=*connhost.exe*) ParentImage = "*cmd.exe*" |table _time host Image ProcessId ParentImage ParentProcessId
+    (index=your_sysmon_index EventCode=1) (Image=C:\Windows\System32\spoolsv.exe* OR Image=C:\Windows\System32\conhost.exe) ParentImage = "C:\Windows\System32\cmd.exe"
   data_model: Sysmon native
   type: Splunk
 data_model_references:
