@@ -31,6 +31,7 @@ Socket events are low-level events that may or may not result in a flow. Socket 
 
 | | **family** | **image_path** | **local_address** | **local_path** | **local_port** | **pid** | **protocol** | **remote_address** | **remote_port** | **success** |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **bind** | osquery | os_query | osquery | | osquery | osquery | osquery | osquery | osquery | |
-| **listen** | osquery | osquery | osquery | | osquery | osquery| osquery | osquery | osquery | |
-| **close** | osquery | osquery | osquery | | osquery | osquery| osquery | osquery | osquery | |
+| **bind** | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | |
+| **listen** | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | |
+| **close** | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | o[osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | |
+

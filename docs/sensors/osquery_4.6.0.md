@@ -1,9 +1,9 @@
 ---
-title: "osquery (4.1.2)"
+title: "osquery (4.6.0)"
 ---
 
 - Manufacturer: osquery project
-- Version: 4.1.2
+- Version: 4.6.0
 - Website: https://osquery.io/
 
 
@@ -26,12 +26,12 @@ osquery exposes an operating system as a high-performance relational database. T
 | | `company` | `content` | `creation_time` | `file_extension` | `file_gid` | `file_group` | `file_name` | `file_path` | `file_uid` | `file_user` | `fqdn` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `acl_modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓| | | |✓|✓| | | | |✓| |✓| | |✓|✓| |✓|✓| | | |✓|
-| `delete` |  | |✓| | | |✓|✓| | | | |✓| |✓| | |✓|✓| |✓|✓| | | |✓|
-| `modify` |  | |✓| | | |✓|✓| | | | |✓| |✓| | |✓|✓| |✓|✓| | | |✓|
+| `create` |  | |✓|✓|✓| |✓|✓|✓| | | |✓| |✓| |✓|✓|✓| |✓|✓| | |✓|✓|
+| `delete` |  | |✓|✓|✓| |✓|✓|✓| | | |✓| |✓| |✓|✓|✓| |✓|✓| | |✓|✓|
+| `modify` |  | |✓|✓|✓| |✓|✓|✓| | | |✓| |✓| |✓|✓|✓| |✓|✓| | | |✓|
 | `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `timestomp` |  | |✓| | | |✓|✓| | | | |✓| |✓| | |✓|✓| |✓|✓| | | |✓|
-| `write` |  | |✓| | | |✓|✓| | | | |✓| |✓| | |✓|✓| |✓|✓| | | |✓|
+| `timestomp` |  | |✓|✓|✓| |✓|✓|✓| | | |✓| |✓| |✓|✓|✓| |✓|✓| | | |✓|
+| `write` |  | |✓|✓|✓| |✓|✓|✓| | | |✓| |✓| |✓|✓|✓| |✓|✓| | | |✓|
 
 ### [flow](../data_model/flow)
 
@@ -46,7 +46,7 @@ osquery exposes an operating system as a high-performance relational database. T
 | | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `user` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓|✓| |✓| | | |✓| |✓| | | | |✓|✓|✓|✓| | | | | | | |✓|
+| `create` |  | |✓|✓|✓|✓| | | |✓| |✓| | | | |✓|✓|✓|✓|✓| | | | | | | |
 | `terminate` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 
 
