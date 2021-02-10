@@ -55,7 +55,7 @@ Compare the data model's use in analytics that map to [ATT&CK](https://attack.mi
 
 | | **base_address** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **module_name** | **module_path** | **pid** | **sha1_hash** | **sha256_hash** | **signature_valid** | **signer** | **tid** |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **load** | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) | [Sysmon (2.0)]( ../sensors/sysmon_2.0)  | [Sysmon (2.0)]( ../sensors/sysmon_2.0)  | [Sysmon (2.0)]( ../sensors/sysmon_2.0) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) | [Sysmon (2.0)]( ../sensors/sysmon_2.0)  | [Sysmon (2.0)]( ../sensors/sysmon_2.0) | | | |
+| **load** | | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13)  | [Sysmon]( ../sensors/sysmon_13)  | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13)  | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) |
 | **unload** | | | | | | | | | | | | | |
 
 ## [process](process)
