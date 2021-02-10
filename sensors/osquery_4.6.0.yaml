@@ -10,10 +10,14 @@ mappings:
     notes: 'Mapped to the process_file_events, file, and file_events tables.'
     fields:
       - creation_time
+      - file_extension
+      - file_gid
       - file_name
       - file_path
+      - file_uid
       - image_path
       - md5_hash
+      - mode
       - pid
       - ppid
       - sha1_hash
@@ -26,10 +30,14 @@ mappings:
     notes: 'Mapped to the process_file_events, file, and file_events tables.'
     fields:
       - creation_time
+      - file_extension
+      - file_gid
       - file_name
       - file_path
+      - file_uid
       - image_path
       - md5_hash
+      - mode
       - pid
       - ppid
       - sha1_hash
@@ -41,10 +49,14 @@ mappings:
     notes: 'Mapped to the process_file_events, file, and file_events tables.'
     fields:
       - creation_time
+      - file_extension
+      - file_gid
       - file_name
       - file_path
+      - file_uid
       - image_path
       - md5_hash
+      - mode
       - pid
       - ppid
       - sha1_hash
@@ -55,10 +67,14 @@ mappings:
     notes: 'Mapped to the process_file_events, file, and file_events tables.'
     fields:
       - creation_time
+      - file_extension
+      - file_gid
       - file_name
       - file_path
+      - file_uid
       - image_path
       - md5_hash
+      - mode
       - pid
       - ppid
       - sha1_hash
@@ -69,10 +85,14 @@ mappings:
     notes: 'Mapped to the process_file_events, file, and file_events tables.'
     fields:
       - creation_time
+      - file_extension
+      - file_gid
       - file_name
       - file_path
+      - file_uid
       - image_path
       - md5_hash
+      - mode
       - pid
       - ppid
       - sha1_hash
@@ -109,6 +129,7 @@ mappings:
     notes: 'Mapped to the process_events, file, and hash tables.'
     fields:
       - command_line
+      - env_vars
       - exe
       - image_path
       - md5_hash
@@ -116,7 +137,7 @@ mappings:
       - ppid
       - sha1_hash
       - sha256_hash
-      - user
+      - uid
       - current_working_directory
   - object: driver
     action: load

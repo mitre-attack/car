@@ -49,12 +49,12 @@ A resource for storing information available to a computer program.
 
 ## Coverage Map
 
-| | **company** | **content** | **creation_time** | **file_name** | **file_path** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **pid** | **ppid** | **previous_creation_time** | **sha1_hash** | **sha256_hash** | **signer** | **user** | **file_uid** | **file_gid** | **file_group** | **file_user** | **file_extension** | **link_target** | **mime_type** | **mode** | **signature_valid** |
-| ---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **create** | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | | | | | | | | | | | | | | | | |
-| **delete** | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| **modify** | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | | | | | | | | | | | | | | | | |
+| | **company** | **content** | **creation_time** | **file_extension** | **file_gid** | **file_group** | **file_name** | **file_path** | **file_uid** | **file_user** | **fqdn** | **hostname** | **image_path** | **link_target** | **md5_hash** | **mime_type** | **mode** | **pid** | **ppid** | **previous_creation_time** | **sha1_hash** | **sha256_hash** | **signature_valid** | **signer** | **uid** | **user** | 
+| ---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **create** | [Autoruns](../sensors/autoruns)< /br>[Sysmon](../sensors/sysmon_13) | | [Autoruns](../sensors/autoruns)< /br>[Sysmon](../sensors/sysmon_13) | | | | [Autoruns](../sensors/autoruns) | [Sysmon](../sensors/sysmon_13) | | | [Autoruns](../sensors/autoruns)< /br>[Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns) | [Sysmon](../sensors/sysmon_13) | | [Autoruns](../sensors/autoruns) | | | [Sysmon](../sensors/sysmon_13) | | | | | | [Sysmon](../sensors/sysmon_13) | |
+| **delete** | | | | | | | | | | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | | | | [Sysmon](../sensors/sysmon_13) | | | | | | | [Sysmon](../sensors/sysmon_13) | |
+| **modify** | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | | | | [Autoruns](../sensors/autoruns) | | | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | | [Autoruns](../sensors/autoruns) | | | | | | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | |
 | **read** | | | | | | | | | | | | | | | | | | | | | | | | | |
-| **timestomp** | | | [Sysmon (2.0)](../sensors/sysmon_2.0) | [Sysmon (2.0)](../sensors/sysmon_2.0) | | | [Sysmon (2.0)](../sensors/sysmon_2.0) | |  [Sysmon (2.0)](../sensors/sysmon_2.0) | | [Sysmon (2.0)](../sensors/sysmon_2.0) | | [Sysmon (2.0)](../sensors/sysmon_2.0)<br />[Sysmon (3.1)](../sensors/sysmon_3.1)<br />[Sysmon (3.2)](../sensors/sysmon_3.2) | | | | | | | | | | | | | | |
+| **timestomp** | | | [Sysmon](../sensors/sysmon_13) | | | | | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | | | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | | | | [Sysmon](../sensors/sysmon_13) | |
 | **write** | | | | | | | | | | | | | | | | | | | | | | | | | |
 | **acl_modify** | | | | | | | | | | | | | | | | | | | | | | | | | |

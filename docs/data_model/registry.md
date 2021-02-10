@@ -33,7 +33,8 @@ The registry is a system-defined database in which applications and system compo
 
 | | **data** | **fqdn** | **hostname** | **hive** | **key** | **image_path** | **new_content** | **pid** | **type** | **user** | **value** |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| **add** | | | | | | | | | | | |
-| **key_edit** | | | | | | | | | | | |
-| **remove** | | | | | | | | | | | |
-| **value_edit** | | | | | | | | | | | |
+| **add** | [Autoruns](../sensors/autoruns)< /br>[Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns)< /br>[Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns)< /br>[Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns)| [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns) | 
+| 
+**key_edit** | [Autoruns](../sensors/autoruns)< /br>[Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns)< /br>[Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns)< /br>[Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns)< /br>[Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns) | [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns)< /br>[Sysmon](../sensors/sysmon_13) |
+| **remove** | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | 
+| **value_edit** | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns)| [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns)| | [Autoruns](../sensors/autoruns) | 

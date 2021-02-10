@@ -50,6 +50,7 @@ mappings:
       - sha256_hash
       - md5_hash
       - signer
+      - signature_valid
   - object: flow
     action: start
     notes: 'Mapped to Event 3: SYSMON_NETWORK_CONNECT, which may not be 100% semantically identical to the start of a network flow.'
@@ -64,6 +65,7 @@ mappings:
       - dest_fqdn
       - dest_port
       - start_time
+      - uid
       - user
       - fqdn
   - object: module
@@ -75,9 +77,10 @@ mappings:
       - image_path
       - module_path
       - sha1_hash
-      - sha256_hash
       - md5_hash
       - signer
+      - signature_valid
+      - tid
   - object: process
     action: create
     notes: 'Mapped to Event 1: SYSMON_CREATE_PROCESS.'
@@ -88,14 +91,13 @@ mappings:
       - command_line
       - current_working_directory
       - image_path
-      - sha1_hash
       - sha256_hash
       - md5_hash
       - integrity_level
       - parent_command_line
       - parent_image_path
       - user
-      - signer
+      - sid
   - object: process
     action: terminate
     notes: 'Mapped to Event 5: SYSMON_PROCESS_TERMINATE.'
@@ -107,6 +109,7 @@ mappings:
     action: add
     notes: 'Mapped to Event 12: SYSMON_REG_KEY (captures both adding & deleting).'
     fields:
+      - data
       - fqdn
       - pid
       - image_path
@@ -114,14 +117,26 @@ mappings:
       - key
       - value
   - object: registry
-    action: edit
-    notes: 'Mapped to Event 13: SYSMON_REG_SETVALUE.'
+    action: key_edit
+    notes: 'Mapped to Event 14.'
     fields:
       - fqdn
       - pid
       - image_path
       - hive
       - key
+      - new_content
+      - value
+  - object: registry
+    action: value_edit
+    notes: 'Mapped to Event 13.'
+    fields:
+      - fqdn
+      - pid
+      - image_path
+      - hive
+      - key
+      - new_content
       - value
   - object: registry
     action: remove
@@ -144,5 +159,6 @@ mappings:
       - start_function
       - start_address
       - start_module
+      - uid
 other_coverage:
   - 'CAR-2019-04-004: Credential Dumping via Mimikatz'      
