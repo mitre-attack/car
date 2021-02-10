@@ -90,7 +90,7 @@ Compare the data model's use in analytics that map to [ATT&CK](https://attack.mi
 
 | | **family** | **image_path** | **local_address** | **local_path** | **local_port** | **pid** | **protocol** | **remote_address** | **remote_port** | **success** |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **bind** | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | |
+| **bind** | [osquery](../sensors/osquery_4.6.0.md) | [osquery](../sensors/osquery_4.6.0.md) | [osquery](../sensors/osquery_4.6.0) | | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | |
 | **listen** | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | |
 | **close** | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | o[osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | |
 
