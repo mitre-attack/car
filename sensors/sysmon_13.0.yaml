@@ -1,6 +1,6 @@
 ---
 sensor_name: Sysmon
-sensor_version: 10.4
+sensor_version: 13.0
 sensor_developer: Microsoft
 sensor_url: 'https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon'
 sensor_description: 'Sysmon is a freely available program from Microsoft that is provided as part of the Windows Sysinternals suite of tools. It collects system information while running in the background and supports storing it in the Windows Event Log.'
@@ -12,8 +12,10 @@ mappings:
       - fqdn
       - image_path
       - pid
-      - file_name
+      - file_path
       - creation_time
+      - image_path
+      - guid
   - object: file
     action: timestomp
     notes: 'Mapped to Event 2: SYSMON_FILE_TIME.'
@@ -21,9 +23,23 @@ mappings:
       - fqdn
       - image_path
       - pid
-      - file_name
+      - file_path
       - creation_time
       - previous_creation_time
+      - guid
+  - object: file
+    action: delete
+    notes: 'Mapped to Event 23: SYSMON_FILE_DELETE.'
+    fields:
+      - fqdn
+      - image_path
+      - pid
+      - file_path
+      - user
+      - sha1_hash
+      - sha256_hash
+      - md5_hash
+      - uid
   - object: driver
     action: load
     notes: 'Mapped to Event 6: SYSMON_DRIVER_LOAD.'
@@ -34,6 +50,7 @@ mappings:
       - sha256_hash
       - md5_hash
       - signer
+      - signature_valid
   - object: flow
     action: start
     notes: 'Mapped to Event 3: SYSMON_NETWORK_CONNECT, which may not be 100% semantically identical to the start of a network flow.'
@@ -42,13 +59,15 @@ mappings:
       - pid
       - protocol
       - src_ip
-      - src_hostname
+      - src_fqdn
       - src_port
       - dest_ip
-      - dest_hostname
+      - dest_fqdn
       - dest_port
       - start_time
+      - uid
       - user
+      - fqdn
   - object: module
     action: load
     notes: 'Mapped to Event 7: SYSMON_IMAGE_LOAD.'
@@ -58,9 +77,10 @@ mappings:
       - image_path
       - module_path
       - sha1_hash
-      - sha256_hash
       - md5_hash
       - signer
+      - signature_valid
+      - tid
   - object: process
     action: create
     notes: 'Mapped to Event 1: SYSMON_CREATE_PROCESS.'
@@ -71,13 +91,13 @@ mappings:
       - command_line
       - current_working_directory
       - image_path
-      - sha1_hash
       - sha256_hash
       - md5_hash
       - integrity_level
       - parent_command_line
       - parent_image_path
       - user
+      - sid
   - object: process
     action: terminate
     notes: 'Mapped to Event 5: SYSMON_PROCESS_TERMINATE.'
@@ -89,6 +109,7 @@ mappings:
     action: add
     notes: 'Mapped to Event 12: SYSMON_REG_KEY (captures both adding & deleting).'
     fields:
+      - data
       - fqdn
       - pid
       - image_path
@@ -96,14 +117,26 @@ mappings:
       - key
       - value
   - object: registry
-    action: edit
-    notes: 'Mapped to Event 13: SYSMON_REG_SETVALUE.'
+    action: key_edit
+    notes: 'Mapped to Event 14.'
     fields:
       - fqdn
       - pid
       - image_path
       - hive
       - key
+      - new_content
+      - value
+  - object: registry
+    action: value_edit
+    notes: 'Mapped to Event 13.'
+    fields:
+      - fqdn
+      - pid
+      - image_path
+      - hive
+      - key
+      - new_content
       - value
   - object: registry
     action: remove
@@ -126,5 +159,6 @@ mappings:
       - start_function
       - start_address
       - start_module
+      - uid
 other_coverage:
   - 'CAR-2019-04-004: Credential Dumping via Mimikatz'      
