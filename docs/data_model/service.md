@@ -33,8 +33,8 @@ Services, or a service application, can be started automatically at system boot,
 
 | | **command_line** | **exe** | **fqdn** | **hostname** | **image_path** | **name** | **pid** | **ppid** | **uid** | **user** |
 |---|---|---|---|---|---|---|---|---|---|---|
-| **create** | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | | | | |
-| **delete** | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | | | | |
+| **create** |  [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98) | | | | | |
+| **delete** |  [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98) | | | | | |
 | **pause** | | | | | | | | | | |
 | **start** | | | | | | | | | | | 
 | **stop** | | | | | | | | | | |

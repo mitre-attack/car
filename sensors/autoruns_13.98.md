@@ -1,0 +1,96 @@
+---
+sensor_name: Autoruns
+sensor_version: 13.98
+sensor_developer: Microsoft
+sensor_url: 'https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx'
+sensor_description: 'Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Winlogon notifications, auto-start services, etc.at is provided as part of the Windows Sysinternals suite of tools. It collects system information while running in the background and supports storing it in the Windows Event Log.'
+mappings:
+  - object: file
+    action: create
+    notes: 'None'
+    fields:
+      - company
+      - creation_time
+      - file_name
+      - file_path
+      - fqdn
+      - hostname
+      - image_path
+      - md5_hash
+      - sha1_hash
+      - sha256_hash
+      - signer
+  - object: file
+    action: modify
+    notes: 'None'
+    fields:
+      - company
+      - creation_time
+      - file_name
+      - file_path
+      - fqdn
+      - hostname
+      - image_path
+      - md5_hash
+      - sha1_hash
+      - sha256_hash
+      - signer
+  - object: registry
+    action: add
+    notes: 'None'
+    fields:
+      - data
+      - fqdn
+      - hostname
+      - hive
+      - key
+      - type
+      - value
+  - object: registry
+    action: key_edit
+    notes: 'None'
+    fields:
+      - data
+      - fqdn
+      - hostname
+      - hive
+      - key
+      - new_content
+      - type
+      - value
+  - object: registry
+    action: value_edit
+    notes: 'None'
+    fields:
+      - data
+      - fqdn
+      - hostname
+      - hive
+      - key
+      - new_content
+      - type
+      - value
+  - object: service
+    action: create
+    notes: 'None'
+    fields:
+      - command_line
+      - exe
+      - fqdn
+      - hostname
+      - image_path
+      - name
+      - value
+  - object: service
+    action: delete
+    notes: 'None'
+    fields:
+      - command_line
+      - exe
+      - fqdn
+      - hostname
+      - image_path
+      - name
+      - value
+other_coverage:
+  - 'CAR-2013-01-002: Autorun Differences'      

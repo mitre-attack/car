@@ -1,6 +1,6 @@
 ---
 sensor_name: Sysmon
-sensor_version: 13.0
+sensor_version: 13
 sensor_developer: Microsoft
 sensor_url: 'https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon'
 sensor_description: 'Sysmon is a freely available program from Microsoft that is provided as part of the Windows Sysinternals suite of tools. It collects system information while running in the background and supports storing it in the Windows Event Log.'
