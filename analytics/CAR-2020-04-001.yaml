@@ -61,6 +61,11 @@ implementations:
     description: A [Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_creation/win_shadow_copies_deletion.yml) version of the CAR pseudocode for both vssadmin.exe and wmic.exe approaches.
     type: Sigma
     data_model: Sigma native
+  - description: LogPoint version of the above pseudocodes.
+    code: |-
+      norm_id=WindowsSysmon event_id=1 ((image="C:\Windows\*\wmic.exe" command="*shadowcopy delete*") OR (image="C:\Windows\System32\vssadmin.exe" command="*delete shadows*"))
+    type: LogPoint
+    data_mode: LogPoint native
 data_model_references:
   - process/create/image_path
   - process/create/command_line

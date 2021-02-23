@@ -29,6 +29,11 @@ implementations:
       debuggers = filter process where (command_line match "$.* .*(sethc{{pipe}}utilman{{pipe}}osk{{pipe}}narrator{{pipe}}magnify)\.exe")
       output debuggers
     type: pseudocode
+  - description: LogPoint version of the above pseudocode.
+    code: |-
+      norm_id=WindowsSysmon event_id=1 command IN ["$* *sethc.exe", "$* *utilman.exe", "$* *osk.exe", "$* *narrator.exe", "$* *magnify.exe"]
+    type: LogPoint
+    data_model: LogPoint native
 data_model_references:
   - process/create/command_line
   - process/create/exe

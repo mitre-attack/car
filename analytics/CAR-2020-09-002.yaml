@@ -37,6 +37,12 @@ implementations:
     index=__your_sysmon_index__ (EventCode=12 OR EventCode=13 OR EventCode=14) TargetObject="*\\Software\\Classes\\CLSID\\*"
   data_model: Sysmon native
   type: Splunk
+- name: LogPoint search - COM object registry entry modification
+  description: This LogPoint search looks for any registry keys that were created, deleted, or renamed, as well as any registry values that were set or renamed under the Windows COM Object registry key.
+  code: |- 
+    norm_id=WindowsSysmon event_id IN [12, 13, 14] target_object="*\Software\Classes\CLSID\*"
+  data_model: LogPoint native
+  type: LogPoint
 data_model_references:
   - registry/add/key
   - registry/remove/key

@@ -46,6 +46,12 @@ implementations:
       | table  _time hostname user SourceImage GrantedAccess
     type: splunk
     data_model: Sysmon native
+  - description: LogPoint version of the above pseudocode.
+    code: |-
+      norm_id=WindowsSysmon event_id=10 image="C:\Windows\system32\lsass.exe" (access="0x1410" OR access="0x1010" OR access="0x1438" OR access="0x143a" OR access="0x1418") call_trace="C:\windows\SYSTEM32\ntdll.dll+*|C:\windows\System32\KERNELBASE.dll+20edd|UNKNOWN(*)" 
+      | fields log_ts, host, user, source_image, access
+    type: LogPoint
+    data_mode: LogPoint native 
 references:
   - Credit to [Cyb3rWard0g](https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/blob/master/playbooks/windows/06_credential_access/credential_dumping_T1003/credentials_from_memory/mimikatz_logonpasswords.md), dim0x69 (blog.3or.de), and Mark Russinovich for providing much of the information used to construct these analytics.
   
