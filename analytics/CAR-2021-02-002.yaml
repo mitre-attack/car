@@ -1,5 +1,5 @@
 ---
-title: Get System
+title: Get System Elevation
 submission_date: 2021/01/15
 information_domain: Host
 platforms:
@@ -10,7 +10,7 @@ analytic_types:
   - TTP
 contributors:
   - Sebastien Damaye
-id: CAR-2020-02-002
+id: CAR-2021-02-002
 description: |-
   Cyber actors frequently escalate to the SYSTEM account after gaining entry to a Windows host, to enable them to carry out various attacks more effectively. Tools such as Meterpreter, Cobalt Strike, and Empire carry out automated steps to "Get System", which is the same as switching over to the System user account. Most of these tools utilize multiple techniques to try and attain SYSTEM: in the first technique, they create a named pipe and connects an instance of cmd.exe to it, which allows them to impersonate the security context of cmd.exe, which is SYSTEM. In the second technique, a malicious DLL is injected into a process that is running as SYSTEM; the injected DLL steals the SYSTEM token and applies it where necessary to escalate privileges. This analytic looks for both of these techniques.  
 coverage: 
