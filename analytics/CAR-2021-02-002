@@ -1,3 +1,4 @@
+---
 title: Get System
 submission_date: 2021/01/15
 information_domain: Host
@@ -8,24 +9,18 @@ subtypes:
 analytic_types:
   - TTP
 contributors:
-  - Sebastian Damaye
+  - Sebastien Damaye
 id: CAR-2020-02-002
 description: |-
   Cyber actors frequently escalate to the SYSTEM account after gaining entry to a Windows host, to enable them to carry out various attacks more effectively. Tools such as Meterpreter, Cobalt Strike, and Empire carry out automated steps to "Get System", which is the same as switching over to the System user account. Most of these tools utilize multiple techniques to try and attain SYSTEM: in the first technique, they create a named pipe and connects an instance of cmd.exe to it, which allows them to impersonate the security context of cmd.exe, which is SYSTEM. In the second technique, a malicious DLL is injected into a process that is running as SYSTEM; the injected DLL steals the SYSTEM token and applies it where necessary to escalate privileges. This analytic looks for both of these techniques.  
+coverage: 
   - technique: T1548
     tactics:
       - TA0004
       - TA0005
     coverage: Moderate
-  - technique: T1134
-    tactics:
-      - TA0004
-      - TA0005
-    subtechniques:
-      - T1134.001
-    coverage: Moderate
 implementations:
-  - name: Pseudocode - getsystem
+  - name: Pseudocode - GetSystem
     description: This is a pseudocode representation of the below splunk search.
     code: |- 
       processes = search Process:Create
@@ -37,11 +32,17 @@ implementations:
       output suspicious_services, suspicious_processes
     data_model: CAR native
     type: Pseudocode
-  - name: Splunk Search - net.exe instances
-    description: Look for instances of net.exe
+  - name: Splunk Search - Meterpreter and Cobalt Strike
+    description: Look for instances GetSystem elevation performed by Meterpreter or Cobalt Strike
     code: |- 
-      ((index=__your_sysmon_index__ EventCode=1) ((ParentImage="C:\\Windows\\System32\\services.exe Image="C:\\Windows\\System32\\cmd.exe" CommandLine="*echo*\\pipe\\*") OR (Image="C:\\Windows\\System32\\rundll32.exe" CommandLine="*,a /p:*"))) OR
-      ((index=__your_windows_event_logs__ EventCode=4697) (Service_File_Name="*cmd.exe*echo*\\pipe\\*" OR Service_File_Name="*\%COMSPEC\%*echo*\\pipe\\*") )
+      (index=__your_sysmon_index__ ParentImage="C:\\Windows\\System32\\services.exe" Image="C:\\Windows\\System32\\cmd.exe" (CommandLine="*echo*" AND CommandLine="*\\pipe\\*"))
+      OR (index=__your_sysmon_index__ Image="C:\\Windows\\System32\\rundll32.exe" CommandLine="*,a /p:*")
+    data_model: Sysmon native
+    type: Splunk
+  - name: Splunk Search - Empire and PoshC2
+    description: Look for instances GetSystem elevation performed by Empire or PoshC2
+    code: |- 
+      index=__your_sysmon_index__ (Image="C:\\Windows\\System32\\cmd.exe" OR CommandLine="*%COMSPEC%*") (CommandLine="*echo*" AND CommandLine="*\pipe\*")
     data_model: Sysmon native
     type: Splunk
 data_model_references:
