@@ -16,17 +16,14 @@ description: |-
 coverage:
   - technique: T1490
     coverage: Low
-    subtechniques:
-      - None
     tactics:
       - TA0040
 implementations:
-- name: Splunk query for Detecting Shadow Copy Deletion via vssadmin.exe
-
-  description:  This query looks for the specific use of vssadmin in correlation to a deleting function, alerting us of attempts to delete shadow copies that possibly indicate malicious activity.
-  code: |-
-    index = wineventlogs EventType=4688 CommandLine:"delete" OriginalFileName:"VSSADMIN.EXE"
-  data_model: Sysmon native
-  type: Splunk
+  - name: Splunk query for Detecting Shadow Copy Deletion via vssadmin.exe
+    description:  This query looks for the specific use of vssadmin in correlation to a deleting function, alerting us of attempts to delete shadow copies that possibly indicate malicious activity.
+    code: |-
+      index = wineventlogs EventType=4688 CommandLine:"delete" OriginalFileName:"VSSADMIN.EXE"
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - process/create/command_line
