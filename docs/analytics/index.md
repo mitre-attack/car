@@ -61,7 +61,6 @@ permalink: /analytics/
 |[CAR-2019-07-002: Lsass Process Dump via Procdump](CAR-2019-07-002)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul>{:/}|Eql, Logpoint, Pseudocode, Sigma, Splunk|Windows|
 |[CAR-2019-08-001: Credential Dumping via Windows Task Manager](CAR-2019-08-001)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul>{:/}|Eql, Logpoint, Pseudocode, Splunk|Windows|
 |[CAR-2019-08-002: Active Directory Dumping via NTDSUtil](CAR-2019-08-002)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul>{:/}|Eql, Logpoint, Pseudocode, Splunk|Windows|
-|[CAR-2020-02-002: Get System](CAR-2020-02-002)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1548/">Abuse Elevation Control Mechanism</a></li></ul>{:/}|Pseudocode, Splunk|Windows|
 |[CAR-2020-04-001: Shadow Copy Deletion](CAR-2020-04-001)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1490/">Inhibit System Recovery</a></li></ul>{:/}|Eql, Logpoint, Pseudocode, Sigma, Splunk|Windows|
 |[CAR-2020-05-001: MiniDump of LSASS](CAR-2020-05-001)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul>{:/}|Logpoint, Splunk|Windows|
 |[CAR-2020-05-003: Rare LolBAS Command Lines](CAR-2020-05-003)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1012/">Query Registry</a></li><li><a href="https://attack.mitre.org/techniques/T1112/">Modify Registry</a></li><li><a href="https://attack.mitre.org/techniques/T1547/">Boot or Logon Autostart Execution</a></li><li><a href="https://attack.mitre.org/techniques/T1574/">Hijack Execution Flow</a></li></ul>{:/}|Pseudocode, Splunk|Windows|
@@ -89,6 +88,7 @@ permalink: /analytics/
 |[CAR-2021-01-004: Unusual Child Process For Spoolsv.Exe Or Connhost.Exe](CAR-2021-01-004)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1068/">Exploitation for Privilege Escalation</a></li></ul>{:/}|Splunk|Windows|
 |[CAR-2021-01-009: Detecting Shadow Copy Deletion via vssadmin.exe](CAR-2021-01-009)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1490/">Inhibit System Recovery</a></li></ul>{:/}|Splunk|Windows|
 |[CAR-2021-02-001: Webshell-Indicative Process Tree](CAR-2021-02-001)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1505/">Server Software Component</a></li></ul>{:/}|Pseudocode, Splunk|Windows|
+|[CAR-2021-02-002: Get System Elevation](CAR-2021-02-002)|{::nomarkdown}<ul><li><a href="https://attack.mitre.org/techniques/T1548/">Abuse Elevation Control Mechanism</a></li></ul>{:/}|Pseudocode, Splunk|Windows|
 
 ---
 ## Analytic List (by technique/sub-technique coverage)

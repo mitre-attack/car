@@ -102,7 +102,6 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
  - [CAR-2019-07-002: Lsass Process Dump via Procdump](../analytics/CAR-2019-07-002)
  - [CAR-2019-08-001: Credential Dumping via Windows Task Manager](../analytics/CAR-2019-08-001)
  - [CAR-2019-08-002: Active Directory Dumping via NTDSUtil](../analytics/CAR-2019-08-002)
- - [CAR-2020-02-002: Get System](../analytics/CAR-2020-02-002)
  - [CAR-2020-04-001: Shadow Copy Deletion](../analytics/CAR-2020-04-001)
  - [CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities](../analytics/CAR-2020-08-001)
  - [CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS](../analytics/CAR-2020-08-002)
@@ -123,3 +122,4 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
  - [CAR-2021-01-003: Clearing Windows logs with wevtutil](../analytics/CAR-2021-01-003)
  - [CAR-2021-01-004: Unusual Child Process For Spoolsv.Exe Or Connhost.Exe](../analytics/CAR-2021-01-004)
  - [CAR-2021-01-009: Detecting Shadow Copy Deletion via vssadmin.exe](../analytics/CAR-2021-01-009)
+ - [CAR-2021-02-002: Get System Elevation](../analytics/CAR-2021-02-002)
