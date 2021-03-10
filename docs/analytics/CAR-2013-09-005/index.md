@@ -49,5 +49,17 @@ output new_services
 
 
 
+#### Logpoint, LogPoint native
+
+LogPoint version of the above sigma rule.
+
+
+```
+norm_id=WinServer event_id=7045
+| chart count() as cnt by file
+| search cnt < 5
+```
+
+
 
 

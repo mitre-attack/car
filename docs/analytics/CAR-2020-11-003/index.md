@@ -53,5 +53,16 @@ Search for instances of mavinject.exe or mavinject32.exe
 ```
 
 
+#### LogPoint Search - mavinject (Logpoint, LogPoint native)
+
+
+Search for instances of mavinject.exe or mavinject32.exe
+
+
+```
+norm_id=WindowsSysmon event_id=1 (image="C:\Windows\SysWOW64\mavinject.exe" OR image="C:\Windows\System32\mavinject.exe" OR command="*\INJECTRUNNING*")
+```
+
+
 
 

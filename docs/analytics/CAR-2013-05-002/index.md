@@ -67,6 +67,16 @@ _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=re
 
 
 
+#### Logpoint, LogPoint native
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 image IN ["*:\RECYCLER\*", "*:\SystemVolumeInformation\*", "C:\Windows\Tasks\*", "C:\Windows\System32\debug\*"]
+```
+
+
 
 ### Unit Tests
 

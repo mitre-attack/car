@@ -51,5 +51,15 @@ process where subtype.create and
 ```
 
 
+#### Logpoint, LogPoint native
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 image="*\wsmprovhost.exe" parent_image="*\svchost.exe"
+```
+
+
 
 

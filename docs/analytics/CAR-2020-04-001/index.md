@@ -106,5 +106,15 @@ A [Sigma](https://github.com/Neo23x0/sigma/blob/master/rules/windows/process_cre
 
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocodes.
+
+
+```
+norm_id=WindowsSysmon event_id=1 ((image="C:\Windows\*\wmic.exe" command="*shadowcopy delete*") OR (image="C:\Windows\System32\vssadmin.exe" command="*delete shadows*"))
+```
+
+
 
 

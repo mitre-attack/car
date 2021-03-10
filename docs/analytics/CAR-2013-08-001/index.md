@@ -50,6 +50,16 @@ _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=schtas
 ```
 
 
+#### Logpoint, LogPoint native
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 image="*\schtasks.exe" command IN ["*/create*", "*/run*", "*/query*", "*/delete*", "*/change*", "*/end*"]
+```
+
+
 
 ### Unit Tests
 

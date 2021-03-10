@@ -94,6 +94,16 @@ process where subtype.create and
 ```
 
 
+#### Logpoint, LogPoint native
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 (image in ["*\hostname.exe", "*\ipconfig.exe", "*\net.exe", "*\quser.exe", "*\qwinsta.exe", "*\systeminfo.exe", "*\tasklist.exe", "*\whoami.exe"] OR (image="*\sc.exe" command IN ["* query *", "* qc *"))
+```
+
+
 
 
 

@@ -66,5 +66,15 @@ process where subtype.create and
 ```
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 image="C:\\Windows\\*\\wmic.exe" command="* process call create *" command="* /node:*"
+```
+
+
 
 

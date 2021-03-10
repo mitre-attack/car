@@ -42,6 +42,16 @@ output debuggers
 ```
 
 
+#### Logpoint, LogPoint native
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 command IN ["$* *sethc.exe", "$* *utilman.exe", "$* *osk.exe", "$* *narrator.exe", "$* *magnify.exe"]
+```
+
+
 
 ### Unit Tests
 

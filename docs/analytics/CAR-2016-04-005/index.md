@@ -40,5 +40,15 @@ Look in the system logs for remote logons using RDP.
 
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WinServer event_id=4624 package="Negotiate" log_level="INFO" logon_type=10
+```
+
+
 
 

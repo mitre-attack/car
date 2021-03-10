@@ -48,6 +48,16 @@ _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=re
 ```
 
 
+#### Logpoint, LogPoint native
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 image="*\cmd.exe"
+```
+
+
 
 ### Unit Tests
 

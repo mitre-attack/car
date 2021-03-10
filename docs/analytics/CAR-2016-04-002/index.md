@@ -46,6 +46,16 @@ When an eventlog is cleared, a new event is created that alerts that the eventlo
 
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WinServer ((channel="Security" event_id IN [1100,1102]) OR (channel="System" event_id=104))
+```
+
+
 
 ### Unit Tests
 

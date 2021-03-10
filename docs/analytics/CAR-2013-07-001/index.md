@@ -101,6 +101,16 @@ _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=re
 ```
 
 
+#### Logpoint, LogPoint native
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 (command="* -R * -pw*" OR command="* -pw * *@*" OR command="*sekurlsa*" OR command="* -hp *" OR command="* a *")
+```
+
+
 
 ### Unit Tests
 

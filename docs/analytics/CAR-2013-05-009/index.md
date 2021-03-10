@@ -78,5 +78,17 @@ _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 group count_uni
 ```
 
 
+#### Logpoint, LogPoint native
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1
+| chart distinct_count(hash) as cnt by image
+| search cnt > 1
+```
+
+
 
 

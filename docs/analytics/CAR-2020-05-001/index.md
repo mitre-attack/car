@@ -38,5 +38,16 @@ index=__your_sysmon_index__ EventCode=10 TargetImage="C:\\windows\\system32\\lsa
 ```
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocodes.
+
+
+```
+norm_id=WindowsSysmon event_id=10 image="C:\Windows\system32\lsass.exe" call_trace IN ["*dbghelp.dll*", "*dbgcore.dll*"]
+| fields log_ts host source_process_id source_image
+```
+
+
 
 

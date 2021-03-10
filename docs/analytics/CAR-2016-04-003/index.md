@@ -36,6 +36,16 @@ param2 == "stopped"
 ```
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WinServer channel="System" event_id=7036 param1 in ["Windows Defender", "Windows Firewall"] param2="stopped"
+```
+
+
 
 ### Unit Tests
 

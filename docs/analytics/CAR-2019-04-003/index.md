@@ -68,6 +68,16 @@ output squiblydoo_processes
 ```
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 image="*\regsvr32.exe" command="*scrobj.dll"
+```
+
+
 
 ### Unit Tests
 

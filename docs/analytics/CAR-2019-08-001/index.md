@@ -67,6 +67,16 @@ file where file_name == "lsass*.dmp" and process_name == "taskmgr.exe"
 ```
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=11 file="*lsass*.dmp" source_image="C:\Windows\*\taskmgr.exe"
+```
+
+
 
 ### Unit Tests
 

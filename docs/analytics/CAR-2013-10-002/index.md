@@ -49,6 +49,16 @@ output remote_thread
 ```
 
 
+#### Logpoint, LogPoint native
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=8 start_function IN ["LoadLibraryA", "LoadLibraryW"] -source_image="C:\Path\To\TrustedProgram.exe"
+```
+
+
 
 
 

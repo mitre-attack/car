@@ -51,5 +51,16 @@ looks all instances of hh.exe
 ```
 
 
+#### LogPoint Search - hh.exe (Logpoint, LogPoint native)
+
+
+looks all instances of hh.exe
+
+
+```
+norm_id=WindowsSysmon event_id=1 (image="C:\Windows\syswow64\hh.exe" OR image="C:\Windows\system32\hh.exe")
+```
+
+
 
 

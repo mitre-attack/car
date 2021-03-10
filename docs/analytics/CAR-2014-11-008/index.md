@@ -69,5 +69,15 @@ process where subtype.create and
 ```
 
 
+#### Logpoint, LogPoint native
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 parent_image="C:\Windows\System32\winlogon.exe" parent_image="C:\Windows\System32\cmd.exe"
+```
+
+
 
 

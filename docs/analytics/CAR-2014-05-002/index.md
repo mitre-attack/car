@@ -73,5 +73,15 @@ _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=cmd.ex
 ```
 
 
+#### Logpoint, LogPoint native
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 image="C:\Windows\System32\cmd.exe" parent_image="C:\Windows\System32\services.exe"
+```
+
+
 
 

@@ -54,5 +54,16 @@ index=__your_sysmon_index__ (EventCode=12 OR EventCode=13 OR EventCode=14) Targe
 ```
 
 
+#### LogPoint search - COM object registry entry modification (Logpoint, LogPoint native)
+
+
+This LogPoint search looks for any registry keys that were created, deleted, or renamed, as well as any registry values that were set or renamed under the Windows COM Object registry key.
+
+
+```
+norm_id=WindowsSysmon event_id IN [12, 13, 14] target_object="*\Software\Classes\CLSID\*"
+```
+
+
 
 

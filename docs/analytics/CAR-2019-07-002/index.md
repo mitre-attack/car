@@ -83,6 +83,16 @@ A [Sigma Version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sys
 
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 image="*\procdump*.exe" command="*lsass*"
+```
+
+
 
 ### Unit Tests
 

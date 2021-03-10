@@ -59,5 +59,16 @@ earliest=-d@d latest=now() index=__your_sysmon_data__
 ```
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=10 image="C:\Windows\system32\lsass.exe" (access="0x1410" OR access="0x1010" OR access="0x1438" OR access="0x143a" OR access="0x1418") call_trace="C:\windows\SYSTEM32\ntdll.dll+*|C:\windows\System32\KERNELBASE.dll+20edd|UNKNOWN(*)" 
+| fields log_ts, host, user, source_image, access
+```
+
+
 
 

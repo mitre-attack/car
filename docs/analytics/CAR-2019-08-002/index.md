@@ -67,6 +67,16 @@ file where file_name == "ntds.dit" and process_name == "ntdsutil.exe"
 ```
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=11 file="*ntds.dit" source_image="*ntdsutil.exe"
+```
+
+
 
 ### Unit Tests
 
