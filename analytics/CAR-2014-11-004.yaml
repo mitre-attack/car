@@ -38,6 +38,11 @@ implementations:
         (process_name == "wsmprovhost.exe" and parent_process_name == "svchost.exe")    
     type: EQL
     data_model: EQL native
+  - description: LogPoint version of the above pseudocode.
+    code: |-
+      norm_id=WindowsSysmon event_id=1 image="*\wsmprovhost.exe" parent_image="*\svchost.exe"
+    type: LogPoint
+    data_model: LogPoint native
 data_model_references:
   - process/create/exe
   - process/create/parent_exe

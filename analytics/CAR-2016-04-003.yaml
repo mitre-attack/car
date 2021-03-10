@@ -29,6 +29,11 @@ implementations:
       param1 in ["Windows Defender", "Windows Firewall"] AND
       param2 == "stopped"
     type: pseudocode
+  - description: LogPoint version of the above pseudocode.
+    code: |-
+      norm_id=WinServer channel="System" event_id=7036 param1 in ["Windows Defender", "Windows Firewall"] param2="stopped"
+    type: LogPoint
+    data_mode: LogPoint native
 unit_tests:
   - configurations: 
       - Windows 7

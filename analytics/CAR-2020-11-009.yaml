@@ -34,5 +34,11 @@ implementations:
       (index=__your_sysmon_index__ EventCode=1) (Image="C:\\Windows\\syswow64\\hh.exe" OR Image="C:\\Windows\\system32\\hh.exe")
     data_model: Sysmon native
     type: Splunk
+  - name: LogPoint Search - hh.exe
+    description: looks all instances of hh.exe
+    code: |- 
+      norm_id=WindowsSysmon event_id=1 (image="C:\Windows\syswow64\hh.exe" OR image="C:\Windows\system32\hh.exe")
+    data_model: LogPoint native
+    type: LogPoint
 data_model_references:
   - process/create/exe

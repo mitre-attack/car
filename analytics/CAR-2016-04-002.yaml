@@ -32,6 +32,11 @@ implementations:
   - name: Sigma rule (Security log)
     description: '[Sigma version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/builtin/win_susp_security_eventlog_cleared.yml) of the above pseudocode, focusing only on the Security log.'
     type: Sigma
+  - description: LogPoint version of the above pseudocode.
+    code: |-
+      norm_id=WinServer ((channel="Security" event_id IN [1100,1102]) OR (channel="System" event_id=104))
+    type: LogPoint
+    data_mode: LogPoint native
 unit_tests:
   - configurations:
     - Windows 7
