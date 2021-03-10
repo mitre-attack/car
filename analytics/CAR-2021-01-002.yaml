@@ -19,11 +19,11 @@ coverage:
     tactics:
       - TA0002
 implementations:
-- name: Splunk search - Identifying possible malware activity via unusually long command line strings
-  description:  This is a Splunk query that determines the average length of a command per user and searches for a command string that is multiple times longer than the average length
-  code: |-
-    index=* sourcetype="xmlwineventlog" EventCode=4688  |eval cmd_len=len(CommandLine) | eventstats avg(cmd_len) as avg by host| stats max(cmd_len) as maxlen, values(avg) as avgperhost by host, CommandLine | where maxlen > 10*avgperhost
-  data_model: Sysmon native
-  type: Splunk
+  - name: Splunk search - Identifying possible malware activity via unusually long command line strings
+    description:  This is a Splunk query that determines the average length of a command per user and searches for a command string that is multiple times longer than the average length
+    code: |-
+      index=* sourcetype="xmlwineventlog" EventCode=4688  |eval cmd_len=len(CommandLine) | eventstats avg(cmd_len) as avg by host| stats max(cmd_len) as maxlen, values(avg) as avgperhost by host, CommandLine | where maxlen > 10*avgperhost
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - process/create/command_line
