@@ -53,13 +53,21 @@ implementations:
       output suspicious_processes
     data_model: CAR native
     type: Pseudocode
-  - name: Splunk Search 
   - name: Splunk Search - Empire and PoshC2
     description: Look for instances GetSystem elevation performed by Empire or PoshC2
     code: |- 
       index=__your_sysmon_index__ (Image="C:\\Windows\\System32\\cmd.exe" OR CommandLine="*%COMSPEC%*") (CommandLine="*echo*" AND CommandLine="*\pipe\*")
     data_model: Sysmon native
     type: Splunk
+unit_tests:
+  - description: GetSystem in Meterpreter & Cobalt Strike’s Beacon
+    commands:
+      - 'cmd.exe /c echo ba80ae80df9 > \\.\pipe\66bee3'
+      - 'cmd.exe /c echo fvxens > \\.\pipe\fvxens'
+      - 'rundll32.exe C:\Users\user\AppData\Local\Temp\fvxens.dll,a /p:fvxens'
+  - description: GetSystem in Empire & PoshC2
+    commands:
+      - 'cmd.exe /C start %COMSPEC% /C `"timeout /t 3 >nul&&echo TestSVC > \\.\pipe\TestSVC'
 data_model_references:
   - process/create/exe
   - process/create/parent_exe
