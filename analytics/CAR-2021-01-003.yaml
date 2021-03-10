@@ -13,6 +13,7 @@ contributors:
 id: CAR-2021-01-003
 description: |-
   In an attempt to clear traces after compromising a machine, threat actors often try to clear Windows Event logs. This is often done using “wevtutil”, a legitimate tool provided by Microsoft. This action interferes with event collection and notification, and may lead to a security event going undetected, thereby potentially leading to further compromise of the network.
+coverage:
   - technique: T1070
     coverage: Low
     subtechniques:
@@ -20,11 +21,11 @@ description: |-
     tactics:
       - TA0005
 implementations:
-- name: Splunk search - Detecting log clearing with wevtutil
-  description:  This search query looks for an instance where wevtutil is invoked along with a command that may cause the system to remove Windows Event logs.
-  code: |-
-    index=__sysmon__index__ sourcetype= __your__windows__sysmon__sourcetype EventCode=1 Image=*wevtutil* CommandLine=*cl* (CommandLine=*System* OR CommandLine=*Security* OR CommandLine=*Setup* OR CommandLine=*Application*)
-  data_model: Sysmon native
-  type: Splunk
+  - name: Splunk search - Detecting log clearing with wevtutil
+    description:  This search query looks for an instance where wevtutil is invoked along with a command that may cause the system to remove Windows Event logs.
+    code: |-
+      index=__sysmon__index__ sourcetype= __your__windows__sysmon__sourcetype EventCode=1 Image=*wevtutil* CommandLine=*cl* (CommandLine=*System* OR CommandLine=*Security* OR CommandLine=*Setup* OR CommandLine=*Application*)
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - process/create/command_line
