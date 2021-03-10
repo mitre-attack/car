@@ -17,8 +17,6 @@ description: |-
 coverage:
   - technique: T1046
     coverage: Moderate
-    subtechniques:
-      - No sub-techniques
     tactics:
       - TA0007
 implementations:
