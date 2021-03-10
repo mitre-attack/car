@@ -20,14 +20,14 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 Information about the latest CAR updates and changes can be found in this section.
 
 ### January-Feburary 2020
-* New analytics added - special thanks to all of the external submissions that we've received!
-  * [CAR-2021-01-001: Identifying Port Scanning Activity](/analytics/CAR-2020-01-001)
-  * [CAR-2021-01-002: Unusually Long Command Line Strings](/analytics/CAR-2020-01-002)
-  * [CAR-2021-01-003: Clearing Windows Logs with Wevtutil](/analytics/CAR-2020-01-003)
-  * [CAR-2021-01-004: Unusual Child Process For Spoolsv.Exe Or Connhost.Exe](/analytics/CAR-2020-01-004)
-  * [CAR-2021-01-009: Detecting Shadow Copy Deletion via Vssadmin.exe](/analytics/CAR-2020-01-009)
-  * [CAR-2021-02-001: Webshell-Indicative Process Tree](/analytics/CAR-2020-02-001)
-  * [CAR-2021-02-002: Get System Elevation](/analytics/CAR-2020-02-002)
+* New analytics added - special thanks to all of the submissions that we've received!
+  * [CAR-2021-01-001: Identifying Port Scanning Activity](/analytics/CAR-2021-01-001)
+  * [CAR-2021-01-002: Unusually Long Command Line Strings](/analytics/CAR-2021-01-002)
+  * [CAR-2021-01-003: Clearing Windows Logs with Wevtutil](/analytics/CAR-2021-01-003)
+  * [CAR-2021-01-004: Unusual Child Process For Spoolsv.Exe Or Connhost.Exe](/analytics/CAR-2021-01-004)
+  * [CAR-2021-01-009: Detecting Shadow Copy Deletion via Vssadmin.exe](/analytics/CAR-2021-01-009)
+  * [CAR-2021-02-001: Webshell-Indicative Process Tree](/analytics/CAR-2021-02-001)
+  * [CAR-2021-02-002: Get System Elevation](/analytics/CAR-2021-02-002)
 
 ### November 2020
 * Data Model update! We're excited to roll out these changes, and we think you will like the new capabilities.
