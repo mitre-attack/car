@@ -1,10 +1,10 @@
 ---
-title: "CAR-2021-01-002: Unusually long command line strings"
+title: "CAR-2021-01-002: Unusually Long Command Line Strings"
 layout: analytic
 submission_date: 2020/11/27
 information_domain: Host
 subtypes: Process
-analytic_type: TTP
+analytic_type: Anomaly
 contributors: Cyware Labs
 applicable_platforms: Windows
 ---

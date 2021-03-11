@@ -1,5 +1,5 @@
 ---
-title: "CAR-2021-01-009: Detecting Shadow Copy Deletion via vssadmin.exe"
+title: "CAR-2021-01-009: Detecting Shadow Copy Deletion via Vssadmin.exe"
 layout: analytic
 submission_date: 2020/12/11
 information_domain: Host
@@ -34,7 +34,7 @@ This query looks for the specific use of vssadmin in correlation to a deleting f
 
 
 ```
-index = wineventlogs EventType=4688 CommandLine:"delete" OriginalFileName:"VSSADMIN.EXE"
+index=__your_win_event_log_index__ EventType=4688 CommandLine:"delete" OriginalFileName:"VSSADMIN.EXE"
 ```
 
 

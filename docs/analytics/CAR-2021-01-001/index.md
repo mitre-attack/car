@@ -1,10 +1,10 @@
 ---
-title: "CAR-2021-01-001: Identifying Port scanning activity"
+title: "CAR-2021-01-001: Identifying Port Scanning Activity"
 layout: analytic
 submission_date: 2020/10/23
 information_domain: Network
 subtypes: Flow
-analytic_type: TTP
+analytic_type: Situational Awareness
 contributors: Cyware Labs
 applicable_platforms: Windows, Linux
 ---

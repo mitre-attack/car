@@ -1,10 +1,10 @@
 ---
-title: "CAR-2021-01-004: Unusual Child Process For Spoolsv.Exe Or Connhost.Exe"
+title: "CAR-2021-01-004: Unusual Child Process for Spoolsv.Exe or Connhost.Exe"
 layout: analytic
 submission_date: 2020/12/03
 information_domain: Host
 subtypes: Process
-analytic_type: TTP
+analytic_type: Anomaly
 contributors: Cyware Labs
 applicable_platforms: Windows
 ---
@@ -34,7 +34,7 @@ This query looks for processes spawned by spoolsv.exe or connhost.exe externally
 
 
 ```
-(index=your_sysmon_index EventCode=1) (Image=C:\\Windows\\System32\\spoolsv.exe* OR Image=C:\\Windows\\System32\\conhost.exe) ParentImage = "C:\\Windows\\System32\\cmd.exe"
+(index=__your_sysmon_index__ EventCode=1) (Image=C:\\Windows\\System32\\spoolsv.exe* OR Image=C:\\Windows\\System32\\conhost.exe) ParentImage = "C:\\Windows\\System32\\cmd.exe"
 ```
 
 

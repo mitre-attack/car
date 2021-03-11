@@ -1,5 +1,5 @@
 ---
-title: "CAR-2021-01-003: Clearing Windows logs with wevtutil"
+title: "CAR-2021-01-003: Clearing Windows Logs with Wevtutil"
 layout: analytic
 submission_date: 2020/12/02
 information_domain: Host
@@ -34,7 +34,7 @@ This search query looks for an instance where wevtutil is invoked along with a c
 
 
 ```
-index=__sysmon__index__ sourcetype= __your__windows__sysmon__sourcetype EventCode=1 Image=*wevtutil* CommandLine=*cl* (CommandLine=*System* OR CommandLine=*Security* OR CommandLine=*Setup* OR CommandLine=*Application*)
+index=__your_sysmon_index__ sourcetype= __your__windows__sysmon__sourcetype EventCode=1 Image=*wevtutil* CommandLine=*cl* (CommandLine=*System* OR CommandLine=*Security* OR CommandLine=*Setup* OR CommandLine=*Application*)
 ```
 
 
