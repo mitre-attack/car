@@ -19,7 +19,7 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
-### January-Feburary 2020
+### January-Feburary 2021
 * New analytics added - special thanks to all of the submissions that we've received!
   * [CAR-2021-01-001: Identifying Port Scanning Activity](/analytics/CAR-2021-01-001)
   * [CAR-2021-01-002: Unusually Long Command Line Strings](/analytics/CAR-2021-01-002)
