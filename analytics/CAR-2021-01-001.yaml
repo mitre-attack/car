@@ -1,5 +1,5 @@
 ---
-title: Identifying Port scanning activity
+title: Identifying Port Scanning Activity
 submission_date: 2020/10/23
 information_domain: 'Network'
 platforms:
@@ -8,7 +8,7 @@ platforms:
 subtypes:
   - Flow
 analytic_types:
-  - TTP
+  - Situational Awareness
 contributors:
   - Cyware Labs
 id: CAR-2021-01-001

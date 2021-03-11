@@ -1,5 +1,5 @@
 ---
-title: Clearing Windows logs with wevtutil
+title: Clearing Windows Logs with Wevtutil
 submission_date: 2020/12/02
 information_domain: 'Host'
 platforms:
@@ -24,7 +24,7 @@ implementations:
   - name: Splunk search - Detecting log clearing with wevtutil
     description:  This search query looks for an instance where wevtutil is invoked along with a command that may cause the system to remove Windows Event logs.
     code: |-
-      index=__sysmon__index__ sourcetype= __your__windows__sysmon__sourcetype EventCode=1 Image=*wevtutil* CommandLine=*cl* (CommandLine=*System* OR CommandLine=*Security* OR CommandLine=*Setup* OR CommandLine=*Application*)
+      index=__your_sysmon_index__ sourcetype= __your__windows__sysmon__sourcetype EventCode=1 Image=*wevtutil* CommandLine=*cl* (CommandLine=*System* OR CommandLine=*Security* OR CommandLine=*Setup* OR CommandLine=*Application*)
     data_model: Sysmon native
     type: Splunk
 data_model_references:

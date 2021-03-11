@@ -1,5 +1,5 @@
 ---
-title: Unusually long command line strings
+title: Unusually Long Command Line Strings
 submission_date: 2020/11/27
 information_domain: 'Host'
 platforms:
@@ -7,7 +7,7 @@ platforms:
 subtypes:
   - Process
 analytic_types:
-  - TTP
+  - Anomaly
 contributors:
   - Cyware Labs
 id: CAR-2021-01-002

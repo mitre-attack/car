@@ -1,5 +1,5 @@
 ---
-title: Detecting Shadow Copy Deletion via vssadmin.exe
+title: Detecting Shadow Copy Deletion via Vssadmin.exe
 submission_date: 2020/12/11
 information_domain: 'Host'
 platforms:
@@ -22,7 +22,7 @@ implementations:
   - name: Splunk query for Detecting Shadow Copy Deletion via vssadmin.exe
     description:  This query looks for the specific use of vssadmin in correlation to a deleting function, alerting us of attempts to delete shadow copies that possibly indicate malicious activity.
     code: |-
-      index = wineventlogs EventType=4688 CommandLine:"delete" OriginalFileName:"VSSADMIN.EXE"
+      index=__your_win_event_log_index__ EventType=4688 CommandLine:"delete" OriginalFileName:"VSSADMIN.EXE"
     data_model: Sysmon native
     type: Splunk
 data_model_references:
