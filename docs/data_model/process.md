@@ -40,8 +40,8 @@ A process is a running program on a computer.
 |signer|The company that signed the file.|`True`|
 |signature_valid|Boolean indicator of whether signature is current and not revoked.|`FooCorp`|
 |target_address|Specific address range which is accessed by another process.|`08048000-0804c000`|
-|target_guid|Global Unique Identifier for the target process (only for process access events).||
-|target_pid|ID of the target process (only for process access events).||
+|target_guid|Globally Unique Identifier for the target process (only for process access events).|`{A23EAE89-BD56-5903-0000-0010E9D95EFC}`|
+|target_pid|ID of the target process (only for process access events).|`1338`|
 |target_name|Name of the process that is accessed.|`C:\Windows\System32\winlogon.exe`|
 |user|The user token that process was created with. May be a local, domain or SYSTEM user. Formatted with "\<DOMAIN>\\\<USER>". Individual threads in the process may gain more privilege or change tokens, so the active token in any thread is not necessarily the one the process was created under.|`HOST1\LOCALUSER`|
 
