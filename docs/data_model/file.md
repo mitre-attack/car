@@ -23,13 +23,13 @@ A resource for storing information available to a computer program.
 |company|The name of the organization listed in the file located at `image_path`.
 |content|The contents of the file.|`Hello World`|
 |creation_time|The creation time of the file as described in UTC and including the date.|`05/14/2015 12:47:06`|
-|file_extension|The file extnsion of the file.|`docx`|
+|extension|The file extension of the file.|`docx`|
 |file_name|The name of the file.|`MyWordDoc.docx`|
 |file_path|The full path to the file.|`C:\users\fakeuser\documents\MyFile.docx`|
-|file_gid|The group ID of the file|`801`|
-|file_group|The group name of the file|`adam`|
-|file_uid|The user ID or SID of the owner of the file.|`501`|
-|file_user|The username of the owner of the file.|`adam`|
+|gid|The group ID of the file|`801`|
+|group|The group owner of the file|`admin`|
+|owner_uid|The user ID or SID of the owner of the file.|`501`|
+|owner|The username of the owner of the file.|`adam`|
 |fqdn|The fully qualified domain name of the host. Contains the hostname appended with the domain.|`HOST1.EXAMPLE_DOMAIN.COM`|
 |hostname|The hostname of the host, without the domain.|`HOST1`|
 |image_path|The file system location of the executable that is associated with the `pid` that generated this event.|`C:\Windows\system32\notepad.exe`|
