@@ -11,7 +11,6 @@ title: "Sysmon (10.4)"
 Sysmon is a freely available program from Microsoft that is provided as part of the Windows Sysinternals suite of tools. It collects system information while running in the background and supports storing it in the Windows Event Log.
 
 
-
 ## Data Model Coverage
 
 ### [driver](../data_model/driver)
@@ -66,9 +65,6 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `remote_create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
 | `suspend` |  | | | | | | | | | | | | | | |
 | `terminate` |  | | | | | | | | | | | | | | |
-
-
-
 
 ## Analytic Coverage
 
