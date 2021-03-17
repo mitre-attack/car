@@ -25,7 +25,7 @@ A resource for storing information available to a computer program.
 |creation_time|The creation time of the file as described in UTC and including the date.|`05/14/2015 12:47:06`|
 |extension|The file extension of the file.|`docx`|
 |file_name|The name of the file.|`MyWordDoc.docx`|
-|file_path|The full path to the file.|`C:\users\fakeuser\documents\MyFile.docx`|
+|file_path|The full path to the file on the file system.|`C:\users\fakeuser\documents\MyFile.docx`|
 |gid|The group ID of the file|`801`|
 |group|The group owner of the file|`admin`|
 |owner_uid|The user ID or SID of the owner of the file.|`501`|
