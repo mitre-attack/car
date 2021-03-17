@@ -9,25 +9,25 @@ The registry is a system-defined database in which applications and system compo
 |Action|Description|
 |---|---|
 |add|The event corresponding to the act of adding a registry key, hive, type, or value.|
-|key_edit|The event corresponding to the act of editing the name of an existing registry key.|
+|name_edit|The event corresponding to the act of editing the name of an existing registry key or value.|
 |remove|The event corresponding to the act of deleting an existing registry key, hive, type, or value.|
-|value_edit|The event corresponding to the act of editing the content of an existing registry value.|
+|value_edit|The event corresponding to the act of editing the contents of an existing registry value.|
 
 ## Fields
 
 |Field|Description|Example|
 |---|---|---|
-|data|The content, typically a text string.|`%SystemRoot%\system32\svchost.exe -k rpcss`|
-|fqdn|The fully qualified domain name for the host on which the registry access took place.| |
+|fqdn|The fully qualified domain name for the host on which the registry access took place.|`host1.example.net`|
 |hostname|The hostname of the host, without the domain.|`HOST1`|
 |hive|The logical group of keys, subkeys, and values in the registry.|`HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE`
-|key|The registry key of the event. Similar to a folder in a traditional file system,|`HKLM\SYSTEM\CurrentControlSet\services\RpcSs`|
-|image_path|Inherited from the [process](https://car.mitre.org/wiki/Data_Model/process) that made the registry access.| |
-|new_content|The data within the new value, or the new name of a key, after an edit event.|`\%SystemRoot%\system32\svchost.exe, HKLM\SYSTEM\CurrentControlSet\services\RpcSs`|
-|pid|Inherited from the [process](https://car.mitre.org/wiki/Data_Model/process) that made the registry access.| |
-|type|Registry value types indicate the type of data being stored. Types include binary data, 32 bit numbers, strings, etc.|`REG_SZ`,`REG_MULTI_SZ`,`REG_DWORD`,`REG_BINARY`,`REG_QWORD`,`REG_EXPAND_SZ`|
+|key|The registry key specified in the event. Similar to a folder in a traditional file system,|`HKLM\SYSTEM\CurrentControlSet\services\RpcSs`|
+|image_path|Inherited from the [process](https://car.mitre.org/wiki/Data_Model/process) that made the registry access.|`C:\Windows\System32\cmd.exe`|
+|new_content|The data within the new value, or the new name of a key or value, after an edit event.|`\%SystemRoot%\system32\svchost.exe, HKLM\SYSTEM\CurrentControlSet\services\RpcSs`|
+|pid|Inherited from the [process](https://car.mitre.org/wiki/Data_Model/process) that made the registry access.|`1337`|
 |user|The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as "\<DOMAIN>\\\<USER>". Because threads are allowed to impersonate users, this may be different than the user context of the process.| |
-|value|The descriptive name for the data being stored.|`InstalledVersion`|
+|value|The descriptive name for the data being stored in the key.|`InstalledVersion`|
+|value_data|The contents of the value, typically a text string.|`%SystemRoot%\system32\svchost.exe -k rpcss`|
+|value_type|The type of data being stored in the value. Types include binary data, 32 bit numbers, strings, etc.|`REG_SZ`,`REG_MULTI_SZ`,`REG_DWORD`,`REG_BINARY`,`REG_QWORD`,`REG_EXPAND_SZ`|
 
 ## Coverage Map
 
