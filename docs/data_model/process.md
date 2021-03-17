@@ -17,7 +17,7 @@ A process is a running program on a computer.
 |Field|Description|Example|
 |---|---|---|
 |access_level|Permissions level at which the target process is accessed.|`0x40`|
-|call_trace|stack trace showing context of process open/access call.||
+|call_trace|The stack trace showing the context of a process open/access call.|`C:\Windows\SYSTEM32\ntdll.dll+a5594|C:\Windows\system32\KERNELBASE.dll+1e865`|
 |command_line|The command line string contains all arguments passed to the process upon execution.|`example arg1 arg2`, `example.exe`, `C:\path\example.exe /flag1`|
 |current_working_directory|The absolute path to the current working directory of the process.|`c:\windows\system32\`|
 |exe|The basename of the `image_path`.|`example.exe`|
