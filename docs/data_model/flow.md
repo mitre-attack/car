@@ -7,7 +7,7 @@ A sequence of packets from a source computer to a destination, which may be anot
 ## Actions
 
 |Action|Description|
-| ---| ---|
+|---|---|
 |start|The event corresponding to the beginning of collection of flow data in a given time period.
 |end|The event corresponding to the ending of collection of flow data in a given time period.
 |message|A flow message pertains to any event between start and end when content is sent over the connection (may imply TCP). This often implies use of traffic content collected via PCAP or a similar mechanism.
@@ -15,7 +15,7 @@ A sequence of packets from a source computer to a destination, which may be anot
 ## Fields
 
 |Field|Description|Example|
-| ---| ---| ---|
+|---|---|---|
 |application_protocol|Name of the layer 7 protocol contained within the flow.|`HTTP`
 |content|The ASCII printable characters of the flow. This corresponds to content from PCAC data or similar formats.|`GET https://www.google.com/ HTTP/1.1`
 |dest_ip|The destination IP address of the flow.|`192.168.1.5`
@@ -29,7 +29,7 @@ A sequence of packets from a source computer to a destination, which may be anot
 |image_path|The file system path of the process that opened the flow. This will need to be collected from the host.|`C:\path\to\example.exe`
 |in_bytes|Integer value of total number of bytes received.|`13200`
 |out_bytes|Integer value of total number of bytes sent.|`1337`
-|network_direction|Direction of the original packet of the flow initiator, relative to network perimiter.|`in (flow originated outside the network and was directed into it)`
+|network_direction|Direction of the original packet of the flow initiator, relative to network perimeter.|`in (flow originated outside the network and was directed into it)`
 |packet_count|The total packet count seen at time of logging.|`4`
 |pid|The process ID of the process that owns the socket responsible for the flow, represented in decimal notation. This will need to be collected from the host.|`738`
 |ppid|The process ID for the process's parent that owns the socket responsible for the flow, represented in decimal notation. This will need to be collected from the host.|`1860`
