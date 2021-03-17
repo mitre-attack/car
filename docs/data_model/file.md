@@ -42,7 +42,7 @@ A resource for storing information available to a computer program.
 |previous_creation_time|The creation_time associated with the file before it was changed for this file event.|`05/14/2015 12:47:06`|
 |sha1_hash|The SHA1 hash of the contents of the file located at `image_path`.|`2aae6c35c94fcfb415dbe95f408b9ce91ee846ed`|
 |sha256_hash|The SHA256 hash of the contents of the file located at `image_path`.|`68e656b251e67e8358bef8483ab0d51c6619f3e7a1a9f0e75838d41ff368f728`|
-|signer|The company listed on the certificate of the program at `image_path` if that program is signed.|`Microsoft |Corporation`
+|signer|The company listed on the certificate of the program at `image_path` if that program is signed.|`Microsoft Corporation`|
 |signature_valid|Boolean indicator of whether the signature is valid; empty if file is not signed.|`True`|
 |user|The user context in which the thread that caused this event was running. May be a local, domain or SYSTEM user. Formatted as "\<DOMAIN>\\\<USER>". Because threads are allowed to impersonate users, this may be different than the user context of the process.|`HOST1\LOCALUSER`|
 |uid|The user ID or SID for the acting entity.|`S-1-5-18`|
