@@ -2,7 +2,7 @@
 title: "Socket"
 ---
 
-Socket events are low-level events that may or may not result in a flow. Socket listenining events in particular can be helpful in detecting malicious activity.
+Socket events are low-level events that may or may not result in a flow. Socket listening events in particular can be helpful in detecting malicious activity.
 
 ## Actions
 
