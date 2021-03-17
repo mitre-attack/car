@@ -13,6 +13,7 @@ Email events are at the mail server level.
 |deliver|The event corresponding to an email being sent to an end recipient.
 |redirect|The event corresponding to an email being redirected.
 |quarantine|The event corresponding to an email being qurantined for security reasons.
+
 ## Fields
 
 |Field|Description|Example|
