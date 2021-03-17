@@ -23,14 +23,14 @@ A process is a running program on a computer.
 |exe|The basename of the `image_path`.|`example.exe`|
 |env_vars|The environment variables within a process's memory space, as a string.|`SHELL=/bin/zsh`|
 |fqdn|The fully qualified domain name of the host in which the process ran. Contains the hostname appended with the domain.|`HOST1.EXAMPLE_DOMAIN.COM`|
-|guid|Global unique identifier for the initiating process.|`{f81d4fae-7dec-11d0-a765-00a0c91e6bf6}`|
+|guid|Globally unique identifier for the process.|`{f81d4fae-7dec-11d0-a765-00a0c91e6bf6}`|
 |hostname|The hostname of the host, without the domain.|`HOST1`|
 |image_path|The file path of the executable associated with this process. This may act as a pivot to [`file:file_path`](https://car.mitre.org/wiki/Data_Model/file#file_path).|`C:\path\to\example.exe`|
 |integrity_level|The Windows integrity level associated with the process. MUST be one of: low, medium, high, or system.|`high`|
 |md5_hash|The MD5 hash of the contents of the file located at `image_path`. The field is in hex notation, without the 0x prefix.|`5eb63bbbe01eeed093cb22bb8f5acdc3`|
 |parent_command_line|All of the arguments passed to the parent process upon execution.|`c:\\windows\\system32\\dism.exe foo.xml`|
 |parent_exe|The `exe` field of the parent process. This is a substring of `parent_image_path`|`example_parent.exe`|
-|parent_guid|Global unique identifier for the parent of the initiating process.|`{f81d4fae-7dec-11d0-a765-00a0c91e6bf6}`|
+|parent_guid|Globally unique identifier for the parent of the initiating process.|`{f81d4fae-7dec-11d0-a765-00a0c91e6bf6}`|
 |parent_image_path|The `image_path` field of the parent process.|`C:\path\to\example_parent.exe`|
 |pid|The process ID for the process, represented in decimal notation.|`738`|
 |ppid|The process ID for the process's parent, represented in decimal notation. In the parent process, this will be the `pid` field.|`1860`|
