@@ -1,14 +1,16 @@
 ---
-title: "Sysmon (11.0)"
+title: "Sysmon (13)"
 ---
 
 - Manufacturer: Microsoft
-- Version: 11.0
+- Version: 13
 - Website: https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon
 
 
 ## Description
 Sysmon is a freely available program from Microsoft that is provided as part of the Windows Sysinternals suite of tools. It collects system information while running in the background and supports storing it in the Windows Event Log.
+
+
 
 ## Data Model Coverage
 
@@ -16,7 +18,7 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 
 | | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `load` |  |✓| |✓|✓| | |✓|✓| |✓|
+| `load` |  |✓| |✓|✓| | |✓|✓|✓|✓|
 | `unload` |  | | | | | | | | | | |
 
 ### [file](../data_model/file)
@@ -25,7 +27,7 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `acl_modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `create` |  | |✓| | | | |✓| | |✓| |✓| | | | |✓| | | | | | | | |
-| `delete` |  | | | | | | |✓| | |✓| |✓| |✓| | |✓| | |✓|✓| | | |✓|
+| `delete` |  | | | | | | |✓| | |✓| |✓| |✓| | |✓| | |✓|✓| | |✓|✓|
 | `modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `timestomp` |  | |✓| | | | |✓| | |✓| |✓| | | | |✓| |✓| | | | | | |
@@ -37,33 +39,36 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `end` |  | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `message` |  | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `start` |  | |✓| |✓|✓| | |✓| |✓| | | | |✓| | |✓| |✓|✓|✓| | | |✓|
+| `start` |  | |✓| |✓|✓| | |✓| |✓| | | | |✓| | |✓| |✓|✓|✓| | |✓|✓|
 
 ### [process](../data_model/process)
 
 | | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓|✓| | |✓| | |✓|✓|✓|✓| | |✓|✓|✓|✓|✓| | |✓| | | | | |✓|
+| `create` |  | |✓|✓| | |✓| | |✓|✓|✓|✓| | |✓|✓|✓| |✓|✓| | | | | | | |✓|
 | `terminate` |  | | | | | |✓| | |✓| | | | | | |✓| | | | | | | | | | | | |
 
 ### [registry](../data_model/registry)
 
 | | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `add` |  |✓|✓| |✓|✓| |✓| | |✓|
-| `key_edit` |  | | | | | | | | | | |
+| `add` | ✓|✓|✓| |✓|✓| |✓| | |✓|
+| `key_edit` |  |✓|✓| |✓|✓|✓|✓| | |✓|
 | `remove` |  |✓|✓| |✓|✓| |✓| | |✓|
-| `value_edit` |  | | | | | | | | | | |
+| `value_edit` |  |✓|✓| |✓|✓|✓|✓| | |✓|
 
 ### [thread](../data_model/thread)
 
 | | `hostname` | `src_pid` | `src_tid` | `stack_base` | `stack_limit` | `start_address` | `start_function` | `start_module` | `start_module_name` | `tgt_pid` | `tgt_tid` | `uid` | `user` | `user_stack_base` | `user_stack_limit` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
-| `remote_create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
+| `create` | ✓|✓| | | |✓|✓|✓| |✓|✓|✓| | | |
+| `remote_create` | ✓|✓| | | |✓|✓|✓| |✓|✓|✓| | | |
 | `suspend` |  | | | | | | | | | | | | | | |
 | `terminate` |  | | | | | | | | | | | | | | |
+
+
+
 
 ## Analytic Coverage
 
@@ -114,7 +119,3 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
  - [CAR-2020-11-011: Registry Edit from Screensaver](../analytics/CAR-2020-11-011)
  - [CAR-2021-01-001: Identifying Port scanning activity](../analytics/CAR-2021-01-001)
  - [CAR-2021-01-002: Unusually long command line strings](../analytics/CAR-2021-01-002)
- - [CAR-2021-01-003: Clearing Windows logs with wevtutil](../analytics/CAR-2021-01-003)
- - [CAR-2021-01-004: Unusual Child Process For Spoolsv.Exe Or Connhost.Exe](../analytics/CAR-2021-01-004)
- - [CAR-2021-01-009: Detecting Shadow Copy Deletion via vssadmin.exe](../analytics/CAR-2021-01-009)
- - [CAR-2021-02-002: Get System Elevation](../analytics/CAR-2021-02-002)

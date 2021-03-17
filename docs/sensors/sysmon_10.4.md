@@ -11,26 +11,14 @@ title: "Sysmon (10.4)"
 Sysmon is a freely available program from Microsoft that is provided as part of the Windows Sysinternals suite of tools. It collects system information while running in the background and supports storing it in the Windows Event Log.
 
 
-
 ## Data Model Coverage
 
-### [thread](../data_model/thread)
+### [driver](../data_model/driver)
 
-| | `hostname` | `src_pid` | `src_tid` | `stack_base` | `stack_limit` | `start_address` | `start_function` | `start_module` | `start_module_name` | `tgt_pid` | `tgt_tid` | `uid` | `user` | `user_stack_base` | `user_stack_limit` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
-| `remote_create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
-| `suspend` |  | | | | | | | | | | | | | | |
-| `terminate` |  | | | | | | | | | | | | | | |
-
-### [registry](../data_model/registry)
-
-| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
+| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `add` |  |✓|✓| |✓|✓| |✓| | |✓|
-| `key_edit` |  | | | | | | | | | | |
-| `remove` |  |✓|✓| |✓|✓| |✓| | |✓|
-| `value_edit` |  | | | | | | | | | | |
+| `load` |  |✓| |✓|✓| | |✓|✓| |✓|
+| `unload` |  | | | | | | | | | | |
 
 ### [file](../data_model/file)
 
@@ -43,13 +31,6 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `timestomp` |  | |✓| | | |✓| | | |✓| |✓| | | | |✓| |✓| | | | | | |
 | `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-
-### [driver](../data_model/driver)
-
-| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` |
-|---|---|---|---|---|---|---|---|---|---|---|
-| `load` |  |✓| |✓|✓| | |✓|✓| |✓|
-| `unload` |  | | | | | | | | | | |
 
 ### [flow](../data_model/flow)
 
@@ -67,8 +48,23 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `create` |  | |✓|✓| | |✓| | |✓|✓|✓|✓| | |✓|✓|✓|✓|✓| | | | | | | | |✓|
 | `terminate` |  | | | | | |✓| | |✓| | | | | | |✓| | | | | | | | | | | | |
 
+### [registry](../data_model/registry)
 
+| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `add` |  |✓|✓| |✓|✓| |✓| | |✓|
+| `key_edit` |  | | | | | | | | | | |
+| `remove` |  |✓|✓| |✓|✓| |✓| | |✓|
+| `value_edit` |  | | | | | | | | | | |
 
+### [thread](../data_model/thread)
+
+| | `hostname` | `src_pid` | `src_tid` | `stack_base` | `stack_limit` | `start_address` | `start_function` | `start_module` | `start_module_name` | `tgt_pid` | `tgt_tid` | `uid` | `user` | `user_stack_base` | `user_stack_limit` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
+| `remote_create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
+| `suspend` |  | | | | | | | | | | | | | | |
+| `terminate` |  | | | | | | | | | | | | | | |
 
 ## Analytic Coverage
 

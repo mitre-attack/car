@@ -6,13 +6,17 @@ title: "osquery (4.1.2)"
 - Version: 4.1.2
 - Website: https://osquery.io/
 
-
 ## Description
 osquery exposes an operating system as a high-performance relational database. This allows you to write SQL-based queries to explore operating system data.
 
-
-
 ## Data Model Coverage
+
+### [driver](../data_model/driver)
+
+| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `load` |  | | |✓|✓|✓| |✓|✓| | |
+| `unload` |  | | | | | | | | | | |
 
 ### [file](../data_model/file)
 
@@ -25,13 +29,6 @@ osquery exposes an operating system as a high-performance relational database. T
 | `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `timestomp` |  | |✓| | | |✓|✓| | | | |✓| |✓| | |✓|✓| |✓|✓| | | |✓|
 | `write` |  | |✓| | | |✓|✓| | | | |✓| |✓| | |✓|✓| |✓|✓| | | |✓|
-
-### [driver](../data_model/driver)
-
-| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` |
-|---|---|---|---|---|---|---|---|---|---|---|
-| `load` |  | | |✓|✓|✓| |✓|✓| | |
-| `unload` |  | | | | | | | | | | |
 
 ### [flow](../data_model/flow)
 
@@ -113,4 +110,3 @@ osquery exposes an operating system as a high-performance relational database. T
  - [CAR-2021-01-009: Detecting Shadow Copy Deletion via vssadmin.exe](../analytics/CAR-2021-01-009)
  - [CAR-2021-02-001: Webshell-Indicative Process Tree](../analytics/CAR-2021-02-001)
  - [CAR-2021-02-002: Get System Elevation](../analytics/CAR-2021-02-002)
- - [N/A](../analytics/N/A)

@@ -6,85 +6,108 @@ The **Data Model**, strongly inspired by [CybOX](https://cyboxproject.github.io/
 
 Compare the data model's use in analytics that map to [ATT&CK](https://attack.mitre.org/).
 
+## [authentication](authentication)
+
+| | **ad_domain** | **app_name** | **auth_service** | **auth_target** | **decision_reason** | **fqdn** | **hostname** | **method** | **response_time** | **target_ad_domain** | **target_uid** | **target_user** | **target_user_role** | **target_user_type** | **uid** | **user** | **user_agent** | **user_role** | **user_type |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **failure** | | | | | | | | | | | | | | | | | | | |
+| **error** | | | | | | | | | | | | | | | | | | | |
+| **success** | | | | | | | | | | | | | | | | | | | |
+
 ## [driver](driver)
 
-| | **base_address** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **module_name** | **sha1_hash** | **sha256_hash** | **signer** |
-|---|---|---|---|---|---|---|---|---|---|
-| **load** | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | |
-| **unload** | | | | | | | | | |
+| | **base_address** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **module_name** | **pid** | **sha1_hash** | **sha256_hash** | **signature_valid** | **signer** |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| **load** | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | |
+| **unload**| | | | | | | | | | | |
+
+## [email](email)
+
+| | **action_reason** | **attachment_mime_type** | **attachment_name** | **attachment_size** | **date** | **dest_address** | **dest_ip** | **dest_port** | **from** | **message_body** | **message_links** | **message_type** | **return_address** | **server_relay** | **smtp_uid** | **src_address** | **src_domain** | **src_ip** | **src_port** | **subject** | **to** |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|--|--|
+| **block** | | | | | | | | | | | | | | | | | | | | | |
+| **delete** | | | | | | | | | | | | | | | | | | | | | |
+| **deliver** | | | | | | | | | | | | | | | | | | | | | |
+| **redirect** | | | | | | | | | | | | | | | | | | | | | |
+| **quarantine** | | | | | | | | | | | | | | | | | | | | | |
 
 ## [file](file)
 
-| | **company** | **creation_time** | **file_name** | **file_path** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **pid** | **ppid** | **previous_creation_time** | **sha1_hash** | **sha256_hash** | **signer** | **user** |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **create** | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | | | | | | | |
-| **delete** | | | | | | | | | | | | | | | |
-| **modify** | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | | | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | |
-| **read** | | | | | | | | | | | | | | | |
-| **timestomp** | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) |
-| **write** | | | | | | | | | | | | | | | |
+| | **company** | **content** | **creation_time** | **file_extension** | **file_gid** | **file_group** | **file_name** | **file_path** | **file_uid** | **file_user** | **fqdn** | **hostname** | **image_path** | **link_target** | **md5_hash** | **mime_type** | **mode** | **pid** | **ppid** | **previous_creation_time** | **sha1_hash** | **sha256_hash** | **signature_valid** | **signer** | **uid** | **user** |
+| ---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **create** | [Autoruns](../sensors/autoruns_13.98)<br />[Sysmon](../sensors/sysmon_13) | | [Autoruns](../sensors/autoruns_13.98)<br />[Sysmon](../sensors/sysmon_13) | | | | [Autoruns](../sensors/autoruns_13.98) | [Sysmon](../sensors/sysmon_13) | | | [Autoruns](../sensors/autoruns_13.98)<br />[Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns_13.98) | [Sysmon](../sensors/sysmon_13) | | [Autoruns](../sensors/autoruns_13.98) | | | [Sysmon](../sensors/sysmon_13) | | | | | | [Sysmon](../sensors/sysmon_13) | |
+| **delete** | | | | | | | | | | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | | | | [Sysmon](../sensors/sysmon_13) | | | | | | | [Sysmon](../sensors/sysmon_13) | |
+| **modify** | [Autoruns](../sensors/autoruns_13.98) | | [Autoruns](../sensors/autoruns_13.98) | | | | [Autoruns](../sensors/autoruns_13.98) | | | | [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98) | | | [Autoruns](../sensors/autoruns_13.98) | | | | | | | [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98) | | |
+| **read** | | | | | | | | | | | | | | | | | | | | | | | | | |
+| **timestomp** | | | [Sysmon](../sensors/sysmon_13) | | | | | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | | | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | | | | [Sysmon](../sensors/sysmon_13) | |
+| **write** | | | | | | | | | | | | | | | | | | | | | | | | | |
+| **acl_modify** | | | | | | | | | | | | | | | | | | | | | | | | | |
 
 ## [flow](flow)
 
-| | **content** | **dest_fqdn** | **dest_hostname** | **dest_ip** | **dest_port** | **end_time** | **exe** | **flags** | **fqdn** | **hostname** | **image_path** | **packet_count** | **pid** | **ppid** | **proto_info** | **protocol** | **src_fqdn** | **src_hostname** | **src_ip** | **src_port** | **start_time** | **user** |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **end** | | | | | | | | | | | | | | | | | | | | | | |
-| **message** | | | | | | | | | | | | | | | | | | | | | | |
-| **start** | | | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) |
+| | **application_protocol** | **content** | **dest_fqdn** | **dest_hostname** | **dest_ip** | **dest_port** | **end_time** | **exe** | **fqdn** | **hostname** | **image_path** | **in_bytes** | **out_bytes** | **network_direction** | **packet_count** | **pid** | **ppid** | **proto_info** | **src_fqdn** | **src_hostname** | **src_ip** | **src_port** | **start_time** | **tcp_flags** | **transport_protocol** | **uid** | **user** |
+| ---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **end** | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| **message** | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| **start** | | | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13)| [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | | | | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | 
 
 ## [module](module)
 
-| | **base_address** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **module_name** | **module_path** | **pid** | **sha1_hash** | **sha256_hash** | **signer** | **tid** |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **load** | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | |
-| **unload** | | | | | | | | | | | | |
+| | **base_address** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **module_name** | **module_path** | **pid** | **sha1_hash** | **sha256_hash** | **signature_valid** | **signer** | **tid** |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **load** | | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13)  | [Sysmon]( ../sensors/sysmon_13)  | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13)  | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) |
+| **unload** | | | | | | | | | | | | | |
 
 ## [process](process)
 
-| | **command_line** | **exe** | **fqdn** | **hostname** | **image_path** | **md5_hash** | **parent_exe** | **parent_image_path** | **pid** | **ppid** | **sha1_hash** | **sha256_hash** | **sid** | **signer** | **user** |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **create** | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) |
-| **terminate** | | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | | | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | | | | | [Sysmon (2.0)]( ../sensors/sysmon_2.0) [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) |
-
+| | **access_level** | **call_trace** | **command_line** | **current_working_directory** | **exe** | **env_vars** | **fqdn** | **guid** | **hostname** | **image_path** | **integrity_level** | **md5_hash** | **parent_command_line** | **parent_exe** | **parent_guid** | **parent_image_path** | **pid** | **ppid** | **sha1_hash** | **sha256_hash** | **sid** | **signer** | **signature_valid** | **target_address** | **target_guid** | **target_pid** | **target_name** | **user** |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **access** | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | | | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | | | | | | [Sysmon](../sensors/sysmon_13) | | | | [Sysmon](../sensors/sysmon_13) | | | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | |
+**create** | | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) | | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | | | | | | |
+| **terminate** | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 
 
 ## [registry](registry)
 
-| | **data** | **fqdn** | **hive** | **hostname** | **image_path** | **key** | **pid** | **type** | **user** | **value** |
-|---|---|---|---|---|---|---|---|---|---|---|
-| **add** | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) |
-| **edit** | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) | | [Autoruns](../sensors/autoruns) |
-| **remove** | | | | | | | | | | |
+| | **data** | **fqdn** | **hostname** | **hive** | **key** | **image_path** | **new_content** | **pid** | **type** | **user** | **value** |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| **add** | [Autoruns](../sensors/autoruns_13.98)<br />[Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98)<br />[Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns_13.98)<br />[Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns_13.98)| [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns_13.98) | 
+**key_edit** | [Autoruns](../sensors/autoruns_13.98)<br />[Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98)<br />[Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns_13.98)<br />[Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns_13.98)<br />[Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns_13.98) | [Sysmon](../sensors/sysmon_13) | [Autoruns](../sensors/autoruns_13.98)<br />[Sysmon](../sensors/sysmon_13) |
+| **remove** | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | | [Sysmon](../sensors/sysmon_13) | |
+| **value_edit** | [Autoruns](../sensors/autoruns_13.98) | | [Autoruns](../sensors/autoruns_13.98)| [Autoruns](../sensors/autoruns_13.98) | [Autoruns](../sensors/autoruns_13.98) | | [Autoruns](../sensors/autoruns_13.98) | | [Autoruns](../sensors/autoruns_13.98)| | [Autoruns](../sensors/autoruns_13.98) |
 
 ## [service](service)
 
-| | **command_line** | **exe** | **fqdn** | **hostname** | **image_path** | **name** | **pid** | **ppid** | **user** |
-|---|---|---|---|---|---|---|---|---|---|
-| **create** | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | | |
-| **delete** | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | [Autoruns](../sensors/autoruns) | | | |
-| **pause** | | | | | | | | | |
-| **start** | | | | | | | | | |
-| **stop** | | | | | | | | | |
+| | **command_line** | **exe** | **fqdn** | **hostname** | **image_path** | **name** | **pid** | **ppid** | **uid** | **user** |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **create** | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | | | | |
+| **delete** | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | [Autoruns](https://car.mitre.org/wiki/Autoruns) | | | | |
+| **pause** | | | | | | | | | | |
+| **start** | | | | | | | | | | |
+| **stop** | | | | | | | | | | |
+
+## [socket](socket)
+
+| | **family** | **image_path** | **local_address** | **local_path** | **local_port** | **pid** | **protocol** | **remote_address** | **remote_port** | **success** |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **bind** | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | |
+| **listen** | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | |
+| **close** | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | o[osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | [osquery](../sensors/osquery_4.6.0) | |
 
 ## [thread](thread)
 
-| | **hostname** | **src_pid** | **src_tid** | **stack_base** | **stack_limit** | **start_address** | **start_function** | **start_module** | **start_module_name** | **subprocess_tag** | **tgt_pid** | **tgt_tid** | **user** | **user_stack_base** | **user_stack_limit** |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **create** | | | | | | | | | | | | | | | |
-| **remote_create** | [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | | [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | [Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | |[Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) |[Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2)|[Sysmon (3.1)]( ../sensors/sysmon_3.1) [Sysmon (3.2)]( ../sensors/sysmon_3.2) | | |
-| **suspend** | | | | | | | | | | | | | | | |
-| **terminate** | | | | | | | | | | | | | | | |
+| | **hostname** | **src_pid** | **src_tid** | **stack_base** | **stack_limit** | **start_address** | **start_function** | **start_module** | **start_module_name** | **subprocess_tag** | **tgt_pid** | **tgt_tid** | **uid** | **user** | **user_stack_base** | **user_stack_limit** |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **create** | | | | | | | | | | | | | | | | |
+| **remote_create** | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | | | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | |[Sysmon]( ../sensors/sysmon_13) |[Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | | |
+| **suspend** | | | | | | | | | | | | | | | | | |
+| **terminate** | | | | | | | | | | | | | | | | |
 
 ## [user_session](user_session)
 
-| | **dest_ip** | **dest_port** | **hostname** | **logon_id** | **src_ip** | **src_port** | **user** |
-|---|---|---|---|---|---|---|---|
-| **interactive** | | | | | | | |
-| **local** | | | | | | | |
-| **lock** | | | | | | | |
-| **login** | | | | | | | |
-| **logout** | | | | | | | |
-| **rdp** | | | | | | | |
-| **reconnect** | | | | | | | |
-| **remote** | | | | | | | |
-| **unlock** | | | | | | | |
+| | **hostname** | **src_pid** | **src_tid** | **stack_base** | **stack_limit** | **start_address** | **start_function** | **start_module** | **start_module_name** | **subprocess_tag** | **tgt_pid** | **tgt_tid** | **uid** | **user** | **user_stack_base** | **user_stack_limit** |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **create** | | | | | | | | | | | | | | | | |
+| **remote_create** | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | | | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | |[Sysmon]( ../sensors/sysmon_13) |[Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | [Sysmon]( ../sensors/sysmon_13) | | |
+| **suspend** | | | | | | | | | | | | | | | | | |
+| **terminate** | | | | | | | | | | | | | | | | |
