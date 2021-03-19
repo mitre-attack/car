@@ -1,3 +1,9 @@
+---
+title: Analytic Coverage Comparison
+---
+
+Generated on: *March 19, 2021*
+
 Technique (ID)  |   Technique (Name)                            |   Sub-technique (Name)                                      |   Num. CAR  |   Num. Sigma  |   Num. ES SIEM  |   Total
 ----------------|-----------------------------------------------|-------------------------------------------------------------|-------------|---------------|-----------------|--------
 T1001.003       |  Data Obfuscation                             |  Protocol Impersonation                                     |  0          |  3            |  0              |  3
