@@ -25,8 +25,19 @@ implementations:
   description:  This Splunk query looks for any executable invocations from an Excel file.
 
   code: |-
-    index = * ParentImage="*excel.exe*" Image="*.exe" | table _raw, ParentImage, Image
+    index = __sysmon__index__ (ParentImage="*excel.exe" OR ParentImage="*word.exe" OR ParentImage="*outlook.exe") Image="*.exe"
   data_model: Sysmon native
   type: Splunk
+- name: Splunk search - Unusual Child Process spawned using DDE exploit
+
+  description:  This Splunk query looks for any executable invocations from an Excel file.
+
+  code: |-
+    processes = search Process:Create
+    target_processes = filter processes where (
+         (parent_image="*excel.exe" OR parent_image="*word.exe" OR parent_image="*outlook.exe")
+         AND image="*.exe"
+         )
+  type: Pseudocode
 data_model_references:
   - process/create/command_line
