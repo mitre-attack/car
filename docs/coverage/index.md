@@ -5,6 +5,7 @@ title: Analytic Coverage Comparison
 Generated on: March 22, 2021
 
 <script type="text/javascript" src="assets/sort-table.js"></script>
+
 <table class="js-sort-table" id="coverage-sort">
         <thead>
         <tr>
