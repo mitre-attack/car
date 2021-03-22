@@ -2,548 +2,4890 @@
 title: Analytic Coverage Comparison
 ---
 
-Generated on: *March 19, 2021*
+Generated on: March 22, 2021
 
-Technique (ID)  |   Technique (Name)                            |   Sub-technique (Name)                                      |   Num. CAR  |   Num. Sigma  |   Num. ES SIEM  |   Total
-----------------|-----------------------------------------------|-------------------------------------------------------------|-------------|---------------|-----------------|--------
-T1001.003       |  Data Obfuscation                             |  Protocol Impersonation                                     |  0          |  3            |  0              |  3
-T1003           |  OS Credential Dumping                        |  n/a                                                        |  0          |  56           |  13             |  69
-T1003.001       |  OS Credential Dumping                        |  LSASS Memory                                               |  4          |  32           |  1              |  37
-T1003.002       |  OS Credential Dumping                        |  Security Account Manager                                   |  1          |  17           |  0              |  18
-T1003.003       |  OS Credential Dumping                        |  NTDS                                                       |  2          |  11           |  0              |  13
-T1003.004       |  OS Credential Dumping                        |  LSA Secrets                                                |  0          |  10           |  0              |  10
-T1003.005       |  OS Credential Dumping                        |  Cached Domain Credentials                                  |  0          |  6            |  0              |  6
-T1003.006       |  OS Credential Dumping                        |  DCSync                                                     |  0          |  5            |  0              |  5
-T1003.007       |  OS Credential Dumping                        |  Proc Filesystem                                            |  0          |  1            |  0              |  1
-T1005           |  Data from Local System                       |  n/a                                                        |  0          |  3            |  0              |  3
-T1006           |  Direct Volume Access                         |  n/a                                                        |  0          |  1            |  1              |  2
-T1007           |  System Service Discovery                     |  n/a                                                        |  2          |  1            |  0              |  3
-T1010           |  Application Window Discovery                 |  n/a                                                        |  1          |  0            |  0              |  1
-T1012           |  Query Registry                               |  n/a                                                        |  3          |  6            |  1              |  10
-T1016           |  System Network Configuration Discovery       |  n/a                                                        |  2          |  3            |  2              |  7
-T1018           |  Remote System Discovery                      |  n/a                                                        |  1          |  5            |  2              |  8
-T1020           |  Automated Exfiltration                       |  n/a                                                        |  0          |  4            |  0              |  4
-T1021           |  Remote Services                              |  n/a                                                        |  1          |  4            |  26             |  31
-T1021.001       |  Remote Services                              |  Remote Desktop Protocol                                    |  3          |  8            |  0              |  11
-T1021.002       |  Remote Services                              |  SMB/Windows Admin Shares                                   |  5          |  15           |  4              |  24
-T1021.003       |  Remote Services                              |  Distributed Component Object Model                         |  1          |  3            |  0              |  4
-T1021.006       |  Remote Services                              |  Windows Remote Management                                  |  3          |  3            |  0              |  6
-T1027           |  Obfuscated Files or Information              |  n/a                                                        |  0          |  15           |  4              |  19
-T1027.001       |  Obfuscated Files or Information              |  Binary Padding                                             |  0          |  1            |  0              |  1
-T1027.003       |  Obfuscated Files or Information              |  Steganography                                              |  0          |  1            |  0              |  1
-T1027.004       |  Obfuscated Files or Information              |  Compile After Delivery                                     |  0          |  3            |  1              |  4
-T1027.005       |  Obfuscated Files or Information              |  Indicator Removal from Tools                               |  0          |  2            |  0              |  2
-T1029           |  Scheduled Transfer                           |  n/a                                                        |  1          |  0            |  0              |  1
-T1033           |  System Owner/User Discovery                  |  n/a                                                        |  2          |  8            |  3              |  13
-T1036           |  Masquerading                                 |  n/a                                                        |  1          |  32           |  10             |  43
-T1036.003       |  Masquerading                                 |  Rename System Utilities                                    |  1          |  12           |  0              |  13
-T1036.004       |  Masquerading                                 |  Masquerade Task or Service                                 |  0          |  1            |  1              |  2
-T1036.005       |  Masquerading                                 |  Match Legitimate Name or Location                          |  0          |  8            |  0              |  8
-T1037           |  Boot or Logon Initialization Scripts         |  n/a                                                        |  0          |  2            |  2              |  4
-T1037.001       |  Boot or Logon Initialization Scripts         |  Logon Script (Windows)                                     |  2          |  2            |  0              |  4
-T1039           |  Data from Network Shared Drive               |  n/a                                                        |  1          |  1            |  0              |  2
-T1040           |  Network Sniffing                             |  n/a                                                        |  1          |  6            |  2              |  9
-T1041           |  Exfiltration Over C2 Channel                 |  n/a                                                        |  0          |  2            |  0              |  2
-T1043           |  Commonly Used Port                           |  n/a                                                        |  0          |  13           |  0              |  13
-T1046           |  Network Service Scanning                     |  n/a                                                        |  2          |  2            |  0              |  4
-T1047           |  Windows Management Instrumentation           |  n/a                                                        |  3          |  18           |  4              |  25
-T1048           |  Exfiltration Over Alternative Protocol       |  n/a                                                        |  0          |  12           |  6              |  18
-T1048.001       |  Exfiltration Over Alternative Protocol       |  Exfiltration Over Symmetric Encrypted Non-C2 Protocol      |  0          |  1            |  0              |  1
-T1048.003       |  Exfiltration Over Alternative Protocol       |  Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol   |  0          |  6            |  0              |  6
-T1049           |  System Network Connections Discovery         |  n/a                                                        |  1          |  2            |  1              |  4
-T1053           |  Scheduled Task/Job                           |  n/a                                                        |  0          |  16           |  11             |  27
-T1053.002       |  Scheduled Task/Job                           |  At (Windows)                                               |  3          |  4            |  0              |  7
-T1053.003       |  Scheduled Task/Job                           |  Cron                                                       |  0          |  0            |  3              |  3
-T1053.005       |  Scheduled Task/Job                           |  Scheduled Task                                             |  5          |  11           |  0              |  16
-T1055           |  Process Injection                            |  n/a                                                        |  0          |  13           |  10             |  23
-T1055.001       |  Process Injection                            |  Dynamic-link Library Injection                             |  2          |  7            |  0              |  9
-T1055.002       |  Process Injection                            |  Portable Executable Injection                              |  0          |  1            |  0              |  1
-T1055.012       |  Process Injection                            |  Process Hollowing                                          |  0          |  1            |  2              |  3
-T1056           |  Input Capture                                |  n/a                                                        |  0          |  0            |  1              |  1
-T1056.002       |  Input Capture                                |  GUI Input Capture                                          |  0          |  1            |  1              |  2
-T1057           |  Process Discovery                            |  n/a                                                        |  2          |  2            |  2              |  6
-T1059           |  Command and Scripting Interpreter            |  n/a                                                        |  1          |  19           |  25             |  45
-T1059.001       |  Command and Scripting Interpreter            |  PowerShell                                                 |  3          |  71           |  4              |  78
-T1059.002       |  Command and Scripting Interpreter            |  AppleScript                                                |  0          |  0            |  1              |  1
-T1059.003       |  Command and Scripting Interpreter            |  Windows Command Shell                                      |  2          |  15           |  0              |  17
-T1059.004       |  Command and Scripting Interpreter            |  Unix Shell                                                 |  0          |  7            |  0              |  7
-T1059.005       |  Command and Scripting Interpreter            |  Visual Basic                                               |  1          |  16           |  0              |  17
-T1059.006       |  Command and Scripting Interpreter            |  Python                                                     |  0          |  2            |  1              |  3
-T1059.007       |  Command and Scripting Interpreter            |  JavaScript/JScript                                         |  0          |  9            |  2              |  11
-T1064           |  Scripting                                    |  n/a                                                        |  0          |  14           |  0              |  14
-T1068           |  Exploitation for Privilege Escalation        |  n/a                                                        |  1          |  7            |  6              |  14
-T1069           |  Permission Groups Discovery                  |  n/a                                                        |  0          |  2            |  3              |  5
-T1069.001       |  Permission Groups Discovery                  |  Local Groups                                               |  3          |  2            |  0              |  5
-T1069.002       |  Permission Groups Discovery                  |  Domain Groups                                              |  3          |  3            |  1              |  7
-T1070           |  Indicator Removal on Host                    |  n/a                                                        |  0          |  9            |  15             |  24
-T1070.001       |  Indicator Removal on Host                    |  Clear Windows Event Logs                                   |  2          |  5            |  0              |  7
-T1070.003       |  Indicator Removal on Host                    |  Clear Command History                                      |  1          |  3            |  1              |  5
-T1070.004       |  Indicator Removal on Host                    |  File Deletion                                              |  0          |  3            |  6              |  9
-T1070.005       |  Indicator Removal on Host                    |  Network Share Connection Removal                           |  1          |  0            |  0              |  1
-T1070.006       |  Indicator Removal on Host                    |  Timestomp                                                  |  0          |  1            |  1              |  2
-T1071           |  Application Layer Protocol                   |  n/a                                                        |  0          |  14           |  8              |  22
-T1071.001       |  Application Layer Protocol                   |  Web Protocols                                              |  0          |  22           |  3              |  25
-T1071.004       |  Application Layer Protocol                   |  DNS                                                        |  0          |  12           |  0              |  12
-T1074           |  Data Staged                                  |  n/a                                                        |  0          |  1            |  0              |  1
-T1078           |  Valid Accounts                               |  n/a                                                        |  0          |  7            |  35             |  42
-T1078.001       |  Valid Accounts                               |  Default Accounts                                           |  0          |  1            |  0              |  1
-T1078.002       |  Valid Accounts                               |  Domain Accounts                                            |  5          |  1            |  0              |  6
-T1078.003       |  Valid Accounts                               |  Local Accounts                                             |  5          |  1            |  3              |  9
-T1078.004       |  Valid Accounts                               |  Cloud Accounts                                             |  0          |  1            |  1              |  2
-T1082           |  System Information Discovery                 |  n/a                                                        |  2          |  4            |  3              |  9
-T1083           |  File and Directory Discovery                 |  n/a                                                        |  0          |  4            |  1              |  5
-T1087           |  Account Discovery                            |  n/a                                                        |  0          |  12           |  4              |  16
-T1087.001       |  Account Discovery                            |  Local Account                                              |  2          |  5            |  0              |  7
-T1087.002       |  Account Discovery                            |  Domain Account                                             |  2          |  8            |  1              |  11
-T1090           |  Proxy                                        |  n/a                                                        |  0          |  3            |  1              |  4
-T1090.001       |  Proxy                                        |  Internal Proxy                                             |  0          |  1            |  0              |  1
-T1090.002       |  Proxy                                        |  External Proxy                                             |  0          |  1            |  0              |  1
-T1090.003       |  Proxy                                        |  Multi-hop Proxy                                            |  0          |  0            |  1              |  1
-T1091           |  Replication Through Removable Media          |  n/a                                                        |  0          |  1            |  0              |  1
-T1098           |  Account Manipulation                         |  n/a                                                        |  1          |  8            |  20             |  29
-T1098.004       |  Account Manipulation                         |  SSH Authorized Keys                                        |  0          |  0            |  1              |  1
-T1102           |  Web Service                                  |  n/a                                                        |  0          |  4            |  1              |  5
-T1102.001       |  Web Service                                  |  Dead Drop Resolver                                         |  0          |  2            |  0              |  2
-T1102.002       |  Web Service                                  |  Bidirectional Communication                                |  0          |  2            |  0              |  2
-T1102.003       |  Web Service                                  |  One-Way Communication                                      |  0          |  2            |  0              |  2
-T1104           |  Multi-Stage Channels                         |  n/a                                                        |  0          |  1            |  0              |  1
-T1105           |  Ingress Tool Transfer                        |  n/a                                                        |  1          |  21           |  9              |  31
-T1106           |  Native API                                   |  n/a                                                        |  0          |  2            |  1              |  3
-T1110           |  Brute Force                                  |  n/a                                                        |  0          |  2            |  7              |  9
-T1111           |  Two-Factor Authentication Interception       |  n/a                                                        |  0          |  0            |  1              |  1
-T1112           |  Modify Registry                              |  n/a                                                        |  5          |  19           |  1              |  25
-T1113           |  Screen Capture                               |  n/a                                                        |  0          |  1            |  0              |  1
-T1114           |  Email Collection                             |  n/a                                                        |  0          |  2            |  2              |  4
-T1119           |  Automated Collection                         |  n/a                                                        |  0          |  1            |  0              |  1
-T1120           |  Peripheral Device Discovery                  |  n/a                                                        |  0          |  0            |  1              |  1
-T1123           |  Audio Capture                                |  n/a                                                        |  0          |  3            |  0              |  3
-T1124           |  System Time Discovery                        |  n/a                                                        |  0          |  2            |  0              |  2
-T1125           |  Video Capture                                |  n/a                                                        |  0          |  1            |  0              |  1
-T1127           |  Trusted Developer Utilities Proxy Execution  |  n/a                                                        |  0          |  4            |  8              |  12
-T1127.001       |  Trusted Developer Utilities Proxy Execution  |  MSBuild                                                    |  1          |  1            |  0              |  2
-T1129           |  Shared Modules                               |  n/a                                                        |  0          |  0            |  1              |  1
-T1132           |  Data Encoding                                |  n/a                                                        |  0          |  1            |  0              |  1
-T1132.001       |  Data Encoding                                |  Standard Encoding                                          |  0          |  1            |  0              |  1
-T1133           |  External Remote Services                     |  n/a                                                        |  0          |  1            |  4              |  5
-T1134           |  Access Token Manipulation                    |  n/a                                                        |  0          |  3            |  1              |  4
-T1134.001       |  Access Token Manipulation                    |  Token Impersonation/Theft                                  |  0          |  2            |  0              |  2
-T1134.002       |  Access Token Manipulation                    |  Create Process with Token                                  |  0          |  3            |  0              |  3
-T1134.005       |  Access Token Manipulation                    |  SID-History Injection                                      |  0          |  1            |  0              |  1
-T1135           |  Network Share Discovery                      |  n/a                                                        |  0          |  3            |  1              |  4
-T1136           |  Create Account                               |  n/a                                                        |  0          |  6            |  7              |  13
-T1136.001       |  Create Account                               |  Local Account                                              |  0          |  6            |  1              |  7
-T1136.002       |  Create Account                               |  Domain Account                                             |  0          |  1            |  0              |  1
-T1136.003       |  Create Account                               |  Cloud Account                                              |  0          |  0            |  1              |  1
-T1137           |  Office Application Startup                   |  n/a                                                        |  0          |  1            |  2              |  3
-T1137.002       |  Office Application Startup                   |  Office Test                                                |  0          |  1            |  0              |  1
-T1137.006       |  Office Application Startup                   |  Add-ins                                                    |  0          |  2            |  0              |  2
-T1140           |  Deobfuscate/Decode Files or Information      |  n/a                                                        |  0          |  7            |  5              |  12
-T1175           |  Component Object Model and Distributed COM   |  n/a                                                        |  0          |  6            |  0              |  6
-T1187           |  Forced Authentication                        |  n/a                                                        |  1          |  0            |  0              |  1
-T1189           |  Drive-by Compromise                          |  n/a                                                        |  0          |  2            |  1              |  3
-T1190           |  Exploit Public-Facing Application            |  n/a                                                        |  0          |  34           |  14             |  48
-T1195           |  Supply Chain Compromise                      |  n/a                                                        |  0          |  1            |  4              |  5
-T1195.001       |  Supply Chain Compromise                      |  Compromise Software Dependencies and Development Tools     |  0          |  1            |  0              |  1
-T1195.002       |  Supply Chain Compromise                      |  Compromise Software Supply Chain                           |  0          |  0            |  4              |  4
-T1197           |  BITS Jobs                                    |  n/a                                                        |  0          |  3            |  0              |  3
-T1200           |  Hardware Additions                           |  n/a                                                        |  0          |  2            |  0              |  2
-T1201           |  Password Policy Discovery                    |  n/a                                                        |  0          |  2            |  0              |  2
-T1202           |  Indirect Command Execution                   |  n/a                                                        |  0          |  6            |  0              |  6
-T1203           |  Exploitation for Client Execution            |  n/a                                                        |  0          |  11           |  1              |  12
-T1204           |  User Execution                               |  n/a                                                        |  0          |  18           |  3              |  21
-T1204.002       |  User Execution                               |  Malicious File                                             |  0          |  17           |  0              |  17
-T1207           |  Rogue Domain Controller                      |  n/a                                                        |  0          |  1            |  0              |  1
-T1210           |  Exploitation of Remote Services              |  n/a                                                        |  0          |  5            |  2              |  7
-T1211           |  Exploitation for Defense Evasion             |  n/a                                                        |  0          |  2            |  1              |  3
-T1212           |  Exploitation for Credential Access           |  n/a                                                        |  0          |  3            |  0              |  3
-T1218           |  Signed Binary Proxy Execution                |  n/a                                                        |  0          |  17           |  12             |  29
-T1218.001       |  Signed Binary Proxy Execution                |  Compiled HTML File                                         |  1          |  2            |  2              |  5
-T1218.002       |  Signed Binary Proxy Execution                |  Control Panel                                              |  0          |  1            |  0              |  1
-T1218.003       |  Signed Binary Proxy Execution                |  CMSTP                                                      |  1          |  5            |  0              |  6
-T1218.004       |  Signed Binary Proxy Execution                |  InstallUtil                                                |  0          |  1            |  1              |  2
-T1218.005       |  Signed Binary Proxy Execution                |  Mshta                                                      |  0          |  8            |  2              |  10
-T1218.007       |  Signed Binary Proxy Execution                |  Msiexec                                                    |  0          |  1            |  0              |  1
-T1218.008       |  Signed Binary Proxy Execution                |  Odbcconf                                                   |  0          |  1            |  0              |  1
-T1218.009       |  Signed Binary Proxy Execution                |  Regsvcs/Regasm                                             |  0          |  1            |  2              |  3
-T1218.010       |  Signed Binary Proxy Execution                |  Regsvr32                                                   |  2          |  7            |  1              |  10
-T1218.011       |  Signed Binary Proxy Execution                |  Rundll32                                                   |  1          |  18           |  2              |  21
-T1219           |  Remote Access Software                       |  n/a                                                        |  0          |  3            |  2              |  5
-T1220           |  XSL Script Processing                        |  n/a                                                        |  0          |  2            |  3              |  5
-T1222           |  File and Directory Permissions Modification  |  n/a                                                        |  0          |  3            |  3              |  6
-T1222.001       |  File and Directory Permissions Modification  |  Windows File and Directory Permissions Modification        |  1          |  2            |  0              |  3
-T1222.002       |  File and Directory Permissions Modification  |  Linux and Mac File and Directory Permissions Modification  |  1          |  2            |  0              |  3
-T1482           |  Domain Trust Discovery                       |  n/a                                                        |  0          |  5            |  1              |  6
-T1485           |  Data Destruction                             |  n/a                                                        |  0          |  2            |  5              |  7
-T1486           |  Data Encrypted for Impact                    |  n/a                                                        |  0          |  1            |  0              |  1
-T1489           |  Service Stop                                 |  n/a                                                        |  0          |  1            |  1              |  2
-T1490           |  Inhibit System Recovery                      |  n/a                                                        |  2          |  5            |  1              |  8
-T1495           |  Firmware Corruption                          |  n/a                                                        |  0          |  1            |  0              |  1
-T1498           |  Network Denial of Service                    |  n/a                                                        |  0          |  0            |  1              |  1
-T1499           |  Endpoint Denial of Service                   |  n/a                                                        |  0          |  1            |  1              |  2
-T1499.004       |  Endpoint Denial of Service                   |  Application or System Exploitation                         |  0          |  2            |  0              |  2
-T1505           |  Server Software Component                    |  n/a                                                        |  0          |  1            |  1              |  2
-T1505.003       |  Server Software Component                    |  Web Shell                                                  |  1          |  13           |  1              |  15
-T1518           |  Software Discovery                           |  n/a                                                        |  0          |  0            |  2              |  2
-T1518.001       |  Software Discovery                           |  Security Software Discovery                                |  1          |  0            |  0              |  1
-T1526           |  Cloud Service Discovery                      |  n/a                                                        |  0          |  0            |  1              |  1
-T1528           |  Steal Application Access Token               |  n/a                                                        |  0          |  1            |  3              |  4
-T1529           |  System Shutdown/Reboot                       |  n/a                                                        |  0          |  2            |  0              |  2
-T1530           |  Data from Cloud Storage Object               |  n/a                                                        |  0          |  0            |  5              |  5
-T1531           |  Account Access Removal                       |  n/a                                                        |  0          |  0            |  6              |  6
-T1537           |  Transfer Data to Cloud Account               |  n/a                                                        |  0          |  1            |  5              |  6
-T1539           |  Steal Web Session Cookie                     |  n/a                                                        |  0          |  0            |  2              |  2
-T1542.003       |  Pre-OS Boot                                  |  Bootkit                                                    |  0          |  1            |  0              |  1
-T1543           |  Create or Modify System Process              |  n/a                                                        |  0          |  0            |  13             |  13
-T1543.001       |  Create or Modify System Process              |  Launch Agent                                               |  0          |  0            |  3              |  3
-T1543.002       |  Create or Modify System Process              |  Systemd Service                                            |  0          |  1            |  0              |  1
-T1543.003       |  Create or Modify System Process              |  Windows Service                                            |  6          |  10           |  5              |  21
-T1546           |  Event Triggered Execution                    |  n/a                                                        |  0          |  2            |  14             |  16
-T1546.001       |  Event Triggered Execution                    |  Change Default File Association                            |  1          |  1            |  0              |  2
-T1546.002       |  Event Triggered Execution                    |  Screensaver                                                |  1          |  0            |  0              |  1
-T1546.003       |  Event Triggered Execution                    |  Windows Management Instrumentation Event Subscription      |  1          |  6            |  0              |  7
-T1546.004       |  Event Triggered Execution                    |  .bash_profile and .bashrc                                  |  0          |  1            |  1              |  2
-T1546.007       |  Event Triggered Execution                    |  Netsh Helper DLL                                           |  0          |  1            |  0              |  1
-T1546.008       |  Event Triggered Execution                    |  Accessibility Features                                     |  3          |  2            |  2              |  7
-T1546.009       |  Event Triggered Execution                    |  AppCert DLLs                                               |  0          |  1            |  1              |  2
-T1546.010       |  Event Triggered Execution                    |  AppInit DLLs                                               |  2          |  1            |  1              |  4
-T1546.011       |  Event Triggered Execution                    |  Application Shimming                                       |  0          |  1            |  3              |  4
-T1546.012       |  Event Triggered Execution                    |  Image File Execution Options Injection                     |  0          |  2            |  1              |  3
-T1546.013       |  Event Triggered Execution                    |  PowerShell Profile                                         |  0          |  1            |  0              |  1
-T1546.014       |  Event Triggered Execution                    |  Emond                                                      |  0          |  0            |  2              |  2
-T1546.015       |  Event Triggered Execution                    |  Component Object Model Hijacking                           |  1          |  0            |  1              |  2
-T1547           |  Boot or Logon Autostart Execution            |  n/a                                                        |  0          |  1            |  21             |  22
-T1547.001       |  Boot or Logon Autostart Execution            |  Registry Run Keys / Startup Folder                         |  3          |  9            |  7              |  19
-T1547.002       |  Boot or Logon Autostart Execution            |  Authentication Package                                     |  0          |  0            |  3              |  3
-T1547.003       |  Boot or Logon Autostart Execution            |  Time Providers                                             |  0          |  0            |  1              |  1
-T1547.004       |  Boot or Logon Autostart Execution            |  Winlogon Helper DLL                                        |  1          |  2            |  0              |  3
-T1547.005       |  Boot or Logon Autostart Execution            |  Security Support Provider                                  |  0          |  1            |  1              |  2
-T1547.006       |  Boot or Logon Autostart Execution            |  Kernel Modules and Extensions                              |  0          |  0            |  3              |  3
-T1547.008       |  Boot or Logon Autostart Execution            |  LSASS Driver                                               |  0          |  1            |  0              |  1
-T1547.009       |  Boot or Logon Autostart Execution            |  Shortcut Modification                                      |  0          |  1            |  0              |  1
-T1547.010       |  Boot or Logon Autostart Execution            |  Port Monitors                                              |  1          |  0            |  2              |  3
-T1547.011       |  Boot or Logon Autostart Execution            |  Plist Modification                                         |  0          |  0            |  2              |  2
-T1548           |  Abuse Elevation Control Mechanism            |  n/a                                                        |  1          |  1            |  20             |  22
-T1548.001       |  Abuse Elevation Control Mechanism            |  Setuid and Setgid                                          |  0          |  0            |  2              |  2
-T1548.002       |  Abuse Elevation Control Mechanism            |  Bypass User Account Control                                |  2          |  8            |  11             |  21
-T1548.003       |  Abuse Elevation Control Mechanism            |  Sudo and Sudo Caching                                      |  0          |  0            |  2              |  2
-T1550           |  Use Alternate Authentication Material        |  n/a                                                        |  0          |  0            |  3              |  3
-T1550.001       |  Use Alternate Authentication Material        |  Application Access Token                                   |  0          |  0            |  2              |  2
-T1550.002       |  Use Alternate Authentication Material        |  Pass the Hash                                              |  1          |  5            |  0              |  6
-T1550.003       |  Use Alternate Authentication Material        |  Pass the Ticket                                            |  0          |  2            |  1              |  3
-T1552           |  Unsecured Credentials                        |  n/a                                                        |  0          |  0            |  3              |  3
-T1552.001       |  Unsecured Credentials                        |  Credentials In Files                                       |  1          |  3            |  2              |  6
-T1552.002       |  Unsecured Credentials                        |  Credentials in Registry                                    |  1          |  2            |  0              |  3
-T1552.003       |  Unsecured Credentials                        |  Bash History                                               |  0          |  1            |  0              |  1
-T1552.004       |  Unsecured Credentials                        |  Private Keys                                               |  0          |  1            |  1              |  2
-T1552.006       |  Unsecured Credentials                        |  Group Policy Preferences                                   |  0          |  1            |  0              |  1
-T1553           |  Subvert Trust Controls                       |  n/a                                                        |  0          |  0            |  5              |  5
-T1553.002       |  Subvert Trust Controls                       |  Code Signing                                               |  0          |  1            |  1              |  2
-T1553.003       |  Subvert Trust Controls                       |  SIP and Trust Provider Hijacking                           |  0          |  0            |  1              |  1
-T1553.004       |  Subvert Trust Controls                       |  Install Root Certificate                                   |  0          |  1            |  2              |  3
-T1554           |  Compromise Client Software Binary            |  n/a                                                        |  0          |  0            |  2              |  2
-T1555           |  Credentials from Password Stores             |  n/a                                                        |  0          |  1            |  5              |  6
-T1555.001       |  Credentials from Password Stores             |  Keychain                                                   |  0          |  0            |  4              |  4
-T1555.003       |  Credentials from Password Stores             |  Credentials from Web Browsers                              |  0          |  0            |  1              |  1
-T1556           |  Modify Authentication Process                |  n/a                                                        |  0          |  0            |  3              |  3
-T1557.001       |  Man-in-the-Middle                            |  LLMNR/NBT-NS Poisoning and SMB Relay                       |  0          |  1            |  0              |  1
-T1558           |  Steal or Forge Kerberos Tickets              |  n/a                                                        |  0          |  3            |  2              |  5
-T1558.003       |  Steal or Forge Kerberos Tickets              |  Kerberoasting                                              |  0          |  7            |  0              |  7
-T1559           |  Inter-Process Communication                  |  n/a                                                        |  0          |  0            |  1              |  1
-T1559.001       |  Inter-Process Communication                  |  Component Object Model                                     |  0          |  3            |  1              |  4
-T1560           |  Archive Collected Data                       |  n/a                                                        |  0          |  1            |  2              |  3
-T1560.001       |  Archive Collected Data                       |  Archive via Utility                                        |  1          |  6            |  1              |  8
-T1561.001       |  Disk Wipe                                    |  Disk Content Wipe                                          |  0          |  1            |  0              |  1
-T1561.002       |  Disk Wipe                                    |  Disk Structure Wipe                                        |  0          |  1            |  0              |  1
-T1562           |  Impair Defenses                              |  n/a                                                        |  0          |  1            |  44             |  45
-T1562.001       |  Impair Defenses                              |  Disable or Modify Tools                                    |  2          |  20           |  33             |  55
-T1562.002       |  Impair Defenses                              |  Disable Windows Event Logging                              |  0          |  3            |  0              |  3
-T1562.004       |  Impair Defenses                              |  Disable or Modify System Firewall                          |  0          |  4            |  0              |  4
-T1562.006       |  Impair Defenses                              |  Indicator Blocking                                         |  2          |  3            |  1              |  6
-T1563.002       |  Remote Service Session Hijacking             |  RDP Hijacking                                              |  0          |  2            |  0              |  2
-T1564           |  Hide Artifacts                               |  n/a                                                        |  0          |  0            |  6              |  6
-T1564.001       |  Hide Artifacts                               |  Hidden Files and Directories                               |  0          |  1            |  4              |  5
-T1564.003       |  Hide Artifacts                               |  Hidden Window                                              |  0          |  1            |  0              |  1
-T1564.004       |  Hide Artifacts                               |  NTFS File Attributes                                       |  2          |  3            |  1              |  6
-T1565           |  Data Manipulation                            |  n/a                                                        |  0          |  0            |  3              |  3
-T1565.001       |  Data Manipulation                            |  Stored Data Manipulation                                   |  0          |  1            |  3              |  4
-T1565.002       |  Data Manipulation                            |  Transmitted Data Manipulation                              |  0          |  1            |  0              |  1
-T1566           |  Phishing                                     |  n/a                                                        |  0          |  2            |  15             |  17
-T1566.001       |  Phishing                                     |  Spearphishing Attachment                                   |  0          |  8            |  10             |  18
-T1566.002       |  Phishing                                     |  Spearphishing Link                                         |  0          |  0            |  7              |  7
-T1567           |  Exfiltration Over Web Service                |  n/a                                                        |  0          |  1            |  0              |  1
-T1567.001       |  Exfiltration Over Web Service                |  Exfiltration to Code Repository                            |  0          |  1            |  0              |  1
-T1567.002       |  Exfiltration Over Web Service                |  Exfiltration to Cloud Storage                              |  0          |  1            |  0              |  1
-T1568           |  Dynamic Resolution                           |  n/a                                                        |  0          |  1            |  3              |  4
-T1568.002       |  Dynamic Resolution                           |  Domain Generation Algorithms                               |  0          |  0            |  3              |  3
-T1569           |  System Services                              |  n/a                                                        |  0          |  1            |  3              |  4
-T1569.002       |  System Services                              |  Service Execution                                          |  3          |  11           |  3              |  17
-T1570           |  Lateral Tool Transfer                        |  n/a                                                        |  3          |  2            |  1              |  6
-T1571           |  Non-Standard Port                            |  n/a                                                        |  0          |  1            |  0              |  1
-T1572           |  Protocol Tunneling                           |  n/a                                                        |  0          |  4            |  0              |  4
-T1573           |  Encrypted Channel                            |  n/a                                                        |  0          |  0            |  1              |  1
-T1574           |  Hijack Execution Flow                        |  n/a                                                        |  0          |  1            |  6              |  7
-T1574.001       |  Hijack Execution Flow                        |  DLL Search Order Hijacking                                 |  0          |  3            |  1              |  4
-T1574.002       |  Hijack Execution Flow                        |  DLL Side-Loading                                           |  0          |  15           |  1              |  16
-T1574.006       |  Hijack Execution Flow                        |  LD_PRELOAD                                                 |  0          |  1            |  1              |  2
-T1574.007       |  Hijack Execution Flow                        |  Path Interception by PATH Environment Variable             |  1          |  0            |  2              |  3
-T1574.008       |  Hijack Execution Flow                        |  Path Interception by Search Order Hijacking                |  1          |  0            |  0              |  1
-T1574.009       |  Hijack Execution Flow                        |  Path Interception by Unquoted Path                         |  2          |  0            |  0              |  2
-T1574.010       |  Hijack Execution Flow                        |  Services File Permissions Weakness                         |  2          |  0            |  1              |  3
-T1574.011       |  Hijack Execution Flow                        |  Services Registry Permissions Weakness                     |  4          |  2            |  0              |  6
-T1592           |  Gather Victim Host Information               |  n/a                                                        |  0          |  1            |  0              |  1
-T1003.008       |  OS Credential Dumping                        |  /etc/passwd and /etc/shadow                                |  0          |  0            |  0              |  0
-T1557.002       |  Man-in-the-Middle                            |  ARP Cache Poisoning                                        |  0          |  0            |  0              |  0
-T1558.004       |  Steal or Forge Kerberos Tickets              |  AS-REP Roasting                                            |  0          |  0            |  0              |  0
-T1583           |  Acquire Infrastructure                       |  n/a                                                        |  0          |  0            |  0              |  0
-T1595           |  Active Scanning                              |  n/a                                                        |  0          |  0            |  0              |  0
-T1098.003       |  Account Manipulation                         |  Add Office 365 Global Administrator Role                   |  0          |  0            |  0              |  0
-T1499.003       |  Endpoint Denial of Service                   |  Application Exhaustion Flood                               |  0          |  0            |  0              |  0
-T1560.003       |  Archive Collected Data                       |  Archive via Custom Method                                  |  0          |  0            |  0              |  0
-T1560.002       |  Archive Collected Data                       |  Archive via Library                                        |  0          |  0            |  0              |  0
-T1573.002       |  Encrypted Channel                            |  Asymmetric Cryptography                                    |  0          |  0            |  0              |  0
-T1055.004       |  Process Injection                            |  Asynchronous Procedure Call                                |  0          |  0            |  0              |  0
-T1053.001       |  Scheduled Task/Job                           |  At (Linux)                                                 |  0          |  0            |  0              |  0
-T1583.005       |  Acquire Infrastructure                       |  Botnet                                                     |  0          |  0            |  0              |  0
-T1584.005       |  Compromise Infrastructure                    |  Botnet                                                     |  0          |  0            |  0              |  0
-T1217           |  Browser Bookmark Discovery                   |  n/a                                                        |  0          |  0            |  0              |  0
-T1176           |  Browser Extensions                           |  n/a                                                        |  0          |  0            |  0              |  0
-T1591.002       |  Gather Victim Org Information                |  Business Relationships                                     |  0          |  0            |  0              |  0
-T1596.004       |  Search Open Technical Databases              |  CDNs                                                       |  0          |  0            |  0              |  0
-T1574.012       |  Hijack Execution Flow                        |  COR_PROFILER                                               |  0          |  0            |  0              |  0
-T1070.002       |  Indicator Removal on Host                    |  Clear Linux or Mac System Logs                             |  0          |  0            |  0              |  0
-T1592.004       |  Gather Victim Host Information               |  Client Configurations                                      |  0          |  0            |  0              |  0
-T1115           |  Clipboard Data                               |  n/a                                                        |  0          |  0            |  0              |  0
-T1087.004       |  Account Discovery                            |  Cloud Account                                              |  0          |  0            |  0              |  0
-T1069.003       |  Permission Groups Discovery                  |  Cloud Groups                                               |  0          |  0            |  0              |  0
-T1580           |  Cloud Infrastructure Discovery               |  n/a                                                        |  0          |  0            |  0              |  0
-T1552.005       |  Unsecured Credentials                        |  Cloud Instance Metadata API                                |  0          |  0            |  0              |  0
-T1538           |  Cloud Service Dashboard                      |  n/a                                                        |  0          |  0            |  0              |  0
-T1587.002       |  Develop Capabilities                         |  Code Signing Certificates                                  |  0          |  0            |  0              |  0
-T1588.003       |  Obtain Capabilities                          |  Code Signing Certificates                                  |  0          |  0            |  0              |  0
-T1092           |  Communication Through Removable Media        |  n/a                                                        |  0          |  0            |  0              |  0
-T1542.002       |  Pre-OS Boot                                  |  Component Firmware                                         |  0          |  0            |  0              |  0
-T1586           |  Compromise Accounts                          |  n/a                                                        |  0          |  0            |  0              |  0
-T1195.003       |  Supply Chain Compromise                      |  Compromise Hardware Supply Chain                           |  0          |  0            |  0              |  0
-T1584           |  Compromise Infrastructure                    |  n/a                                                        |  0          |  0            |  0              |  0
-T1213.001       |  Data from Information Repositories           |  Confluence                                                 |  0          |  0            |  0              |  0
-T1578.002       |  Modify Cloud Compute Infrastructure          |  Create Cloud Instance                                      |  0          |  0            |  0              |  0
-T1578.001       |  Modify Cloud Compute Infrastructure          |  Create Snapshot                                            |  0          |  0            |  0              |  0
-T1056.004       |  Input Capture                                |  Credential API Hooking                                     |  0          |  0            |  0              |  0
-T1110.004       |  Brute Force                                  |  Credential Stuffing                                        |  0          |  0            |  0              |  0
-T1589.001       |  Gather Victim Identity Information           |  Credentials                                                |  0          |  0            |  0              |  0
-T1590.002       |  Gather Victim Network Information            |  DNS                                                        |  0          |  0            |  0              |  0
-T1568.003       |  Dynamic Resolution                           |  DNS Calculation                                            |  0          |  0            |  0              |  0
-T1583.002       |  Acquire Infrastructure                       |  DNS Server                                                 |  0          |  0            |  0              |  0
-T1584.002       |  Compromise Infrastructure                    |  DNS Server                                                 |  0          |  0            |  0              |  0
-T1596.001       |  Search Open Technical Databases              |  DNS/Passive DNS                                            |  0          |  0            |  0              |  0
-T1001           |  Data Obfuscation                             |  n/a                                                        |  0          |  0            |  0              |  0
-T1030           |  Data Transfer Size Limits                    |  n/a                                                        |  0          |  0            |  0              |  0
-T1602           |  Data from Configuration Repository           |  n/a                                                        |  0          |  0            |  0              |  0
-T1213           |  Data from Information Repositories           |  n/a                                                        |  0          |  0            |  0              |  0
-T1025           |  Data from Removable Media                    |  n/a                                                        |  0          |  0            |  0              |  0
-T1491           |  Defacement                                   |  n/a                                                        |  0          |  0            |  0              |  0
-T1578.003       |  Modify Cloud Compute Infrastructure          |  Delete Cloud Instance                                      |  0          |  0            |  0              |  0
-T1591.001       |  Gather Victim Org Information                |  Determine Physical Locations                               |  0          |  0            |  0              |  0
-T1587           |  Develop Capabilities                         |  n/a                                                        |  0          |  0            |  0              |  0
-T1587.003       |  Develop Capabilities                         |  Digital Certificates                                       |  0          |  0            |  0              |  0
-T1588.004       |  Obtain Capabilities                          |  Digital Certificates                                       |  0          |  0            |  0              |  0
-T1596.003       |  Search Open Technical Databases              |  Digital Certificates                                       |  0          |  0            |  0              |  0
-T1498.001       |  Network Denial of Service                    |  Direct Network Flood                                       |  0          |  0            |  0              |  0
-T1562.008       |  Impair Defenses                              |  Disable Cloud Logs                                         |  0          |  0            |  0              |  0
-T1600.002       |  Weaken Encryption                            |  Disable Crypto Hardware                                    |  0          |  0            |  0              |  0
-T1562.007       |  Impair Defenses                              |  Disable or Modify Cloud Firewall                           |  0          |  0            |  0              |  0
-T1561           |  Disk Wipe                                    |  n/a                                                        |  0          |  0            |  0              |  0
-T1556.001       |  Modify Authentication Process                |  Domain Controller Authentication                           |  0          |  0            |  0              |  0
-T1090.004       |  Proxy                                        |  Domain Fronting                                            |  0          |  0            |  0              |  0
-T1590.001       |  Gather Victim Network Information            |  Domain Properties                                          |  0          |  0            |  0              |  0
-T1583.001       |  Acquire Infrastructure                       |  Domains                                                    |  0          |  0            |  0              |  0
-T1584.001       |  Compromise Infrastructure                    |  Domains                                                    |  0          |  0            |  0              |  0
-T1601.002       |  Modify System Image                          |  Downgrade System Image                                     |  0          |  0            |  0              |  0
-T1574.004       |  Hijack Execution Flow                        |  Dylib Hijacking                                            |  0          |  0            |  0              |  0
-T1559.002       |  Inter-Process Communication                  |  Dynamic Data Exchange                                      |  0          |  0            |  0              |  0
-T1548.004       |  Abuse Elevation Control Mechanism            |  Elevated Execution with Prompt                             |  0          |  0            |  0              |  0
-T1087.003       |  Account Discovery                            |  Email Account                                              |  0          |  0            |  0              |  0
-T1585.002       |  Establish Accounts                           |  Email Accounts                                             |  0          |  0            |  0              |  0
-T1586.002       |  Compromise Accounts                          |  Email Accounts                                             |  0          |  0            |  0              |  0
-T1589.002       |  Gather Victim Identity Information           |  Email Addresses                                            |  0          |  0            |  0              |  0
-T1114.003       |  Email Collection                             |  Email Forwarding Rule                                      |  0          |  0            |  0              |  0
-T1589.003       |  Gather Victim Identity Information           |  Employee Names                                             |  0          |  0            |  0              |  0
-T1480.001       |  Execution Guardrails                         |  Environmental Keying                                       |  0          |  0            |  0              |  0
-T1585           |  Establish Accounts                           |  n/a                                                        |  0          |  0            |  0              |  0
-T1098.002       |  Account Manipulation                         |  Exchange Email Delegate Permissions                        |  0          |  0            |  0              |  0
-T1574.005       |  Hijack Execution Flow                        |  Executable Installer File Permissions Weakness             |  0          |  0            |  0              |  0
-T1480           |  Execution Guardrails                         |  n/a                                                        |  0          |  0            |  0              |  0
-T1048.002       |  Exfiltration Over Alternative Protocol       |  Exfiltration Over Asymmetric Encrypted Non-C2 Protocol     |  0          |  0            |  0              |  0
-T1011.001       |  Exfiltration Over Other Network Medium       |  Exfiltration Over Bluetooth                                |  0          |  0            |  0              |  0
-T1011           |  Exfiltration Over Other Network Medium       |  n/a                                                        |  0          |  0            |  0              |  0
-T1052           |  Exfiltration Over Physical Medium            |  n/a                                                        |  0          |  0            |  0              |  0
-T1052.001       |  Exfiltration Over Physical Medium            |  Exfiltration over USB                                      |  0          |  0            |  0              |  0
-T1587.004       |  Develop Capabilities                         |  Exploits                                                   |  0          |  0            |  0              |  0
-T1588.005       |  Obtain Capabilities                          |  Exploits                                                   |  0          |  0            |  0              |  0
-T1491.002       |  Defacement                                   |  External Defacement                                        |  0          |  0            |  0              |  0
-T1055.011       |  Process Injection                            |  Extra Window Memory Injection                              |  0          |  0            |  0              |  0
-T1008           |  Fallback Channels                            |  n/a                                                        |  0          |  0            |  0              |  0
-T1568.001       |  Dynamic Resolution                           |  Fast Flux DNS                                              |  0          |  0            |  0              |  0
-T1071.002       |  Application Layer Protocol                   |  File Transfer Protocols                                    |  0          |  0            |  0              |  0
-T1592.003       |  Gather Victim Host Information               |  Firmware                                                   |  0          |  0            |  0              |  0
-T1553.001       |  Subvert Trust Controls                       |  Gatekeeper Bypass                                          |  0          |  0            |  0              |  0
-T1589           |  Gather Victim Identity Information           |  n/a                                                        |  0          |  0            |  0              |  0
-T1590           |  Gather Victim Network Information            |  n/a                                                        |  0          |  0            |  0              |  0
-T1591           |  Gather Victim Org Information                |  n/a                                                        |  0          |  0            |  0              |  0
-T1558.001       |  Steal or Forge Kerberos Tickets              |  Golden Ticket                                              |  0          |  0            |  0              |  0
-T1061           |  Graphical User Interface                     |  n/a                                                        |  0          |  0            |  0              |  0
-T1592.001       |  Gather Victim Host Information               |  Hardware                                                   |  0          |  0            |  0              |  0
-T1564.005       |  Hide Artifacts                               |  Hidden File System                                         |  0          |  0            |  0              |  0
-T1564.002       |  Hide Artifacts                               |  Hidden Users                                               |  0          |  0            |  0              |  0
-T1062           |  Hypervisor                                   |  n/a                                                        |  0          |  0            |  0              |  0
-T1590.005       |  Gather Victim Network Information            |  IP Addresses                                               |  0          |  0            |  0              |  0
-T1591.003       |  Gather Victim Org Information                |  Identify Business Tempo                                    |  0          |  0            |  0              |  0
-T1591.004       |  Gather Victim Org Information                |  Identify Roles                                             |  0          |  0            |  0              |  0
-T1562.003       |  Impair Defenses                              |  Impair Command History Logging                             |  0          |  0            |  0              |  0
-T1525           |  Implant Container Image                      |  n/a                                                        |  0          |  0            |  0              |  0
-T1491.001       |  Defacement                                   |  Internal Defacement                                        |  0          |  0            |  0              |  0
-T1534           |  Internal Spearphishing                       |  n/a                                                        |  0          |  0            |  0              |  0
-T1036.001       |  Masquerading                                 |  Invalid Code Signature                                     |  0          |  0            |  0              |  0
-T1001.001       |  Data Obfuscation                             |  Junk Data                                                  |  0          |  0            |  0              |  0
-T1056.001       |  Input Capture                                |  Keylogging                                                 |  0          |  0            |  0              |  0
-T1546.006       |  Event Triggered Execution                    |  LC_LOAD_DYLIB Addition                                     |  0          |  0            |  0              |  0
-T1149           |  LC_MAIN Hijacking                            |  n/a                                                        |  0          |  0            |  0              |  0
-T1543.004       |  Create or Modify System Process              |  Launch Daemon                                              |  0          |  0            |  0              |  0
-T1569.001       |  System Services                              |  Launchctl                                                  |  0          |  0            |  0              |  0
-T1053.004       |  Scheduled Task/Job                           |  Launchd                                                    |  0          |  0            |  0              |  0
-T1074.001       |  Data Staged                                  |  Local Data Staging                                         |  0          |  0            |  0              |  0
-T1114.001       |  Email Collection                             |  Local Email Collection                                     |  0          |  0            |  0              |  0
-T1037.002       |  Boot or Logon Initialization Scripts         |  Logon Script (Mac)                                         |  0          |  0            |  0              |  0
-T1071.003       |  Application Layer Protocol                   |  Mail Protocols                                             |  0          |  0            |  0              |  0
-T1134.003       |  Access Token Manipulation                    |  Make and Impersonate Token                                 |  0          |  0            |  0              |  0
-T1204.001       |  User Execution                               |  Malicious Link                                             |  0          |  0            |  0              |  0
-T1587.001       |  Develop Capabilities                         |  Malware                                                    |  0          |  0            |  0              |  0
-T1588.001       |  Obtain Capabilities                          |  Malware                                                    |  0          |  0            |  0              |  0
-T1185           |  Man in the Browser                           |  n/a                                                        |  0          |  0            |  0              |  0
-T1557           |  Man-in-the-Middle                            |  n/a                                                        |  0          |  0            |  0              |  0
-T1578           |  Modify Cloud Compute Infrastructure          |  n/a                                                        |  0          |  0            |  0              |  0
-T1601           |  Modify System Image                          |  n/a                                                        |  0          |  0            |  0              |  0
-T1026           |  Multiband Communication                      |  n/a                                                        |  0          |  0            |  0              |  0
-T1599.001       |  Network Boundary Bridging                    |  Network Address Translation Traversal                      |  0          |  0            |  0              |  0
-T1599           |  Network Boundary Bridging                    |  n/a                                                        |  0          |  0            |  0              |  0
-T1556.004       |  Modify Authentication Process                |  Network Device Authentication                              |  0          |  0            |  0              |  0
-T1059.008       |  Command and Scripting Interpreter            |  Network Device CLI                                         |  0          |  0            |  0              |  0
-T1602.002       |  Data from Configuration Repository           |  Network Device Configuration Dump                          |  0          |  0            |  0              |  0
-T1037.003       |  Boot or Logon Initialization Scripts         |  Network Logon Script                                       |  0          |  0            |  0              |  0
-T1590.006       |  Gather Victim Network Information            |  Network Security Appliances                                |  0          |  0            |  0              |  0
-T1590.004       |  Gather Victim Network Information            |  Network Topology                                           |  0          |  0            |  0              |  0
-T1590.003       |  Gather Victim Network Information            |  Network Trust Dependencies                                 |  0          |  0            |  0              |  0
-T1095           |  Non-Application Layer Protocol               |  n/a                                                        |  0          |  0            |  0              |  0
-T1132.002       |  Data Encoding                                |  Non-Standard Encoding                                      |  0          |  0            |  0              |  0
-T1499.001       |  Endpoint Denial of Service                   |  OS Exhaustion Flood                                        |  0          |  0            |  0              |  0
-T1588           |  Obtain Capabilities                          |  n/a                                                        |  0          |  0            |  0              |  0
-T1137.001       |  Office Application Startup                   |  Office Template Macros                                     |  0          |  0            |  0              |  0
-T1137.003       |  Office Application Startup                   |  Outlook Forms                                              |  0          |  0            |  0              |  0
-T1137.004       |  Office Application Startup                   |  Outlook Home Page                                          |  0          |  0            |  0              |  0
-T1137.005       |  Office Application Startup                   |  Outlook Rules                                              |  0          |  0            |  0              |  0
-T1134.004       |  Access Token Manipulation                    |  Parent PID Spoofing                                        |  0          |  0            |  0              |  0
-T1110.002       |  Brute Force                                  |  Password Cracking                                          |  0          |  0            |  0              |  0
-T1556.002       |  Modify Authentication Process                |  Password Filter DLL                                        |  0          |  0            |  0              |  0
-T1110.001       |  Brute Force                                  |  Password Guessing                                          |  0          |  0            |  0              |  0
-T1110.003       |  Brute Force                                  |  Password Spraying                                          |  0          |  0            |  0              |  0
-T1601.001       |  Modify System Image                          |  Patch System Image                                         |  0          |  0            |  0              |  0
-T1034           |  Path Interception                            |  n/a                                                        |  0          |  0            |  0              |  0
-T1598           |  Phishing for Information                     |  n/a                                                        |  0          |  0            |  0              |  0
-T1556.003       |  Modify Authentication Process                |  Pluggable Authentication Modules                           |  0          |  0            |  0              |  0
-T1205.001       |  Traffic Signaling                            |  Port Knocking                                              |  0          |  0            |  0              |  0
-T1542           |  Pre-OS Boot                                  |  n/a                                                        |  0          |  0            |  0              |  0
-T1547.012       |  Boot or Logon Autostart Execution            |  Print Processors                                           |  0          |  0            |  0              |  0
-T1055.009       |  Process Injection                            |  Proc Memory                                                |  0          |  0            |  0              |  0
-T1055.013       |  Process Injection                            |  Process Doppelgänging                                      |  0          |  0            |  0              |  0
-T1055.008       |  Process Injection                            |  Ptrace System Calls                                        |  0          |  0            |  0              |  0
-T1216.001       |  Signed Script Proxy Execution                |  PubPrn                                                     |  0          |  0            |  0              |  0
-T1597.002       |  Search Closed Sources                        |  Purchase Technical Data                                    |  0          |  0            |  0              |  0
-T1542.004       |  Pre-OS Boot                                  |  ROMMONkit                                                  |  0          |  0            |  0              |  0
-T1037.004       |  Boot or Logon Initialization Scripts         |  Rc.common                                                  |  0          |  0            |  0              |  0
-T1547.007       |  Boot or Logon Autostart Execution            |  Re-opened Applications                                     |  0          |  0            |  0              |  0
-T1600.001       |  Weaken Encryption                            |  Reduce Key Space                                           |  0          |  0            |  0              |  0
-T1108           |  Redundant Access                             |  n/a                                                        |  0          |  0            |  0              |  0
-T1498.002       |  Network Denial of Service                    |  Reflection Amplification                                   |  0          |  0            |  0              |  0
-T1074.002       |  Data Staged                                  |  Remote Data Staging                                        |  0          |  0            |  0              |  0
-T1114.002       |  Email Collection                             |  Remote Email Collection                                    |  0          |  0            |  0              |  0
-T1563           |  Remote Service Session Hijacking             |  n/a                                                        |  0          |  0            |  0              |  0
-T1496           |  Resource Hijacking                           |  n/a                                                        |  0          |  0            |  0              |  0
-T1578.004       |  Modify Cloud Compute Infrastructure          |  Revert Cloud Instance                                      |  0          |  0            |  0              |  0
-T1036.002       |  Masquerading                                 |  Right-to-Left Override                                     |  0          |  0            |  0              |  0
-T1014           |  Rootkit                                      |  n/a                                                        |  0          |  0            |  0              |  0
-T1564.006       |  Hide Artifacts                               |  Run Virtual Instance                                       |  0          |  0            |  0              |  0
-T1565.003       |  Data Manipulation                            |  Runtime Data Manipulation                                  |  0          |  0            |  0              |  0
-T1602.001       |  Data from Configuration Repository           |  SNMP (MIB Dump)                                            |  0          |  0            |  0              |  0
-T1505.001       |  Server Software Component                    |  SQL Stored Procedures                                      |  0          |  0            |  0              |  0
-T1021.004       |  Remote Services                              |  SSH                                                        |  0          |  0            |  0              |  0
-T1563.001       |  Remote Service Session Hijacking             |  SSH Hijacking                                              |  0          |  0            |  0              |  0
-T1596.005       |  Search Open Technical Databases              |  Scan Databases                                             |  0          |  0            |  0              |  0
-T1595.001       |  Active Scanning                              |  Scanning IP Blocks                                         |  0          |  0            |  0              |  0
-T1597           |  Search Closed Sources                        |  n/a                                                        |  0          |  0            |  0              |  0
-T1593.002       |  Search Open Websites/Domains                 |  Search Engines                                             |  0          |  0            |  0              |  0
-T1596           |  Search Open Technical Databases              |  n/a                                                        |  0          |  0            |  0              |  0
-T1593           |  Search Open Websites/Domains                 |  n/a                                                        |  0          |  0            |  0              |  0
-T1594           |  Search Victim-Owned Websites                 |  n/a                                                        |  0          |  0            |  0              |  0
-T1555.002       |  Credentials from Password Stores             |  Securityd Memory                                           |  0          |  0            |  0              |  0
-T1583.004       |  Acquire Infrastructure                       |  Server                                                     |  0          |  0            |  0              |  0
-T1584.004       |  Compromise Infrastructure                    |  Server                                                     |  0          |  0            |  0              |  0
-T1499.002       |  Endpoint Denial of Service                   |  Service Exhaustion Flood                                   |  0          |  0            |  0              |  0
-T1051           |  Shared Webroot                               |  n/a                                                        |  0          |  0            |  0              |  0
-T1213.002       |  Data from Information Repositories           |  Sharepoint                                                 |  0          |  0            |  0              |  0
-T1216           |  Signed Script Proxy Execution                |  n/a                                                        |  0          |  0            |  0              |  0
-T1558.002       |  Steal or Forge Kerberos Tickets              |  Silver Ticket                                              |  0          |  0            |  0              |  0
-T1593.001       |  Search Open Websites/Domains                 |  Social Media                                               |  0          |  0            |  0              |  0
-T1585.001       |  Establish Accounts                           |  Social Media Accounts                                      |  0          |  0            |  0              |  0
-T1586.001       |  Compromise Accounts                          |  Social Media Accounts                                      |  0          |  0            |  0              |  0
-T1592.002       |  Gather Victim Host Information               |  Software                                                   |  0          |  0            |  0              |  0
-T1072           |  Software Deployment Tools                    |  n/a                                                        |  0          |  0            |  0              |  0
-T1027.002       |  Obfuscated Files or Information              |  Software Packing                                           |  0          |  0            |  0              |  0
-T1153           |  Source                                       |  n/a                                                        |  0          |  0            |  0              |  0
-T1036.006       |  Masquerading                                 |  Space after Filename                                       |  0          |  0            |  0              |  0
-T1598.002       |  Phishing for Information                     |  Spearphishing Attachment                                   |  0          |  0            |  0              |  0
-T1598.003       |  Phishing for Information                     |  Spearphishing Link                                         |  0          |  0            |  0              |  0
-T1598.001       |  Phishing for Information                     |  Spearphishing Service                                      |  0          |  0            |  0              |  0
-T1566.003       |  Phishing                                     |  Spearphishing via Service                                  |  0          |  0            |  0              |  0
-T1037.005       |  Boot or Logon Initialization Scripts         |  Startup Items                                              |  0          |  0            |  0              |  0
-T1001.002       |  Data Obfuscation                             |  Steganography                                              |  0          |  0            |  0              |  0
-T1573.001       |  Encrypted Channel                            |  Symmetric Cryptography                                     |  0          |  0            |  0              |  0
-T1497.001       |  Virtualization/Sandbox Evasion               |  System Checks                                              |  0          |  0            |  0              |  0
-T1542.001       |  Pre-OS Boot                                  |  System Firmware                                            |  0          |  0            |  0              |  0
-T1053.006       |  Scheduled Task/Job                           |  Systemd Timers                                             |  0          |  0            |  0              |  0
-T1542.005       |  Pre-OS Boot                                  |  TFTP Boot                                                  |  0          |  0            |  0              |  0
-T1080           |  Taint Shared Content                         |  n/a                                                        |  0          |  0            |  0              |  0
-T1221           |  Template Injection                           |  n/a                                                        |  0          |  0            |  0              |  0
-T1055.003       |  Process Injection                            |  Thread Execution Hijacking                                 |  0          |  0            |  0              |  0
-T1055.005       |  Process Injection                            |  Thread Local Storage                                       |  0          |  0            |  0              |  0
-T1597.001       |  Search Closed Sources                        |  Threat Intel Vendors                                       |  0          |  0            |  0              |  0
-T1497.003       |  Virtualization/Sandbox Evasion               |  Time Based Evasion                                         |  0          |  0            |  0              |  0
-T1588.002       |  Obtain Capabilities                          |  Tool                                                       |  0          |  0            |  0              |  0
-T1020.001       |  Automated Exfiltration                       |  Traffic Duplication                                        |  0          |  0            |  0              |  0
-T1205           |  Traffic Signaling                            |  n/a                                                        |  0          |  0            |  0              |  0
-T1505.002       |  Server Software Component                    |  Transport Agent                                            |  0          |  0            |  0              |  0
-T1546.005       |  Event Triggered Execution                    |  Trap                                                       |  0          |  0            |  0              |  0
-T1199           |  Trusted Relationship                         |  n/a                                                        |  0          |  0            |  0              |  0
-T1535           |  Unused/Unsupported Cloud Regions             |  n/a                                                        |  0          |  0            |  0              |  0
-T1497.002       |  Virtualization/Sandbox Evasion               |  User Activity Based Checks                                 |  0          |  0            |  0              |  0
-T1564.007       |  Hide Artifacts                               |  VBA Stomping                                               |  0          |  0            |  0              |  0
-T1055.014       |  Process Injection                            |  VDSO Hijacking                                             |  0          |  0            |  0              |  0
-T1021.005       |  Remote Services                              |  VNC                                                        |  0          |  0            |  0              |  0
-T1218.012       |  Signed Binary Proxy Execution                |  Verclsid                                                   |  0          |  0            |  0              |  0
-T1583.003       |  Acquire Infrastructure                       |  Virtual Private Server                                     |  0          |  0            |  0              |  0
-T1584.003       |  Compromise Infrastructure                    |  Virtual Private Server                                     |  0          |  0            |  0              |  0
-T1497           |  Virtualization/Sandbox Evasion               |  n/a                                                        |  0          |  0            |  0              |  0
-T1588.006       |  Obtain Capabilities                          |  Vulnerabilities                                            |  0          |  0            |  0              |  0
-T1595.002       |  Active Scanning                              |  Vulnerability Scanning                                     |  0          |  0            |  0              |  0
-T1596.002       |  Search Open Technical Databases              |  WHOIS                                                      |  0          |  0            |  0              |  0
-T1600           |  Weaken Encryption                            |  n/a                                                        |  0          |  0            |  0              |  0
-T1056.003       |  Input Capture                                |  Web Portal Capture                                         |  0          |  0            |  0              |  0
-T1583.006       |  Acquire Infrastructure                       |  Web Services                                               |  0          |  0            |  0              |  0
-T1584.006       |  Compromise Infrastructure                    |  Web Services                                               |  0          |  0            |  0              |  0
-T1550.004       |  Use Alternate Authentication Material        |  Web Session Cookie                                         |  0          |  0            |  0              |  0
-T1098.001       |  Account Manipulation                         |  Additional Cloud Credentials                               |  0          |  0            |  0              |  0
-T1484           |  Domain Policy Modification                   |  n/a                                                        |  0          |  0            |  0              |  0
-T1484.001       |  Domain Policy Modification                   |  Group Policy Modification                                  |  0          |  0            |  0              |  0
-T1484.002       |  Domain Policy Modification                   |  Domain Trust Modification                                  |  0          |  0            |  0              |  0
-T1606           |  Forge Web Credentials                        |  n/a                                                        |  0          |  0            |  0              |  0
-T1606.001       |  Forge Web Credentials                        |  Web Cookies                                                |  0          |  0            |  0              |  0
-T1606.002       |  Forge Web Credentials                        |  SAML Tokens                                                |  0          |  0            |  0              |  0
+<script type="text/javascript" src="assets/sort-table.js"></script>
+<table class="js-sort-table" id="coverage-sort">
+        <thead>
+        <tr>
+            <th>Technique ID</th>
+            <th>Technique Name</th>
+            <th>Sub-technique Name</th>
+            <th class="js-sort-number"># CAR</th>
+            <th class="js-sort-number"># Sigma</th>
+            <th class="js-sort-number"># ES</th>
+            <th class="js-sort-number"># Total</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>T1001</td>
+                <td>Data Obfuscation</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1001.001</td>
+                <td>Data Obfuscation</td>
+                <td>Junk Data</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1001.002</td>
+                <td>Data Obfuscation</td>
+                <td>Steganography</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1001.003</td>
+                <td>Data Obfuscation</td>
+                <td>Protocol Impersonation</td>
+                <td><0</td>
+                <td><3</td>
+                <td><0</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1003</td>
+                <td>OS Credential Dumping</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><56</td>
+                <td><13</td>
+                <td><69</td>
+            </tr>
+            <tr>
+                <td>T1003.001</td>
+                <td>OS Credential Dumping</td>
+                <td>LSASS Memory</td>
+                <td><4</td>
+                <td><32</td>
+                <td><1</td>
+                <td><37</td>
+            </tr>
+            <tr>
+                <td>T1003.002</td>
+                <td>OS Credential Dumping</td>
+                <td>Security Account Manager</td>
+                <td><1</td>
+                <td><17</td>
+                <td><0</td>
+                <td><18</td>
+            </tr>
+            <tr>
+                <td>T1003.003</td>
+                <td>OS Credential Dumping</td>
+                <td>NTDS</td>
+                <td><2</td>
+                <td><11</td>
+                <td><0</td>
+                <td><13</td>
+            </tr>
+            <tr>
+                <td>T1003.004</td>
+                <td>OS Credential Dumping</td>
+                <td>LSA Secrets</td>
+                <td><0</td>
+                <td><10</td>
+                <td><0</td>
+                <td><10</td>
+            </tr>
+            <tr>
+                <td>T1003.005</td>
+                <td>OS Credential Dumping</td>
+                <td>Cached Domain Credentials</td>
+                <td><0</td>
+                <td><6</td>
+                <td><0</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1003.006</td>
+                <td>OS Credential Dumping</td>
+                <td>DCSync</td>
+                <td><0</td>
+                <td><5</td>
+                <td><0</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1003.007</td>
+                <td>OS Credential Dumping</td>
+                <td>Proc Filesystem</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1003.008</td>
+                <td>OS Credential Dumping</td>
+                <td>/etc/passwd and /etc/shadow</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1005</td>
+                <td>Data from Local System</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><3</td>
+                <td><0</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1006</td>
+                <td>Direct Volume Access</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1007</td>
+                <td>System Service Discovery</td>
+                <td>n/a</td>
+                <td><2</td>
+                <td><1</td>
+                <td><0</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1008</td>
+                <td>Fallback Channels</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1010</td>
+                <td>Application Window Discovery</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1011</td>
+                <td>Exfiltration Over Other Network Medium</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1011.001</td>
+                <td>Exfiltration Over Other Network Medium</td>
+                <td>Exfiltration Over Bluetooth</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1012</td>
+                <td>Query Registry</td>
+                <td>n/a</td>
+                <td><3</td>
+                <td><6</td>
+                <td><1</td>
+                <td><10</td>
+            </tr>
+            <tr>
+                <td>T1014</td>
+                <td>Rootkit</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1016</td>
+                <td>System Network Configuration Discovery</td>
+                <td>n/a</td>
+                <td><2</td>
+                <td><3</td>
+                <td><2</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1018</td>
+                <td>Remote System Discovery</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><5</td>
+                <td><2</td>
+                <td><8</td>
+            </tr>
+            <tr>
+                <td>T1020</td>
+                <td>Automated Exfiltration</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><4</td>
+                <td><0</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1020.001</td>
+                <td>Automated Exfiltration</td>
+                <td>Traffic Duplication</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1021</td>
+                <td>Remote Services</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><4</td>
+                <td><26</td>
+                <td><31</td>
+            </tr>
+            <tr>
+                <td>T1021.001</td>
+                <td>Remote Services</td>
+                <td>Remote Desktop Protocol</td>
+                <td><3</td>
+                <td><8</td>
+                <td><0</td>
+                <td><11</td>
+            </tr>
+            <tr>
+                <td>T1021.002</td>
+                <td>Remote Services</td>
+                <td>SMB/Windows Admin Shares</td>
+                <td><5</td>
+                <td><15</td>
+                <td><4</td>
+                <td><24</td>
+            </tr>
+            <tr>
+                <td>T1021.003</td>
+                <td>Remote Services</td>
+                <td>Distributed Component Object Model</td>
+                <td><1</td>
+                <td><3</td>
+                <td><0</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1021.004</td>
+                <td>Remote Services</td>
+                <td>SSH</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1021.005</td>
+                <td>Remote Services</td>
+                <td>VNC</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1021.006</td>
+                <td>Remote Services</td>
+                <td>Windows Remote Management</td>
+                <td><3</td>
+                <td><3</td>
+                <td><0</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1025</td>
+                <td>Data from Removable Media</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1026</td>
+                <td>Multiband Communication</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1027</td>
+                <td>Obfuscated Files or Information</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><15</td>
+                <td><4</td>
+                <td><19</td>
+            </tr>
+            <tr>
+                <td>T1027.001</td>
+                <td>Obfuscated Files or Information</td>
+                <td>Binary Padding</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1027.002</td>
+                <td>Obfuscated Files or Information</td>
+                <td>Software Packing</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1027.003</td>
+                <td>Obfuscated Files or Information</td>
+                <td>Steganography</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1027.004</td>
+                <td>Obfuscated Files or Information</td>
+                <td>Compile After Delivery</td>
+                <td><0</td>
+                <td><3</td>
+                <td><1</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1027.005</td>
+                <td>Obfuscated Files or Information</td>
+                <td>Indicator Removal from Tools</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1029</td>
+                <td>Scheduled Transfer</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1030</td>
+                <td>Data Transfer Size Limits</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1033</td>
+                <td>System Owner/User Discovery</td>
+                <td>n/a</td>
+                <td><2</td>
+                <td><8</td>
+                <td><3</td>
+                <td><13</td>
+            </tr>
+            <tr>
+                <td>T1034</td>
+                <td>Path Interception</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1036</td>
+                <td>Masquerading</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><32</td>
+                <td><10</td>
+                <td><43</td>
+            </tr>
+            <tr>
+                <td>T1036.001</td>
+                <td>Masquerading</td>
+                <td>Invalid Code Signature</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1036.002</td>
+                <td>Masquerading</td>
+                <td>Right-to-Left Override</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1036.003</td>
+                <td>Masquerading</td>
+                <td>Rename System Utilities</td>
+                <td><1</td>
+                <td><12</td>
+                <td><0</td>
+                <td><13</td>
+            </tr>
+            <tr>
+                <td>T1036.004</td>
+                <td>Masquerading</td>
+                <td>Masquerade Task or Service</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1036.005</td>
+                <td>Masquerading</td>
+                <td>Match Legitimate Name or Location</td>
+                <td><0</td>
+                <td><8</td>
+                <td><0</td>
+                <td><8</td>
+            </tr>
+            <tr>
+                <td>T1036.006</td>
+                <td>Masquerading</td>
+                <td>Space after Filename</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1037</td>
+                <td>Boot or Logon Initialization Scripts</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><2</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1037.001</td>
+                <td>Boot or Logon Initialization Scripts</td>
+                <td>Logon Script (Windows)</td>
+                <td><2</td>
+                <td><2</td>
+                <td><0</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1037.002</td>
+                <td>Boot or Logon Initialization Scripts</td>
+                <td>Logon Script (Mac)</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1037.003</td>
+                <td>Boot or Logon Initialization Scripts</td>
+                <td>Network Logon Script</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1037.004</td>
+                <td>Boot or Logon Initialization Scripts</td>
+                <td>Rc.common</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1037.005</td>
+                <td>Boot or Logon Initialization Scripts</td>
+                <td>Startup Items</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1039</td>
+                <td>Data from Network Shared Drive</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><1</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1040</td>
+                <td>Network Sniffing</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><6</td>
+                <td><2</td>
+                <td><9</td>
+            </tr>
+            <tr>
+                <td>T1041</td>
+                <td>Exfiltration Over C2 Channel</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1043</td>
+                <td>Commonly Used Port</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><13</td>
+                <td><0</td>
+                <td><13</td>
+            </tr>
+            <tr>
+                <td>T1046</td>
+                <td>Network Service Scanning</td>
+                <td>n/a</td>
+                <td><2</td>
+                <td><2</td>
+                <td><0</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1047</td>
+                <td>Windows Management Instrumentation</td>
+                <td>n/a</td>
+                <td><3</td>
+                <td><18</td>
+                <td><4</td>
+                <td><25</td>
+            </tr>
+            <tr>
+                <td>T1048</td>
+                <td>Exfiltration Over Alternative Protocol</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><12</td>
+                <td><6</td>
+                <td><18</td>
+            </tr>
+            <tr>
+                <td>T1048.001</td>
+                <td>Exfiltration Over Alternative Protocol</td>
+                <td>Exfiltration Over Symmetric Encrypted Non-C2 Protocol</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1048.002</td>
+                <td>Exfiltration Over Alternative Protocol</td>
+                <td>Exfiltration Over Asymmetric Encrypted Non-C2 Protocol</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1048.003</td>
+                <td>Exfiltration Over Alternative Protocol</td>
+                <td>Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol</td>
+                <td><0</td>
+                <td><6</td>
+                <td><0</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1049</td>
+                <td>System Network Connections Discovery</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><2</td>
+                <td><1</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1051</td>
+                <td>Shared Webroot</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1052</td>
+                <td>Exfiltration Over Physical Medium</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1052.001</td>
+                <td>Exfiltration Over Physical Medium</td>
+                <td>Exfiltration over USB</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1053</td>
+                <td>Scheduled Task/Job</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><16</td>
+                <td><11</td>
+                <td><27</td>
+            </tr>
+            <tr>
+                <td>T1053.001</td>
+                <td>Scheduled Task/Job</td>
+                <td>At (Linux)</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1053.002</td>
+                <td>Scheduled Task/Job</td>
+                <td>At (Windows)</td>
+                <td><3</td>
+                <td><4</td>
+                <td><0</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1053.003</td>
+                <td>Scheduled Task/Job</td>
+                <td>Cron</td>
+                <td><0</td>
+                <td><0</td>
+                <td><3</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1053.004</td>
+                <td>Scheduled Task/Job</td>
+                <td>Launchd</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1053.005</td>
+                <td>Scheduled Task/Job</td>
+                <td>Scheduled Task</td>
+                <td><5</td>
+                <td><11</td>
+                <td><0</td>
+                <td><16</td>
+            </tr>
+            <tr>
+                <td>T1053.006</td>
+                <td>Scheduled Task/Job</td>
+                <td>Systemd Timers</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1055</td>
+                <td>Process Injection</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><13</td>
+                <td><10</td>
+                <td><23</td>
+            </tr>
+            <tr>
+                <td>T1055.001</td>
+                <td>Process Injection</td>
+                <td>Dynamic-link Library Injection</td>
+                <td><2</td>
+                <td><7</td>
+                <td><0</td>
+                <td><9</td>
+            </tr>
+            <tr>
+                <td>T1055.002</td>
+                <td>Process Injection</td>
+                <td>Portable Executable Injection</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1055.003</td>
+                <td>Process Injection</td>
+                <td>Thread Execution Hijacking</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1055.004</td>
+                <td>Process Injection</td>
+                <td>Asynchronous Procedure Call</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1055.005</td>
+                <td>Process Injection</td>
+                <td>Thread Local Storage</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1055.008</td>
+                <td>Process Injection</td>
+                <td>Ptrace System Calls</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1055.009</td>
+                <td>Process Injection</td>
+                <td>Proc Memory</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1055.011</td>
+                <td>Process Injection</td>
+                <td>Extra Window Memory Injection</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1055.012</td>
+                <td>Process Injection</td>
+                <td>Process Hollowing</td>
+                <td><0</td>
+                <td><1</td>
+                <td><2</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1055.013</td>
+                <td>Process Injection</td>
+                <td>Process Doppelgänging</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1055.014</td>
+                <td>Process Injection</td>
+                <td>VDSO Hijacking</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1056</td>
+                <td>Input Capture</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1056.001</td>
+                <td>Input Capture</td>
+                <td>Keylogging</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1056.002</td>
+                <td>Input Capture</td>
+                <td>GUI Input Capture</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1056.003</td>
+                <td>Input Capture</td>
+                <td>Web Portal Capture</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1056.004</td>
+                <td>Input Capture</td>
+                <td>Credential API Hooking</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1057</td>
+                <td>Process Discovery</td>
+                <td>n/a</td>
+                <td><2</td>
+                <td><2</td>
+                <td><2</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1059</td>
+                <td>Command and Scripting Interpreter</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><19</td>
+                <td><25</td>
+                <td><45</td>
+            </tr>
+            <tr>
+                <td>T1059.001</td>
+                <td>Command and Scripting Interpreter</td>
+                <td>PowerShell</td>
+                <td><3</td>
+                <td><71</td>
+                <td><4</td>
+                <td><78</td>
+            </tr>
+            <tr>
+                <td>T1059.002</td>
+                <td>Command and Scripting Interpreter</td>
+                <td>AppleScript</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1059.003</td>
+                <td>Command and Scripting Interpreter</td>
+                <td>Windows Command Shell</td>
+                <td><2</td>
+                <td><15</td>
+                <td><0</td>
+                <td><17</td>
+            </tr>
+            <tr>
+                <td>T1059.004</td>
+                <td>Command and Scripting Interpreter</td>
+                <td>Unix Shell</td>
+                <td><0</td>
+                <td><7</td>
+                <td><0</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1059.005</td>
+                <td>Command and Scripting Interpreter</td>
+                <td>Visual Basic</td>
+                <td><1</td>
+                <td><16</td>
+                <td><0</td>
+                <td><17</td>
+            </tr>
+            <tr>
+                <td>T1059.006</td>
+                <td>Command and Scripting Interpreter</td>
+                <td>Python</td>
+                <td><0</td>
+                <td><2</td>
+                <td><1</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1059.007</td>
+                <td>Command and Scripting Interpreter</td>
+                <td>JavaScript/JScript</td>
+                <td><0</td>
+                <td><9</td>
+                <td><2</td>
+                <td><11</td>
+            </tr>
+            <tr>
+                <td>T1059.008</td>
+                <td>Command and Scripting Interpreter</td>
+                <td>Network Device CLI</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1061</td>
+                <td>Graphical User Interface</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1062</td>
+                <td>Hypervisor</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1064</td>
+                <td>Scripting</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><14</td>
+                <td><0</td>
+                <td><14</td>
+            </tr>
+            <tr>
+                <td>T1068</td>
+                <td>Exploitation for Privilege Escalation</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><7</td>
+                <td><6</td>
+                <td><14</td>
+            </tr>
+            <tr>
+                <td>T1069</td>
+                <td>Permission Groups Discovery</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><3</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1069.001</td>
+                <td>Permission Groups Discovery</td>
+                <td>Local Groups</td>
+                <td><3</td>
+                <td><2</td>
+                <td><0</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1069.002</td>
+                <td>Permission Groups Discovery</td>
+                <td>Domain Groups</td>
+                <td><3</td>
+                <td><3</td>
+                <td><1</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1069.003</td>
+                <td>Permission Groups Discovery</td>
+                <td>Cloud Groups</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1070</td>
+                <td>Indicator Removal on Host</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><9</td>
+                <td><15</td>
+                <td><24</td>
+            </tr>
+            <tr>
+                <td>T1070.001</td>
+                <td>Indicator Removal on Host</td>
+                <td>Clear Windows Event Logs</td>
+                <td><2</td>
+                <td><5</td>
+                <td><0</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1070.002</td>
+                <td>Indicator Removal on Host</td>
+                <td>Clear Linux or Mac System Logs</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1070.003</td>
+                <td>Indicator Removal on Host</td>
+                <td>Clear Command History</td>
+                <td><1</td>
+                <td><3</td>
+                <td><1</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1070.004</td>
+                <td>Indicator Removal on Host</td>
+                <td>File Deletion</td>
+                <td><0</td>
+                <td><3</td>
+                <td><6</td>
+                <td><9</td>
+            </tr>
+            <tr>
+                <td>T1070.005</td>
+                <td>Indicator Removal on Host</td>
+                <td>Network Share Connection Removal</td>
+                <td><1</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1070.006</td>
+                <td>Indicator Removal on Host</td>
+                <td>Timestomp</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1071</td>
+                <td>Application Layer Protocol</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><14</td>
+                <td><8</td>
+                <td><22</td>
+            </tr>
+            <tr>
+                <td>T1071.001</td>
+                <td>Application Layer Protocol</td>
+                <td>Web Protocols</td>
+                <td><0</td>
+                <td><22</td>
+                <td><3</td>
+                <td><25</td>
+            </tr>
+            <tr>
+                <td>T1071.002</td>
+                <td>Application Layer Protocol</td>
+                <td>File Transfer Protocols</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1071.003</td>
+                <td>Application Layer Protocol</td>
+                <td>Mail Protocols</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1071.004</td>
+                <td>Application Layer Protocol</td>
+                <td>DNS</td>
+                <td><0</td>
+                <td><12</td>
+                <td><0</td>
+                <td><12</td>
+            </tr>
+            <tr>
+                <td>T1072</td>
+                <td>Software Deployment Tools</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1074</td>
+                <td>Data Staged</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1074.001</td>
+                <td>Data Staged</td>
+                <td>Local Data Staging</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1074.002</td>
+                <td>Data Staged</td>
+                <td>Remote Data Staging</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1078</td>
+                <td>Valid Accounts</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><7</td>
+                <td><35</td>
+                <td><42</td>
+            </tr>
+            <tr>
+                <td>T1078.001</td>
+                <td>Valid Accounts</td>
+                <td>Default Accounts</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1078.002</td>
+                <td>Valid Accounts</td>
+                <td>Domain Accounts</td>
+                <td><5</td>
+                <td><1</td>
+                <td><0</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1078.003</td>
+                <td>Valid Accounts</td>
+                <td>Local Accounts</td>
+                <td><5</td>
+                <td><1</td>
+                <td><3</td>
+                <td><9</td>
+            </tr>
+            <tr>
+                <td>T1078.004</td>
+                <td>Valid Accounts</td>
+                <td>Cloud Accounts</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1080</td>
+                <td>Taint Shared Content</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1082</td>
+                <td>System Information Discovery</td>
+                <td>n/a</td>
+                <td><2</td>
+                <td><4</td>
+                <td><3</td>
+                <td><9</td>
+            </tr>
+            <tr>
+                <td>T1083</td>
+                <td>File and Directory Discovery</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><4</td>
+                <td><1</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1087</td>
+                <td>Account Discovery</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><12</td>
+                <td><4</td>
+                <td><16</td>
+            </tr>
+            <tr>
+                <td>T1087.001</td>
+                <td>Account Discovery</td>
+                <td>Local Account</td>
+                <td><2</td>
+                <td><5</td>
+                <td><0</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1087.002</td>
+                <td>Account Discovery</td>
+                <td>Domain Account</td>
+                <td><2</td>
+                <td><8</td>
+                <td><1</td>
+                <td><11</td>
+            </tr>
+            <tr>
+                <td>T1087.003</td>
+                <td>Account Discovery</td>
+                <td>Email Account</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1087.004</td>
+                <td>Account Discovery</td>
+                <td>Cloud Account</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1090</td>
+                <td>Proxy</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><3</td>
+                <td><1</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1090.001</td>
+                <td>Proxy</td>
+                <td>Internal Proxy</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1090.002</td>
+                <td>Proxy</td>
+                <td>External Proxy</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1090.003</td>
+                <td>Proxy</td>
+                <td>Multi-hop Proxy</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1090.004</td>
+                <td>Proxy</td>
+                <td>Domain Fronting</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1091</td>
+                <td>Replication Through Removable Media</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1092</td>
+                <td>Communication Through Removable Media</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1095</td>
+                <td>Non-Application Layer Protocol</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1098</td>
+                <td>Account Manipulation</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><8</td>
+                <td><20</td>
+                <td><29</td>
+            </tr>
+            <tr>
+                <td>T1098.001</td>
+                <td>Account Manipulation</td>
+                <td>Additional Cloud Credentials</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1098.002</td>
+                <td>Account Manipulation</td>
+                <td>Exchange Email Delegate Permissions</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1098.003</td>
+                <td>Account Manipulation</td>
+                <td>Add Office 365 Global Administrator Role</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1098.004</td>
+                <td>Account Manipulation</td>
+                <td>SSH Authorized Keys</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1102</td>
+                <td>Web Service</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><4</td>
+                <td><1</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1102.001</td>
+                <td>Web Service</td>
+                <td>Dead Drop Resolver</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1102.002</td>
+                <td>Web Service</td>
+                <td>Bidirectional Communication</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1102.003</td>
+                <td>Web Service</td>
+                <td>One-Way Communication</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1104</td>
+                <td>Multi-Stage Channels</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1105</td>
+                <td>Ingress Tool Transfer</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><21</td>
+                <td><9</td>
+                <td><31</td>
+            </tr>
+            <tr>
+                <td>T1106</td>
+                <td>Native API</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><1</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1108</td>
+                <td>Redundant Access</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1110</td>
+                <td>Brute Force</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><7</td>
+                <td><9</td>
+            </tr>
+            <tr>
+                <td>T1110.001</td>
+                <td>Brute Force</td>
+                <td>Password Guessing</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1110.002</td>
+                <td>Brute Force</td>
+                <td>Password Cracking</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1110.003</td>
+                <td>Brute Force</td>
+                <td>Password Spraying</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1110.004</td>
+                <td>Brute Force</td>
+                <td>Credential Stuffing</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1111</td>
+                <td>Two-Factor Authentication Interception</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1112</td>
+                <td>Modify Registry</td>
+                <td>n/a</td>
+                <td><5</td>
+                <td><19</td>
+                <td><1</td>
+                <td><25</td>
+            </tr>
+            <tr>
+                <td>T1113</td>
+                <td>Screen Capture</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1114</td>
+                <td>Email Collection</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><2</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1114.001</td>
+                <td>Email Collection</td>
+                <td>Local Email Collection</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1114.002</td>
+                <td>Email Collection</td>
+                <td>Remote Email Collection</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1114.003</td>
+                <td>Email Collection</td>
+                <td>Email Forwarding Rule</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1115</td>
+                <td>Clipboard Data</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1119</td>
+                <td>Automated Collection</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1120</td>
+                <td>Peripheral Device Discovery</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1123</td>
+                <td>Audio Capture</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><3</td>
+                <td><0</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1124</td>
+                <td>System Time Discovery</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1125</td>
+                <td>Video Capture</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1127</td>
+                <td>Trusted Developer Utilities Proxy Execution</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><4</td>
+                <td><8</td>
+                <td><12</td>
+            </tr>
+            <tr>
+                <td>T1127.001</td>
+                <td>Trusted Developer Utilities Proxy Execution</td>
+                <td>MSBuild</td>
+                <td><1</td>
+                <td><1</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1129</td>
+                <td>Shared Modules</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1132</td>
+                <td>Data Encoding</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1132.001</td>
+                <td>Data Encoding</td>
+                <td>Standard Encoding</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1132.002</td>
+                <td>Data Encoding</td>
+                <td>Non-Standard Encoding</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1133</td>
+                <td>External Remote Services</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><4</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1134</td>
+                <td>Access Token Manipulation</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><3</td>
+                <td><1</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1134.001</td>
+                <td>Access Token Manipulation</td>
+                <td>Token Impersonation/Theft</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1134.002</td>
+                <td>Access Token Manipulation</td>
+                <td>Create Process with Token</td>
+                <td><0</td>
+                <td><3</td>
+                <td><0</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1134.003</td>
+                <td>Access Token Manipulation</td>
+                <td>Make and Impersonate Token</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1134.004</td>
+                <td>Access Token Manipulation</td>
+                <td>Parent PID Spoofing</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1134.005</td>
+                <td>Access Token Manipulation</td>
+                <td>SID-History Injection</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1135</td>
+                <td>Network Share Discovery</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><3</td>
+                <td><1</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1136</td>
+                <td>Create Account</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><6</td>
+                <td><7</td>
+                <td><13</td>
+            </tr>
+            <tr>
+                <td>T1136.001</td>
+                <td>Create Account</td>
+                <td>Local Account</td>
+                <td><0</td>
+                <td><6</td>
+                <td><1</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1136.002</td>
+                <td>Create Account</td>
+                <td>Domain Account</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1136.003</td>
+                <td>Create Account</td>
+                <td>Cloud Account</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1137</td>
+                <td>Office Application Startup</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><2</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1137.001</td>
+                <td>Office Application Startup</td>
+                <td>Office Template Macros</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1137.002</td>
+                <td>Office Application Startup</td>
+                <td>Office Test</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1137.003</td>
+                <td>Office Application Startup</td>
+                <td>Outlook Forms</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1137.004</td>
+                <td>Office Application Startup</td>
+                <td>Outlook Home Page</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1137.005</td>
+                <td>Office Application Startup</td>
+                <td>Outlook Rules</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1137.006</td>
+                <td>Office Application Startup</td>
+                <td>Add-ins</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1140</td>
+                <td>Deobfuscate/Decode Files or Information</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><7</td>
+                <td><5</td>
+                <td><12</td>
+            </tr>
+            <tr>
+                <td>T1149</td>
+                <td>LC_MAIN Hijacking</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1153</td>
+                <td>Source</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1175</td>
+                <td>Component Object Model and Distributed COM</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><6</td>
+                <td><0</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1176</td>
+                <td>Browser Extensions</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1185</td>
+                <td>Man in the Browser</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1187</td>
+                <td>Forced Authentication</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1189</td>
+                <td>Drive-by Compromise</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><1</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1190</td>
+                <td>Exploit Public-Facing Application</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><34</td>
+                <td><14</td>
+                <td><48</td>
+            </tr>
+            <tr>
+                <td>T1195</td>
+                <td>Supply Chain Compromise</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><4</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1195.001</td>
+                <td>Supply Chain Compromise</td>
+                <td>Compromise Software Dependencies and Development Tools</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1195.002</td>
+                <td>Supply Chain Compromise</td>
+                <td>Compromise Software Supply Chain</td>
+                <td><0</td>
+                <td><0</td>
+                <td><4</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1195.003</td>
+                <td>Supply Chain Compromise</td>
+                <td>Compromise Hardware Supply Chain</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1197</td>
+                <td>BITS Jobs</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><3</td>
+                <td><0</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1199</td>
+                <td>Trusted Relationship</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1200</td>
+                <td>Hardware Additions</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1201</td>
+                <td>Password Policy Discovery</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1202</td>
+                <td>Indirect Command Execution</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><6</td>
+                <td><0</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1203</td>
+                <td>Exploitation for Client Execution</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><11</td>
+                <td><1</td>
+                <td><12</td>
+            </tr>
+            <tr>
+                <td>T1204</td>
+                <td>User Execution</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><18</td>
+                <td><3</td>
+                <td><21</td>
+            </tr>
+            <tr>
+                <td>T1204.001</td>
+                <td>User Execution</td>
+                <td>Malicious Link</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1204.002</td>
+                <td>User Execution</td>
+                <td>Malicious File</td>
+                <td><0</td>
+                <td><17</td>
+                <td><0</td>
+                <td><17</td>
+            </tr>
+            <tr>
+                <td>T1205</td>
+                <td>Traffic Signaling</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1205.001</td>
+                <td>Traffic Signaling</td>
+                <td>Port Knocking</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1207</td>
+                <td>Rogue Domain Controller</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1210</td>
+                <td>Exploitation of Remote Services</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><5</td>
+                <td><2</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1211</td>
+                <td>Exploitation for Defense Evasion</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><1</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1212</td>
+                <td>Exploitation for Credential Access</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><3</td>
+                <td><0</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1213</td>
+                <td>Data from Information Repositories</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1213.001</td>
+                <td>Data from Information Repositories</td>
+                <td>Confluence</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1213.002</td>
+                <td>Data from Information Repositories</td>
+                <td>Sharepoint</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1216</td>
+                <td>Signed Script Proxy Execution</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1216.001</td>
+                <td>Signed Script Proxy Execution</td>
+                <td>PubPrn</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1217</td>
+                <td>Browser Bookmark Discovery</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1218</td>
+                <td>Signed Binary Proxy Execution</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><17</td>
+                <td><11</td>
+                <td><28</td>
+            </tr>
+            <tr>
+                <td>T1218.001</td>
+                <td>Signed Binary Proxy Execution</td>
+                <td>Compiled HTML File</td>
+                <td><1</td>
+                <td><2</td>
+                <td><2</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1218.002</td>
+                <td>Signed Binary Proxy Execution</td>
+                <td>Control Panel</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1218.003</td>
+                <td>Signed Binary Proxy Execution</td>
+                <td>CMSTP</td>
+                <td><1</td>
+                <td><5</td>
+                <td><0</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1218.004</td>
+                <td>Signed Binary Proxy Execution</td>
+                <td>InstallUtil</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1218.005</td>
+                <td>Signed Binary Proxy Execution</td>
+                <td>Mshta</td>
+                <td><0</td>
+                <td><8</td>
+                <td><2</td>
+                <td><10</td>
+            </tr>
+            <tr>
+                <td>T1218.007</td>
+                <td>Signed Binary Proxy Execution</td>
+                <td>Msiexec</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1218.008</td>
+                <td>Signed Binary Proxy Execution</td>
+                <td>Odbcconf</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1218.009</td>
+                <td>Signed Binary Proxy Execution</td>
+                <td>Regsvcs/Regasm</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1218.010</td>
+                <td>Signed Binary Proxy Execution</td>
+                <td>Regsvr32</td>
+                <td><2</td>
+                <td><7</td>
+                <td><1</td>
+                <td><10</td>
+            </tr>
+            <tr>
+                <td>T1218.011</td>
+                <td>Signed Binary Proxy Execution</td>
+                <td>Rundll32</td>
+                <td><1</td>
+                <td><18</td>
+                <td><2</td>
+                <td><21</td>
+            </tr>
+            <tr>
+                <td>T1218.012</td>
+                <td>Signed Binary Proxy Execution</td>
+                <td>Verclsid</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1219</td>
+                <td>Remote Access Software</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><3</td>
+                <td><2</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1220</td>
+                <td>XSL Script Processing</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><3</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1221</td>
+                <td>Template Injection</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1222</td>
+                <td>File and Directory Permissions Modification</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><3</td>
+                <td><3</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1222.001</td>
+                <td>File and Directory Permissions Modification</td>
+                <td>Windows File and Directory Permissions Modification</td>
+                <td><1</td>
+                <td><2</td>
+                <td><0</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1222.002</td>
+                <td>File and Directory Permissions Modification</td>
+                <td>Linux and Mac File and Directory Permissions Modification</td>
+                <td><1</td>
+                <td><2</td>
+                <td><0</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1480</td>
+                <td>Execution Guardrails</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1480.001</td>
+                <td>Execution Guardrails</td>
+                <td>Environmental Keying</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1482</td>
+                <td>Domain Trust Discovery</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><5</td>
+                <td><1</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1484</td>
+                <td>Domain Policy Modification</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1484.001</td>
+                <td>Domain Policy Modification</td>
+                <td>Group Policy Modification</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1484.002</td>
+                <td>Domain Policy Modification</td>
+                <td>Domain Trust Modification</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1485</td>
+                <td>Data Destruction</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><5</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1486</td>
+                <td>Data Encrypted for Impact</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1489</td>
+                <td>Service Stop</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1490</td>
+                <td>Inhibit System Recovery</td>
+                <td>n/a</td>
+                <td><2</td>
+                <td><5</td>
+                <td><1</td>
+                <td><8</td>
+            </tr>
+            <tr>
+                <td>T1491</td>
+                <td>Defacement</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1491.001</td>
+                <td>Defacement</td>
+                <td>Internal Defacement</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1491.002</td>
+                <td>Defacement</td>
+                <td>External Defacement</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1495</td>
+                <td>Firmware Corruption</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1496</td>
+                <td>Resource Hijacking</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1497</td>
+                <td>Virtualization/Sandbox Evasion</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1497.001</td>
+                <td>Virtualization/Sandbox Evasion</td>
+                <td>System Checks</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1497.002</td>
+                <td>Virtualization/Sandbox Evasion</td>
+                <td>User Activity Based Checks</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1497.003</td>
+                <td>Virtualization/Sandbox Evasion</td>
+                <td>Time Based Evasion</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1498</td>
+                <td>Network Denial of Service</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1498.001</td>
+                <td>Network Denial of Service</td>
+                <td>Direct Network Flood</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1498.002</td>
+                <td>Network Denial of Service</td>
+                <td>Reflection Amplification</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1499</td>
+                <td>Endpoint Denial of Service</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1499.001</td>
+                <td>Endpoint Denial of Service</td>
+                <td>OS Exhaustion Flood</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1499.002</td>
+                <td>Endpoint Denial of Service</td>
+                <td>Service Exhaustion Flood</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1499.003</td>
+                <td>Endpoint Denial of Service</td>
+                <td>Application Exhaustion Flood</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1499.004</td>
+                <td>Endpoint Denial of Service</td>
+                <td>Application or System Exploitation</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1505</td>
+                <td>Server Software Component</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1505.001</td>
+                <td>Server Software Component</td>
+                <td>SQL Stored Procedures</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1505.002</td>
+                <td>Server Software Component</td>
+                <td>Transport Agent</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1505.003</td>
+                <td>Server Software Component</td>
+                <td>Web Shell</td>
+                <td><1</td>
+                <td><14</td>
+                <td><1</td>
+                <td><16</td>
+            </tr>
+            <tr>
+                <td>T1518</td>
+                <td>Software Discovery</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><2</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1518.001</td>
+                <td>Software Discovery</td>
+                <td>Security Software Discovery</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1525</td>
+                <td>Implant Container Image</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1526</td>
+                <td>Cloud Service Discovery</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1528</td>
+                <td>Steal Application Access Token</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><3</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1529</td>
+                <td>System Shutdown/Reboot</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1530</td>
+                <td>Data from Cloud Storage Object</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><5</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1531</td>
+                <td>Account Access Removal</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><6</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1534</td>
+                <td>Internal Spearphishing</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1535</td>
+                <td>Unused/Unsupported Cloud Regions</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1537</td>
+                <td>Transfer Data to Cloud Account</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><5</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1538</td>
+                <td>Cloud Service Dashboard</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1539</td>
+                <td>Steal Web Session Cookie</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><2</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1542</td>
+                <td>Pre-OS Boot</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1542.001</td>
+                <td>Pre-OS Boot</td>
+                <td>System Firmware</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1542.002</td>
+                <td>Pre-OS Boot</td>
+                <td>Component Firmware</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1542.003</td>
+                <td>Pre-OS Boot</td>
+                <td>Bootkit</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1542.004</td>
+                <td>Pre-OS Boot</td>
+                <td>ROMMONkit</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1542.005</td>
+                <td>Pre-OS Boot</td>
+                <td>TFTP Boot</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1543</td>
+                <td>Create or Modify System Process</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><13</td>
+                <td><13</td>
+            </tr>
+            <tr>
+                <td>T1543.001</td>
+                <td>Create or Modify System Process</td>
+                <td>Launch Agent</td>
+                <td><0</td>
+                <td><0</td>
+                <td><3</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1543.002</td>
+                <td>Create or Modify System Process</td>
+                <td>Systemd Service</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1543.003</td>
+                <td>Create or Modify System Process</td>
+                <td>Windows Service</td>
+                <td><6</td>
+                <td><10</td>
+                <td><5</td>
+                <td><21</td>
+            </tr>
+            <tr>
+                <td>T1543.004</td>
+                <td>Create or Modify System Process</td>
+                <td>Launch Daemon</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1546</td>
+                <td>Event Triggered Execution</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><14</td>
+                <td><16</td>
+            </tr>
+            <tr>
+                <td>T1546.001</td>
+                <td>Event Triggered Execution</td>
+                <td>Change Default File Association</td>
+                <td><1</td>
+                <td><1</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1546.002</td>
+                <td>Event Triggered Execution</td>
+                <td>Screensaver</td>
+                <td><1</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1546.003</td>
+                <td>Event Triggered Execution</td>
+                <td>Windows Management Instrumentation Event Subscription</td>
+                <td><1</td>
+                <td><6</td>
+                <td><0</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1546.004</td>
+                <td>Event Triggered Execution</td>
+                <td>.bash_profile and .bashrc</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1546.005</td>
+                <td>Event Triggered Execution</td>
+                <td>Trap</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1546.006</td>
+                <td>Event Triggered Execution</td>
+                <td>LC_LOAD_DYLIB Addition</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1546.007</td>
+                <td>Event Triggered Execution</td>
+                <td>Netsh Helper DLL</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1546.008</td>
+                <td>Event Triggered Execution</td>
+                <td>Accessibility Features</td>
+                <td><3</td>
+                <td><2</td>
+                <td><2</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1546.009</td>
+                <td>Event Triggered Execution</td>
+                <td>AppCert DLLs</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1546.010</td>
+                <td>Event Triggered Execution</td>
+                <td>AppInit DLLs</td>
+                <td><2</td>
+                <td><1</td>
+                <td><1</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1546.011</td>
+                <td>Event Triggered Execution</td>
+                <td>Application Shimming</td>
+                <td><0</td>
+                <td><1</td>
+                <td><3</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1546.012</td>
+                <td>Event Triggered Execution</td>
+                <td>Image File Execution Options Injection</td>
+                <td><0</td>
+                <td><2</td>
+                <td><1</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1546.013</td>
+                <td>Event Triggered Execution</td>
+                <td>PowerShell Profile</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1546.014</td>
+                <td>Event Triggered Execution</td>
+                <td>Emond</td>
+                <td><0</td>
+                <td><0</td>
+                <td><2</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1546.015</td>
+                <td>Event Triggered Execution</td>
+                <td>Component Object Model Hijacking</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1547</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><21</td>
+                <td><22</td>
+            </tr>
+            <tr>
+                <td>T1547.001</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>Registry Run Keys / Startup Folder</td>
+                <td><3</td>
+                <td><9</td>
+                <td><7</td>
+                <td><19</td>
+            </tr>
+            <tr>
+                <td>T1547.002</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>Authentication Package</td>
+                <td><0</td>
+                <td><0</td>
+                <td><3</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1547.003</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>Time Providers</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1547.004</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>Winlogon Helper DLL</td>
+                <td><1</td>
+                <td><2</td>
+                <td><0</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1547.005</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>Security Support Provider</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1547.006</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>Kernel Modules and Extensions</td>
+                <td><0</td>
+                <td><0</td>
+                <td><3</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1547.007</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>Re-opened Applications</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1547.008</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>LSASS Driver</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1547.009</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>Shortcut Modification</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1547.010</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>Port Monitors</td>
+                <td><1</td>
+                <td><0</td>
+                <td><2</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1547.011</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>Plist Modification</td>
+                <td><0</td>
+                <td><0</td>
+                <td><2</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1547.012</td>
+                <td>Boot or Logon Autostart Execution</td>
+                <td>Print Processors</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1548</td>
+                <td>Abuse Elevation Control Mechanism</td>
+                <td>n/a</td>
+                <td><1</td>
+                <td><1</td>
+                <td><20</td>
+                <td><22</td>
+            </tr>
+            <tr>
+                <td>T1548.001</td>
+                <td>Abuse Elevation Control Mechanism</td>
+                <td>Setuid and Setgid</td>
+                <td><0</td>
+                <td><0</td>
+                <td><2</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1548.002</td>
+                <td>Abuse Elevation Control Mechanism</td>
+                <td>Bypass User Account Control</td>
+                <td><2</td>
+                <td><8</td>
+                <td><11</td>
+                <td><21</td>
+            </tr>
+            <tr>
+                <td>T1548.003</td>
+                <td>Abuse Elevation Control Mechanism</td>
+                <td>Sudo and Sudo Caching</td>
+                <td><0</td>
+                <td><0</td>
+                <td><2</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1548.004</td>
+                <td>Abuse Elevation Control Mechanism</td>
+                <td>Elevated Execution with Prompt</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1550</td>
+                <td>Use Alternate Authentication Material</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><3</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1550.001</td>
+                <td>Use Alternate Authentication Material</td>
+                <td>Application Access Token</td>
+                <td><0</td>
+                <td><0</td>
+                <td><2</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1550.002</td>
+                <td>Use Alternate Authentication Material</td>
+                <td>Pass the Hash</td>
+                <td><1</td>
+                <td><5</td>
+                <td><0</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1550.003</td>
+                <td>Use Alternate Authentication Material</td>
+                <td>Pass the Ticket</td>
+                <td><0</td>
+                <td><2</td>
+                <td><1</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1550.004</td>
+                <td>Use Alternate Authentication Material</td>
+                <td>Web Session Cookie</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1552</td>
+                <td>Unsecured Credentials</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><3</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1552.001</td>
+                <td>Unsecured Credentials</td>
+                <td>Credentials In Files</td>
+                <td><1</td>
+                <td><3</td>
+                <td><2</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1552.002</td>
+                <td>Unsecured Credentials</td>
+                <td>Credentials in Registry</td>
+                <td><1</td>
+                <td><2</td>
+                <td><0</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1552.003</td>
+                <td>Unsecured Credentials</td>
+                <td>Bash History</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1552.004</td>
+                <td>Unsecured Credentials</td>
+                <td>Private Keys</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1552.005</td>
+                <td>Unsecured Credentials</td>
+                <td>Cloud Instance Metadata API</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1552.006</td>
+                <td>Unsecured Credentials</td>
+                <td>Group Policy Preferences</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1553</td>
+                <td>Subvert Trust Controls</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><5</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1553.001</td>
+                <td>Subvert Trust Controls</td>
+                <td>Gatekeeper Bypass</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1553.002</td>
+                <td>Subvert Trust Controls</td>
+                <td>Code Signing</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1553.003</td>
+                <td>Subvert Trust Controls</td>
+                <td>SIP and Trust Provider Hijacking</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1553.004</td>
+                <td>Subvert Trust Controls</td>
+                <td>Install Root Certificate</td>
+                <td><0</td>
+                <td><1</td>
+                <td><2</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1554</td>
+                <td>Compromise Client Software Binary</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><2</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1555</td>
+                <td>Credentials from Password Stores</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><5</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1555.001</td>
+                <td>Credentials from Password Stores</td>
+                <td>Keychain</td>
+                <td><0</td>
+                <td><0</td>
+                <td><4</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1555.002</td>
+                <td>Credentials from Password Stores</td>
+                <td>Securityd Memory</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1555.003</td>
+                <td>Credentials from Password Stores</td>
+                <td>Credentials from Web Browsers</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1556</td>
+                <td>Modify Authentication Process</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><3</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1556.001</td>
+                <td>Modify Authentication Process</td>
+                <td>Domain Controller Authentication</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1556.002</td>
+                <td>Modify Authentication Process</td>
+                <td>Password Filter DLL</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1556.003</td>
+                <td>Modify Authentication Process</td>
+                <td>Pluggable Authentication Modules</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1556.004</td>
+                <td>Modify Authentication Process</td>
+                <td>Network Device Authentication</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1557</td>
+                <td>Man-in-the-Middle</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1557.001</td>
+                <td>Man-in-the-Middle</td>
+                <td>LLMNR/NBT-NS Poisoning and SMB Relay</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1557.002</td>
+                <td>Man-in-the-Middle</td>
+                <td>ARP Cache Poisoning</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1558</td>
+                <td>Steal or Forge Kerberos Tickets</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><3</td>
+                <td><2</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1558.001</td>
+                <td>Steal or Forge Kerberos Tickets</td>
+                <td>Golden Ticket</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1558.002</td>
+                <td>Steal or Forge Kerberos Tickets</td>
+                <td>Silver Ticket</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1558.003</td>
+                <td>Steal or Forge Kerberos Tickets</td>
+                <td>Kerberoasting</td>
+                <td><0</td>
+                <td><7</td>
+                <td><0</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1558.004</td>
+                <td>Steal or Forge Kerberos Tickets</td>
+                <td>AS-REP Roasting</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1559</td>
+                <td>Inter-Process Communication</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1559.001</td>
+                <td>Inter-Process Communication</td>
+                <td>Component Object Model</td>
+                <td><0</td>
+                <td><3</td>
+                <td><1</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1559.002</td>
+                <td>Inter-Process Communication</td>
+                <td>Dynamic Data Exchange</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1560</td>
+                <td>Archive Collected Data</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><2</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1560.001</td>
+                <td>Archive Collected Data</td>
+                <td>Archive via Utility</td>
+                <td><1</td>
+                <td><6</td>
+                <td><1</td>
+                <td><8</td>
+            </tr>
+            <tr>
+                <td>T1560.002</td>
+                <td>Archive Collected Data</td>
+                <td>Archive via Library</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1560.003</td>
+                <td>Archive Collected Data</td>
+                <td>Archive via Custom Method</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1561</td>
+                <td>Disk Wipe</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1561.001</td>
+                <td>Disk Wipe</td>
+                <td>Disk Content Wipe</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1561.002</td>
+                <td>Disk Wipe</td>
+                <td>Disk Structure Wipe</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1562</td>
+                <td>Impair Defenses</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><44</td>
+                <td><45</td>
+            </tr>
+            <tr>
+                <td>T1562.001</td>
+                <td>Impair Defenses</td>
+                <td>Disable or Modify Tools</td>
+                <td><2</td>
+                <td><20</td>
+                <td><33</td>
+                <td><55</td>
+            </tr>
+            <tr>
+                <td>T1562.002</td>
+                <td>Impair Defenses</td>
+                <td>Disable Windows Event Logging</td>
+                <td><0</td>
+                <td><3</td>
+                <td><0</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1562.003</td>
+                <td>Impair Defenses</td>
+                <td>Impair Command History Logging</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1562.004</td>
+                <td>Impair Defenses</td>
+                <td>Disable or Modify System Firewall</td>
+                <td><0</td>
+                <td><4</td>
+                <td><0</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1562.006</td>
+                <td>Impair Defenses</td>
+                <td>Indicator Blocking</td>
+                <td><2</td>
+                <td><3</td>
+                <td><1</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1562.007</td>
+                <td>Impair Defenses</td>
+                <td>Disable or Modify Cloud Firewall</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1562.008</td>
+                <td>Impair Defenses</td>
+                <td>Disable Cloud Logs</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1563</td>
+                <td>Remote Service Session Hijacking</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1563.001</td>
+                <td>Remote Service Session Hijacking</td>
+                <td>SSH Hijacking</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1563.002</td>
+                <td>Remote Service Session Hijacking</td>
+                <td>RDP Hijacking</td>
+                <td><0</td>
+                <td><2</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1564</td>
+                <td>Hide Artifacts</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><6</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1564.001</td>
+                <td>Hide Artifacts</td>
+                <td>Hidden Files and Directories</td>
+                <td><0</td>
+                <td><1</td>
+                <td><4</td>
+                <td><5</td>
+            </tr>
+            <tr>
+                <td>T1564.002</td>
+                <td>Hide Artifacts</td>
+                <td>Hidden Users</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1564.003</td>
+                <td>Hide Artifacts</td>
+                <td>Hidden Window</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1564.004</td>
+                <td>Hide Artifacts</td>
+                <td>NTFS File Attributes</td>
+                <td><2</td>
+                <td><3</td>
+                <td><1</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1564.005</td>
+                <td>Hide Artifacts</td>
+                <td>Hidden File System</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1564.006</td>
+                <td>Hide Artifacts</td>
+                <td>Run Virtual Instance</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1564.007</td>
+                <td>Hide Artifacts</td>
+                <td>VBA Stomping</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1565</td>
+                <td>Data Manipulation</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><3</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1565.001</td>
+                <td>Data Manipulation</td>
+                <td>Stored Data Manipulation</td>
+                <td><0</td>
+                <td><1</td>
+                <td><3</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1565.002</td>
+                <td>Data Manipulation</td>
+                <td>Transmitted Data Manipulation</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1565.003</td>
+                <td>Data Manipulation</td>
+                <td>Runtime Data Manipulation</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1566</td>
+                <td>Phishing</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><2</td>
+                <td><15</td>
+                <td><17</td>
+            </tr>
+            <tr>
+                <td>T1566.001</td>
+                <td>Phishing</td>
+                <td>Spearphishing Attachment</td>
+                <td><0</td>
+                <td><8</td>
+                <td><10</td>
+                <td><18</td>
+            </tr>
+            <tr>
+                <td>T1566.002</td>
+                <td>Phishing</td>
+                <td>Spearphishing Link</td>
+                <td><0</td>
+                <td><0</td>
+                <td><7</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1566.003</td>
+                <td>Phishing</td>
+                <td>Spearphishing via Service</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1567</td>
+                <td>Exfiltration Over Web Service</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1567.001</td>
+                <td>Exfiltration Over Web Service</td>
+                <td>Exfiltration to Code Repository</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1567.002</td>
+                <td>Exfiltration Over Web Service</td>
+                <td>Exfiltration to Cloud Storage</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1568</td>
+                <td>Dynamic Resolution</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><3</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1568.001</td>
+                <td>Dynamic Resolution</td>
+                <td>Fast Flux DNS</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1568.002</td>
+                <td>Dynamic Resolution</td>
+                <td>Domain Generation Algorithms</td>
+                <td><0</td>
+                <td><0</td>
+                <td><3</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1568.003</td>
+                <td>Dynamic Resolution</td>
+                <td>DNS Calculation</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1569</td>
+                <td>System Services</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><3</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1569.001</td>
+                <td>System Services</td>
+                <td>Launchctl</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1569.002</td>
+                <td>System Services</td>
+                <td>Service Execution</td>
+                <td><3</td>
+                <td><11</td>
+                <td><3</td>
+                <td><17</td>
+            </tr>
+            <tr>
+                <td>T1570</td>
+                <td>Lateral Tool Transfer</td>
+                <td>n/a</td>
+                <td><3</td>
+                <td><2</td>
+                <td><1</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1571</td>
+                <td>Non-Standard Port</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1572</td>
+                <td>Protocol Tunneling</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><4</td>
+                <td><0</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1573</td>
+                <td>Encrypted Channel</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1573.001</td>
+                <td>Encrypted Channel</td>
+                <td>Symmetric Cryptography</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1573.002</td>
+                <td>Encrypted Channel</td>
+                <td>Asymmetric Cryptography</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1574</td>
+                <td>Hijack Execution Flow</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><6</td>
+                <td><7</td>
+            </tr>
+            <tr>
+                <td>T1574.001</td>
+                <td>Hijack Execution Flow</td>
+                <td>DLL Search Order Hijacking</td>
+                <td><0</td>
+                <td><3</td>
+                <td><1</td>
+                <td><4</td>
+            </tr>
+            <tr>
+                <td>T1574.002</td>
+                <td>Hijack Execution Flow</td>
+                <td>DLL Side-Loading</td>
+                <td><0</td>
+                <td><15</td>
+                <td><1</td>
+                <td><16</td>
+            </tr>
+            <tr>
+                <td>T1574.004</td>
+                <td>Hijack Execution Flow</td>
+                <td>Dylib Hijacking</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1574.005</td>
+                <td>Hijack Execution Flow</td>
+                <td>Executable Installer File Permissions Weakness</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1574.006</td>
+                <td>Hijack Execution Flow</td>
+                <td>LD_PRELOAD</td>
+                <td><0</td>
+                <td><1</td>
+                <td><1</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1574.007</td>
+                <td>Hijack Execution Flow</td>
+                <td>Path Interception by PATH Environment Variable</td>
+                <td><1</td>
+                <td><0</td>
+                <td><2</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1574.008</td>
+                <td>Hijack Execution Flow</td>
+                <td>Path Interception by Search Order Hijacking</td>
+                <td><1</td>
+                <td><0</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1574.009</td>
+                <td>Hijack Execution Flow</td>
+                <td>Path Interception by Unquoted Path</td>
+                <td><2</td>
+                <td><0</td>
+                <td><0</td>
+                <td><2</td>
+            </tr>
+            <tr>
+                <td>T1574.010</td>
+                <td>Hijack Execution Flow</td>
+                <td>Services File Permissions Weakness</td>
+                <td><2</td>
+                <td><0</td>
+                <td><1</td>
+                <td><3</td>
+            </tr>
+            <tr>
+                <td>T1574.011</td>
+                <td>Hijack Execution Flow</td>
+                <td>Services Registry Permissions Weakness</td>
+                <td><4</td>
+                <td><2</td>
+                <td><0</td>
+                <td><6</td>
+            </tr>
+            <tr>
+                <td>T1574.012</td>
+                <td>Hijack Execution Flow</td>
+                <td>COR_PROFILER</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1578</td>
+                <td>Modify Cloud Compute Infrastructure</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1578.001</td>
+                <td>Modify Cloud Compute Infrastructure</td>
+                <td>Create Snapshot</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1578.002</td>
+                <td>Modify Cloud Compute Infrastructure</td>
+                <td>Create Cloud Instance</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1578.003</td>
+                <td>Modify Cloud Compute Infrastructure</td>
+                <td>Delete Cloud Instance</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1578.004</td>
+                <td>Modify Cloud Compute Infrastructure</td>
+                <td>Revert Cloud Instance</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1580</td>
+                <td>Cloud Infrastructure Discovery</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1583</td>
+                <td>Acquire Infrastructure</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1583.001</td>
+                <td>Acquire Infrastructure</td>
+                <td>Domains</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1583.002</td>
+                <td>Acquire Infrastructure</td>
+                <td>DNS Server</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1583.003</td>
+                <td>Acquire Infrastructure</td>
+                <td>Virtual Private Server</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1583.004</td>
+                <td>Acquire Infrastructure</td>
+                <td>Server</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1583.005</td>
+                <td>Acquire Infrastructure</td>
+                <td>Botnet</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1583.006</td>
+                <td>Acquire Infrastructure</td>
+                <td>Web Services</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1584</td>
+                <td>Compromise Infrastructure</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1584.001</td>
+                <td>Compromise Infrastructure</td>
+                <td>Domains</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1584.002</td>
+                <td>Compromise Infrastructure</td>
+                <td>DNS Server</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1584.003</td>
+                <td>Compromise Infrastructure</td>
+                <td>Virtual Private Server</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1584.004</td>
+                <td>Compromise Infrastructure</td>
+                <td>Server</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1584.005</td>
+                <td>Compromise Infrastructure</td>
+                <td>Botnet</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1584.006</td>
+                <td>Compromise Infrastructure</td>
+                <td>Web Services</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1585</td>
+                <td>Establish Accounts</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1585.001</td>
+                <td>Establish Accounts</td>
+                <td>Social Media Accounts</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1585.002</td>
+                <td>Establish Accounts</td>
+                <td>Email Accounts</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1586</td>
+                <td>Compromise Accounts</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1586.001</td>
+                <td>Compromise Accounts</td>
+                <td>Social Media Accounts</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1586.002</td>
+                <td>Compromise Accounts</td>
+                <td>Email Accounts</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1587</td>
+                <td>Develop Capabilities</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1587.001</td>
+                <td>Develop Capabilities</td>
+                <td>Malware</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1587.002</td>
+                <td>Develop Capabilities</td>
+                <td>Code Signing Certificates</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1587.003</td>
+                <td>Develop Capabilities</td>
+                <td>Digital Certificates</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1587.004</td>
+                <td>Develop Capabilities</td>
+                <td>Exploits</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1588</td>
+                <td>Obtain Capabilities</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1588.001</td>
+                <td>Obtain Capabilities</td>
+                <td>Malware</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1588.002</td>
+                <td>Obtain Capabilities</td>
+                <td>Tool</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1588.003</td>
+                <td>Obtain Capabilities</td>
+                <td>Code Signing Certificates</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1588.004</td>
+                <td>Obtain Capabilities</td>
+                <td>Digital Certificates</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1588.005</td>
+                <td>Obtain Capabilities</td>
+                <td>Exploits</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1588.006</td>
+                <td>Obtain Capabilities</td>
+                <td>Vulnerabilities</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1589</td>
+                <td>Gather Victim Identity Information</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1589.001</td>
+                <td>Gather Victim Identity Information</td>
+                <td>Credentials</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1589.002</td>
+                <td>Gather Victim Identity Information</td>
+                <td>Email Addresses</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1589.003</td>
+                <td>Gather Victim Identity Information</td>
+                <td>Employee Names</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1590</td>
+                <td>Gather Victim Network Information</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1590.001</td>
+                <td>Gather Victim Network Information</td>
+                <td>Domain Properties</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1590.002</td>
+                <td>Gather Victim Network Information</td>
+                <td>DNS</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1590.003</td>
+                <td>Gather Victim Network Information</td>
+                <td>Network Trust Dependencies</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1590.004</td>
+                <td>Gather Victim Network Information</td>
+                <td>Network Topology</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1590.005</td>
+                <td>Gather Victim Network Information</td>
+                <td>IP Addresses</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1590.006</td>
+                <td>Gather Victim Network Information</td>
+                <td>Network Security Appliances</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1591</td>
+                <td>Gather Victim Org Information</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1591.001</td>
+                <td>Gather Victim Org Information</td>
+                <td>Determine Physical Locations</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1591.002</td>
+                <td>Gather Victim Org Information</td>
+                <td>Business Relationships</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1591.003</td>
+                <td>Gather Victim Org Information</td>
+                <td>Identify Business Tempo</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1591.004</td>
+                <td>Gather Victim Org Information</td>
+                <td>Identify Roles</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1592</td>
+                <td>Gather Victim Host Information</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><1</td>
+                <td><0</td>
+                <td><1</td>
+            </tr>
+            <tr>
+                <td>T1592.001</td>
+                <td>Gather Victim Host Information</td>
+                <td>Hardware</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1592.002</td>
+                <td>Gather Victim Host Information</td>
+                <td>Software</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1592.003</td>
+                <td>Gather Victim Host Information</td>
+                <td>Firmware</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1592.004</td>
+                <td>Gather Victim Host Information</td>
+                <td>Client Configurations</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1593</td>
+                <td>Search Open Websites/Domains</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1593.001</td>
+                <td>Search Open Websites/Domains</td>
+                <td>Social Media</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1593.002</td>
+                <td>Search Open Websites/Domains</td>
+                <td>Search Engines</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1594</td>
+                <td>Search Victim-Owned Websites</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1595</td>
+                <td>Active Scanning</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1595.001</td>
+                <td>Active Scanning</td>
+                <td>Scanning IP Blocks</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1595.002</td>
+                <td>Active Scanning</td>
+                <td>Vulnerability Scanning</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1596</td>
+                <td>Search Open Technical Databases</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1596.001</td>
+                <td>Search Open Technical Databases</td>
+                <td>DNS/Passive DNS</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1596.002</td>
+                <td>Search Open Technical Databases</td>
+                <td>WHOIS</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1596.003</td>
+                <td>Search Open Technical Databases</td>
+                <td>Digital Certificates</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1596.004</td>
+                <td>Search Open Technical Databases</td>
+                <td>CDNs</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1596.005</td>
+                <td>Search Open Technical Databases</td>
+                <td>Scan Databases</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1597</td>
+                <td>Search Closed Sources</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1597.001</td>
+                <td>Search Closed Sources</td>
+                <td>Threat Intel Vendors</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1597.002</td>
+                <td>Search Closed Sources</td>
+                <td>Purchase Technical Data</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1598</td>
+                <td>Phishing for Information</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1598.001</td>
+                <td>Phishing for Information</td>
+                <td>Spearphishing Service</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1598.002</td>
+                <td>Phishing for Information</td>
+                <td>Spearphishing Attachment</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1598.003</td>
+                <td>Phishing for Information</td>
+                <td>Spearphishing Link</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1599</td>
+                <td>Network Boundary Bridging</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1599.001</td>
+                <td>Network Boundary Bridging</td>
+                <td>Network Address Translation Traversal</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1600</td>
+                <td>Weaken Encryption</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1600.001</td>
+                <td>Weaken Encryption</td>
+                <td>Reduce Key Space</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1600.002</td>
+                <td>Weaken Encryption</td>
+                <td>Disable Crypto Hardware</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1601</td>
+                <td>Modify System Image</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1601.001</td>
+                <td>Modify System Image</td>
+                <td>Patch System Image</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1601.002</td>
+                <td>Modify System Image</td>
+                <td>Downgrade System Image</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1602</td>
+                <td>Data from Configuration Repository</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1602.001</td>
+                <td>Data from Configuration Repository</td>
+                <td>SNMP (MIB Dump)</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1602.002</td>
+                <td>Data from Configuration Repository</td>
+                <td>Network Device Configuration Dump</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1606</td>
+                <td>Forge Web Credentials</td>
+                <td>n/a</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1606.001</td>
+                <td>Forge Web Credentials</td>
+                <td>Web Cookies</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+            <tr>
+                <td>T1606.002</td>
+                <td>Forge Web Credentials</td>
+                <td>SAML Tokens</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+                <td><0</td>
+            </tr>
+      </tbody>
+</table>
