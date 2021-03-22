@@ -12,10 +12,10 @@ Generated on: March 22, 2021
             <th>Technique ID</th>
             <th>Technique Name</th>
             <th>Sub-technique Name</th>
-            <th class="js-sort-number"># CAR</th>
-            <th class="js-sort-number"># Sigma</th>
-            <th class="js-sort-number"># ES</th>
-            <th class="js-sort-number"># Total</th>
+            <th style="white-space:nowrap;" class="js-sort-number"># CAR</th>
+            <th style="white-space:nowrap;" class="js-sort-number"># Sigma</th>
+            <th style="white-space:nowrap;" class="js-sort-number"># ES</th>
+            <th style="white-space:nowrap;" class="js-sort-number"># Total</th>
         </tr>
         </thead>
         <tbody>
