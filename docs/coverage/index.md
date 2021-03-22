@@ -9,7 +9,7 @@ Generated on: March 22, 2021
 <table class="js-sort-table" id="coverage-sort">
         <thead>
         <tr>
-            <th>Technique ID</th>
+            <th style="white-space:nowrap;">Technique ID</th>
             <th>Technique Name</th>
             <th>Sub-technique Name</th>
             <th style="white-space:nowrap;" class="js-sort-number"># CAR</th>
