@@ -12,6 +12,7 @@ import yaml
 import requests
 from jinja2 import Environment, Template, FileSystemLoader
 from os import path, makedirs
+from datetime import date
 import copy
 
 ATTACK_URL = "https://raw.githubusercontent.com/mitre/cti/subtechniques/enterprise-attack/enterprise-attack.json"
@@ -51,6 +52,14 @@ for analytic in analytics:
 # Generate the index.md file
 
 # Note that the "analytics-table" div is used only by the CSS in order to get a reference to just the analytics table (see main.scss)
+tr = """            <tr>
+                <td>{0}</td>
+                <td>{1}</td>
+                <td>{2}</td>
+                <td>{3}</td>
+                <td>{4}</td>
+                <td>{5}</td>
+            </tr>\n"""
 
 index_content = """---
 title: "Analytics"
@@ -59,10 +68,22 @@ permalink: /analytics/
 <div class="analytics-table"></div> 
 
 ## Analytic List (by date added)
+<script type="text/javascript" src="/assets/sort-table.js"></script>
 
-|Analytic|ATT&CK Techniques|Implementations|Applicable Platform(s)|
-|---|---|---|---|
+<table class="js-sort-table" id="analytics-sort">
+    <thead>
+        <tr>
+            <th style="white-space:nowrap;">ID</th>
+            <th style="white-space:nowrap;">Name</th>
+            <th>Submission Date</th>
+            <th>ATT&CK Techniques</th>
+            <th>Implementations</th>
+            <th>Applicable Platforms</th>
+        </tr>
+    </thead>
+    <tbody>
 """
+table_footer = """      </tbody>\n</table>"""
 
 subtechnique_table = """---
 ## Analytic List (by technique/sub-technique coverage)
@@ -76,15 +97,23 @@ table_techniques = []
 for analytic in sorted(analytics, key = lambda k: k['id']):
     coverage = ""
     implementations = ""
+    car_id = "<a href=\"/analytics/{}/\">{}</a>".format(analytic["id"], analytic["id"])
+    title = analytic["title"]
+    date_added = analytic["submission_date"]
+    date_str = date.fromisoformat(date_added.replace("/","-")).strftime("%B %d %Y")
     if 'coverage' in analytic and len(analytic['coverage']) > 0:
-        coverage += "{::nomarkdown}<ul>"
+        coverage += "<ul>"
+        count = 0
         for cov in analytic['coverage']:
-          coverage += "<li><a href=\"https://attack.mitre.org/techniques/{}/\">{}</a></li>".format(cov['technique'], techniques[cov['technique']]) 
+          # Only capture the first two techniques, to limit the size of the table
+          if count < 2:
+            coverage += "<li><a href=\"https://attack.mitre.org/techniques/{}/\">{}</a></li>".format(cov['technique'], techniques[cov['technique']]) 
+            count += 1
           # Get all of the techniques seen in all analytics
           # This is for building the second (subtechniques based) table
           if cov['technique'] not in table_techniques:
               table_techniques.append(cov['technique'])
-        coverage += "</ul>{:/}" 
+        coverage += "</ul>" 
     if 'implementations' in analytic and len(analytic['implementations']) > 0: 
         imp_list =  [str.capitalize(implementation['type']) for implementation in analytic['implementations']]
         implementations = ", ".join(sorted(set(imp_list)))
@@ -92,10 +121,11 @@ for analytic in sorted(analytics, key = lambda k: k['id']):
         applicable_platforms = ", ".join(analytic['platforms'])
     else:
         applicable_platforms = "N/A"
-    index_content += "|[{}: {}]({})|{}|{}|{}|\n".format(analytic['id'], analytic['title'], analytic['id'], coverage, implementations, applicable_platforms)
+    table_row = tr.format(car_id, title, date_str, coverage, implementations, applicable_platforms)
+    index_content += table_row
+index_content += table_footer
 
 # Build the second (subtechnique-based) table
-#print(table_techniques)
 for tid in table_techniques:
     # Find all analytics with this technique
     none_bucket = []
