@@ -11,7 +11,7 @@ A cross-walk of CAR, [Sigma](https://github.com/SigmaHQ/sigma), and [Elastic Det
 * \# ES: the number of ES detection rules that contain coverage for the technique/sub-technique.
 * \# Total: the total number of analytics between CAR/Sigma/ES that contain coverage for the technique-sub-technique.
 
-This table is sortable, so feel free to click on any column to sort by its values.
+This table is sortable, so feel free to click on any column to sort by its values. You can also find this data as a CSV file [here](/coverage/analytic_coverage_03_22_2021.csv).
 
 <script type="text/javascript" src="/assets/sort-table.js"></script>
 
