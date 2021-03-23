@@ -53,9 +53,9 @@ for analytic in analytics:
 
 # Note that the "analytics-table" div is used only by the CSS in order to get a reference to just the analytics table (see main.scss)
 tr = """            <tr>
-                <td>{0}</td>
+                <td style="white-space:nowrap;">{0}</td>
                 <td>{1}</td>
-                <td>{2}</td>
+                <td style="white-space:nowrap;">{2}</td>
                 <td>{3}</td>
                 <td>{4}</td>
                 <td>{5}</td>
@@ -67,7 +67,7 @@ permalink: /analytics/
 ---
 <div class="analytics-table"></div> 
 
-## Analytic List (by date added)
+## Analytic List (sortable)
 <script type="text/javascript" src="/assets/sort-table.js"></script>
 
 <table class="js-sort-table" id="analytics-sort">
@@ -75,10 +75,10 @@ permalink: /analytics/
         <tr>
             <th style="white-space:nowrap;">ID</th>
             <th style="white-space:nowrap;">Name</th>
-            <th>Submission Date</th>
-            <th>ATT&CK Techniques</th>
-            <th>Implementations</th>
-            <th>Applicable Platforms</th>
+            <th style="white-space:nowrap;" class="js-sort-date">Submission Date</th>
+            <th style="white-space:nowrap;">ATT&CK Techniques</th>
+            <th style="white-space:nowrap;">Implementations</th>
+            <th style="white-space:nowrap;">Applicable Platforms</th>
         </tr>
     </thead>
     <tbody>
