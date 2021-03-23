@@ -21,675 +21,675 @@ permalink: /analytics/
     <tbody>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-01-002/">CAR-2013-01-002</a></td>
-                <td style="white-space:nowrap;">Autorun Differences</td>
-                <td style="white-space:nowrap;">January 25 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1543/">Create or Modify System Process</a></li><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
-                <td style="white-space:nowrap;"></td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Autorun Differences</td>
+                <td>January 25 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1543/">Create or Modify System Process</a></li><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
+                <td></td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-01-003/">CAR-2013-01-003</a></td>
-                <td style="white-space:nowrap;">SMB Events Monitoring</td>
-                <td style="white-space:nowrap;">January 25 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1039/">Data from Network Shared Drive</a></li><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">N/A</td>
+                <td>SMB Events Monitoring</td>
+                <td>January 25 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1039/">Data from Network Shared Drive</a></li><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>N/A</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-02-003/">CAR-2013-02-003</a></td>
-                <td style="white-space:nowrap;">Processes Spawning cmd.exe</td>
-                <td style="white-space:nowrap;">February 05 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Logpoint, Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Processes Spawning cmd.exe</td>
+                <td>February 05 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></li></ul></td>
+                <td>Dnif, Logpoint, Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-02-008/">CAR-2013-02-008</a></td>
-                <td style="white-space:nowrap;">Simultaneous Logins on a Host</td>
-                <td style="white-space:nowrap;">February 18 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1078/">Valid Accounts</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>Simultaneous Logins on a Host</td>
+                <td>February 18 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1078/">Valid Accounts</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-02-012/">CAR-2013-02-012</a></td>
-                <td style="white-space:nowrap;">User Logged in to Multiple Hosts</td>
-                <td style="white-space:nowrap;">February 27 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1078/">Valid Accounts</a></li></ul></td>
-                <td style="white-space:nowrap;"></td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>User Logged in to Multiple Hosts</td>
+                <td>February 27 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1078/">Valid Accounts</a></li></ul></td>
+                <td></td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-03-001/">CAR-2013-03-001</a></td>
-                <td style="white-space:nowrap;">Reg.exe called from Command Shell</td>
-                <td style="white-space:nowrap;">March 28 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1012/">Query Registry</a></li><li><a href="https://attack.mitre.org/techniques/T1112/">Modify Registry</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Reg.exe called from Command Shell</td>
+                <td>March 28 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1012/">Query Registry</a></li><li><a href="https://attack.mitre.org/techniques/T1112/">Modify Registry</a></li></ul></td>
+                <td>Dnif, Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-04-002/">CAR-2013-04-002</a></td>
-                <td style="white-space:nowrap;">Quick execution of a series of suspicious commands</td>
-                <td style="white-space:nowrap;">April 11 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1087/">Account Discovery</a></li><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Logpoint, Pseudocode, Sigma</td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>Quick execution of a series of suspicious commands</td>
+                <td>April 11 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1087/">Account Discovery</a></li><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul></td>
+                <td>Dnif, Logpoint, Pseudocode, Sigma</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-05-002/">CAR-2013-05-002</a></td>
-                <td style="white-space:nowrap;">Suspicious Run Locations</td>
-                <td style="white-space:nowrap;">May 07 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1036/">Masquerading</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Logpoint, Pseudocode, Sigma</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Suspicious Run Locations</td>
+                <td>May 07 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1036/">Masquerading</a></li></ul></td>
+                <td>Dnif, Logpoint, Pseudocode, Sigma</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-05-003/">CAR-2013-05-003</a></td>
-                <td style="white-space:nowrap;">SMB Write Request</td>
-                <td style="white-space:nowrap;">May 13 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1570/">Lateral Tool Transfer</a></li><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>SMB Write Request</td>
+                <td>May 13 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1570/">Lateral Tool Transfer</a></li><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-05-004/">CAR-2013-05-004</a></td>
-                <td style="white-space:nowrap;">Execution with AT</td>
-                <td style="white-space:nowrap;">May 13 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Eql, Logpoint, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Execution with AT</td>
+                <td>May 13 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
+                <td>Dnif, Eql, Logpoint, Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-05-005/">CAR-2013-05-005</a></td>
-                <td style="white-space:nowrap;">SMB Copy and Execution</td>
-                <td style="white-space:nowrap;">May 13 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li><li><a href="https://attack.mitre.org/techniques/T1078/">Valid Accounts</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>SMB Copy and Execution</td>
+                <td>May 13 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li><li><a href="https://attack.mitre.org/techniques/T1078/">Valid Accounts</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-05-009/">CAR-2013-05-009</a></td>
-                <td style="white-space:nowrap;">Running executables with same hash and different names</td>
-                <td style="white-space:nowrap;">May 23 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1036/">Masquerading</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Logpoint, Sigma, Splunk</td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>Running executables with same hash and different names</td>
+                <td>May 23 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1036/">Masquerading</a></li></ul></td>
+                <td>Dnif, Logpoint, Sigma, Splunk</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-07-001/">CAR-2013-07-001</a></td>
-                <td style="white-space:nowrap;">Suspicious Arguments</td>
-                <td style="white-space:nowrap;">July 05 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Eql, Logpoint, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>Suspicious Arguments</td>
+                <td>July 05 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
+                <td>Dnif, Eql, Logpoint, Pseudocode, Splunk</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-07-002/">CAR-2013-07-002</a></td>
-                <td style="white-space:nowrap;">RDP Connection Detection</td>
-                <td style="white-space:nowrap;">July 24 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Sigma</td>
-                <td style="white-space:nowrap;">N/A</td>
+                <td>RDP Connection Detection</td>
+                <td>July 24 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
+                <td>Pseudocode, Sigma</td>
+                <td>N/A</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-07-005/">CAR-2013-07-005</a></td>
-                <td style="white-space:nowrap;">Command Line Usage of Archiving Software</td>
-                <td style="white-space:nowrap;">July 31 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1560/">Archive Collected Data</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Logpoint, Pseudocode</td>
-                <td style="white-space:nowrap;">N/A</td>
+                <td>Command Line Usage of Archiving Software</td>
+                <td>July 31 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1560/">Archive Collected Data</a></li></ul></td>
+                <td>Dnif, Logpoint, Pseudocode</td>
+                <td>N/A</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-08-001/">CAR-2013-08-001</a></td>
-                <td style="white-space:nowrap;">Execution with schtasks</td>
-                <td style="white-space:nowrap;">August 07 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Logpoint, Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Execution with schtasks</td>
+                <td>August 07 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
+                <td>Dnif, Logpoint, Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-09-003/">CAR-2013-09-003</a></td>
-                <td style="white-space:nowrap;">SMB Session Setups</td>
-                <td style="white-space:nowrap;">September 12 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1187/">Forced Authentication</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">N/A</td>
+                <td>SMB Session Setups</td>
+                <td>September 12 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1187/">Forced Authentication</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>N/A</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-09-005/">CAR-2013-09-005</a></td>
-                <td style="white-space:nowrap;">Service Outlier Executables</td>
-                <td style="white-space:nowrap;">September 23 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1543/">Create or Modify System Process</a></li></ul></td>
-                <td style="white-space:nowrap;">Logpoint, Pseudocode, Sigma</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Service Outlier Executables</td>
+                <td>September 23 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1543/">Create or Modify System Process</a></li></ul></td>
+                <td>Logpoint, Pseudocode, Sigma</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-10-001/">CAR-2013-10-001</a></td>
-                <td style="white-space:nowrap;">User Login Activity Monitoring</td>
-                <td style="white-space:nowrap;">October 03 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li><li><a href="https://attack.mitre.org/techniques/T1078/">Valid Accounts</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>User Login Activity Monitoring</td>
+                <td>October 03 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li><li><a href="https://attack.mitre.org/techniques/T1078/">Valid Accounts</a></li></ul></td>
+                <td>Dnif, Pseudocode, Splunk</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-10-002/">CAR-2013-10-002</a></td>
-                <td style="white-space:nowrap;">DLL Injection via Load Library</td>
-                <td style="white-space:nowrap;">October 07 2013</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1055/">Process Injection</a></li><li><a href="https://attack.mitre.org/techniques/T1548/">Abuse Elevation Control Mechanism</a></li></ul></td>
-                <td style="white-space:nowrap;">Logpoint, Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>DLL Injection via Load Library</td>
+                <td>October 07 2013</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1055/">Process Injection</a></li><li><a href="https://attack.mitre.org/techniques/T1548/">Abuse Elevation Control Mechanism</a></li></ul></td>
+                <td>Logpoint, Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-02-001/">CAR-2014-02-001</a></td>
-                <td style="white-space:nowrap;">Service Binary Modifications</td>
-                <td style="white-space:nowrap;">February 14 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1543/">Create or Modify System Process</a></li><li><a href="https://attack.mitre.org/techniques/T1574/">Hijack Execution Flow</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Service Binary Modifications</td>
+                <td>February 14 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1543/">Create or Modify System Process</a></li><li><a href="https://attack.mitre.org/techniques/T1574/">Hijack Execution Flow</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-03-001/">CAR-2014-03-001</a></td>
-                <td style="white-space:nowrap;">SMB Write Request - NamedPipes</td>
-                <td style="white-space:nowrap;">March 03 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1570/">Lateral Tool Transfer</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>SMB Write Request - NamedPipes</td>
+                <td>March 03 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1570/">Lateral Tool Transfer</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-03-005/">CAR-2014-03-005</a></td>
-                <td style="white-space:nowrap;">Remotely Launched Executables via Services</td>
-                <td style="white-space:nowrap;">March 18 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1543/">Create or Modify System Process</a></li><li><a href="https://attack.mitre.org/techniques/T1569/">System Services</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Remotely Launched Executables via Services</td>
+                <td>March 18 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1543/">Create or Modify System Process</a></li><li><a href="https://attack.mitre.org/techniques/T1569/">System Services</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-03-006/">CAR-2014-03-006</a></td>
-                <td style="white-space:nowrap;">RunDLL32.exe monitoring</td>
-                <td style="white-space:nowrap;">March 28 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Logpoint, Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>RunDLL32.exe monitoring</td>
+                <td>March 28 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
+                <td>Dnif, Logpoint, Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-04-003/">CAR-2014-04-003</a></td>
-                <td style="white-space:nowrap;">Powershell Execution</td>
-                <td style="white-space:nowrap;">April 11 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></li><li><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Eql, Logpoint, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Powershell Execution</td>
+                <td>April 11 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></li><li><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></li></ul></td>
+                <td>Dnif, Eql, Logpoint, Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-05-001/">CAR-2014-05-001</a></td>
-                <td style="white-space:nowrap;">RPC Activity</td>
-                <td style="white-space:nowrap;">May 01 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>RPC Activity</td>
+                <td>May 01 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-05-002/">CAR-2014-05-002</a></td>
-                <td style="white-space:nowrap;">Services launching Cmd</td>
-                <td style="white-space:nowrap;">May 05 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1543/">Create or Modify System Process</a></li></ul></td>
-                <td style="white-space:nowrap;">Dnif, Eql, Logpoint, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Services launching Cmd</td>
+                <td>May 05 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1543/">Create or Modify System Process</a></li></ul></td>
+                <td>Dnif, Eql, Logpoint, Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-07-001/">CAR-2014-07-001</a></td>
-                <td style="white-space:nowrap;">Service Search Path Interception</td>
-                <td style="white-space:nowrap;">July 17 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1574/">Hijack Execution Flow</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Service Search Path Interception</td>
+                <td>July 17 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1574/">Hijack Execution Flow</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-11-002/">CAR-2014-11-002</a></td>
-                <td style="white-space:nowrap;">Outlier Parents of Cmd</td>
-                <td style="white-space:nowrap;">November 06 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Outlier Parents of Cmd</td>
+                <td>November 06 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-11-003/">CAR-2014-11-003</a></td>
-                <td style="white-space:nowrap;">Debuggers for Accessibility Applications</td>
-                <td style="white-space:nowrap;">November 21 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></li></ul></td>
-                <td style="white-space:nowrap;">Logpoint, Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Debuggers for Accessibility Applications</td>
+                <td>November 21 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></li></ul></td>
+                <td>Logpoint, Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-11-004/">CAR-2014-11-004</a></td>
-                <td style="white-space:nowrap;">Remote PowerShell Sessions</td>
-                <td style="white-space:nowrap;">November 19 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></li><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
-                <td style="white-space:nowrap;">Eql, Logpoint, Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Remote PowerShell Sessions</td>
+                <td>November 19 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></li><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
+                <td>Eql, Logpoint, Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-11-005/">CAR-2014-11-005</a></td>
-                <td style="white-space:nowrap;">Remote Registry</td>
-                <td style="white-space:nowrap;">November 19 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1112/">Modify Registry</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Remote Registry</td>
+                <td>November 19 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1112/">Modify Registry</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-11-006/">CAR-2014-11-006</a></td>
-                <td style="white-space:nowrap;">Windows Remote Management (WinRM)</td>
-                <td style="white-space:nowrap;">November 19 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Windows Remote Management (WinRM)</td>
+                <td>November 19 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-11-007/">CAR-2014-11-007</a></td>
-                <td style="white-space:nowrap;">Remote Windows Management Instrumentation (WMI) over RPC</td>
-                <td style="white-space:nowrap;">November 19 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1047/">Windows Management Instrumentation</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Remote Windows Management Instrumentation (WMI) over RPC</td>
+                <td>November 19 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1047/">Windows Management Instrumentation</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-11-008/">CAR-2014-11-008</a></td>
-                <td style="white-space:nowrap;">Command Launched from WinLogon</td>
-                <td style="white-space:nowrap;">November 19 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></li></ul></td>
-                <td style="white-space:nowrap;">Eql, Logpoint, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Command Launched from WinLogon</td>
+                <td>November 19 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></li></ul></td>
+                <td>Eql, Logpoint, Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-12-001/">CAR-2014-12-001</a></td>
-                <td style="white-space:nowrap;">Remotely Launched Executables via WMI</td>
-                <td style="white-space:nowrap;">December 02 2014</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1047/">Windows Management Instrumentation</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Remotely Launched Executables via WMI</td>
+                <td>December 02 2014</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1047/">Windows Management Instrumentation</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2015-04-001/">CAR-2015-04-001</a></td>
-                <td style="white-space:nowrap;">Remotely Scheduled Tasks via AT</td>
-                <td style="white-space:nowrap;">April 29 2015</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Remotely Scheduled Tasks via AT</td>
+                <td>April 29 2015</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2015-04-002/">CAR-2015-04-002</a></td>
-                <td style="white-space:nowrap;">Remotely Scheduled Tasks via Schtasks</td>
-                <td style="white-space:nowrap;">April 29 2015</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Remotely Scheduled Tasks via Schtasks</td>
+                <td>April 29 2015</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2015-07-001/">CAR-2015-07-001</a></td>
-                <td style="white-space:nowrap;">All Logins Since Last Boot</td>
-                <td style="white-space:nowrap;">July 17 2015</td>
-                <td style="white-space:nowrap;"></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>All Logins Since Last Boot</td>
+                <td>July 17 2015</td>
+                <td></td>
+                <td>Pseudocode</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2016-03-001/">CAR-2016-03-001</a></td>
-                <td style="white-space:nowrap;">Host Discovery Commands</td>
-                <td style="white-space:nowrap;">March 24 2016</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1087/">Account Discovery</a></li><li><a href="https://attack.mitre.org/techniques/T1069/">Permission Groups Discovery</a></li></ul></td>
-                <td style="white-space:nowrap;">Eql, Logpoint, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>Host Discovery Commands</td>
+                <td>March 24 2016</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1087/">Account Discovery</a></li><li><a href="https://attack.mitre.org/techniques/T1069/">Permission Groups Discovery</a></li></ul></td>
+                <td>Eql, Logpoint, Pseudocode, Splunk</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2016-03-002/">CAR-2016-03-002</a></td>
-                <td style="white-space:nowrap;">Create Remote Process via WMIC</td>
-                <td style="white-space:nowrap;">March 28 2016</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1047/">Windows Management Instrumentation</a></li></ul></td>
-                <td style="white-space:nowrap;">Eql, Logpoint, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Create Remote Process via WMIC</td>
+                <td>March 28 2016</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1047/">Windows Management Instrumentation</a></li></ul></td>
+                <td>Eql, Logpoint, Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2016-04-002/">CAR-2016-04-002</a></td>
-                <td style="white-space:nowrap;">User Activity from Clearing Event Logs</td>
-                <td style="white-space:nowrap;">April 14 2016</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
-                <td style="white-space:nowrap;">Logpoint, Pseudocode, Sigma</td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>User Activity from Clearing Event Logs</td>
+                <td>April 14 2016</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
+                <td>Logpoint, Pseudocode, Sigma</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2016-04-003/">CAR-2016-04-003</a></td>
-                <td style="white-space:nowrap;">User Activity from Stopping Windows Defensive Services</td>
-                <td style="white-space:nowrap;">April 15 2016</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1562/">Impair Defenses</a></li></ul></td>
-                <td style="white-space:nowrap;">Logpoint, Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>User Activity from Stopping Windows Defensive Services</td>
+                <td>April 15 2016</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1562/">Impair Defenses</a></li></ul></td>
+                <td>Logpoint, Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2016-04-004/">CAR-2016-04-004</a></td>
-                <td style="white-space:nowrap;">Successful Local Account Login</td>
-                <td style="white-space:nowrap;">April 18 2016</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1550/">Use Alternate Authentication Material</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Successful Local Account Login</td>
+                <td>April 18 2016</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1550/">Use Alternate Authentication Material</a></li></ul></td>
+                <td>Pseudocode</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2016-04-005/">CAR-2016-04-005</a></td>
-                <td style="white-space:nowrap;">Remote Desktop Logon</td>
-                <td style="white-space:nowrap;">April 19 2016</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
-                <td style="white-space:nowrap;">Logpoint, Pseudocode, Sigma</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Remote Desktop Logon</td>
+                <td>April 19 2016</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></li></ul></td>
+                <td>Logpoint, Pseudocode, Sigma</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2019-04-001/">CAR-2019-04-001</a></td>
-                <td style="white-space:nowrap;">UAC Bypass</td>
-                <td style="white-space:nowrap;">April 19 2019</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1548/">Abuse Elevation Control Mechanism</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Sigma, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>UAC Bypass</td>
+                <td>April 19 2019</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1548/">Abuse Elevation Control Mechanism</a></li></ul></td>
+                <td>Pseudocode, Sigma, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2019-04-002/">CAR-2019-04-002</a></td>
-                <td style="white-space:nowrap;">Generic Regsvr32</td>
-                <td style="white-space:nowrap;">April 24 2019</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Generic Regsvr32</td>
+                <td>April 24 2019</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2019-04-003/">CAR-2019-04-003</a></td>
-                <td style="white-space:nowrap;">Squiblydoo</td>
-                <td style="white-space:nowrap;">April 24 2019</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
-                <td style="white-space:nowrap;">Eql, Logpoint, Psuedocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Squiblydoo</td>
+                <td>April 24 2019</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
+                <td>Eql, Logpoint, Psuedocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2019-04-004/">CAR-2019-04-004</a></td>
-                <td style="white-space:nowrap;">Credential Dumping via Mimikatz</td>
-                <td style="white-space:nowrap;">April 29 2019</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul></td>
-                <td style="white-space:nowrap;">Logpoint, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Credential Dumping via Mimikatz</td>
+                <td>April 29 2019</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul></td>
+                <td>Logpoint, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2019-07-001/">CAR-2019-07-001</a></td>
-                <td style="white-space:nowrap;">Access Permission Modification</td>
-                <td style="white-space:nowrap;">July 08 2019</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1222/">File and Directory Permissions Modification</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows, Linux, macOS</td>
+                <td>Access Permission Modification</td>
+                <td>July 08 2019</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1222/">File and Directory Permissions Modification</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2019-07-002/">CAR-2019-07-002</a></td>
-                <td style="white-space:nowrap;">Lsass Process Dump via Procdump</td>
-                <td style="white-space:nowrap;">July 29 2019</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul></td>
-                <td style="white-space:nowrap;">Eql, Logpoint, Pseudocode, Sigma, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Lsass Process Dump via Procdump</td>
+                <td>July 29 2019</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul></td>
+                <td>Eql, Logpoint, Pseudocode, Sigma, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2019-08-001/">CAR-2019-08-001</a></td>
-                <td style="white-space:nowrap;">Credential Dumping via Windows Task Manager</td>
-                <td style="white-space:nowrap;">August 05 2019</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul></td>
-                <td style="white-space:nowrap;">Eql, Logpoint, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Credential Dumping via Windows Task Manager</td>
+                <td>August 05 2019</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul></td>
+                <td>Eql, Logpoint, Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2019-08-002/">CAR-2019-08-002</a></td>
-                <td style="white-space:nowrap;">Active Directory Dumping via NTDSUtil</td>
-                <td style="white-space:nowrap;">August 13 2019</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul></td>
-                <td style="white-space:nowrap;">Eql, Logpoint, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Active Directory Dumping via NTDSUtil</td>
+                <td>August 13 2019</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul></td>
+                <td>Eql, Logpoint, Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-04-001/">CAR-2020-04-001</a></td>
-                <td style="white-space:nowrap;">Shadow Copy Deletion</td>
-                <td style="white-space:nowrap;">April 10 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1490/">Inhibit System Recovery</a></li></ul></td>
-                <td style="white-space:nowrap;">Eql, Logpoint, Pseudocode, Sigma, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Shadow Copy Deletion</td>
+                <td>April 10 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1490/">Inhibit System Recovery</a></li></ul></td>
+                <td>Eql, Logpoint, Pseudocode, Sigma, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-05-001/">CAR-2020-05-001</a></td>
-                <td style="white-space:nowrap;">MiniDump of LSASS</td>
-                <td style="white-space:nowrap;">May 04 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul></td>
-                <td style="white-space:nowrap;">Logpoint, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>MiniDump of LSASS</td>
+                <td>May 04 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></li></ul></td>
+                <td>Logpoint, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-05-003/">CAR-2020-05-003</a></td>
-                <td style="white-space:nowrap;">Rare LolBAS Command Lines</td>
-                <td style="white-space:nowrap;">May 04 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1012/">Query Registry</a></li><li><a href="https://attack.mitre.org/techniques/T1112/">Modify Registry</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Rare LolBAS Command Lines</td>
+                <td>May 04 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1012/">Query Registry</a></li><li><a href="https://attack.mitre.org/techniques/T1112/">Modify Registry</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-08-001/">CAR-2020-08-001</a></td>
-                <td style="white-space:nowrap;">NTFS Alternate Data Stream Execution - System Utilities</td>
-                <td style="white-space:nowrap;">August 03 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1564/">Hide Artifacts</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>NTFS Alternate Data Stream Execution - System Utilities</td>
+                <td>August 03 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1564/">Hide Artifacts</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-08-002/">CAR-2020-08-002</a></td>
-                <td style="white-space:nowrap;">NTFS Alternate Data Stream Execution - LOLBAS</td>
-                <td style="white-space:nowrap;">August 03 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1564/">Hide Artifacts</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>NTFS Alternate Data Stream Execution - LOLBAS</td>
+                <td>August 03 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1564/">Hide Artifacts</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-09-001/">CAR-2020-09-001</a></td>
-                <td style="white-space:nowrap;">Scheduled Task - FileAccess</td>
-                <td style="white-space:nowrap;">September 10 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Scheduled Task - FileAccess</td>
+                <td>September 10 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-09-002/">CAR-2020-09-002</a></td>
-                <td style="white-space:nowrap;">Component Object Model Hijacking</td>
-                <td style="white-space:nowrap;">September 10 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></li></ul></td>
-                <td style="white-space:nowrap;">Logpoint, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Component Object Model Hijacking</td>
+                <td>September 10 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></li></ul></td>
+                <td>Logpoint, Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-09-003/">CAR-2020-09-003</a></td>
-                <td style="white-space:nowrap;">Indicator Blocking - Driver Unloaded</td>
-                <td style="white-space:nowrap;">September 10 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1562/">Impair Defenses</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Indicator Blocking - Driver Unloaded</td>
+                <td>September 10 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1562/">Impair Defenses</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-09-004/">CAR-2020-09-004</a></td>
-                <td style="white-space:nowrap;">Credentials in Files & Registry</td>
-                <td style="white-space:nowrap;">September 10 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1552/">Unsecured Credentials</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Credentials in Files & Registry</td>
+                <td>September 10 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1552/">Unsecured Credentials</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-09-005/">CAR-2020-09-005</a></td>
-                <td style="white-space:nowrap;">AppInit DLLs</td>
-                <td style="white-space:nowrap;">September 10 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>AppInit DLLs</td>
+                <td>September 10 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-001/">CAR-2020-11-001</a></td>
-                <td style="white-space:nowrap;">Boot or Logon Initialization Scripts</td>
-                <td style="white-space:nowrap;">November 30 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1037/">Boot or Logon Initialization Scripts</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Boot or Logon Initialization Scripts</td>
+                <td>November 30 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1037/">Boot or Logon Initialization Scripts</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-002/">CAR-2020-11-002</a></td>
-                <td style="white-space:nowrap;">Local Network Sniffing</td>
-                <td style="white-space:nowrap;">November 30 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1040/">Network Sniffing</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Local Network Sniffing</td>
+                <td>November 30 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1040/">Network Sniffing</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-003/">CAR-2020-11-003</a></td>
-                <td style="white-space:nowrap;">DLL Injection with Mavinject</td>
-                <td style="white-space:nowrap;">November 30 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1055/">Process Injection</a></li></ul></td>
-                <td style="white-space:nowrap;">Logpoint, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>DLL Injection with Mavinject</td>
+                <td>November 30 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1055/">Process Injection</a></li></ul></td>
+                <td>Logpoint, Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-004/">CAR-2020-11-004</a></td>
-                <td style="white-space:nowrap;">Processes Started From Irregular Parent</td>
-                <td style="white-space:nowrap;">November 30 2020</td>
-                <td style="white-space:nowrap;"></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Processes Started From Irregular Parent</td>
+                <td>November 30 2020</td>
+                <td></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-005/">CAR-2020-11-005</a></td>
-                <td style="white-space:nowrap;">Clear Powershell Console Command History</td>
-                <td style="white-space:nowrap;">November 30 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Clear Powershell Console Command History</td>
+                <td>November 30 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-006/">CAR-2020-11-006</a></td>
-                <td style="white-space:nowrap;">Local Permission Group Discovery</td>
-                <td style="white-space:nowrap;">November 30 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1069/">Permission Groups Discovery</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Local Permission Group Discovery</td>
+                <td>November 30 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1069/">Permission Groups Discovery</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-007/">CAR-2020-11-007</a></td>
-                <td style="white-space:nowrap;">Network Share Connection Removal</td>
-                <td style="white-space:nowrap;">November 30 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Network Share Connection Removal</td>
+                <td>November 30 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-008/">CAR-2020-11-008</a></td>
-                <td style="white-space:nowrap;">MSBuild and msxsl</td>
-                <td style="white-space:nowrap;">November 30 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1127/">Trusted Developer Utilities Proxy Execution</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>MSBuild and msxsl</td>
+                <td>November 30 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1127/">Trusted Developer Utilities Proxy Execution</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-009/">CAR-2020-11-009</a></td>
-                <td style="white-space:nowrap;">Compiled HTML Access</td>
-                <td style="white-space:nowrap;">November 30 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
-                <td style="white-space:nowrap;">Logpoint, Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Compiled HTML Access</td>
+                <td>November 30 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
+                <td>Logpoint, Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-010/">CAR-2020-11-010</a></td>
-                <td style="white-space:nowrap;">CMSTP</td>
-                <td style="white-space:nowrap;">November 30 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>CMSTP</td>
+                <td>November 30 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-011/">CAR-2020-11-011</a></td>
-                <td style="white-space:nowrap;">Registry Edit from Screensaver</td>
-                <td style="white-space:nowrap;">November 30 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Registry Edit from Screensaver</td>
+                <td>November 30 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-01-001/">CAR-2021-01-001</a></td>
-                <td style="white-space:nowrap;">Identifying Port Scanning Activity</td>
-                <td style="white-space:nowrap;">October 23 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1046/">Network Service Scanning</a></li></ul></td>
-                <td style="white-space:nowrap;">Splunk</td>
-                <td style="white-space:nowrap;">Windows, Linux</td>
+                <td>Identifying Port Scanning Activity</td>
+                <td>October 23 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1046/">Network Service Scanning</a></li></ul></td>
+                <td>Splunk</td>
+                <td>Windows, Linux</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-01-002/">CAR-2021-01-002</a></td>
-                <td style="white-space:nowrap;">Unusually Long Command Line Strings</td>
-                <td style="white-space:nowrap;">November 27 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></li></ul></td>
-                <td style="white-space:nowrap;">Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Unusually Long Command Line Strings</td>
+                <td>November 27 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></li></ul></td>
+                <td>Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-01-003/">CAR-2021-01-003</a></td>
-                <td style="white-space:nowrap;">Clearing Windows Logs with Wevtutil</td>
-                <td style="white-space:nowrap;">December 02 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
-                <td style="white-space:nowrap;">Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Clearing Windows Logs with Wevtutil</td>
+                <td>December 02 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
+                <td>Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-01-004/">CAR-2021-01-004</a></td>
-                <td style="white-space:nowrap;">Unusual Child Process for Spoolsv.Exe or Connhost.Exe</td>
-                <td style="white-space:nowrap;">December 03 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1068/">Exploitation for Privilege Escalation</a></li></ul></td>
-                <td style="white-space:nowrap;">Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Unusual Child Process for Spoolsv.Exe or Connhost.Exe</td>
+                <td>December 03 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1068/">Exploitation for Privilege Escalation</a></li></ul></td>
+                <td>Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-01-006/">CAR-2021-01-006</a></td>
-                <td style="white-space:nowrap;">Unusual Child Process spawned using DDE exploit</td>
-                <td style="white-space:nowrap;">December 03 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1559/">Inter-Process Communication</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Unusual Child Process spawned using DDE exploit</td>
+                <td>December 03 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1559/">Inter-Process Communication</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-01-007/">CAR-2021-01-007</a></td>
-                <td style="white-space:nowrap;">Detecting Tampering of Windows Defender Command Prompt</td>
-                <td style="white-space:nowrap;">December 11 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1562/">Impair Defenses</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Detecting Tampering of Windows Defender Command Prompt</td>
+                <td>December 11 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1562/">Impair Defenses</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-01-008/">CAR-2021-01-008</a></td>
-                <td style="white-space:nowrap;">Disable UAC</td>
-                <td style="white-space:nowrap;">December 11 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1548/">Abuse Elevation Control Mechanism</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Disable UAC</td>
+                <td>December 11 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1548/">Abuse Elevation Control Mechanism</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-01-009/">CAR-2021-01-009</a></td>
-                <td style="white-space:nowrap;">Detecting Shadow Copy Deletion via Vssadmin.exe</td>
-                <td style="white-space:nowrap;">December 11 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1490/">Inhibit System Recovery</a></li></ul></td>
-                <td style="white-space:nowrap;">Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Detecting Shadow Copy Deletion via Vssadmin.exe</td>
+                <td>December 11 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1490/">Inhibit System Recovery</a></li></ul></td>
+                <td>Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-02-001/">CAR-2021-02-001</a></td>
-                <td style="white-space:nowrap;">Webshell-Indicative Process Tree</td>
-                <td style="white-space:nowrap;">November 29 2020</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1505/">Server Software Component</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Webshell-Indicative Process Tree</td>
+                <td>November 29 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1505/">Server Software Component</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-02-002/">CAR-2021-02-002</a></td>
-                <td style="white-space:nowrap;">Get System Elevation</td>
-                <td style="white-space:nowrap;">January 15 2021</td>
-                <td style="white-space:nowrap;"><ul><li><a href="https://attack.mitre.org/techniques/T1548/">Abuse Elevation Control Mechanism</a></li></ul></td>
-                <td style="white-space:nowrap;">Pseudocode, Splunk</td>
-                <td style="white-space:nowrap;">Windows</td>
+                <td>Get System Elevation</td>
+                <td>January 15 2021</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1548/">Abuse Elevation Control Mechanism</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
             </tr>
       </tbody>
 </table>
