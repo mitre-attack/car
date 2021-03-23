@@ -21,7 +21,11 @@ Information about the latest CAR updates and changes can be found in this sectio
 
 ### March 2021
 * Added [Coverage Comparison](/coverage) page, which compares ATT&CK Technique/Sub-technique coverage across CAR, [Sigma](https://github.com/SigmaHQ/sigma), and [Elastic Detection](https://github.com/elastic/detection-rules) rules.
-
+* New analytics added
+  * [CAR-2021-01-006: Unusual Child Process Spawned using DDE Exploit](/analytics/CAR-2021-01-006)
+  * [CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt](/analytics/CAR-2021-01-007)
+  * [CAR-2021-01-008: Disable UAC](/analytics/CAR-2021-01-008)
+  
 ### January-Feburary 2021
 * New analytics added - special thanks to all of the submissions that we've received!
   * [CAR-2021-01-001: Identifying Port Scanning Activity](/analytics/CAR-2021-01-001)
