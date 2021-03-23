@@ -1,0 +1,41 @@
+---
+title: Disable UAC
+submission_date: 2020/12/11
+information_domain: 'Host'
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - Cyware Labs
+id: CAR-2021-01-008
+description: |-
+  Threat actors often, after compromising a machine, try to disable User Access Control (UAC) to escalate privileges. This is often done by changing the registry key for system policies using “reg.exe”, a legitimate tool provided by Microsoft for modifying the registry via command prompt or scripts. This action interferes with UAC and may enable a threat actor to escalate privileges on the compromised system, thereby allowing further exploitation of the system.
+coverage:
+  - technique: T1548
+    coverage: Medium
+    subtechniques:
+      - 002
+    tactics:
+      - TA0004
+implementations:
+- name: Detect disabling of UAC via reg.exe
+  description:  This query looks for the specific use of reg.exe in correlation to commands aimed at disabling UAC
+  code: |-
+    sourcetype = WinEventLog:Microsoft-Windows-Sysmon/Operational ParentImage = "C:\\Windows\\System32\\cmd.exe" | where like(CommandLine,"reg.exe%HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System%REG_DWORD /d 0%")
+  data_model: Sysmon native
+  type: Splunk
+- name: Detect disabling of UAC via reg.exe
+  description:  This query looks for the specific use of reg.exe in correlation to commands aimed at disabling UAC
+  code: |-
+    processes = search Process:Create
+    cmd_processes = filter processes where (
+                    (parent_image = "C:\\Windows\\System32\\cmd.exe") AND (command_line = "reg.exe%HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System%REG_DWORD /d 0%")
+                    )
+  data_model: Sysmon native
+  type: pseudocode
+data_model_references:
+  - process/create/image_path
+  - process/create/command_line
