@@ -17,7 +17,7 @@ coverage:
   - technique: T1562
     coverage: Medium
     subtechniques:
-      - 001
+      - T1562.001
     tactics:
       - TA0005
 implementations:
