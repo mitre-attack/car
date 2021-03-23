@@ -12,10 +12,10 @@ permalink: /analytics/
         <tr>
             <th style="white-space:nowrap;">ID</th>
             <th style="white-space:nowrap;">Name</th>
-            <th>Submission Date</th>
-            <th>ATT&CK Techniques</th>
-            <th>Implementations</th>
-            <th>Applicable Platforms</th>
+            <th style="white-space:nowrap;" class="js-sort-date">Submission Date</th>
+            <th style="white-space:nowrap;">ATT&CK Techniques</th>
+            <th style="white-space:nowrap;">Implementations</th>
+            <th style="white-space:nowrap;">Applicable Platforms</th>
         </tr>
     </thead>
     <tbody>
