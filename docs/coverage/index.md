@@ -4,18 +4,27 @@ title: Analytic Coverage Comparison
 
 Generated on: March 22, 2021
 
-<script type="text/javascript" src="assets/sort-table.js"></script>
+A cross-walk of CAR, [Sigma](https://github.com/SigmaHQ/sigma), and [Elastic Detection](https://github.com/elastic/detection-rules) rules in terms of their coverage of ATT&CK Techniques and Sub-techniques. Note that some analytics may have coverage for multiple techniques, so there is not necessarily a 1:1 correlation between the number of hits in this table for a technique/sub-technique and the number of analytics in each repository.
+
+* \# CAR: the number of CAR analytics that contain coverage for the technique/sub-technique.
+* \# Sigma: the number of Sigma rules that contain coverage for the technique/sub-technique.
+* \# ES: the number of ES detection rules that contain coverage for the technique/sub-technique.
+* \# Total: the total number of analytics between CAR/Sigma/ES that contain coverage for the technique-sub-technique.
+
+This table is sortable, so feel free to click on any column to sort by its values.
+
+<script type="text/javascript" src="/assets/sort-table.js"></script>
 
 <table class="js-sort-table" id="coverage-sort">
         <thead>
         <tr>
-            <th>Technique ID</th>
+            <th style="white-space:nowrap;">Technique ID</th>
             <th>Technique Name</th>
             <th>Sub-technique Name</th>
-            <th class="js-sort-number"># CAR</th>
-            <th class="js-sort-number"># Sigma</th>
-            <th class="js-sort-number"># ES</th>
-            <th class="js-sort-number"># Total</th>
+            <th style="white-space:nowrap;" class="js-sort-number"># CAR</th>
+            <th style="white-space:nowrap;" class="js-sort-number"># Sigma</th>
+            <th style="white-space:nowrap;" class="js-sort-number"># ES</th>
+            <th style="white-space:nowrap;" class="js-sort-number"># Total</th>
         </tr>
         </thead>
         <tbody>
