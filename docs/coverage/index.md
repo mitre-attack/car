@@ -2,7 +2,7 @@
 title: Analytic Coverage Comparison
 ---
 
-Generated on: March 24, 2021
+Generated on: March 22, 2021
 
 A cross-walk of CAR, [Sigma](https://github.com/SigmaHQ/sigma), and [Elastic Detection](https://github.com/elastic/detection-rules) rules in terms of their coverage of ATT&CK Techniques and Sub-techniques. Note that some analytics may have coverage for multiple techniques, so there is not necessarily a 1:1 correlation between the number of hits in this table for a technique/sub-technique and the number of analytics in each repository.
 
@@ -12,6 +12,7 @@ A cross-walk of CAR, [Sigma](https://github.com/SigmaHQ/sigma), and [Elastic Det
 * \# Total: the total number of analytics between CAR/Sigma/ES that contain coverage for the technique-sub-technique.
 
 This table is sortable, so feel free to click on any column to sort by its values. Clicking on each of the CAR/Sigma/ES results will search the corresponding repository for the analytics that contain coverage for the technique/sub-technique. You can also find this data as a CSV file [here](/coverage/analytic_coverage_03_22_2021.csv).
+
 
 <script type="text/javascript" src="/assets/sort-table.js"></script>
 <table class="js-sort-table" id="coverage-sort">
@@ -564,8 +565,8 @@ This table is sortable, so feel free to click on any column to sort by its value
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1040">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1040">6</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1040">2</a></td>
-                <td>9</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1040">1</a></td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1041</td>
@@ -744,8 +745,8 @@ This table is sortable, so feel free to click on any column to sort by its value
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1055">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1055">13</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1055">10</a></td>
-                <td>23</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1055">8</a></td>
+                <td>21</td>
             </tr>
             <tr>
                 <td>T1055.001</td>
@@ -1203,8 +1204,8 @@ This table is sortable, so feel free to click on any column to sort by its value
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1078">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1078">7</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1078">35</a></td>
-                <td>42</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1078">21</a></td>
+                <td>28</td>
             </tr>
             <tr>
                 <td>T1078.001</td>
@@ -2859,8 +2860,8 @@ This table is sortable, so feel free to click on any column to sort by its value
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1546">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546">2</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546">14</a></td>
-                <td>16</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546">12</a></td>
+                <td>14</td>
             </tr>
             <tr>
                 <td>T1546.001</td>
@@ -2931,8 +2932,8 @@ This table is sortable, so feel free to click on any column to sort by its value
                 <td>Accessibility Features</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1546.008">3</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.008">2</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546.008">2</a></td>
-                <td>7</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546.008">1</a></td>
+                <td>6</td>
             </tr>
             <tr>
                 <td>T1546.009</td>
@@ -2958,8 +2959,8 @@ This table is sortable, so feel free to click on any column to sort by its value
                 <td>Application Shimming</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1546.011">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.011">1</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546.011">3</a></td>
-                <td>4</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546.011">2</a></td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1546.012</td>
@@ -3003,8 +3004,8 @@ This table is sortable, so feel free to click on any column to sort by its value
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1547">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1547">1</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547">21</a></td>
-                <td>22</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547">19</a></td>
+                <td>20</td>
             </tr>
             <tr>
                 <td>T1547.001</td>
@@ -3021,8 +3022,8 @@ This table is sortable, so feel free to click on any column to sort by its value
                 <td>Authentication Package</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1547.002">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1547.002">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547.002">3</a></td>
-                <td>3</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547.002">2</a></td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1547.003</td>
@@ -3093,8 +3094,8 @@ This table is sortable, so feel free to click on any column to sort by its value
                 <td>Port Monitors</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1547.010">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1547.010">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547.010">2</a></td>
-                <td>3</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547.010">1</a></td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1547.011</td>
@@ -3120,8 +3121,8 @@ This table is sortable, so feel free to click on any column to sort by its value
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1548">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1548">1</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1548">20</a></td>
-                <td>22</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1548">17</a></td>
+                <td>19</td>
             </tr>
             <tr>
                 <td>T1548.001</td>
@@ -3138,8 +3139,8 @@ This table is sortable, so feel free to click on any column to sort by its value
                 <td>Bypass User Account Control</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1548.002">2</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1548.002">8</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1548.002">11</a></td>
-                <td>21</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1548.002">10</a></td>
+                <td>20</td>
             </tr>
             <tr>
                 <td>T1548.003</td>
@@ -3957,8 +3958,8 @@ This table is sortable, so feel free to click on any column to sort by its value
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1574">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574">1</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1574">6</a></td>
-                <td>7</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1574">5</a></td>
+                <td>6</td>
             </tr>
             <tr>
                 <td>T1574.001</td>
