@@ -4,7 +4,7 @@ title: Analytic Coverage Comparison
 
 Generated on: March 22, 2021
 
-A cross-walk of CAR, [Sigma](https://github.com/SigmaHQ/sigma), and [Elastic Detection](https://github.com/elastic/detection-rules) rules in terms of their coverage of ATT&CK Techniques and Sub-techniques. Note that some analytics may have coverage for multiple techniques, so there is not necessarily a 1:1 correlation between the number of hits in this table for a technique/sub-technique and the number of analytics in each repository.
+A cross-walk of CAR, [Sigma](https://github.com/SigmaHQ/sigma), and [Elastic Detection](https://github.com/elastic/detection-rules) analytics/rules in terms of their coverage of ATT&CK Techniques and Sub-techniques. Note that some analytics may have coverage for multiple techniques, so there is not necessarily a 1:1 correlation between the number of hits in this table for a technique/sub-technique and the number of analytics in each repository.
 
 * \# CAR: the number of CAR analytics that contain coverage for the technique/sub-technique.
 * \# Sigma: the number of Sigma rules that contain coverage for the technique/sub-technique.
