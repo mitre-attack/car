@@ -11,8 +11,11 @@ A cross-walk of CAR, [Sigma](https://github.com/SigmaHQ/sigma), and [Elastic Det
 * \# ES: the number of ES detection rules that contain coverage for the technique/sub-technique.
 * \# Total: the total number of analytics between CAR/Sigma/ES that contain coverage for the technique-sub-technique.
 
-This table is sortable, so feel free to click on any column to sort by its values. Clicking on each of the CAR/Sigma/ES results will search the corresponding repository for the analytics that contain coverage for the technique/sub-technique. You can also find this data as a CSV file [here](/coverage/analytic_coverage_03_22_2021.csv).
+This table is sortable, so feel free to click on any column to sort by its values. Clicking on each of the CAR/Sigma/ES results will search the corresponding repository for the analytics that contain coverage for the technique/sub-technique. 
 
+This data is also available as:
+ * A [CSV file](/coverage/analytic_coverage_03_22_2021.csv)
+ * An [ATT&CK Navigator layer](https://mitre-attack.github.io/attack-navigator/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcoverage%2Fanalytic_coverage_03_25_2021.json).
 
 <script type="text/javascript" src="/assets/sort-table.js"></script>
 <table class="js-sort-table" id="coverage-sort">
