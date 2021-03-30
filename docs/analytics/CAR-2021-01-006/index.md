@@ -34,7 +34,7 @@ This Splunk query looks for any executable invocations from an Excel file.
 
 
 ```
-index = __sysmon__index__ (ParentImage="*excel.exe" OR ParentImage="*word.exe" OR ParentImage="*outlook.exe") Image="*.exe"
+index = __your_sysmon__index__ (ParentImage="*excel.exe" OR ParentImage="*word.exe" OR ParentImage="*outlook.exe") Image="*.exe"
 ```
 
 

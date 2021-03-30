@@ -31,18 +31,18 @@ Threat actors often, after compromising a machine, try to disable User Access Co
 #### Detect disabling of UAC via reg.exe (Splunk, Sysmon native)
 
 
-This query looks for the specific use of reg.exe in correlation to commands aimed at disabling UAC
+This query looks for the specific use of reg.exe in correlation to commands aimed at disabling UAC.
 
 
 ```
-sourcetype = WinEventLog:Microsoft-Windows-Sysmon/Operational ParentImage = "C:\\Windows\\System32\\cmd.exe" | where like(CommandLine,"reg.exe%HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System%REG_DWORD /d 0%")
+sourcetype = __your_sysmon_index__ ParentImage = "C:\\Windows\\System32\\cmd.exe" | where like(CommandLine,"reg.exe%HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System%REG_DWORD /d 0%")
 ```
 
 
 #### Detect disabling of UAC via reg.exe (Pseudocode, Sysmon native)
 
 
-This query looks for the specific use of reg.exe in correlation to commands aimed at disabling UAC
+This query looks for the specific use of reg.exe in correlation to commands aimed at disabling UAC.
 
 
 ```
