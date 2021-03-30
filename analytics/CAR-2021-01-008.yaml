@@ -22,13 +22,13 @@ coverage:
       - TA0004
 implementations:
 - name: Detect disabling of UAC via reg.exe
-  description:  This query looks for the specific use of reg.exe in correlation to commands aimed at disabling UAC
+  description:  This query looks for the specific use of reg.exe in correlation to commands aimed at disabling UAC.
   code: |-
-    sourcetype = WinEventLog:Microsoft-Windows-Sysmon/Operational ParentImage = "C:\\Windows\\System32\\cmd.exe" | where like(CommandLine,"reg.exe%HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System%REG_DWORD /d 0%")
+    sourcetype = __your_sysmon_index__ ParentImage = "C:\\Windows\\System32\\cmd.exe" | where like(CommandLine,"reg.exe%HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System%REG_DWORD /d 0%")
   data_model: Sysmon native
   type: Splunk
 - name: Detect disabling of UAC via reg.exe
-  description:  This query looks for the specific use of reg.exe in correlation to commands aimed at disabling UAC
+  description:  This query looks for the specific use of reg.exe in correlation to commands aimed at disabling UAC.
   code: |-
     processes = search Process:Create
     cmd_processes = filter processes where (
