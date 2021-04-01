@@ -45,5 +45,11 @@ implementations:
     ((index=__your_sysmon_index__ EventCode=1) OR (index=__your_win_syslog_index__ EventCode=4688)) (CommandLine="*reg* query HKLM /f password /t REG_SZ /s*" OR CommandLine="reg* query HKCU /f password /t REG_SZ /s" OR CommandLine="*Get-UnattendedInstallFile*" OR CommandLine="*Get-Webconfig*" OR CommandLine="*Get-ApplicationHost*" OR CommandLine="*Get-SiteListPassword*" OR CommandLine="*Get-CachedGPPPassword*" OR CommandLine="*Get-RegistryAutoLogon*") 
   data_model: Sysmon native
   type: Splunk
+- name: LogPoint search - reg.exe password search & powersploit modules
+  description: This LogPoint search looks for command lines of reg.exe used to search for passwords, as well as those of powersploit modules for the same purpose.
+  code: |- 
+    norm_id=WindowsSysmon event_id=1 command IN ["*reg* query HKLM /f password /t REG_SZ /s*", "reg* query HKCU /f password /t REG_SZ /s", "*Get-UnattendedInstallFile*", "*Get-Webconfig*", "*Get-ApplicationHost*", "*Get-SiteListPassword*", "*Get-CachedGPPPassword*", "*Get-RegistryAutoLogon*"]
+  data_model: LogPoint native
+  type: LogPoint
 data_model_references:
   - process/create/command_line

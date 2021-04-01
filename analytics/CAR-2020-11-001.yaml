@@ -40,6 +40,12 @@ implementations:
       (index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\System32\\reg.exe" CommandLine="*add*\\Environment*UserInitMprLogonScript") OR (index=__your_sysmon_index__ (EventCode=12 OR EventCode=14 OR EventCode=13) TargetObject="*\\Environment*UserInitMprLogonScript")
     data_model: Sysmon native
     type: Splunk
+  - name: LogPoint Search -- logon scripts
+    description: Look for commands for adding a logon script as a registry value, as well as direct registry events for the same thing.
+    code: |- 
+      norm_id=WindowsSysmon ((event_id=1 image="C:\Windows\System32\reg.exe" command="*add*\Environment*UserInitMprLogonScript") OR (event_id IN [12, 13, 14] target_object="*\Environment*UserInitMprLogonScript"))
+    data_model: LogPoint native
+    type: LogPoint
 data_model_references:
   - process/create/command_line
   - process/create/exe

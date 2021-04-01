@@ -37,6 +37,12 @@ implementations:
       (index=__your_sysmon_index__ EventCode=1) ((Image="C:\\Windows\\System32\\net.exe" AND CommandLine="*delete*") OR CommandLine="*Remove-SmbShare*" OR CommandLine="*Remove-FileShare*")
     data_model: Sysmon native
     type: Splunk
+  - name: LogPoint Search - delete network shares
+    description: looks network shares being deleted from the command line
+    code: |- 
+      norm_id=WindowsSysmon event_id=1 ((image="C:\Windows\System32\net.exe" command="*delete*") OR command="*Remove-SmbShare*" OR command="*Remove-FileShare*")
+    data_model: LogPoint native
+    type: LogPoint
 data_model_references:
   - process/create/exe
   - process/create/command_line

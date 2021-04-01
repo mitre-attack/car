@@ -41,6 +41,12 @@ implementations:
       (index=__your_sysmon_index__ EventCode=1) Image="C:\\Windows\\System32\\net.exe" AND (CommandLine="* user*" OR CommandLine="* group*" OR CommandLine="* localgroup*" OR CommandLine="*get-localgroup*" OR CommandLine="*get-ADPrincipalGroupMembership*")
     data_model: Sysmon native
     type: Splunk
+  - name: LogPoint Search - net.exe instances
+    description: Look for instances of net.exe
+    code: |- 
+      norm_id=WindowsSysmon event_id=1 image="C:\Windows\System32\net.exe" (command="* user*" OR command="* group*" OR command="* localgroup*" OR command="*get-localgroup*" OR command="*get-ADPrincipalGroupMembership*")
+    data_model: LogPoint native
+    type: LogPoint
 data_model_references:
   - process/create/exe
   - process/create/command_line
