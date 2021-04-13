@@ -34,8 +34,8 @@ Monitoring SMB write requests still creates some noise, particulary with named p
 
 Look for SMB network connections over port 445. Using a sensor that can decode protocol information, extract out the name of the pipe and potentially other information. This happens legitimately so certain pipes, such as `spoolss` should be appropriately white-listed. Certain pipes do correspond to adversary activity, including:
 
-* `WINREG` - Windows Remote Registry ([CAR-2014-11-005](CAR-2014-11-005))
-* `ATSVC` - Windows AT command ([CAR-2015-04-001](CAR-2015-04-001))
+* `WINREG` - Windows Remote Registry ([CAR-2014-11-005](../CAR-2014-11-005))
+* `ATSVC` - Windows AT command ([CAR-2015-04-001](../CAR-2015-04-001))
 
 
 ```

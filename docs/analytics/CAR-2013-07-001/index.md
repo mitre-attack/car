@@ -21,7 +21,7 @@ Any tool of interest with commonly known command line usage can be detecting by 
 -   Archive`* a *`
     Additionally, it may be useful to find IP addresses in the command line
 -   `\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}`
-    Logically this analytic makes use of [CAR-2014-03-005](CAR-2014-03-005).
+    Logically this analytic makes use of [CAR-2014-03-005](../CAR-2014-03-005).
 
 
 ### ATT&CK Detection
