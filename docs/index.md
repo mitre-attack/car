@@ -19,6 +19,10 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
+### April 2021
+* New analytics added
+  * [CAR-2021-04-001: Common Windows Process Masquerading](/analytics/CAR-2021-04-001)
+
 ### March 2021
 * Added [Coverage Comparison](/coverage) page, which compares ATT&CK Technique/Sub-technique coverage across CAR, [Sigma](https://github.com/SigmaHQ/sigma), and [Elastic Detection](https://github.com/elastic/detection-rules) rules.
 * New analytics added
