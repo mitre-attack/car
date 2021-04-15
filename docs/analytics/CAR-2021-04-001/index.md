@@ -21,8 +21,8 @@ There are several sub-techniques, but this analytic focuses on [Match Legitimate
 
 With process monitoring, hunt for processes matching these criteria:
 
-process name is `svchost.exe`, `smss.exe`, `wininit.exe`, `taskhost.exe`, etc.
-process path is not `C:\Windows\System32\` or `C:\Windows\SysWow64\`
+* process name is `svchost.exe`, `smss.exe`, `wininit.exe`, `taskhost.exe`, etc.
+* process path is not `C:\Windows\System32\` or `C:\Windows\SysWow64\`
 
 Examples (true positive):
 
