@@ -691,6 +691,14 @@ permalink: /analytics/
                 <td>Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
+            <tr>
+                <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-04-001/">CAR-2021-04-001</a></td>
+                <td>Common Windows Process Masquerading</td>
+                <td style="white-space:nowrap;">February 12 2021</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1036/">Masquerading</a></li></ul></td>
+                <td>Pseudocode, Splunk</td>
+                <td>Windows</td>
+            </tr>
       </tbody>
 </table>
 ---
@@ -747,7 +755,9 @@ permalink: /analytics/
 |[Impair Defenses](https://attack.mitre.org/techniques/T1562/)|(N/A - see below)|(N/A - see below)|
 |...|[Disable or Modify Tools](https://attack.mitre.org/techniques/T1562/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-04-003">CAR-2016-04-003: User Activity from Stopping Windows Defensive Services</a></li><li><a href="CAR-2021-01-007">CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt</a></li></ul>{:/}|
 |...|[Indicator Blocking](https://attack.mitre.org/techniques/T1562/006/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2020-09-003">CAR-2020-09-003: Indicator Blocking - Driver Unloaded</a></li></ul>{:/}|
+|[Masquerading](https://attack.mitre.org/techniques/T1036/)|(N/A - technique only)|{::nomarkdown}<ul><li><a href="CAR-2013-05-002">CAR-2013-05-002: Suspicious Run Locations</a></li></ul>{:/}|
 |...|[Rename System Utilities](https://attack.mitre.org/techniques/T1036/003/)|{::nomarkdown}<ul><li><a href="CAR-2013-05-009">CAR-2013-05-009: Running executables with same hash and different names</a></li></ul>{:/}|
+|...|[Match Legitimate Name or Location](https://attack.mitre.org/techniques/T1036/005/)|{::nomarkdown}<ul><li><a href="CAR-2021-04-001">CAR-2021-04-001: Common Windows Process Masquerading</a></li></ul>{:/}|
 |[Archive Collected Data](https://attack.mitre.org/techniques/T1560/)|[Archive via Utility](https://attack.mitre.org/techniques/T1560/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-07-005">CAR-2013-07-005: Command Line Usage of Archiving Software</a></li></ul>{:/}|
 |[Process Injection](https://attack.mitre.org/techniques/T1055/)|[Dynamic-link Library Injection](https://attack.mitre.org/techniques/T1055/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-10-002">CAR-2013-10-002: DLL Injection via Load Library</a></li><li><a href="CAR-2020-11-003">CAR-2020-11-003: DLL Injection with Mavinject</a></li></ul>{:/}|
 |...|[Bypass User Access Control](https://attack.mitre.org/techniques/T1548/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-10-002">CAR-2013-10-002: DLL Injection via Load Library</a></li><li><a href="CAR-2019-04-001">CAR-2019-04-001: UAC Bypass</a></li><li><a href="CAR-2021-01-008">CAR-2021-01-008: Disable UAC</a></li></ul>{:/}|
