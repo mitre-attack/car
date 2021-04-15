@@ -66,12 +66,12 @@ suspicious_processes = filter processes where (
   OR (exe=smss.exe AND image_path!="C:\\Windows\\System32\\smss.exe")
   OR (exe=wininit.exe AND image_path!="C:\\Windows\\System32\\wininit.exe")
   OR (exe=taskhost.exe AND image_path!="C:\\Windows\\System32\\taskhost.exe")
-  OR (exe=lasass.exe AND NOT image_path!="C:\\Windows\\System32\\lsass.exe")
-  OR (exe=winlogon.exe AND NOT image_path!="C:\\Windows\\System32\\winlogon.exe")
-  OR (exe=csrss.exe AND NOT image_path!="C:\\Windows\\System32\\csrss.exe")
-  OR (exe=services.exe AND NOT image_path!="C:\\Windows\\System32\\services.exe")
-  OR (exe=lsm.exe AND NOT image_path!="C:\\Windows\\System32\\lsm.exe")
-  OR (exe=explorer.exe AND NOT image_path!="C:\\Windows\\explorer.exe")
+  OR (exe=lasass.exe AND image_path!="C:\\Windows\\System32\\lsass.exe")
+  OR (exe=winlogon.exe AND image_path!="C:\\Windows\\System32\\winlogon.exe")
+  OR (exe=csrss.exe AND image_path!="C:\\Windows\\System32\\csrss.exe")
+  OR (exe=services.exe AND image_path!="C:\\Windows\\System32\\services.exe")
+  OR (exe=lsm.exe AND image_path!="C:\\Windows\\System32\\lsm.exe")
+  OR (exe=explorer.exe AND image_path!="C:\\Windows\\explorer.exe")
   ) 
 output suspicious_processes
 ```
