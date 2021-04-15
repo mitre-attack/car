@@ -17,6 +17,8 @@ Malware authors often use this technique to hide malicious executables behind le
 
 There are several sub-techniques, but this analytic focuses on [Match Legitimate Name or Location](https://attack.mitre.org/techniques/T1036/005/) only.
 
+**Analytic Methodology**
+
 With process monitoring, hunt for processes matching these criteria:
 
 process name is `svchost.exe`, `smss.exe`, `wininit.exe`, `taskhost.exe`, etc.
