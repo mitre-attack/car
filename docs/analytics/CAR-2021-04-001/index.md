@@ -17,6 +17,19 @@ Malware authors often use this technique to hide malicious executables behind le
 
 There are several sub-techniques, but this analytic focuses on [Match Legitimate Name or Location](https://attack.mitre.org/techniques/T1036/005/) only.
 
+With process monitoring, hunt for processes matching these criteria:
+
+process name is `svchost.exe`, `smss.exe`, `wininit.exe`, `taskhost.exe`, etc.
+process path is not `C:\Windows\System32\` or `C:\Windows\SysWow64\`
+
+Examples (true positive):
+
+`C:\Users\administrator\svchost.exe`
+
+To make sure the rule doesn't miss cases where the executable would be started from a sub-folder of these locations, the entire path is checked for the process path. The below example should be considered as suspicious:
+
+`C:\Windows\System32\srv\svchost.exe`
+
 
 ### ATT&CK Detection
 
@@ -39,7 +52,10 @@ There are several sub-techniques, but this analytic focuses on [Match Legitimate
 ### Implementations
 
 #### Pseudocode - Common Windows Process Masquerading (Pseudocode, CAR native)
-Look for mismatches between process executable names and paths.
+
+
+Looks for mismatches between process names and their image paths.
+
 
 ```
 processes = search Process:*
