@@ -2,20 +2,20 @@
 title: Analytic Coverage Comparison
 ---
 
-Generated on: March 22, 2021
+Generated on: April 20, 2021
 
-A cross-walk of CAR, [Sigma](https://github.com/SigmaHQ/sigma), and [Elastic Detection](https://github.com/elastic/detection-rules) analytics/rules in terms of their coverage of ATT&CK Techniques and Sub-techniques. Note that some analytics may have coverage for multiple techniques, so there is not necessarily a 1:1 correlation between the number of hits in this table for a technique/sub-technique and the number of analytics in each repository.
+A cross-walk of CAR, [Sigma](https://github.com/SigmaHQ/sigma), and [Elastic Detection](https://github.com/elastic/detection-rules) rules in terms of their coverage of ATT&CK Techniques and Sub-techniques. Note that some analytics may have coverage for multiple techniques, so there is not necessarily a 1:1 correlation between the number of hits in this table for a technique/sub-technique and the number of analytics in each repository.
 
 * \# CAR: the number of CAR analytics that contain coverage for the technique/sub-technique.
 * \# Sigma: the number of Sigma rules that contain coverage for the technique/sub-technique.
 * \# ES: the number of ES detection rules that contain coverage for the technique/sub-technique.
 * \# Total: the total number of analytics between CAR/Sigma/ES that contain coverage for the technique-sub-technique.
 
-The below table is sortable, so feel free to click on any column to sort by its values. Clicking on each of the CAR/Sigma/ES results will search the corresponding repository for the analytics that contain coverage for the technique/sub-technique. 
+This table is sortable, so feel free to click on any column to sort by its values. Clicking on each of the CAR/Sigma/ES results will search the corresponding repository for the analytics that contain coverage for the technique/sub-technique. 
 
 This data is also available as:
- * A [CSV file](/coverage/analytic_coverage_03_22_2021.csv)
- * An [ATT&CK Navigator layer](https://mitre-attack.github.io/attack-navigator/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcoverage%2Fanalytic_coverage_03_25_2021.json)
+  * A [CSV file](/coverage/analytic_coverage_04_20_2021.csv)
+  * An [ATT&CK Navigator Layer](https://mitre-attack.github.io/attack-navigator/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcoverage%2Fanalytic_coverage_04_20_2021.json)
 
 <script type="text/javascript" src="/assets/sort-table.js"></script>
 <table class="js-sort-table" id="coverage-sort">
@@ -72,27 +72,27 @@ This data is also available as:
                 <td>OS Credential Dumping</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1003">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003">56</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003">58</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003">13</a></td>
-                <td>69</td>
+                <td>71</td>
             </tr>
             <tr>
                 <td>T1003.001</td>
                 <td>OS Credential Dumping</td>
                 <td>LSASS Memory</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1003.001">4</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.001">32</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.001">35</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003.001">1</a></td>
-                <td>37</td>
+                <td>40</td>
             </tr>
             <tr>
                 <td>T1003.002</td>
                 <td>OS Credential Dumping</td>
                 <td>Security Account Manager</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1003.002">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.002">17</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.002">20</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003.002">0</a></td>
-                <td>18</td>
+                <td>21</td>
             </tr>
             <tr>
                 <td>T1003.003</td>
@@ -153,9 +153,9 @@ This data is also available as:
                 <td>Data from Local System</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1005">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1005">3</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1005">4</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1005">0</a></td>
-                <td>3</td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1006</td>
@@ -216,9 +216,9 @@ This data is also available as:
                 <td>Query Registry</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1012">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1012">6</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1012">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1012">1</a></td>
-                <td>10</td>
+                <td>12</td>
             </tr>
             <tr>
                 <td>T1014</td>
@@ -234,18 +234,18 @@ This data is also available as:
                 <td>System Network Configuration Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1016">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1016">3</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1016">4</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1016">2</a></td>
-                <td>7</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1018</td>
                 <td>Remote System Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1018">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1018">5</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1018">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1018">2</a></td>
-                <td>8</td>
+                <td>11</td>
             </tr>
             <tr>
                 <td>T1020</td>
@@ -271,8 +271,8 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1021">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1021">4</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1021">26</a></td>
-                <td>31</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1021">28</a></td>
+                <td>33</td>
             </tr>
             <tr>
                 <td>T1021.001</td>
@@ -288,18 +288,18 @@ This data is also available as:
                 <td>Remote Services</td>
                 <td>SMB/Windows Admin Shares</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1021.002">5</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1021.002">15</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1021.002">4</a></td>
-                <td>24</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1021.002">24</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1021.002">5</a></td>
+                <td>34</td>
             </tr>
             <tr>
                 <td>T1021.003</td>
                 <td>Remote Services</td>
                 <td>Distributed Component Object Model</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1021.003">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1021.003">3</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1021.003">7</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1021.003">0</a></td>
-                <td>4</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1021.004</td>
@@ -351,27 +351,27 @@ This data is also available as:
                 <td>Obfuscated Files or Information</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1027">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1027">15</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1027">50</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1027">4</a></td>
-                <td>19</td>
+                <td>54</td>
             </tr>
             <tr>
                 <td>T1027.001</td>
                 <td>Obfuscated Files or Information</td>
                 <td>Binary Padding</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1027.001">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1027.001">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1027.001">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1027.001">0</a></td>
-                <td>1</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1027.002</td>
                 <td>Obfuscated Files or Information</td>
                 <td>Software Packing</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1027.002">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1027.002">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1027.002">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1027.002">0</a></td>
-                <td>0</td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1027.003</td>
@@ -387,9 +387,9 @@ This data is also available as:
                 <td>Obfuscated Files or Information</td>
                 <td>Compile After Delivery</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1027.004">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1027.004">3</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1027.004">4</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1027.004">1</a></td>
-                <td>4</td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1027.005</td>
@@ -414,9 +414,9 @@ This data is also available as:
                 <td>Data Transfer Size Limits</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1030">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1030">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1030">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1030">0</a></td>
-                <td>0</td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1033</td>
@@ -441,9 +441,9 @@ This data is also available as:
                 <td>Masquerading</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1036">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1036">32</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1036">30</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1036">10</a></td>
-                <td>43</td>
+                <td>41</td>
             </tr>
             <tr>
                 <td>T1036.001</td>
@@ -485,10 +485,10 @@ This data is also available as:
                 <td>T1036.005</td>
                 <td>Masquerading</td>
                 <td>Match Legitimate Name or Location</td>
-                <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1036.005">0</a></td>
+                <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1036.005">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1036.005">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1036.005">0</a></td>
-                <td>8</td>
+                <td>9</td>
             </tr>
             <tr>
                 <td>T1036.006</td>
@@ -549,27 +549,27 @@ This data is also available as:
                 <td>Boot or Logon Initialization Scripts</td>
                 <td>Startup Items</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1037.005">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1037.005">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1037.005">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1037.005">0</a></td>
-                <td>0</td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1039</td>
                 <td>Data from Network Shared Drive</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1039">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1039">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1039">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1039">0</a></td>
-                <td>2</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1040</td>
                 <td>Network Sniffing</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1040">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1040">6</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1040">7</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1040">1</a></td>
-                <td>8</td>
+                <td>9</td>
             </tr>
             <tr>
                 <td>T1041</td>
@@ -594,27 +594,27 @@ This data is also available as:
                 <td>Network Service Scanning</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1046">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1046">2</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1046">4</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1046">0</a></td>
-                <td>4</td>
+                <td>6</td>
             </tr>
             <tr>
                 <td>T1047</td>
                 <td>Windows Management Instrumentation</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1047">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1047">18</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1047">4</a></td>
-                <td>25</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1047">20</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1047">5</a></td>
+                <td>28</td>
             </tr>
             <tr>
                 <td>T1048</td>
                 <td>Exfiltration Over Alternative Protocol</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1048">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1048">12</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1048">13</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1048">6</a></td>
-                <td>18</td>
+                <td>19</td>
             </tr>
             <tr>
                 <td>T1048.001</td>
@@ -639,18 +639,18 @@ This data is also available as:
                 <td>Exfiltration Over Alternative Protocol</td>
                 <td>Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1048.003">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1048.003">6</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1048.003">9</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1048.003">0</a></td>
-                <td>6</td>
+                <td>9</td>
             </tr>
             <tr>
                 <td>T1049</td>
                 <td>System Network Connections Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1049">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1049">2</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1049">4</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1049">1</a></td>
-                <td>4</td>
+                <td>6</td>
             </tr>
             <tr>
                 <td>T1051</td>
@@ -685,17 +685,17 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1053">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1053">16</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1053">11</a></td>
-                <td>27</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1053">12</a></td>
+                <td>28</td>
             </tr>
             <tr>
                 <td>T1053.001</td>
                 <td>Scheduled Task/Job</td>
                 <td>At (Linux)</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1053.001">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1053.001">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1053.001">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1053.001">0</a></td>
-                <td>0</td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1053.002</td>
@@ -711,9 +711,9 @@ This data is also available as:
                 <td>Scheduled Task/Job</td>
                 <td>Cron</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1053.003">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1053.003">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1053.003">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1053.003">3</a></td>
-                <td>3</td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1053.004</td>
@@ -729,9 +729,9 @@ This data is also available as:
                 <td>Scheduled Task/Job</td>
                 <td>Scheduled Task</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1053.005">5</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1053.005">11</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1053.005">0</a></td>
-                <td>16</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1053.005">12</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1053.005">1</a></td>
+                <td>18</td>
             </tr>
             <tr>
                 <td>T1053.006</td>
@@ -747,18 +747,18 @@ This data is also available as:
                 <td>Process Injection</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1055">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1055">13</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1055">14</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1055">8</a></td>
-                <td>21</td>
+                <td>22</td>
             </tr>
             <tr>
                 <td>T1055.001</td>
                 <td>Process Injection</td>
                 <td>Dynamic-link Library Injection</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1055.001">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1055.001">7</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1055.001">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1055.001">0</a></td>
-                <td>9</td>
+                <td>10</td>
             </tr>
             <tr>
                 <td>T1055.002</td>
@@ -873,9 +873,9 @@ This data is also available as:
                 <td>Input Capture</td>
                 <td>GUI Input Capture</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1056.002">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1056.002">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1056.002">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1056.002">1</a></td>
-                <td>2</td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1056.003</td>
@@ -900,36 +900,36 @@ This data is also available as:
                 <td>Process Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1057">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1057">2</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1057">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1057">2</a></td>
-                <td>6</td>
+                <td>7</td>
             </tr>
             <tr>
                 <td>T1059</td>
                 <td>Command and Scripting Interpreter</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1059">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059">19</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059">24</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1059">25</a></td>
-                <td>45</td>
+                <td>50</td>
             </tr>
             <tr>
                 <td>T1059.001</td>
                 <td>Command and Scripting Interpreter</td>
                 <td>PowerShell</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1059.001">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059.001">71</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059.001">116</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1059.001">4</a></td>
-                <td>78</td>
+                <td>123</td>
             </tr>
             <tr>
                 <td>T1059.002</td>
                 <td>Command and Scripting Interpreter</td>
                 <td>AppleScript</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1059.002">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059.002">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059.002">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1059.002">1</a></td>
-                <td>1</td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1059.003</td>
@@ -1017,9 +1017,9 @@ This data is also available as:
                 <td>Exploitation for Privilege Escalation</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1068">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1068">7</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1068">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1068">6</a></td>
-                <td>14</td>
+                <td>15</td>
             </tr>
             <tr>
                 <td>T1069</td>
@@ -1035,18 +1035,18 @@ This data is also available as:
                 <td>Permission Groups Discovery</td>
                 <td>Local Groups</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1069.001">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1069.001">2</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1069.001">5</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1069.001">0</a></td>
-                <td>5</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1069.002</td>
                 <td>Permission Groups Discovery</td>
                 <td>Domain Groups</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1069.002">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1069.002">3</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1069.002">4</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1069.002">1</a></td>
-                <td>7</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1069.003</td>
@@ -1080,9 +1080,9 @@ This data is also available as:
                 <td>Indicator Removal on Host</td>
                 <td>Clear Linux or Mac System Logs</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1070.002">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1070.002">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1070.002">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1070.002">0</a></td>
-                <td>0</td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1070.003</td>
@@ -1098,27 +1098,27 @@ This data is also available as:
                 <td>Indicator Removal on Host</td>
                 <td>File Deletion</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1070.004">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1070.004">3</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1070.004">6</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1070.004">6</a></td>
-                <td>9</td>
+                <td>12</td>
             </tr>
             <tr>
                 <td>T1070.005</td>
                 <td>Indicator Removal on Host</td>
                 <td>Network Share Connection Removal</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1070.005">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1070.005">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1070.005">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1070.005">0</a></td>
-                <td>1</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1070.006</td>
                 <td>Indicator Removal on Host</td>
                 <td>Timestomp</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1070.006">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1070.006">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1070.006">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1070.006">1</a></td>
-                <td>2</td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1071</td>
@@ -1170,9 +1170,9 @@ This data is also available as:
                 <td>Software Deployment Tools</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1072">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1072">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1072">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1072">0</a></td>
-                <td>0</td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1074</td>
@@ -1206,9 +1206,9 @@ This data is also available as:
                 <td>Valid Accounts</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1078">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1078">7</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1078">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1078">21</a></td>
-                <td>28</td>
+                <td>29</td>
             </tr>
             <tr>
                 <td>T1078.001</td>
@@ -1260,18 +1260,18 @@ This data is also available as:
                 <td>System Information Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1082">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1082">4</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1082">5</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1082">3</a></td>
-                <td>9</td>
+                <td>10</td>
             </tr>
             <tr>
                 <td>T1083</td>
                 <td>File and Directory Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1083">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1083">4</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1083">6</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1083">1</a></td>
-                <td>5</td>
+                <td>7</td>
             </tr>
             <tr>
                 <td>T1087</td>
@@ -1287,18 +1287,18 @@ This data is also available as:
                 <td>Account Discovery</td>
                 <td>Local Account</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1087.001">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1087.001">5</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1087.001">7</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1087.001">0</a></td>
-                <td>7</td>
+                <td>9</td>
             </tr>
             <tr>
                 <td>T1087.002</td>
                 <td>Account Discovery</td>
                 <td>Domain Account</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1087.002">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1087.002">8</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1087.002">9</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1087.002">1</a></td>
-                <td>11</td>
+                <td>12</td>
             </tr>
             <tr>
                 <td>T1087.003</td>
@@ -1485,18 +1485,18 @@ This data is also available as:
                 <td>Ingress Tool Transfer</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1105">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1105">21</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1105">22</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1105">9</a></td>
-                <td>31</td>
+                <td>32</td>
             </tr>
             <tr>
                 <td>T1106</td>
                 <td>Native API</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1106">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1106">2</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1106">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1106">1</a></td>
-                <td>3</td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1108</td>
@@ -1566,18 +1566,18 @@ This data is also available as:
                 <td>Modify Registry</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1112">5</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1112">19</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1112">31</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1112">1</a></td>
-                <td>25</td>
+                <td>37</td>
             </tr>
             <tr>
                 <td>T1113</td>
                 <td>Screen Capture</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1113">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1113">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1113">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1113">0</a></td>
-                <td>1</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1114</td>
@@ -1585,8 +1585,8 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1114">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1114">2</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1114">2</a></td>
-                <td>4</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1114">3</a></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1114.001</td>
@@ -1612,17 +1612,17 @@ This data is also available as:
                 <td>Email Forwarding Rule</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1114.003">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1114.003">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1114.003">0</a></td>
-                <td>0</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1114.003">1</a></td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1115</td>
                 <td>Clipboard Data</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1115">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1115">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1115">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1115">0</a></td>
-                <td>0</td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1119</td>
@@ -1647,9 +1647,9 @@ This data is also available as:
                 <td>Audio Capture</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1123">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1123">3</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1123">4</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1123">0</a></td>
-                <td>3</td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1124</td>
@@ -1674,18 +1674,18 @@ This data is also available as:
                 <td>Trusted Developer Utilities Proxy Execution</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1127">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1127">4</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1127">6</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1127">8</a></td>
-                <td>12</td>
+                <td>14</td>
             </tr>
             <tr>
                 <td>T1127.001</td>
                 <td>Trusted Developer Utilities Proxy Execution</td>
                 <td>MSBuild</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1127.001">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1127.001">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1127.001">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1127.001">0</a></td>
-                <td>2</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1129</td>
@@ -1800,18 +1800,18 @@ This data is also available as:
                 <td>Create Account</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1136">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1136">6</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1136">7</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1136">7</a></td>
-                <td>13</td>
+                <td>14</td>
             </tr>
             <tr>
                 <td>T1136.001</td>
                 <td>Create Account</td>
                 <td>Local Account</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1136.001">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1136.001">6</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1136.001">7</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1136.001">1</a></td>
-                <td>7</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1136.002</td>
@@ -1899,9 +1899,9 @@ This data is also available as:
                 <td>Deobfuscate/Decode Files or Information</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1140">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1140">7</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1140">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1140">5</a></td>
-                <td>12</td>
+                <td>13</td>
             </tr>
             <tr>
                 <td>T1149</td>
@@ -1971,9 +1971,9 @@ This data is also available as:
                 <td>Exploit Public-Facing Application</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1190">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1190">34</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1190">35</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1190">14</a></td>
-                <td>48</td>
+                <td>49</td>
             </tr>
             <tr>
                 <td>T1195</td>
@@ -2017,8 +2017,8 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1197">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1197">3</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1197">0</a></td>
-                <td>3</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1197">1</a></td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1199</td>
@@ -2043,18 +2043,18 @@ This data is also available as:
                 <td>Password Policy Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1201">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1201">2</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1201">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1201">0</a></td>
-                <td>2</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1202</td>
                 <td>Indirect Command Execution</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1202">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1202">6</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1202">10</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1202">0</a></td>
-                <td>6</td>
+                <td>10</td>
             </tr>
             <tr>
                 <td>T1203</td>
@@ -2088,9 +2088,9 @@ This data is also available as:
                 <td>User Execution</td>
                 <td>Malicious File</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1204.002">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1204.002">17</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1204.002">18</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1204.002">0</a></td>
-                <td>17</td>
+                <td>18</td>
             </tr>
             <tr>
                 <td>T1205</td>
@@ -2124,9 +2124,9 @@ This data is also available as:
                 <td>Exploitation of Remote Services</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1210">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1210">5</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1210">6</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1210">2</a></td>
-                <td>7</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1211</td>
@@ -2178,9 +2178,9 @@ This data is also available as:
                 <td>Signed Script Proxy Execution</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1216">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1216">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1216">10</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1216">0</a></td>
-                <td>0</td>
+                <td>10</td>
             </tr>
             <tr>
                 <td>T1216.001</td>
@@ -2205,9 +2205,9 @@ This data is also available as:
                 <td>Signed Binary Proxy Execution</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1218">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1218">17</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1218">11</a></td>
-                <td>28</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1218">39</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1218">12</a></td>
+                <td>51</td>
             </tr>
             <tr>
                 <td>T1218.001</td>
@@ -2295,9 +2295,9 @@ This data is also available as:
                 <td>Signed Binary Proxy Execution</td>
                 <td>Rundll32</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1218.011">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1218.011">18</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1218.011">21</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1218.011">2</a></td>
-                <td>21</td>
+                <td>24</td>
             </tr>
             <tr>
                 <td>T1218.012</td>
@@ -2322,9 +2322,9 @@ This data is also available as:
                 <td>XSL Script Processing</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1220">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1220">2</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1220">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1220">3</a></td>
-                <td>5</td>
+                <td>6</td>
             </tr>
             <tr>
                 <td>T1221</td>
@@ -2385,9 +2385,9 @@ This data is also available as:
                 <td>Domain Trust Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1482">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1482">5</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1482">6</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1482">1</a></td>
-                <td>6</td>
+                <td>7</td>
             </tr>
             <tr>
                 <td>T1484</td>
@@ -2430,9 +2430,9 @@ This data is also available as:
                 <td>Data Encrypted for Impact</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1486">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1486">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1486">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1486">0</a></td>
-                <td>1</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1489</td>
@@ -2646,18 +2646,18 @@ This data is also available as:
                 <td>Software Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1518">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1518">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1518">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1518">2</a></td>
-                <td>2</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1518.001</td>
                 <td>Software Discovery</td>
                 <td>Security Software Discovery</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1518.001">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1518.001">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1518.001">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1518.001">1</a></td>
-                <td>2</td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1525</td>
@@ -2691,9 +2691,9 @@ This data is also available as:
                 <td>System Shutdown/Reboot</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1529">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1529">2</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1529">4</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1529">0</a></td>
-                <td>2</td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1530</td>
@@ -2818,8 +2818,8 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1543">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1543">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1543">13</a></td>
-                <td>13</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1543">15</a></td>
+                <td>15</td>
             </tr>
             <tr>
                 <td>T1543.001</td>
@@ -2844,9 +2844,9 @@ This data is also available as:
                 <td>Create or Modify System Process</td>
                 <td>Windows Service</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1543.003">6</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1543.003">10</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1543.003">5</a></td>
-                <td>21</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1543.003">11</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1543.003">6</a></td>
+                <td>23</td>
             </tr>
             <tr>
                 <td>T1543.004</td>
@@ -2880,18 +2880,18 @@ This data is also available as:
                 <td>Event Triggered Execution</td>
                 <td>Screensaver</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1546.002">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.002">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.002">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546.002">0</a></td>
-                <td>1</td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1546.003</td>
                 <td>Event Triggered Execution</td>
                 <td>Windows Management Instrumentation Event Subscription</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1546.003">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.003">6</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.003">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546.003">0</a></td>
-                <td>7</td>
+                <td>9</td>
             </tr>
             <tr>
                 <td>T1546.004</td>
@@ -2988,9 +2988,9 @@ This data is also available as:
                 <td>Event Triggered Execution</td>
                 <td>Emond</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1546.014">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.014">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.014">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546.014">2</a></td>
-                <td>2</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1546.015</td>
@@ -3006,18 +3006,18 @@ This data is also available as:
                 <td>Boot or Logon Autostart Execution</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1547">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1547">1</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547">19</a></td>
-                <td>20</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1547">2</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547">21</a></td>
+                <td>23</td>
             </tr>
             <tr>
                 <td>T1547.001</td>
                 <td>Boot or Logon Autostart Execution</td>
                 <td>Registry Run Keys / Startup Folder</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1547.001">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1547.001">9</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547.001">7</a></td>
-                <td>19</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1547.001">10</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547.001">9</a></td>
+                <td>22</td>
             </tr>
             <tr>
                 <td>T1547.002</td>
@@ -3123,9 +3123,9 @@ This data is also available as:
                 <td>Abuse Elevation Control Mechanism</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1548">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1548">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1548">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1548">17</a></td>
-                <td>19</td>
+                <td>20</td>
             </tr>
             <tr>
                 <td>T1548.001</td>
@@ -3141,9 +3141,9 @@ This data is also available as:
                 <td>Abuse Elevation Control Mechanism</td>
                 <td>Bypass User Account Control</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1548.002">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1548.002">8</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1548.002">16</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1548.002">10</a></td>
-                <td>20</td>
+                <td>28</td>
             </tr>
             <tr>
                 <td>T1548.003</td>
@@ -3222,9 +3222,9 @@ This data is also available as:
                 <td>Unsecured Credentials</td>
                 <td>Credentials In Files</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1552.001">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1552.001">3</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1552.001">5</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1552.001">2</a></td>
-                <td>6</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1552.002</td>
@@ -3240,18 +3240,18 @@ This data is also available as:
                 <td>Unsecured Credentials</td>
                 <td>Bash History</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1552.003">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1552.003">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1552.003">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1552.003">0</a></td>
-                <td>1</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1552.004</td>
                 <td>Unsecured Credentials</td>
                 <td>Private Keys</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1552.004">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1552.004">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1552.004">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1552.004">1</a></td>
-                <td>2</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1552.005</td>
@@ -3285,9 +3285,9 @@ This data is also available as:
                 <td>Subvert Trust Controls</td>
                 <td>Gatekeeper Bypass</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1553.001">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1553.001">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1553.001">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1553.001">0</a></td>
-                <td>0</td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1553.002</td>
@@ -3312,9 +3312,9 @@ This data is also available as:
                 <td>Subvert Trust Controls</td>
                 <td>Install Root Certificate</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1553.004">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1553.004">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1553.004">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1553.004">2</a></td>
-                <td>3</td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1554</td>
@@ -3339,9 +3339,9 @@ This data is also available as:
                 <td>Credentials from Password Stores</td>
                 <td>Keychain</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1555.001">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1555.001">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1555.001">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1555.001">4</a></td>
-                <td>4</td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1555.002</td>
@@ -3358,8 +3358,8 @@ This data is also available as:
                 <td>Credentials from Web Browsers</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1555.003">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1555.003">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1555.003">1</a></td>
-                <td>1</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1555.003">2</a></td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1556</td>
@@ -3367,8 +3367,8 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1556">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1556">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1556">3</a></td>
-                <td>3</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1556">4</a></td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1556.001</td>
@@ -3519,9 +3519,9 @@ This data is also available as:
                 <td>Archive Collected Data</td>
                 <td>Archive via Utility</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1560.001">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1560.001">6</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1560.001">7</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1560.001">1</a></td>
-                <td>8</td>
+                <td>9</td>
             </tr>
             <tr>
                 <td>T1560.002</td>
@@ -3582,9 +3582,9 @@ This data is also available as:
                 <td>Impair Defenses</td>
                 <td>Disable or Modify Tools</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1562.001">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1562.001">20</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1562.001">22</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1562.001">33</a></td>
-                <td>55</td>
+                <td>57</td>
             </tr>
             <tr>
                 <td>T1562.002</td>
@@ -3609,9 +3609,9 @@ This data is also available as:
                 <td>Impair Defenses</td>
                 <td>Disable or Modify System Firewall</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1562.004">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1562.004">4</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1562.004">5</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1562.004">0</a></td>
-                <td>4</td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1562.006</td>
@@ -3690,9 +3690,9 @@ This data is also available as:
                 <td>Hide Artifacts</td>
                 <td>Hidden Users</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1564.002">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1564.002">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1564.002">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1564.002">0</a></td>
-                <td>0</td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1564.003</td>
@@ -3708,9 +3708,9 @@ This data is also available as:
                 <td>Hide Artifacts</td>
                 <td>NTFS File Attributes</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1564.004">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1564.004">3</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1564.004">4</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1564.004">1</a></td>
-                <td>6</td>
+                <td>7</td>
             </tr>
             <tr>
                 <td>T1564.005</td>
@@ -3897,9 +3897,9 @@ This data is also available as:
                 <td>System Services</td>
                 <td>Service Execution</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1569.002">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1569.002">11</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1569.002">13</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1569.002">3</a></td>
-                <td>17</td>
+                <td>19</td>
             </tr>
             <tr>
                 <td>T1570</td>
@@ -3925,8 +3925,8 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1572">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1572">4</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1572">0</a></td>
-                <td>4</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1572">1</a></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1573</td>
@@ -3960,9 +3960,9 @@ This data is also available as:
                 <td>Hijack Execution Flow</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1574">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1574">5</a></td>
-                <td>6</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1574.001</td>
@@ -3978,9 +3978,9 @@ This data is also available as:
                 <td>Hijack Execution Flow</td>
                 <td>DLL Side-Loading</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1574.002">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574.002">15</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574.002">16</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1574.002">1</a></td>
-                <td>16</td>
+                <td>17</td>
             </tr>
             <tr>
                 <td>T1574.004</td>
@@ -4023,9 +4023,9 @@ This data is also available as:
                 <td>Hijack Execution Flow</td>
                 <td>Path Interception by Search Order Hijacking</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1574.008">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574.008">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574.008">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1574.008">0</a></td>
-                <td>1</td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1574.009</td>
@@ -4041,9 +4041,9 @@ This data is also available as:
                 <td>Hijack Execution Flow</td>
                 <td>Services File Permissions Weakness</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1574.010">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574.010">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574.010">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1574.010">1</a></td>
-                <td>3</td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1574.011</td>
@@ -4059,9 +4059,9 @@ This data is also available as:
                 <td>Hijack Execution Flow</td>
                 <td>COR_PROFILER</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1574.012">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574.012">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574.012">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1574.012">0</a></td>
-                <td>0</td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1578</td>
