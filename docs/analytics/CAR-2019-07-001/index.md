@@ -64,6 +64,16 @@ output chmod_processes
 ```
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocode for Windows.
+
+
+```
+norm_id=WindowsSysmon channel="Security" event_id=4670 object_type="File" -user_id="S-1-5-18"
+```
+
+
 
 ### Unit Tests
 

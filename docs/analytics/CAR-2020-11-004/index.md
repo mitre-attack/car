@@ -69,5 +69,22 @@ Looks for processes that do not have the expected parent. Common Splunk forwarde
 ```
 
 
+#### LogPoint Search - parent/child mismatch (Logpoint, LogPoint native)
+
+
+Looks for processes that do not have the expected parent. Unique environments may require additional whitelist items.
+
+
+```
+norm_id=WindowsSysmon event_id=1 -parent_image="?" ((image="*\smss.exe" (-parent_image="*\smss.exe" -parent_image="*\System")) OR 
+(image="*\csrss.exe" (-parent_image="*\smss.exe" -parent_image="*\svchost.exe")) OR (image="*\wininit.exe" -parent_image="*\smss.exe") OR 
+(image="*\winlogon.exe" -parent_image="*\smss.exe") OR (image="*\lsass.exe"  (-parent_image="*\wininit.exe"  -parent_image="*\winlogon.exe")) OR 
+(image="*\LogonUI.exe"  (-parent_image="*\winlogon.exe"  -parent_image="*\wininit.exe")) OR (image="*\services.exe"  -parent_image="*\wininit.exe") OR 
+(image="*\spoolsv.exe"  -parent_image="*\services.exe") OR (image="*\taskhost.exe"  (-parent_image="*\services.exe"  -parent_image="*\svchost.exe")) OR 
+(image="*\taskhostw.exe"  (-parent_image="*\services.exe"  -parent_image="*\svchost.exe")) OR 
+(image="*\userinit.exe"  (-parent_image="*\dwm.exe"  -parent_image="*\winlogon.exe")))
+```
+
+
 
 

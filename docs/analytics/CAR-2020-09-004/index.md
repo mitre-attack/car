@@ -59,5 +59,16 @@ This Splunk search looks for command lines of reg.exe used to search for passwor
 ```
 
 
+#### LogPoint search - reg.exe password search & powersploit modules (Logpoint, LogPoint native)
+
+
+This LogPoint search looks for command lines of reg.exe used to search for passwords, as well as those of powersploit modules for the same purpose.
+
+
+```
+norm_id=WindowsSysmon event_id=1 command IN ["*reg* query HKLM /f password /t REG_SZ /s*", "reg* query HKCU /f password /t REG_SZ /s", "*Get-UnattendedInstallFile*", "*Get-Webconfig*", "*Get-ApplicationHost*", "*Get-SiteListPassword*", "*Get-CachedGPPPassword*", "*Get-RegistryAutoLogon*"]
+```
+
+
 
 

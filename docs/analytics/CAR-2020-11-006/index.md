@@ -58,5 +58,16 @@ Look for instances of net.exe
 ```
 
 
+#### LogPoint Search - net.exe instances (Logpoint, LogPoint native)
+
+
+Look for instances of net.exe
+
+
+```
+norm_id=WindowsSysmon event_id=1 image="C:\Windows\System32\net.exe" (command="* user*" OR command="* group*" OR command="* localgroup*" OR command="*get-localgroup*" OR command="*get-ADPrincipalGroupMembership*")
+```
+
+
 
 

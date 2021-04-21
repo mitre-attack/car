@@ -53,5 +53,16 @@ Look for powershell commands that would clear command history
 ```
 
 
+#### LogPoint Search - clear command history via Powershell (Logpoint, LogPoint native)
+
+
+Look for powershell commands that would clear command history
+
+
+```
+norm_id=WindowsSysmon event_id=1 (command="*rm (Get-PSReadlineOption).HistorySavePath*" OR command="*del (Get-PSReadlineOption).HistorySavePath*" OR command="*Set-PSReadlineOption –HistorySaveStyle SaveNothing*" OR command="*Remove-Item (Get-PSReadlineOption).HistorySavePath*" OR command="del*Microsoft\Windows\Powershell\PSReadline\ConsoleHost_history.txt")
+```
+
+
 
 

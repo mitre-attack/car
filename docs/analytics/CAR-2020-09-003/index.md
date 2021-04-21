@@ -53,5 +53,16 @@ index=client EventCode=1 CommandLine="*unload*" (Image="C:\\Windows\\SysWOW64\\f
 ```
 
 
+#### LogPoint search - fltmc invocation (Logpoint, LogPoint native)
+
+
+This LogPoint search looks for process create events for the fltmc.exe utility and the specific command line used to unload minifilter drivers.
+
+
+```
+norm_id=WindowsSysmon command="*unload*" (image="C:\Windows\SysWOW64\fltMC.exe" OR image="C:\Windows\System32\fltMC.exe") 
+```
+
+
 
 

@@ -53,5 +53,16 @@ index=your_sysmon_index (EventCode=12 OR EventCode=13 OR EventCode=14) TargetObj
 ```
 
 
+#### LogPoint Search - Screensaver (Logpoint, LogPoint native)
+
+
+looks creations of edits of the SCRNSAVE.exe registry key
+
+
+```
+norm_id=WindowsSysmon event_id IN [12, 13, 14] target_object="*\Software\Policies\Microsoft\Windows\Control Panel\Desktop\SCRNSAVE.EXE"
+```
+
+
 
 

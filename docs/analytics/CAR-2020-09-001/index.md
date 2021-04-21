@@ -55,5 +55,16 @@ index=__your_sysmon_index__ EventCode=11 Image!="C:\\WINDOWS\\system32\\svchost.
 ```
 
 
+#### LogPoint search - Windows task file creation (Logpoint, LogPoint native)
+
+
+This LogPoint search looks for any files created under the Windows tasks directories.
+
+
+```
+norm_id=WindowsSysmon event_id=11 -source_image="C:\WINDOWS\system32\svchost.exe" (path="C:\Windows\System32\Tasks*" OR path="C:\Windows\Tasks*")
+```
+
+
 
 

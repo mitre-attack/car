@@ -55,5 +55,16 @@ looks for instances of CMSTP.exe that are combined with external communication
 ```
 
 
+#### LogPoint Search - CMSTP (Logpoint, LogPoint native)
+
+
+looks for instances of CMSTP.exe that are combined with external communication
+
+
+```
+norm_id=WindowsSysmon event_id=3 image="C:\Windows\System32\CMSTP.exe" -source_address IN HOMENET
+```
+
+
 
 

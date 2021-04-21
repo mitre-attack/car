@@ -58,5 +58,16 @@ Look for commands for adding a logon script as a registry value, as well as dire
 ```
 
 
+#### LogPoint Search -- logon scripts (Logpoint, LogPoint native)
+
+
+Look for commands for adding a logon script as a registry value, as well as direct registry events for the same thing.
+
+
+```
+norm_id=WindowsSysmon ((event_id=1 image="C:\Windows\System32\reg.exe" command="*add*\Environment*UserInitMprLogonScript") OR (event_id IN [12, 13, 14] target_object="*\Environment*UserInitMprLogonScript"))
+```
+
+
 
 

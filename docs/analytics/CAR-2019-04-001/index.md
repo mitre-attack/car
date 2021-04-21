@@ -76,5 +76,15 @@ output possible_uac_bypass
 
 
 
+#### Logpoint
+
+LogPoint version of the above pseudocode.
+
+
+```
+norm_id=WindowsSysmon event_id=1 integrity_level="High" ((parent_image="c:\windows\system32\fodhelper.exe" OR command='*.exe"*cleanmgr.exe /autoclean*' OR image="c:\program files\windows media player\osk.exe" OR parent_image="c:\windows\system32\slui.exe") OR (parent_command='"c:\windows\system32\dism.exe"*""*.xml"' -image="c:\users\*\appdata\local\temp\*\dismhost.exe") OR (parent_image="c:\windows\*dccw.exe" -image="c:\windows\system32\cttune.exe") OR (command='"c:\windows\system32\wusa.exe"*/quiet*' -user="NOT_TRANSLATED" path="c:\windows\system32\" -parent_image="c:\windows\explorer.exe"))
+```
+
+
 
 

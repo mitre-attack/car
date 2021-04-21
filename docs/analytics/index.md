@@ -384,7 +384,7 @@ permalink: /analytics/
                 <td>UAC Bypass</td>
                 <td style="white-space:nowrap;">April 19 2019</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1548/">Abuse Elevation Control Mechanism</a></li></ul></td>
-                <td>Pseudocode, Sigma, Splunk</td>
+                <td>Logpoint, Pseudocode, Sigma, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -416,7 +416,7 @@ permalink: /analytics/
                 <td>Access Permission Modification</td>
                 <td style="white-space:nowrap;">July 08 2019</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1222/">File and Directory Permissions Modification</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
@@ -488,7 +488,7 @@ permalink: /analytics/
                 <td>Scheduled Task - FileAccess</td>
                 <td style="white-space:nowrap;">September 10 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -504,7 +504,7 @@ permalink: /analytics/
                 <td>Indicator Blocking - Driver Unloaded</td>
                 <td style="white-space:nowrap;">September 10 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1562/">Impair Defenses</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -512,7 +512,7 @@ permalink: /analytics/
                 <td>Credentials in Files & Registry</td>
                 <td style="white-space:nowrap;">September 10 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1552/">Unsecured Credentials</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -520,7 +520,7 @@ permalink: /analytics/
                 <td>AppInit DLLs</td>
                 <td style="white-space:nowrap;">September 10 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -528,7 +528,7 @@ permalink: /analytics/
                 <td>Boot or Logon Initialization Scripts</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1037/">Boot or Logon Initialization Scripts</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -536,7 +536,7 @@ permalink: /analytics/
                 <td>Local Network Sniffing</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1040/">Network Sniffing</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -552,7 +552,7 @@ permalink: /analytics/
                 <td>Processes Started From Irregular Parent</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
                 <td></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -560,7 +560,7 @@ permalink: /analytics/
                 <td>Clear Powershell Console Command History</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -568,7 +568,7 @@ permalink: /analytics/
                 <td>Local Permission Group Discovery</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1069/">Permission Groups Discovery</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -576,7 +576,7 @@ permalink: /analytics/
                 <td>Network Share Connection Removal</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -584,7 +584,7 @@ permalink: /analytics/
                 <td>MSBuild and msxsl</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1127/">Trusted Developer Utilities Proxy Execution</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -600,7 +600,7 @@ permalink: /analytics/
                 <td>CMSTP</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -608,7 +608,7 @@ permalink: /analytics/
                 <td>Registry Edit from Screensaver</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></li></ul></td>
-                <td>Pseudocode, Splunk</td>
+                <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -715,22 +715,22 @@ permalink: /analytics/
 |...|[Port Monitors](https://attack.mitre.org/techniques/T1547/010/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
 |...|[Winlogon Helper DLL](https://attack.mitre.org/techniques/T1547/004/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
 |[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|(N/A - see below)|(N/A - see below)|
-|...|[Services File Permissions Weakness](https://attack.mitre.org/techniques/T1574/010/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-02-001">CAR-2014-02-001: Service Binary Modifications</a></li></ul>{:/}|
-|...|[Services Registry Permissions Weakness](https://attack.mitre.org/techniques/T1574/011/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-03-001">CAR-2013-03-001: Reg.exe called from Command Shell</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2020-05-003">CAR-2020-05-003: Rare LolBAS Command Lines</a></li></ul>{:/}|
 |...|[Path Interception by PATH Environment Variable](https://attack.mitre.org/techniques/T1574/007/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
 |...|[Path Interception by Search Order Hijacking](https://attack.mitre.org/techniques/T1574/008/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
 |...|[Path Interception by Unquoted Path](https://attack.mitre.org/techniques/T1574/009/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-07-001">CAR-2014-07-001: Service Search Path Interception</a></li></ul>{:/}|
+|...|[Services File Permissions Weakness](https://attack.mitre.org/techniques/T1574/010/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-02-001">CAR-2014-02-001: Service Binary Modifications</a></li></ul>{:/}|
+|...|[Services Registry Permissions Weakness](https://attack.mitre.org/techniques/T1574/011/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-03-001">CAR-2013-03-001: Reg.exe called from Command Shell</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2020-05-003">CAR-2020-05-003: Rare LolBAS Command Lines</a></li></ul>{:/}|
 |[Event Triggered Execution](https://attack.mitre.org/techniques/T1546/)|(N/A - see below)|(N/A - see below)|
-|...|[Accessibility Features](https://attack.mitre.org/techniques/T1546/008/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-11-003">CAR-2014-11-003: Debuggers for Accessibility Applications</a></li><li><a href="CAR-2014-11-008">CAR-2014-11-008: Command Launched from WinLogon</a></li></ul>{:/}|
-|...|[Component Object Model Hijacking](https://attack.mitre.org/techniques/T1546/015/)|{::nomarkdown}<ul><li><a href="CAR-2020-09-002">CAR-2020-09-002: Component Object Model Hijacking</a></li></ul>{:/}|
 |...|[Change Default File Association](https://attack.mitre.org/techniques/T1546/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
 |...|[Windows Management Instrumentation Event Subscription](https://attack.mitre.org/techniques/T1546/003/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
+|...|[Accessibility Features](https://attack.mitre.org/techniques/T1546/008/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-11-003">CAR-2014-11-003: Debuggers for Accessibility Applications</a></li><li><a href="CAR-2014-11-008">CAR-2014-11-008: Command Launched from WinLogon</a></li></ul>{:/}|
 |...|[AppInit DLLs](https://attack.mitre.org/techniques/T1546/010/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2020-09-005">CAR-2020-09-005: AppInit DLLs</a></li></ul>{:/}|
+|...|[Component Object Model Hijacking](https://attack.mitre.org/techniques/T1546/015/)|{::nomarkdown}<ul><li><a href="CAR-2020-09-002">CAR-2020-09-002: Component Object Model Hijacking</a></li></ul>{:/}|
 |...|[Screensaver](https://attack.mitre.org/techniques/T1546/002/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-011">CAR-2020-11-011: Registry Edit from Screensaver</a></li></ul>{:/}|
 |[Boot or Logon Initialization Scripts](https://attack.mitre.org/techniques/T1037/)|[Logon Script (Windows)](https://attack.mitre.org/techniques/T1037/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2020-11-001">CAR-2020-11-001: Boot or Logon Initialization Scripts</a></li></ul>{:/}|
 |[Remote Services](https://attack.mitre.org/techniques/T1021/)|(N/A - technique only)|{::nomarkdown}<ul><li><a href="CAR-2013-07-001">CAR-2013-07-001: Suspicious Arguments</a></li></ul>{:/}|
-|...|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1021/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-07-002">CAR-2013-07-002: RDP Connection Detection</a></li><li><a href="CAR-2013-10-001">CAR-2013-10-001: User Login Activity Monitoring</a></li><li><a href="CAR-2016-04-005">CAR-2016-04-005: Remote Desktop Logon</a></li></ul>{:/}|
 |...|[SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-003">CAR-2013-01-003: SMB Events Monitoring</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-05-003">CAR-2013-05-003: SMB Write Request</a></li><li><a href="CAR-2013-05-005">CAR-2013-05-005: SMB Copy and Execution</a></li><li><a href="CAR-2014-05-001">CAR-2014-05-001: RPC Activity</a></li></ul>{:/}|
+|...|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1021/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-07-002">CAR-2013-07-002: RDP Connection Detection</a></li><li><a href="CAR-2013-10-001">CAR-2013-10-001: User Login Activity Monitoring</a></li><li><a href="CAR-2016-04-005">CAR-2016-04-005: Remote Desktop Logon</a></li></ul>{:/}|
 |...|[Distributed Component Object Model](https://attack.mitre.org/techniques/T1021/003/)|{::nomarkdown}<ul><li><a href="CAR-2014-05-001">CAR-2014-05-001: RPC Activity</a></li></ul>{:/}|
 |...|[Windows Remote Management](https://attack.mitre.org/techniques/T1021/006/)|{::nomarkdown}<ul><li><a href="CAR-2014-05-001">CAR-2014-05-001: RPC Activity</a></li><li><a href="CAR-2014-11-004">CAR-2014-11-004: Remote PowerShell Sessions</a></li><li><a href="CAR-2014-11-006">CAR-2014-11-006: Windows Remote Management (WinRM)</a></li></ul>{:/}|
 |[Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)|(N/A - technique only)|{::nomarkdown}<ul><li><a href="CAR-2021-01-002">CAR-2021-01-002: Unusually Long Command Line Strings</a></li></ul>{:/}|
@@ -744,9 +744,9 @@ permalink: /analytics/
 |...|[Local Account](https://attack.mitre.org/techniques/T1087/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li></ul>{:/}|
 |...|[Domain Account](https://attack.mitre.org/techniques/T1087/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li></ul>{:/}|
 |[OS Credential Dumping](https://attack.mitre.org/techniques/T1003/)|(N/A - see below)|(N/A - see below)|
-|...|[NTDS](https://attack.mitre.org/techniques/T1003/003/)|{::nomarkdown}<ul><li><a href="CAR-2019-08-002">CAR-2019-08-002: Active Directory Dumping via NTDSUtil</a></li><li><a href="CAR-2020-05-001">CAR-2020-05-001: MiniDump of LSASS</a></li></ul>{:/}|
-|...|[LSASS Memory](https://attack.mitre.org/techniques/T1003/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-07-001">CAR-2013-07-001: Suspicious Arguments</a></li><li><a href="CAR-2019-04-004">CAR-2019-04-004: Credential Dumping via Mimikatz</a></li><li><a href="CAR-2019-07-002">CAR-2019-07-002: Lsass Process Dump via Procdump</a></li><li><a href="CAR-2019-08-001">CAR-2019-08-001: Credential Dumping via Windows Task Manager</a></li></ul>{:/}|
 |...|[Security Account Manager](https://attack.mitre.org/techniques/T1003/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li></ul>{:/}|
+|...|[LSASS Memory](https://attack.mitre.org/techniques/T1003/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-07-001">CAR-2013-07-001: Suspicious Arguments</a></li><li><a href="CAR-2019-04-004">CAR-2019-04-004: Credential Dumping via Mimikatz</a></li><li><a href="CAR-2019-07-002">CAR-2019-07-002: Lsass Process Dump via Procdump</a></li><li><a href="CAR-2019-08-001">CAR-2019-08-001: Credential Dumping via Windows Task Manager</a></li></ul>{:/}|
+|...|[NTDS](https://attack.mitre.org/techniques/T1003/003/)|{::nomarkdown}<ul><li><a href="CAR-2019-08-002">CAR-2019-08-002: Active Directory Dumping via NTDSUtil</a></li><li><a href="CAR-2020-05-001">CAR-2020-05-001: MiniDump of LSASS</a></li></ul>{:/}|
 |[Permission Groups Discovery](https://attack.mitre.org/techniques/T1069/)|(N/A - see below)|(N/A - see below)|
 |...|[Local Groups](https://attack.mitre.org/techniques/T1069/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li><li><a href="CAR-2020-11-006">CAR-2020-11-006: Local Permission Group Discovery</a></li></ul>{:/}|
 |...|[Domain Groups](https://attack.mitre.org/techniques/T1069/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li><li><a href="CAR-2020-11-006">CAR-2020-11-006: Local Permission Group Discovery</a></li></ul>{:/}|
@@ -762,13 +762,13 @@ permalink: /analytics/
 |[Process Injection](https://attack.mitre.org/techniques/T1055/)|[Dynamic-link Library Injection](https://attack.mitre.org/techniques/T1055/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-10-002">CAR-2013-10-002: DLL Injection via Load Library</a></li><li><a href="CAR-2020-11-003">CAR-2020-11-003: DLL Injection with Mavinject</a></li></ul>{:/}|
 |...|[Bypass User Access Control](https://attack.mitre.org/techniques/T1548/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-10-002">CAR-2013-10-002: DLL Injection via Load Library</a></li><li><a href="CAR-2019-04-001">CAR-2019-04-001: UAC Bypass</a></li><li><a href="CAR-2021-01-008">CAR-2021-01-008: Disable UAC</a></li></ul>{:/}|
 |[Signed Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|(N/A - see below)|(N/A - see below)|
+|...|[Rundll32](https://attack.mitre.org/techniques/T1218/011/)|{::nomarkdown}<ul><li><a href="CAR-2014-03-006">CAR-2014-03-006: RunDLL32.exe monitoring</a></li></ul>{:/}|
 |...|[Regsvr32](https://attack.mitre.org/techniques/T1218/010/)|{::nomarkdown}<ul><li><a href="CAR-2019-04-002">CAR-2019-04-002: Generic Regsvr32</a></li><li><a href="CAR-2019-04-003">CAR-2019-04-003: Squiblydoo</a></li></ul>{:/}|
 |...|[Compiled HTML File](https://attack.mitre.org/techniques/T1218/001/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-009">CAR-2020-11-009: Compiled HTML Access</a></li></ul>{:/}|
-|...|[Rundll32](https://attack.mitre.org/techniques/T1218/011/)|{::nomarkdown}<ul><li><a href="CAR-2014-03-006">CAR-2014-03-006: RunDLL32.exe monitoring</a></li></ul>{:/}|
 |...|[CMSTP](https://attack.mitre.org/techniques/T1218/003/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-010">CAR-2020-11-010: CMSTP</a></li></ul>{:/}|
 |[Indicator Removal on Host](https://attack.mitre.org/techniques/T1070/)|(N/A - see below)|(N/A - see below)|
-|...|[Clear Command History](https://attack.mitre.org/techniques/T1070/003/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-005">CAR-2020-11-005: Clear Powershell Console Command History</a></li></ul>{:/}|
 |...|[Clear Windows Event Logs](https://attack.mitre.org/techniques/T1070/001/)|{::nomarkdown}<ul><li><a href="CAR-2016-04-002">CAR-2016-04-002: User Activity from Clearing Event Logs</a></li><li><a href="CAR-2021-01-003">CAR-2021-01-003: Clearing Windows Logs with Wevtutil</a></li></ul>{:/}|
+|...|[Clear Command History](https://attack.mitre.org/techniques/T1070/003/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-005">CAR-2020-11-005: Clear Powershell Console Command History</a></li></ul>{:/}|
 |...|[Network Share Connection Removal](https://attack.mitre.org/techniques/T1070/005/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-007">CAR-2020-11-007: Network Share Connection Removal</a></li></ul>{:/}|
 |[Use Alternate Authentication Material](https://attack.mitre.org/techniques/T1550/)|[Pass the Hash](https://attack.mitre.org/techniques/T1550/002/)|{::nomarkdown}<ul><li><a href="CAR-2016-04-004">CAR-2016-04-004: Successful Local Account Login</a></li></ul>{:/}|
 |[File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/)|(N/A - see below)|(N/A - see below)|

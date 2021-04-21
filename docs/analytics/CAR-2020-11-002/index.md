@@ -58,5 +58,16 @@ look for common network traffic sniffing apps being run
 ```
 
 
+#### LogPoint Search - common network traffic sniffing apps being run (Logpoint, LogPoint native)
+
+
+look for common network traffic sniffing apps being run
+
+
+```
+norm_id=WindowsSysmon event_id=1 (image="*\tshark.exe" OR image="*\windump.exe" OR (image="*\logman.exe" -parent_image="?" -parent_image="C:\Program Files\Windows Event Reporting\Core\EventReporting.AgentService.exe") OR image="*\tcpdump.exe" OR image="*\wprui.exe" OR image="*\wpr.exe")
+```
+
+
 
 

@@ -54,5 +54,16 @@ Looks for all instances of msbuild.exe or msxsl.exe
 ```
 
 
+#### LogPoint Search - msbuild (Logpoint, LogPoint native)
+
+
+Looks for all instances of msbuild.exe or msxsl.exe
+
+
+```
+norm_id=WindowsSysmon event_id=1 (image IN ["C:\Program Files (x86)\Microsoft Visual Studio\*\bin\MSBuild.exe", "C:\Windows\Microsoft.NET\Framework*\msbuild.exe", "C:\Users\*\appdata\roaming\microsoft\msxsl.exe") -parent_image="*\Microsoft Visual Studio*")
+```
+
+
 
 

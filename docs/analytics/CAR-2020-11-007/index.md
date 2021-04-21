@@ -55,5 +55,16 @@ looks network shares being deleted from the command line
 ```
 
 
+#### LogPoint Search - delete network shares (Logpoint, LogPoint native)
+
+
+looks network shares being deleted from the command line
+
+
+```
+norm_id=WindowsSysmon event_id=1 ((image="C:\Windows\System32\net.exe" command="*delete*") OR command="*Remove-SmbShare*" OR command="*Remove-FileShare*")
+```
+
+
 
 
