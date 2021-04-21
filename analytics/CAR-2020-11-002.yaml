@@ -39,6 +39,12 @@ implementations:
       (index=__your_sysmon_index__ EventCode=1) (Image="*tshark.exe" OR Image="*windump.exe" OR (Image="*logman.exe" AND ParentImage!="?" AND ParentImage!="C:\\Program Files\\Windows Event Reporting\\Core\\EventReporting.AgentService.exe") OR Image="*tcpdump.exe" OR Image="*wprui.exe" OR Image="*wpr.exe")
     data_model: Sysmon native
     type: Splunk
+  - name: LogPoint Search - common network traffic sniffing apps being run
+    description: look for common network traffic sniffing apps being run
+    code: |- 
+      norm_id=WindowsSysmon event_id=1 (image="*\tshark.exe" OR image="*\windump.exe" OR (image="*\logman.exe" -parent_image="?" -parent_image="C:\Program Files\Windows Event Reporting\Core\EventReporting.AgentService.exe") OR image="*\tcpdump.exe" OR image="*\wprui.exe" OR image="*\wpr.exe")
+    data_model: LogPoint native
+    type: LogPoint
 data_model_references:
   - process/create/exe
   - process/create/parent_exe

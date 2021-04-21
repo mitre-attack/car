@@ -36,6 +36,12 @@ implementations:
       index=your_sysmon_index (EventCode=12 OR EventCode=13 OR EventCode=14) TargetObject="*\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop\\SCRNSAVE.EXE"
     data_model: Sysmon native
     type: Splunk
+  - name: LogPoint Search - Screensaver
+    description: looks creations of edits of the SCRNSAVE.exe registry key
+    code: |- 
+      norm_id=WindowsSysmon event_id IN [12, 13, 14] target_object="*\Software\Policies\Microsoft\Windows\Control Panel\Desktop\SCRNSAVE.EXE"
+    data_model: LogPoint native
+    type: LogPoint
 data_model_references:
   - registry/edit/key
   - registry/add/key

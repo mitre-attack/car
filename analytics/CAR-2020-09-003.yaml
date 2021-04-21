@@ -36,6 +36,12 @@ implementations:
     index=client EventCode=1 CommandLine="*unload*" (Image="C:\\Windows\\SysWOW64\\fltMC.exe" OR Image="C:\\Windows\\System32\\fltMC.exe") 
   data_model: Sysmon native
   type: Splunk
+- name: LogPoint search - fltmc invocation
+  description: This LogPoint search looks for process create events for the fltmc.exe utility and the specific command line used to unload minifilter drivers.
+  code: |- 
+    norm_id=WindowsSysmon command="*unload*" (image="C:\Windows\SysWOW64\fltMC.exe" OR image="C:\Windows\System32\fltMC.exe") 
+  data_model: LogPoint native
+  type: LogPoint
 data_model_references:
   - process/create/exe
   - process/create/command_line

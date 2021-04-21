@@ -51,6 +51,11 @@ implementations:
       chmod_processes = filter processes where command_line == "chmod *"
       output chmod_processes
     type: Pseudocode
+  - description: LogPoint version of the above pseudocode for Windows.
+    code: |-
+      norm_id=WindowsSysmon channel="Security" event_id=4670 object_type="File" -user_id="S-1-5-18"
+    type: LogPoint
+    data_mode: LogPoint native 
 unit_tests:
   - description: 'For Windows - right click on any file and change its permissions under properties. Or, execute the following command: `icacls "C:\<fileName>" /grant :F`'
   - description: 'For Linux - execute the following command: `chmod 777 "fileName"`'
