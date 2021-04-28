@@ -13,20 +13,23 @@ from pyattck import Attck
 from jinja2 import Environment, FileSystemLoader
 from os import path
 
-def generate_car_object(detection_yaml, car_id):
+def generate_car_object(detection_yaml, car_id, DETECTION_PATH):
     print(detection_yaml)
     car_object = dict()
     car_object['id'] = car_id
     car_object['submission_date'] = datetime.now().strftime('%Y/%m/%d')
-    car_object['information_domain'] = 'Analytic' 
-    car_object['analytic_type'] = 'TTP' 
+    car_object['information_domain'] = 'Analytic'
+    car_object['analytic_type'] = 'TTP'
     car_object['contributors'] = ['Splunk Threat Research <research@splunk.com>']
     car_object['platforms'] = ['Windows']
-    
+
     car_object['description'] = detection_yaml['description']
 
     # we should add the detection yaml or docs url as a ref as well
     references = detection_yaml['references']
+    path_of_url = DETECTION_PATH.split('/')[-3:]
+    detection_url = 'https://github.com/splunk/security_content/blob/develop/' + "/".join(path_of_url)
+    references.append(detection_url)
     car_object['references'] = references
 
     implementation = []
@@ -39,12 +42,11 @@ def generate_car_object(detection_yaml, car_id):
 
     unit_tests = []
     unit_test = dict()
-    unit_test['configurations'] = ['Using Splunk Attack Range: https://github.com/splunk/attack_range']
-    unit_test['description'] = 'replay the detection dataset {0} using the Splunk attack range with the commands below'.format(detection_yaml['tags']['dataset'])
+    unit_test['configurations'] = ['Using Splunk [Attack Range](https://github.com/splunk/attack_range)']
+    unit_test['description'] = 'Replay the detection [dataset]({0})  using the Splunk attack range with the commands below'.format(detection_yaml['tags']['dataset'][0])
     unit_test['commands'] = ['python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]']
     unit_tests.append(unit_test)
     car_object['unit_tests'] = unit_tests
-
 
     return car_object
 
@@ -101,13 +103,13 @@ def generate_car_analytics(DETECTION_PATH, OUTPUT_DIR, ANALYTICS_TEMPLATE_PATH, 
 
     date = datetime.now().strftime('%Y-%m')
     car_id = path.join( 'CAR-' + str(date) + '-001' )
-    car_object = generate_car_object(detection_yaml, car_id)
+    car_object = generate_car_object(detection_yaml, car_id, DETECTION_PATH)
     j2_env = Environment(loader=FileSystemLoader(ANALYTICS_TEMPLATE_PATH),
                              trim_blocks=False)
     # write markdown
     template = j2_env.get_template('analytic_template.md')
 
-    output_path = path.join( OUTPUT_DIR + '/' + car_id + '.yaml' )
+    output_path = path.join( OUTPUT_DIR + '/' + car_id + '.md' )
     output = template.render(analytic=car_object)
     with open(output_path, 'w', encoding="utf-8") as f:
         f.write(output)
