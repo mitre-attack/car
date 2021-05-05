@@ -14,7 +14,6 @@ from jinja2 import Environment, FileSystemLoader
 from os import path
 
 def generate_car_object(detection_yaml, car_id, DETECTION_PATH):
-    print(detection_yaml)
     car_object = dict()
     car_object['title'] = detection_yaml['name']
     car_object['submission_date'] = datetime.now().strftime('%Y/%m/%d')
@@ -32,7 +31,10 @@ def generate_car_object(detection_yaml, car_id, DETECTION_PATH):
     splunk_implementation['description'] = detection_yaml['how_to_implement']
     splunk_implementation['code'] = detection_yaml['search']
     splunk_implementation['type'] = 'Splunk'
-    splunk_implementation['data_model'] = detection_yaml['datamodel'][0]
+    if len(detection_yaml['datamodel']) > 0:
+        splunk_implementation['data_model'] = detection_yaml['datamodel'][0]
+    else:
+        splunk_implementation['data_model'] = ''
     implementation.append(splunk_implementation)
     car_object['implementations'] = implementation
 
@@ -76,7 +78,7 @@ def get_mitre_enrichment_new(attack, mitre_attack_id):
             return mitre_attack
     return []
 
-def generate_car_analytics(DETECTION_PATH, OUTPUT_DIR, ANALYTICS_TEMPLATE_PATH, attack, VERBOSE):
+def generate_car_analytics(DETECTION_PATH, OUTPUT_FILE, attack, VERBOSE):
 
     if VERBOSE:
         print("reading splunk security content detection: {0}".format(DETECTION_PATH))
@@ -101,35 +103,32 @@ def generate_car_analytics(DETECTION_PATH, OUTPUT_DIR, ANALYTICS_TEMPLATE_PATH, 
         detection_yaml['mitre_attacks'] = mitre_attacks
 
     date = datetime.now().strftime('%Y-%m')
-    car_id = path.join( 'CAR-' + str(date) + '-001' )
+    car_id = OUTPUT_FILE.split('/')[0]
     car_object = generate_car_object(detection_yaml, car_id, DETECTION_PATH)
 
     # write yml
-    output_path = path.join( OUTPUT_DIR + '/' + car_id + '.yml' )
-    with open(output_path, 'w') as file:
+    with open(OUTPUT_FILE, 'w') as file:
             documents = yaml.dump(car_object, file, sort_keys=False)
 
-    print("splunk_security_content_to_car.py wrote CAR analytic to: {}".format(output_path))
+    print("splunk_security_content_to_car.py wrote CAR analytic to: {}".format(OUTPUT_FILE))
 
 if __name__ == "__main__":
 
     # grab arguments
     parser = argparse.ArgumentParser(description="Generates CAR analytics file from Splunk Security Content Detections")
     parser.add_argument("-p", "--path", required=True, help="path to security_content detection, example: security_content/detections/endpoint/suspicious_mshta_child_process.yml")
-    parser.add_argument("-o", "--output", required=True, help="path to the car analytics")
+    parser.add_argument("-o", "--output", required=True, help="file to write to the car analytics to, eg analytics/CAR-2021-04-001.yml")
     parser.add_argument("-v", "--verbose", required=False, default=False, action='store_true', help="prints verbose output")
 
     # parse them
     args = parser.parse_args()
     DETECTION_PATH = args.path
-    OUTPUT_DIR = args.output
+    OUTPUT_FILE = args.output
     VERBOSE = args.verbose
-
-    ANALYTICS_TEMPLATE_PATH = 'scripts/'
 
     if VERBOSE:
         print("getting mitre enrichment data from cti")
     attack = Attck()
 
-    generate_car_analytics(DETECTION_PATH, OUTPUT_DIR, ANALYTICS_TEMPLATE_PATH, attack, VERBOSE)
+    generate_car_analytics(DETECTION_PATH, OUTPUT_FILE, attack, VERBOSE)
     print("finished successfully!")
