@@ -1,5 +1,5 @@
 title: Create Remote Thread into LSASS
-submission_date: 2021/05/05
+submission_date: 2021/05/11
 information_domain: Analytic
 platforms:
 - Windows
@@ -9,7 +9,7 @@ analytic_types:
 - TTP
 contributors:
 - Splunk Threat Research <research@splunk.com>
-id: analytics
+id: CAR-2021-05-011
 description: Detect remote thread creation into LSASS consistent with credential dumping.
 coverage:
 - technique: T1003.001
@@ -25,8 +25,7 @@ implementations:
     macro designed to filter out known false positives.
   code: '`sysmon` EventID=8 TargetImage=*lsass.exe | stats count min(_time) as firstTime
     max(_time) as lastTime by Computer, EventCode, TargetImage, TargetProcessId |
-    rename Computer as dest | `security_content_ctime(firstTime)`| `security_content_ctime(lastTime)`
-    | `create_remote_thread_into_lsass_filter`'
+    rename Computer as dest'
   type: Splunk
   data_model: ''
 unit_tests:

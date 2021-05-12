@@ -11,6 +11,7 @@ import yaml
 from datetime import datetime
 from pyattck import Attck
 from jinja2 import Environment, FileSystemLoader
+import re
 from os import path
 
 def generate_car_object(detection_yaml, car_id, DETECTION_PATH):
@@ -29,7 +30,14 @@ def generate_car_object(detection_yaml, car_id, DETECTION_PATH):
     implementation = []
     splunk_implementation = dict()
     splunk_implementation['description'] = detection_yaml['how_to_implement']
-    splunk_implementation['code'] = detection_yaml['search']
+
+    # cleaning up unecessary macros from splunk
+    search = re.sub('\s`security_content_summariesonly`', '', detection_yaml['search'])
+    search = re.sub('\|(\s|)\`security_content_ctime\((\w+|\"\w+\")\)\`', '', search)
+    search = re.sub('\|\s\`drop_dm_object_name\((\w+|\"\w+\")\)\`', '', search)
+    search = re.sub('\|\s\`\w+_filter\`', '', search)
+
+    splunk_implementation['code'] = search.rstrip()
     splunk_implementation['type'] = 'Splunk'
     if len(detection_yaml['datamodel']) > 0:
         splunk_implementation['data_model'] = detection_yaml['datamodel'][0]
@@ -103,7 +111,7 @@ def generate_car_analytics(DETECTION_PATH, OUTPUT_FILE, attack, VERBOSE):
         detection_yaml['mitre_attacks'] = mitre_attacks
 
     date = datetime.now().strftime('%Y-%m')
-    car_id = OUTPUT_FILE.split('/')[0]
+    car_id = OUTPUT_FILE.split('/')[1].replace('.yml','')
     car_object = generate_car_object(detection_yaml, car_id, DETECTION_PATH)
 
     # write yml
