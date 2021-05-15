@@ -1,6 +1,7 @@
 title: Command Line Usage of Archiving Software
 submission_date: 2013/07/31
 information_domain: Host
+platforms:
   - Windows
   - Linux
   - macOS
