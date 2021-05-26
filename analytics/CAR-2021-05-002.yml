@@ -1,0 +1,43 @@
+title: Batch File Write to System32
+submission_date: 2021/05/11
+information_domain: Analytic
+platforms:
+- Windows
+subtypes:
+- Process
+analytic_types:
+- TTP
+contributors:
+- Splunk Threat Research <research@splunk.com>
+id: CAR-2021-05-002
+description: The search looks for a batch file (.bat) written to the Windows system
+  directory tree.
+coverage:
+- technique: T1204.002
+  tactics:
+  - TA0002
+  coverage: Moderate
+implementations:
+- description: You must be ingesting data that records the file-system activity from
+    your hosts to populate the Endpoint file-system data-model node. If you are using
+    Sysmon, you will need a Splunk Universal Forwarder on each endpoint from which
+    you want to collect data.
+  code: '| tstats count min(_time) as firstTime max(_time) as lastTime values(Filesystem.dest)
+    as dest values(Filesystem.file_name) as file_name values(Filesystem.user) as user
+    from datamodel=Endpoint.Filesystem by Filesystem.file_path   | rex field=file_name
+    "(?<file_extension>\.[^\.]+)$" | search file_path=*system32* AND file_extension=.bat'
+  type: Splunk
+  data_model: Endpoint
+unit_tests:
+- configurations:
+  - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
+  description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1204.002/batch_file_in_system32/windows-sysmon.log)  using
+    the Splunk attack range with the commands below
+  commands:
+  - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
+- configurations:
+  - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
+  description: execute the atomic test [T1204.002](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1204.002)
+    against a Windows target.
+  commands:
+  - Invoke-AtomicTest T1204.002
