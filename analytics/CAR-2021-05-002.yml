@@ -17,16 +17,6 @@ coverage:
   - TA0002
   coverage: Moderate
 implementations:
-- description: You must be ingesting data that records the file-system activity from
-    your hosts to populate the Endpoint file-system data-model node. If you are using
-    Sysmon, you will need a Splunk Universal Forwarder on each endpoint from which
-    you want to collect data.
-  code: '| tstats count min(_time) as firstTime max(_time) as lastTime values(Filesystem.dest)
-    as dest values(Filesystem.file_name) as file_name values(Filesystem.user) as user
-    from datamodel=Endpoint.Filesystem by Filesystem.file_path   | rex field=file_name
-    "(?<file_extension>\.[^\.]+)$" | search file_path=*system32* AND file_extension=.bat'
-  type: Splunk
-  data_model: Endpoint
 -	name: Pseudocode – Batch file created in the Windows system32 directory tree
   description: Pseudocode implementation of the Splunk search below
   code: |- 
@@ -36,6 +26,18 @@ implementations:
       output batch_files
   data_model: CAR native
   type: Pseudocode
+- name: Splunk code
+  description: You must be ingesting data that records the file-system activity from
+    your hosts to populate the Endpoint file-system data-model node. If you are using
+    Sysmon, you will need a Splunk Universal Forwarder on each endpoint from which
+    you want to collect data.
+  code: '| tstats count min(_time) as firstTime max(_time) as lastTime values(Filesystem.dest)
+    as dest values(Filesystem.file_name) as file_name values(Filesystem.user) as user
+    from datamodel=Endpoint.Filesystem by Filesystem.file_path   | rex field=file_name
+    "(?<file_extension>\.[^\.]+)$" | search file_path=*system32* AND file_extension=.bat'
+  type: Splunk
+  data_model: Endpoint
+
 unit_tests:
 - configurations:
   - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
