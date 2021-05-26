@@ -19,6 +19,15 @@ coverage:
   - TA0040
   coverage: Moderate
 implementations:
+-	name: Pseudocode – detect attempts to add a certificate to a certificate store
+  description: Pseudocode implementation of the splunk search below
+  code: |- 
+      processes = search Process:Create
+      bcdedit_commands = filter processes where (
+        exe = "C:\Windows\System32\bcdedit.exe" AND command_line="*recoveryenabled*" )
+      output bcedit_commands
+  data_model: CAR native
+  type: Pseudocode
 - description: You must be ingesting endpoint data that tracks process activity, including
     parent-child relationships from your endpoints to populate the Endpoint data model
     in the Processes node. Tune based on parent process names.
