@@ -10,14 +10,23 @@ analytic_types:
 contributors:
 - Splunk Threat Research <research@splunk.com>
 id: CAR-2021-05-011
-description: Detect remote thread creation into LSASS consistent with credential dumping.
+description: Actors may create a remote thread into the LSASS service as part of a workflow to dump credentials. 
 coverage:
 - technique: T1003.001
   tactics:
   - TA0006
   coverage: Moderate
 implementations:
-- description: This search needs Sysmon Logs with a Sysmon configuration, which includes
+-	name: Pseudocode – Remote thread creation into LSASS
+  description: Pseudocode implementation of the Splunk search below. The CAR data model does not currently contain a Target Image field, for remote thread creation, so this code Is somewhat inexact. See the Splunk implementation for a more precise search for the lsass image target. 
+  code: |- 
+      remote_threads = search Thread:remote_create
+      lsass_remote_create = filter remote_threads where "lsass" in raw event
+      output lsass_remote_create
+  data_model: CAR native
+  type: Pseudocode
+- name: Splunk code
+  description: This search needs Sysmon Logs with a Sysmon configuration, which includes
     EventCode 8 with lsass.exe. This search uses an input macro named `sysmon`. We
     strongly recommend that you specify your environment-specific configurations (index,
     source, sourcetype, etc.) for Windows Sysmon logs. Replace the macro definition
