@@ -24,6 +24,16 @@ coverage:
   - TA0005
   coverage: Moderate
 implementations:
+-	name: Pseudocode – CertUtil with Decode Argument
+  description: Pseudocode implementation of the Splunk search below
+  code: |- 
+      processes = search Process:Create
+      certutil_downloads = filter processes where (
+        exe =”C:\Windows\System32\certutil.exe” AND command_line = *decode* )
+      output certutil_downloads
+  data_model: CAR native
+  type: Pseudocode
+- name: Splunk code
 - description: To successfully implement this search you need to be ingesting information
     on process that include the name of the process responsible for the changes from
     your endpoints into the `Endpoint` datamodel in the `Processes` node.
