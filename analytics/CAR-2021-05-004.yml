@@ -33,7 +33,8 @@ implementations:
       output bitsadmin_commands
   data_model: CAR native
   type: Pseudocode
-- description: To successfully implement this search you need to be ingesting information
+- name: Splunk code
+  description: To successfully implement this search you need to be ingesting information
     on process that include the name of the process responsible for the changes from
     your endpoints into the `Endpoint` datamodel in the `Processes` node.
   code: '| tstats count min(_time) as firstTime max(_time) as lastTime from datamodel=Endpoint.Processes
