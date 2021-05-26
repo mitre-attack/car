@@ -10,8 +10,7 @@ analytic_types:
 contributors:
 - Splunk Threat Research <research@splunk.com>
 id: CAR-2021-05-002
-description: The search looks for a batch file (.bat) written to the Windows system
-  directory tree.
+description: While batch files are not inherently malicious, it is uncommon to see them created after OS installation, especially in the Windows directory. This analytic looks for the suspicious activity of a batch file being created within the C:\Windows\System32 directory tree. There will be only occasional false positives due to administrator actions.
 coverage:
 - technique: T1204.002
   tactics:
@@ -28,6 +27,15 @@ implementations:
     "(?<file_extension>\.[^\.]+)$" | search file_path=*system32* AND file_extension=.bat'
   type: Splunk
   data_model: Endpoint
+-	name: Pseudocode – Batch file created in the Windows system32 directory tree
+  description: Pseudocode implementation of the Splunk search below
+  code: |- 
+      files = search File:create
+      batch_files = filter files where (
+        extension =".bat" AND file_path = "C:\Windows\system32*" )
+      output batch_files
+  data_model: CAR native
+  type: Pseudocode
 unit_tests:
 - configurations:
   - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
