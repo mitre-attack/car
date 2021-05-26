@@ -23,7 +23,17 @@ coverage:
   - TA0011
   coverage: Moderate
 implementations:
-- description: To successfully implement this search you need to be ingesting information
+-	name: Pseudocode – CertUtil download
+  description: Pseudocode implementation of the Splunk search below
+  code: |- 
+      processes = search Process:Create
+      certutil_downloads = filter processes where (
+        exe ="C:\Windows\System32\certutil.exe" AND command_line = *urlcache* AND command_line = *split*)
+      output certutil_downloads
+  data_model: CAR native
+  type: Pseudocode
+- name: Splunk code
+  description: To successfully implement this search you need to be ingesting information
     on process that include the name of the process responsible for the changes from
     your endpoints into the `Endpoint` datamodel in the `Processes` node.
   code: '| tstats count min(_time) as firstTime max(_time) as lastTime from datamodel=Endpoint.Processes
