@@ -12,10 +12,12 @@ contributors:
 id: CAR-2021-05-001
 description: Adversaries may add their own root certificate to the certificate store, to cause the web browser to trust that certificate and not display a security warning when it encounters the previously unseen certificate. This action may be the precursor to malicious activity. 
 coverage:
-- technique: T1553.004
+- technique: T1553
   tactics:
   - TA0005
   coverage: Moderate
+  subtechniques:
+  - T1553.004
 implementations:
 - name: Splunk code
   description: You must be ingesting data that records process activity from your

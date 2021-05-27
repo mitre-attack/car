@@ -16,12 +16,12 @@ Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Wi
 
 ### [file](../data_model/file)
 
-| | `company` | `content` | `creation_time` | `file_extension` | `file_gid` | `file_group` | `file_name` | `file_path` | `file_uid` | `file_user` | `fqdn` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
+| | `company` | `content` | `creation_time` | `extension` | `file_name` | `file_path` | `fqdn` | `gid` | `group` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `owner` | `owner_uid` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `acl_modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` | ✓| |✓| | | |✓|✓| | |✓|✓|✓| |✓| | | | | |✓|✓| |✓| | |
+| `create` | ✓| |✓| |✓|✓|✓| | |✓|✓| |✓| | | | | | | |✓|✓| |✓| | |
 | `delete` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `modify` | ✓| |✓| | | |✓|✓| | |✓|✓|✓| |✓| | | | | |✓|✓| |✓| | |
+| `modify` | ✓| |✓| |✓|✓|✓| | |✓|✓| |✓| | | | | | | |✓|✓| |✓| | |
 | `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `timestomp` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -59,3 +59,4 @@ Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Wi
  - [CAR-2020-09-005: AppInit DLLs](../analytics/CAR-2020-09-005)
  - [CAR-2020-11-001: Boot or Logon Initialization Scripts](../analytics/CAR-2020-11-001)
  - [CAR-2020-11-011: Registry Edit from Screensaver](../analytics/CAR-2020-11-011)
+ - [CAR-2021-02-002: Get System Elevation](../analytics/CAR-2021-02-002)

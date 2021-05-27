@@ -23,7 +23,7 @@ coverage:
   - TA0011
   coverage: Moderate
 implementations:
--	name: Pseudocode – CertUtil download with VerifyCtl
+- name: Pseudocode – CertUtil download with VerifyCtl
   description: Pseudocode implementation of the Splunk search below
   code: |- 
       processes = search Process:Create

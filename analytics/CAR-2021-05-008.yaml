@@ -14,12 +14,14 @@ description: This search looks for arguments to certutil.exe indicating the mani
   or extraction of Certificate. This certificate can then be used to sign new authentication
   tokens specially inside Federated environments such as Windows ADFS.
 coverage:
-- technique: T1606.002
+- technique: T1606
+  subtechniques:
+  - T1606.002
   tactics:
   - TA0006
   coverage: Moderate
 implementations:
--	name: Pseudocode – CertUtil certificate extraction
+- name: Pseudocode – CertUtil certificate extraction
   description: Pseudocode implementation of the Splunk search below
   code: |- 
       processes = search Process:Create

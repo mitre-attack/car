@@ -13,12 +13,14 @@ id: CAR-2021-05-010
 description: This search looks for the creation of local administrator accounts using
   net.exe.
 coverage:
-- technique: T1136.001
+- technique: T1136
+  subtechniques: 
+  - T1136.001
   tactics:
   - TA0003
   coverage: Moderate
 implementations:
--	name: Pseudocode – CertUtil certificate extraction
+- name: Pseudocode – CertUtil certificate extraction
   description: Pseudocode implementation of the Splunk search below
   code: |- 
       processes = search Process:Create

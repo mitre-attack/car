@@ -26,7 +26,7 @@ for af in analytics_files:
 #analytics = [yaml.load(open(analytic_file).read()) for analytic_file in analytics_files]
 
 # Load ATT&CK content, which is needed to get names for technique IDs
-attack = requests.get(ATTACK_URL).json()
+attack = requests.get(ATTACK_URL, verify =False).json()
 techniques = {ap['external_references'][0]['external_id']: ap['name'] for ap in attack['objects'] if ap['type'] == 'attack-pattern'}
 tactics = {ap['external_references'][0]['external_id']: ap['name'] for ap in attack['objects'] if ap['type'] == 'x-mitre-tactic'}
 

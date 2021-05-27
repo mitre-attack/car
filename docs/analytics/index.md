@@ -137,7 +137,7 @@ permalink: /analytics/
                 <td style="white-space:nowrap;">July 31 2013</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1560/">Archive Collected Data</a></li></ul></td>
                 <td>Dnif, Logpoint, Pseudocode</td>
-                <td>N/A</td>
+                <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2013-08-001/">CAR-2013-08-001</a></td>
@@ -551,7 +551,7 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-004/">CAR-2020-11-004</a></td>
                 <td>Processes Started From Irregular Parent</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
-                <td></td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1055/">Process Injection</a></li></ul></td>
                 <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
@@ -759,7 +759,9 @@ permalink: /analytics/
 |...|[Rename System Utilities](https://attack.mitre.org/techniques/T1036/003/)|{::nomarkdown}<ul><li><a href="CAR-2013-05-009">CAR-2013-05-009: Running executables with same hash and different names</a></li></ul>{:/}|
 |...|[Match Legitimate Name or Location](https://attack.mitre.org/techniques/T1036/005/)|{::nomarkdown}<ul><li><a href="CAR-2021-04-001">CAR-2021-04-001: Common Windows Process Masquerading</a></li></ul>{:/}|
 |[Archive Collected Data](https://attack.mitre.org/techniques/T1560/)|[Archive via Utility](https://attack.mitre.org/techniques/T1560/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-07-005">CAR-2013-07-005: Command Line Usage of Archiving Software</a></li></ul>{:/}|
-|[Process Injection](https://attack.mitre.org/techniques/T1055/)|[Dynamic-link Library Injection](https://attack.mitre.org/techniques/T1055/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-10-002">CAR-2013-10-002: DLL Injection via Load Library</a></li><li><a href="CAR-2020-11-003">CAR-2020-11-003: DLL Injection with Mavinject</a></li></ul>{:/}|
+|[Process Injection](https://attack.mitre.org/techniques/T1055/)|(N/A - see below)|(N/A - see below)|
+|...|[Dynamic-link Library Injection](https://attack.mitre.org/techniques/T1055/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-10-002">CAR-2013-10-002: DLL Injection via Load Library</a></li><li><a href="CAR-2020-11-003">CAR-2020-11-003: DLL Injection with Mavinject</a></li></ul>{:/}|
+|...|[Process Hollowing](https://attack.mitre.org/techniques/T1055/012/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-004">CAR-2020-11-004: Processes Started From Irregular Parent</a></li></ul>{:/}|
 |...|[Bypass User Access Control](https://attack.mitre.org/techniques/T1548/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-10-002">CAR-2013-10-002: DLL Injection via Load Library</a></li><li><a href="CAR-2019-04-001">CAR-2019-04-001: UAC Bypass</a></li><li><a href="CAR-2021-01-008">CAR-2021-01-008: Disable UAC</a></li></ul>{:/}|
 |[Signed Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|(N/A - see below)|(N/A - see below)|
 |...|[Rundll32](https://attack.mitre.org/techniques/T1218/011/)|{::nomarkdown}<ul><li><a href="CAR-2014-03-006">CAR-2014-03-006: RunDLL32.exe monitoring</a></li></ul>{:/}|

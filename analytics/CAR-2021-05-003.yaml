@@ -19,7 +19,7 @@ coverage:
   - TA0040
   coverage: Moderate
 implementations:
--	name: Pseudocode – detect attempts to add a certificate to a certificate store
+- name: Pseudocode – detect attempts to add a certificate to a certificate store
   description: Pseudocode implementation of the splunk search below
   code: |- 
       processes = search Process:Create

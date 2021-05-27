@@ -1,4 +1,4 @@
-title: BITS Job Persistence
+title: BITSAdmin Download File
 submission_date: 2021/05/11
 information_domain: Analytic
 platforms:
@@ -9,27 +9,36 @@ analytic_types:
 - TTP
 contributors:
 - Splunk Threat Research <research@splunk.com>
-id: CAR-2021-05-004
+id: CAR-2021-05-005
 description: The following query identifies Microsoft Background Intelligent Transfer
-  Service utility `bitsadmin.exe` scheduling a BITS job to persist on an endpoint.
-  The query identifies the parameters used to create, resume or add a file to a BITS
-  job. Typically seen combined in a oneliner or ran in sequence. If identified, review
-  the BITS job created and capture any files written to disk. It is possible for BITS
-  to be used to upload files and this may require further network data analysis to
-  identify. You can use `bitsadmin /list /verbose` to list out the jobs during investigation.
+  Service utility `bitsadmin.exe` using the `transfer` parameter to download a remote
+  object. In addition, look for `download` or `upload` on the command-line, the switches
+  are not required to perform a transfer. Capture any files downloaded. Review the
+  reputation of the IP or domain used. Typically once executed, a follow on command
+  will be used to execute the dropped file. Note that the network connection or file
+  modification events related will not spawn or create from `bitsadmin.exe`, but the
+  artifacts will appear in a parallel process of `svchost.exe` with a command-line
+  similar to `svchost.exe -k netsvcs -s BITS`. It's important to review all parallel
+  and child processes to capture any behaviors and artifacts. In some suspicious and
+  malicious instances, BITS jobs will be created. You can use `bitsadmin /list /verbose`
+  to list out the jobs during investigation.
 coverage:
 - technique: T1197
   tactics:
   - TA0005
   - TA0003
   coverage: Moderate
+- technique: T1105
+  tactics:
+  - TA0011
+  coverage: Moderate
 implementations:
--	name: Pseudocode – detect a BITS job being scheduled
-  description: Pseudocode implementation of the splunk search below
+- name: Pseudocode – detect BITS transfer jobs
+  description: Pseudocode implementation of the Splunk search below
   code: |- 
       processes = search Process:Create
       bitsadmin_commands = filter processes where (
-        exe ="C:\Windows\System32\bitsadmin.exe" AND command_line includes one of [*create*, *addfile*, *setnotifyflags*, *setnotifycmdline*, *setminretrydelay*, *setcustomheaders*,*resume*])
+        exe ="C:\Windows\System32\bitsadmin.exe" AND command_line = *transfer*)
       output bitsadmin_commands
   data_model: CAR native
   type: Pseudocode
@@ -38,10 +47,9 @@ implementations:
     on process that include the name of the process responsible for the changes from
     your endpoints into the `Endpoint` datamodel in the `Processes` node.
   code: '| tstats count min(_time) as firstTime max(_time) as lastTime from datamodel=Endpoint.Processes
-    where Processes.process_name=bitsadmin.exe Processes.process IN (*create*, *addfile*,
-    *setnotifyflags*, *setnotifycmdline*, *setminretrydelay*, *setcustomheaders*,
-    *resume* ) by Processes.dest Processes.user Processes.parent_process Processes.process_name
-    Processes.process Processes.process_id Processes.parent_process_id'
+    where Processes.process_name=bitsadmin.exe Processes.process=*transfer* by Processes.dest
+    Processes.user Processes.parent_process Processes.process_name Processes.process
+    Processes.process_id Processes.parent_process_id'
   type: Splunk
   data_model: Endpoint
 unit_tests:

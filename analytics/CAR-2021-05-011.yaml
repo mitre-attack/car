@@ -12,12 +12,14 @@ contributors:
 id: CAR-2021-05-011
 description: Actors may create a remote thread into the LSASS service as part of a workflow to dump credentials. 
 coverage:
-- technique: T1003.001
+- technique: T1003
+  subtechniques: 
+  - T1003.001
   tactics:
   - TA0006
   coverage: Moderate
 implementations:
--	name: Pseudocode – Remote thread creation into LSASS
+- name: Pseudocode – Remote thread creation into LSASS
   description: Pseudocode implementation of the Splunk search below. The CAR data model does not currently contain a Target Image field, for remote thread creation, so this code Is somewhat inexact. See the Splunk implementation for a more precise search for the lsass image target. 
   code: |- 
       remote_threads = search Thread:remote_create

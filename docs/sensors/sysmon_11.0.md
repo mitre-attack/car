@@ -10,6 +10,8 @@ title: "Sysmon (11.0)"
 ## Description
 Sysmon is a freely available program from Microsoft that is provided as part of the Windows Sysinternals suite of tools. It collects system information while running in the background and supports storing it in the Windows Event Log.
 
+
+
 ## Data Model Coverage
 
 ### [driver](../data_model/driver)
@@ -21,14 +23,14 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 
 ### [file](../data_model/file)
 
-| | `company` | `content` | `creation_time` | `file_extension` | `file_gid` | `file_group` | `file_name` | `file_path` | `file_uid` | `file_user` | `fqdn` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
+| | `company` | `content` | `creation_time` | `extension` | `file_name` | `file_path` | `fqdn` | `gid` | `group` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `owner` | `owner_uid` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `acl_modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓| | | | |✓| | |✓| |✓| | | | |✓| | | | | | | | |
-| `delete` |  | | | | | | |✓| | |✓| |✓| |✓| | |✓| | |✓|✓| | | |✓|
+| `create` |  | |✓| | |✓|✓| | | |✓| | | | | | |✓| | | | | | | | |
+| `delete` |  | | | | |✓|✓| | | |✓| |✓| | | | |✓| | |✓|✓| | | |✓|
 | `modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `timestomp` |  | |✓| | | | |✓| | |✓| |✓| | | | |✓| |✓| | | | | | |
+| `timestomp` |  | |✓| | |✓|✓| | | |✓| | | | | | |✓| |✓| | | | | | |
 | `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 
 ### [flow](../data_model/flow)
@@ -64,6 +66,9 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `remote_create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
 | `suspend` |  | | | | | | | | | | | | | | |
 | `terminate` |  | | | | | | | | | | | | | | |
+
+
+
 
 ## Analytic Coverage
 
@@ -112,9 +117,13 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
  - [CAR-2020-11-007: Network Share Connection Removal](../analytics/CAR-2020-11-007)
  - [CAR-2020-11-008: MSBuild and msxsl](../analytics/CAR-2020-11-008)
  - [CAR-2020-11-011: Registry Edit from Screensaver](../analytics/CAR-2020-11-011)
- - [CAR-2021-01-001: Identifying Port scanning activity](../analytics/CAR-2021-01-001)
- - [CAR-2021-01-002: Unusually long command line strings](../analytics/CAR-2021-01-002)
- - [CAR-2021-01-003: Clearing Windows logs with wevtutil](../analytics/CAR-2021-01-003)
- - [CAR-2021-01-004: Unusual Child Process For Spoolsv.Exe Or Connhost.Exe](../analytics/CAR-2021-01-004)
- - [CAR-2021-01-009: Detecting Shadow Copy Deletion via vssadmin.exe](../analytics/CAR-2021-01-009)
+ - [CAR-2021-01-001: Identifying Port Scanning Activity](../analytics/CAR-2021-01-001)
+ - [CAR-2021-01-002: Unusually Long Command Line Strings](../analytics/CAR-2021-01-002)
+ - [CAR-2021-01-003: Clearing Windows Logs with Wevtutil](../analytics/CAR-2021-01-003)
+ - [CAR-2021-01-004: Unusual Child Process for Spoolsv.Exe or Connhost.Exe](../analytics/CAR-2021-01-004)
+ - [CAR-2021-01-006: Unusual Child Process spawned using DDE exploit](../analytics/CAR-2021-01-006)
+ - [CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt](../analytics/CAR-2021-01-007)
+ - [CAR-2021-01-008: Disable UAC](../analytics/CAR-2021-01-008)
+ - [CAR-2021-01-009: Detecting Shadow Copy Deletion via Vssadmin.exe](../analytics/CAR-2021-01-009)
  - [CAR-2021-02-002: Get System Elevation](../analytics/CAR-2021-02-002)
+ - [CAR-2021-04-001: Common Windows Process Masquerading](../analytics/CAR-2021-04-001)

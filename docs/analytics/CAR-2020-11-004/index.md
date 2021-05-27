@@ -12,6 +12,11 @@ applicable_platforms: Windows
 Adversaries may start legitimate processes and then use their memory space to run malicious code. This analytic looks for common Windows processes that have been abused this way in the past; when the processes are started for this purpose they may not have the standard parent that we would expect. This list is not exhaustive, and it is possible for cyber actors to avoid this discepency. These signatures only work if Sysmon reports the parent process, which may not always be the case if the parent dies before sysmon processes the event.
 
 
+### ATT&CK Detection
+
+|Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
+|---|---|---|---|
+|[Process Injection](https://attack.mitre.org/techniques/T1055/)|[Process Hollowing](https://attack.mitre.org/techniques/T1055/012/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
 
 ### Data Model References
 

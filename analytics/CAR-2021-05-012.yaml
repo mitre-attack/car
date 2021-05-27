@@ -13,7 +13,9 @@ id: CAR-2021-05-012
 description: This detection is to identify a creation of "user mode service" where
   the service file path is located in non-common service folder in windows.
 coverage:
-- technique: T1569.001
+- technique: T1569
+  subtechniques: 
+  - T1569.001
   tactics:
   - TA0002
   coverage: Moderate
@@ -22,7 +24,7 @@ coverage:
   - TA0002
   coverage: Moderate
 implementations:
--	name: Pseudocode – Service in Suspicious File Path
+- name: Pseudocode – Service in Suspicious File Path
   description: Pseudocode implementation of the Splunk search below. 
   code: |- 
       services = search Service:create
