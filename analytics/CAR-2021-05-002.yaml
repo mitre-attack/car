@@ -53,3 +53,6 @@ unit_tests:
     against a Windows target.
   commands:
   - Invoke-AtomicTest T1204.002
+data_model_references:
+- file/create/extension
+- file/create/file_path

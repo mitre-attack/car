@@ -18,6 +18,13 @@ Adversaries may add their own root certificate to the certificate store, to caus
 |---|---|---|---|
 |[Subvert Trust Controls](https://attack.mitre.org/techniques/T1553/)|[Install Root Certificate](https://attack.mitre.org/techniques/T1553/004/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
+### Data Model References
+
+|Object|Action|Field|
+|---|---|---|
+|[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
+
 
 ### Implementations
 

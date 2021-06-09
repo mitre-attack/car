@@ -52,3 +52,5 @@ unit_tests:
     against a Windows target.
   commands:
   - Invoke-AtomicTest T1003.001
+data_model_references:
+- thread/remote_create

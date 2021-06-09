@@ -18,6 +18,12 @@ Actors may create a remote thread into the LSASS service as part of a workflow t
 |---|---|---|---|
 |[OS Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[LSASS Memory](https://attack.mitre.org/techniques/T1003/001/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Moderate|
 
+### Data Model References
+
+|Object|Action|Field|
+|---|---|---|
+|[thread](/data_model/thread) | [remote_create](/data_model/thread#remote_create) | [](/data_model/thread#) |
+
 
 ### Implementations
 

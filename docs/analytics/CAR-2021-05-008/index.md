@@ -18,6 +18,13 @@ This search looks for arguments to certutil.exe indicating the manipulation or e
 |---|---|---|---|
 |[](https://attack.mitre.org/techniques/T1606/)|[](https://attack.mitre.org/techniques/T1606/002/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Moderate|
 
+### Data Model References
+
+|Object|Action|Field|
+|---|---|---|
+|[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
+|[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
+
 
 ### Implementations
 

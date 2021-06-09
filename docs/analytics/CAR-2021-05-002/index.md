@@ -18,6 +18,13 @@ While batch files are not inherently malicious, it is uncommon to see them creat
 |---|---|---|---|
 |[User Execution](https://attack.mitre.org/techniques/T1204/)|[Malicious File](https://attack.mitre.org/techniques/T1204/002/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
+### Data Model References
+
+|Object|Action|Field|
+|---|---|---|
+|[file](/data_model/file) | [create](/data_model/file#create) | [extension](/data_model/file#extension) |
+|[file](/data_model/file) | [create](/data_model/file#create) | [file_path](/data_model/file#file_path) |
+
 
 ### Implementations
 

@@ -53,3 +53,6 @@ unit_tests:
     against a Windows target.
   commands:
   - Invoke-AtomicTest T1553.004
+data_model_references:
+- process/create/exe
+- process/create/command_line

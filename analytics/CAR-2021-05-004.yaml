@@ -57,3 +57,6 @@ unit_tests:
     against a Windows target.
   commands:
   - Invoke-AtomicTest T1197
+data_model_references:
+- process/create/exe
+- process/create/command_line
