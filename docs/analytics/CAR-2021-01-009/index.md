@@ -25,6 +25,13 @@ After compromising a network of systems, threat actors often try to delete Shado
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+####   [Sysmon_10.4](/sensors/Sysmon_10.4)
+####   [Sysmon_11.0](/sensors/Sysmon_11.0)
+####   [Sysmon_13](/sensors/Sysmon_13)
+
 ### Implementations
 
 #### Splunk query for Detecting Shadow Copy Deletion via vssadmin.exe (Splunk, Sysmon native)

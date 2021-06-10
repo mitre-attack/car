@@ -28,6 +28,9 @@ Note - this analytic is related to [CAR-2013-04-002](/analytics/CAR-2013-04-002)
 |[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|[Services Registry Permissions Weakness](https://attack.mitre.org/techniques/T1574/011/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Low|
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### LolBAS Rare Commands (Pseudocode, CAR native)

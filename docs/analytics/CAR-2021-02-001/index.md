@@ -26,6 +26,10 @@ A web shell is a web script placed on an openly accessible web server to allow a
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+
 ### Implementations
 
 #### Pseudocode - Look for suspicious process tree beginning with web service (Pseudocode, CAR native)

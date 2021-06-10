@@ -26,6 +26,10 @@ Adversaries may start legitimate processes and then use their memory space to ru
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+
 ### Implementations
 
 #### Pseudocode - common processes that do not have the correct parent (Pseudocode, CAR native)

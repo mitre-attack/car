@@ -83,6 +83,13 @@ The host on which the commands were executed, the time of execution, and what co
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+####   [Sysmon_10.4](/sensors/Sysmon_10.4)
+####   [Sysmon_11.0](/sensors/Sysmon_11.0)
+####   [Sysmon_13](/sensors/Sysmon_13)
+
 ### Implementations
 
 #### Pseudocode

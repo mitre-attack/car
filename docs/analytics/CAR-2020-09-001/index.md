@@ -26,6 +26,14 @@ In order to gain persistence, privilege escalation, or remote execution, an adve
 |[file](/data_model/file) | [create](/data_model/file#create) | [image_path](/data_model/file#image_path) |
 
 
+### Applicable Sensors
+####   [Autoruns_13.98](/sensors/Autoruns_13.98)
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+####   [Sysmon_10.4](/sensors/Sysmon_10.4)
+####   [Sysmon_11.0](/sensors/Sysmon_11.0)
+####   [Sysmon_13](/sensors/Sysmon_13)
+
 ### Implementations
 
 #### Pseudocode - Windows task file creation (Pseudocode, CAR native)

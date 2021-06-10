@@ -27,6 +27,10 @@ When CMSTP.exe is seen in combination with an external connection, it is a good 
 |[process](/data_model/process) | [create](/data_model/process#create) | [src_ip](/data_model/process#src_ip) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+
 ### Implementations
 
 #### Pseudocode - CMSTP (Pseudocode, CAR native)

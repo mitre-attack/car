@@ -19,6 +19,9 @@ A remote desktop logon, through [RDP](https://attack.mitre.org/techniques/T1021/
 |[Remote Services](https://attack.mitre.org/techniques/T1021/)|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1021/001/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Pseudocode

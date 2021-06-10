@@ -25,6 +25,9 @@ Actors may create a remote thread into the LSASS service as part of a workflow t
 |[thread](/data_model/thread) | [remote_create](/data_model/thread#remote_create) | [](/data_model/thread#) |
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Pseudocode – Remote thread creation into LSASS (Pseudocode, CAR native)

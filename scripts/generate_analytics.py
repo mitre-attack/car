@@ -15,13 +15,13 @@ from os import path, makedirs
 from datetime import date
 import copy
 
-ATTACK_URL = "https://raw.githubusercontent.com/mitre/cti/subtechniques/enterprise-attack/enterprise-attack.json"
+ATTACK_URL = "https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json"
 
 # Get all analytics and load as list of dicts
 analytics_files = glob.glob(path.join(path.dirname(__file__), "..", "analytics", "*.yaml"))
 analytics = []
 for af in analytics_files:
-    print("working on {}".format(af))
+    print("appending {}".format(af))
     analytics.append(yaml.load(open(af).read()))
 #analytics = [yaml.load(open(analytic_file).read()) for analytic_file in analytics_files]
 
@@ -37,6 +37,7 @@ analytic_template = env.from_string(open('analytic_template.md').read())
 # Generate the analytic page for each analytic
 for analytic in analytics:
 
+    print("generating page for {}".format(analytic['id']))
     # Do a bit of reformatting to make the template less ugly
     analytic_for_render = copy.deepcopy(analytic)
     if 'data_model_references' in analytic_for_render:
@@ -95,6 +96,7 @@ subtechnique_table = """---
 # Build the first (date-based) table
 table_techniques = []
 for analytic in sorted(analytics, key = lambda k: k['id']):
+    print("building date-based table, including {}".format(analytic['id']))
     coverage = ""
     implementations = ""
     car_id = "<a href=\"/analytics/{}/\">{}</a>".format(analytic["id"], analytic["id"])

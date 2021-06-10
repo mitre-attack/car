@@ -26,6 +26,14 @@ Adversaries may use screensaver files to run malicious code. This analytic trigg
 |[registry](/data_model/registry) | [add](/data_model/registry#add) | [key](/data_model/registry#key) |
 
 
+### Applicable Sensors
+####   [Autoruns_13.98](/sensors/Autoruns_13.98)
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+####   [Sysmon_10.4](/sensors/Sysmon_10.4)
+####   [Sysmon_11.0](/sensors/Sysmon_11.0)
+####   [Sysmon_13](/sensors/Sysmon_13)
+
 ### Implementations
 
 #### Pseudocode - Screensaver (Pseudocode, CAR native)

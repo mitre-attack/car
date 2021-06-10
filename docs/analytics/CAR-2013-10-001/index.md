@@ -27,6 +27,9 @@ The time of login events for distinct users on individual systems
 |[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/techniques/T1078/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Account Logon with Filtering (Pseudocode)

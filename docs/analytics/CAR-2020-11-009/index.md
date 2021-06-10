@@ -25,6 +25,10 @@ Adversaries may hide malicious code in .chm compiled HTML files. When these file
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+
 ### Implementations
 
 #### Pseudocode - instances of hh.exe (Pseudocode, CAR native)

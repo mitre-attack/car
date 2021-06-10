@@ -28,6 +28,13 @@ Although this analytic was created after [CAR-2014-12-001](../CAR-2014-12-001), 
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+####   [Sysmon_10.4](/sensors/Sysmon_10.4)
+####   [Sysmon_11.0](/sensors/Sysmon_11.0)
+####   [Sysmon_13](/sensors/Sysmon_13)
+
 ### Implementations
 
 #### Pseudocode

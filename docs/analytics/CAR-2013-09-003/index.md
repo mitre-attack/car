@@ -29,6 +29,9 @@ This analytic monitors SMB activity that deals with user activity rather than fi
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [protocol](/data_model/flow#protocol) |
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Pseudocode

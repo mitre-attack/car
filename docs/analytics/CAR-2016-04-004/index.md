@@ -19,6 +19,9 @@ The successful use of [Pass The Hash](https://attack.mitre.org/techniques/T1550/
 |[Use Alternate Authentication Material](https://attack.mitre.org/techniques/T1550/)|[Pass the Hash](https://attack.mitre.org/techniques/T1550/002/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Pseudocode

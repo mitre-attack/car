@@ -24,6 +24,9 @@ Credit to [Cyb3rWard0g](https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/blo
 |[OS Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[LSASS Memory](https://attack.mitre.org/techniques/T1003/001/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Common Mimikatz GrantedAccess Patterns (Splunk, Sysmon native)

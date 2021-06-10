@@ -34,6 +34,9 @@ All of these behaviors call into the Windows API, which uses the NamedPipe `WINR
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Pseudocode

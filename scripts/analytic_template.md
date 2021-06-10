@@ -28,6 +28,10 @@ contributors: {{analytic['contributors']|join(', ')}}
 {% for dmr in analytic['data_model_references'] %}|[{{dmr[0]}}](/data_model/{{dmr[0]}}) | [{{dmr[1]}}](/data_model/{{dmr[0]}}#{{dmr[1]}}) | [{{dmr[2]}}](/data_model/{{dmr[0]}}#{{dmr[2]}}) |
 {% endfor %}{% endif %}
 {% if 'implementations' in analytic %}
+
+### Applicable Sensors
+
+
 ### Implementations
 {% for impl in analytic['implementations'] %}
 {% if 'name' in impl %}#### {{impl['name']}} ({{impl['type']|capitalize}}{% if 'data_model' in impl %}, {{impl['data_model']}}{% endif %})

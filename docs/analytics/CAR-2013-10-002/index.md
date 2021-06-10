@@ -33,6 +33,11 @@ This behavior can be detected by looking for thread creations across processes, 
 |[thread](/data_model/thread) | [remote_create](/data_model/thread#remote_create) | [start_function](/data_model/thread#start_function) |
 
 
+### Applicable Sensors
+####   [Sysmon_10.4](/sensors/Sysmon_10.4)
+####   [Sysmon_11.0](/sensors/Sysmon_11.0)
+####   [Sysmon_13](/sensors/Sysmon_13)
+
 ### Implementations
 
 #### Pseudocode

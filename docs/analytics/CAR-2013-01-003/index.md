@@ -31,6 +31,9 @@ The source, destination, content, and time of each event.
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Pseudocode

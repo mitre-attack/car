@@ -29,6 +29,9 @@ Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types
 |[user_session](/data_model/user_session) | [login](/data_model/user_session#login) | [hostname](/data_model/user_session#hostname) |
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Pseudocode

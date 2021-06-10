@@ -45,6 +45,47 @@ def generateDataModelCoverage(name, coverage):
   table = header_str + md_header + rows
   return table
 
+def generateSensorsForAnalytics(analytics, sensor_dict):
+  row = "####   [{}](/sensors/{})"
+  # Build the table rows w/ coverage
+  for a in analytics:
+    rows = []
+    print("generating sensors for {}".format(a))
+    try:
+        sensors = [s for s in sensor_dict[a]]
+    except:
+        print("didn't find any associated sensors")
+        sensors = []
+    for s in sensors:
+      rows.append(row.format(s, s))
+    if not rows:
+      rows.append("Not computed")
+    row_str = "\n".join(rows) + "\n"
+  
+    # insert the coverage into the existing analytic md doc
+    new_a = []
+    original_a = open("../docs/analytics/{}/index.md".format(a), "r").readlines()
+    for i,l in enumerate(original_a):
+        if "### Implementations" in l:
+            ending_tag = i-2 # where to end replacement
+        if "### Applicable Sensors" in l:
+            beginning_tag = i+1  # where to begin replacement
+    try:
+      if not ending_tag or not beginning_tag:
+        pass
+    except:
+        continue    # this analytic does not have implementains so no sensor mapping is appropriate
+    already_replaced = False
+    for i,l in enumerate(original_a):
+        if i > ending_tag or i < beginning_tag:
+          new_a.append(l)
+        elif already_replaced == False:
+          # this is the spot where we place the new content
+          new_a.append(row_str)
+          already_replaced = True
+    with open("../docs/analytics/{}/index.md".format(a), "w") as af:
+          af.write("".join(new_a))
+
 # Get all analytics and load as list of dicts
 analytics_files = glob.glob(path.join(path.dirname(__file__), "..", "analytics", "*.yaml"))
 analytics = [yaml.load(open(analytic_file).read()) for analytic_file in analytics_files]
@@ -99,6 +140,7 @@ for data_model in data_models:
 # Compare the analytic data model refs to the sensor mappings
 # to find the analytic coverage of each sensor
 # similarly, compute the data model coverage
+sensors_analytics_dict = {}
 for sensor in mappings:
   if 'simplified_mappings' in sensor:
     analytic_coverage = []
@@ -107,9 +149,14 @@ for sensor in mappings:
     for analytic, refs in analytics_refs.items():
       intersection = list(set(sensor['simplified_mappings']) & set(refs))
       if intersection:
-        analytic_dict = {'id': analytic.split(':')[0],
+        #for sensor -> analytic mapping:
+        i = analytic.split(":")[0]
+        analytic_dict = {'id': i,
                          'full_title': analytic}
         analytic_coverage.append(analytic_dict)
+        # for analytic -> sensor mapping:
+        sensors_analytics_dict.setdefault(i,[]).append("{}_{}".format(sensor['sensor_name'], sensor['sensor_version']))
+
     if analytic_coverage:
       if 'other_coverage' in sensor:
           for coverage in sensor['other_coverage']:
@@ -127,6 +174,9 @@ for sensor in mappings:
                 sensor["data_model_coverage"] = []
             sensor["data_model_coverage"].append(generateDataModelCoverage(name,intersection))
 
+# fill in the sensor info on each analytic page
+generateSensorsForAnalytics([a.strip(".yaml").strip("/analytics/") for a in analytics_files], sensors_analytics_dict)
+  
 # Get the template file for the sensor page. Note that this is a markdown template which will be rendered by GH Pages.
 sensor_template = Template(open('sensor_template.md').read())
 

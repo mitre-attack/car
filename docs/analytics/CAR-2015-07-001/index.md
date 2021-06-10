@@ -27,6 +27,9 @@ A list of hostnames and the users that had been logged into the system at some p
 |[user_session](/data_model/user_session) | [login](/data_model/user_session#login) | [user](/data_model/user_session#user) |
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Pseudocode

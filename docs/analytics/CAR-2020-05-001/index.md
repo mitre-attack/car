@@ -25,6 +25,9 @@ NOTE - this analytic has no corresponding pseudocode implementation because the 
 |[OS Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[NTDS](https://attack.mitre.org/techniques/T1003/003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Lsass Process Access (Splunk, Sysmon native)

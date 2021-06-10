@@ -28,6 +28,14 @@ This requires filesystem data to determine whether files have been created.
 |[file](/data_model/file) | [create](/data_model/file#create) | [image_path](/data_model/file#image_path) |
 
 
+### Applicable Sensors
+####   [Autoruns_13.98](/sensors/Autoruns_13.98)
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+####   [Sysmon_10.4](/sensors/Sysmon_10.4)
+####   [Sysmon_11.0](/sensors/Sysmon_11.0)
+####   [Sysmon_13](/sensors/Sysmon_13)
+
 ### Implementations
 
 #### Procdump - File Create (Pseudocode)

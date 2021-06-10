@@ -28,6 +28,9 @@ As described in [CAR-2013-01-003](../CAR-2013-01-003), SMB provides a means of r
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [dest_port](/data_model/flow#dest_port) |
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Pseudocode

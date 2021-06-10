@@ -26,6 +26,13 @@ Trusted developer utilities such as MSBuild may be leveraged to run malicious co
 |[process](/data_model/process) | [create](/data_model/process#create) | [image_path](/data_model/process#image_path) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+####   [Sysmon_10.4](/sensors/Sysmon_10.4)
+####   [Sysmon_11.0](/sensors/Sysmon_11.0)
+####   [Sysmon_13](/sensors/Sysmon_13)
+
 ### Implementations
 
 #### Pseudocode - msbuild (Pseudocode, CAR native)

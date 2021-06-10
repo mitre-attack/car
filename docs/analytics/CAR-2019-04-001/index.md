@@ -29,6 +29,13 @@ Bypassing user account control (UAC Bypass) is generally done by piggybacking on
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_command_line](/data_model/process#parent_command_line) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+####   [Sysmon_10.4](/sensors/Sysmon_10.4)
+####   [Sysmon_11.0](/sensors/Sysmon_11.0)
+####   [Sysmon_13](/sensors/Sysmon_13)
+
 ### Implementations
 
 #### Splunk, Sysmon native

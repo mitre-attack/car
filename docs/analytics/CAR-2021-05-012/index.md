@@ -26,6 +26,9 @@ This detection is to identify a creation of "user mode service" where the servic
 |[service](/data_model/service) | [create](/data_model/service#create) | [image_path](/data_model/service#image_path) |
 
 
+### Applicable Sensors
+####   [Autoruns_13.98](/sensors/Autoruns_13.98)
+
 ### Implementations
 
 #### Pseudocode – Service in Suspicious File Path (Pseudocode, CAR native)

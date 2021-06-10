@@ -60,3 +60,5 @@ Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Wi
  - [CAR-2020-11-001: Boot or Logon Initialization Scripts](../analytics/CAR-2020-11-001)
  - [CAR-2020-11-011: Registry Edit from Screensaver](../analytics/CAR-2020-11-011)
  - [CAR-2021-02-002: Get System Elevation](../analytics/CAR-2021-02-002)
+ - [CAR-2021-05-002: Batch File Write to System32](../analytics/CAR-2021-05-002)
+ - [CAR-2021-05-012: Create Service In Suspicious File Path](../analytics/CAR-2021-05-012)

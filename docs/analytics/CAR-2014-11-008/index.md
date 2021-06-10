@@ -34,6 +34,10 @@ Several accessibility programs can be run using the Ease of Access center
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+
 ### Implementations
 
 #### Pseudocode

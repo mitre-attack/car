@@ -21,6 +21,9 @@ Note - this analytic references file permissions, which are not currently in the
 |[File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/)|[Windows File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/001/), [Linux and Mac File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/002/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
+### Applicable Sensors
+Not computed
+
 ### Implementations
 
 #### Windows - Pseudocode (Pseudocode)

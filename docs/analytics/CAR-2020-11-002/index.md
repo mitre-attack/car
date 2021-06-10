@@ -26,6 +26,10 @@ Adversaries may use a variety of tools to gain visibility on the current status 
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+
 ### Implementations
 
 #### Pseudocode - commands containing known network sniffing application names (Pseudocode, CAR native)

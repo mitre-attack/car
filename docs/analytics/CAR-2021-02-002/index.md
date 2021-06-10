@@ -28,6 +28,14 @@ Cyber actors frequently escalate to the SYSTEM account after gaining entry to a 
 |[service](/data_model/service) | [create](/data_model/service#create) | [command_line](/data_model/service#command_line) |
 
 
+### Applicable Sensors
+####   [Autoruns_13.98](/sensors/Autoruns_13.98)
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+####   [Sysmon_10.4](/sensors/Sysmon_10.4)
+####   [Sysmon_11.0](/sensors/Sysmon_11.0)
+####   [Sysmon_13](/sensors/Sysmon_13)
+
 ### Implementations
 
 #### Pseudocode - Meterpreter and Cobalt Strike (Pseudocode, CAR native)

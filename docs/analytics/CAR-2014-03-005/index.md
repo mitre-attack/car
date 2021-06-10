@@ -32,6 +32,13 @@ This compound behavior can be detected by looking for `services.exe` receiving a
 |[process](/data_model/process) | [create](/data_model/process#create) | [pid](/data_model/process#pid) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+####   [Sysmon_10.4](/sensors/Sysmon_10.4)
+####   [Sysmon_11.0](/sensors/Sysmon_11.0)
+####   [Sysmon_13](/sensors/Sysmon_13)
+
 ### Implementations
 
 #### Pseudocode

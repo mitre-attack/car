@@ -29,6 +29,13 @@ Regsvr32 can be used to execute arbitrary code in the context of a Windows signe
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_image](/data_model/process#parent_image) |
 
 
+### Applicable Sensors
+####   [osquery_4.1.2](/sensors/osquery_4.1.2)
+####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+####   [Sysmon_10.4](/sensors/Sysmon_10.4)
+####   [Sysmon_11.0](/sensors/Sysmon_11.0)
+####   [Sysmon_13](/sensors/Sysmon_13)
+
 ### Implementations
 
 #### Main Pattern (Splunk, Sysmon native)
