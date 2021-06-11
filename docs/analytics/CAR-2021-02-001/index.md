@@ -27,8 +27,9 @@ A web shell is a web script placed on an openly accessible web server to allow a
 
 
 ### Applicable Sensors
-####   [osquery_4.1.2](/sensors/osquery_4.1.2)
-####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+
+- [osquery_4.1.2](/sensors/osquery_4.1.2)
+- [osquery_4.6.0](/sensors/osquery_4.6.0)
 
 ### Implementations
 

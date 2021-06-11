@@ -30,8 +30,9 @@ For this to work, certain registry keys must be set, and the WinRM service must 
 
 
 ### Applicable Sensors
-####   [osquery_4.1.2](/sensors/osquery_4.1.2)
-####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+
+- [osquery_4.1.2](/sensors/osquery_4.1.2)
+- [osquery_4.6.0](/sensors/osquery_4.6.0)
 
 ### Implementations
 

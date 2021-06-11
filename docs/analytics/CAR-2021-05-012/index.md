@@ -27,7 +27,8 @@ This detection is to identify a creation of "user mode service" where the servic
 
 
 ### Applicable Sensors
-####   [Autoruns_13.98](/sensors/Autoruns_13.98)
+
+- [Autoruns_13.98](/sensors/Autoruns_13.98)
 
 ### Implementations
 

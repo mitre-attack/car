@@ -20,6 +20,7 @@ It is unlikely that event log data would be cleared during normal operations, an
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

@@ -20,6 +20,7 @@ The successful use of [Pass The Hash](https://attack.mitre.org/techniques/T1550/
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

@@ -33,6 +33,7 @@ Identifies the connection in which WMI traffic is seen, as well as the process(e
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

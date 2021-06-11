@@ -34,9 +34,10 @@ This behavior can be detected by looking for thread creations across processes, 
 
 
 ### Applicable Sensors
-####   [Sysmon_10.4](/sensors/Sysmon_10.4)
-####   [Sysmon_11.0](/sensors/Sysmon_11.0)
-####   [Sysmon_13](/sensors/Sysmon_13)
+
+- [Sysmon_10.4](/sensors/Sysmon_10.4)
+- [Sysmon_11.0](/sensors/Sysmon_11.0)
+- [Sysmon_13](/sensors/Sysmon_13)
 
 ### Implementations
 

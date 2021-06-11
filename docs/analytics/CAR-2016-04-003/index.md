@@ -22,6 +22,7 @@ Stopping services events are Windows Event Code 7036.
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

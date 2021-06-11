@@ -25,6 +25,7 @@ Credit to [Cyb3rWard0g](https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/blo
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

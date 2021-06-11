@@ -20,6 +20,7 @@ A remote desktop logon, through [RDP](https://attack.mitre.org/techniques/T1021/
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

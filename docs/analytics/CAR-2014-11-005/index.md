@@ -35,6 +35,7 @@ All of these behaviors call into the Windows API, which uses the NamedPipe `WINR
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

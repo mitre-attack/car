@@ -32,6 +32,7 @@ The source, destination, content, and time of each event.
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

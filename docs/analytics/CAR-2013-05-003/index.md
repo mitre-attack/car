@@ -29,6 +29,7 @@ As described in [CAR-2013-01-003](../CAR-2013-01-003), SMB provides a means of r
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

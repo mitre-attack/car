@@ -32,8 +32,9 @@ Powershell can be used to hide monitored command line execution such as:
 
 
 ### Applicable Sensors
-####   [osquery_4.1.2](/sensors/osquery_4.1.2)
-####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+
+- [osquery_4.1.2](/sensors/osquery_4.1.2)
+- [osquery_4.6.0](/sensors/osquery_4.6.0)
 
 ### Implementations
 

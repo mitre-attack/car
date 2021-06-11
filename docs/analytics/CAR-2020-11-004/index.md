@@ -27,8 +27,9 @@ Adversaries may start legitimate processes and then use their memory space to ru
 
 
 ### Applicable Sensors
-####   [osquery_4.1.2](/sensors/osquery_4.1.2)
-####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+
+- [osquery_4.1.2](/sensors/osquery_4.1.2)
+- [osquery_4.6.0](/sensors/osquery_4.6.0)
 
 ### Implementations
 

@@ -26,6 +26,7 @@ Actors may create a remote thread into the LSASS service as part of a workflow t
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

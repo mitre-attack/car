@@ -28,8 +28,9 @@ When CMSTP.exe is seen in combination with an external connection, it is a good 
 
 
 ### Applicable Sensors
-####   [osquery_4.1.2](/sensors/osquery_4.1.2)
-####   [osquery_4.6.0](/sensors/osquery_4.6.0)
+
+- [osquery_4.1.2](/sensors/osquery_4.1.2)
+- [osquery_4.6.0](/sensors/osquery_4.6.0)
 
 ### Implementations
 

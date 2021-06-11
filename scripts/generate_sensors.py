@@ -46,7 +46,7 @@ def generateDataModelCoverage(name, coverage):
   return table
 
 def generateSensorsForAnalytics(analytics, sensor_dict):
-  row = "####   [{}](/sensors/{})"
+  row = "- [{}](/sensors/{})"
   # Build the table rows w/ coverage
   for a in analytics:
     rows = []
@@ -60,7 +60,7 @@ def generateSensorsForAnalytics(analytics, sensor_dict):
       rows.append(row.format(s, s))
     if not rows:
       rows.append("Not computed")
-    row_str = "\n".join(rows) + "\n"
+    row_str = "\n" + "\n".join(rows) + "\n"
   
     # insert the coverage into the existing analytic md doc
     new_a = []

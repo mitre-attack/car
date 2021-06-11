@@ -30,6 +30,7 @@ Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

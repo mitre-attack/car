@@ -32,11 +32,12 @@ This can possibly extend to more copy protocols in order to widen its reach, or 
 
 
 ### Applicable Sensors
-####   [osquery_4.1.2](/sensors/osquery_4.1.2)
-####   [osquery_4.6.0](/sensors/osquery_4.6.0)
-####   [Sysmon_10.4](/sensors/Sysmon_10.4)
-####   [Sysmon_11.0](/sensors/Sysmon_11.0)
-####   [Sysmon_13](/sensors/Sysmon_13)
+
+- [osquery_4.1.2](/sensors/osquery_4.1.2)
+- [osquery_4.6.0](/sensors/osquery_4.6.0)
+- [Sysmon_10.4](/sensors/Sysmon_10.4)
+- [Sysmon_11.0](/sensors/Sysmon_11.0)
+- [Sysmon_13](/sensors/Sysmon_13)
 
 ### Implementations
 

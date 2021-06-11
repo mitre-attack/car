@@ -28,6 +28,7 @@ This pipe activity could be discovered with a network decoder, such as that in w
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

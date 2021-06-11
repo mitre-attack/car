@@ -22,6 +22,7 @@ Note - this analytic references file permissions, which are not currently in the
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations

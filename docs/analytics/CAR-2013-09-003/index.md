@@ -30,6 +30,7 @@ This analytic monitors SMB activity that deals with user activity rather than fi
 
 
 ### Applicable Sensors
+
 Not computed
 
 ### Implementations
