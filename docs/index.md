@@ -19,6 +19,21 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
+### May 2021
+* New analytics added - special thanks to the Splunk Threat Research team for working with us to incorporate these.
+  * [CAR-2021-05-001: Attempt To Add Certificate To Untrusted Store](/analytics/CAR-2021-05-001)
+  * [CAR-2021-05-002: Batch File Write to System32](/analytics/CAR-2021-05-002)
+  * [CAR-2021-05-003: BCDEdit Failure Recovery Modification](/analytics/CAR-2021-05-003)
+  * [CAR-2021-05-004: BITS Job Persistence](/analytics/CAR-2021-05-004)
+  * [CAR-2021-05-005: BITSAdmin Download File](/analytics/CAR-2021-05-005)
+  * [CAR-2021-05-006: CertUtil Download With URLCache and Split Arguments](/analytics/CAR-2021-05-006)
+  * [CAR-2021-05-007: CertUtil Download With VerifyCtl and Split Arguments](/analytics/CAR-2021-05-007)
+  * [CAR-2021-05-008: Certutil exe certificate extraction](/analytics/CAR-2021-05-008)
+  * [CAR-2021-05-009: CertUtil With Decode Argument](/analytics/CAR-2021-05-009)
+  * [CAR-2021-05-010: Create local admin accounts using net exe](/analytics/CAR-2021-05-010)
+  * [CAR-2021-05-011: Create Remote Thread into LSASS](/analytics/CAR-2021-05-011)
+  * [CAR-2021-05-012: Create Service In Suspicious File Path](/analytics/CAR-2021-05-012)
+
 ### April 2021
 * New analytics added
   * [CAR-2021-04-001: Common Windows Process Masquerading](/analytics/CAR-2021-04-001)
