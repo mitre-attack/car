@@ -31,8 +31,8 @@ While batch files are not inherently malicious, it is uncommon to see them creat
 - [Autoruns_13.98](/sensors/Autoruns_13.98)
 - [osquery_4.1.2](/sensors/osquery_4.1.2)
 - [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_11.0](/sensors/Sysmon_11.0)
-- [Sysmon_13](/sensors/Sysmon_13)
+- [Sysmon_11.0](/sensors/sysmon_11.0)
+- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

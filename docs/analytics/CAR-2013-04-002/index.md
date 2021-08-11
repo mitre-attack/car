@@ -87,9 +87,9 @@ The host on which the commands were executed, the time of execution, and what co
 
 - [osquery_4.1.2](/sensors/osquery_4.1.2)
 - [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/Sysmon_10.4)
-- [Sysmon_11.0](/sensors/Sysmon_11.0)
-- [Sysmon_13](/sensors/Sysmon_13)
+- [Sysmon_10.4](/sensors/sysmon_10.4)
+- [Sysmon_11.0](/sensors/sysmon_11.0)
+- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 
