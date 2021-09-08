@@ -5,7 +5,7 @@ idna==2.10
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 pendulum==1.2.5
-Pillow==8.2.0
+Pillow==8.3.2
 pyattck==3.0.1
 pyfiglet==0.8.post1
 python-dateutil==2.8.1
