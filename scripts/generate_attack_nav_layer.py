@@ -25,7 +25,7 @@ layer_json = {
 
 # Get all analytics and load as list of dicts
 analytics_files = glob.glob(path.join(path.dirname(__file__), "..", "analytics", "*.yaml"))
-analytics = [yaml.load(open(analytic_file).read()) for analytic_file in analytics_files]
+analytics = [yaml.load(open(analytic_file,encoding='utf-8').read()) for analytic_file in analytics_files]
 
 def addMapping(technique, name, attack_mappings):
     if technique not in attack_mappings:
