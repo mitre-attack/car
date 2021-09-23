@@ -27,9 +27,9 @@ New executables that are started as a service are suspicious. This analytic look
 
 ### Applicable Sensors
 
-- [Sysmon_10.4](/sensors/Sysmon_10.4)
-- [Sysmon_11.0](/sensors/Sysmon_11.0)
-- [Sysmon_13](/sensors/Sysmon_13)
+- [Sysmon_10.4](/sensors/sysmon_10.4)
+- [Sysmon_11.0](/sensors/sysmon_11.0)
+- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 
