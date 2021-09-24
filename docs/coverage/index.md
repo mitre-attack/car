@@ -12,7 +12,7 @@ A cross-walk of CAR, [Sigma](https://github.com/SigmaHQ/sigma), [Elastic Detecti
 * \# Splunk: the number of Splunk detections rules that contain coverage for the technique/sub-technique.
 * \# Total: the total number of analytics between CAR/Sigma/ES/Splunk that contain coverage for the technique-sub-technique.
 
-This table is sortable, so feel free to click on any column to sort by its values. Clicking on each of the CAR/Sigma/ES results will search the corresponding repository for the analytics that contain coverage for the technique/sub-technique. 
+This table is sortable, so feel free to click on any column to sort by its values. Clicking on each of the CAR/Sigma/ES/Splunk results will search the corresponding repository for the analytics that contain coverage for the technique/sub-technique. 
 
 This data is also available as:
 
