@@ -45,3 +45,7 @@ unit_tests:
     commands:
       - 'c:\windows\syswow64\rundll32.exe'
       - 'RUNDLL32.EXE SHELL32.DLL,Control_RunDLL desk.cpl,,0'
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis

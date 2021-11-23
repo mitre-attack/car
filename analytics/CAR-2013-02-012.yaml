@@ -28,3 +28,7 @@ coverage:
        - T1078.002
        - T1078.003
     coverage: Moderate
+d3fend_mappings:
+  - iri: d3f:AuthenticationEventThresholding
+    id: D3-ANET
+    label: Authentication Event Thresholding

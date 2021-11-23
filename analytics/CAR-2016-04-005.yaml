@@ -33,4 +33,7 @@ implementations:
       norm_id=WinServer event_id=4624 package="Negotiate" log_level="INFO" logon_type=10
     type: LogPoint
     data_mode: LogPoint native
-  
+d3fend_mappings:
+  - iri: d3f:RemoteTerminalSessionDetection
+    id: D3-RTSD
+    label: Remote Terminal Session Detection

@@ -62,10 +62,7 @@ true_positives:
     description: 'Sysmon event from the Mordor [Interactive Task Manager lsass dump dataset](https://github.com/hunters-forge/mordor/blob/master/small_datasets/windows/credential_access/credential_dumping_T1003/interactive_taskmngr_lsass_dump.md).'
     event_snippet: 'CAR-2019-08-001-mordor-01-snippet.json'
     full_event: 'CAR-2019-08-001-mordor-01.json'
-
-
-
-
-
-
-
+d3fend_mappings:
+  - iri: d3f:FileCreationAnalysis
+    id: D3-FCA
+    label: File Creation Analysis

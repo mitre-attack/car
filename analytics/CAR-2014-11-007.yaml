@@ -35,3 +35,7 @@ implementations:
     type: pseudocode
 data_model_references:
   - flow/message/proto_info
+d3fend_mappings:
+  - iri: d3f:RPCTrafficAnalysis
+    id: D3-RTA
+    label: RPC Traffic Analysis

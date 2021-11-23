@@ -28,3 +28,7 @@ implementations:
   type: Splunk
 data_model_references:
   - flow/start/dest_ip
+d3fend_mappings:
+  - iri: d3f:ConnectionAttemptAnalysis
+    id: D3-CAA
+    label: Connection Attempt Analysis

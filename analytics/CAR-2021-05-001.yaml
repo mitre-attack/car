@@ -56,3 +56,7 @@ unit_tests:
 data_model_references:
 - process/create/exe
 - process/create/command_line
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis

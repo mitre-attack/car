@@ -51,3 +51,11 @@ data_model_references:
   - process/create/exe
   - registry/add/key
   - registry/edit/key
+d3fend_mappings:
+  - iri: d3f:SystemInitConfigAnalysis
+    id: D3-SICA
+    label: System Init Config Analysis
+d3fend_mappings:
+  - iri: d3f:SystemInitConfigAnalysis
+    id: D3-SICA
+    label: System Init Config Analysis

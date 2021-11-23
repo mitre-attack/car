@@ -65,3 +65,7 @@ true_positives:
     description: 'Sysmon event from the Mordor [Empire Userland Registry dataset](https://github.com/hunters-forge/mordor/blob/master/small_datasets/windows/persistence/registry_run_keys_startup_folder_T1060/empire_userland_registry.md).'
     event_snippet: 'CAR-2014-04-003-mordor-01-snippet.json'
     full_event: 'CAR-2014-04-003-mordor-01.json'
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis

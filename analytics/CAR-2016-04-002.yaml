@@ -44,3 +44,7 @@ unit_tests:
     commands:
       - Clear-Eventlog Security
       - Clear-Eventlog System
+d3fend_mappings:
+  - iri: d3f:RPCTrafficAnalysis
+    id: D3-RTA
+    label: RPC Traffic Analysis

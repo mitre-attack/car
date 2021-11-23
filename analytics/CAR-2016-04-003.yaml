@@ -41,4 +41,8 @@ unit_tests:
     commands:
       - Stop-Service -displayname "Windows Firewall"
       - Stop-Service -displayname "Windows Defender"
+d3fend_mappings:
+  - iri: d3f:SystemDaemonMonitoring
+    id: D3-SDM
+    label: System Daemon Monitoring
 

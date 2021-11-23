@@ -61,3 +61,7 @@ data_model_references:
 references:
   - Oddvar Moe has created an excellent NTFS ADS execution reference [here on github](https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f), which was used as the basis for many of these analytics.
   - The [LOLBAS project](https://lolbas-project.github.io/) is an amazing resource for anything LOLBAS.
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis

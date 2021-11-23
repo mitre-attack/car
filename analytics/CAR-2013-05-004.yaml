@@ -64,3 +64,7 @@ unit_tests:
     commands:
       - 'at 10:00 calc.exe // returns a job number X'
       - at X /delete
+d3fend_mappings:
+  - iri: d3f:ScheduledJobAnalysis
+    id: D3-SJA
+    label: Scheduled Job Analysis

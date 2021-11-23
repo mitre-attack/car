@@ -56,13 +56,7 @@ unit_tests:
   - description: |-
       1. Open a Windows Command Prompt or PowerShell instance as Administrator
       2. Execute `ntdsutil.exe “ac i ntds” “ifm” “create full c:\temp” q q`
-
-
-
-
-
-
-
-
-
-
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis

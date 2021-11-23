@@ -49,4 +49,7 @@ implementations:
 data_model_references:
   - file/create/file_path
   - file/create/image_path
-
+d3fend_mappings:
+  - iri: d3f:FileCreationAnalysis
+    id: D3-FCA
+    label: File Creation Analysis

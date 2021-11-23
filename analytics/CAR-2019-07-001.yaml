@@ -59,4 +59,7 @@ implementations:
 unit_tests:
   - description: 'For Windows - right click on any file and change its permissions under properties. Or, execute the following command: `icacls "C:\<fileName>" /grant :F`'
   - description: 'For Linux - execute the following command: `chmod 777 "fileName"`'
-
+d3fend_mappings:
+  - iri: d3f:SystemFileAnalysis
+    id: D3-SFA
+    label: System File Analysis

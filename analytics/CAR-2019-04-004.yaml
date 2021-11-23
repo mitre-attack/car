@@ -54,4 +54,8 @@ implementations:
     data_mode: LogPoint native 
 references:
   - Credit to [Cyb3rWard0g](https://github.com/Cyb3rWard0g/ThreatHunter-Playbook/blob/master/playbooks/windows/06_credential_access/credential_dumping_T1003/credentials_from_memory/mimikatz_logonpasswords.md), dim0x69 (blog.3or.de), and Mark Russinovich for providing much of the information used to construct these analytics.
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis
   

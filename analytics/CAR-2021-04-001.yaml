@@ -86,3 +86,7 @@ data_model_references:
   - process/access/image_path
   - process/terminate/exe
   - process/terminate/image_path
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis

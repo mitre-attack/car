@@ -47,3 +47,7 @@ data_model_references:
   - flow/start/pid
   - process/create/parent_exe
   - process/create/pid
+d3fend_mappings:
+  - iri: d3f:RPCTrafficAnalysis
+    id: D3-RTA
+    label: RPC Traffic Analysis

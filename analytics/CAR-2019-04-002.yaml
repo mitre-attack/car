@@ -92,3 +92,7 @@ data_model_references:
   - process/create/command_line
   - process/create/image
   - process/create/parent_image
+d3fend_mappings:
+  - iri: d3f:ProcessLineageAnalysis
+    id: D3-PLA
+    label: Process Lineage Analysis

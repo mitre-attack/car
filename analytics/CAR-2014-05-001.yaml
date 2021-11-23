@@ -49,3 +49,7 @@ implementations:
 data_model_references:
   - flow/start/dest_port
   - flow/start/src_port
+d3fend_mappings:
+  - iri: d3f:RPCTrafficAnalysis
+    id: D3-RTA
+    label: RPC Traffic Analysis

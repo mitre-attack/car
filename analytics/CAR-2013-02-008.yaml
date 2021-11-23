@@ -36,3 +36,7 @@ implementations:
 data_model_references:
   - user_session/login/user
   - user_session/login/hostname
+d3fend_mappings:
+  - iri: d3f:AuthenticationEventThresholding
+    id: D3-ANET
+    label: Authentication Event Thresholding
