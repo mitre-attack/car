@@ -44,6 +44,15 @@ implementations:
     code: |- 
       (EventLog="Security" ((event_id="4688" ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) ("0" OR "*00000000") CommandLine="*SafeDllSearchMode*") OR (event_id="4657" ObjectValueName="SafeDllSearchMode" NewValue="0")))
     type: LogPoint
+unit_tests:
+- configurations:
+  description: Execute command with cmd
+  commands:
+  - reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager" /v SafeDllSearchMode /d 0
+- configurations:
+  description: Execute command with powershell
+  commands:
+  - Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Session Manager" -Name SafeDllSearchMode -Value 0
 data_model_references:
   - process/create/command_line
   - registry/add/key
