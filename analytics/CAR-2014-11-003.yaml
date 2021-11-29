@@ -43,3 +43,7 @@ unit_tests:
     description: 'Although it does not actually utilize the Debugging command line, an easy way to test this analytic to run cmd.exe from a command window, supplying one of the strings as arguments.'
     commands:
       - cmd.exe Magnify.exe
+d3fend_mappings:
+  - iri: d3f:ProcessLineageAnalysis
+    id: D3-PLA
+    label: Process Lineage Analysis

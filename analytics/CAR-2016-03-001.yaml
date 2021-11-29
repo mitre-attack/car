@@ -111,3 +111,7 @@ true_positives:
     description: 'Sysmon whoami.exe event from the Mordor [Empire Net Start dataset](https://github.com/hunters-forge/mordor/blob/master/small_datasets/windows/discovery/system_service_discovery_T1007/empire_net_start.md).'
     event_snippet: 'CAR-2016-03-001-mordor-02-snippet.json'
     full_event: 'CAR-2016-03-001-mordor-02.json'
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis

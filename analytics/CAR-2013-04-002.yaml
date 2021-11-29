@@ -219,3 +219,7 @@ unit_tests:
       - hostname
       - systeminfo
       - reg.exe Query HKLM\Software\Microsoft
+d3fend_mappings:
+  - iri: d3f:ProcessLineageAnalysis
+    id: D3-PLA
+    label: Process Lineage Analysis

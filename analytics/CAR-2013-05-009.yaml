@@ -60,3 +60,10 @@ implementations:
 data_model_references:
   - process/create/exe
   - process/create/md5_hash
+d3fend_mappings:
+  - iri: d3f:ServiceBinaryVerification
+    id: D3-SBV
+    label: Service Binary Verification
+  - iri: d3f:SystemFileAnalysis
+    id: D3-SFA
+    label: System File Analysis

@@ -41,3 +41,7 @@ unit_tests:
   - configurations:
       - Windows 7
     description: 'Within a command prompt or powershell, run cmd.exe'
+d3fend_mappings:
+  - iri: d3f:ProcessLineageAnalysis
+    id: D3-PLA
+    label: Process Lineage Analysis

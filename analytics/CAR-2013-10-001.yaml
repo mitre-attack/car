@@ -59,3 +59,7 @@ implementations:
       >>_checkif lookup david_test win_top_30 join $ScopeID = $ScopeID str_compare $User eq $User exclude
     type: DNIF
     data_model: Sysmon native
+d3fend_mappings:
+  - iri: d3f:AuthenticationEventThresholding
+    id: D3-ANET
+    label: Authentication Event Thresholding

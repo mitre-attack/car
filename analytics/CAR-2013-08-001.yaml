@@ -52,3 +52,7 @@ unit_tests:
     commands:
       - 'schtasks /Create /SC ONCE /ST 19:00 /TR C:\Windows\System32\calc.exe /TN calctask'
       - schtasks /Delete /TN calctask
+d3fend_mappings:
+  - iri: d3f:ScheduledJobAnalysis
+    id: D3-SJA
+    label: Scheduled Job Analysis

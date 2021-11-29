@@ -49,4 +49,7 @@ data_model_references:
   - registry/add/key
   - registry/remove/key
   - registry/edit/key
-
+d3fend_mappings:
+  - iri: d3f:SystemInitConfigAnalysis
+    id: D3-SICA
+    label: System Init Config Analysis

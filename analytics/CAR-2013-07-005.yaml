@@ -48,3 +48,7 @@ unit_tests:
     description: 'Download 7zip or other archiving software you plan to monitor. Create an innocuous text file for testing, or substitute an existing file.'
     commands:
       - 7z.exe a test.zip test.txt
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis

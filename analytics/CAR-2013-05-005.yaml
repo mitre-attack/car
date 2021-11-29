@@ -50,3 +50,7 @@ data_model_references:
   - process/create/image_path
   - process/create/proto_info
   - process/create/hostname
+d3fend_mappings:
+  - iri: d3f:IPCTrafficAnalysis
+    id: D3-IPCTA
+    label: IPC Traffic Analysis

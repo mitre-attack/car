@@ -39,13 +39,7 @@ implementations:
       | fields log_ts host source_process_id source_image
     type: LogPoint
     data_mode: LogPoint native
-
-
-
-
-
-
-
-
-
-
+d3fend_mappings:
+  - iri: d3f:SystemCallAnalysis
+    id: D3-SCA
+    label: System Call Analysis

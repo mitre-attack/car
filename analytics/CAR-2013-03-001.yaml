@@ -72,3 +72,7 @@ unit_tests:
     description: 'Execute reg.exe from cmd.exe. Note that the analytic joins back to the grandparent process, which in this case is explorer.exe. The query time window must include the user log on. For example, if you logged in at 8am and tested the analytic at 10am, the query needs to search from 8am to 10am, not just at 10am. Within a command window, run the command.'
     commands:
       - reg.exe QUERY HKLM\Software\Microsoft
+d3fend_mappings:
+  - iri: d3f:ProcessLineageAnalysis
+    id: D3-PLA
+    label: Process Lineage Analysis

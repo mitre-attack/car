@@ -29,3 +29,7 @@ implementations:
     type: pseudocode
 data_model_references:
   - flow/start/dest_port
+d3fend_mappings:
+  - iri: d3f:AdministrativeNetworkActivityAnalysis
+    id: D3-ANAA
+    label: Administrative Network Activity Analysis

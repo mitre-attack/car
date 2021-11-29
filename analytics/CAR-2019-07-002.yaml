@@ -67,12 +67,7 @@ unit_tests:
       1. Open a Windows Command Prompt or PowerShell instance.
       2. Navigate to folder containing ProcDump.
       3. Execute procdump.exe -ma lsass.exe lsass_dump
-
-
-
-
-
-
-
-
-
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis

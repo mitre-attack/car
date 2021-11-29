@@ -51,3 +51,7 @@ data_model_references:
   - flow/start/dest_ip
   - flow/start/dest_port
   - flow/start/src_ip
+d3fend_mappings:
+  - iri: d3f:RemoteTerminalSessionDetection
+    id: D3-RTSD
+    label: Remote Terminal Session Detection

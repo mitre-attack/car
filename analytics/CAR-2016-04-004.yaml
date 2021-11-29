@@ -30,4 +30,7 @@ unit_tests:
     description: As an adminstrator, create a new user. Then, logon to the host with that new user. This is generate the event.
     commands:
       - net user 'test' 'test' /add
-
+d3fend_mappings:
+  - iri: d3f:LocalAccountMonitoring
+    id: D3-LAM
+    label: Local Account Monitoring

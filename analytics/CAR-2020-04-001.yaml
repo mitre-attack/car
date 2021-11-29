@@ -71,15 +71,7 @@ data_model_references:
   - process/create/command_line
 references:
   - This [Red Canary](https://redcanary.com/blog/its-all-fun-and-games-until-ransomware-deletes-the-shadow-copies/) blog post covers both vssadmin.exe and wmic.exe approaches as well as potential others.
-
-
-
-
-
-
-
-
-
-
-
-
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis

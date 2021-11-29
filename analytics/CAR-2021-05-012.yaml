@@ -57,3 +57,7 @@ unit_tests:
   - Invoke-AtomicTest T1569.001
 data_model_references:
 - service/create/image_path
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis

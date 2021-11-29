@@ -68,3 +68,7 @@ coverage:
     subtechniques:
       - T1037.001
     coverage: Moderate
+d3fend_mappings:
+  - iri: d3f:SystemInitConfigAnalysis
+    id: D3-SICA
+    label: System Init Config Analysis

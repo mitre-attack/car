@@ -51,3 +51,7 @@ implementations:
 data_model_references:
   - process/create/exe
   - process/create/parent_exe
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis

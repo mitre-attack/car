@@ -15,11 +15,20 @@ contributors: {{analytic['contributors']|join(', ')}}
 {{ analytic['references']|join("\n") }}
 {% endif %}
 {% if 'coverage' in analytic %}
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|{% for coverage_item in analytic['coverage'] %}
 |[{{techniques[coverage_item['technique']]}}](https://attack.mitre.org/techniques/{{coverage_item['technique']}}/)|{% if 'subtechniques' in coverage_item %}{% for subtechnique in coverage_item['subtechniques'] %}[{{techniques[subtechnique]}}](https://attack.mitre.org/techniques/{{subtechnique | replace(".","/")}}/){% if not loop.last %}, {% endif %}{% endfor %}{% else %}N/A{% endif %}|{% for tactic in coverage_item['tactics'] %}[{{tactics[tactic]}}](https://attack.mitre.org/tactics/{{tactic}}/){% if not loop.last %}, {% endif %}{% endfor %}|{{coverage_item['coverage']}}|{% endfor %}{% endif %}
+
+{% if 'd3fend_mappings' in analytic %}
+### D3FEND Techniques
+
+|ID|Name|
+|---|---|{% for dtech in analytic['d3fend_mappings'] %} 
+|{{dtech.id}} | [{{dtech.label}}](https://d3fend.mitre.org/technique/{{dtech.iri}})| {% endfor %}
+{% endif %}
+
 {% if 'data_model_references' in analytic %}
 ### Data Model References
 

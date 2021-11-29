@@ -59,3 +59,7 @@ data_model_references:
   - file/create/image_path
   - process/create/image_path
   - process/create/parent_exe
+d3fend_mappings:
+  - iri: d3f:ServiceBinaryVerification
+    id: D3-SBV
+    label: Service Binary Verification

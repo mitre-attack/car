@@ -54,3 +54,7 @@ unit_tests:
   - Invoke-AtomicTest T1003.001
 data_model_references:
 - thread/remote_create
+d3fend_mappings:
+  - iri: d3f:SystemCallAnalysis
+    id: D3-SCA
+    label: System Call Analysis

@@ -44,3 +44,7 @@ implementations:
 data_model_references:
   - flow/message/proto_info
   - flow/message/dest_port
+d3fend_mappings:
+  - iri: d3f:IPCTrafficAnalysis
+    id: D3-IPCTA
+    label: IPC Traffic Analysis
