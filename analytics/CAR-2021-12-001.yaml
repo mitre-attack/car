@@ -1,0 +1,49 @@
+title: Scheduled Task creation or modification containing suspicous script, extension or user writable path.
+submission_date: 2021/12/28
+information_domain: Host
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - Lucas Heiligenstein
+id: CAR-2021-12-001
+description: |-
+  Detection of creation or modification of Scheduled Task with suspicious script, extension or user writable path. Attacker may create or modify Scheduled Task for execution of malicious code with a persistance. Detection focus at the same tine on the EventID 4688 with the process creation (SCHTASKS) and EventID 4698 for the Scheduled Task creation/modification event log.
+  - technique: T1053
+    tactics:
+      - TA0002
+      - TA0003
+      - TA0004
+    subtechniques:
+      - T1053.005
+    coverage: Medium
+implementations:
+  - name: Splunk Search - Scheduled Task creation or modification containing suspicious script, extension or user writable path.
+    description: This is a pseudocode representation of the below Splunk search.
+    code: |- 
+      (source="WinEventLog:*" EventLog="Security" (((EventCode="4688" CommandLine="*SCHTASKS*" (CommandLine="*/CREATE*" OR CommandLine="*/CHANGE*")) ((CommandLine="*.cmd*" OR CommandLine="*.ps1*" OR CommandLine="*.vbs*" OR CommandLine="*.py*" OR CommandLine="*.js*" OR CommandLine="*.exe*" OR CommandLine="*.bat*") OR (CommandLine="*javascript*" OR CommandLine="*powershell*" OR CommandLine="*wmic*" OR CommandLine="*rundll32*" OR CommandLine="*cmd*" OR CommandLine="*cscript*" OR CommandLine="*wscript*" OR CommandLine="*regsvr32*" OR CommandLine="*mshta*" OR CommandLine="*bitsadmin*" OR CommandLine="*certutil*" OR CommandLine="*msiexec*" OR CommandLine="*javaw*"))) OR (EventCode="4698" ((TaskContent="*.cmd*" OR TaskContent="*.ps1*" OR TaskContent="*.vbs*" OR TaskContent="*.py*" OR TaskContent="*.js*" OR TaskContent="*.exe*" OR TaskContent="*.bat*") OR (TaskContent="*javascript*" OR TaskContent="*powershell*" OR TaskContent="*wmic*" OR TaskContent="*rundll32*" OR TaskContent="*cmd*" OR TaskContent="*cscript*" OR TaskContent="*wscript*" OR TaskContent="*regsvr32*" OR TaskContent="*mshta*" OR TaskContent="*bitsadmin*" OR TaskContent="*certutil*" OR TaskContent="*msiexec*" OR TaskContent="*javaw*")))))
+    type: Splunk
+  - name: Elastic Search - Scheduled Task creation or modification containing suspicious script, extension or user writable path.
+    description: This is a pseudocode representation of the below Elastic search.
+    code: |- 
+      (EventLog:"Security" AND (((winlog.event_id:"4688" AND process.command_line:*SCHTASKS* AND process.command_line:(*\/CREATE* OR *\/CHANGE*)) AND (process.command_line:(*.cmd* OR *.ps1* OR *.vbs* OR *.py* OR *.js* OR *.exe* OR *.bat*) OR process.command_line:(*javascript* OR *powershell* OR *wmic* OR *rundll32* OR *cmd* OR *cscript* OR *wscript* OR *regsvr32* OR *mshta* OR *bitsadmin* OR *certutil* OR *msiexec* OR *javaw*))) OR (winlog.event_id:"4698" AND (winlog.event_data.TaskContent:(*.cmd* OR *.ps1* OR *.vbs* OR *.py* OR *.js* OR *.exe* OR *.bat*) OR winlog.event_data.TaskContent:(*javascript* OR *powershell* OR *wmic* OR *rundll32* OR *cmd* OR *cscript* OR *wscript* OR *regsvr32* OR *mshta* OR *bitsadmin* OR *certutil* OR *msiexec* OR *javaw*)))))
+    type: Elastic
+  - name: LogPoint Search - Scheduled Task creation or modification containing suspicious script, extension or user writable path.
+    description: This is a pseudocode representation of the below LogPoint search.
+    code: |- 
+      (EventLog="Security" (((event_id="4688" CommandLine="*SCHTASKS*" CommandLine IN ["*/CREATE*", "*/CHANGE*"]) (CommandLine IN ["*.cmd*", "*.ps1*", "*.vbs*", "*.py*", "*.js*", "*.exe*", "*.bat*"] OR CommandLine IN ["*javascript*", "*powershell*", "*wmic*", "*rundll32*", "*cmd*", "*cscript*", "*wscript*", "*regsvr32*", "*mshta*", "*bitsadmin*", "*certutil*", "*msiexec*", "*javaw*"])) OR (event_id="4698" (TaskContent IN ["*.cmd*", "*.ps1*", "*.vbs*", "*.py*", "*.js*", "*.exe*", "*.bat*"] OR TaskContent IN ["*javascript*", "*powershell*", "*wmic*", "*rundll32*", "*cmd*", "*cscript*", "*wscript*", "*regsvr32*", "*mshta*", "*bitsadmin*", "*certutil*", "*msiexec*", "*javaw*"]))))
+    type: LogPoint
+unit_tests:
+- configurations:
+  description: Creation Scheduled Task with cmd. Calc.exe will be launched every minute
+  commands:
+  - SCHTASKS /CREATE /SC MINUTE /MO 1 /TN "CALC_TASK" /TR "C:\Windows\System32\calc.exe"
+- configurations:
+  description: Creation Scheduled Task with cmd. Ping will be launched every minute
+  commands:
+  - SCHTASKS /CREATE /SC MINUTE /MO 1 /TN "PING_TASK" /TR "cmd /c ping 8.8.8.8"
+data_model_references:
+  - process/create/command_line
