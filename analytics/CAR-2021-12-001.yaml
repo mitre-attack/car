@@ -11,7 +11,7 @@ contributors:
   - Lucas Heiligenstein
 id: CAR-2021-12-001
 description: |-
-  Detection of creation or modification of Scheduled Task with suspicious script, extension or user writable path. Attacker may create or modify Scheduled Task for execution of malicious code with a persistance. Detection focus at the same time on the EventID 4688 with the process creation (SCHTASKS) and EventID 4698 for the Scheduled Task creation/modification event log.
+  Detection of creation or modification of Scheduled Task with suspicious script, extension or user writable path. Attacker may create or modify Scheduled Task for execution of malicious code with a persistence. Detection focus at the same time on the EventID 4688 with the process creation (SCHTASKS) and EventID 4698 for the Scheduled Task creation/modification event log.
   - technique: T1053
     tactics:
       - TA0002
