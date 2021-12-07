@@ -12,11 +12,20 @@ applicable_platforms: Windows
 Threat actors often, after compromising a machine, try to disable User Access Control (UAC) to escalate privileges. This is often done by changing the registry key for system policies using “reg.exe”, a legitimate tool provided by Microsoft for modifying the registry via command prompt or scripts. This action interferes with UAC and may enable a threat actor to escalate privileges on the compromised system, thereby allowing further exploitation of the system.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Abuse Elevation Control Mechanism](https://attack.mitre.org/techniques/T1548/)|[Bypass User Access Control](https://attack.mitre.org/techniques/T1548/002/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Medium|
+|[Abuse Elevation Control Mechanism](https://attack.mitre.org/techniques/T1548/)|[Bypass User Account Control](https://attack.mitre.org/techniques/T1548/002/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Medium|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -26,13 +35,9 @@ Threat actors often, after compromising a machine, try to disable User Access Co
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

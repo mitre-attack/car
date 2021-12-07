@@ -12,11 +12,20 @@ applicable_platforms: Windows
 CertUtil.exe may be used to `encode` and `decode` a file, including PE and script code. Encoding will convert a file to base64 with `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` tags. Malicious usage will include decoding a encoded file that was downloaded. Once decoded, it will be loaded by a parallel process. Note that there are two additional command switches that may be used - `encodehex` and `decodehex`. Similarly, the file will be encoded in HEX and later decoded for further execution. During triage, identify the source of the file being decoded. Review its contents or execution behavior for further analysis.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Deobfuscate/Decode Files or Information](https://attack.mitre.org/techniques/T1140/)|N/A|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -26,13 +35,9 @@ CertUtil.exe may be used to `encode` and `decode` a file, including PE and scrip
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 
@@ -50,12 +55,8 @@ output certutil_downloads
 ```
 
 
-#### Splunk code ()
+#### Splunk code (Splunk, Endpoint)
 
-
-
-
-#### Splunk, Endpoint
 
 To successfully implement this search you need to be ingesting information on process that include the name of the process responsible for the changes from your endpoints into the `Endpoint` datamodel in the `Processes` node.
 

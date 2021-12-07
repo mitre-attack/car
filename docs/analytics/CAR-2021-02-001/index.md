@@ -12,11 +12,20 @@ applicable_platforms: Windows
 A web shell is a web script placed on an openly accessible web server to allow an adversary to use the server as a gatway in a network. As the shell operates, commands will be issued from within the web application into the broader server operating system. This analytic looks for host enumeration executables initiated by any web service that would not normally be executed within that environment. 
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Server Software Component](https://attack.mitre.org/techniques/T1505/)|[Web Shell](https://attack.mitre.org/techniques/T1505/003/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -26,10 +35,9 @@ A web shell is a web script placed on an openly accessible web server to allow a
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
 
 ### Implementations
 

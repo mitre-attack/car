@@ -14,11 +14,20 @@ Adversaries may use [Windows Management Instrumentation](https://attack.mitre.or
 Although this analytic was created after [CAR-2014-12-001](../CAR-2014-12-001), it is a much simpler (although more limited) approach. Processes can be created remotely via WMI in a few other ways, such as more direct API access or the built-in utility [PowerShell](https://attack.mitre.org/T1059/001).
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047/)|N/A|[Execution](https://attack.mitre.org/tactics/TA0002/)|Low|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -28,13 +37,9 @@ Although this analytic was created after [CAR-2014-12-001](../CAR-2014-12-001), 
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

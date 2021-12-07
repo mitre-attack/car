@@ -14,7 +14,7 @@ The Sysinternals tool [Autoruns](../sensors/autoruns) checks the registry and fi
 Utilizes the Sysinternals autoruns tool (ignoring validated Microsoft entries). Primarily not a detection analytic by itself but through analysis of results by an analyst can be used for such. Building another analytic on top of this one identifying unusual entries would likely be a beneficial alternative.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
@@ -25,6 +25,15 @@ Utilizes the Sysinternals autoruns tool (ignoring validated Microsoft entries). 
 |[Event Triggered Execution](https://attack.mitre.org/techniques/T1546/)|[Change Default File Association](https://attack.mitre.org/techniques/T1546/001/), [Windows Management Instrumentation Event Subscription](https://attack.mitre.org/techniques/T1546/003/), [Accessibility Features](https://attack.mitre.org/techniques/T1546/008/), [AppInit DLLs](https://attack.mitre.org/techniques/T1546/010/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
 |[Modify Registry](https://attack.mitre.org/techniques/T1112/)|N/A|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 |[Boot or Logon Initialization Scripts](https://attack.mitre.org/techniques/T1037/)|[Logon Script (Windows)](https://attack.mitre.org/techniques/T1037/001/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-SICA | [System Init Config Analysis](https://d3fend.mitre.org/technique/d3f:SystemInitConfigAnalysis)| 
+
+
 
 
 

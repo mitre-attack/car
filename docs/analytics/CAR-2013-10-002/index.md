@@ -18,12 +18,21 @@ Microsoft Windows allows for processes to remotely create threads within other p
 This behavior can be detected by looking for thread creations across processes, and resolving the entry point to determine the function name. If the function is `LoadLibraryA` or `LoadLibraryW`, then the intent of the remote thread is clearly to inject a DLL. When this is the case, the source process must be examined so that it can be ignored when it is both expected and a trusted process.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Process Injection](https://attack.mitre.org/techniques/T1055/)|[Dynamic-link Library Injection](https://attack.mitre.org/techniques/T1055/001/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
-|[Abuse Elevation Control Mechanism](https://attack.mitre.org/techniques/T1548/)|[Bypass User Access Control](https://attack.mitre.org/techniques/T1548/002/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
+|[Abuse Elevation Control Mechanism](https://attack.mitre.org/techniques/T1548/)|[Bypass User Account Control](https://attack.mitre.org/techniques/T1548/002/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-SCA | [System Call Analysis](https://d3fend.mitre.org/technique/d3f:SystemCallAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -33,11 +42,9 @@ This behavior can be detected by looking for thread creations across processes, 
 |[thread](/data_model/thread) | [remote_create](/data_model/thread#remote_create) | [start_function](/data_model/thread#start_function) |
 
 
+
 ### Applicable Sensors
 
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

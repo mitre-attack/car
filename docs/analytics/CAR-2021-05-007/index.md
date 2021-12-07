@@ -12,11 +12,20 @@ applicable_platforms: Windows
 Certutil.exe may download a file from a remote destination using `-VerifyCtl`. This behavior does require a URL to be passed on the command-line. In addition, `-f` (force) and `-split` (Split embedded ASN.1 elements, and save to files) will be used. It is not entirely common for `certutil.exe` to contact public IP space. \ During triage, capture any files on disk and review. Review the reputation of the remote IP or domain in question. Using `-VerifyCtl`, the file will either be written to the current working directory or `%APPDATA%\..\LocalLow\Microsoft\CryptnetUrlCache\Content\<hash>`. 
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105/)|N/A|[Command and Control](https://attack.mitre.org/tactics/TA0011/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -26,13 +35,9 @@ Certutil.exe may download a file from a remote destination using `-VerifyCtl`. T
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

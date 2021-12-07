@@ -14,11 +14,20 @@ The Windows Task Manager may be used to dump the memory space of `lsass.exe` to 
 This requires filesystem data to determine whether files have been created.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[OS Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[LSASS Memory](https://attack.mitre.org/techniques/T1003/001/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-FCA | [File Creation Analysis](https://d3fend.mitre.org/technique/d3f:FileCreationAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -28,14 +37,9 @@ This requires filesystem data to determine whether files have been created.
 |[file](/data_model/file) | [create](/data_model/file#create) | [image_path](/data_model/file#image_path) |
 
 
+
 ### Applicable Sensors
 
-- [Autoruns_13.98](/sensors/Autoruns_13.98)
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

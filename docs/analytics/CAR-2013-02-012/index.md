@@ -18,11 +18,20 @@ Certain users will likely appear as being logged into several machines and may n
 User Name, Machines logged into, the earliest and latest times in which users were logged into the host, the type of logon, and logon ID.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/techniques/T1078/003/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-ANET | [Authentication Event Thresholding](https://d3fend.mitre.org/technique/d3f:AuthenticationEventThresholding)| 
+
+
 
 
 

@@ -14,11 +14,20 @@ The Windows Registry location `HKLM\Software\Microsoft\Windows NT\CurrentVersion
 This analytic could depend on the possibility of the known strings used as arguments for other applications used in the day-to-day environment. Although the chance of the string "sethc.exe" being used as an argument for another application is unlikely, it still is a possibility.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Event Triggered Execution](https://attack.mitre.org/techniques/T1546/)|[Accessibility Features](https://attack.mitre.org/techniques/T1546/008/)|[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PLA | [Process Lineage Analysis](https://d3fend.mitre.org/technique/d3f:ProcessLineageAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -28,13 +37,9 @@ This analytic could depend on the possibility of the known strings used as argum
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

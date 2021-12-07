@@ -18,11 +18,21 @@ Although this analytic was initially based on MD5 hashes, it is equally applicab
 A list of hashes and the different executables associated with each one
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Rename System Utilities](https://attack.mitre.org/techniques/T1036/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-SBV | [Service Binary Verification](https://d3fend.mitre.org/technique/d3f:ServiceBinaryVerification)|  
+|D3-SFA | [System File Analysis](https://d3fend.mitre.org/technique/d3f:SystemFileAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -32,13 +42,9 @@ A list of hashes and the different executables associated with each one
 |[process](/data_model/process) | [create](/data_model/process#create) | [md5_hash](/data_model/process#md5_hash) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

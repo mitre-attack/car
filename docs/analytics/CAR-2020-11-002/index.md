@@ -12,11 +12,20 @@ applicable_platforms: Windows
 Adversaries may use a variety of tools to gain visibility on the current status of things on the network: which processes are listening on which ports, which services are running on other hosts, etc. This analytic looks for the names of the most common network sniffing tools. While this may be noisy on networks where sysadmins are using any of these tools on a regular basis, in most networks their use is noteworthy.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Network Sniffing](https://attack.mitre.org/techniques/T1040/)|N/A|[Credential Access](https://attack.mitre.org/tactics/TA0006/), [Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PLA | [Process Lineage Analysis](https://d3fend.mitre.org/technique/d3f:ProcessLineageAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -26,10 +35,9 @@ Adversaries may use a variety of tools to gain visibility on the current status 
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
 
 ### Implementations
 

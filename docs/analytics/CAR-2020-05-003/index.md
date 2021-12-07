@@ -18,7 +18,7 @@ The analytic needs to be tuned. The `1.5` in the query is the number of standard
 Note - this analytic is related to [CAR-2013-04-002](/analytics/CAR-2013-04-002), but differs by looking for a different set of binaries and also looking at standard deviation across command lines of these binaries instead of their execution within a short time window. 
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
@@ -28,9 +28,18 @@ Note - this analytic is related to [CAR-2013-04-002](/analytics/CAR-2013-04-002)
 |[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|[Services Registry Permissions Weakness](https://attack.mitre.org/techniques/T1574/011/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Low|
 
 
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
+
+
+
 ### Applicable Sensors
 
-Not computed
 
 ### Implementations
 

@@ -16,11 +16,20 @@ The [LOLBAS project](https://lolbas-project.github.io/) is an amazing resource a
 Oddvar Moe has created an excellent NTFS ADS execution reference [here on github](https://gist.github.com/api0cradle/cdd2d0d0ec9abb686f0e89306e277b8f).
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Hide Artifacts](https://attack.mitre.org/techniques/T1564/)|[NTFS File Attributes](https://attack.mitre.org/techniques/T1564/004/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -30,13 +39,9 @@ Oddvar Moe has created an excellent NTFS ADS execution reference [here on github
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

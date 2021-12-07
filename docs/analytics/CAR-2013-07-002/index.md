@@ -25,11 +25,20 @@ Remote Desktop can be detected in several ways
 The time of the Connection, the source, the destination, and the user name used
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Remote Services](https://attack.mitre.org/techniques/T1021/)|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1021/001/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Medium|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-RTSD | [Remote Terminal Session Detection](https://d3fend.mitre.org/technique/d3f:RemoteTerminalSessionDetection)| 
+
+
 
 ### Data Model References
 
@@ -41,13 +50,9 @@ The time of the Connection, the source, the destination, and the user name used
 |[flow](/data_model/flow) | [start](/data_model/flow#start) | [src_ip](/data_model/flow#src_ip) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

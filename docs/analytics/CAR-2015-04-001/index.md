@@ -14,11 +14,20 @@ When AT.exe is used to remotely [schedule tasks](https://attack.mitre.org/techni
 This pipe activity could be discovered with a network decoder, such as that in wireshark, that can inspect SMB traffic to identify the use of pipes. It could also be detected by looking for raw packet capture streams or from a custom sensor on the host that hooks the appropriate API functions. If no network or API level of visibility is possible, this traffic may inferred by looking at SMB connections over 445/tcp followed by the creation of files matching the pattern `C:\Windows\System32\AT\<job_id\>`.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Scheduled Task/Job](https://attack.mitre.org/techniques/T1053/)|[At (Windows)](https://attack.mitre.org/techniques/T1053/002/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-IPCTA | [IPC Traffic Analysis](https://d3fend.mitre.org/technique/d3f:IPCTrafficAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -27,9 +36,9 @@ This pipe activity could be discovered with a network decoder, such as that in w
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
 
 
+
 ### Applicable Sensors
 
-Not computed
 
 ### Implementations
 

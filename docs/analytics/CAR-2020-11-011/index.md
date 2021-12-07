@@ -12,11 +12,20 @@ applicable_platforms: Windows
 Adversaries may use screensaver files to run malicious code. This analytic triggers on suspicious edits to the screensaver registry keys, which dictate which .scr file the screensaver runs.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Event Triggered Execution](https://attack.mitre.org/techniques/T1546/)|[Screensaver](https://attack.mitre.org/techniques/T1546/002/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|High|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-USICA | [User Session Init Config Analysis](https://d3fend.mitre.org/technique/d3f:UserSessionInitConfigAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -26,14 +35,9 @@ Adversaries may use screensaver files to run malicious code. This analytic trigg
 |[registry](/data_model/registry) | [add](/data_model/registry#add) | [key](/data_model/registry#key) |
 
 
+
 ### Applicable Sensors
 
-- [Autoruns_13.98](/sensors/Autoruns_13.98)
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

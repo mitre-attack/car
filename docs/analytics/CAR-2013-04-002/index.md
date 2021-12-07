@@ -45,7 +45,7 @@ Certain commands are frequently used by malicious actors and infrequently used b
 The host on which the commands were executed, the time of execution, and what commands were executed
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
@@ -74,6 +74,15 @@ The host on which the commands were executed, the time of execution, and what co
 |[Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)|[Visual Basic](https://attack.mitre.org/techniques/T1059/005/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 |[Query Registry](https://attack.mitre.org/techniques/T1012/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
 
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PLA | [Process Lineage Analysis](https://d3fend.mitre.org/technique/d3f:ProcessLineageAnalysis)| 
+
+
+
 ### Data Model References
 
 |Object|Action|Field|
@@ -83,13 +92,9 @@ The host on which the commands were executed, the time of execution, and what co
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

@@ -13,11 +13,20 @@ CMSTP.exe is the Microsoft Connection Manager Profile Installer, which can be le
 When CMSTP.exe is seen in combination with an external connection, it is a good indication of this TTP.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Signed Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|[CMSTP](https://attack.mitre.org/techniques/T1218/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|High|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -27,10 +36,9 @@ When CMSTP.exe is seen in combination with an external connection, it is a good 
 |[process](/data_model/process) | [create](/data_model/process#create) | [src_ip](/data_model/process#src_ip) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
 
 ### Implementations
 

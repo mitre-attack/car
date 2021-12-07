@@ -16,13 +16,22 @@ Adversaries may modify the binary file for an existing service to achieve [Persi
 The Service Name and approximate time in which changes occurred on each host
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Create or Modify System Process](https://attack.mitre.org/techniques/T1543/)|[Windows Service](https://attack.mitre.org/techniques/T1543/003/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 |[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|[Services File Permissions Weakness](https://attack.mitre.org/techniques/T1574/010/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Moderate|
 |[System Services](https://attack.mitre.org/techniques/T1569/)|[Service Execution](https://attack.mitre.org/techniques/T1569/002/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-SBV | [Service Binary Verification](https://d3fend.mitre.org/technique/d3f:ServiceBinaryVerification)| 
+
+
 
 ### Data Model References
 
@@ -34,14 +43,9 @@ The Service Name and approximate time in which changes occurred on each host
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
+
 ### Applicable Sensors
 
-- [Autoruns_13.98](/sensors/Autoruns_13.98)
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

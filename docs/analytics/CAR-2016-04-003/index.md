@@ -14,16 +14,25 @@ Spyware and malware remain a serious problem and Microsoft developed security se
 Stopping services events are Windows Event Code 7036.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Impair Defenses](https://attack.mitre.org/techniques/T1562/)|[Disable or Modify Tools](https://attack.mitre.org/techniques/T1562/001/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
 
 
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-SDM | [System Daemon Monitoring](https://d3fend.mitre.org/technique/d3f:SystemDaemonMonitoring)| 
+
+
+
+
+
 ### Applicable Sensors
 
-Not computed
 
 ### Implementations
 

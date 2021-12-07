@@ -12,11 +12,20 @@ applicable_platforms: Windows
 The Windows built-in tool `schtasks.exe` provides the creation, modification, and running of [scheduled tasks](https://attack.mitre.org/techniques/T1053) on a local or remote computer. It is provided as a more flexible alternative to `at.exe`, described in [CAR-2013-05-004](../CAR-2013-05-004). Although used by adversaries, the tool is also legitimately used by administrators, scripts, and software configurations. The scheduled tasks tool can be used to gain [Persistence](https://attack.mitre.org/tactics/TA0003) and can be used in combination with a [Lateral Movement](https://attack.mitre.org/tactics/TA0008) technique to remotely gain [execution](https://attack.mitre.org/tactics/TA0002). Additionally, the command has parameters to specify the user and password responsible for creating the task, as well as the user and password combination that the task will run as. The `/s` flag specifies the remote system on which the task should be scheduled, usually indicating [Lateral Movement](https://attack.mitre.org/tactics/TA0008).
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Scheduled Task/Job](https://attack.mitre.org/techniques/T1053/)|[Scheduled Task](https://attack.mitre.org/techniques/T1053/005/)|[Persistence](https://attack.mitre.org/tactics/TA0003/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-SJA | [Scheduled Job Analysis](https://d3fend.mitre.org/technique/d3f:ScheduledJobAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -26,13 +35,9 @@ The Windows built-in tool `schtasks.exe` provides the creation, modification, an
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

@@ -12,12 +12,21 @@ applicable_platforms: Windows
 This detection is to identify a creation of "user mode service" where the service file path is located in non-common service folder in windows.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[System Services](https://attack.mitre.org/techniques/T1569/)|[Launchctl](https://attack.mitre.org/techniques/T1569/001/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 |[Service Execution](https://attack.mitre.org/techniques/T1569.002/)|N/A|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -26,9 +35,9 @@ This detection is to identify a creation of "user mode service" where the servic
 |[service](/data_model/service) | [create](/data_model/service#create) | [image_path](/data_model/service#image_path) |
 
 
+
 ### Applicable Sensors
 
-- [Autoruns_13.98](/sensors/Autoruns_13.98)
 
 ### Implementations
 

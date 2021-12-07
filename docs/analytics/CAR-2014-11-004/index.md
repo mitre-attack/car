@@ -14,12 +14,21 @@ According to [ATT&CK](https://attack.mitre.org/), [PowerShell](https://attack.mi
 For this to work, certain registry keys must be set, and the WinRM service must be enabled. The PowerShell command `Enter-PSSession -ComputerName \<RemoteHost\>` creates a remote PowerShell session.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)|[PowerShell](https://attack.mitre.org/techniques/T1059/001/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 |[Remote Services](https://attack.mitre.org/techniques/T1021/)|[Windows Remote Management](https://attack.mitre.org/techniques/T1021/006/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PLA | [Process Lineage Analysis](https://d3fend.mitre.org/technique/d3f:ProcessLineageAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -29,10 +38,9 @@ For this to work, certain registry keys must be set, and the WinRM service must 
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_exe](/data_model/process#parent_exe) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
 
 ### Implementations
 

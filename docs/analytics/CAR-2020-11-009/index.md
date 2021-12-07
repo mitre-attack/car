@@ -12,11 +12,20 @@ applicable_platforms: Windows
 Adversaries may hide malicious code in .chm compiled HTML files. When these files are read, Windows uses the HTML help executable named hh.exe, which is the signature for this analytic.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Signed Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|[Compiled HTML File](https://attack.mitre.org/techniques/T1218/001/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|High|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -25,10 +34,9 @@ Adversaries may hide malicious code in .chm compiled HTML files. When these file
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
 
 ### Implementations
 

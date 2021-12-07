@@ -18,16 +18,25 @@ This analytic was tested both in a lab and in a production environment with a ve
 NOTE - this analytic has no corresponding pseudocode implementation because the CAR data model doesn't currently support process access events.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[OS Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[NTDS](https://attack.mitre.org/techniques/T1003/003/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
 
 
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-SCA | [System Call Analysis](https://d3fend.mitre.org/technique/d3f:SystemCallAnalysis)| 
+
+
+
+
+
 ### Applicable Sensors
 
-Not computed
 
 ### Implementations
 

@@ -19,11 +19,20 @@ More about RPCSS at : [rpcss_dcom_interfaces.html](http://www.hsc.fr/ressources/
 Identifies the connection in which WMI traffic is seen, as well as the process(es) responsible for owning the connection.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047/)|N/A|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-RTA | [RPC Traffic Analysis](https://d3fend.mitre.org/technique/d3f:RPCTrafficAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -32,9 +41,9 @@ Identifies the connection in which WMI traffic is seen, as well as the process(e
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
 
 
+
 ### Applicable Sensors
 
-Not computed
 
 ### Implementations
 

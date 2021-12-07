@@ -16,12 +16,21 @@ applicable_platforms: N/A
 The source, destination, content, and time of each event.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Data from Network Shared Drive](https://attack.mitre.org/techniques/T1039/)|N/A|[Collection](https://attack.mitre.org/tactics/TA0009/)|Moderate|
 |[Remote Services](https://attack.mitre.org/techniques/T1021/)|[SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-IPCTA | [IPC Traffic Analysis](https://d3fend.mitre.org/technique/d3f:IPCTrafficAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -31,9 +40,9 @@ The source, destination, content, and time of each event.
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [proto_info](/data_model/flow#proto_info) |
 
 
+
 ### Applicable Sensors
 
-Not computed
 
 ### Implementations
 

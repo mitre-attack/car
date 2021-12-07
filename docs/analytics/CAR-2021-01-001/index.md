@@ -12,11 +12,20 @@ applicable_platforms: Windows, Linux
 After compromising an initial machine, adversaries commonly attempt to laterally move across the network. The first step to attempt the lateral movement often involves conducting host identification, port and service scans on the internal network via the compromised machine using tools such as Nmap, Cobalt Strike, etc.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Network Service Scanning](https://attack.mitre.org/techniques/T1046/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-CAA | [Connection Attempt Analysis](https://d3fend.mitre.org/technique/d3f:ConnectionAttemptAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -25,13 +34,9 @@ After compromising an initial machine, adversaries commonly attempt to laterally
 |[flow](/data_model/flow) | [start](/data_model/flow#start) | [dest_ip](/data_model/flow#dest_ip) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

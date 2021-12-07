@@ -33,11 +33,20 @@ To make sure the rule doesn't miss cases where the executable would be started f
 `C:\Windows\System32\srv\svchost.exe`
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Match Legitimate Name or Location](https://attack.mitre.org/techniques/T1036/005/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -51,13 +60,9 @@ To make sure the rule doesn't miss cases where the executable would be started f
 |[process](/data_model/process) | [terminate](/data_model/process#terminate) | [image_path](/data_model/process#image_path) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

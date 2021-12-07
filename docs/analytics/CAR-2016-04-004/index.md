@@ -12,16 +12,25 @@ applicable_platforms: Windows
 The successful use of [Pass The Hash](https://attack.mitre.org/techniques/T1550/002/) for lateral movement between workstations would trigger event ID 4624, with an event level of Information, from the security log. This behavior would be a LogonType of 3 using NTLM authentication where it is not a domain logon and not the ANONYMOUS LOGON account.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Use Alternate Authentication Material](https://attack.mitre.org/techniques/T1550/)|[Pass the Hash](https://attack.mitre.org/techniques/T1550/002/)|[Lateral Movement](https://attack.mitre.org/tactics/TA0008/)|Moderate|
 
 
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-LAM | [Local Account Monitoring](https://d3fend.mitre.org/technique/d3f:LocalAccountMonitoring)| 
+
+
+
+
+
 ### Applicable Sensors
 
-Not computed
 
 ### Implementations
 

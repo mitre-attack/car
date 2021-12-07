@@ -12,11 +12,20 @@ applicable_platforms: Windows
 This search looks for arguments to certutil.exe indicating the manipulation or extraction of Certificate. This certificate can then be used to sign new authentication tokens specially inside Federated environments such as Windows ADFS.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[](https://attack.mitre.org/techniques/T1606/)|[](https://attack.mitre.org/techniques/T1606/002/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Moderate|
+|[Forge Web Credentials](https://attack.mitre.org/techniques/T1606/)|[SAML Tokens](https://attack.mitre.org/techniques/T1606/002/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -26,13 +35,9 @@ This search looks for arguments to certutil.exe indicating the manipulation or e
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

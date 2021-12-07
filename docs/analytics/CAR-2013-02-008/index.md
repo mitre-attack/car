@@ -15,11 +15,20 @@ Logon events are Windows Event Code 4624 for Windows Vista and above, 518 for pr
 Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types table on Microsoft's [Audit Logon Events](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc787567(v=ws.10)) page.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/techniques/T1078/003/)|[Initial Access](https://attack.mitre.org/tactics/TA0001/)|Low|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-ANET | [Authentication Event Thresholding](https://d3fend.mitre.org/technique/d3f:AuthenticationEventThresholding)| 
+
+
 
 ### Data Model References
 
@@ -29,9 +38,9 @@ Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types
 |[user_session](/data_model/user_session) | [login](/data_model/user_session#login) | [hostname](/data_model/user_session#hostname) |
 
 
+
 ### Applicable Sensors
 
-Not computed
 
 ### Implementations
 

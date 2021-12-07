@@ -29,7 +29,7 @@ Within the built-in Windows Commands:
 **Note** `dsquery` is only pre-existing on Windows servers.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
@@ -41,6 +41,15 @@ Within the built-in Windows Commands:
 |[Process Discovery](https://attack.mitre.org/techniques/T1057/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 |[System Service Discovery](https://attack.mitre.org/techniques/T1007/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Moderate|
 
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
+
+
 ### Data Model References
 
 |Object|Action|Field|
@@ -49,13 +58,9 @@ Within the built-in Windows Commands:
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
 
+
 ### Applicable Sensors
 
-- [osquery_4.1.2](/sensors/osquery_4.1.2)
-- [osquery_4.6.0](/sensors/osquery_4.6.0)
-- [Sysmon_10.4](/sensors/sysmon_10.4)
-- [Sysmon_11.0](/sensors/sysmon_11.0)
-- [Sysmon_13](/sensors/sysmon_13)
 
 ### Implementations
 

@@ -14,11 +14,20 @@ Account usage within SMB can be used to identify compromised credentials, and th
 This analytic monitors SMB activity that deals with user activity rather than file activity.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[Forced Authentication](https://attack.mitre.org/techniques/T1187/)|N/A|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-IPCTA | [IPC Traffic Analysis](https://d3fend.mitre.org/technique/d3f:IPCTrafficAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -29,9 +38,9 @@ This analytic monitors SMB activity that deals with user activity rather than fi
 |[flow](/data_model/flow) | [message](/data_model/flow#message) | [protocol](/data_model/flow#protocol) |
 
 
+
 ### Applicable Sensors
 
-Not computed
 
 ### Implementations
 

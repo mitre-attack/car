@@ -12,11 +12,20 @@ applicable_platforms: Windows
 Actors may create a remote thread into the LSASS service as part of a workflow to dump credentials.
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
 |[OS Credential Dumping](https://attack.mitre.org/techniques/T1003/)|[LSASS Memory](https://attack.mitre.org/techniques/T1003/001/)|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Moderate|
+
+
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-SCA | [System Call Analysis](https://d3fend.mitre.org/technique/d3f:SystemCallAnalysis)| 
+
+
 
 ### Data Model References
 
@@ -25,9 +34,9 @@ Actors may create a remote thread into the LSASS service as part of a workflow t
 |[thread](/data_model/thread) | [remote_create](/data_model/thread#remote_create) | [](/data_model/thread#) |
 
 
+
 ### Applicable Sensors
 
-Not computed
 
 ### Implementations
 

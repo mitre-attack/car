@@ -19,7 +19,7 @@ Logon events are Windows Event Code 4624 for Windows Vista and above, 518 for pr
 The time of login events for distinct users on individual systems
 
 
-### ATT&CK Detection
+### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
@@ -27,9 +27,18 @@ The time of login events for distinct users on individual systems
 |[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|[Domain Accounts](https://attack.mitre.org/techniques/T1078/002/), [Local Accounts](https://attack.mitre.org/techniques/T1078/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-ANET | [Authentication Event Thresholding](https://d3fend.mitre.org/technique/d3f:AuthenticationEventThresholding)| 
+
+
+
+
+
 ### Applicable Sensors
 
-Not computed
 
 ### Implementations
 
