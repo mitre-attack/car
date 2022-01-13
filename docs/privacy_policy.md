@@ -1,4 +1,6 @@
-## Privacy Policy
+---
+title: Privacy Policy
+---
 **Effective Date: 1 January 2022**
 
 The MITRE Corporation ("MITRE") respects the privacy of its website users.
