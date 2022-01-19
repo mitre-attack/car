@@ -32,17 +32,17 @@ implementations:
   - name: Splunk Search - Creation of SafeDllSearchMode
     description: This is a pseudocode representation of the below Splunk search.
     code: |- 
-      (source="WinEventLog:*" EventLog="Security" ((EventCode="4688" ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) ("0" OR "*00000000") CommandLine="*SafeDllSearchMode*") OR (EventCode="4657" ObjectValueName="SafeDllSearchMode" NewValue="0")))
+      (source="WinEventLog:*" EventLog="Security" (((EventCode="4688" OR EventCode="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) ("0" OR "*00000000") CommandLine="*SafeDllSearchMode*") OR (EventCode="4657" ObjectValueName="SafeDllSearchMode" NewValue="0")))
     type: Splunk
   - name: Elastic Search - Creation of SafeDllSearchMode
     description: This is a pseudocode representation of the below Elastic search.
     code: |- 
-      (EventLog:"Security" AND ((winlog.event_id:"4688" AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:*Set\-ItemProperty* AND process.command_line:*\-value*)) AND (*0* OR *00000000*) AND process.command_line:*SafeDllSearchMode*) OR (winlog.event_id:"4657" AND winlog.event_data.ObjectValueName:"SafeDllSearchMode" AND NewValue:"0")))
+      (EventLog:"Security" AND (((winlog.event_id:"4688" OR winlog.event_id:"1") AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:*Set\-ItemProperty* AND process.command_line:*\-value*)) AND (*0* OR *00000000*) AND process.command_line:*SafeDllSearchMode*) OR (winlog.event_id:"4657" AND winlog.event_data.ObjectValueName:"SafeDllSearchMode" AND NewValue:"0")))
     type: Elastic
   - name: LogPoint Search - Creation of SafeDllSearchMode
     description: This is a pseudocode representation of the below LogPoint search.
     code: |- 
-      (EventLog="Security" ((event_id="4688" ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) ("0" OR "*00000000") CommandLine="*SafeDllSearchMode*") OR (event_id="4657" ObjectValueName="SafeDllSearchMode" NewValue="0")))
+      (EventLog="Security" (((event_id="4688" OR event_id="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) ("0" OR "*00000000") CommandLine="*SafeDllSearchMode*") OR (event_id="4657" ObjectValueName="SafeDllSearchMode" NewValue="0")))
     type: LogPoint
 unit_tests:
 - configurations:
