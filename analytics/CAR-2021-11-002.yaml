@@ -12,7 +12,7 @@ contributors:
   - Lucas Heiligenstein
 id: CAR-2021-11-002
 description: |-
-  Detection of modification of registry key Notify,Userinit and Shell located in HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\ and HKEY_LOCAL_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\. When user logon, the Registry keys Notify, Userinit and Shell are used to load dedicated Windows component. Attacker may insert malicious payload following the legit value to launch a malicious payload.
+  Detection of modification of registry key Notify,Userinit and Shell located in HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\ and HKEY_LOCAL_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\. When user logon, the Registry keys Notify, Userinit and Shell are used to load deicated Windows component. Attacker may insert malicous payload following the legit value to launch a malicious payload.
 coverage:
   - technique: T1547
     tactics:
@@ -31,17 +31,17 @@ implementations:
   - name: Splunk Search - Modification of Userinit, Shell or BootExecute
     description: This is a pseudocode representation of the below Splunk search.
     code: |- 
-      (source="WinEventLog:*" EventLog="Security" (((EventCode="4688" ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (CommandLine="*Userinit*" OR CommandLine="*Shell*" OR CommandLine="*BootExecute*")) OR ((EventCode="4657" ObjectName="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (ObjectValueName="Userinit" OR ObjectValueName="Shell" OR ObjectValueName="BootExecute"))))
+      (source="WinEventLog:*" EventLog="Security" ((((EventCode="4688" OR EventCode="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (CommandLine="*Userinit*" OR CommandLine="*Shell*" OR CommandLine="*BootExecute*")) OR ((EventCode="4657" ObjectName="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (ObjectValueName="Userinit" OR ObjectValueName="Shell" OR ObjectValueName="BootExecute"))))
     type: Splunk
   - name: Elastic Search - Modification of Userinit, Shell or BootExecute
     description: This is a pseudocode representation of the below Elastic search.
     code: |- 
-      (EventLog:"Security" AND (((winlog.event_id:"4688" AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:*Set\-ItemProperty* AND process.command_line:*\-value*)) AND process.command_line:*\\Microsoft\\Windows\ NT\\CurrentVersion\\Winlogon*) AND (process.command_line:*Userinit* OR process.command_line:*Shell* OR process.command_line:*BootExecute*)) OR ((winlog.event_id:"4657" AND winlog.event_data.ObjectName:*\\Microsoft\\Windows\ NT\\CurrentVersion\\Winlogon*) AND (winlog.event_data.ObjectValueName:"Userinit" OR winlog.event_data.ObjectValueName:"Shell" OR winlog.event_data.ObjectValueName:"BootExecute"))))
+      (EventLog:"Security" AND ((((winlog.event_id:"4688" OR winlog.event_id:"1") AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:*Set\-ItemProperty* AND process.command_line:*\-value*)) AND process.command_line:*\\Microsoft\\Windows\ NT\\CurrentVersion\\Winlogon*) AND (process.command_line:*Userinit* OR process.command_line:*Shell* OR process.command_line:*BootExecute*)) OR ((winlog.event_id:"4657" AND winlog.event_data.ObjectName:*\\Microsoft\\Windows\ NT\\CurrentVersion\\Winlogon*) AND (winlog.event_data.ObjectValueName:"Userinit" OR winlog.event_data.ObjectValueName:"Shell" OR winlog.event_data.ObjectValueName:"BootExecute"))))
     type: Elastic
   - name: LogPoint Search - Modification of Userinit, Shell or BootExecute
     description: This is a pseudocode representation of the below LogPoint search.
     code: |- 
-      (EventLog="Security" (((event_id="4688" ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (CommandLine="*Userinit*" OR CommandLine="*Shell*" OR CommandLine="*BootExecute*")) OR ((event_id="4657" ObjectName="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (ObjectValueName="Userinit" OR ObjectValueName="Shell" OR ObjectValueName="BootExecute"))))
+      (EventLog="Security" ((((event_id="4688" OR event_id="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (CommandLine="*Userinit*" OR CommandLine="*Shell*" OR CommandLine="*BootExecute*")) OR ((event_id="4657" ObjectName="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (ObjectValueName="Userinit" OR ObjectValueName="Shell" OR ObjectValueName="BootExecute"))))
     type: LogPoint
 unit_tests:
 - configurations:
