@@ -795,6 +795,14 @@ permalink: /analytics/
                 <td>Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
+            <tr>
+                <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-11-001/">CAR-2021-11-001</a></td>
+                <td>Registry Edit with Creation of SafeDllSearchMode Key Set to 0</td>
+                <td style="white-space:nowrap;">November 24 2021</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1574/">Hijack Execution Flow</a></li><li><a href="https://attack.mitre.org/techniques/T1112/">Modify Registry</a></li></ul></td>
+                <td>Elastic, Logpoint, Pseudocode, Splunk</td>
+                <td>Windows</td>
+            </tr>
       </tbody>
 </table>
 ---
@@ -812,6 +820,7 @@ permalink: /analytics/
 |...|[Winlogon Helper DLL](https://attack.mitre.org/techniques/T1547/004/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
 |[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|(N/A - see below)|(N/A - see below)|
 |...|[Services File Permissions Weakness](https://attack.mitre.org/techniques/T1574/010/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-02-001">CAR-2014-02-001: Service Binary Modifications</a></li></ul>{:/}|
+|...|[DLL Search Order Hijacking](https://attack.mitre.org/techniques/T1574/001/)|{::nomarkdown}<ul><li><a href="CAR-2021-11-001">CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0</a></li></ul>{:/}|
 |...|[Services Registry Permissions Weakness](https://attack.mitre.org/techniques/T1574/011/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-03-001">CAR-2013-03-001: Reg.exe called from Command Shell</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2020-05-003">CAR-2020-05-003: Rare LolBAS Command Lines</a></li></ul>{:/}|
 |...|[Path Interception by PATH Environment Variable](https://attack.mitre.org/techniques/T1574/007/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
 |...|[Path Interception by Search Order Hijacking](https://attack.mitre.org/techniques/T1574/008/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
