@@ -24,8 +24,6 @@ coverage:
   - technique: T1112
     tactics:
       - TA0005
-    subtechniques:
-      - T1112
     coverage: Medium
 implementations:
   - name: Creation of SafeDllSearchMode
