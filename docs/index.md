@@ -18,6 +18,10 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
+### January 2022
+* New analytics added
+  * [CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0](/analytics/CAR-2021-11-001)
+
 ### May 2021
 * New analytics added - special thanks to the Splunk Threat Research team for working with us to incorporate these.
   * [CAR-2021-05-001: Attempt To Add Certificate To Untrusted Store](/analytics/CAR-2021-05-001)
