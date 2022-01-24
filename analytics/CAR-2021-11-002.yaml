@@ -24,8 +24,6 @@ coverage:
   - technique: T1112
     tactics:
       - TA0005
-    subtechniques:
-      - T1112
     coverage: Medium
 implementations:
   - name: Splunk Search - Modification of Userinit, Shell or BootExecute
@@ -44,12 +42,10 @@ implementations:
       (EventLog="Security" ((((event_id="4688" OR event_id="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (CommandLine="*Userinit*" OR CommandLine="*Shell*" OR CommandLine="*BootExecute*")) OR ((event_id="4657" ObjectName="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (ObjectValueName="Userinit" OR ObjectValueName="Shell" OR ObjectValueName="BootExecute"))))
     type: LogPoint
 unit_tests:
-- configurations:
-  description: Modification on Registry Key with cmd. Calc.exe will be launched when user will login
+- description: Modification on Registry Key with cmd. Calc.exe will be launched when user will login
   commands:
   - reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Userinit /d C:\Windows\system32\userinit.exe,C:\Windows\system32\calc.exe
-- configurations:
-  description: Modification on Registry Key with Powershell. Calc.exe will be launched when user will login
+- description: Modification on Registry Key with Powershell. Calc.exe will be launched when user will login
   commands:
   - Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" -Name Userinit -Value C:\Windows\system32\userinit.exe,C:\Windows\system32\calc.exe
 data_model_references:
