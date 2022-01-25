@@ -24,8 +24,6 @@ coverage:
   - technique: T1112
     tactics:
       - TA0005
-    subtechniques:
-      - T1112
     coverage: Medium
 implementations:
   - name: Splunk Search - Modification of default Startup Folder in the Registry Key "Common Startup"
@@ -44,12 +42,10 @@ implementations:
       ((EventLog="Security" (event_id="4688" OR event_id="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine="*Common Startup*") OR (event_id="4657" ObjectValueName="Common Startup"))
     type: LogPoint
 unit_tests:
-- configurations:
-  description: Modification on Registry Key with cmd. Files in new_malicious_startup_folder will be launched when user logon
+- description: Modification on Registry Key with cmd. Files in new_malicious_startup_folder will be launched when user logon
   commands:
   - reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Common Startup" /d "C:\Users\Lucas\Documents\new_malicious_startup_folder" /f
-- configurations:
-  description: Modification on Registry Key with Powershell. Files in new_malicious_startup_folder will be launched when user logon
+- description: Modification on Registry Key with Powershell. Files in new_malicious_startup_folder will be launched when user logon
   commands:
   - Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" -Name "Common Startup" -Value C:\Users\Lucas\Documents\new_malicious_startup_folder
 data_model_references:
