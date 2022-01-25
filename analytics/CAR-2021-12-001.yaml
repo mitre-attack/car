@@ -37,12 +37,10 @@ implementations:
       (EventLog="Security" ((((event_id="4688" OR event_id="1") CommandLine="*SCHTASKS*" CommandLine IN ["*/CREATE*", "*/CHANGE*"]) (CommandLine IN ["*.cmd*", "*.ps1*", "*.vbs*", "*.py*", "*.js*", "*.exe*", "*.bat*"] OR CommandLine IN ["*javascript*", "*powershell*", "*wmic*", "*rundll32*", "*cmd*", "*cscript*", "*wscript*", "*regsvr32*", "*mshta*", "*bitsadmin*", "*certutil*", "*msiexec*", "*javaw*"] OR CommandLine IN ["*%APPDATA%*", "*\\AppData\\Roaming*", "*%PUBLIC%*", "*C:\\Users\\Public*", "*%ProgramData%*", "*C:\\ProgramData*", "*%TEMP%*", "*\\AppData\\Local\\Temp*", "*\\Windows\\PLA\\System*", "*\\tasks*", "*\\Registration\\CRMLog*", "*\\FxsTmp*", "*\\spool\\drivers\\color*", "*\\tracing*"])) OR (event_id="4698" (TaskContent IN ["*.cmd*", "*.ps1*", "*.vbs*", "*.py*", "*.js*", "*.exe*", "*.bat*"] OR TaskContent IN ["*javascript*", "*powershell*", "*wmic*", "*rundll32*", "*cmd*", "*cscript*", "*wscript*", "*regsvr32*", "*mshta*", "*bitsadmin*", "*certutil*", "*msiexec*", "*javaw*"] OR TaskContent IN ["*%APPDATA%*", "*\\AppData\\Roaming*", "*%PUBLIC%*", "*C:\\Users\\Public*", "*%ProgramData%*", "*C:\\ProgramData*", "*%TEMP%*", "*\\AppData\\Local\\Temp*", "*\\Windows\\PLA\\System*", "*\\tasks*", "*\\Registration\\CRMLog*", "*\\FxsTmp*", "*\\spool\\drivers\\color*", "*\\tracing*"]))))
     type: LogPoint
 unit_tests:
-- configurations:
-  description: Creation Scheduled Task with cmd. Calc.exe will be launched every minute
+- description: Creation Scheduled Task with cmd. Calc.exe will be launched every minute
   commands:
   - SCHTASKS /CREATE /SC MINUTE /MO 1 /TN "CALC_TASK" /TR "C:\Windows\System32\calc.exe"
-- configurations:
-  description: Creation Scheduled Task with cmd. Ping will be launched every minute
+- description: Creation Scheduled Task with cmd. Ping will be launched every minute
   commands:
   - SCHTASKS /CREATE /SC MINUTE /MO 1 /TN "PING_TASK" /TR "cmd /c ping 8.8.8.8"
 data_model_references:
