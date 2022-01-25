@@ -1,4 +1,4 @@
-title: Registry Edit with Modification of Userinit, Shell or BootExecute
+title: Registry Edit with Modification of Userinit, Shell or Notify
 submission_date: 2021/11/28
 information_domain: Host
 platforms:
@@ -26,20 +26,20 @@ coverage:
       - TA0005
     coverage: Medium
 implementations:
-  - name: Splunk Search - Modification of Userinit, Shell or BootExecute
+  - name: Splunk Search - Modification of Userinit, Shell or Notify
     description: This is a pseudocode representation of the below Splunk search.
     code: |- 
-      (source="WinEventLog:*" EventLog="Security" ((((EventCode="4688" OR EventCode="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (CommandLine="*Userinit*" OR CommandLine="*Shell*" OR CommandLine="*BootExecute*")) OR ((EventCode="4657" ObjectName="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (ObjectValueName="Userinit" OR ObjectValueName="Shell" OR ObjectValueName="BootExecute"))))
+      (source="WinEventLog:*" ((((EventCode="4688" OR EventCode="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR ((CommandLine="*Set-ItemProperty*" OR CommandLine="*New-ItemProperty*") CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*" (CommandLine="*Userinit*" OR CommandLine="*Shell*" OR CommandLine="*Notify*")) OR ((EventCode="4657") (ObjectValueName="Userinit" OR ObjectValueName="Shell" OR ObjectValueName="Notify"))) OR ((EventCode="13") (TargetObject="*Userinit" OR TargetObject="*Shell" OR TargetObject="*Notify"))))
     type: Splunk
-  - name: Elastic Search - Modification of Userinit, Shell or BootExecute
+  - name: Elastic Search - Modification of Userinit, Shell or Notify
     description: This is a pseudocode representation of the below Elastic search.
     code: |- 
-      (EventLog:"Security" AND ((((winlog.event_id:"4688" OR winlog.event_id:"1") AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:*Set\-ItemProperty* AND process.command_line:*\-value*)) AND process.command_line:*\\Microsoft\\Windows\ NT\\CurrentVersion\\Winlogon*) AND (process.command_line:*Userinit* OR process.command_line:*Shell* OR process.command_line:*BootExecute*)) OR ((winlog.event_id:"4657" AND winlog.event_data.ObjectName:*\\Microsoft\\Windows\ NT\\CurrentVersion\\Winlogon*) AND (winlog.event_data.ObjectValueName:"Userinit" OR winlog.event_data.ObjectValueName:"Shell" OR winlog.event_data.ObjectValueName:"BootExecute"))))
+      (((EventCode:("4688" OR "1") AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:(*Set\-ItemProperty* OR *New\-ItemProperty*) AND process.command_line:*\-value*)) AND process.command_line:*\\Microsoft\\Windows\ NT\\CurrentVersion\\Winlogon* AND process.command_line:(*Userinit* OR *Shell* OR *Notify*)) OR (EventCode:"4657" AND winlog.event_data.ObjectValueName:("Userinit" OR "Shell" OR "Notify"))) OR (EventCode:"13" AND winlog.event_data.TargetObject:(*Userinit OR *Shell OR *Notify)))
     type: Elastic
-  - name: LogPoint Search - Modification of Userinit, Shell or BootExecute
+  - name: LogPoint Search - Modification of Userinit, Shell or Notify
     description: This is a pseudocode representation of the below LogPoint search.
     code: |- 
-      (EventLog="Security" ((((event_id="4688" OR event_id="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (CommandLine="*Userinit*" OR CommandLine="*Shell*" OR CommandLine="*BootExecute*")) OR ((event_id="4657" ObjectName="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") (ObjectValueName="Userinit" OR ObjectValueName="Shell" OR ObjectValueName="BootExecute"))))
+      (((EventCode IN ["4688", "1"] ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine IN ["*Set-ItemProperty*", "*New-ItemProperty*"] CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*" CommandLine IN ["*Userinit*", "*Shell*", "*Notify*"]) OR (EventCode IN "4657" ObjectValueName IN ["Userinit", "Shell", "Notify"])) OR (EventCode IN "13" TargetObject IN ["*Userinit", "*Shell", "*Notify"]))
     type: LogPoint
 unit_tests:
 - description: Modification on Registry Key with cmd. Calc.exe will be launched when user will login
