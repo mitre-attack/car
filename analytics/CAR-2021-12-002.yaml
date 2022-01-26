@@ -28,7 +28,7 @@ implementations:
   - name: Splunk Search - Modification of default Startup Folder in the Registry Key "Common Startup"
     description: This is a pseudocode representation of the below Splunk search.
     code: |- 
-      (source="WinEventLog:*" EventLog="Security" ((EventCode="4688" OR EventCode="1") (CommandLine="*reg*" AND CommandLine="*add*" AND CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" AND CommandLine="*-value*") CommandLine="*Common Startup*") OR (EventCode="4657" ObjectValueName="Common Startup"))
+      (((EventCode="4688" OR EventCode="1") (CommandLine="*reg*" AND CommandLine="*add*" AND CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" AND CommandLine="*-value*") CommandLine="*Common Startup*") OR (EventCode="4657" ObjectValueName="Common Startup"))
     type: Splunk
   - name: Elastic Search - Modification of default Startup Folder in the Registry Key "Common Startup"
     description: This is a pseudocode representation of the below Elastic search.
