@@ -29,7 +29,7 @@ implementations:
   - name: Splunk Search - Modification of Userinit, Shell or Notify
     description: This is a pseudocode representation of the below Splunk search.
     code: |- 
-      (source="WinEventLog:*" ((((EventCode="4688" OR EventCode="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR ((CommandLine="*Set-ItemProperty*" OR CommandLine="*New-ItemProperty*") CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*" (CommandLine="*Userinit*" OR CommandLine="*Shell*" OR CommandLine="*Notify*")) OR ((EventCode="4657") (ObjectValueName="Userinit" OR ObjectValueName="Shell" OR ObjectValueName="Notify"))) OR ((EventCode="13") (TargetObject="*Userinit" OR TargetObject="*Shell" OR TargetObject="*Notify"))))
+      (((((EventCode="4688" OR EventCode="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR ((CommandLine="*Set-ItemProperty*" OR CommandLine="*New-ItemProperty*") CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*" (CommandLine="*Userinit*" OR CommandLine="*Shell*" OR CommandLine="*Notify*")) OR ((EventCode="4657") (ObjectValueName="Userinit" OR ObjectValueName="Shell" OR ObjectValueName="Notify"))) OR ((EventCode="13") (TargetObject="*Userinit" OR TargetObject="*Shell" OR TargetObject="*Notify"))))
     type: Splunk
   - name: Elastic Search - Modification of Userinit, Shell or Notify
     description: This is a pseudocode representation of the below Elastic search.
