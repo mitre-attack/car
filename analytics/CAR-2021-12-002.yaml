@@ -25,20 +25,30 @@ coverage:
       - TA0005
     coverage: Medium
 implementations:
+  - name: Common Startup Registry Key Modification
+    description: This detects modification of the `Common Startup` registry key value, either via a new process (command line) or direct registry manipulation.
+    code: |- 
+      processes = search Process:create
+      logon_reg_processes = filter processes where (command_line CONTAINS("*reg*") AND command_line CONTAINS("*add*") AND command_line CONTAINS("*/d*") OR (command_line CONTAINS("*Set-ItemProperty*") AND command_line CONTAINS("*-value*")) AND command_line CONTAINS("*Common Startup*"))
+      reg_keys = search Registry:value_edit
+      logon_reg_keys = filter reg_keys where value="Common Startup"
+      output logon_reg_processes, logon_reg_keys
+    data_model: CAR native
+    type: Pseudocode
   - name: Splunk Search - Modification of default Startup Folder in the Registry Key "Common Startup"
-    description: This is a pseudocode representation of the below Splunk search.
+    description: This is a Splunk representation of the above pseudocode search.
     code: |- 
       (((EventCode="4688" OR EventCode="1") (CommandLine="*reg*" AND CommandLine="*add*" AND CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" AND CommandLine="*-value*") CommandLine="*Common Startup*") OR ((EventCode="4657" ObjectValueName="Common Startup") OR (EventCode="13" TargetObject="*Common Startup")))
     type: Splunk
   - name: Elastic Search - Modification of default Startup Folder in the Registry Key "Common Startup"
-    description: This is a pseudocode representation of the below Elastic search.
+    description: This is an ElasticSeearech representation of the above pseudocode search.
     code: |- 
-      ((EventLog:"Security" AND (winlog.event_id:"4688" OR winlog.event_id:"1") AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:*Set\-ItemProperty* AND process.command_line:*\-value*)) AND process.command_line:*Common\ Startup*) OR (winlog.event_id:"4657" AND winlog.event_data.ObjectValueName:"Common\ Startup"))
+      ((EventLog:"Security" AND (winlog.event_id:"4688" OR winlog.event_id:"1") AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:*Set\-ItemProperty* AND process.command_line:*\-value*)) AND process.command_line:*Common\ Startup*) OR (winlog.event_id:"4657" AND winlog.event_data.ObjectValueName:"Common\ Startup") OR (winlog.event_id:"13" AND winlog.event_data.TargetObject:"*Common Startup"))
     type: Elastic
   - name: LogPoint Search - Modification of default Startup Folder in the Registry Key "Common Startup"
-    description: This is a pseudocode representation of the below LogPoint search.
+    description: This is a LogPoint representation of the above pseudocode search.
     code: |- 
-      ((EventLog="Security" (event_id="4688" OR event_id="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine="*Common Startup*") OR (event_id="4657" ObjectValueName="Common Startup"))
+      ((EventLog="Security" (event_id="4688" OR event_id="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine="*Common Startup*") OR (event_id="4657" ObjectValueName="Common Startup") OR (event_id="13" TargetObject="*Common Startup"))
     type: LogPoint
 unit_tests:
 - description: Modification on Registry Key with cmd. Files in new_malicious_startup_folder will be launched when user logon
