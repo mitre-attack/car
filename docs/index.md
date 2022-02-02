@@ -18,6 +18,12 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 ## News
 Information about the latest CAR updates and changes can be found in this section.
 
+### February 2022
+* New analytics added
+  * [CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify](/analytics/CAR-2021-11-002)
+  * [CAR-2021-12-001: Scheduled Task Creation or Modification Containing Suspicious Scripts, Extensions or User Writable Paths](/analytics/CAR-2021-12-001)
+  * [CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key "Common Startup"](/analytics/CAR-2021-12-002)
+
 ### January 2022
 * New analytics added
   * [CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0](/analytics/CAR-2021-11-001)
