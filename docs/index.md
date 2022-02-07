@@ -19,6 +19,7 @@ In addition to the analytics, CAR also contains a [data model](data_model) for o
 Information about the latest CAR updates and changes can be found in this section.
 
 ### February 2022
+* Updated [analytic coverage](/coverage) page, now with separate ATT&CK navigator layers for each repository.
 * New analytics added
   * [CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify](/analytics/CAR-2021-11-002)
   * [CAR-2021-12-001: Scheduled Task Creation or Modification Containing Suspicious Scripts, Extensions or User Writable Paths](/analytics/CAR-2021-12-001)
