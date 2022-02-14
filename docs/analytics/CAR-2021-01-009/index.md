@@ -2,7 +2,7 @@
 title: "CAR-2021-01-009: Detecting Shadow Copy Deletion or Resize"
 layout: analytic
 submission_date: 2020/12/11
-update_date: 2020/12/11
+update_date: 2022/02/03
 information_domain: Host
 subtypes: Process
 analytic_type: TTP
