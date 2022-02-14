@@ -45,10 +45,10 @@ d3fend_mappings:
 unit_tests:
 - description: Shadow copy deletion with vssadmin
   commands:
-  - vssadmin.exe delete shadows /all /quiet
+  - 'vssadmin.exe delete shadows /all /quiet'
 - description: Shadow copy deletion with wmic
   commands:
-  - wmic shadowcopy delete
+  - 'wmic shadowcopy delete'
 - description: Shadow copy resize with vssadmin
-    commands:
-  - vssadmin resize shadowstorage /for=c: /on=c: /maxsize=401MB
+  commands:
+  - 'vssadmin resize shadowstorage /for=c: /on=c: /maxsize=401MB'
