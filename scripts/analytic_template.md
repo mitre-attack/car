@@ -2,7 +2,9 @@
 title: "{{analytic['id']}}: {{analytic['title']}}"
 layout: analytic
 submission_date: {{analytic['submission_date']}}
-{%- if 'update_date' in analytic %}update_date: {{analytic['submission_date']}}{%- endif %}
+{%- if 'update_date' in analytic %}
+update_date: {{analytic['submission_date']}}
+{%- endif %}
 information_domain: {{analytic['information_domain']}}
 subtypes: {{analytic['subtypes']|join(', ')}}
 analytic_type: {{analytic['analytic_types']|join(', ')}}
