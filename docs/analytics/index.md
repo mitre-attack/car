@@ -447,8 +447,8 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-04-001/">CAR-2020-04-001</a></td>
                 <td>Shadow Copy Deletion</td>
                 <td style="white-space:nowrap;">April 10 2020</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1490/">Inhibit System Recovery</a></li></ul></td>
-                <td>Eql, Logpoint, Pseudocode, Sigma, Splunk</td>
+                <td></td>
+                <td></td>
                 <td>Windows</td>
             </tr>
             <tr>
@@ -669,10 +669,10 @@ permalink: /analytics/
             </tr>
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-01-009/">CAR-2021-01-009</a></td>
-                <td>Detecting Shadow Copy Deletion via Vssadmin.exe</td>
+                <td>Detecting Shadow Copy Deletion or Resize</td>
                 <td style="white-space:nowrap;">December 11 2020</td>
                 <td><ul><li><a href="https://attack.mitre.org/techniques/T1490/">Inhibit System Recovery</a></li></ul></td>
-                <td>Splunk</td>
+                <td>Elastic, Logpoint, Splunk</td>
                 <td>Windows</td>
             </tr>
             <tr>
