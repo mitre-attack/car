@@ -1,5 +1,5 @@
 ---
-title: "CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key "Common Startup""
+title: "CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'"
 layout: analytic
 submission_date: 2021/12/06
 information_domain: Host
