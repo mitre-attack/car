@@ -11,7 +11,7 @@ analytic_type: {{analytic['analytic_types']|join(', ')}}
 contributors: {{analytic['contributors']|join(', ')}}
 {% if 'platforms' in analytic %}applicable_platforms: {{analytic['platforms']|join(', ')}}{% else %}applicable_platforms: N/A{% endif %}
 ---
-
+<br><br>
 {{analytic['description']}}
 {% if 'references' in analytic %}
 #### References
@@ -40,9 +40,6 @@ contributors: {{analytic['contributors']|join(', ')}}
 {% for dmr in analytic['data_model_references'] %}|[{{dmr[0]}}](/data_model/{{dmr[0]}}) | [{{dmr[1]}}](/data_model/{{dmr[0]}}#{{dmr[1]}}) | [{{dmr[2]}}](/data_model/{{dmr[0]}}#{{dmr[2]}}) |
 {% endfor %}{% endif %}
 {% if 'implementations' in analytic %}
-
-### Applicable Sensors
-
 
 ### Implementations
 {% for impl in analytic['implementations'] %}
