@@ -8,7 +8,7 @@ analytic_type: TTP, Situational Awareness
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
+<br><br>
 Microsoft Windows uses its implementation of [Distributed Computing Environment/Remote Procedure Call](https://en.wikipedia.org/wiki/DCE/RPC) (DCE/RPC), which it calls [Microsoft RPC](https://en.wikipedia.org/wiki/Microsoft_RPC), to call certain APIs remotely.
 
 A Remote Procedure Call is initiated by communicating to the RPC Endpoint Mapper, which exists as the Windows service RpcEptMapper and listens on the port 135/tcp. The endpoint mapper resolves a requested endpoint/interface and responds to the client with the port that the service is listening on. Since the RPC endpoints are assigned ports when the services start, these ports are dynamically assigned from 49152 to 65535. The connection to the endpoint mapper then terminates and the client program can communicate directly with the requested service.
@@ -46,9 +46,6 @@ Additional endpoints are detailed at [here](http://www.hsc.fr/ressources/article
 |[flow](/data_model/flow) | [start](/data_model/flow#start) | [dest_port](/data_model/flow#dest_port) |
 |[flow](/data_model/flow) | [start](/data_model/flow#start) | [src_port](/data_model/flow#src_port) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

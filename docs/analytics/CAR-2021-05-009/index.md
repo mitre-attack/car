@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Splunk Threat Research <research@splunk.com>
 applicable_platforms: Windows
 ---
-
+<br><br>
 CertUtil.exe may be used to `encode` and `decode` a file, including PE and script code. Encoding will convert a file to base64 with `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` tags. Malicious usage will include decoding a encoded file that was downloaded. Once decoded, it will be loaded by a parallel process. Note that there are two additional command switches that may be used - `encodehex` and `decodehex`. Similarly, the file will be encoded in HEX and later decoded for further execution. During triage, identify the source of the file being decoded. Review its contents or execution behavior for further analysis.
 
 
@@ -34,9 +34,6 @@ CertUtil.exe may be used to `encode` and `decode` a file, including PE and scrip
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Sebastien Damaye
 applicable_platforms: Windows
 ---
-
+<br><br>
 Cyber actors frequently escalate to the SYSTEM account after gaining entry to a Windows host, to enable them to carry out various attacks more effectively. Tools such as Meterpreter, Cobalt Strike, and Empire carry out automated steps to "Get System", which is the same as switching over to the System user account. Most of these tools utilize multiple techniques to try and attain SYSTEM: in the first technique, they create a named pipe and connects an instance of cmd.exe to it, which allows them to impersonate the security context of cmd.exe, which is SYSTEM. In the second technique, a malicious DLL is injected into a process that is running as SYSTEM; the injected DLL steals the SYSTEM token and applies it where necessary to escalate privileges. This analytic looks for both of these techniques.  
 
 
@@ -36,9 +36,6 @@ Cyber actors frequently escalate to the SYSTEM account after gaining entry to a 
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 |[service](/data_model/service) | [create](/data_model/service#create) | [command_line](/data_model/service#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

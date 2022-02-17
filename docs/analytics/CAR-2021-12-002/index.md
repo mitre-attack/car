@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Lucas Heiligenstein
 applicable_platforms: Windows
 ---
-
+<br><br>
 Detection of the modification of the registry key `Common Startup` located in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\` and `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\`. When a user logs on, any files located in the Startup Folder are launched. Attackers may modify these folders with other files in order to evade detection set on these default folders. This detection focuses on EventIDs 4688 and 1 for process creation and EventID 4657 for the modification of the Registry Keys.
 
 
@@ -35,9 +35,6 @@ Detection of the modification of the registry key `Common Startup` located in `H
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 |[registry](/data_model/registry) | [add](/data_model/registry#add) | [key](/data_model/registry#key) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
+<br><br>
 In order to gain [persistence](https://attack.mitre.org/tactics/TA0003/), [privilege escalation](https://attack.mitre.org/tactics/TA0004/), or [remote execution](https://attack.mitre.org/tactics/TA0002/), an adversary may use the Windows built-in command AT (at.exe) to [schedule a command](https://attack.mitre.org/techniques/T1053/002) to be run at a specified time, date, and even host. This method has been used by adversaries and administrators alike. Its use may lead to detection of compromised hosts and compromised users if it is used to move laterally.
 The built-in Windows tool schtasks.exe ([CAR-2013-08-001](../CAR-2013-08-001)) offers greater flexibility when creating, modifying, and enumerating tasks. For these reasons, schtasks.exe is more commonly used by administrators, tools/scripts, and power users.
 
@@ -35,9 +35,6 @@ The built-in Windows tool schtasks.exe ([CAR-2013-08-001](../CAR-2013-08-001)) o
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

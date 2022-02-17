@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
+<br><br>
 Cyber actors frequently enumerate local or domain permissions groups. The net utility is usually used for this purpose. This analytic looks for any instances of net.exe, which is not normally used for benign purposes, although system administrator actions may trigger false positives.
 
 
@@ -34,9 +34,6 @@ Cyber actors frequently enumerate local or domain permissions groups. The net ut
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

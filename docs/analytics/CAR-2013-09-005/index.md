@@ -8,7 +8,7 @@ analytic_type: Detection
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
+<br><br>
 New executables that are started as a service are suspicious. This analytic looks for anomalous service executables.
 
 
@@ -33,9 +33,6 @@ New executables that are started as a service are suspicious. This analytic look
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [parent_image_path](/data_model/process#parent_image_path) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

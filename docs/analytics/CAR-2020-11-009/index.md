@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
+<br><br>
 Adversaries may hide malicious code in .chm compiled HTML files. When these files are read, Windows uses the HTML help executable named hh.exe, which is the signature for this analytic.
 
 
@@ -33,9 +33,6 @@ Adversaries may hide malicious code in .chm compiled HTML files. When these file
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

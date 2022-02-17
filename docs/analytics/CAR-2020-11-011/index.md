@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
+<br><br>
 Adversaries may use screensaver files to run malicious code. This analytic triggers on suspicious edits to the screensaver registry keys, which dictate which .scr file the screensaver runs.
 
 
@@ -34,9 +34,6 @@ Adversaries may use screensaver files to run malicious code. This analytic trigg
 |[registry](/data_model/registry) | [edit](/data_model/registry#edit) | [key](/data_model/registry#key) |
 |[registry](/data_model/registry) | [add](/data_model/registry#add) | [key](/data_model/registry#key) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

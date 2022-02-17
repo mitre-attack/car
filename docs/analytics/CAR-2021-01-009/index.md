@@ -9,7 +9,7 @@ analytic_type: TTP
 contributors: Cyware Labs, Lucas Heiligenstein
 applicable_platforms: Windows
 ---
-
+<br><br>
 After compromising a network of systems, threat actors often try to delete/resize Shadow Copy in an attempt to prevent administrators from restoring the systems to versions present before the attack. This is often done via vssadmin, a legitimate Windows tool to interact with shadow copies. This action is often employed by ransomware, may lead to a failure in recovering systems after an attack. The pseudo code detection focus on Windows Security and Sysmon process creation (4688 and 1). The use of wmic to delete shadow copy generates WMI-Activity Operationnal 5857 event and could generate 5858 (if the operation fails). These 2 EventIDs could be interesting when attackers use wmic without process creation and/or for forensics.
 
 
@@ -34,9 +34,6 @@ After compromising a network of systems, threat actors often try to delete/resiz
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

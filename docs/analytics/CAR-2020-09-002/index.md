@@ -8,7 +8,7 @@ analytic_type: Situational Awareness
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
+<br><br>
 Adversaries may establish persistence or escalate privileges by executing malicious content triggered by hijacked references to Component Object Model (COM) objects. This is typically done by replacing COM object registry entries under the HKEY_CURRENT_USER\Software\Classes\CLSID or HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID keys. Accordingly, this analytic looks for any changes under these keys. 
 
 
@@ -35,9 +35,6 @@ Adversaries may establish persistence or escalate privileges by executing malici
 |[registry](/data_model/registry) | [remove](/data_model/registry#remove) | [key](/data_model/registry#key) |
 |[registry](/data_model/registry) | [edit](/data_model/registry#edit) | [key](/data_model/registry#key) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

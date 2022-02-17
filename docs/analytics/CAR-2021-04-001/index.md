@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Sebastien Damaye
 applicable_platforms: Windows
 ---
-
+<br><br>
 [Masquerading (T1036)](https://attack.mitre.org/techniques/T1036/) is defined by ATT&CK as follows:
 
 "Masquerading occurs when the name or location of an object, legitimate or malicious, is manipulated or abused for the sake of evading defenses and observation. This may include manipulating file metadata, tricking users into misidentifying the file type, and giving legitimate task or service names."
@@ -59,9 +59,6 @@ To make sure the rule doesn't miss cases where the executable would be started f
 |[process](/data_model/process) | [terminate](/data_model/process#terminate) | [exe](/data_model/process#exe) |
 |[process](/data_model/process) | [terminate](/data_model/process#terminate) | [image_path](/data_model/process#image_path) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

@@ -8,7 +8,7 @@ analytic_type: Anomaly
 contributors: MITRE/NSA
 applicable_platforms: Windows, Linux, macOS
 ---
-
+<br><br>
 It is unlikely that event log data would be cleared during normal operations, and it is likely that malicious attackers may try to cover their tracks by clearing an event log. When an event log gets cleared, it is suspicious. Alerting when a "Clear Event Log" is generated could point to this intruder technique. Centrally collecting events has the added benefit of making it much harder for attackers to cover their tracks. Event Forwarding permits sources to forward multiple copies of a collected event to multiple collectors, thus enabling redundant event collection. Using a redundant event collection model can minimize the single point of failure risk.
 
 
@@ -27,9 +27,6 @@ It is unlikely that event log data would be cleared during normal operations, an
 
 
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

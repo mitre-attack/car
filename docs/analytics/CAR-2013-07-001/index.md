@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows, Linux, macOS
 ---
-
+<br><br>
 Malicious actors may rename built-in commands or external tools, such as those provided by SysInternals, to better [blend in](https://attack.mitre.org/tactics/TA0005) with the environment. In those cases, the file path name is arbitrary and may blend in well with the background. If the arguments are closely inspected, it may be possible to infer what tools are running and understand what an adversary is doing. When any legitimate software shares the same command lines, it must be whitelisted according to the expected parameters.
 
 Any tool of interest with commonly known command line usage can be detecting by command line analysis. Known substrings of command lines include
@@ -48,9 +48,6 @@ Any tool of interest with commonly known command line usage can be detecting by 
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

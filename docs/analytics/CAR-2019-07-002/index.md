@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Kaushal Parikh/Cyware Labs, Tony Lambert/Red Canary, MITRE
 applicable_platforms: Windows
 ---
-
+<br><br>
 [ProcDump](https://docs.microsoft.com/en-us/sysinternals/downloads/procdump) is a sysinternal command-line utility whose primary purpose is monitoring an application for CPU spikes and generating crash dumps during a spike that an administrator or developer can use to determine the cause of the spike. 
 
 ProcDump may be used to dump the memory space of lsass.exe to disk for processing with a credential access tool such as Mimikatz. This is performed by launching procdump.exe as a privileged user with command line options indicating that lsass.exe should be dumped to a file with an arbitrary name.
@@ -38,9 +38,6 @@ Note - the CAR data model currently does not support process access actions, so 
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

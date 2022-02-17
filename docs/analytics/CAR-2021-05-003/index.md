@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Splunk Threat Research <research@splunk.com>
 applicable_platforms: Windows
 ---
-
+<br><br>
 This search looks for flags passed to bcdedit.exe modifications to the built-in Windows error recovery boot configurations. This is typically used by ransomware to prevent recovery.
 
 
@@ -35,9 +35,6 @@ This search looks for flags passed to bcdedit.exe modifications to the built-in 
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

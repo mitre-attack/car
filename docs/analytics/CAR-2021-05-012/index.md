@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Splunk Threat Research <research@splunk.com>
 applicable_platforms: Windows
 ---
-
+<br><br>
 This detection is to identify a creation of "user mode service" where the service file path is located in non-common service folder in windows.
 
 
@@ -34,9 +34,6 @@ This detection is to identify a creation of "user mode service" where the servic
 |---|---|---|
 |[service](/data_model/service) | [create](/data_model/service#create) | [image_path](/data_model/service#image_path) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

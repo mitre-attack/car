@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Cyware Labs
 applicable_platforms: Windows
 ---
-
+<br><br>
 In an attempt to avoid detection after compromising a machine, threat actors often try to disable Windows Defender. This is often done using “sc” [service control], a legitimate tool provided by Microsoft for managing services. This action interferes with event detection and may lead to a security event going undetected, thereby potentially leading to further compromise of the network.
 
 
@@ -33,9 +33,6 @@ In an attempt to avoid detection after compromising a machine, threat actors oft
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

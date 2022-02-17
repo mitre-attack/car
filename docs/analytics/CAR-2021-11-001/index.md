@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Lucas Heiligenstein
 applicable_platforms: Windows
 ---
-
+<br><br>
 Detection of creation of registry key HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\SafeDllSearchMode. The key SafeDllSearchMode, if set to 0, will block the Windows mechanism for the search DLL order and adversaries may execute their own malicious dll.
 
 
@@ -35,9 +35,6 @@ Detection of creation of registry key HKEY_LOCAL_MACHINE\System\CurrentControlSe
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 |[registry](/data_model/registry) | [add](/data_model/registry#add) | [key](/data_model/registry#key) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
+<br><br>
 Adversaries may use network shares to exfliltrate date; they will then remove the shares to cover their tracks. This analytic looks for the removal of network shares via commandline, which is otherwise a rare event.
 
 
@@ -34,9 +34,6 @@ Adversaries may use network shares to exfliltrate date; they will then remove th
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

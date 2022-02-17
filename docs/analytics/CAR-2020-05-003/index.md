@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Cyber National Mission Force (CNMF)
 applicable_platforms: Windows
 ---
-
+<br><br>
 [LoLBAS](https://lolbas-project.github.io/) are binaries and scripts that are built in to Windows, frequently are signed by Microsoft, and may be used by an attacker. Some LoLBAS are used very rarely and it might be possible to alert every time they're used (this would depend on your environment), but many others are very common and can't be simply alerted on.
 
 This analytic takes all instances of LoLBAS execution and then looks for instances of command lines that are not normal in the environment. This can detect attackers (which will tend to need the binaries for something different than normal usage) but will also tend to have false positives.
@@ -36,9 +36,6 @@ Note - this analytic is related to [CAR-2013-04-002](/analytics/CAR-2013-04-002)
 
 
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Cyware Labs
 applicable_platforms: Windows
 ---
-
+<br><br>
 In an attempt to clear traces after compromising a machine, threat actors often try to clear Windows Event logs. This is often done using “wevtutil”, a legitimate tool provided by Microsoft. This action interferes with event collection and notification, and may lead to a security event going undetected, thereby potentially leading to further compromise of the network.
 
 
@@ -33,9 +33,6 @@ In an attempt to clear traces after compromising a machine, threat actors often 
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

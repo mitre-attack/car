@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Cyware Labs
 applicable_platforms: Windows
 ---
-
+<br><br>
 Adversaries may use Windows Dynamic Data Exchange (DDE) to execute arbitrary commands. DDE is a client-server protocol for one-time and/or continuous inter-process communication (IPC) between applications. Once a link is established, applications can autonomously exchange transactions consisting of strings, warm data links (notifications when a data item changes), hot data links (duplications of changes to a data item), and requests for command execution.
 
 
@@ -33,9 +33,6 @@ Adversaries may use Windows Dynamic Data Exchange (DDE) to execute arbitrary com
 |---|---|---|
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

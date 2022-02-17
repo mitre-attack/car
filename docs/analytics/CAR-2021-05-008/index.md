@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Splunk Threat Research <research@splunk.com>
 applicable_platforms: Windows
 ---
-
+<br><br>
 This search looks for arguments to certutil.exe indicating the manipulation or extraction of Certificate. This certificate can then be used to sign new authentication tokens specially inside Federated environments such as Windows ADFS.
 
 
@@ -34,9 +34,6 @@ This search looks for arguments to certutil.exe indicating the manipulation or e
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
+<br><br>
 Squiblydoo is a specific usage of regsvr32.dll to load a COM scriptlet directly from the internet and execute it in a way that bypasses application whitelisting. It can be seen by looking for regsvr32.exe executions that load the scrobj.dll (which execute the COM scriptlet) or, if that is too noisy, those that also load content directly via HTTP or HTTPS.
 
 Squiblydoo was first written up by Casey Smith at Red Canary, though that blog post is no longer accessible.
@@ -39,9 +39,6 @@ As usual, credit to Roberto Rodriguez and the [ThreatHunter Playbook](https://gi
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

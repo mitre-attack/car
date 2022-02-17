@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Splunk Threat Research <research@splunk.com>
 applicable_platforms: Windows
 ---
-
+<br><br>
 Adversaries may add their own root certificate to the certificate store, to cause the web browser to trust that certificate and not display a security warning when it encounters the previously unseen certificate. This action may be the precursor to malicious activity.
 
 
@@ -34,9 +34,6 @@ Adversaries may add their own root certificate to the certificate store, to caus
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

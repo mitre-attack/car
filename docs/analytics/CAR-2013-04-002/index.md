@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows, Linux, macOS
 ---
-
+<br><br>
 Certain commands are frequently used by malicious actors and infrequently used by normal users. By looking for execution of these commands in short periods of time, we can not only see when a malicious user was on the system but also get an idea of what they were doing.
 
   Commands of interest:
@@ -91,9 +91,6 @@ The host on which the commands were executed, the time of execution, and what co
 |[process](/data_model/process) | [create](/data_model/process#create) | [ppid](/data_model/process#ppid) |
 |[process](/data_model/process) | [create](/data_model/process#create) | [exe](/data_model/process#exe) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
+<br><br>
 Adversaries may schedule software to run whenever a user logs into the system; this is done to establish persistence and sometimes for lateral movement. This trigger is established through the registry key HKEY_CURRENT_USER\Environment*UserInitMprLogonScript*. This signature looks edits to existing keys or creation of new keys in that path. Users purposefully adding benign scripts to this path will result in false positives; that case is rare, however. There are other ways of running a script at startup or login that are not covered in this signature. Note that this signature overlaps with the Windows Sysinternals Autoruns tool, which would also show changes to this registry path.  
 
 
@@ -36,9 +36,6 @@ Adversaries may schedule software to run whenever a user logs into the system; t
 |[registry](/data_model/registry) | [add](/data_model/registry#add) | [key](/data_model/registry#key) |
 |[registry](/data_model/registry) | [edit](/data_model/registry#edit) | [key](/data_model/registry#key) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

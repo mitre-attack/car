@@ -8,7 +8,7 @@ analytic_type: TTP
 contributors: Cyware Labs
 applicable_platforms: Windows
 ---
-
+<br><br>
 Threat actors often, after compromising a machine, try to disable User Access Control (UAC) to escalate privileges. This is often done by changing the registry key for system policies using “reg.exe”, a legitimate tool provided by Microsoft for modifying the registry via command prompt or scripts. This action interferes with UAC and may enable a threat actor to escalate privileges on the compromised system, thereby allowing further exploitation of the system.
 
 
@@ -34,9 +34,6 @@ Threat actors often, after compromising a machine, try to disable User Access Co
 |[process](/data_model/process) | [create](/data_model/process#create) | [image_path](/data_model/process#image_path) |
 |[process](/data_model/process) | [create](/data_model/process#create) | [command_line](/data_model/process#command_line) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations

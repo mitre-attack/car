@@ -8,7 +8,7 @@ analytic_type: Situational Awareness
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
+<br><br>
 In order to gain persistence, privilege escalation, or remote execution, an adversary may use the Windows Task Scheduler to schedule a command to be run at a specified time, date, and even host. Task Scheduler stores tasks as files in two locations - C:\Windows\Tasks (legacy) or C:\Windows\System32\Tasks. Accordingly, this analytic looks for the creation of task files in these two locations.
 
 
@@ -34,9 +34,6 @@ In order to gain persistence, privilege escalation, or remote execution, an adve
 |[file](/data_model/file) | [create](/data_model/file#create) | [file_path](/data_model/file#file_path) |
 |[file](/data_model/file) | [create](/data_model/file#create) | [image_path](/data_model/file#image_path) |
 
-
-
-### Applicable Sensors
 
 
 ### Implementations
