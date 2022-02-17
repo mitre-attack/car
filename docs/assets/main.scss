@@ -33,7 +33,7 @@ footer p {
 }
 
 div.analytics-table + table {
-    table-layout: auto;
+    table-layout: fixed;
 
     thead tr th:first-child {
         width: 600px;
