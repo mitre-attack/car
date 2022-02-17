@@ -19,6 +19,12 @@ Detection of the creation or modification of Scheduled Tasks with a suspicious s
 |[Scheduled Task/Job](https://attack.mitre.org/techniques/T1053/)|[Scheduled Task](https://attack.mitre.org/techniques/T1053/005/)|[Execution](https://attack.mitre.org/tactics/TA0002/), [Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Medium|
 
 
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
 
 
 ### Data Model References

@@ -20,6 +20,12 @@ Detection of the modification of the registry key `Common Startup` located in `H
 |[Modify Registry](https://attack.mitre.org/techniques/T1112/)|N/A|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Medium|
 
 
+### D3FEND Techniques
+
+|ID|Name|
+|---|---| 
+|D3-PSA | [Process Spawn Analysis](https://d3fend.mitre.org/technique/d3f:ProcessSpawnAnalysis)| 
+
 
 
 ### Data Model References
