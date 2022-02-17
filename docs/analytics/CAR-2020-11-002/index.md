@@ -8,7 +8,8 @@ analytic_type: Situational Awareness
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-<br><br>
+
+
 Adversaries may use a variety of tools to gain visibility on the current status of things on the network: which processes are listening on which ports, which services are running on other hosts, etc. This analytic looks for the names of the most common network sniffing tools. While this may be noisy on networks where sysadmins are using any of these tools on a regular basis, in most networks their use is noteworthy.
 
 

@@ -8,7 +8,8 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-<br><br>
+
+
 Bypassing user account control (UAC Bypass) is generally done by piggybacking on a system process that has auto-escalate privileges. This analytic looks to detect those cases as described by the open-source [UACME](https://github.com/hfiref0x/UACME) tool.
 
 

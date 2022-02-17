@@ -8,7 +8,8 @@ analytic_type: TTP
 contributors: Nichols Jasper
 applicable_platforms: Windows
 ---
-<br><br>
+
+
 A web shell is a web script placed on an openly accessible web server to allow an adversary to use the server as a gatway in a network. As the shell operates, commands will be issued from within the web application into the broader server operating system. This analytic looks for host enumeration executables initiated by any web service that would not normally be executed within that environment. 
 
 

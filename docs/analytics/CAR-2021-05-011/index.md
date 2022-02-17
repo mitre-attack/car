@@ -8,7 +8,8 @@ analytic_type: TTP
 contributors: Splunk Threat Research <research@splunk.com>
 applicable_platforms: Windows
 ---
-<br><br>
+
+
 Actors may create a remote thread into the LSASS service as part of a workflow to dump credentials.
 
 

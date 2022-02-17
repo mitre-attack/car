@@ -8,7 +8,8 @@ analytic_type: TTP
 contributors: Lucas Heiligenstein
 applicable_platforms: Windows
 ---
-<br><br>
+
+
 Detection of modification of the registry key values of `Notify`, `Userinit`, and `Shell` located in `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\` and `HKEY_LOCAL_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\`. When a user logs on, the Registry key values of `Notify`, `Userinit` and `Shell` are used to load dedicated Windows component. Attackers may insert malicious payload following the legitimate value to launch a malicious payload.
 
 

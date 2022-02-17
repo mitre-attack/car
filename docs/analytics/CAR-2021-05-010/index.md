@@ -8,7 +8,8 @@ analytic_type: TTP
 contributors: Splunk Threat Research <research@splunk.com>
 applicable_platforms: Windows
 ---
-<br><br>
+
+
 This search looks for the creation of local administrator accounts using net.exe.
 
 

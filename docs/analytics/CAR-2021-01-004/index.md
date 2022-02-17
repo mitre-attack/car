@@ -8,7 +8,8 @@ analytic_type: Anomaly
 contributors: Cyware Labs
 applicable_platforms: Windows
 ---
-<br><br>
+
+
 After gaining initial access to a system, threat actors attempt to escalate privileges as they may be operating within a lower privileged process which does not allow them to access protected information or carry out tasks which require higher permissions. A common way of escalating privileges in a system is by externally invoking and exploiting spoolsv or connhost executables, both of which are legitimate Windows applications. This query searches for an invocation of either of these executables by a user, thus alerting us of any potentially malicious activity.
 
 

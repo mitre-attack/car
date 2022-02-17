@@ -8,7 +8,8 @@ analytic_type: Situational Awareness
 contributors: Cyware Labs
 applicable_platforms: Windows, Linux
 ---
-<br><br>
+
+
 After compromising an initial machine, adversaries commonly attempt to laterally move across the network. The first step to attempt the lateral movement often involves conducting host identification, port and service scans on the internal network via the compromised machine using tools such as Nmap, Cobalt Strike, etc.
 
 

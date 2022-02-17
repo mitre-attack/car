@@ -8,7 +8,8 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-<br><br>
+
+
 Adversaries may use [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047) (WMI) to move laterally, by launching executables remotely.The analytic [CAR-2014-12-001](../CAR-2014-12-001) describes how to detect these processes with network traffic monitoring and process monitoring on the target host. However, if the command line utility `wmic.exe` is used on the source host, then it can additionally be detected on an analytic. The command line on the source host is constructed into something like `wmic.exe /node:"\<hostname\>" process call create "\<command line\>"`. It is possible to also connect via IP address, in which case the string `"\<hostname\>"` would instead look like `IP Address`. 
 
 Although this analytic was created after [CAR-2014-12-001](../CAR-2014-12-001), it is a much simpler (although more limited) approach. Processes can be created remotely via WMI in a few other ways, such as more direct API access or the built-in utility [PowerShell](https://attack.mitre.org/T1059/001).

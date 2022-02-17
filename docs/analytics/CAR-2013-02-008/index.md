@@ -8,7 +8,8 @@ analytic_type: Situational Awareness
 contributors: MITRE
 applicable_platforms: Windows, Linux, macOS
 ---
-<br><br>
+
+
 Multiple users logged into a single machine at the same time, or even within the same hour, do not typically occur in networks we have observed.
 
 Logon events are Windows Event Code 4624 for Windows Vista and above, 518 for pre-Vista. Logoff events are 4634 for Windows Vista and above, 538 for pre-Vista.
