@@ -24,7 +24,6 @@ mappings:
       - sha256_hash
       - user
       - uid
-
   - object: file
     action: delete
     notes: 'Mapped to the process_file_events, file, and file_events tables.'
