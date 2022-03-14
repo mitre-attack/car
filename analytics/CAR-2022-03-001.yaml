@@ -1,0 +1,71 @@
+
+---
+title: Disable Windows Event Logging
+submission_date: 2020/03/14
+information_domain: 'Host'
+platforms:
+  - Windows
+subtypes:
+  - Process
+analytic_types:
+  - TTP
+contributors:
+  - Lucas Heiligenstein
+id: CAR-2022-03-001
+description: |-
+  Adversaries may disable Windows event logging to limit data that can be leveraged for detections and audits. Windows event logs record user and system activity such as login attempts, process creation, and much more. This data is used by security tools and analysts to generate detections. There are different ways to perform this attack.
+  - The first one is to create the Registry Key "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\MiniNt". This action will not generate Security EventLog 4657 or Sysmon EventLog 13 because the value of the key remains empty. However, if an attacker uses powershell to perform this attack (and not cmd), a Security EventLog 4663 will be generated (but 4663 generates a lot of noise).
+  - The second way is to disable the service EventLog (display name Windows Event Log). After disabed, attacker must reboot the system. The action of disabling or put in manual the service will modify the Registry Key value "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\start", therefore Security EventLog 4657 or Sysmon EventLog 13 will be generated on the system.
+  - The third way is linked with the second. By default, the EventLog service cannot be stopped. If an attacker tries to stop the service, this one will restart immediately. Why ? Because to stop completely, this service must stop others, one in particular called netprofm (display name Network List Service). This service remains running until it is disabled. So Attacker must either disable EventLog and after to stop it or disable netprofm and after stop EventLog. Only stopping the service (even as admin) will not have an effect on the EventLog service because of the link with netprofm. Security EventLog 1100 will log the stop of the EventLog service (but also generates a lot of noise because it will generate a log everytime the system shutdown).
+  - The fourth way is to use auditpol.exe to modify the audit configuration and disable/modify important parameters that will lead to disable the creation of EventLog.
+  - The last one is to modify the Registry Key value "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security\file" (or other kind of log) to modify the path where the EventLog are stocked. Importantly, with this technique, the EventViewer will use the value of the Registry Key "file" to know where to find the Log. Thus, using the EventViewer will always show the current event logs, but the old one will be stocked in another evtx. Also, the path must be in a folder that the Eventlog process has access (like it doesn’t work if attacker set up the new path in the Desktop). Attacker can also decrease the maxsize value of the Log to force the system to rewrite on the older EventLog (but the minimum cannot be less than 1028 KB). As the Registry key is modified, Security EventLog 4657 or Sysmon EventLog 13 will be generated on the system. All of these attacks required administrative right. Attacks number three, four and five do not require a system reboot to be effective immediately.
+coverage:
+  - technique: T1562.002
+    tactics:
+      - TA0005
+    coverage: Medium
+implementations:
+  - name: Detection of Disable Windows Event Logging
+    description: Splunk version of the CAR pseudocode.
+    code: |-
+      ((EventCode="4688" OR EventCode="1") ((CommandLine="*New-Item*" OR CommandLine="*reg add*") CommandLine="*MiniNt*")OR (CommandLine="*Stop-Service*" CommandLine="*EventLog*")OR (CommandLine="*EventLog*" (CommandLine="*Set-Service*" OR CommandLine="*reg add*" OR CommandLine="*Set-ItemProperty*" OR CommandLine="*New-ItemProperty*" OR CommandLine="*sc config*")) OR (CommandLine="*auditpol*" (CommandLine="*/set*" OR CommandLine="*/clear*" OR CommandLine="*/revove*")) OR ((CommandLine="*wevtutil*" (CommandLine="*sl*" OR CommandLine="*set-log*")))) OR (EventCode="4719") OR ((EventCode="4657" OR EventCode="13") (ObjectName="*EventLog*") (ObjectValueName="Start" OR ObjectValueName="File" OR ObjectValueName="MaxSize"))
+    type: Splunk
+  - name: Detection of Disable Windows Event Logging
+    description: LogPoint version of the CAR pseudocode.
+    code: |-
+      ((((((EventCode IN ["4688", "1"] CommandLine="*New-Item*" CommandLine="*reg add*" CommandLine IN "*MiniNt*") OR (CommandLine="*Stop-Service*" CommandLine="*EventLog*")) OR (CommandLine IN ["*Set-Service*", "*reg add*", "*Set-ItemProperty*", "*New-ItemProperty*", "*sc config*"] CommandLine IN "*EventLog*")) OR (CommandLine IN "*auditpol*" CommandLine IN ["*/set*", "*/clear*", "*/revove*"])) OR (CommandLine IN "*wevtutil*" CommandLine IN ["*sl*", "*set-log*"]) OR EventCode IN "4719") OR (EventCode IN ["4657", "13"] ObjectName IN "*EventLog*" ObjectValueName IN ["Start", "File", "MaxSize"]))
+    type: LogPoint
+unit_tests:
+- configurations:
+  description: MiniNt Registry Key creation with cmd.
+  commands:
+  - reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\MiniNt"
+- configurations:
+  description: MiniNt Registry Key creation with powershell.
+  commands:
+  - New-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Control\MiniNt"
+- configurations:
+  description: Disable EvenLog Service with Set-Service.
+  commands:
+  - Set-Service -Name EventLog -StartupType Disabled
+- configurations:
+  description: Registry Key modification to disable EventLog Service.
+  commands:
+  - reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog" /v start /t REG_DWORD /d 0x00000004 /f
+- configurations:
+  description: Stop EventLog Service with Stop-Service.
+  commands:
+  - Stop-Service -Name EventLog -Force
+- configurations:
+  description: Audit configuration modification to disable EventLog with auditpol.
+  commands:
+  - auditpol.exe /set /subcategory:"Process Creation" /success:Disable /failure:Disable
+- configurations:
+  description: Modification of Security EventLog path with wevtutil.
+  commands:
+  - wevtutil.exe sl Security /logfilename:"C:\Windows\System32\winevt\Not-Important-Log.evtx"
+data_model_references:
+  - registry/add/key
+  - process/create/command_line
+references:
+  - https://ptylu.github.io/content/report/report.html?report=25
