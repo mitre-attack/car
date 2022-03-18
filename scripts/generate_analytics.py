@@ -86,11 +86,36 @@ permalink: /analytics/
 """
 table_footer = """      </tbody>\n</table>"""
 
-subtechnique_table = """---
+tr_tech_template = '''       <tr>
+            <td {0}>{1}</td>
+        </tr>
+'''
+
+tr_template = '''       <tr>
+            <td {0}>{1}</td>
+            <td>{2}</td>
+            <td>{3}</td>
+        </tr>
+'''
+
+tr_sub_template = '''       <tr>
+            <td>{0}</td>
+            <td>{1}</td>
+        </tr>
+'''
+
+subtechnique_table = """
 ## Analytic List (by technique/sub-technique coverage)
 
-|ATT&CK Technique|ATT&CK Sub-technique(s)|CAR Analytic(s)|
-|---|---|---|
+<table>
+    <thead>
+        <tr>
+            <th style="white-space:nowrap;">ATT&CK Technique</th>
+            <th style="white-space:nowrap;">ATT&CK Sub-technique(s)</th>
+            <th style="white-space:nowrap;">CAR Analytic(s)</th>
+        </tr>
+    </thead>
+    <tbody>
 """
 
 # Build the first (date-based) table
@@ -149,29 +174,43 @@ for tid in table_techniques:
     none_str = ""
     none_sub_str = "(N/A - see below)"
     if none_bucket:
-        none_str += "{::nomarkdown}<ul>"
+        none_str += "<ul>"
         for analytic in sorted(none_bucket, key = lambda k: k['id']):
             none_str += "<li><a href=\"{}\">{}: {}</a></li>".format(analytic['id'], analytic['id'], analytic['title'])
-        none_str += "</ul>{:/}"
+        none_str += "</ul>"
         none_sub_str = "(N/A - technique only)"
     else:
         none_str = "(N/A - see below)"
     if len(sub_bucket.keys()) > 1:
-      subtechnique_table += "|[{}](https://attack.mitre.org/techniques/{}/)|{}|{}|\n".format(techniques[tid],tid,none_sub_str,none_str)
+      num_rows = len(sub_bucket.keys()) + 1
+      tid_url = "https://attack.mitre.org/techniques/{0}/".format(tid)
+      tid_link = '<a href="{0}">{1}</a>'.format(tid_url,techniques[tid])
+      rowspan = 'rowspan="{0}"'.format(num_rows)
+      if none_sub_str == "(N/A - technique only)":
+        subtechnique_table += tr_template.format(rowspan,tid_link,none_sub_str,none_str)
+      else:
+        subtechnique_table += tr_tech_template.format(rowspan,tid_link)    
     # Write the subtechniques to the table
     if sub_bucket:
         for sub_tid, car_list in sub_bucket.items():
-            sub_str = "{::nomarkdown}<ul>"
+            sub_str = "<ul>"
             # Build the list of CAR analytics
             for analytic in sorted(car_list, key = lambda k: k['id']):
                 sub_str += "<li><a href=\"{}\">{}: {}</a></li>".format(analytic['id'], analytic['id'], analytic['title'])
-            sub_str += "</ul>{:/}"
+            sub_str += "</ul>"
             # Write the sub-technique entry to the table
             # Corner case where there is only one sub-technique and no technique-only analytics
             if not none_bucket and len(sub_bucket.keys()) == 1:
-              subtechnique_table += "|[{}](https://attack.mitre.org/techniques/{}/)|[{}](https://attack.mitre.org/techniques/{}/{}/)|{}|\n".format(techniques[tid],tid,techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
+              tid_url = "https://attack.mitre.org/techniques/{0}/".format(tid)
+              sub_url = "https://attack.mitre.org/techniques/{0}/{1}/".format(sub_tid.split(".")[0],sub_tid.split(".")[1])
+              tid_link = '<a href="{0}">{1}</a>'.format(tid_url,techniques[tid])
+              sub_link = '<a href="{0}">{1}</a>'.format(sub_url,techniques[sub_tid])
+              subtechnique_table += tr_template.format("",tid_link,sub_link,sub_str)
             else:
-              subtechnique_table += "|...|[{}](https://attack.mitre.org/techniques/{}/{}/)|{}|\n".format(techniques[sub_tid],sub_tid.split(".")[0],sub_tid.split(".")[1],sub_str)
+              sub_url = "https://attack.mitre.org/techniques/{0}/{1}/".format(sub_tid.split(".")[0],sub_tid.split(".")[1])
+              sub_link = '<a href="{0}">{1}</a>'.format(sub_url,techniques[sub_tid])
+              subtechnique_table += tr_sub_template.format(sub_link,sub_str)
+subtechnique_table += table_footer
 
 # Write the tables
 index_file = open('../docs/analytics/index.md', 'w')
