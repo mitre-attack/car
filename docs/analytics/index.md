@@ -829,92 +829,437 @@ permalink: /analytics/
             </tr>
       </tbody>
 </table>
----
+
 ## Analytic List (by technique/sub-technique coverage)
 
-|ATT&CK Technique|ATT&CK Sub-technique(s)|CAR Analytic(s)|
-|---|---|---|
-|[Create or Modify System Process](https://attack.mitre.org/techniques/T1543/)|[Windows Service](https://attack.mitre.org/techniques/T1543/003/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-09-005">CAR-2013-09-005: Service Outlier Executables</a></li><li><a href="CAR-2014-02-001">CAR-2014-02-001: Service Binary Modifications</a></li><li><a href="CAR-2014-03-005">CAR-2014-03-005: Remotely Launched Executables via Services</a></li><li><a href="CAR-2014-05-002">CAR-2014-05-002: Services launching Cmd</a></li></ul>{:/}|
-|[Scheduled Task/Job](https://attack.mitre.org/techniques/T1053/)|(N/A - see below)|(N/A - see below)|
-|...|[Scheduled Task](https://attack.mitre.org/techniques/T1053/005/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-08-001">CAR-2013-08-001: Execution with schtasks</a></li><li><a href="CAR-2015-04-002">CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks</a></li><li><a href="CAR-2020-09-001">CAR-2020-09-001: Scheduled Task - FileAccess</a></li><li><a href="CAR-2021-12-001">CAR-2021-12-001: Scheduled Task Creation or Modification Containing Suspicious Scripts, Extensions or User Writable Paths</a></li></ul>{:/}|
-|...|[At (Windows)](https://attack.mitre.org/techniques/T1053/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-05-004">CAR-2013-05-004: Execution with AT</a></li><li><a href="CAR-2015-04-001">CAR-2015-04-001: Remotely Scheduled Tasks via AT</a></li></ul>{:/}|
-|[Boot or Logon Autostart Execution](https://attack.mitre.org/techniques/T1547/)|(N/A - see below)|(N/A - see below)|
-|...|[Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-03-001">CAR-2013-03-001: Reg.exe called from Command Shell</a></li><li><a href="CAR-2020-05-003">CAR-2020-05-003: Rare LolBAS Command Lines</a></li><li><a href="CAR-2021-12-002">CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'</a></li></ul>{:/}|
-|...|[Port Monitors](https://attack.mitre.org/techniques/T1547/010/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
-|...|[Winlogon Helper DLL](https://attack.mitre.org/techniques/T1547/004/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2021-11-002">CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify</a></li></ul>{:/}|
-|[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|(N/A - see below)|(N/A - see below)|
-|...|[Services File Permissions Weakness](https://attack.mitre.org/techniques/T1574/010/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-02-001">CAR-2014-02-001: Service Binary Modifications</a></li></ul>{:/}|
-|...|[DLL Search Order Hijacking](https://attack.mitre.org/techniques/T1574/001/)|{::nomarkdown}<ul><li><a href="CAR-2021-11-001">CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0</a></li></ul>{:/}|
-|...|[Services Registry Permissions Weakness](https://attack.mitre.org/techniques/T1574/011/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-03-001">CAR-2013-03-001: Reg.exe called from Command Shell</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2020-05-003">CAR-2020-05-003: Rare LolBAS Command Lines</a></li></ul>{:/}|
-|...|[Path Interception by PATH Environment Variable](https://attack.mitre.org/techniques/T1574/007/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
-|...|[Path Interception by Search Order Hijacking](https://attack.mitre.org/techniques/T1574/008/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
-|...|[Path Interception by Unquoted Path](https://attack.mitre.org/techniques/T1574/009/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-07-001">CAR-2014-07-001: Service Search Path Interception</a></li></ul>{:/}|
-|[Event Triggered Execution](https://attack.mitre.org/techniques/T1546/)|(N/A - see below)|(N/A - see below)|
-|...|[Accessibility Features](https://attack.mitre.org/techniques/T1546/008/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-11-003">CAR-2014-11-003: Debuggers for Accessibility Applications</a></li><li><a href="CAR-2014-11-008">CAR-2014-11-008: Command Launched from WinLogon</a></li></ul>{:/}|
-|...|[Component Object Model Hijacking](https://attack.mitre.org/techniques/T1546/015/)|{::nomarkdown}<ul><li><a href="CAR-2020-09-002">CAR-2020-09-002: Component Object Model Hijacking</a></li></ul>{:/}|
-|...|[Change Default File Association](https://attack.mitre.org/techniques/T1546/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
-|...|[Windows Management Instrumentation Event Subscription](https://attack.mitre.org/techniques/T1546/003/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul>{:/}|
-|...|[AppInit DLLs](https://attack.mitre.org/techniques/T1546/010/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2020-09-005">CAR-2020-09-005: AppInit DLLs</a></li></ul>{:/}|
-|...|[Screensaver](https://attack.mitre.org/techniques/T1546/002/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-011">CAR-2020-11-011: Registry Edit from Screensaver</a></li></ul>{:/}|
-|[Boot or Logon Initialization Scripts](https://attack.mitre.org/techniques/T1037/)|[Logon Script (Windows)](https://attack.mitre.org/techniques/T1037/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2020-11-001">CAR-2020-11-001: Boot or Logon Initialization Scripts</a></li></ul>{:/}|
-|[Remote Services](https://attack.mitre.org/techniques/T1021/)|(N/A - technique only)|{::nomarkdown}<ul><li><a href="CAR-2013-07-001">CAR-2013-07-001: Suspicious Arguments</a></li></ul>{:/}|
-|...|[Remote Desktop Protocol](https://attack.mitre.org/techniques/T1021/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-07-002">CAR-2013-07-002: RDP Connection Detection</a></li><li><a href="CAR-2013-10-001">CAR-2013-10-001: User Login Activity Monitoring</a></li><li><a href="CAR-2016-04-005">CAR-2016-04-005: Remote Desktop Logon</a></li></ul>{:/}|
-|...|[SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-01-003">CAR-2013-01-003: SMB Events Monitoring</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-05-003">CAR-2013-05-003: SMB Write Request</a></li><li><a href="CAR-2013-05-005">CAR-2013-05-005: SMB Copy and Execution</a></li><li><a href="CAR-2014-05-001">CAR-2014-05-001: RPC Activity</a></li></ul>{:/}|
-|...|[Distributed Component Object Model](https://attack.mitre.org/techniques/T1021/003/)|{::nomarkdown}<ul><li><a href="CAR-2014-05-001">CAR-2014-05-001: RPC Activity</a></li></ul>{:/}|
-|...|[Windows Remote Management](https://attack.mitre.org/techniques/T1021/006/)|{::nomarkdown}<ul><li><a href="CAR-2014-05-001">CAR-2014-05-001: RPC Activity</a></li><li><a href="CAR-2014-11-004">CAR-2014-11-004: Remote PowerShell Sessions</a></li><li><a href="CAR-2014-11-006">CAR-2014-11-006: Windows Remote Management (WinRM)</a></li></ul>{:/}|
-|[Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)|(N/A - technique only)|{::nomarkdown}<ul><li><a href="CAR-2021-01-002">CAR-2021-01-002: Unusually Long Command Line Strings</a></li></ul>{:/}|
-|...|[Windows Command Shell](https://attack.mitre.org/techniques/T1059/003/)|{::nomarkdown}<ul><li><a href="CAR-2013-02-003">CAR-2013-02-003: Processes Spawning cmd.exe</a></li><li><a href="CAR-2014-11-002">CAR-2014-11-002: Outlier Parents of Cmd</a></li></ul>{:/}|
-|...|[Visual Basic](https://attack.mitre.org/techniques/T1059/005/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li></ul>{:/}|
-|...|[PowerShell](https://attack.mitre.org/techniques/T1059/001/)|{::nomarkdown}<ul><li><a href="CAR-2014-04-003">CAR-2014-04-003: Powershell Execution</a></li><li><a href="CAR-2014-11-004">CAR-2014-11-004: Remote PowerShell Sessions</a></li></ul>{:/}|
-|[Valid Accounts](https://attack.mitre.org/techniques/T1078/)|(N/A - see below)|(N/A - see below)|
-|...|[Domain Accounts](https://attack.mitre.org/techniques/T1078/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-02-008">CAR-2013-02-008: Simultaneous Logins on a Host</a></li><li><a href="CAR-2013-02-012">CAR-2013-02-012: User Logged in to Multiple Hosts</a></li><li><a href="CAR-2013-05-003">CAR-2013-05-003: SMB Write Request</a></li><li><a href="CAR-2013-05-005">CAR-2013-05-005: SMB Copy and Execution</a></li><li><a href="CAR-2013-10-001">CAR-2013-10-001: User Login Activity Monitoring</a></li></ul>{:/}|
-|...|[Local Accounts](https://attack.mitre.org/techniques/T1078/003/)|{::nomarkdown}<ul><li><a href="CAR-2013-02-008">CAR-2013-02-008: Simultaneous Logins on a Host</a></li><li><a href="CAR-2013-02-012">CAR-2013-02-012: User Logged in to Multiple Hosts</a></li><li><a href="CAR-2013-05-003">CAR-2013-05-003: SMB Write Request</a></li><li><a href="CAR-2013-05-005">CAR-2013-05-005: SMB Copy and Execution</a></li><li><a href="CAR-2013-10-001">CAR-2013-10-001: User Login Activity Monitoring</a></li></ul>{:/}|
-|[Account Discovery](https://attack.mitre.org/techniques/T1087/)|(N/A - see below)|(N/A - see below)|
-|...|[Local Account](https://attack.mitre.org/techniques/T1087/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li></ul>{:/}|
-|...|[Domain Account](https://attack.mitre.org/techniques/T1087/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li></ul>{:/}|
-|[OS Credential Dumping](https://attack.mitre.org/techniques/T1003/)|(N/A - see below)|(N/A - see below)|
-|...|[NTDS](https://attack.mitre.org/techniques/T1003/003/)|{::nomarkdown}<ul><li><a href="CAR-2019-08-002">CAR-2019-08-002: Active Directory Dumping via NTDSUtil</a></li><li><a href="CAR-2020-05-001">CAR-2020-05-001: MiniDump of LSASS</a></li></ul>{:/}|
-|...|[LSASS Memory](https://attack.mitre.org/techniques/T1003/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-07-001">CAR-2013-07-001: Suspicious Arguments</a></li><li><a href="CAR-2019-04-004">CAR-2019-04-004: Credential Dumping via Mimikatz</a></li><li><a href="CAR-2019-07-002">CAR-2019-07-002: Lsass Process Dump via Procdump</a></li><li><a href="CAR-2019-08-001">CAR-2019-08-001: Credential Dumping via Windows Task Manager</a></li><li><a href="CAR-2021-05-011">CAR-2021-05-011: Create Remote Thread into LSASS</a></li></ul>{:/}|
-|...|[Security Account Manager](https://attack.mitre.org/techniques/T1003/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li></ul>{:/}|
-|[Permission Groups Discovery](https://attack.mitre.org/techniques/T1069/)|(N/A - see below)|(N/A - see below)|
-|...|[Local Groups](https://attack.mitre.org/techniques/T1069/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li><li><a href="CAR-2020-11-006">CAR-2020-11-006: Local Permission Group Discovery</a></li></ul>{:/}|
-|...|[Domain Groups](https://attack.mitre.org/techniques/T1069/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li><li><a href="CAR-2020-11-006">CAR-2020-11-006: Local Permission Group Discovery</a></li></ul>{:/}|
-|[System Services](https://attack.mitre.org/techniques/T1569/)|(N/A - see below)|(N/A - see below)|
-|...|[Launchctl](https://attack.mitre.org/techniques/T1569/001/)|{::nomarkdown}<ul><li><a href="CAR-2021-05-012">CAR-2021-05-012: Create Service In Suspicious File Path</a></li></ul>{:/}|
-|...|[Service Execution](https://attack.mitre.org/techniques/T1569/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2014-02-001">CAR-2014-02-001: Service Binary Modifications</a></li><li><a href="CAR-2014-03-005">CAR-2014-03-005: Remotely Launched Executables via Services</a></li></ul>{:/}|
-|[Software Discovery](https://attack.mitre.org/techniques/T1518/)|[Security Software Discovery](https://attack.mitre.org/techniques/T1518/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li></ul>{:/}|
-|[Impair Defenses](https://attack.mitre.org/techniques/T1562/)|(N/A - see below)|(N/A - see below)|
-|...|[Disable or Modify Tools](https://attack.mitre.org/techniques/T1562/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-04-003">CAR-2016-04-003: User Activity from Stopping Windows Defensive Services</a></li><li><a href="CAR-2021-01-007">CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt</a></li></ul>{:/}|
-|...|[Indicator Blocking](https://attack.mitre.org/techniques/T1562/006/)|{::nomarkdown}<ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2020-09-003">CAR-2020-09-003: Indicator Blocking - Driver Unloaded</a></li></ul>{:/}|
-|[Masquerading](https://attack.mitre.org/techniques/T1036/)|(N/A - technique only)|{::nomarkdown}<ul><li><a href="CAR-2013-05-002">CAR-2013-05-002: Suspicious Run Locations</a></li></ul>{:/}|
-|...|[Rename System Utilities](https://attack.mitre.org/techniques/T1036/003/)|{::nomarkdown}<ul><li><a href="CAR-2013-05-009">CAR-2013-05-009: Running executables with same hash and different names</a></li></ul>{:/}|
-|...|[Match Legitimate Name or Location](https://attack.mitre.org/techniques/T1036/005/)|{::nomarkdown}<ul><li><a href="CAR-2021-04-001">CAR-2021-04-001: Common Windows Process Masquerading</a></li></ul>{:/}|
-|[Archive Collected Data](https://attack.mitre.org/techniques/T1560/)|[Archive via Utility](https://attack.mitre.org/techniques/T1560/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-07-005">CAR-2013-07-005: Command Line Usage of Archiving Software</a></li></ul>{:/}|
-|[Process Injection](https://attack.mitre.org/techniques/T1055/)|(N/A - see below)|(N/A - see below)|
-|...|[Process Hollowing](https://attack.mitre.org/techniques/T1055/012/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-004">CAR-2020-11-004: Processes Started From Irregular Parent</a></li></ul>{:/}|
-|...|[Dynamic-link Library Injection](https://attack.mitre.org/techniques/T1055/001/)|{::nomarkdown}<ul><li><a href="CAR-2013-10-002">CAR-2013-10-002: DLL Injection via Load Library</a></li><li><a href="CAR-2020-11-003">CAR-2020-11-003: DLL Injection with Mavinject</a></li></ul>{:/}|
-|...|[Bypass User Account Control](https://attack.mitre.org/techniques/T1548/002/)|{::nomarkdown}<ul><li><a href="CAR-2013-10-002">CAR-2013-10-002: DLL Injection via Load Library</a></li><li><a href="CAR-2019-04-001">CAR-2019-04-001: UAC Bypass</a></li><li><a href="CAR-2021-01-008">CAR-2021-01-008: Disable UAC</a></li></ul>{:/}|
-|[Signed Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|(N/A - see below)|(N/A - see below)|
-|...|[Regsvr32](https://attack.mitre.org/techniques/T1218/010/)|{::nomarkdown}<ul><li><a href="CAR-2019-04-002">CAR-2019-04-002: Generic Regsvr32</a></li><li><a href="CAR-2019-04-003">CAR-2019-04-003: Squiblydoo</a></li></ul>{:/}|
-|...|[Compiled HTML File](https://attack.mitre.org/techniques/T1218/001/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-009">CAR-2020-11-009: Compiled HTML Access</a></li></ul>{:/}|
-|...|[Rundll32](https://attack.mitre.org/techniques/T1218/011/)|{::nomarkdown}<ul><li><a href="CAR-2014-03-006">CAR-2014-03-006: RunDLL32.exe monitoring</a></li></ul>{:/}|
-|...|[CMSTP](https://attack.mitre.org/techniques/T1218/003/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-010">CAR-2020-11-010: CMSTP</a></li></ul>{:/}|
-|[Indicator Removal on Host](https://attack.mitre.org/techniques/T1070/)|(N/A - see below)|(N/A - see below)|
-|...|[Clear Command History](https://attack.mitre.org/techniques/T1070/003/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-005">CAR-2020-11-005: Clear Powershell Console Command History</a></li></ul>{:/}|
-|...|[Clear Windows Event Logs](https://attack.mitre.org/techniques/T1070/001/)|{::nomarkdown}<ul><li><a href="CAR-2016-04-002">CAR-2016-04-002: User Activity from Clearing Event Logs</a></li><li><a href="CAR-2021-01-003">CAR-2021-01-003: Clearing Windows Logs with Wevtutil</a></li></ul>{:/}|
-|...|[Network Share Connection Removal](https://attack.mitre.org/techniques/T1070/005/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-007">CAR-2020-11-007: Network Share Connection Removal</a></li></ul>{:/}|
-|[Use Alternate Authentication Material](https://attack.mitre.org/techniques/T1550/)|[Pass the Hash](https://attack.mitre.org/techniques/T1550/002/)|{::nomarkdown}<ul><li><a href="CAR-2016-04-004">CAR-2016-04-004: Successful Local Account Login</a></li></ul>{:/}|
-|[File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/)|(N/A - see below)|(N/A - see below)|
-|...|[Windows File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/001/)|{::nomarkdown}<ul><li><a href="CAR-2019-07-001">CAR-2019-07-001: Access Permission Modification</a></li></ul>{:/}|
-|...|[Linux and Mac File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/002/)|{::nomarkdown}<ul><li><a href="CAR-2019-07-001">CAR-2019-07-001: Access Permission Modification</a></li></ul>{:/}|
-|[Hide Artifacts](https://attack.mitre.org/techniques/T1564/)|[NTFS File Attributes](https://attack.mitre.org/techniques/T1564/004/)|{::nomarkdown}<ul><li><a href="CAR-2020-08-001">CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities</a></li><li><a href="CAR-2020-08-002">CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS</a></li></ul>{:/}|
-|[Unsecured Credentials](https://attack.mitre.org/techniques/T1552/)|(N/A - see below)|(N/A - see below)|
-|...|[Credentials In Files](https://attack.mitre.org/techniques/T1552/001/)|{::nomarkdown}<ul><li><a href="CAR-2020-09-004">CAR-2020-09-004: Credentials in Files & Registry</a></li></ul>{:/}|
-|...|[Credentials in Registry](https://attack.mitre.org/techniques/T1552/002/)|{::nomarkdown}<ul><li><a href="CAR-2020-09-004">CAR-2020-09-004: Credentials in Files & Registry</a></li></ul>{:/}|
-|[Trusted Developer Utilities Proxy Execution](https://attack.mitre.org/techniques/T1127/)|[MSBuild](https://attack.mitre.org/techniques/T1127/001/)|{::nomarkdown}<ul><li><a href="CAR-2020-11-008">CAR-2020-11-008: MSBuild and msxsl</a></li></ul>{:/}|
-|[Inter-Process Communication](https://attack.mitre.org/techniques/T1559/)|[Dynamic Data Exchange](https://attack.mitre.org/techniques/T1559/002/)|{::nomarkdown}<ul><li><a href="CAR-2021-01-006">CAR-2021-01-006: Unusual Child Process spawned using DDE exploit</a></li></ul>{:/}|
-|[Server Software Component](https://attack.mitre.org/techniques/T1505/)|[Web Shell](https://attack.mitre.org/techniques/T1505/003/)|{::nomarkdown}<ul><li><a href="CAR-2021-02-001">CAR-2021-02-001: Webshell-Indicative Process Tree</a></li></ul>{:/}|
-|[Subvert Trust Controls](https://attack.mitre.org/techniques/T1553/)|[Install Root Certificate](https://attack.mitre.org/techniques/T1553/004/)|{::nomarkdown}<ul><li><a href="CAR-2021-05-001">CAR-2021-05-001: Attempt To Add Certificate To Untrusted Store</a></li></ul>{:/}|
-|[User Execution](https://attack.mitre.org/techniques/T1204/)|[Malicious File](https://attack.mitre.org/techniques/T1204/002/)|{::nomarkdown}<ul><li><a href="CAR-2021-05-002">CAR-2021-05-002: Batch File Write to System32</a></li></ul>{:/}|
-|[Forge Web Credentials](https://attack.mitre.org/techniques/T1606/)|[SAML Tokens](https://attack.mitre.org/techniques/T1606/002/)|{::nomarkdown}<ul><li><a href="CAR-2021-05-008">CAR-2021-05-008: Certutil exe certificate extraction</a></li></ul>{:/}|
-|[Create Account](https://attack.mitre.org/techniques/T1136/)|[Local Account](https://attack.mitre.org/techniques/T1136/001/)|{::nomarkdown}<ul><li><a href="CAR-2021-05-010">CAR-2021-05-010: Create local admin accounts using net exe</a></li></ul>{:/}|
+<table>
+    <thead>
+        <tr>
+            <th style="white-space:nowrap;">ATT&CK Technique</th>
+            <th style="white-space:nowrap;">ATT&CK Sub-technique(s)</th>
+            <th style="white-space:nowrap;">CAR Analytic(s)</th>
+        </tr>
+    </thead>
+    <tbody>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1543/">Create or Modify System Process</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1543/003/">Windows Service</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-09-005">CAR-2013-09-005: Service Outlier Executables</a></li><li><a href="CAR-2014-02-001">CAR-2014-02-001: Service Binary Modifications</a></li><li><a href="CAR-2014-03-005">CAR-2014-03-005: Remotely Launched Executables via Services</a></li><li><a href="CAR-2014-05-002">CAR-2014-05-002: Services launching Cmd</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=3><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1053/005/">Scheduled Task</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-08-001">CAR-2013-08-001: Execution with schtasks</a></li><li><a href="CAR-2015-04-002">CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks</a></li><li><a href="CAR-2020-09-001">CAR-2020-09-001: Scheduled Task - FileAccess</a></li><li><a href="CAR-2021-12-001">CAR-2021-12-001: Scheduled Task Creation or Modification Containing Suspicious Scripts, Extensions or User Writable Paths</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1053/002/">At (Windows)</a></td>
+            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-05-004">CAR-2013-05-004: Execution with AT</a></li><li><a href="CAR-2015-04-001">CAR-2015-04-001: Remotely Scheduled Tasks via AT</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=4><a href="https://attack.mitre.org/techniques/T1547/">Boot or Logon Autostart Execution</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1547/001/">Registry Run Keys / Startup Folder</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-03-001">CAR-2013-03-001: Reg.exe called from Command Shell</a></li><li><a href="CAR-2020-05-003">CAR-2020-05-003: Rare LolBAS Command Lines</a></li><li><a href="CAR-2021-12-002">CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1547/010/">Port Monitors</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1547/004/">Winlogon Helper DLL</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2021-11-002">CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=7><a href="https://attack.mitre.org/techniques/T1574/">Hijack Execution Flow</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1574/010/">Services File Permissions Weakness</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-02-001">CAR-2014-02-001: Service Binary Modifications</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1574/001/">DLL Search Order Hijacking</a></td>
+            <td><ul><li><a href="CAR-2021-11-001">CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1574/011/">Services Registry Permissions Weakness</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-03-001">CAR-2013-03-001: Reg.exe called from Command Shell</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2020-05-003">CAR-2020-05-003: Rare LolBAS Command Lines</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1574/007/">Path Interception by PATH Environment Variable</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1574/008/">Path Interception by Search Order Hijacking</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1574/009/">Path Interception by Unquoted Path</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-07-001">CAR-2014-07-001: Service Search Path Interception</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=7><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1546/008/">Accessibility Features</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-11-003">CAR-2014-11-003: Debuggers for Accessibility Applications</a></li><li><a href="CAR-2014-11-008">CAR-2014-11-008: Command Launched from WinLogon</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1546/015/">Component Object Model Hijacking</a></td>
+            <td><ul><li><a href="CAR-2020-09-002">CAR-2020-09-002: Component Object Model Hijacking</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1546/001/">Change Default File Association</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1546/003/">Windows Management Instrumentation Event Subscription</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1546/010/">AppInit DLLs</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2020-09-005">CAR-2020-09-005: AppInit DLLs</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1546/002/">Screensaver</a></td>
+            <td><ul><li><a href="CAR-2020-11-011">CAR-2020-11-011: Registry Edit from Screensaver</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1037/">Boot or Logon Initialization Scripts</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1037/001/">Logon Script (Windows)</a></td>
+            <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2020-11-001">CAR-2020-11-001: Boot or Logon Initialization Scripts</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=5><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></td>
+            <td>(N/A - technique only)</td>
+            <td><ul><li><a href="CAR-2013-07-001">CAR-2013-07-001: Suspicious Arguments</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1021/001/">Remote Desktop Protocol</a></td>
+            <td><ul><li><a href="CAR-2013-07-002">CAR-2013-07-002: RDP Connection Detection</a></li><li><a href="CAR-2013-10-001">CAR-2013-10-001: User Login Activity Monitoring</a></li><li><a href="CAR-2016-04-005">CAR-2016-04-005: Remote Desktop Logon</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1021/002/">SMB/Windows Admin Shares</a></td>
+            <td><ul><li><a href="CAR-2013-01-003">CAR-2013-01-003: SMB Events Monitoring</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-05-003">CAR-2013-05-003: SMB Write Request</a></li><li><a href="CAR-2013-05-005">CAR-2013-05-005: SMB Copy and Execution</a></li><li><a href="CAR-2014-05-001">CAR-2014-05-001: RPC Activity</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1021/003/">Distributed Component Object Model</a></td>
+            <td><ul><li><a href="CAR-2014-05-001">CAR-2014-05-001: RPC Activity</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1021/006/">Windows Remote Management</a></td>
+            <td><ul><li><a href="CAR-2014-05-001">CAR-2014-05-001: RPC Activity</a></li><li><a href="CAR-2014-11-004">CAR-2014-11-004: Remote PowerShell Sessions</a></li><li><a href="CAR-2014-11-006">CAR-2014-11-006: Windows Remote Management (WinRM)</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=4><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></td>
+            <td>(N/A - technique only)</td>
+            <td><ul><li><a href="CAR-2021-01-002">CAR-2021-01-002: Unusually Long Command Line Strings</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1059/003/">Windows Command Shell</a></td>
+            <td><ul><li><a href="CAR-2013-02-003">CAR-2013-02-003: Processes Spawning cmd.exe</a></li><li><a href="CAR-2014-11-002">CAR-2014-11-002: Outlier Parents of Cmd</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1059/005/">Visual Basic</a></td>
+            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1059/001/">PowerShell</a></td>
+            <td><ul><li><a href="CAR-2014-04-003">CAR-2014-04-003: Powershell Execution</a></li><li><a href="CAR-2014-11-004">CAR-2014-11-004: Remote PowerShell Sessions</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=3><a href="https://attack.mitre.org/techniques/T1078/">Valid Accounts</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1078/002/">Domain Accounts</a></td>
+            <td><ul><li><a href="CAR-2013-02-008">CAR-2013-02-008: Simultaneous Logins on a Host</a></li><li><a href="CAR-2013-02-012">CAR-2013-02-012: User Logged in to Multiple Hosts</a></li><li><a href="CAR-2013-05-003">CAR-2013-05-003: SMB Write Request</a></li><li><a href="CAR-2013-05-005">CAR-2013-05-005: SMB Copy and Execution</a></li><li><a href="CAR-2013-10-001">CAR-2013-10-001: User Login Activity Monitoring</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1078/003/">Local Accounts</a></td>
+            <td><ul><li><a href="CAR-2013-02-008">CAR-2013-02-008: Simultaneous Logins on a Host</a></li><li><a href="CAR-2013-02-012">CAR-2013-02-012: User Logged in to Multiple Hosts</a></li><li><a href="CAR-2013-05-003">CAR-2013-05-003: SMB Write Request</a></li><li><a href="CAR-2013-05-005">CAR-2013-05-005: SMB Copy and Execution</a></li><li><a href="CAR-2013-10-001">CAR-2013-10-001: User Login Activity Monitoring</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=3><a href="https://attack.mitre.org/techniques/T1087/">Account Discovery</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1087/001/">Local Account</a></td>
+            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1087/002/">Domain Account</a></td>
+            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=4><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1003/003/">NTDS</a></td>
+            <td><ul><li><a href="CAR-2019-08-002">CAR-2019-08-002: Active Directory Dumping via NTDSUtil</a></li><li><a href="CAR-2020-05-001">CAR-2020-05-001: MiniDump of LSASS</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1003/001/">LSASS Memory</a></td>
+            <td><ul><li><a href="CAR-2013-07-001">CAR-2013-07-001: Suspicious Arguments</a></li><li><a href="CAR-2019-04-004">CAR-2019-04-004: Credential Dumping via Mimikatz</a></li><li><a href="CAR-2019-07-002">CAR-2019-07-002: Lsass Process Dump via Procdump</a></li><li><a href="CAR-2019-08-001">CAR-2019-08-001: Credential Dumping via Windows Task Manager</a></li><li><a href="CAR-2021-05-011">CAR-2021-05-011: Create Remote Thread into LSASS</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1003/002/">Security Account Manager</a></td>
+            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=3><a href="https://attack.mitre.org/techniques/T1069/">Permission Groups Discovery</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1069/001/">Local Groups</a></td>
+            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li><li><a href="CAR-2020-11-006">CAR-2020-11-006: Local Permission Group Discovery</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1069/002/">Domain Groups</a></td>
+            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li><li><a href="CAR-2020-11-006">CAR-2020-11-006: Local Permission Group Discovery</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=3><a href="https://attack.mitre.org/techniques/T1569/">System Services</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1569/001/">Launchctl</a></td>
+            <td><ul><li><a href="CAR-2021-05-012">CAR-2021-05-012: Create Service In Suspicious File Path</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1569/002/">Service Execution</a></td>
+            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2014-02-001">CAR-2014-02-001: Service Binary Modifications</a></li><li><a href="CAR-2014-03-005">CAR-2014-03-005: Remotely Launched Executables via Services</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1518/">Software Discovery</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1518/001/">Security Software Discovery</a></td>
+            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=3><a href="https://attack.mitre.org/techniques/T1562/">Impair Defenses</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1562/001/">Disable or Modify Tools</a></td>
+            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-04-003">CAR-2016-04-003: User Activity from Stopping Windows Defensive Services</a></li><li><a href="CAR-2021-01-007">CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1562/006/">Indicator Blocking</a></td>
+            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2020-09-003">CAR-2020-09-003: Indicator Blocking - Driver Unloaded</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=3><a href="https://attack.mitre.org/techniques/T1036/">Masquerading</a></td>
+            <td>(N/A - technique only)</td>
+            <td><ul><li><a href="CAR-2013-05-002">CAR-2013-05-002: Suspicious Run Locations</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1036/003/">Rename System Utilities</a></td>
+            <td><ul><li><a href="CAR-2013-05-009">CAR-2013-05-009: Running executables with same hash and different names</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1036/005/">Match Legitimate Name or Location</a></td>
+            <td><ul><li><a href="CAR-2021-04-001">CAR-2021-04-001: Common Windows Process Masquerading</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1560/">Archive Collected Data</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1560/001/">Archive via Utility</a></td>
+            <td><ul><li><a href="CAR-2013-07-005">CAR-2013-07-005: Command Line Usage of Archiving Software</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=3><a href="https://attack.mitre.org/techniques/T1055/">Process Injection</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1055/012/">Process Hollowing</a></td>
+            <td><ul><li><a href="CAR-2020-11-004">CAR-2020-11-004: Processes Started From Irregular Parent</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1055/001/">Dynamic-link Library Injection</a></td>
+            <td><ul><li><a href="CAR-2013-10-002">CAR-2013-10-002: DLL Injection via Load Library</a></li><li><a href="CAR-2020-11-003">CAR-2020-11-003: DLL Injection with Mavinject</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1548/002/">Bypass User Account Control</a></td>
+            <td><ul><li><a href="CAR-2013-10-002">CAR-2013-10-002: DLL Injection via Load Library</a></li><li><a href="CAR-2019-04-001">CAR-2019-04-001: UAC Bypass</a></li><li><a href="CAR-2021-01-008">CAR-2021-01-008: Disable UAC</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=5><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1218/010/">Regsvr32</a></td>
+            <td><ul><li><a href="CAR-2019-04-002">CAR-2019-04-002: Generic Regsvr32</a></li><li><a href="CAR-2019-04-003">CAR-2019-04-003: Squiblydoo</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1218/001/">Compiled HTML File</a></td>
+            <td><ul><li><a href="CAR-2020-11-009">CAR-2020-11-009: Compiled HTML Access</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1218/011/">Rundll32</a></td>
+            <td><ul><li><a href="CAR-2014-03-006">CAR-2014-03-006: RunDLL32.exe monitoring</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1218/003/">CMSTP</a></td>
+            <td><ul><li><a href="CAR-2020-11-010">CAR-2020-11-010: CMSTP</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=4><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1070/003/">Clear Command History</a></td>
+            <td><ul><li><a href="CAR-2020-11-005">CAR-2020-11-005: Clear Powershell Console Command History</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1070/001/">Clear Windows Event Logs</a></td>
+            <td><ul><li><a href="CAR-2016-04-002">CAR-2016-04-002: User Activity from Clearing Event Logs</a></li><li><a href="CAR-2021-01-003">CAR-2021-01-003: Clearing Windows Logs with Wevtutil</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1070/005/">Network Share Connection Removal</a></td>
+            <td><ul><li><a href="CAR-2020-11-007">CAR-2020-11-007: Network Share Connection Removal</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1550/">Use Alternate Authentication Material</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1550/002/">Pass the Hash</a></td>
+            <td><ul><li><a href="CAR-2016-04-004">CAR-2016-04-004: Successful Local Account Login</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=3><a href="https://attack.mitre.org/techniques/T1222/">File and Directory Permissions Modification</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1222/001/">Windows File and Directory Permissions Modification</a></td>
+            <td><ul><li><a href="CAR-2019-07-001">CAR-2019-07-001: Access Permission Modification</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1222/002/">Linux and Mac File and Directory Permissions Modification</a></td>
+            <td><ul><li><a href="CAR-2019-07-001">CAR-2019-07-001: Access Permission Modification</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1564/">Hide Artifacts</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1564/004/">NTFS File Attributes</a></td>
+            <td><ul><li><a href="CAR-2020-08-001">CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities</a></li><li><a href="CAR-2020-08-002">CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS</a></li></ul></td>
+        </tr>
+       <tr>
+            <td rowspan=3><a href="https://attack.mitre.org/techniques/T1552/">Unsecured Credentials</a></td>
+            <td>(N/A - see below)</td>
+            <td>(N/A - see below)</td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1552/001/">Credentials In Files</a></td>
+            <td><ul><li><a href="CAR-2020-09-004">CAR-2020-09-004: Credentials in Files & Registry</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ></td>
+            <td><a href="https://attack.mitre.org/techniques/T1552/002/">Credentials in Registry</a></td>
+            <td><ul><li><a href="CAR-2020-09-004">CAR-2020-09-004: Credentials in Files & Registry</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1127/">Trusted Developer Utilities Proxy Execution</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1127/001/">MSBuild</a></td>
+            <td><ul><li><a href="CAR-2020-11-008">CAR-2020-11-008: MSBuild and msxsl</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1559/">Inter-Process Communication</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1559/002/">Dynamic Data Exchange</a></td>
+            <td><ul><li><a href="CAR-2021-01-006">CAR-2021-01-006: Unusual Child Process spawned using DDE exploit</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1505/">Server Software Component</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1505/003/">Web Shell</a></td>
+            <td><ul><li><a href="CAR-2021-02-001">CAR-2021-02-001: Webshell-Indicative Process Tree</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1553/">Subvert Trust Controls</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1553/004/">Install Root Certificate</a></td>
+            <td><ul><li><a href="CAR-2021-05-001">CAR-2021-05-001: Attempt To Add Certificate To Untrusted Store</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1204/">User Execution</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1204/002/">Malicious File</a></td>
+            <td><ul><li><a href="CAR-2021-05-002">CAR-2021-05-002: Batch File Write to System32</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1606/">Forge Web Credentials</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1606/002/">SAML Tokens</a></td>
+            <td><ul><li><a href="CAR-2021-05-008">CAR-2021-05-008: Certutil exe certificate extraction</a></li></ul></td>
+        </tr>
+       <tr>
+            <td ><a href="https://attack.mitre.org/techniques/T1136/">Create Account</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1136/001/">Local Account</a></td>
+            <td><ul><li><a href="CAR-2021-05-010">CAR-2021-05-010: Create local admin accounts using net exe</a></li></ul></td>
+        </tr>
+      </tbody>
+</table>
