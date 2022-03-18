@@ -848,8 +848,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1053/005/">Scheduled Task</a></td>
@@ -861,8 +859,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1547/">Boot or Logon Autostart Execution</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1547/001/">Registry Run Keys / Startup Folder</a></td>
@@ -878,8 +874,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="7"><a href="https://attack.mitre.org/techniques/T1574/">Hijack Execution Flow</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1574/010/">Services File Permissions Weakness</a></td>
@@ -907,8 +901,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="7"><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1546/008/">Accessibility Features</a></td>
@@ -979,8 +971,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1078/">Valid Accounts</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1078/002/">Domain Accounts</a></td>
@@ -992,8 +982,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1087/">Account Discovery</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1087/001/">Local Account</a></td>
@@ -1005,8 +993,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1003/003/">NTDS</a></td>
@@ -1022,8 +1008,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1069/">Permission Groups Discovery</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1069/001/">Local Groups</a></td>
@@ -1035,8 +1019,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1569/">System Services</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1569/001/">Launchctl</a></td>
@@ -1053,8 +1035,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1562/">Impair Defenses</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1562/001/">Disable or Modify Tools</a></td>
@@ -1084,8 +1064,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1055/">Process Injection</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1055/012/">Process Hollowing</a></td>
@@ -1101,8 +1079,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="5"><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1218/010/">Regsvr32</a></td>
@@ -1122,8 +1098,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1070/003/">Clear Command History</a></td>
@@ -1144,8 +1118,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1222/">File and Directory Permissions Modification</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1222/001/">Windows File and Directory Permissions Modification</a></td>
@@ -1162,8 +1134,6 @@ permalink: /analytics/
         </tr>
        <tr>
             <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1552/">Unsecured Credentials</a></td>
-            <td>(N/A - see below)</td>
-            <td>(N/A - see below)</td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1552/001/">Credentials In Files</a></td>
