@@ -1,4 +1,6 @@
 # This script creates a SPL saved search configuration file from the current set of CAR analytics
+# Usage: python3 generate_splunk_savedsearches.py
+# Creates a savedsearches.conf file in the /scripts directory
 import yaml, sys, os
 
 # Template for use in generating the saved Searches 
@@ -22,7 +24,7 @@ out_file = open("savedsearches.conf", "w")
 for root, dirs, files in os.walk(yamlDir):
     for file in files:
         if file.endswith(".yaml"):
-            print('Generating ' + file + ' saved search...')
+            print('Generating saved search for {0}...'.format(file))
             yaml_file = open(os.path.join(root, file), 'r')
             car_data = yaml.load(yaml_file, Loader=yaml.FullLoader)
             # File name has the correct formatting so use that for the name of the saved search
@@ -38,5 +40,6 @@ for root, dirs, files in os.walk(yamlDir):
                 out_file.write(search_template.format(name, car_data["description"], splunk_search))
             else:
                 print("No Splunk implementation found, skipping...")
+print("Wrote to: {0}".format(out_file.name))
 out_file.flush()
 out_file.close()
