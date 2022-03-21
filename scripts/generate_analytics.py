@@ -104,8 +104,11 @@ tr_sub_template = '''       <tr>
         </tr>
 '''
 
-subtechnique_table = """
-## Analytic List (by technique/sub-technique coverage)
+subtechnique_table = """---
+title: "Analytics (by technique)"
+permalink: /analytics/by_technique
+---
+<div class="tech-analytics-table"></div>
 
 <table>
     <thead>
@@ -153,7 +156,7 @@ for analytic in sorted(analytics, key = lambda k: k['id']):
 index_content += table_footer
 
 # Build the second (subtechnique-based) table
-for tid in table_techniques:
+for tid in sorted(table_techniques):
     # Find all analytics with this technique
     none_bucket = []
     sub_bucket = {}
@@ -184,7 +187,7 @@ for tid in table_techniques:
     if len(sub_bucket.keys()) > 1:
       num_rows = len(sub_bucket.keys()) + 1
       tid_url = "https://attack.mitre.org/techniques/{0}/".format(tid)
-      tid_link = '<a href="{0}">{1}</a>'.format(tid_url,techniques[tid])
+      tid_link = '<a href="{0}">{1}: {2}</a>'.format(tid_url,tid,techniques[tid])
       rowspan = 'rowspan="{0}"'.format(num_rows)
       if none_sub_str == "(N/A - technique only)":
         subtechnique_table += tr_template.format(rowspan,tid_link,none_sub_str,none_str)
@@ -203,21 +206,30 @@ for tid in table_techniques:
             if not none_bucket and len(sub_bucket.keys()) == 1:
               tid_url = "https://attack.mitre.org/techniques/{0}/".format(tid)
               sub_url = "https://attack.mitre.org/techniques/{0}/{1}/".format(sub_tid.split(".")[0],sub_tid.split(".")[1])
-              tid_link = '<a href="{0}">{1}</a>'.format(tid_url,techniques[tid])
-              sub_link = '<a href="{0}">{1}</a>'.format(sub_url,techniques[sub_tid])
+              tid_link = '<a href="{0}">{1}: {2}</a>'.format(tid_url,tid,techniques[tid])
+              sub_link = '<a href="{0}">{1}: {2}</a>'.format(sub_url,sub_tid,techniques[sub_tid])
+              subtechnique_table += tr_template.format("",tid_link,sub_link,sub_str)
+            elif len(sub_bucket.keys()) == 1:
+              tid_url = "https://attack.mitre.org/techniques/{0}/".format(tid)
+              sub_url = "https://attack.mitre.org/techniques/{0}/{1}/".format(sub_tid.split(".")[0],sub_tid.split(".")[1])
+              tid_link = '<a href="{0}">{1}: {2}</a>'.format(tid_url,tid,techniques[tid])
+              sub_link = '<a href="{0}">{1}: {2}</a>'.format(sub_url,sub_tid,techniques[sub_tid])
               subtechnique_table += tr_template.format("",tid_link,sub_link,sub_str)
             else:
               sub_url = "https://attack.mitre.org/techniques/{0}/{1}/".format(sub_tid.split(".")[0],sub_tid.split(".")[1])
-              sub_link = '<a href="{0}">{1}</a>'.format(sub_url,techniques[sub_tid])
+              sub_link = '<a href="{0}">{1}: {2}</a>'.format(sub_url,sub_tid,techniques[sub_tid])
               subtechnique_table += tr_sub_template.format(sub_link,sub_str)
 subtechnique_table += table_footer
 
 # Write the tables
 index_file = open('../docs/analytics/index.md', 'w')
 index_file.write(index_content)
-index_file.write("\n")
-index_file.write(subtechnique_table)
+index_file.flush()
 index_file.close()
+tech_index_file = open('../docs/analytics/by_technique/index.md', 'w')
+tech_index_file.write(subtechnique_table)
+tech_index_file.flush()
+tech_index_file.close()
 
 # Generate analytics.json
 analytics = [
