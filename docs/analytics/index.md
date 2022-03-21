@@ -847,7 +847,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-09-005">CAR-2013-09-005: Service Outlier Executables</a></li><li><a href="CAR-2014-02-001">CAR-2014-02-001: Service Binary Modifications</a></li><li><a href="CAR-2014-03-005">CAR-2014-03-005: Remotely Launched Executables via Services</a></li><li><a href="CAR-2014-05-002">CAR-2014-05-002: Services launching Cmd</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1053/">Scheduled Task/Job</a></td>
+            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1053/">T1053: Scheduled Task/Job</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1053/005/">T1053.005: Scheduled Task</a></td>
@@ -858,7 +858,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-05-004">CAR-2013-05-004: Execution with AT</a></li><li><a href="CAR-2015-04-001">CAR-2015-04-001: Remotely Scheduled Tasks via AT</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1547/">Boot or Logon Autostart Execution</a></td>
+            <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1547/">T1547: Boot or Logon Autostart Execution</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1547/001/">T1547.001: Registry Run Keys / Startup Folder</a></td>
@@ -873,7 +873,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2021-11-002">CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="7"><a href="https://attack.mitre.org/techniques/T1574/">Hijack Execution Flow</a></td>
+            <td rowspan="7"><a href="https://attack.mitre.org/techniques/T1574/">T1574: Hijack Execution Flow</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1574/010/">T1574.010: Services File Permissions Weakness</a></td>
@@ -900,7 +900,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2014-07-001">CAR-2014-07-001: Service Search Path Interception</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="7"><a href="https://attack.mitre.org/techniques/T1546/">Event Triggered Execution</a></td>
+            <td rowspan="7"><a href="https://attack.mitre.org/techniques/T1546/">T1546: Event Triggered Execution</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1546/008/">T1546.008: Accessibility Features</a></td>
@@ -932,7 +932,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2020-11-001">CAR-2020-11-001: Boot or Logon Initialization Scripts</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="5"><a href="https://attack.mitre.org/techniques/T1021/">Remote Services</a></td>
+            <td rowspan="5"><a href="https://attack.mitre.org/techniques/T1021/">T1021: Remote Services</a></td>
             <td>(N/A - technique only)</td>
             <td><ul><li><a href="CAR-2013-07-001">CAR-2013-07-001: Suspicious Arguments</a></li></ul></td>
         </tr>
@@ -953,7 +953,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2014-05-001">CAR-2014-05-001: RPC Activity</a></li><li><a href="CAR-2014-11-004">CAR-2014-11-004: Remote PowerShell Sessions</a></li><li><a href="CAR-2014-11-006">CAR-2014-11-006: Windows Remote Management (WinRM)</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1059/">Command and Scripting Interpreter</a></td>
+            <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1059/">T1059: Command and Scripting Interpreter</a></td>
             <td>(N/A - technique only)</td>
             <td><ul><li><a href="CAR-2021-01-002">CAR-2021-01-002: Unusually Long Command Line Strings</a></li></ul></td>
         </tr>
@@ -970,7 +970,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2014-04-003">CAR-2014-04-003: Powershell Execution</a></li><li><a href="CAR-2014-11-004">CAR-2014-11-004: Remote PowerShell Sessions</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1078/">Valid Accounts</a></td>
+            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1078/">T1078: Valid Accounts</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1078/002/">T1078.002: Domain Accounts</a></td>
@@ -981,7 +981,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-02-008">CAR-2013-02-008: Simultaneous Logins on a Host</a></li><li><a href="CAR-2013-02-012">CAR-2013-02-012: User Logged in to Multiple Hosts</a></li><li><a href="CAR-2013-05-003">CAR-2013-05-003: SMB Write Request</a></li><li><a href="CAR-2013-05-005">CAR-2013-05-005: SMB Copy and Execution</a></li><li><a href="CAR-2013-10-001">CAR-2013-10-001: User Login Activity Monitoring</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1087/">Account Discovery</a></td>
+            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1087/">T1087: Account Discovery</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1087/001/">T1087.001: Local Account</a></td>
@@ -992,7 +992,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1003/">OS Credential Dumping</a></td>
+            <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1003/">T1003: OS Credential Dumping</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1003/003/">T1003.003: NTDS</a></td>
@@ -1007,7 +1007,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1069/">Permission Groups Discovery</a></td>
+            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1069/">T1069: Permission Groups Discovery</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1069/001/">T1069.001: Local Groups</a></td>
@@ -1018,7 +1018,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li><li><a href="CAR-2020-11-006">CAR-2020-11-006: Local Permission Group Discovery</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1569/">System Services</a></td>
+            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1569/">T1569: System Services</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1569/001/">T1569.001: Launchctl</a></td>
@@ -1034,7 +1034,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1562/">Impair Defenses</a></td>
+            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1562/">T1562: Impair Defenses</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1562/001/">T1562.001: Disable or Modify Tools</a></td>
@@ -1045,7 +1045,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2020-09-003">CAR-2020-09-003: Indicator Blocking - Driver Unloaded</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1036/">Masquerading</a></td>
+            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1036/">T1036: Masquerading</a></td>
             <td>(N/A - technique only)</td>
             <td><ul><li><a href="CAR-2013-05-002">CAR-2013-05-002: Suspicious Run Locations</a></li></ul></td>
         </tr>
@@ -1063,7 +1063,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-07-005">CAR-2013-07-005: Command Line Usage of Archiving Software</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1055/">Process Injection</a></td>
+            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1055/">T1055: Process Injection</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1055/012/">T1055.012: Process Hollowing</a></td>
@@ -1079,7 +1079,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2013-10-002">CAR-2013-10-002: DLL Injection via Load Library</a></li><li><a href="CAR-2019-04-001">CAR-2019-04-001: UAC Bypass</a></li><li><a href="CAR-2021-01-008">CAR-2021-01-008: Disable UAC</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="5"><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></td>
+            <td rowspan="5"><a href="https://attack.mitre.org/techniques/T1218/">T1218: Signed Binary Proxy Execution</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1218/010/">T1218.010: Regsvr32</a></td>
@@ -1098,7 +1098,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2020-11-010">CAR-2020-11-010: CMSTP</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></td>
+            <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1070/">T1070: Indicator Removal on Host</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1070/003/">T1070.003: Clear Command History</a></td>
@@ -1118,7 +1118,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2016-04-004">CAR-2016-04-004: Successful Local Account Login</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1222/">File and Directory Permissions Modification</a></td>
+            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1222/">T1222: File and Directory Permissions Modification</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1222/001/">T1222.001: Windows File and Directory Permissions Modification</a></td>
@@ -1134,7 +1134,7 @@ permalink: /analytics/
             <td><ul><li><a href="CAR-2020-08-001">CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities</a></li><li><a href="CAR-2020-08-002">CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1552/">Unsecured Credentials</a></td>
+            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1552/">T1552: Unsecured Credentials</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1552/001/">T1552.001: Credentials In Files</a></td>
