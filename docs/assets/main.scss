@@ -48,3 +48,20 @@ div.analytics-table + table {
         width: 500px;
     }
 }
+
+div.tech-analytics-table + table {
+    table-layout: fixed;
+
+    thead tr th:first-child {
+        width: 300px;
+    }
+
+    tbody tr td:first-child {
+        width: 300px;
+    }
+
+    tbody tr td:last-child {
+        overflow-wrap: normal;
+        width: 600px;
+    }
+}

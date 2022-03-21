@@ -2,7 +2,7 @@
 title: "Analytics (by technique)"
 permalink: /analytics/by_technique
 ---
-<div class="analytics-table"></div>
+<div class="tech-analytics-table"></div>
 
 <table>
     <thead>
