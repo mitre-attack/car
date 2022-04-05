@@ -2,6 +2,7 @@
 title: "CAR-2021-05-012: Create Service In Suspicious File Path"
 layout: analytic
 submission_date: 2021/05/11
+update_date: 2021/04/05
 information_domain: Analytic
 subtypes: Process
 analytic_type: TTP
@@ -47,7 +48,7 @@ Pseudocode implementation of the Splunk search below.
 
 ```
 services = search Service:create
-suspicious_services = filter services where image_path = "*\.exe" AND image_path does not contain ["C:\\Windows\\*", "C:\\Program File*", "C:\\Programdata\\*", "%systemroot%\\*"] )
+suspicious_services = filter services where image_path = "*\.exe" AND image_path does not contain ["C:\\Windows\\*", "%windir%\\*", "C:\\Program File*", "C:\\Programdata\\*", "%systemroot%\\*"] )
 output suspicious_services
 ```
 
@@ -59,7 +60,7 @@ To successfully implement this search, you need to be ingesting logs with the Se
 
 
 ```
- `wineventlog_system` EventCode=7045  Service_File_Name = "*\.exe" NOT (Service_File_Name IN ("C:\\Windows\\*", "C:\\Program File*", "C:\\Programdata\\*", "%systemroot%\\*")) Service_Type = "user mode service" | stats count min(_time) as firstTime max(_time) as lastTime by EventCode Service_File_Name Service_Name Service_Start_Type Service_Type
+ `wineventlog_system` EventCode=7045  Service_File_Name = "*\.exe" NOT (Service_File_Name IN ("C:\\Windows\\*", "%windir%\\*", "C:\\Program File*", "C:\\Programdata\\*", "%systemroot%\\*")) Service_Type = "user mode service" | stats count min(_time) as firstTime max(_time) as lastTime by EventCode Service_File_Name Service_Name Service_Start_Type Service_Type
 ```
 
 
