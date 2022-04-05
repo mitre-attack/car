@@ -2,7 +2,7 @@
 title: Analytic Coverage Comparison
 ---
 
-Generated on: February 04, 2022
+Generated on: April 05, 2022
 
 A cross-walk of CAR, [Sigma](https://github.com/SigmaHQ/sigma), [Elastic Detection](https://github.com/elastic/detection-rules), and [Splunk Security Content](https://github.com/splunk/security_content/tree/develop/detections) rules in terms of their coverage of ATT&CK Techniques and Sub-techniques. Note that some analytics may have coverage for multiple techniques, so there is not necessarily a 1:1 correlation between the number of hits in this table for a technique/sub-technique and the number of analytics in each repository. The below table is current as of the Generated On date at the top of this page.
 
@@ -16,12 +16,12 @@ This table is sortable, so feel free to click on any column to sort by its value
 
 This data is also available as:
 
-* A [CSV file](/coverage/analytic_coverage_02_04_2022.csv).
+* A [CSV file](/coverage/analytic_coverage_04_05_2022.csv).
 * Separate ATT&CK Navigator Layers:
-   * [CAR Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/car_analytic_coverage_02_04_2022.json).
-   * [Sigma Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/es_analytic_coverage_02_04_2022.json).
-   * [ES Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/es_analytic_coverage_02_04_2022.json).
-   * [Splunk Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/splunk_analytic_coverage_02_04_2022.json).
+   * [CAR Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/car_analytic_coverage_04_05_2022.json).
+   * [Sigma Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/es_analytic_coverage_04_05_2022.json).
+   * [ES Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/es_analytic_coverage_04_05_2022.json).
+   * [Splunk Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/splunk_analytic_coverage_04_05_2022.json).
 
 <script type="text/javascript" src="/assets/sort-table.js"></script>
 <table class="js-sort-table" id="coverage-sort">
@@ -84,39 +84,39 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1003">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003">15</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003">20</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1003">41</a></td>
-                <td>76</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003">26</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1003">31</a></td>
+                <td>72</td>
             </tr>
             <tr>
                 <td>T1003.001</td>
                 <td>OS Credential Dumping</td>
                 <td>LSASS Memory</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1003.001">5</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.001">54</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003.001">4</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1003.001">12</a></td>
-                <td>75</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.001">60</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003.001">9</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1003.001">13</a></td>
+                <td>87</td>
             </tr>
             <tr>
                 <td>T1003.002</td>
                 <td>OS Credential Dumping</td>
                 <td>Security Account Manager</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1003.002">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.002">26</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003.002">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1003.002">12</a></td>
-                <td>39</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.002">27</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003.002">5</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1003.002">9</a></td>
+                <td>42</td>
             </tr>
             <tr>
                 <td>T1003.003</td>
                 <td>OS Credential Dumping</td>
                 <td>NTDS</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1003.003">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.003">14</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003.003">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.003">18</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003.003">1</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1003.003">7</a></td>
-                <td>23</td>
+                <td>28</td>
             </tr>
             <tr>
                 <td>T1003.004</td>
@@ -124,9 +124,9 @@ This data is also available as:
                 <td>LSA Secrets</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1003.004">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.004">12</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003.004">0</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003.004">1</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1003.004">0</a></td>
-                <td>12</td>
+                <td>13</td>
             </tr>
             <tr>
                 <td>T1003.005</td>
@@ -143,10 +143,10 @@ This data is also available as:
                 <td>OS Credential Dumping</td>
                 <td>DCSync</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1003.006">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.006">7</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1003.006">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1003.006">0</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1003.006">0</a></td>
-                <td>7</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1003.007</td>
@@ -173,10 +173,10 @@ This data is also available as:
                 <td>Data from Local System</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1005">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1005">6</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1005">7</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1005">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1005">1</a></td>
-                <td>9</td>
+                <td>10</td>
             </tr>
             <tr>
                 <td>T1006</td>
@@ -195,8 +195,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1007">2</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1007">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1007">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1007">2</a></td>
-                <td>7</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1007">0</a></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1008</td>
@@ -245,8 +245,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1012">3</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1012">11</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1012">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1012">1</a></td>
-                <td>16</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1012">0</a></td>
+                <td>15</td>
             </tr>
             <tr>
                 <td>T1014</td>
@@ -265,18 +265,18 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1016">2</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1016">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1016">2</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1016">2</a></td>
-                <td>14</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1016">3</a></td>
+                <td>15</td>
             </tr>
             <tr>
                 <td>T1018</td>
                 <td>Remote System Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1018">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1018">10</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1018">14</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1018">4</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1018">15</a></td>
-                <td>30</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1018">18</a></td>
+                <td>37</td>
             </tr>
             <tr>
                 <td>T1020</td>
@@ -285,8 +285,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1020">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1020">5</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1020">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1020">4</a></td>
-                <td>10</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1020">6</a></td>
+                <td>12</td>
             </tr>
             <tr>
                 <td>T1020.001</td>
@@ -304,19 +304,19 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1021">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1021">2</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1021">28</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1021">24</a></td>
-                <td>55</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1021">31</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1021">20</a></td>
+                <td>54</td>
             </tr>
             <tr>
                 <td>T1021.001</td>
                 <td>Remote Services</td>
                 <td>Remote Desktop Protocol</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1021.001">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1021.001">10</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1021.001">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1021.001">11</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1021.001">1</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1021.001">5</a></td>
-                <td>18</td>
+                <td>20</td>
             </tr>
             <tr>
                 <td>T1021.002</td>
@@ -324,9 +324,9 @@ This data is also available as:
                 <td>SMB/Windows Admin Shares</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1021.002">5</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1021.002">30</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1021.002">5</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1021.002">8</a></td>
-                <td>48</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1021.002">6</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1021.002">5</a></td>
+                <td>46</td>
             </tr>
             <tr>
                 <td>T1021.003</td>
@@ -353,10 +353,10 @@ This data is also available as:
                 <td>Remote Services</td>
                 <td>VNC</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1021.005">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1021.005">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1021.005">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1021.005">0</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1021.005">0</a></td>
-                <td>0</td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1021.006</td>
@@ -393,10 +393,10 @@ This data is also available as:
                 <td>Obfuscated Files or Information</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1027">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1027">72</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1027">74</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1027">6</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1027">6</a></td>
-                <td>84</td>
+                <td>86</td>
             </tr>
             <tr>
                 <td>T1027.001</td>
@@ -434,9 +434,9 @@ This data is also available as:
                 <td>Compile After Delivery</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1027.004">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1027.004">5</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1027.004">1</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1027.004">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1027.004">1</a></td>
-                <td>7</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1027.005</td>
@@ -473,10 +473,10 @@ This data is also available as:
                 <td>System Owner/User Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1033">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1033">16</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1033">18</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1033">4</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1033">8</a></td>
-                <td>30</td>
+                <td>32</td>
             </tr>
             <tr>
                 <td>T1034</td>
@@ -495,8 +495,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1036">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1036">21</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1036">12</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1036">13</a></td>
-                <td>47</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1036">16</a></td>
+                <td>50</td>
             </tr>
             <tr>
                 <td>T1036.001</td>
@@ -524,9 +524,9 @@ This data is also available as:
                 <td>Rename System Utilities</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1036.003">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1036.003">13</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1036.003">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1036.003">9</a></td>
-                <td>23</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1036.003">2</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1036.003">12</a></td>
+                <td>28</td>
             </tr>
             <tr>
                 <td>T1036.004</td>
@@ -544,9 +544,9 @@ This data is also available as:
                 <td>Match Legitimate Name or Location</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1036.005">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1036.005">8</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1036.005">0</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1036.005">1</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1036.005">1</a></td>
-                <td>10</td>
+                <td>11</td>
             </tr>
             <tr>
                 <td>T1036.006</td>
@@ -625,18 +625,18 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1039">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1039">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1039">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1039">3</a></td>
-                <td>6</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1039">1</a></td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1040</td>
                 <td>Network Sniffing</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1040">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1040">7</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1040">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1040">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1040">0</a></td>
-                <td>10</td>
+                <td>11</td>
             </tr>
             <tr>
                 <td>T1041</td>
@@ -665,8 +665,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1046">2</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1046">10</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1046">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1046">2</a></td>
-                <td>14</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1046">0</a></td>
+                <td>12</td>
             </tr>
             <tr>
                 <td>T1047</td>
@@ -715,8 +715,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1048.003">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1048.003">14</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1048.003">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1048.003">6</a></td>
-                <td>20</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1048.003">9</a></td>
+                <td>23</td>
             </tr>
             <tr>
                 <td>T1049</td>
@@ -764,8 +764,8 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1053">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1053">11</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1053">12</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1053">27</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1053">13</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1053">26</a></td>
                 <td>50</td>
             </tr>
             <tr>
@@ -813,10 +813,10 @@ This data is also available as:
                 <td>Scheduled Task/Job</td>
                 <td>Scheduled Task</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1053.005">6</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1053.005">20</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1053.005">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1053.005">12</a></td>
-                <td>39</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1053.005">25</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1053.005">5</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1053.005">14</a></td>
+                <td>50</td>
             </tr>
             <tr>
                 <td>T1053.006</td>
@@ -833,9 +833,9 @@ This data is also available as:
                 <td>Process Injection</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1055">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1055">17</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1055">18</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1055">11</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1055">21</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1055">20</a></td>
                 <td>49</td>
             </tr>
             <tr>
@@ -845,8 +845,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1055.001">2</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1055.001">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1055.001">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1055.001">1</a></td>
-                <td>11</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1055.001">3</a></td>
+                <td>13</td>
             </tr>
             <tr>
                 <td>T1055.002</td>
@@ -1003,9 +1003,9 @@ This data is also available as:
                 <td>Process Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1057">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1057">4</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1057">6</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1057">2</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1057">2</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1057">0</a></td>
                 <td>10</td>
             </tr>
             <tr>
@@ -1013,20 +1013,20 @@ This data is also available as:
                 <td>Command and Scripting Interpreter</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1059">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059">26</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1059">35</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1059">38</a></td>
-                <td>100</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059">30</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1059">53</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1059">40</a></td>
+                <td>124</td>
             </tr>
             <tr>
                 <td>T1059.001</td>
                 <td>Command and Scripting Interpreter</td>
                 <td>PowerShell</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1059.001">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059.001">160</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059.001">166</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1059.001">7</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1059.001">20</a></td>
-                <td>190</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1059.001">18</a></td>
+                <td>194</td>
             </tr>
             <tr>
                 <td>T1059.002</td>
@@ -1045,18 +1045,18 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1059.003">2</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059.003">16</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1059.003">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1059.003">6</a></td>
-                <td>24</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1059.003">8</a></td>
+                <td>26</td>
             </tr>
             <tr>
                 <td>T1059.004</td>
                 <td>Command and Scripting Interpreter</td>
                 <td>Unix Shell</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1059.004">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059.004">7</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1059.004">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1059.004">0</a></td>
-                <td>7</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059.004">8</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1059.004">15</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1059.004">2</a></td>
+                <td>25</td>
             </tr>
             <tr>
                 <td>T1059.005</td>
@@ -1084,9 +1084,9 @@ This data is also available as:
                 <td>JavaScript/JScript</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1059.007">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1059.007">12</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1059.007">2</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1059.007">3</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1059.007">4</a></td>
-                <td>18</td>
+                <td>19</td>
             </tr>
             <tr>
                 <td>T1059.008</td>
@@ -1134,9 +1134,9 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1068">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1068">20</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1068">10</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1068">15</a></td>
-                <td>46</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1068">12</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1068">7</a></td>
+                <td>40</td>
             </tr>
             <tr>
                 <td>T1069</td>
@@ -1163,10 +1163,10 @@ This data is also available as:
                 <td>Permission Groups Discovery</td>
                 <td>Domain Groups</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1069.002">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1069.002">7</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1069.002">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1069.002">8</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1069.002">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1069.002">18</a></td>
-                <td>29</td>
+                <td>31</td>
             </tr>
             <tr>
                 <td>T1069.003</td>
@@ -1185,8 +1185,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1070">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1070">9</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1070">13</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1070">17</a></td>
-                <td>39</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1070">16</a></td>
+                <td>38</td>
             </tr>
             <tr>
                 <td>T1070.001</td>
@@ -1194,9 +1194,9 @@ This data is also available as:
                 <td>Clear Windows Event Logs</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1070.001">2</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1070.001">7</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1070.001">0</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1070.001">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1070.001">6</a></td>
-                <td>15</td>
+                <td>17</td>
             </tr>
             <tr>
                 <td>T1070.002</td>
@@ -1214,9 +1214,9 @@ This data is also available as:
                 <td>Clear Command History</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1070.003">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1070.003">6</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1070.003">1</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1070.003">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1070.003">0</a></td>
-                <td>8</td>
+                <td>9</td>
             </tr>
             <tr>
                 <td>T1070.004</td>
@@ -1265,8 +1265,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1071.001">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1071.001">26</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1071.001">3</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1071.001">1</a></td>
-                <td>30</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1071.001">2</a></td>
+                <td>31</td>
             </tr>
             <tr>
                 <td>T1071.002</td>
@@ -1295,8 +1295,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1071.004">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1071.004">17</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1071.004">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1071.004">2</a></td>
-                <td>19</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1071.004">4</a></td>
+                <td>21</td>
             </tr>
             <tr>
                 <td>T1072</td>
@@ -1343,10 +1343,10 @@ This data is also available as:
                 <td>Valid Accounts</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1078">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1078">18</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1078">28</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1078">45</a></td>
-                <td>91</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1078">19</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1078">29</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1078">36</a></td>
+                <td>84</td>
             </tr>
             <tr>
                 <td>T1078.001</td>
@@ -1364,9 +1364,9 @@ This data is also available as:
                 <td>Domain Accounts</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1078.002">5</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1078.002">1</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1078.002">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1078.002">5</a></td>
-                <td>11</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1078.002">1</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1078.002">6</a></td>
+                <td>13</td>
             </tr>
             <tr>
                 <td>T1078.003</td>
@@ -1383,10 +1383,10 @@ This data is also available as:
                 <td>Valid Accounts</td>
                 <td>Cloud Accounts</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1078.004">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1078.004">2</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1078.004">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1078.004">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1078.004">8</a></td>
-                <td>11</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1078.004">19</a></td>
+                <td>23</td>
             </tr>
             <tr>
                 <td>T1080</td>
@@ -1394,28 +1394,28 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1080">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1080">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1080">0</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1080">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1080">0</a></td>
-                <td>0</td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1082</td>
                 <td>System Information Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1082">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1082">11</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1082">12</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1082">4</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1082">3</a></td>
-                <td>20</td>
+                <td>21</td>
             </tr>
             <tr>
                 <td>T1083</td>
                 <td>File and Directory Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1083">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1083">8</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1083">9</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1083">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1083">1</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1083">0</a></td>
                 <td>10</td>
             </tr>
             <tr>
@@ -1423,10 +1423,10 @@ This data is also available as:
                 <td>Account Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1087">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1087">7</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1087">9</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1087">4</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1087">28</a></td>
-                <td>39</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1087">24</a></td>
+                <td>37</td>
             </tr>
             <tr>
                 <td>T1087.001</td>
@@ -1503,10 +1503,10 @@ This data is also available as:
                 <td>Proxy</td>
                 <td>Multi-hop Proxy</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1090.003">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1090.003">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1090.003">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1090.003">1</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1090.003">0</a></td>
-                <td>1</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1090.004</td>
@@ -1554,9 +1554,9 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1098">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1098">16</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1098">27</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1098">17</a></td>
-                <td>61</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1098">32</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1098">5</a></td>
+                <td>54</td>
             </tr>
             <tr>
                 <td>T1098.001</td>
@@ -1574,9 +1574,9 @@ This data is also available as:
                 <td>Exchange Email Delegate Permissions</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1098.002">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1098.002">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1098.002">1</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1098.002">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1098.002">0</a></td>
-                <td>1</td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1098.003</td>
@@ -1653,10 +1653,10 @@ This data is also available as:
                 <td>Ingress Tool Transfer</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1105">4</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1105">30</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1105">31</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1105">9</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1105">10</a></td>
-                <td>53</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1105">15</a></td>
+                <td>59</td>
             </tr>
             <tr>
                 <td>T1106</td>
@@ -1664,9 +1664,9 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1106">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1106">9</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1106">2</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1106">2</a></td>
-                <td>13</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1106">3</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1106">0</a></td>
+                <td>12</td>
             </tr>
             <tr>
                 <td>T1108</td>
@@ -1684,9 +1684,9 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1110">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1110">8</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1110">8</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1110">9</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1110">11</a></td>
-                <td>27</td>
+                <td>28</td>
             </tr>
             <tr>
                 <td>T1110.001</td>
@@ -1743,10 +1743,10 @@ This data is also available as:
                 <td>Modify Registry</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1112">8</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1112">46</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1112">2</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1112">8</a></td>
-                <td>64</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1112">51</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1112">3</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1112">17</a></td>
+                <td>79</td>
             </tr>
             <tr>
                 <td>T1113</td>
@@ -1755,8 +1755,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1113">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1113">6</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1113">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1113">4</a></td>
-                <td>11</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1113">3</a></td>
+                <td>10</td>
             </tr>
             <tr>
                 <td>T1114</td>
@@ -1784,9 +1784,9 @@ This data is also available as:
                 <td>Remote Email Collection</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1114.002">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1114.002">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1114.002">0</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1114.002">1</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1114.002">3</a></td>
-                <td>3</td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1114.003</td>
@@ -1794,9 +1794,9 @@ This data is also available as:
                 <td>Email Forwarding Rule</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1114.003">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1114.003">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1114.003">1</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1114.003">0</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1114.003">2</a></td>
-                <td>3</td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1115</td>
@@ -1823,10 +1823,10 @@ This data is also available as:
                 <td>Peripheral Device Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1120">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1120">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1120">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1120">1</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1120">0</a></td>
-                <td>2</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1123</td>
@@ -1835,8 +1835,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1123">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1123">6</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1123">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1123">1</a></td>
-                <td>8</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1123">0</a></td>
+                <td>7</td>
             </tr>
             <tr>
                 <td>T1124</td>
@@ -1865,8 +1865,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1127">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1127">6</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1127">8</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1127">7</a></td>
-                <td>21</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1127">9</a></td>
+                <td>23</td>
             </tr>
             <tr>
                 <td>T1127.001</td>
@@ -1874,9 +1874,9 @@ This data is also available as:
                 <td>MSBuild</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1127.001">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1127.001">2</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1127.001">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1127.001">4</a></td>
-                <td>7</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1127.001">3</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1127.001">6</a></td>
+                <td>12</td>
             </tr>
             <tr>
                 <td>T1129</td>
@@ -1935,8 +1935,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1134">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1134">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1134">3</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1134">6</a></td>
-                <td>9</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1134">2</a></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1134.001</td>
@@ -1995,8 +1995,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1135">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1135">7</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1135">2</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1135">3</a></td>
-                <td>12</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1135">0</a></td>
+                <td>9</td>
             </tr>
             <tr>
                 <td>T1136</td>
@@ -2005,8 +2005,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1136">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1136">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1136">7</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1136">10</a></td>
-                <td>18</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1136">11</a></td>
+                <td>19</td>
             </tr>
             <tr>
                 <td>T1136.001</td>
@@ -2014,9 +2014,9 @@ This data is also available as:
                 <td>Local Account</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1136.001">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1136.001">11</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1136.001">0</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1136.001">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1136.001">4</a></td>
-                <td>16</td>
+                <td>18</td>
             </tr>
             <tr>
                 <td>T1136.002</td>
@@ -2033,10 +2033,10 @@ This data is also available as:
                 <td>Create Account</td>
                 <td>Cloud Account</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1136.003">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1136.003">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1136.003">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1136.003">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1136.003">6</a></td>
-                <td>9</td>
+                <td>10</td>
             </tr>
             <tr>
                 <td>T1137</td>
@@ -2113,10 +2113,10 @@ This data is also available as:
                 <td>Deobfuscate/Decode Files or Information</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1140">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1140">9</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1140">10</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1140">6</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1140">2</a></td>
-                <td>18</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1140">3</a></td>
+                <td>20</td>
             </tr>
             <tr>
                 <td>T1149</td>
@@ -2193,10 +2193,10 @@ This data is also available as:
                 <td>Exploit Public-Facing Application</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1190">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1190">58</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1190">59</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1190">15</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1190">16</a></td>
-                <td>89</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1190">17</a></td>
+                <td>91</td>
             </tr>
             <tr>
                 <td>T1195</td>
@@ -2205,8 +2205,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1195">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1195">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1195">4</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1195">2</a></td>
-                <td>7</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1195">3</a></td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1195.001</td>
@@ -2225,8 +2225,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1195.002">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1195.002">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1195.002">4</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1195.002">0</a></td>
-                <td>4</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1195.002">1</a></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1195.003</td>
@@ -2243,10 +2243,10 @@ This data is also available as:
                 <td>BITS Jobs</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1197">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1197">5</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1197">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1197">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1197">3</a></td>
-                <td>11</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1197">6</a></td>
+                <td>17</td>
             </tr>
             <tr>
                 <td>T1199</td>
@@ -2255,8 +2255,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1199">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1199">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1199">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1199">3</a></td>
-                <td>4</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1199">2</a></td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1200</td>
@@ -2273,9 +2273,9 @@ This data is also available as:
                 <td>Password Policy Discovery</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1201">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1201">3</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1201">4</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1201">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1201">8</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1201">7</a></td>
                 <td>11</td>
             </tr>
             <tr>
@@ -2283,10 +2283,10 @@ This data is also available as:
                 <td>Indirect Command Execution</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1202">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1202">18</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1202">19</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1202">0</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1202">1</a></td>
-                <td>19</td>
+                <td>20</td>
             </tr>
             <tr>
                 <td>T1203</td>
@@ -2294,19 +2294,19 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1203">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1203">20</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1203">1</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1203">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1203">4</a></td>
-                <td>25</td>
+                <td>26</td>
             </tr>
             <tr>
                 <td>T1204</td>
                 <td>User Execution</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1204">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1204">6</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1204">6</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1204">13</a></td>
-                <td>25</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1204">7</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1204">7</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1204">14</a></td>
+                <td>28</td>
             </tr>
             <tr>
                 <td>T1204.001</td>
@@ -2324,9 +2324,9 @@ This data is also available as:
                 <td>Malicious File</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1204.002">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1204.002">27</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1204.002">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1204.002">3</a></td>
-                <td>31</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1204.002">3</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1204.002">4</a></td>
+                <td>35</td>
             </tr>
             <tr>
                 <td>T1205</td>
@@ -2355,8 +2355,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1207">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1207">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1207">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1207">2</a></td>
-                <td>3</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1207">0</a></td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1210</td>
@@ -2395,8 +2395,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1213">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1213">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1213">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1213">0</a></td>
-                <td>0</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1213">1</a></td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1213.001</td>
@@ -2454,9 +2454,9 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1218">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1218">65</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1218">16</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1218">51</a></td>
-                <td>132</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1218">17</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1218">60</a></td>
+                <td>142</td>
             </tr>
             <tr>
                 <td>T1218.001</td>
@@ -2464,9 +2464,9 @@ This data is also available as:
                 <td>Compiled HTML File</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1218.001">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1218.001">3</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1218.001">0</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1218.001">1</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1218.001">4</a></td>
-                <td>8</td>
+                <td>9</td>
             </tr>
             <tr>
                 <td>T1218.002</td>
@@ -2495,8 +2495,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1218.004">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1218.004">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1218.004">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1218.004">7</a></td>
-                <td>9</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1218.004">9</a></td>
+                <td>11</td>
             </tr>
             <tr>
                 <td>T1218.005</td>
@@ -2505,8 +2505,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1218.005">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1218.005">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1218.005">4</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1218.005">8</a></td>
-                <td>20</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1218.005">12</a></td>
+                <td>24</td>
             </tr>
             <tr>
                 <td>T1218.007</td>
@@ -2543,19 +2543,19 @@ This data is also available as:
                 <td>Signed Binary Proxy Execution</td>
                 <td>Regsvr32</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1218.010">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1218.010">17</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1218.010">16</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1218.010">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1218.010">5</a></td>
-                <td>26</td>
+                <td>25</td>
             </tr>
             <tr>
                 <td>T1218.011</td>
                 <td>Signed Binary Proxy Execution</td>
                 <td>Rundll32</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1218.011">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1218.011">27</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1218.011">28</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1218.011">3</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1218.011">16</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1218.011">15</a></td>
                 <td>47</td>
             </tr>
             <tr>
@@ -2573,10 +2573,10 @@ This data is also available as:
                 <td>Remote Access Software</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1219">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1219">9</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1219">19</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1219">3</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1219">0</a></td>
-                <td>12</td>
+                <td>22</td>
             </tr>
             <tr>
                 <td>T1220</td>
@@ -2655,8 +2655,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1482">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1482">10</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1482">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1482">12</a></td>
-                <td>23</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1482">11</a></td>
+                <td>22</td>
             </tr>
             <tr>
                 <td>T1484</td>
@@ -2664,9 +2664,9 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1484">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1484">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1484">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1484">4</a></td>
-                <td>5</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1484">4</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1484">0</a></td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1484.001</td>
@@ -2695,8 +2695,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1485">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1485">10</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1485">7</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1485">7</a></td>
-                <td>24</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1485">10</a></td>
+                <td>27</td>
             </tr>
             <tr>
                 <td>T1486</td>
@@ -2722,11 +2722,11 @@ This data is also available as:
                 <td>T1490</td>
                 <td>Inhibit System Recovery</td>
                 <td>n/a</td>
-                <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1490">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1490">13</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1490">5</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1490">11</a></td>
-                <td>32</td>
+                <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1490">2</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1490">15</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1490">6</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1490">12</a></td>
+                <td>35</td>
             </tr>
             <tr>
                 <td>T1491</td>
@@ -2825,8 +2825,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1498">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1498">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1498">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1498">6</a></td>
-                <td>7</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1498">7</a></td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1498.001</td>
@@ -2933,10 +2933,10 @@ This data is also available as:
                 <td>Server Software Component</td>
                 <td>Web Shell</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1505.003">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1505.003">21</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1505.003">23</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1505.003">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1505.003">4</a></td>
-                <td>28</td>
+                <td>30</td>
             </tr>
             <tr>
                 <td>T1518</td>
@@ -2945,8 +2945,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1518">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1518">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1518">3</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1518">1</a></td>
-                <td>6</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1518">0</a></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1518.001</td>
@@ -2954,9 +2954,9 @@ This data is also available as:
                 <td>Security Software Discovery</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1518.001">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1518.001">4</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1518.001">1</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1518.001">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1518.001">0</a></td>
-                <td>6</td>
+                <td>7</td>
             </tr>
             <tr>
                 <td>T1525</td>
@@ -2965,8 +2965,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1525">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1525">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1525">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1525">1</a></td>
-                <td>1</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1525">2</a></td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1526</td>
@@ -2975,8 +2975,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1526">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1526">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1526">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1526">5</a></td>
-                <td>6</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1526">7</a></td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1528</td>
@@ -3035,8 +3035,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1535">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1535">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1535">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1535">4</a></td>
-                <td>4</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1535">8</a></td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1537</td>
@@ -3134,9 +3134,9 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1543">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1543">1</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1543">15</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1543">19</a></td>
-                <td>35</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1543">16</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1543">15</a></td>
+                <td>32</td>
             </tr>
             <tr>
                 <td>T1543.001</td>
@@ -3153,20 +3153,20 @@ This data is also available as:
                 <td>Create or Modify System Process</td>
                 <td>Systemd Service</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1543.002">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1543.002">1</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1543.002">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1543.002">0</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1543.002">0</a></td>
-                <td>1</td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1543.003</td>
                 <td>Create or Modify System Process</td>
                 <td>Windows Service</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1543.003">6</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1543.003">20</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1543.003">6</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1543.003">25</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1543.003">7</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1543.003">12</a></td>
-                <td>44</td>
+                <td>50</td>
             </tr>
             <tr>
                 <td>T1543.004</td>
@@ -3195,8 +3195,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1546.001">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.001">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546.001">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1546.001">1</a></td>
-                <td>4</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1546.001">2</a></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1546.002</td>
@@ -3214,9 +3214,9 @@ This data is also available as:
                 <td>Windows Management Instrumentation Event Subscription</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1546.003">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.003">12</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546.003">0</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546.003">1</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1546.003">2</a></td>
-                <td>15</td>
+                <td>16</td>
             </tr>
             <tr>
                 <td>T1546.004</td>
@@ -3313,10 +3313,10 @@ This data is also available as:
                 <td>Event Triggered Execution</td>
                 <td>PowerShell Profile</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1546.013">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.013">2</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.013">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546.013">0</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1546.013">0</a></td>
-                <td>2</td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1546.014</td>
@@ -3333,10 +3333,10 @@ This data is also available as:
                 <td>Event Triggered Execution</td>
                 <td>Component Object Model Hijacking</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1546.015">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.015">3</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1546.015">5</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1546.015">1</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1546.015">1</a></td>
-                <td>6</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1547</td>
@@ -3344,19 +3344,19 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1547">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1547">4</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547">22</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1547">18</a></td>
-                <td>44</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547">23</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1547">15</a></td>
+                <td>42</td>
             </tr>
             <tr>
                 <td>T1547.001</td>
                 <td>Boot or Logon Autostart Execution</td>
                 <td>Registry Run Keys / Startup Folder</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1547.001">4</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1547.001">27</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1547.001">28</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547.001">9</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1547.001">2</a></td>
-                <td>42</td>
+                <td>43</td>
             </tr>
             <tr>
                 <td>T1547.002</td>
@@ -3455,8 +3455,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1547.011">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1547.011">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1547.011">2</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1547.011">0</a></td>
-                <td>2</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1547.011">1</a></td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1547.012</td>
@@ -3475,8 +3475,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1548">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1548">13</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1548">19</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1548">27</a></td>
-                <td>60</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1548">25</a></td>
+                <td>58</td>
             </tr>
             <tr>
                 <td>T1548.001</td>
@@ -3493,10 +3493,10 @@ This data is also available as:
                 <td>Abuse Elevation Control Mechanism</td>
                 <td>Bypass User Account Control</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1548.002">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1548.002">44</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1548.002">45</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1548.002">10</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1548.002">11</a></td>
-                <td>68</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1548.002">13</a></td>
+                <td>71</td>
             </tr>
             <tr>
                 <td>T1548.003</td>
@@ -3525,8 +3525,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1550">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1550">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1550">6</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1550">5</a></td>
-                <td>14</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1550">9</a></td>
+                <td>18</td>
             </tr>
             <tr>
                 <td>T1550.001</td>
@@ -3545,8 +3545,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1550.002">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1550.002">5</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1550.002">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1550.002">4</a></td>
-                <td>10</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1550.002">3</a></td>
+                <td>9</td>
             </tr>
             <tr>
                 <td>T1550.003</td>
@@ -3555,8 +3555,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1550.003">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1550.003">2</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1550.003">1</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1550.003">0</a></td>
-                <td>3</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1550.003">3</a></td>
+                <td>6</td>
             </tr>
             <tr>
                 <td>T1550.004</td>
@@ -3575,8 +3575,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1552">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1552">5</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1552">3</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1552">3</a></td>
-                <td>11</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1552">2</a></td>
+                <td>10</td>
             </tr>
             <tr>
                 <td>T1552.001</td>
@@ -3695,8 +3695,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1554">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1554">3</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1554">2</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1554">4</a></td>
-                <td>9</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1554">2</a></td>
+                <td>7</td>
             </tr>
             <tr>
                 <td>T1555</td>
@@ -3705,8 +3705,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1555">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1555">4</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1555">7</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1555">6</a></td>
-                <td>17</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1555">3</a></td>
+                <td>14</td>
             </tr>
             <tr>
                 <td>T1555.001</td>
@@ -3743,10 +3743,10 @@ This data is also available as:
                 <td>Modify Authentication Process</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1556">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1556">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1556">4</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1556">3</a></td>
-                <td>7</td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1556">1</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1556">5</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1556">2</a></td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1556.001</td>
@@ -3824,9 +3824,9 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1558">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1558">3</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1558">3</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1558">4</a></td>
-                <td>10</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1558">7</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1558">9</a></td>
+                <td>19</td>
             </tr>
             <tr>
                 <td>T1558.001</td>
@@ -3845,8 +3845,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1558.002">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1558.002">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1558.002">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1558.002">1</a></td>
-                <td>1</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1558.002">0</a></td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>T1558.003</td>
@@ -3855,8 +3855,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1558.003">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1558.003">9</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1558.003">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1558.003">4</a></td>
-                <td>13</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1558.003">6</a></td>
+                <td>15</td>
             </tr>
             <tr>
                 <td>T1558.004</td>
@@ -3865,8 +3865,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1558.004">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1558.004">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1558.004">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1558.004">0</a></td>
-                <td>0</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1558.004">5</a></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1559</td>
@@ -3893,10 +3893,10 @@ This data is also available as:
                 <td>Inter-Process Communication</td>
                 <td>Dynamic Data Exchange</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1559.002">1</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1559.002">0</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1559.002">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1559.002">0</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1559.002">0</a></td>
-                <td>1</td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1560</td>
@@ -3914,9 +3914,9 @@ This data is also available as:
                 <td>Archive via Utility</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1560.001">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1560.001">10</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1560.001">1</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1560.001">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1560.001">6</a></td>
-                <td>18</td>
+                <td>19</td>
             </tr>
             <tr>
                 <td>T1560.002</td>
@@ -3945,8 +3945,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1561">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1561">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1561">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1561">0</a></td>
-                <td>0</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1561">2</a></td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1561.001</td>
@@ -3965,8 +3965,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1561.002">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1561.002">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1561.002">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1561.002">0</a></td>
-                <td>1</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1561.002">2</a></td>
+                <td>3</td>
             </tr>
             <tr>
                 <td>T1562</td>
@@ -3974,19 +3974,19 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1562">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1562">6</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1562">57</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1562">46</a></td>
-                <td>109</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1562">59</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1562">48</a></td>
+                <td>113</td>
             </tr>
             <tr>
                 <td>T1562.001</td>
                 <td>Impair Defenses</td>
                 <td>Disable or Modify Tools</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1562.001">3</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1562.001">48</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1562.001">52</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1562.001">35</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1562.001">38</a></td>
-                <td>124</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1562.001">40</a></td>
+                <td>130</td>
             </tr>
             <tr>
                 <td>T1562.002</td>
@@ -3994,9 +3994,9 @@ This data is also available as:
                 <td>Disable Windows Event Logging</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1562.002">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1562.002">6</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1562.002">0</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1562.002">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1562.002">0</a></td>
-                <td>6</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1562.003</td>
@@ -4014,9 +4014,9 @@ This data is also available as:
                 <td>Disable or Modify System Firewall</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1562.004">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1562.004">10</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1562.004">3</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1562.004">2</a></td>
-                <td>15</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1562.004">4</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1562.004">3</a></td>
+                <td>17</td>
             </tr>
             <tr>
                 <td>T1562.006</td>
@@ -4035,8 +4035,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1562.007">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1562.007">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1562.007">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1562.007">5</a></td>
-                <td>5</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1562.007">6</a></td>
+                <td>6</td>
             </tr>
             <tr>
                 <td>T1562.008</td>
@@ -4055,8 +4055,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1563">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1563">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1563">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1563">1</a></td>
-                <td>1</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1563">0</a></td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>T1563.001</td>
@@ -4083,20 +4083,20 @@ This data is also available as:
                 <td>Hide Artifacts</td>
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1564">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1564">4</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1564">5</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1564">6</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1564">1</a></td>
-                <td>11</td>
+                <td>12</td>
             </tr>
             <tr>
                 <td>T1564.001</td>
                 <td>Hide Artifacts</td>
                 <td>Hidden Files and Directories</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1564.001">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1564.001">2</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1564.001">6</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1564.001">4</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1564.001">1</a></td>
-                <td>7</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1564.001">2</a></td>
+                <td>12</td>
             </tr>
             <tr>
                 <td>T1564.002</td>
@@ -4123,10 +4123,10 @@ This data is also available as:
                 <td>Hide Artifacts</td>
                 <td>NTFS File Attributes</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1564.004">2</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1564.004">9</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1564.004">10</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1564.004">2</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1564.004">0</a></td>
-                <td>13</td>
+                <td>14</td>
             </tr>
             <tr>
                 <td>T1564.005</td>
@@ -4204,9 +4204,9 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1566">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1566">4</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1566">15</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1566">16</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1566">27</a></td>
-                <td>46</td>
+                <td>47</td>
             </tr>
             <tr>
                 <td>T1566.001</td>
@@ -4235,8 +4235,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1566.003">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1566.003">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1566.003">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1566.003">0</a></td>
-                <td>0</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1566.003">1</a></td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1567</td>
@@ -4315,8 +4315,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1569">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1569">4</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1569">3</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1569">7</a></td>
-                <td>14</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1569">5</a></td>
+                <td>12</td>
             </tr>
             <tr>
                 <td>T1569.001</td>
@@ -4333,10 +4333,10 @@ This data is also available as:
                 <td>System Services</td>
                 <td>Service Execution</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1569.002">4</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1569.002">30</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1569.002">31</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1569.002">3</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1569.002">5</a></td>
-                <td>42</td>
+                <td>43</td>
             </tr>
             <tr>
                 <td>T1570</td>
@@ -4404,9 +4404,9 @@ This data is also available as:
                 <td>n/a</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1574">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574">6</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1574">6</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1574">7</a></td>
-                <td>19</td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1574">7</a></td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1574">5</a></td>
+                <td>18</td>
             </tr>
             <tr>
                 <td>T1574.001</td>
@@ -4464,9 +4464,9 @@ This data is also available as:
                 <td>Path Interception by PATH Environment Variable</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1574.007">1</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574.007">0</a></td>
-                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1574.007">2</a></td>
+                <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1574.007">3</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1574.007">0</a></td>
-                <td>3</td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>T1574.008</td>
@@ -4505,8 +4505,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1574.011">4</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1574.011">6</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1574.011">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1574.011">1</a></td>
-                <td>11</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1574.011">2</a></td>
+                <td>12</td>
             </tr>
             <tr>
                 <td>T1574.012</td>
@@ -4725,8 +4725,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1585">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1585">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1585">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1585">1</a></td>
-                <td>1</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1585">0</a></td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>T1585.001</td>
@@ -4793,10 +4793,10 @@ This data is also available as:
                 <td>Develop Capabilities</td>
                 <td>Malware</td>
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1587.001">0</a></td>
-                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1587.001">7</a></td>
+                <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1587.001">8</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1587.001">0</a></td>
                 <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1587.001">0</a></td>
-                <td>7</td>
+                <td>8</td>
             </tr>
             <tr>
                 <td>T1587.002</td>
@@ -4915,8 +4915,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1589.001">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1589.001">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1589.001">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1589.001">1</a></td>
-                <td>1</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1589.001">0</a></td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>T1589.002</td>
@@ -4925,8 +4925,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1589.002">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1589.002">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1589.002">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1589.002">0</a></td>
-                <td>0</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1589.002">1</a></td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1589.003</td>
@@ -4945,8 +4945,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1590">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1590">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1590">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1590">4</a></td>
-                <td>5</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1590">1</a></td>
+                <td>2</td>
             </tr>
             <tr>
                 <td>T1590.001</td>
@@ -4955,8 +4955,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1590.001">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1590.001">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1590.001">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1590.001">1</a></td>
-                <td>1</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1590.001">0</a></td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>T1590.002</td>
@@ -4975,8 +4975,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1590.003">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1590.003">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1590.003">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1590.003">1</a></td>
-                <td>1</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1590.003">0</a></td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>T1590.004</td>
@@ -5015,8 +5015,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1591">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1591">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1591">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1591">1</a></td>
-                <td>1</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1591">0</a></td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>T1591.001</td>
@@ -5065,8 +5065,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1592">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1592">1</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1592">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1592">8</a></td>
-                <td>9</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1592">4</a></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>T1592.001</td>
@@ -5085,8 +5085,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1592.002">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1592.002">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1592.002">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1592.002">2</a></td>
-                <td>2</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1592.002">0</a></td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>T1592.003</td>
@@ -5155,8 +5155,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1595">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1595">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1595">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1595">3</a></td>
-                <td>3</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1595">1</a></td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>T1595.001</td>
@@ -5175,8 +5175,8 @@ This data is also available as:
                 <td><a href="https://github.com/mitre-attack/car/search?l=YAML&q=T1595.002">0</a></td>
                 <td><a href="https://github.com/SigmaHQ/sigma/search?p=1&q=attack.t1595.002">0</a></td>
                 <td><a href="https://github.com/elastic/detection-rules/search?l=TOML&q=T1595.002">0</a></td>
-                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1595.002">1</a></td>
-                <td>1</td>
+                <td><a href="https://github.com/splunk/security_content/search?l=YAML&p=1&q=T1595.002">0</a></td>
+                <td>0</td>
             </tr>
             <tr>
                 <td>T1596</td>
