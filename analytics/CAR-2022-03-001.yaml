@@ -79,3 +79,7 @@ data_model_references:
   - process/create/command_line
 references:
   - https://ptylu.github.io/content/report/report.html?report=25
+d3fend_mappings:
+  - iri: d3f:ProcessSpawnAnalysis
+    id: D3-PSA
+    label: Process Spawn Analysis
