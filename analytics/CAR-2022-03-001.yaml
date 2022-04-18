@@ -33,7 +33,7 @@ implementations:
       
       reg_keys = search Registry:value_edit
       event_log_reg_keys = filter reg_keys where Key="*EventLog*" AND (value="Start" OR value="File" OR value="MaxSize")
-      output reg_keys, event_log_reg_keys
+      output susp_processes, event_log_reg_keys
     type: Pseudocode
   - name: Detection of Disable Windows Event Logging
     description: Splunk version of the CAR pseudocode.
