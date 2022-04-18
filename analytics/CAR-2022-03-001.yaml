@@ -46,36 +46,29 @@ implementations:
       ((((((EventCode IN ["4688", "1"] CommandLine="*New-Item*" CommandLine="*reg add*" CommandLine IN "*MiniNt*") OR (CommandLine="*Stop-Service*" CommandLine="*EventLog*")) OR (CommandLine IN ["*Set-Service*", "*reg add*", "*Set-ItemProperty*", "*New-ItemProperty*", "*sc config*"] CommandLine IN "*EventLog*")) OR (CommandLine IN "*auditpol*" CommandLine IN ["*/set*", "*/clear*", "*/revove*"])) OR (CommandLine IN "*wevtutil*" CommandLine IN ["*sl*", "*set-log*"]) OR EventCode IN "4719") OR (EventCode IN ["4657", "13"] ObjectName IN "*EventLog*" ObjectValueName IN ["Start", "File", "MaxSize"]))
     type: LogPoint
 unit_tests:
-- configurations:
-  description: MiniNt Registry Key creation with cmd.
+- description: MiniNt Registry Key creation with cmd.
   commands:
   - reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\MiniNt"
-- configurations:
-  description: MiniNt Registry Key creation with powershell.
+- description: MiniNt Registry Key creation with powershell.
   commands:
   - New-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Control\MiniNt"
-- configurations:
-  description: Disable EvenLog Service with Set-Service.
+- description: Disable EvenLog Service with Set-Service.
   commands:
   - Set-Service -Name EventLog -StartupType Disabled
-- configurations:
-  description: Registry Key modification to disable EventLog Service.
+- description: Registry Key modification to disable EventLog Service.
   commands:
   - reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog" /v start /t REG_DWORD /d 0x00000004 /f
-- configurations:
-  description: Stop EventLog Service with Stop-Service.
+- description: Stop EventLog Service with Stop-Service.
   commands:
   - Stop-Service -Name EventLog -Force
-- configurations:
-  description: Audit configuration modification to disable EventLog with auditpol.
+- description: Audit configuration modification to disable EventLog with auditpol.
   commands:
   - auditpol.exe /set /subcategory:"Process Creation" /success:Disable /failure:Disable
-- configurations:
-  description: Modification of Security EventLog path with wevtutil.
+- description: Modification of Security EventLog path with wevtutil.
   commands:
   - wevtutil.exe sl Security /logfilename:"C:\Windows\System32\winevt\Not-Important-Log.evtx"
 data_model_references:
-  - registry/add/key
+  - registry/value_edit/value
   - process/create/command_line
 references:
   - https://ptylu.github.io/content/report/report.html?report=25
