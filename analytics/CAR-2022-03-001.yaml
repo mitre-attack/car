@@ -26,6 +26,16 @@ coverage:
     coverage: Medium
 implementations:
   - name: Detection of Disable Windows Event Logging
+    description: This detects the disabling of Windows Event Logging, via process command line or registry key value manipulation.
+    code: |-
+      processes = search Process:create
+      susp_processes = filter processes where ((command_line CONTAINS("*New-Item*") OR command_line CONTAINS("*reg add*")) OR command_line CONTAINS("*MiniNt*")) OR (command_line CONTAINS("*Stop-Service*")AND command_line CONTAINS("*EventLog*")) OR (command_line CONTAINS("*EventLog*") AND (command_line CONTAINS("*Set-Service*") OR command_line CONTAINS("*reg add*") OR command_line CONTAINS("*Set-ItemProperty*") OR command_line CONTAINS("*New-ItemProperty*") OR command_line CONTAINS("*sc config*"))) OR (command_line CONTAINS("*auditpol*") AND (command_line CONTAINS("*/set*") OR command_line CONTAINS("*/clear*") OR command_line CONTAINS("*/revove*"))) OR ((command_line CONTAINS("*wevtutil*") AND (command_line CONTAINS("*sl*") OR command_line CONTAINS("*set-log*"))))
+      
+      reg_keys = search Registry:value_edit
+      event_log_reg_keys = filter reg_keys where Key="*EventLog*" AND (value="Start" OR value="File" OR value="MaxSize")
+      output reg_keys, event_log_reg_keys
+    type: Pseudocode
+  - name: Detection of Disable Windows Event Logging
     description: Splunk version of the CAR pseudocode.
     code: |-
       ((EventCode="4688" OR EventCode="1") ((CommandLine="*New-Item*" OR CommandLine="*reg add*") CommandLine="*MiniNt*")OR (CommandLine="*Stop-Service*" CommandLine="*EventLog*")OR (CommandLine="*EventLog*" (CommandLine="*Set-Service*" OR CommandLine="*reg add*" OR CommandLine="*Set-ItemProperty*" OR CommandLine="*New-ItemProperty*" OR CommandLine="*sc config*")) OR (CommandLine="*auditpol*" (CommandLine="*/set*" OR CommandLine="*/clear*" OR CommandLine="*/revove*")) OR ((CommandLine="*wevtutil*" (CommandLine="*sl*" OR CommandLine="*set-log*")))) OR (EventCode="4719") OR ((EventCode="4657" OR EventCode="13") (ObjectName="*EventLog*") (ObjectValueName="Start" OR ObjectValueName="File" OR ObjectValueName="MaxSize"))
