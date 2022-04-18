@@ -827,5 +827,13 @@ permalink: /analytics/
                 <td>Elastic, Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
+            <tr>
+                <td style="white-space:nowrap;"><a href="/analytics/CAR-2022-03-001/">CAR-2022-03-001</a></td>
+                <td>Disable Windows Event Logging</td>
+                <td style="white-space:nowrap;">March 14 2020</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1562.002/">Disable Windows Event Logging</a></li></ul></td>
+                <td>Logpoint, Pseudocode, Splunk</td>
+                <td>Windows</td>
+            </tr>
       </tbody>
 </table>
