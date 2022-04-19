@@ -1,7 +1,7 @@
 ---
 title: "CAR-2022-03-001: Disable Windows Event Logging"
 layout: analytic
-submission_date: 2020/03/14
+submission_date: 2022/03/14
 information_domain: Host
 subtypes: Process
 analytic_type: TTP
@@ -25,7 +25,7 @@ https://ptylu.github.io/content/report/report.html?report=25
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Disable Windows Event Logging](https://attack.mitre.org/techniques/T1562.002/)|N/A|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Medium|
+|[Impair Defenses](https://attack.mitre.org/techniques/T1562/)|[Disable Windows Event Logging](https://attack.mitre.org/techniques/T1562/002/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
 ### D3FEND Techniques

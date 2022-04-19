@@ -293,7 +293,7 @@ permalink: /analytics/by_technique
             <td><ul><li><a href="CAR-2013-07-005">CAR-2013-07-005: Command Line Usage of Archiving Software</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="3"><a href="https://attack.mitre.org/techniques/T1562/">T1562: Impair Defenses</a></td>
+            <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1562/">T1562: Impair Defenses</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1562/001/">T1562.001: Disable or Modify Tools</a></td>
@@ -302,6 +302,10 @@ permalink: /analytics/by_technique
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1562/006/">T1562.006: Indicator Blocking</a></td>
             <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2020-09-003">CAR-2020-09-003: Indicator Blocking - Driver Unloaded</a></li></ul></td>
+        </tr>
+       <tr>
+            <td><a href="https://attack.mitre.org/techniques/T1562/002/">T1562.002: Disable Windows Event Logging</a></td>
+            <td><ul><li><a href="CAR-2022-03-001">CAR-2022-03-001: Disable Windows Event Logging</a></li></ul></td>
         </tr>
        <tr>
             <td ><a href="https://attack.mitre.org/techniques/T1564/">T1564: Hide Artifacts</a></td>
@@ -317,7 +321,7 @@ permalink: /analytics/by_technique
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1569/002/">T1569.002: Service Execution</a></td>
-            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2014-02-001">CAR-2014-02-001: Service Binary Modifications</a></li><li><a href="CAR-2014-03-005">CAR-2014-03-005: Remotely Launched Executables via Services</a></li></ul></td>
+            <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2014-02-001">CAR-2014-02-001: Service Binary Modifications</a></li><li><a href="CAR-2014-03-005">CAR-2014-03-005: Remotely Launched Executables via Services</a></li><li><a href="CAR-2021-05-012">CAR-2021-05-012: Create Service In Suspicious File Path</a></li></ul></td>
         </tr>
        <tr>
             <td rowspan="7"><a href="https://attack.mitre.org/techniques/T1574/">T1574: Hijack Execution Flow</a></td>

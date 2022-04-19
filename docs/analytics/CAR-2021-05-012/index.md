@@ -18,8 +18,7 @@ This detection is to identify a creation of "user mode service" where the servic
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[System Services](https://attack.mitre.org/techniques/T1569/)|[Launchctl](https://attack.mitre.org/techniques/T1569/001/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
-|[Service Execution](https://attack.mitre.org/techniques/T1569.002/)|N/A|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
+|[System Services](https://attack.mitre.org/techniques/T1569/)|[Launchctl](https://attack.mitre.org/techniques/T1569/001/), [Service Execution](https://attack.mitre.org/techniques/T1569/002/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|
 
 
 ### D3FEND Techniques

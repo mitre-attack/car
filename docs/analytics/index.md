@@ -791,7 +791,7 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-05-012/">CAR-2021-05-012</a></td>
                 <td>Create Service In Suspicious File Path</td>
                 <td style="white-space:nowrap;">May 11 2021</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1569/">System Services</a></li><li><a href="https://attack.mitre.org/techniques/T1569.002/">Service Execution</a></li></ul></td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1569/">System Services</a></li></ul></td>
                 <td>Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
@@ -830,8 +830,8 @@ permalink: /analytics/
             <tr>
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2022-03-001/">CAR-2022-03-001</a></td>
                 <td>Disable Windows Event Logging</td>
-                <td style="white-space:nowrap;">March 14 2020</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1562.002/">Disable Windows Event Logging</a></li></ul></td>
+                <td style="white-space:nowrap;">March 14 2022</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1562/">Impair Defenses</a></li></ul></td>
                 <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
