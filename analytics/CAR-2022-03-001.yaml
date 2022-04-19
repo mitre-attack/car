@@ -1,7 +1,7 @@
 
 ---
 title: Disable Windows Event Logging
-submission_date: 2020/03/14
+submission_date: 2022/03/14
 information_domain: 'Host'
 platforms:
   - Windows
@@ -20,10 +20,12 @@ description: |-
   4. The fourth way is to use auditpol.exe to modify the audit configuration and disable/modify important parameters that will lead to disable the creation of EventLog.
   5. The last one is to modify the Registry Key value `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security\file` (or other kind of log) to modify the path where the EventLog are stocked. Importantly, with this technique, the EventViewer will use the value of the Registry Key "file" to know where to find the Log. Thus, using the EventViewer will always show the current event logs, but the old one will be stocked in another evtx. Also, the path must be in a folder that the Eventlog process has access (like it doesn’t work if attacker set up the new path in the Desktop). Attacker can also decrease the maxsize value of the Log to force the system to rewrite on the older EventLog (but the minimum cannot be less than 1028 KB). As the Registry key is modified, Security EventLog 4657 or Sysmon EventLog 13 will be generated on the system. All of these attacks required administrative right. Attacks number three, four and five do not require a system reboot to be effective immediately.
 coverage:
-  - technique: T1562.002
+  - technique: T1562
+    subtechniques:
+    - T1562.002
     tactics:
-      - TA0005
-    coverage: Medium
+    - TA0005
+    coverage: Moderate
 implementations:
   - name: Detection of Disable Windows Event Logging
     description: This detects the disabling of Windows Event Logging, via process command line or registry key value manipulation.

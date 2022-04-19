@@ -17,10 +17,7 @@ coverage:
 - technique: T1569
   subtechniques: 
   - T1569.001
-  tactics:
-  - TA0002
-  coverage: Moderate
-- technique: T1569.002
+  - T1569.002
   tactics:
   - TA0002
   coverage: Moderate
