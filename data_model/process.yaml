@@ -20,6 +20,21 @@ fields:
   - name: md5_hash
     description: The MD5 hash of the contents of the file located at `image_path`. The field is in hex notation, without the 0x prefix.
     example: 5eb63bbbe01eeed093cb22bb8f5acdc3
+  - name: file_name
+    description: Name of the Image file or executable file used to define the initial code and data mapped into the process' virtual address space. This does not contain the full patth of the Image file.
+    example: conhost.exe
+  - name: file_version
+    description: Version of the Image file
+    example: 10.0.16299.15 (WinBuild.160101.0800)
+  - name: file_description
+    description: Description of the Image file
+    example: Console Window Host
+  - name: file_product
+    description: The Image file product name
+    example: "Microsoft Windows Operating System"
+  - name: company
+    description: Company name metadata of the Image file
+    example: Microsoft Corporation
   - name: sha1_hash
     description: The SHA1 hash of the contents of the file located at `image_path`.
     example: 2aae6c35c94fcfb415dbe95f408b9ce91ee846ed
@@ -57,7 +72,7 @@ fields:
     description: The absolute path to the current working directory of the process.
     example: c:\temp
   - name: env_vars
-    description: The environment variables within a process's memory space, as a string.
+    description: The environment variables within a process memory space, as a string.
     example: SHELL=/bin/zsh
   - name: access_level
     description: Permissions level at which the target process is accessed.
