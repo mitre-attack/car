@@ -1,13 +1,6 @@
 ---
 name: Process
-description: A process is a running program on a computer.
-actions:
-  - name: create
-    description: The event corresponding to a process creation in Windows. In the kernel, these are often captured with the callback [PsSetCreateProcessNotifyRoutine](https://msdn.microsoft.com/en-us/library/windows/hardware/ff559951%28v=vs.85%29.aspx).
-  - name: terminate
-    description: The event corresponding to a process destruction in Windows. In the kernel, these are also captured with the callback [PsSetCreateProcessNotifyRoutine](https://msdn.microsoft.com/en-us/library/windows/hardware/ff559951%28v=vs.85%29.aspx), but with a pointer to a NULL structure.
-  - name: access
-    description: The vent corresponding to a process accessing the memory space of another process.
+description: Instances of computer programs that are being executed by at least one thread. Processes have memory space for process executables, loaded modules (DLLs or shared libraries), and allocated memory regions containing everything from user input to application-specific data structures(Citation: Microsoft Processes and Threads)
 fields:
   - name: fqdn
     description: The fully qualified domain name of the host in which the process ran. Contains the hostname appended with the domain.
