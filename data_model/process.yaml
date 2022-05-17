@@ -11,7 +11,7 @@ fields:
   - name: command_line
     description: The command line string contains all arguments passed to the process upon execution.
     example: example.exe arg1 arg2
-  - name: exe
+  - name: file_name
     description: The basename of the `image_path`.
     example: example.exe
   - name: image_path
@@ -20,9 +20,9 @@ fields:
   - name: md5_hash
     description: The MD5 hash of the contents of the file located at `image_path`. The field is in hex notation, without the 0x prefix.
     example: 5eb63bbbe01eeed093cb22bb8f5acdc3
-  - name: file_name
-    description: Name of the Image file or executable file used to define the initial code and data mapped into the process' virtual address space. This does not contain the full patth of the Image file.
-    example: conhost.exe
+  - name: granted_access
+    description: granted access code requested/used to open a target process
+    example: '0x1000'
   - name: file_version
     description: Version of the Image file
     example: 10.0.16299.15 (WinBuild.160101.0800)
@@ -101,3 +101,5 @@ fields:
   - name: uid
     description: User ID under which original process is running.
     example: 509
+ references:
+ tags: []
