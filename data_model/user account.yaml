@@ -1,13 +1,6 @@
 ---
 name: Authentication
 description: Authentication events occur whenever a user attempts to login to a system, or a user or process attempts to access a privileged system resource.
-actions:
-  - name: success
-    description: The event corresponding to an authentication service responding positively to an authentication request.
-  - name: failure
-    description: The event corresponding to an authentication service responding negatively to an authentication request.
-  - name: error
-    description: The event corresponding to the case when an authentication request results in any kind of unexpected error.
 fields:
   - name: app_name
     description: Name of the application that made the authentication request
