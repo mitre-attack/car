@@ -1,0 +1,24 @@
+name: cloud
+prefix: 
+- cloud
+id: D973F78A-95EF-414B-A770-9F138DFE68C0
+description: Event fields used to identify/normalize infrastructure and application in the cloud from different cloud providers.
+attributes:
+- name: app_id
+  type: string
+  description: The ID of the application for an HTTP application as identified by a proxy. This value is usually specific to the proxy used.
+  sample_value: '124'
+- name: app_name
+  type: string
+  description: The name of an application provided by a cloud service.
+  sample_value: AppOne
+- name: app_operation
+  type: string
+  description: The operation the user performed in the context of the application for an HTTP application as identified by a proxy. This value is usually specific to the proxy used.
+  sample_value: DELETE
+- name: app_risk_level
+  type: string
+  description: The risk level associated with an HTTP application as identified by a proxy. This value is usually specific to the proxy used.
+  sample_value: 3
+references: []
+tags: []
