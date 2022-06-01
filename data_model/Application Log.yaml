@@ -1,6 +1,6 @@
 name: Application Log
 description: 
-actions:
+fields:
   - name: action_reason
     description: 'The rationale given for blocking, redirecting, or quarantining an email.'
     example: Malformed Message
