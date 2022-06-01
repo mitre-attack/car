@@ -1,0 +1,21 @@
+name: Active Directory
+description: 
+actions:
+  - name: service_name
+    description: the name of the account or computer for which the TGS ticket was requested
+    example: WIN2008R2$
+  - name: ticket_encryption_type
+    description: the cryptographic suite that was used for issued TGS
+    example: '0x12'
+  - name: ticket_options
+    description: this is a set of different ticket flags in hexadecimal format
+    example: '0x40810010'
+  - name: ticket_pre_auth_type
+    description: the code number of pre-Authentication type which was used in TGT request
+    example: '15'
+  - name: ticket_request_type
+    description: Request type - Authentication Service AS or Ticket Granting Service TGS
+    example: TGS
+  - name: ticket_status
+    description: hexadecimal result code of TGS issue operation
+    example: '0x0'
