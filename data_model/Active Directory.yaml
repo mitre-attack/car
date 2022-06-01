@@ -1,6 +1,6 @@
 name: Active Directory
 description: 
-actions:
+fields:
   - name: service_name
     description: the name of the account or computer for which the TGS ticket was requested
     example: WIN2008R2$
