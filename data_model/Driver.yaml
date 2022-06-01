@@ -1,0 +1,9 @@
+---
+name: Driver
+description: A driver is software that runs in the operating system kernel. Drivers are generally used to allow a computer to communicate with hardware devices but have access to important kernel resources.
+fields:
+  - name: base_address
+    description: >-
+    A hex address indicating where the driver/module is loaded into the kernel
+    (process’s virtual address space).
+    example: '0xFFFFF8000405F000'
