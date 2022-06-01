@@ -1,0 +1,81 @@
+name: Logon Session
+description:
+fields:
+  - name: authentication_lan_package_name
+    description: The name of the LAN Manager sub-package (NTLM-family protocol name) that was used during logon. Possible values are: NTLM V1, NTLM V2, LM. Only populated if Authentication Package = NTLM.
+    example: ''
+  - name: authentication_package_name
+    description: The name of the authentication package which was used for the logon authentication process. Default packages loaded on LSA startup are located in “HKLM\SYSTEM\CurrentControlSet\Control\Lsa\OSConfig” registry key. Other packages can be loaded at runtime. When a new package is loaded a “4610: An authentication package has been loaded by the Local Security Authority” (typically for NTLM) or “4622: A security package has been loaded by the Local Security Authority” (typically for Kerberos) event is logged to indicate that a new package has been loaded along with the package name.
+    example: Negotiate
+  - name: device_claims
+    description: list of device claims for new logon session
+    example: ''
+  - name: elevated_token
+    description: >-
+    a “Yes” or “No” flag. If “Yes” then the session this event represents is
+    elevated and has administrator privileges.
+    example: '%%1842'
+  - name: impersonation_level
+    description: ''
+    example: '%%1833'
+  - name: key_length
+    description: >-
+    the length of NTLM Session Security key. Typically it has 128 bit or 56 bit
+    length. This parameter is always 0 if “Authentication Package” = “Kerberos”,
+    because it is not applicable for Kerberos protocol. This field will also
+    have “0” value if Kerberos was negotiated using Negotiate authentication
+    package.
+    example: '0'
+  - name: login_id
+    description: A hex value corresponding to the session. The login id will persist until
+    logout occurs.
+    example: '0xf61f3'
+  - name: login_successful
+    description: Boolean indicator of whether a login attempt was successful.
+    example: 'FALSE'
+  - name: login_type
+    description: The type of login that was accomplished or attempted.
+    example: |-
+    interactive
+    ,local
+    ,rdp
+    ,remote
+  - name: process_name
+    description: The name of the trusted logon process that was used for the logon. See event “4611: A trusted logon process has been registered with the Local Security Authority” description for more information.
+    example: User32
+  - name: restricted_admin_mode
+    description: >-
+    Only populated for RemoteInteractive logon type sessions. This is a Yes/No
+    flag indicating if the credentials provided were passed using Restricted
+    Admin mode. Restricted Admin mode was added in Win8.1/2012R2 but this flag
+    was added to the event in Win10. If not a RemoteInteractive logon, then this
+    will be “-” string.
+    example: ''
+  - name: transmitted_services
+    description: >-
+    the list of transmitted services. Transmitted services are populated if the
+    logon was a result of a S4U (Service For User) logon process. S4U is a
+    Microsoft extension to the Kerberos Protocol to allow an application service
+    to obtain a Kerberos service ticket on behalf of a user - most commonly done
+    by a front-end website to access an internal resource on behalf of a user.
+    example: ''
+  - name: user_claims
+    description: >-
+    list of user claims for new logon session. This field contains user claims
+    if user account was logged in and device claims if computer account was
+    logged in
+    example: >-
+    ad://ext/cn:88d2b96fdb2b4c49 <%%1818> : "dadmin"
+    ad://ext/Department:88d16a8edaa8c66b <%%1818> : "IT”
+  - name: user_linked_id
+    description: >-
+    A hexadecimal value of the paired logon session. If there is no other logon
+    session associated with this logon session, then the value is “0x0”.
+    example: '0x0'
+  - name: virtual_account
+    description: >-
+    a “Yes” or “No” flag, which indicates if the account is a virtual account
+    (e.g., “Managed Service Account”), which was introduced in Windows 7 and
+    Windows Server 2008 R2 to provide the ability to identify the account that a
+    given Service uses, instead of just using “NetworkService”.
+    example: '%%1843'
