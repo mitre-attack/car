@@ -1,7 +1,4 @@
 name: cloud
-prefix: 
-- cloud
-id: D973F78A-95EF-414B-A770-9F138DFE68C0
 description: Event fields used to identify/normalize infrastructure and application in the cloud from different cloud providers.
 fields:
 - name: app_id
