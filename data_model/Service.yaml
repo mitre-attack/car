@@ -2,7 +2,7 @@
 name: Service
 description: Services, or a service application, can be started automatically at system boot, by a user through the services control panel applet, or by an application that uses service functions. Services can execute even when no user is logged into the system.
 fields:
-  - name: service_name
+  - name: name
     description: The name of the service.
     example: RpcSs
   - name: uid
