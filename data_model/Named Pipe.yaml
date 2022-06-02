@@ -12,6 +12,6 @@ fields:
   - name: max_instances
     description: The maximum number of instances creatable for this pipe
     example: ''
-  - name: namepipe_name
+  - name: name
     description: name of pipe created or connected
     example: \srvsvc
