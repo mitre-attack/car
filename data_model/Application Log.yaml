@@ -1,0 +1,61 @@
+name: Application Log
+description: 
+fields:
+  - name: action_reason
+    description: 'The rationale given for blocking, redirecting, or quarantining an email.'
+    example: Malformed Message
+  - name: attachment_mime_type
+    description: The MIME type of the attachment.
+    example: .docx
+  - name: attachment_name
+    description: Filename of any email attachment that may exist.
+    example: cuddly-cats.pdf
+  - name: attachment_size
+    description: Filesize of the attachment.
+    example: 567 Kb
+  - name: date
+    description: 'SMTP date header, which is actually a date time group.'
+    example: 'Thu Jul 18 09:30:00 PDT 2019'
+  - name: dest_address
+    description: 'Recipient email address, taken from the SMTP “Recipient” field.'
+    example: 'mailto:adam@example.com'
+  - name: from
+    description: Displayed sender name from the Message Information header can be easily forged.
+    example: 'mailto:eve@trusted-advisors.com'
+  - name: message_body
+    description: 'Content of the email, not including subject.'
+    example: Hello World
+  - name: message_links
+    description: URLs extracted from the email body.
+    example: 'https://www.cnn.com/'
+  - name: message_type
+    description: Content protocol of the message body
+    example: html
+  - name: permission_action
+    description: 'Mailbox action for folder permissions '
+    example: 'UpdateFolderPermission '
+  - name: return_address
+    description: >-
+    Email address to which replies should be sent, also known as Return-Path or
+    Reply-To; may differ from the src_address.
+    example: 'mailto:eve_secondary@example.com'
+  - name: server_relay
+    description: >-
+    The Received portion of the SMTP header, which provides the chain of hosts
+    that the email passed through during delivery; each link usually contains an
+    IP address, domain, and datetime group.
+    example: ''
+  - name: smtp_uid
+    description: Distinct ID used to distinguish emails.
+    example: 'mailto:MN2PR09MB4876CCE7F183A83E6BA1C4C1CBF50@PP34399.prod.outlook.com'
+  - name: src_address
+    description: 'Email address of the sender, taken from the “Sender” SMTP field.'
+    example: 'mailto:eve@example.com'
+  - name: subject
+    description: Subject line of the email.
+    example: Lo0k Younger Whl1e L0slng We19ht!!
+  - name: to
+    description: >-
+    The content of the To field in the email header; does not necessarily match
+    up with real recipients.
+    example: 'mailto:adam@example.com'

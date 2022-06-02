@@ -1,0 +1,17 @@
+name: cloud
+description: Event fields used to identify/normalize infrastructure and application in the cloud from different cloud providers.
+fields:
+- name: app_id
+  description: The ID of the application for an HTTP application as identified by a proxy. This value is usually specific to the proxy used.
+  example: '124'
+- name: app_name
+  description: The name of an application provided by a cloud service.
+  example: AppOne
+- name: app_operation
+  description: The operation the user performed in the context of the application for an HTTP application as identified by a proxy. This value is usually specific to the proxy used.
+  example: DELETE
+- name: app_risk_level
+  description: The risk level associated with an HTTP application as identified by a proxy. This value is usually specific to the proxy used.
+ example: 3
+references: []
+tags: []

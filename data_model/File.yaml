@@ -1,0 +1,76 @@
+---
+name: File
+description: A resource for storing information available to a computer program.
+fields:
+  - name: accessed_time
+    description: "When the file was last accessed . Also known as\_atime"
+    example: '11/25/16 18:21'
+  - name: changed_time
+    description: "When the file was last changed. Also known as\_ctime"
+    example: '11/25/16 18:21'
+  - name: company
+    description: "The name of the organization listed in the metadata located in\_Image File."
+    example: Microsoft Corporation
+  - name: content
+    description: The contents of the file.
+    example: Hello World
+  - name: creation_time
+    description: "The creation time of the file as described in UTC and including the date. Also known as\_crtime"
+    example: '5/14/15 12:47'
+  - name: description
+    description: Description of a file
+    example: Console Window Host
+  - name: extension
+    description: The file extension of the file.
+    example: docx
+  - name: name
+    description: The name of the file.
+    example: MyWordDoc.docx
+  - name: path
+    description: The full path to the file on the file system.
+    example: 'C:\users\fakeuser\documents\MyFile.docx'
+  - name: gid
+    description: The group ID of the file
+    example: '801'
+  - name: group
+    description: The group owner of the file
+    example: admin
+  - name: hash_imphash
+    description: IMPHASH hash of the image/binary/file
+    example: 2505BD03D7BD285E50CE89CEC02B333B
+  - name: hash_md5
+    description: "An MD5 hash of the contents of the file located at\_image_path. The field is in hex notation, without the 0x prefix."
+    example: 5eb63bbbe01eeed093cb22bb8f5acdc3
+  - name: hash_sha1
+    description: "The SHA1 hash of the contents of the file located at\_image_path."
+    example: 2aae6c35c94fcfb415dbe95f408b9ce91ee846ed
+  - name: hash_sha256
+    description: "The SHA256 hash of the contents of the file located at\_image_path."
+    example: 68e656b251e67e8358bef8483ab0d51c6619f3e7a1a9f0e75838d41ff368f728
+  - name: hash_sha512
+    description: SHA512 hash of the image/binary/file
+    example: 1AD1D79F85D8F6A50EA282F63898D652661DAA0C1FD361C22647CABC98A70E8CBCE83200D579D10DD0A3D46BE9496DCDFDDF28B0C5E9709343B032A8796FBECB
+  - name: link_target
+    description: The target path of a symbolic link.
+    example: 'C:\my_special_file.exe'
+  - name: mime_type
+    description: The MIME type of the file.
+    example: PE
+  - name: mode
+    description: The mode or permissions set of the file.
+    example: 0644 (linux) or NTFS ACL
+  - name: owner
+    description: The username of the owner of the file.
+    example: adam
+  - name: owner_uid
+    description: The user ID or SID of the owner of the file.
+    example: '501'
+  - name: previous_creation_time
+    description: The creation_time associated with the file before it was changed for this file event.
+    example: '5/14/15 12:47'
+  - name: signature_valid
+    description: Boolean indicator of whether the signature is valid; empty if file is not signed.
+    example: 'TRUE'
+  - name: signer
+    description: "The company listed on the certificate of the program at\_image_pathif that program is signed."
+    example: Microsoft Corporation

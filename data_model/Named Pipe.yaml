@@ -1,0 +1,17 @@
+name: Named Pipe
+description:
+fields:
+  - name: flags
+    description: >-
+    The flags indicating whether this pipe connection is a server or client end,
+    and if the pipe for sending messages or bytes
+    example: ''
+  - name: instances
+    description: Number of instances of the named pipe
+    example: ''
+  - name: max_instances
+    description: The maximum number of instances creatable for this pipe
+    example: ''
+  - name: name
+    description: name of pipe created or connected
+    example: \srvsvc
