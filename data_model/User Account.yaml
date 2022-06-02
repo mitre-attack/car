@@ -1,0 +1,600 @@
+---
+name: User Account
+  - name: aadid
+    description: >-
+    The User Azure AD ID of the identity associated with a cloud network
+    session. It applies to source and destination entities.
+    example: 5e8b0f4d-2cd4-4e17-9467-b0f6a5c0c4d0
+  
+- 'name ': User Account
+  - name: ad_domain
+    description: Active Directory domain from which the authentication request was generated may differ from the target_ad_domain.
+    example: 'http://ad2.mitre.org/'
+  
+- 'name ': User Account
+  - name: app_name
+    description: Name of the application that made the authentication request.
+    example: 'ssh, win:local'
+  
+- 'name ': User Account
+  - name: auth_service
+    description: The name of the service that was utilized to accomplish authentication.
+    example: 'Okta, ActiveDirectory'
+  
+- 'name ': User Account
+  - name: auth_target
+    description: machine for which authentication was requested; may be different than the host that the request is made from.
+    example: HOST2
+  
+- 'name ': User Account
+  - name: cred_type
+    description: types of credentials which were presented for delegation
+    example: '%%8098'
+  
+- 'name ': User Account
+  - name: decision_reason
+    description: The justification for approving or denying an authentication request.
+    example: password is invalid
+  
+- 'name ': User Account
+  - name: domain
+    description: The domain or computer name associated to the user in a session. In active directory, this would be the name of the domain the user belongs to.
+    example: CONTOSO
+  
+- 'name ': User Account
+  - name: identity
+    description: User Principal Name (UPN) or another type of account identifier for which 802.1x authentication request was made.
+    example: host/XXXXXXXX.redmond.corp.microsoft.com
+  
+- 'name ': User Account
+  - name: linked_logon_id
+    description: A hexadecimal value of the paired logon session.
+    example: '0x0'
+  
+- 'name ': User Account
+  - name: logon_authentication_lan_package_name
+    description: 'The name of the LAN Manager sub-package (NTLM-family protocol name) that was used during logon. Possible values are: NTLM V1, NTLM V2, LM. Only populated if Authentication Package = NTLM.'
+    example: ''
+  
+- 'name ': User Account
+  - name: logon_authentication_package_name
+    description: >-
+    The name of the authentication package which was used for the logon
+    authentication process. Default packages loaded on LSA startup are located
+    in “HKLM\SYSTEM\CurrentControlSet\Control\Lsa\OSConfig” registry key. Other
+    packages can be loaded at runtime. When a new package is loaded a “4610: An
+    authentication package has been loaded by the Local Security Authority”
+    (typically for NTLM) or “4622: A security package has been loaded by the
+    Local Security Authority” (typically for Kerberos) event is logged to
+    indicate that a new package has been loaded along with the package name.
+    example: Negotiate
+  
+- 'name ': User Account
+  - name: logon_device_claims
+    description: list of device claims for new logon session
+    example: ''
+  
+- 'name ': User Account
+  - name: logon_elevated_token
+    description: >-
+    a “Yes” or “No” flag. If “Yes” then the session this event represents is
+    elevated and has administrator privileges.
+    example: '%%1842'
+  
+- 'name ': User Account
+  - name: logon_guid
+    description: >-
+    a GUID that can help you correlate this event with another event that can
+    contain the same Logon GUID, “4769(S, F): A Kerberos service ticket was
+    requested event on a domain controller. It also can be used for correlation
+    between a 4624 event and several other events (on the same computer) that
+    can contain the same Logon GUID, “4648(S): A logon was attempted using
+    explicit credentials” and “4964(S): Special groups have been assigned to a
+    new logon.”
+    example: '{00000000-0000-0000-0000-000000000000}'
+  
+- 'name ': User Account
+  - name: logon_id
+    description: >-
+    hexadecimal value that can help you correlate this event with recent events
+    that might contain the same Logon ID
+    example: '0x8dcdc'
+  
+- 'name ': User Account
+  - name: logon_impersonation_level
+    description: Impersonation level
+    example: '%%1833'
+  
+- 'name ': User Account
+  - name: logon_key_length
+    description: >-
+    the length of NTLM Session Security key. Typically it has 128 bit or 56 bit
+    length. This parameter is always 0 if “Authentication Package” = “Kerberos”,
+    because it is not applicable for Kerberos protocol. This field will also
+    have “0” value if Kerberos was negotiated using Negotiate authentication
+    package.
+    example: '0'
+  
+- 'name ': User Account
+  - name: logon_process_name
+    description: >-
+    The name of the trusted logon process that was used for the logon. See event
+    “4611: A trusted logon process has been registered with the Local Security
+    Authority” description for more information.
+    example: User32
+  
+- 'name ': User Account
+  - name: logon_restricted_admin_mode
+    description: >-
+    Only populated for RemoteInteractive logon type sessions. This is a Yes/No
+    flag indicating if the credentials provided were passed using Restricted
+    Admin mode. Restricted Admin mode was added in Win8.1/2012R2 but this flag
+    was added to the event in Win10. If not a RemoteInteractive logon, then this
+    will be “-” string.
+    example: ''
+  
+- 'name ': User Account
+  - name: logon_transmitted_services
+    description: >-
+    the list of transmitted services. Transmitted services are populated if the
+    logon was a result of a S4U (Service For User) logon process. S4U is a
+    Microsoft extension to the Kerberos Protocol to allow an application service
+    to obtain a Kerberos service ticket on behalf of a user - most commonly done
+    by a front-end website to access an internal resource on behalf of a user.
+    example: ''
+  
+- 'name ': User Account
+  - name: logon_type
+    description: the type of logon which was performed
+    example: '2'
+  
+- 'name ': User Account
+  - name: logon_user_claims
+    description: >-
+    list of user claims for new logon session. This field contains user claims
+    if user account was logged in and device claims if computer account was
+    logged in
+    example: >-
+    ad://ext/cn:88d2b96fdb2b4c49 <%%1818> : "dadmin"
+    ad://ext/Department:88d16a8edaa8c66b <%%1818> : "IT”
+  
+- 'name ': User Account
+  - name: logon_user_linked_id
+    description: >-
+    A hexadecimal value of the paired logon session. If there is no other logon
+    session associated with this logon session, then the value is “0x0”.
+    example: '0x0'
+  
+- 'name ': User Account
+  - name: logon_virtual_account
+    description: >-
+    a “Yes” or “No” flag, which indicates if the account is a virtual account
+    (e.g., “Managed Service Account”), which was introduced in Windows 7 and
+    Windows Server 2008 R2 to provide the ability to identify the account that a
+    given Service uses, instead of just using “NetworkService”.
+    example: '%%1843'
+  
+- 'name ': User Account
+  - name: method
+    description: The authentication method that was used.
+    example: 'SMAL, Kerberos'
+  
+- 'name ': User Account
+  - name: network_account_domain
+    description: Domain for the user that will be used for outbound (network) connections.
+    example: ''
+  
+- 'name ': User Account
+  - name: network_account_name
+    description: User name used for outbound (network) connections
+    example: ''
+  
+- 'name ': User Account
+  - name: password
+    description: >-
+    User password if seen in the request. Commonly seen in network logs and
+    authentication proxy/logs.
+    example: bobspassword
+  
+- 'name ': User Account
+  - name: reporter_domain
+    description: domain name of the user that reported the main event
+    example: WORKGROUP
+  
+- 'name ': User Account
+  - name: reporter_id
+    description: unique identifier of the user that reported the main event
+    example: '0x3e7'
+  
+- 'name ': User Account
+  - name: reporter_name
+    description: the name of the account that reported information about the main event
+    example: WIN-GG82ULGC9GO$
+  
+- 'name ': User Account
+  - name: reporter_sid
+    description: SID of account that reported information about the main event
+    example: S-1-5-18
+  
+- 'name ': User Account
+  - name: response_time
+    description: Duration of time it took for an authentication response to be received.
+    example: 12ms
+  
+- 'name ': User Account
+  - name: security_package
+    description: the name of Security Package used during an authentication event.
+    example: CREDSSP
+  
+- 'name ': User Account
+  - name: session_id
+    description: ID of the session the user belongs to.
+    example: '1'
+  
+- 'name ': User Account
+  - name: sid_list
+    description: 'the list of special group SIDs, which New Logon\Security ID is a member of.'
+    example: '{S-1-5-21-3457937927-2839227994-823803824-512}'
+  
+- 'name ': User Account
+  - name: target_ad_domain
+    description: The Active Directory domain within which authentication was requested.
+    example: 'http://ad.mitre.org/'
+  
+- 'name ': User Account
+  - name: target_uid
+    description: User ID or SID for the user being authenticated.
+    example: S-1-5-19
+  
+- 'name ': User Account
+  - name: target_user
+    description: >-
+    Name of the user being authenticated; this only pertains to privilage
+    escalation events where the current user is not necessarily the same as the
+    target user.
+    example: HOST1\LOCALUSER2
+  
+- 'name ': User Account
+  - name: target_user_role
+    description: User ID or SID for the user being authenticated.
+    example: System Administrator Role
+  
+- 'name ': User Account
+  - name: target_user_role
+    description: >-
+    IPAM access control role for the user being authenticated; this only
+    pertains to privilege escalation events where the current user is not
+    necessarily the same as the target user.
+    example: 'Administrator, Standard, Guest'
+  
+- 'name ': User Account
+  - name: upn
+    description: >-
+    In Active Directory, the User Principal Name (UPN) attribute is a user
+    identifier for logging in, separate from a Windows domain login.
+    example: dadmin@contoso
+  
+- 'name ': User Account
+  - name: user_agent
+    description: The user agent through which the request was made.
+    example: aws-cli/2.0.0 Python/3.7.4 Darwin/18.7.0 botocore/2.0.0dev4
+  
+- 'name ': User Account
+  - name: user_name
+    description: >-
+    Name of the user associated with the main event (i.e. Network session).
+    There could be a sense of direction depending how it is used together with
+    other entities (i.e. src_user_name or dst_user_name)
+    example: wardog
+  
+- 'name ': User Account
+  - name: user_role
+    description: >-
+    IPAM access control role for the user that initiated the authentication
+    request.
+    example: DNS Record Administrator Role
+  
+- 'name ': User Account
+  - name: user_type
+    description: type of user that initiated the request.
+    example: 'Administrator, Standard, Guest'
+
+name: User Account
+  - name: aadid
+    description: >-
+    The User Azure AD ID of the identity associated with a cloud network
+    session. It applies to source and destination entities.
+    example: 5e8b0f4d-2cd4-4e17-9467-b0f6a5c0c4d0
+  
+
+  - name: ad_domain
+    description: Active Directory domain from which the authentication request was generated may differ from the target_ad_domain.
+    example: 'http://ad2.mitre.org/'
+  
+
+  - name: app_name
+    description: Name of the application that made the authentication request.
+    example: 'ssh, win:local'
+  
+
+  - name: auth_service
+    description: The name of the service that was utilized to accomplish authentication.
+    example: 'Okta, ActiveDirectory'
+  
+
+  - name: auth_target
+    description: machine for which authentication was requested; may be different than the host that the request is made from.
+    example: HOST2
+  
+
+  - name: cred_type
+    description: types of credentials which were presented for delegation
+    example: '%%8098'
+  
+
+  - name: decision_reason
+    description: The justification for approving or denying an authentication request.
+    example: password is invalid
+  
+
+  - name: domain
+    description: The domain or computer name associated to the user in a session. In active directory, this would be the name of the domain the user belongs to.
+    example: CONTOSO
+  
+
+  - name: identity
+    description: User Principal Name (UPN) or another type of account identifier for which 802.1x authentication request was made.
+    example: host/XXXXXXXX.redmond.corp.microsoft.com
+  
+
+  - name: linked_logon_id
+    description: A hexadecimal value of the paired logon session.
+    example: '0x0'
+  
+
+  - name: logon_authentication_lan_package_name
+    description: 'The name of the LAN Manager sub-package (NTLM-family protocol name) that was used during logon. Possible values are: NTLM V1, NTLM V2, LM. Only populated if Authentication Package = NTLM.'
+    example: ''
+  
+
+  - name: logon_authentication_package_name
+    description: >-
+    The name of the authentication package which was used for the logon
+    authentication process. Default packages loaded on LSA startup are located
+    in “HKLM\SYSTEM\CurrentControlSet\Control\Lsa\OSConfig” registry key. Other
+    packages can be loaded at runtime. When a new package is loaded a “4610: An
+    authentication package has been loaded by the Local Security Authority”
+    (typically for NTLM) or “4622: A security package has been loaded by the
+    Local Security Authority” (typically for Kerberos) event is logged to
+    indicate that a new package has been loaded along with the package name.
+    example: Negotiate
+  
+
+  - name: logon_device_claims
+    description: list of device claims for new logon session
+    example: ''
+  
+
+  - name: logon_elevated_token
+    description: >-
+    a “Yes” or “No” flag. If “Yes” then the session this event represents is
+    elevated and has administrator privileges.
+    example: '%%1842'
+  
+
+  - name: logon_guid
+    description: >-
+    a GUID that can help you correlate this event with another event that can
+    contain the same Logon GUID, “4769(S, F): A Kerberos service ticket was
+    requested event on a domain controller. It also can be used for correlation
+    between a 4624 event and several other events (on the same computer) that
+    can contain the same Logon GUID, “4648(S): A logon was attempted using
+    explicit credentials” and “4964(S): Special groups have been assigned to a
+    new logon.”
+    example: '{00000000-0000-0000-0000-000000000000}'
+  
+
+  - name: logon_id
+    description: >-
+    hexadecimal value that can help you correlate this event with recent events
+    that might contain the same Logon ID
+    example: '0x8dcdc'
+  
+
+  - name: logon_impersonation_level
+    description: Impersonation level
+    example: '%%1833'
+  
+
+  - name: logon_key_length
+    description: >-
+    the length of NTLM Session Security key. Typically it has 128 bit or 56 bit
+    length. This parameter is always 0 if “Authentication Package” = “Kerberos”,
+    because it is not applicable for Kerberos protocol. This field will also
+    have “0” value if Kerberos was negotiated using Negotiate authentication
+    package.
+    example: '0'
+  
+
+  - name: logon_process_name
+    description: >-
+    The name of the trusted logon process that was used for the logon. See event
+    “4611: A trusted logon process has been registered with the Local Security
+    Authority” description for more information.
+    example: User32
+  
+
+  - name: logon_restricted_admin_mode
+    description: >-
+    Only populated for RemoteInteractive logon type sessions. This is a Yes/No
+    flag indicating if the credentials provided were passed using Restricted
+    Admin mode. Restricted Admin mode was added in Win8.1/2012R2 but this flag
+    was added to the event in Win10. If not a RemoteInteractive logon, then this
+    will be “-” string.
+    example: ''
+  
+
+  - name: logon_transmitted_services
+    description: >-
+    the list of transmitted services. Transmitted services are populated if the
+    logon was a result of a S4U (Service For User) logon process. S4U is a
+    Microsoft extension to the Kerberos Protocol to allow an application service
+    to obtain a Kerberos service ticket on behalf of a user - most commonly done
+    by a front-end website to access an internal resource on behalf of a user.
+    example: ''
+  
+
+  - name: logon_type
+    description: the type of logon which was performed
+    example: '2'
+  
+
+  - name: logon_user_claims
+    description: >-
+    list of user claims for new logon session. This field contains user claims
+    if user account was logged in and device claims if computer account was
+    logged in
+    example: >-
+    ad://ext/cn:88d2b96fdb2b4c49 <%%1818> : "dadmin"
+    ad://ext/Department:88d16a8edaa8c66b <%%1818> : "IT”
+  
+
+  - name: logon_user_linked_id
+    description: >-
+    A hexadecimal value of the paired logon session. If there is no other logon
+    session associated with this logon session, then the value is “0x0”.
+    example: '0x0'
+  
+
+  - name: logon_virtual_account
+    description: >-
+    a “Yes” or “No” flag, which indicates if the account is a virtual account
+    (e.g., “Managed Service Account”), which was introduced in Windows 7 and
+    Windows Server 2008 R2 to provide the ability to identify the account that a
+    given Service uses, instead of just using “NetworkService”.
+    example: '%%1843'
+  
+
+  - name: method
+    description: The authentication method that was used.
+    example: 'SMAL, Kerberos'
+  
+
+  - name: network_account_domain
+    description: Domain for the user that will be used for outbound (network) connections.
+    example: ''
+  
+
+  - name: network_account_name
+    description: User name used for outbound (network) connections
+    example: ''
+  
+
+  - name: password
+    description: >-
+    User password if seen in the request. Commonly seen in network logs and
+    authentication proxy/logs.
+    example: bobspassword
+  
+
+  - name: reporter_domain
+    description: domain name of the user that reported the main event
+    example: WORKGROUP
+  
+
+  - name: reporter_id
+    description: unique identifier of the user that reported the main event
+    example: '0x3e7'
+  
+
+  - name: reporter_name
+    description: the name of the account that reported information about the main event
+    example: WIN-GG82ULGC9GO$
+  
+
+  - name: reporter_sid
+    description: SID of account that reported information about the main event
+    example: S-1-5-18
+  
+
+  - name: response_time
+    description: Duration of time it took for an authentication response to be received.
+    example: 12ms
+  
+
+  - name: security_package
+    description: the name of Security Package used during an authentication event.
+    example: CREDSSP
+  
+
+  - name: session_id
+    description: ID of the session the user belongs to.
+    example: '1'
+  
+
+  - name: sid_list
+    description: 'the list of special group SIDs, which New Logon\Security ID is a member of.'
+    example: '{S-1-5-21-3457937927-2839227994-823803824-512}'
+  
+
+  - name: target_ad_domain
+    description: The Active Directory domain within which authentication was requested.
+    example: 'http://ad.mitre.org/'
+  
+
+  - name: target_uid
+    description: User ID or SID for the user being authenticated.
+    example: S-1-5-19
+  
+
+  - name: target_user
+    description: >-
+    Name of the user being authenticated; this only pertains to privilage
+    escalation events where the current user is not necessarily the same as the
+    target user.
+    example: HOST1\LOCALUSER2
+  
+
+  - name: target_user_role
+    description: User ID or SID for the user being authenticated.
+    example: System Administrator Role
+  
+
+  - name: target_user_role
+    description: >-
+    IPAM access control role for the user being authenticated; this only
+    pertains to privilege escalation events where the current user is not
+    necessarily the same as the target user.
+    example: 'Administrator, Standard, Guest'
+  
+
+  - name: upn
+    description: >-
+    In Active Directory, the User Principal Name (UPN) attribute is a user
+    identifier for logging in, separate from a Windows domain login.
+    example: dadmin@contoso
+  
+
+  - name: user_agent
+    description: The user agent through which the request was made.
+    example: aws-cli/2.0.0 Python/3.7.4 Darwin/18.7.0 botocore/2.0.0dev4
+  
+
+  - name: user_name
+    description: >-
+    Name of the user associated with the main event (i.e. Network session).
+    There could be a sense of direction depending how it is used together with
+    other entities (i.e. src_user_name or dst_user_name)
+    example: wardog
+  
+
+  - name: user_role
+    description: >-
+    IPAM access control role for the user that initiated the authentication
+    request.
+    example: DNS Record Administrator Role
+  
+
+  - name: user_type
+    description: type of user that initiated the request.
+    example: 'Administrator, Standard, Guest'
