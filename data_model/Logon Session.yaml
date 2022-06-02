@@ -26,14 +26,14 @@ fields:
     have “0” value if Kerberos was negotiated using Negotiate authentication
     package.
     example: '0'
-  - name: login_id
+  - name: logon_id
     description: A hex value corresponding to the session. The login id will persist until
     logout occurs.
     example: '0xf61f3'
-  - name: login_successful
+  - name: logon_successful
     description: Boolean indicator of whether a login attempt was successful.
     example: 'FALSE'
-  - name: login_type
+  - name: logon_type
     description: The type of login that was accomplished or attempted.
     example: |-
     interactive
