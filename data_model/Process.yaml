@@ -103,10 +103,10 @@ fields:
     description: ID of the target process (only for process access events).
     example: '1338'
   - name: pid
-    description: The process ID of the process that owns the socket responsible for the flow, represented in decimal notation. This will need to be collected from the host.
+    description: The process ID of the process that owns the socket responsible for the flow, represented in decimal notation.
     example: '780'
   - name: ppid
-    description: The process ID for the process’s parent that owns the socket responsible for the flow, represented in decimal notation. This will need to be collected from the host.
+    description: The process ID for the process’s parent that owns the socket responsible for the flow, represented in decimal notation.     
     example: '9082'
  references:
  tags: []
