@@ -1,0 +1,106 @@
+---
+name: process
+description:
+fields:  
+  - name: access_level
+    description: Permissions level at which the target process is accessed.
+    example: '0x40'
+  - name: call_trace
+    description: The stack trace showing the context of a process open/access call.
+    example: 'C:\Windows\SYSTEM32\ntdll.dll+a5594|C:\Windows\system32\KERNELBASE.dll+1e865'
+  - name: command_line
+    description: >-
+    The command line string contains all arguments passed to the process upon
+    execution.
+    example: "example arg1 arg2,\_example.exe,\_C:\\path\\example.exe /flag1"
+  - name: current_working_directory
+    description: >-
+    The absolute path to the current working directory of the process. The
+    string can also specify a UNC path.
+    example: 'c:\windows\system32\'
+  - name: env_vars
+    description: 'The environment variables within a process’s memory space, as a string.'
+    example: SHELL=/bin/zsh
+  - name: granted_accesss
+    description: granted access code requested/used to open a target process
+    example: '0x1000'
+  - name: guid
+    description: Globally unique identifier for the process.
+    example: '{f81d4fae-7dec-11d0-a765-00a0c91e6bf6}'
+  - name: image_description
+    description: "Description of the Image file. This may act as a pivot to\_https://car.mitre.org/wiki/Data_Model/file#file_pathdescription."
+    example: ''
+  - name: image_name
+    description: "Name of the image_path or executable file used to define the initial code and data mapped into the process’ virtual address space. This does not contain the full path of the Image file. This may act as a pivot to\_https://car.mitre.org/wiki/Data_Model/file#file_path_name."
+    example: example.exe
+  - name: 'image_product '
+    description: The Image’s file product name
+    example: Microsoft Windows Operating System
+  - name: image_version
+    description: Version of the Image file
+    example: 10.0.16299.15 (WinBuild.160101.0800)
+  - name: injected_address
+    description: The memory address where the subprocess is injected
+    example: '0xFFFFBC6422DD9C20'
+  - name: integrity_level
+    description: >-
+    The Windows integrity level associated with the process. MUST be one of:
+    low, medium, high, or system.
+    example: high
+  - name: parent_command_line
+    description: All of the arguments passed to the parent process upon execution.
+    example: 'c:\\windows\\system32\\dism.exe foo.xml'
+  - name: parent_guid
+    description: Globally unique identifier for the parent of the initiating process.
+    example: '{f81d4fae-7dec-11d0-a765-00a0c91e6bf6}'
+  - name: parent_image_name
+    description: "The\_exe\_field of the parent process. This is a substring of\_parent_image_path"
+    example: example_parent.exe
+  - name: parent_image_path
+    description: "The\_image_pathfield of the parent process."
+    example: 'C:\path\to\example_parent.exe'
+  - name: sid
+    description: "The security identifier or UID of the\_usertoken that the process is running under."
+    example: S-1-5-18
+  - name: signer
+    description: The company that signed the file.
+    example: 'TRUE'
+  - name: src_tid
+    description: The thread ID of the thread that created the event.
+    example: '9012'
+  - name: stack_base
+    description: The base address of the thread’s stack.
+    example: '0xfffff880081a9000'
+  - name: stack_limit
+    description: The limit of the thread’s stack.
+    example: '0xfffff880081a3000'
+  - name: start_address
+    description: The memory address at which the thread’s execution starts.
+    example: '0xfffff880046dc3e0'
+  - name: start_function
+    description: "The function at\_start_address"
+    example: LoadLibrary
+  - name: start_module
+    description: "The module in which\_start_addressresides."
+    example: 'C:\windows\system32\ntdll.dll'
+  - name: subprocess_tag
+    description: >-
+    Identifies the service if the thread is owned by a service; otherwise, it is
+    listed as zero.
+    example: '0'
+  - name: target_address
+    description: Specific address range which is accessed by another process.
+    example: 08048000-0804c000
+  - name: target_guid
+    description: >-
+    Globally Unique Identifier for the target process (only for process access
+    events).
+    example: '{A23EAE89-BD56-5903-0000-0010E9D95EFC}'
+  - name: target_image_name
+    description: Name of the process that is accessed.
+    example: 'C:\Windows\System32\winlogon.exe'
+  - name: target_pid
+    description: ID of the target process (only for process access events).
+    example: '1338'
+ references:
+ tags: []
