@@ -4,367 +4,242 @@ fields:
  - name: application_protocol
   description: The name of the layer 7 (OSI model) protocol contained within the flow.
     example: HTTP
-  
-
   - name: connection_history
   description: TCP Flags and other potential IP header info
     example: ''
-  
-
   - name: connection_history_detailed
   description: Detailed description of the information in connection_history
     example: ''
-  
-
   - name: connection_state
   description: The end state of the session/connection as defined in short abbreviation
     example: ''
-  
-
   - name: connection_state_detailed
   description: Detailed description of the information in network_connection_state
     example: ''
-  
-
   - name: cookie_variables
     description: The values of (HTTP) cookies
     example: T1NTRU0K
-  
-
   - name: dest_fqdn
     description: "The fully qualified domain name that corresponds to\_dest_ip."
     example: dest_example.example.com
-  
-
   - name: dest_hostname
     description: "The hostname that corresponds to\_dest_ip"
     example: test-pc
-  
-
   - name: direction
     description: >-
     User/Device defined name of the direction of the connection or session
     (Inbound or Outbound).
     example: outbound
-  
-
   - name: dns_additional_authoritative_name
     description: "additional authoritative response data from the supplemental information in the “additional” section of the DNS response defined in\_https://tools.ietf.org/html/rfc2181#section-5.4.1"
     example: 'http://google.com/'
-  
-
   - name: dns_additional_name
     description: "additional response data from the supplemental information in the “additional” section of the DNS response defined in\_https://tools.ietf.org/html/rfc2181#section-5.4.1"
     example: 10.10.10.1
-  
-
   - name: dns_flags
     description: >-
     An array of DNS flags if the data source does not parse them or set as
     boolean
     example: '[ "1", "0" ]'
-  
-
   - name: dns_flags_authenticated
     description: "The “AD” flag. Indicates in a response that all data included in the answer and authority sections of the response have been authenticated by the server according to the policies of that server. see\_https://tools.ietf.org/html/rfc3655#section-6.1\n\_for more information. This is related to DNSSEC"
     example: 'FALSE'
-  
-
   - name: dns_flags_authoritative
     description: >-
     The “AA” flag. Whether the response (answer) from the server was
     authoritative
     example: 'TRUE'
-  
-
   - name: dns_flags_checking_disabled
     description: The “CD” flag. Indicates checking disabled for DNSSEC
     example: 'TRUE'
-  
-
   - name: dns_flags_recursion_available
     description: The “RA” flag. Indicates the server supports recursive queries
     example: 'FALSE'
-  
-
   - name: dns_flags_recursion_desired
     description: The “RD” flag. Client requested recursion for the lookup/request
     example: 'TRUE'
-  
-
   - name: dns_flags_truncated
     description: >-
     The “TC” flag. Indicating (from the server) that response was more than
     permitted for the single sessions channel, this is usually 512 bytes.
     example: 'TRUE'
-  
-
   - name: dns_flags_z
     description: "The “Z” flag. This is a reserved field for older DNS implementations\_https://tools.ietf.org/html/rfc5395"
     example: '0'
-  
-
   - name: dns_query_class
     description: >-
     The class of the dns record requested in decimal format, normally this
     should be 1. Query class is related to zone information, therefore most
     clients would be request this type of class
     example: '1'
-  
-
   - name: dns_query_class_name
     description: >-
     The class of the dns record requested as a string, normally this should be
     C_INTERNET. Query class is related to zone information, therefore most
     clients would be request this type of class
     example: C_INTERNET
-  
-
   - name: dns_query_name
     description: what was queried
     example: 'http://google.com/'
-  
-
   - name: dns_query_type
     description: The type of dns requested in decimal format
     example: '28'
-  
-
   - name: dns_query_type_name
     description: The type of dns requested as a string
     example: AAAA
-  
-
   - name: dns_rejected
     description: >-
     The server responded to the query but no answers were given. If not in the
     log source, could also be determined by a successful dns response code and
     no answers/replies returned
     example: 'FALSE'
-  
-
   - name: dns_response_code
     description: The response code returned from the server for the request in decimal format
     example: '0'
-  
-
   - name: dns_response_code_name
     description: The response code returned from the server for the request as a string
     example: NOERROR
-  
-
   - name: dns_response_name
     description: The results returned for the dns query. can contain a mix of IPs or domains
     example: 8.8.8.8
-  
-
   - name: dns_response_ttl
     description: The time to live (TTL) for each response_name
     example: ''
-  
-
   - name: dns_rtt
     description: round trip time (RTT) of the dns query to answer
     example: '0.006946'
-  
-
   - name: dns_transaction_id
     description: >-
     Hexadecimal identifier assigned by the program that generated the DNS query.
     Is 16-bit. Can be used to match up DNS requests across software/clients
     example: 4D11
-  
-
   - name: dns_transaction_id_hex
     description: transaction_id in decimal format
     example: '19729'
-  
-
   - name: duration
     description: >-
     The amount of time, in millisecond, for the completion of the network
     session or connection.
     example: '1500'
-  
-
   - name: end_time
     description: 'The datetime stamp, in UTC, when the flow ended.'
     example: '59:53.2'
-  
-
-  - name: exe
+  - name: name
     description: "The basename of the\_image_path. This will need to be collected from the host."
     example: Chrome.exe
-  
-
   - name: family
     description: The type of socket in question.
     example: 'AF_UNIX, AF_INET, AF_INET6'
-  
-
   - name: fingerprint_network_community_id
     description: "Network community ID as outlined by the standard from\_https://github.com/corelight/community-id-spec. Standardized hashing of network tuple. The combination, most commonly, of Source IP, Source Port, Destination IP, Destination Port, and IP Protocol allows pivoting between multiple log types"
     example: '1:EeVyZ07VGj1n0rld+xCLFdM+u8M='
-  
-
   - name: fqdn
     description: >-
     The fully qualified domain name of the host. Contains the hostname appended
     with the domain.
     example: HOST1.EXAMPLE_DOMAIN.COM
-  
-
   - name: hostname
     description: 'The hostname of the active host, without the domain.'
     example: HOST1
-  
-
   - name: icmp_code
     description: 'For an ICMP message, ICMP message type numeric value (RFC 2780 or RFC 4443).'
     example: '34'
-  
-
   - name: icmp_type
     description: >-
     For an ICMP message, ICMP message type text representation (RFC 2780 or RFC
     4443)
     example: Destination Unreachable
-  
-
   - name: image_path
     description: >-
     The file system path of the process that opened the flow. This will need to
     be collected from the host.
     example: 'C:\path\to\example.exe'
-  
-
   - name: in_bytes
     description: Integer value of total number of bytes received.
     example: '13200'
-  
-
   - name: informational_code
     description: integer response code of 100-199
     example: '101'
-  
-
   - name: informational_message
     description: message/text of the integer response code that was 100-199
     example: Switching Protocols
-  
-
   - name: initiated
     description: >-
     Whether the session was initiated or received. Most commonly used in
     relation to an endpoint/device. False = the endpoint did not initiate the
     session (ie: was scanned or RDP connection made to it)
     example: 'TRUE'
-  
-
   - name: inner_vlan_id
     description: >-
     Normally the VLAN can not be determined as source/destination and VLANs are
     stacked/wrapped. This is the VLAN “inside”
     example: '150'
-  
-
   - name: ip_bytes
     description: >-
     Total IP bytes, according to ip headers, for the session. If this field does
     not exist in the log source, then its possible in your ETL pipeline to
     combine the source and destination bytes
     example: '14564'
-  
-
   - name: local_address
   description: >-
     IP address on which the socket will accept connections; does not include the
     port number.
     example: 10.0.211.200
-  
-
   - name: local_path
   description: >-
     In the case that a socket is used for local interprocess communication, the
     socket binds to a local filepath, and will usually be visible in the
     filesystem. This is the case with AF_UNIX type sockets.
     example: /tmp/foo
-  
-
   - name: local_port
   description: >-
     Port number on which the socket is bound at the local end. This pertains to
     TCP and UDP sockets but not IP sockets.
     example: '48777'
-  
-
   - name: mac_addr
   description: >-
     MAC address of the device where the event was generated or network interface
     where a connection starts or ends.
     example: '00:11:22:33:44:55'
-  
-
   - name: missed_bytes
   description: bytes that a network sensor or other system/application may have missed
     example: '5'
-  
-
   - name: network_content
   description: >-
     The ASCII printable characters of the flow. This corresponds to content from
     PCAP data or similar formats.
     example: 'GET https://www.google.com/ HTTP/1.1'
-  
-
   - name: network_content_type
   description: The HTTP Response content type header for HTTP/HTTPS network sessions.
     example: ''
-  
-
   - name: network_direction
   description: >-
     Direction of the original packet of the flow initiator, relative to network
     perimeter.
     example: in (flow originated outside the network and was directed into it)
-  
-
   - name: out_bytes
   description: Integer value of total number of bytes sent.
     example: '1337'
-  
-
   - name: outer_vlan_id
   description: >-
     Normally the VLAN can not be determined as source/destination and VLANs are
     stacked/wrapped. This is the VLAN on the “outside”
     example: '160'
-  
-
   - name: packet_count
   description: The total packet count seen at time of logging.
     example: '4'
-  
-
   - name: packets
   description: >-
     Total packets for the session. If this field does not exist in the log
     source, then its possible in your ETL pipeline to combine the source and
     destination packets
     example: '143'
-  
-
   - name: port_name
     description: >-
     Name of the port used in a network connection. This is usually determined by
     IANA common port assignment. Therefore, this means its a guess and NOT
     actually what the application/ is what the actually.
     example: netbios-dgm
-  - name: ppid
-    description: >-
-    The process ID for the process’s parent. This will need to be collected from
-    the host.
-    example: '1860'
   - name: proto_info
     description: >-
     A text decoded version of traffic in the flow specific to the protocol. The
