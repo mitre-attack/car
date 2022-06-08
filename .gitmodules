@@ -1,0 +1,3 @@
+[submodule "OSSEM-CDM"]
+	path = OSSEM-CDM
+	url = https://github.com/OTRF/OSSEM-CDM.git
