@@ -2,11 +2,13 @@
 
 The best way to view the analytics in this repository is via the [CAR website](https://car.mitre.org).
 
-This repository is the way to contribute new analytics, data model changes, or sensor changes. Analytics contributed in this repo are automatically published in CAR.
+This repository is the way to contribute new analytics. Analytics contributed in this repo are automatically published in CAR.
 
 ## Where is everything?
 
-Analytics are in the `analytics` directory as YAML files; the same is true for the YAML representations of `sensors` and the `data_model`. The website is built automatically from that structured content. Other content is all in the `docs` folder. 
+Analytics are in the `analytics` directory as YAML files. The website is built automatically from that structured content. Other content is all in the `docs` folder. 
+
+CAR has partnered with OSSEM to use their Common Data Model moving forward. 
 
 The [implementations](implementations) directory contains libraries of analytics that are best represented as source code for specific tools. As an example, [BZAR](implementations/bzar) (Bro/Zeek ATT&CK-Based Analytics and Reporting) is a library of source code for Zeek (previously Bro).
 
