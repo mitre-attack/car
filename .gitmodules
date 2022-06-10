@@ -1,3 +1,6 @@
 [submodule "OSSEM-CDM"]
 	path = OSSEM-CDM
 	url = https://github.com/OTRF/OSSEM-CDM.git
+[submodule "bzar"]
+	path = bzar
+	url = https://github.com/mitre-attack/bzar.git
