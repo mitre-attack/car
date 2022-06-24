@@ -104,10 +104,3 @@ Information about the latest CAR updates and changes can be found in this sectio
 * Added YAML for [sensors](https://github.com/mitre-attack/car/tree/master/sensors) (those added recently) and [data models](https://github.com/mitre-attack/car/tree/master/data_model) on Github.
 * New analytics added
   * [CAR-2020-04-001: Shadow Copy Deletion](/analytics/CAR-2020-04-001)
-
-## Methodology
-CAR analytics were developed to detect the adversary behaviors in [ATT&CK](https://attack.mitre.org/). Development of an analytic is based upon the following activities: 
-* identifying and prioritizing adversary behaviors from the ATT&CK adversary model 
-* identifying the data necessary to detect the adversary behavior
-* identification or creation of a sensor to collect the necessary data
-* the actual creation of the analytic to detect the identified behaviors
