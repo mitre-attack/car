@@ -38,7 +38,7 @@ HTTP events represents requests made over the network via the HTTP protocol.
 ## Coverage Map
 
 | | **hostname** | **request_body_bytes** | **http_version** | **request_body_content** | **request_referrer** | **requester_ip_address** | **response_body_types** | **response_body_content** | **response_status_codes** | **url_full** | **url_domain** | **url_remainder** | **url_scheme** | **user_agent_full** | **user_agent_device** | **user_agent_version** |
-| --- | --- | ---| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | ---| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **get** | | | | | | | | | | | | | | | | |
 | **post** | | | | | | | | | | | | | | | | |
 | **put** | | | | | | | | | | | | | | | | |
