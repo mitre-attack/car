@@ -38,7 +38,7 @@ A process is a running program on a computer.
 |sha256_hash|The SHA256 hash of the contents of the file located at `image_path`.|`68e656b251e67e8358bef8483ab0d51c6619f3e7a1a9f0e75838d41ff368f728`|
 |sid|The security identifier or UID of the `user` token that the process is running under.|`S-1-5-18`|
 |signer|The company that signed the file.|`True`|
-|signature_valid|Boolean indicator of whether signature is current and not revoked.|`FooCorp`|
+|signature_valid|Boolean indicator of whether signature is current and not revoked.|`True`|
 |target_address|Specific address range which is accessed by another process.|`08048000-0804c000`|
 |target_guid|Globally Unique Identifier for the target process (only for process access events).|`{A23EAE89-BD56-5903-0000-0010E9D95EFC}`|
 |target_pid|ID of the target process (only for process access events).|`1338`|
