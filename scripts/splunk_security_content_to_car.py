@@ -62,11 +62,11 @@ def generate_car_object(detection_yaml, car_id, DETECTION_PATH):
 
 def mitre_attack_object(technique, attack):
     mitre_attack = dict()
-    mitre_attack['technique'] = technique.id
+    mitre_attack['technique'] = technique.external_references[0].external_id
     # process tactics
     tactics = []
     for tactic in technique.tactics:
-        tactics.append(tactic.id)
+        tactics.append(tactic.external_references[0].external_id)
     mitre_attack['tactics'] = tactics
     mitre_attack['coverage'] = 'Moderate'
 
