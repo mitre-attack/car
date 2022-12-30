@@ -24,7 +24,7 @@ This data is also available as:
    * [Splunk Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/splunk_analytic_coverage_12_30_2022.json).
 
 <script type="text/javascript" src="/assets/sort-table.js"></script>
-    <table class="js-sort-table" id="coverage-sort">
+<table class="js-sort-table" id="coverage-sort">
             <thead>
             <tr>
                 <th style="white-space:nowrap;">Technique ID</th>
