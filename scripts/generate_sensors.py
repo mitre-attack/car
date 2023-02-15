@@ -190,3 +190,31 @@ for sensor in mappings:
   markdown = sensor_template.render(sensor=sensor)
   # Save to the sensors directory
   open('../docs/sensors/{}.md'.format(sensor_tag.lower()), 'w').write(markdown)
+
+# Generate index file
+index_content = '''---
+title: "Sensors"
+---
+
+Sensors are tools that collect data that can be used to run analytics.
+
+CAR currently has a limited number of sensors mapped to the CAR [Data Model](../data_model). They are:
+{}'''.format(
+        '\n'.join(
+            (
+                '* [{sensor_name} ({sensor_version})]({sensor_name_lower}_{sensor_version})'.format(
+                    sensor_name=sensor['sensor_name'],
+                    sensor_name_lower=sensor['sensor_name'].lower(),
+                    sensor_version=sensor['sensor_version']
+                    ) for sensor in sorted(
+                        mappings,
+                        key=lambda sensor: (
+                            sensor['sensor_name'].lower(),
+                            sensor['sensor_version']
+                        )
+                    )
+                )
+            )
+        )
+with open('../docs/sensors/index.md', 'w') as index_file:
+  index_file.write(index_content)
