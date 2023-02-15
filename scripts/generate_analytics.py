@@ -210,11 +210,9 @@ for tid in sorted(table_techniques):
               sub_link = '<a href="{0}">{1}: {2}</a>'.format(sub_url,sub_tid,techniques[sub_tid])
               subtechnique_table += tr_template.format("",tid_link,sub_link,sub_str)
             elif len(sub_bucket.keys()) == 1:
-              tid_url = "https://attack.mitre.org/techniques/{0}/".format(tid)
               sub_url = "https://attack.mitre.org/techniques/{0}/{1}/".format(sub_tid.split(".")[0],sub_tid.split(".")[1])
-              tid_link = '<a href="{0}">{1}: {2}</a>'.format(tid_url,tid,techniques[tid])
               sub_link = '<a href="{0}">{1}: {2}</a>'.format(sub_url,sub_tid,techniques[sub_tid])
-              subtechnique_table += tr_template.format("",tid_link,sub_link,sub_str)
+              subtechnique_table += tr_sub_template.format(sub_link,sub_str)
             else:
               sub_url = "https://attack.mitre.org/techniques/{0}/{1}/".format(sub_tid.split(".")[0],sub_tid.split(".")[1])
               sub_link = '<a href="{0}">{1}: {2}</a>'.format(sub_url,sub_tid,techniques[sub_tid])
