@@ -184,7 +184,7 @@ for tid in sorted(table_techniques):
         none_sub_str = "(N/A - technique only)"
     else:
         none_str = "(N/A - see below)"
-    if len(sub_bucket.keys()) > 1:
+    if len(sub_bucket.keys()) > 1 or len(none_bucket) > 0:
       num_rows = len(sub_bucket.keys()) + 1
       tid_url = "https://attack.mitre.org/techniques/{0}/".format(tid)
       tid_link = '<a href="{0}">{1}: {2}</a>'.format(tid_url,tid,techniques[tid])
@@ -192,7 +192,7 @@ for tid in sorted(table_techniques):
       if none_sub_str == "(N/A - technique only)":
         subtechnique_table += tr_template.format(rowspan,tid_link,none_sub_str,none_str)
       else:
-        subtechnique_table += tr_tech_template.format(rowspan,tid_link)    
+        subtechnique_table += tr_tech_template.format(rowspan,tid_link)
     # Write the subtechniques to the table
     if sub_bucket:
         for sub_tid, car_list in sub_bucket.items():
