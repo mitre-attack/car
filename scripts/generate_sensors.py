@@ -1,5 +1,7 @@
 """This script generates the sensor portion of the site, including coverage,
 for each YAML sensor mapping file.
+NOTE: This script should be run after `generate_analytics.py` as it is
+dependent on files in /docs/analytics existing and being up to date.
 """
 
 import json
@@ -181,6 +183,7 @@ generateSensorsForAnalytics([path.split(a)[-1].strip(".yaml") for a in analytics
 sensor_template = Template(open('sensor_template.md').read())
 
 # Generate the sensor page for each sensor
+makedirs('../docs/sensors', exist_ok=True)
 for sensor in mappings:
   sensor_tag = sensor['sensor_name'] + "_" + str(sensor['sensor_version'])
   # Generate the markdown
