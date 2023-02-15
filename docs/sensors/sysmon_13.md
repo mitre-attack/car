@@ -14,12 +14,23 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 
 ## Data Model Coverage
 
-### [driver](../data_model/driver)
+### [thread](../data_model/thread)
 
-| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` |
+| | `hostname` | `src_pid` | `src_tid` | `stack_base` | `stack_limit` | `start_address` | `start_function` | `start_module` | `start_module_name` | `tgt_pid` | `tgt_tid` | `uid` | `user` | `user_stack_base` | `user_stack_limit` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `create` | ✓|✓| | | |✓|✓|✓| |✓|✓|✓| | | |
+| `remote_create` | ✓|✓| | | |✓|✓|✓| |✓|✓|✓| | | |
+| `suspend` |  | | | | | | | | | | | | | | |
+| `terminate` |  | | | | | | | | | | | | | | |
+
+### [registry](../data_model/registry)
+
+| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `load` |  |✓| |✓|✓| | |✓|✓|✓|✓|
-| `unload` |  | | | | | | | | | | |
+| `add` | ✓|✓|✓| |✓|✓| |✓| | |✓|
+| `key_edit` |  |✓|✓| |✓|✓|✓|✓| | |✓|
+| `remove` |  |✓|✓| |✓|✓| |✓| | |✓|
+| `value_edit` |  |✓|✓| |✓|✓|✓|✓| | |✓|
 
 ### [file](../data_model/file)
 
@@ -32,6 +43,13 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `timestomp` |  | |✓| | |✓|✓| | | |✓| | | | | | |✓| |✓| | | | | | |
 | `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+
+### [driver](../data_model/driver)
+
+| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `load` |  |✓| |✓|✓| | |✓|✓|✓|✓|
+| `unload` |  | | | | | | | | | | |
 
 ### [flow](../data_model/flow)
 
@@ -48,24 +66,6 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `create` |  | |✓|✓| | |✓| | |✓|✓|✓|✓| | |✓|✓|✓| |✓|✓| | | | | | | |✓|
 | `terminate` |  | | | | | |✓| | |✓| | | | | | |✓| | | | | | | | | | | | |
-
-### [registry](../data_model/registry)
-
-| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
-|---|---|---|---|---|---|---|---|---|---|---|
-| `add` | ✓|✓|✓| |✓|✓| |✓| | |✓|
-| `key_edit` |  |✓|✓| |✓|✓|✓|✓| | |✓|
-| `remove` |  |✓|✓| |✓|✓| |✓| | |✓|
-| `value_edit` |  |✓|✓| |✓|✓|✓|✓| | |✓|
-
-### [thread](../data_model/thread)
-
-| | `hostname` | `src_pid` | `src_tid` | `stack_base` | `stack_limit` | `start_address` | `start_function` | `start_module` | `start_module_name` | `tgt_pid` | `tgt_tid` | `uid` | `user` | `user_stack_base` | `user_stack_limit` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `create` | ✓|✓| | | |✓|✓|✓| |✓|✓|✓| | | |
-| `remote_create` | ✓|✓| | | |✓|✓|✓| |✓|✓|✓| | | |
-| `suspend` |  | | | | | | | | | | | | | | |
-| `terminate` |  | | | | | | | | | | | | | | |
 
 
 
@@ -95,6 +95,7 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
  - [CAR-2014-12-001: Remotely Launched Executables via WMI](../analytics/CAR-2014-12-001)
  - [CAR-2016-03-001: Host Discovery Commands](../analytics/CAR-2016-03-001)
  - [CAR-2016-03-002: Create Remote Process via WMIC](../analytics/CAR-2016-03-002)
+ - [CAR-2016-04-002: User Activity from Clearing Event Logs](../analytics/CAR-2016-04-002)
  - [CAR-2019-04-001: UAC Bypass](../analytics/CAR-2019-04-001)
  - [CAR-2019-04-002: Generic Regsvr32](../analytics/CAR-2019-04-002)
  - [CAR-2019-04-003: Squiblydoo](../analytics/CAR-2019-04-003)
@@ -102,7 +103,6 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
  - [CAR-2019-07-002: Lsass Process Dump via Procdump](../analytics/CAR-2019-07-002)
  - [CAR-2019-08-001: Credential Dumping via Windows Task Manager](../analytics/CAR-2019-08-001)
  - [CAR-2019-08-002: Active Directory Dumping via NTDSUtil](../analytics/CAR-2019-08-002)
- - [CAR-2020-04-001: Shadow Copy Deletion](../analytics/CAR-2020-04-001)
  - [CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities](../analytics/CAR-2020-08-001)
  - [CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS](../analytics/CAR-2020-08-002)
  - [CAR-2020-09-001: Scheduled Task - FileAccess](../analytics/CAR-2020-09-001)
@@ -124,7 +124,7 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
  - [CAR-2021-01-006: Unusual Child Process spawned using DDE exploit](../analytics/CAR-2021-01-006)
  - [CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt](../analytics/CAR-2021-01-007)
  - [CAR-2021-01-008: Disable UAC](../analytics/CAR-2021-01-008)
- - [CAR-2021-01-009: Detecting Shadow Copy Deletion via Vssadmin.exe](../analytics/CAR-2021-01-009)
+ - [CAR-2021-01-009: Detecting Shadow Copy Deletion or Resize](../analytics/CAR-2021-01-009)
  - [CAR-2021-02-002: Get System Elevation](../analytics/CAR-2021-02-002)
  - [CAR-2021-04-001: Common Windows Process Masquerading](../analytics/CAR-2021-04-001)
  - [CAR-2021-05-001: Attempt To Add Certificate To Untrusted Store](../analytics/CAR-2021-05-001)
@@ -137,3 +137,8 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
  - [CAR-2021-05-008: Certutil exe certificate extraction](../analytics/CAR-2021-05-008)
  - [CAR-2021-05-009: CertUtil With Decode Argument](../analytics/CAR-2021-05-009)
  - [CAR-2021-05-010: Create local admin accounts using net exe](../analytics/CAR-2021-05-010)
+ - [CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0](../analytics/CAR-2021-11-001)
+ - [CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify](../analytics/CAR-2021-11-002)
+ - [CAR-2021-12-001: Scheduled Task Creation or Modification Containing Suspicious Scripts, Extensions or User Writable Paths](../analytics/CAR-2021-12-001)
+ - [CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'](../analytics/CAR-2021-12-002)
+ - [CAR-2022-03-001: Disable Windows Event Logging](../analytics/CAR-2022-03-001)
