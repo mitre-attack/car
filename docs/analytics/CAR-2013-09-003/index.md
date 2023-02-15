@@ -8,8 +8,7 @@ analytic_type: Situational Awareness
 contributors: MITRE
 applicable_platforms: N/A
 ---
-
-
+<br><br>
 Account usage within SMB can be used to identify compromised credentials, and the hosts accessed with them.
 
 This analytic monitors SMB activity that deals with user activity rather than file activity.

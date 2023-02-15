@@ -8,8 +8,7 @@ analytic_type: Anomaly, TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Many programs create command prompts as part of their normal operation including malware used by attackers. This analytic attempts to identify suspicious programs spawning `cmd.exe` by looking for programs that do not normally create `cmd.exe`.
 
 While this analytic does not take the user into account, doing so could generate further interesting results. 

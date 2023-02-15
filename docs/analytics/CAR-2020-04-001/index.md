@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: 
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 This analytic has been deprecated in favor of [CAR-2021-01-009](/analytics/CAR-2021-01-009), which covers the same technique with some additional detections.
 
 

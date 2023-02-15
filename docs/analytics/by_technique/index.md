@@ -75,7 +75,7 @@ permalink: /analytics/by_technique
             <td><ul><li><a href="CAR-2013-01-002">CAR-2013-01-002: Autorun Differences</a></li><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-08-001">CAR-2013-08-001: Execution with schtasks</a></li><li><a href="CAR-2015-04-002">CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks</a></li><li><a href="CAR-2020-09-001">CAR-2020-09-001: Scheduled Task - FileAccess</a></li><li><a href="CAR-2021-12-001">CAR-2021-12-001: Scheduled Task Creation or Modification Containing Suspicious Scripts, Extensions or User Writable Paths</a></li></ul></td>
         </tr>
        <tr>
-            <td><a href="https://attack.mitre.org/techniques/T1053/002/">T1053.002: At (Windows)</a></td>
+            <td><a href="https://attack.mitre.org/techniques/T1053/002/">T1053.002: At</a></td>
             <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2013-05-004">CAR-2013-05-004: Execution with AT</a></li><li><a href="CAR-2015-04-001">CAR-2015-04-001: Remotely Scheduled Tasks via AT</a></li></ul></td>
         </tr>
        <tr>
@@ -118,7 +118,7 @@ permalink: /analytics/by_technique
             <td><ul><li><a href="CAR-2013-04-002">CAR-2013-04-002: Quick execution of a series of suspicious commands</a></li><li><a href="CAR-2016-03-001">CAR-2016-03-001: Host Discovery Commands</a></li><li><a href="CAR-2020-11-006">CAR-2020-11-006: Local Permission Group Discovery</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1070/">T1070: Indicator Removal on Host</a></td>
+            <td rowspan="4"><a href="https://attack.mitre.org/techniques/T1070/">T1070: Indicator Removal</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1070/003/">T1070.003: Clear Command History</a></td>
@@ -170,7 +170,7 @@ permalink: /analytics/by_technique
             <td><ul><li><a href="CAR-2021-05-002">CAR-2021-05-002: Batch File Write to System32</a></li></ul></td>
         </tr>
        <tr>
-            <td rowspan="5"><a href="https://attack.mitre.org/techniques/T1218/">T1218: Signed Binary Proxy Execution</a></td>
+            <td rowspan="5"><a href="https://attack.mitre.org/techniques/T1218/">T1218: System Binary Proxy Execution</a></td>
         </tr>
        <tr>
             <td><a href="https://attack.mitre.org/techniques/T1218/010/">T1218.010: Regsvr32</a></td>

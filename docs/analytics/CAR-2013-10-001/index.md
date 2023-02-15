@@ -8,8 +8,7 @@ analytic_type: Situational Awareness
 contributors: MITRE
 applicable_platforms: Windows, Linux, macOS
 ---
-
-
+<br><br>
 Monitoring logon and logoff events for hosts on the network is very important for situational awareness. This information can be used as an indicator of unusual activity as well as to corroborate activity seen elsewhere.
 
 Could be applied to a number of different types of monitoring depending on what information is desired. Some use cases include monitoring for all remote connections and building login timelines for users.

@@ -207,7 +207,7 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2014-03-006/">CAR-2014-03-006</a></td>
                 <td>RunDLL32.exe monitoring</td>
                 <td style="white-space:nowrap;">March 28 2014</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">System Binary Proxy Execution</a></li></ul></td>
                 <td>Dnif, Logpoint, Pseudocode</td>
                 <td>Windows</td>
             </tr>
@@ -351,8 +351,8 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2016-04-002/">CAR-2016-04-002</a></td>
                 <td>User Activity from Clearing Event Logs</td>
                 <td style="white-space:nowrap;">April 14 2016</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
-                <td>Logpoint, Pseudocode, Sigma</td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal</a></li></ul></td>
+                <td>Logpoint, Pseudocode, Sigma, Splunk</td>
                 <td>Windows, Linux, macOS</td>
             </tr>
             <tr>
@@ -391,7 +391,7 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2019-04-002/">CAR-2019-04-002</a></td>
                 <td>Generic Regsvr32</td>
                 <td style="white-space:nowrap;">April 24 2019</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">System Binary Proxy Execution</a></li></ul></td>
                 <td>Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
@@ -399,7 +399,7 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2019-04-003/">CAR-2019-04-003</a></td>
                 <td>Squiblydoo</td>
                 <td style="white-space:nowrap;">April 24 2019</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">System Binary Proxy Execution</a></li></ul></td>
                 <td>Eql, Logpoint, Psuedocode, Splunk</td>
                 <td>Windows</td>
             </tr>
@@ -559,7 +559,7 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-005/">CAR-2020-11-005</a></td>
                 <td>Clear Powershell Console Command History</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal</a></li></ul></td>
                 <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
@@ -575,7 +575,7 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-007/">CAR-2020-11-007</a></td>
                 <td>Network Share Connection Removal</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal</a></li></ul></td>
                 <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
@@ -591,7 +591,7 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-009/">CAR-2020-11-009</a></td>
                 <td>Compiled HTML Access</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">System Binary Proxy Execution</a></li></ul></td>
                 <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
@@ -599,7 +599,7 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2020-11-010/">CAR-2020-11-010</a></td>
                 <td>CMSTP</td>
                 <td style="white-space:nowrap;">November 30 2020</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">Signed Binary Proxy Execution</a></li></ul></td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1218/">System Binary Proxy Execution</a></li></ul></td>
                 <td>Logpoint, Pseudocode, Splunk</td>
                 <td>Windows</td>
             </tr>
@@ -615,7 +615,7 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-01-001/">CAR-2021-01-001</a></td>
                 <td>Identifying Port Scanning Activity</td>
                 <td style="white-space:nowrap;">October 23 2020</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1046/">Network Service Scanning</a></li></ul></td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1046/">Network Service Discovery</a></li></ul></td>
                 <td>Splunk</td>
                 <td>Windows, Linux</td>
             </tr>
@@ -631,7 +631,7 @@ permalink: /analytics/
                 <td style="white-space:nowrap;"><a href="/analytics/CAR-2021-01-003/">CAR-2021-01-003</a></td>
                 <td>Clearing Windows Logs with Wevtutil</td>
                 <td style="white-space:nowrap;">December 02 2020</td>
-                <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal on Host</a></li></ul></td>
+                <td><ul><li><a href="https://attack.mitre.org/techniques/T1070/">Indicator Removal</a></li></ul></td>
                 <td>Splunk</td>
                 <td>Windows</td>
             </tr>

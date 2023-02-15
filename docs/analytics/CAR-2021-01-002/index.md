@@ -8,8 +8,7 @@ analytic_type: Anomaly
 contributors: Cyware Labs
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Often, after a threat actor gains access to a system, they will attempt to run some kind of malware to further infect the victim machine. These malware often have long command line strings, which could be a possible indicator of attack. Here, we use sysmon and Splunk to first find the average command string length and search for command strings that stretch over multiple lines, thus identifying anomalies and possibly malicious commands.
 
 

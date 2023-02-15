@@ -8,8 +8,7 @@ analytic_type: Situational Awareness
 contributors: MITRE/NSA
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Spyware and malware remain a serious problem and Microsoft developed security services, Windows Defender and Windows Firewall, to combat this threat. In the event Windows Defender or Windows Firewall is turned off, administrators should correct the issue immediately to prevent the possibility of infection or further infection and investigate to determine if caused by crash or user manipulation.
 
 Stopping services events are Windows Event Code 7036.

@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Adversaries may attempt to conceal their tracks by deleting the history of commands run within the Powershell console, or turning off history saving to begin with. This analytic looks for several commands that would do this. This does not capture the event if it is done within the console itself; only commandline-based commands are detected. Note that the command to remove the history file directly may very a bit if the history file is not saved in the default path on a particular system.
 
 
@@ -17,7 +16,7 @@ Adversaries may attempt to conceal their tracks by deleting the history of comma
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Indicator Removal on Host](https://attack.mitre.org/techniques/T1070/)|[Clear Command History](https://attack.mitre.org/techniques/T1070/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
+|[Indicator Removal](https://attack.mitre.org/techniques/T1070/)|[Clear Command History](https://attack.mitre.org/techniques/T1070/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
 
 
 ### D3FEND Techniques
