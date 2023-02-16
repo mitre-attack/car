@@ -1,0 +1,42 @@
+name: Regenerate /docs using the generate_*.py scripts
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Pull down repo
+        uses: actions/checkout@v3
+      - name: Clean /docs/analytics
+        shell: bash
+        run: rm -rfv ./docs/analytics
+      - name: Clean /docs/sensors
+        shell: bash
+        run: rm -rfv ./docs/sensors
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      - name: Install script dependencies
+        run: pip install -r ./scripts/requirements.txt
+      - name: Regenerate analytics
+        working-directory: ./scripts
+        run: python generate_analytics.py
+      - name: Regenerate sensors
+        working-directory: ./scripts
+        run: python generate_sensors.py
+      - name: Regenerate attack nav layer
+        working-directory: ./scripts
+        run: python generate_attack_nav_layer.py
+      - name: Commit new static site
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'Automated commit to rebuild the static site'
+          commit_user_name: 'Build and Push Automation Script'
+          commit_user_email: '<>'
