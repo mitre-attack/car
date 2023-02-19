@@ -14,7 +14,7 @@ jobs:
       - name: Pull down repo
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.base_ref }}
+          ref: ${{ github.ref }}
       - name: Clean /docs/analytics
         shell: bash
         run: rm -rfv ./docs/analytics
