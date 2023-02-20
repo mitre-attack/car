@@ -42,5 +42,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'Automated commit to rebuild the static site'
+          commit_options: '--signoff'
           commit_user_name: 'Build and Push Automation Script'
           commit_user_email: '<>'
