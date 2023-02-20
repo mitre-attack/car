@@ -17,3 +17,5 @@ six==1.15.0
 termcolor==1.1.0
 tzlocal==2.1
 urllib3==1.26.5
+yamale==4.0.4
+yamllint==1.29.0
