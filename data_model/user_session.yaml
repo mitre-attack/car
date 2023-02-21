@@ -1,6 +1,6 @@
 ---
-name: User Sesssion
-description: User sessions are the user activities undertaken on the computer in the course of conducting standard user actions.
+name: User Session
+description: User sessions are the user activities undertaken on the computer in the course of conducting standard user actions. test this
 actions:
   - name: lock
     description: The event corresponding to the act of a user locking a machine such that they are still logged into the machine but unable to access it without re-entering credentials, effectively entering the machine into a locked state.
