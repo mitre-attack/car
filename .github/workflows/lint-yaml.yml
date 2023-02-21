@@ -32,8 +32,8 @@ jobs:
           cache: 'pip'
       - name: Install script dependencies
         run: pip install -r ./scripts/requirements.txt
-      - name: Analysis files need to have their id attribute be the same as their filename
-        run: exit 0
+      - name: Validate against analysis schema
+        run: yamale -s scripts/analytic_schema.yaml --no-strict analytics/
   datamodel-schema:
     runs-on: ubuntu-latest
     steps:
@@ -46,8 +46,8 @@ jobs:
           cache: 'pip'
       - name: Install script dependencies
         run: pip install -r ./scripts/requirements.txt
-      - name: Analysis files need to have their id attribute be the same as their filename
-        run: exit 0
+      - name: Validate against data model schema
+        run: yamale -s scripts/datamodel_schema.yaml --no-strict data_model/
   sensor-schema:
     runs-on: ubuntu-latest
     steps:
@@ -60,8 +60,8 @@ jobs:
           cache: 'pip'
       - name: Install script dependencies
         run: pip install -r ./scripts/requirements.txt
-      - name: Analysis files need to have their id attribute be the same as their filename
-        run: exit 0
+      - name: Validate against sensor schema
+        run: yamale -s scripts/sensor_schema.yaml --no-strict sensors/
   filetype-is-yaml:
     runs-on: ubuntu-latest
     steps:
