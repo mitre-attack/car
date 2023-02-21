@@ -4,7 +4,7 @@ sensor_version: any(str(), num())
 sensor_developer: str()
 sensor_url: str() # consider using a regex to validate that it is actually a url
 sensor_description: str(required=False)
-data_model_coverage: str()
+data_model_coverage: str(required=False)
 analytic_coverage: list(include('analytic'), required=False)
 mappings: list(include('mapping'))
 other_coverage: list(str())
