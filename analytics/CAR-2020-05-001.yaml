@@ -38,7 +38,7 @@ implementations:
       norm_id=WindowsSysmon event_id=10 image="C:\Windows\system32\lsass.exe" call_trace IN ["*dbghelp.dll*", "*dbgcore.dll*"]
       | fields log_ts host source_process_id source_image
     type: LogPoint
-    data_mode: LogPoint native
+    data_model: LogPoint native
 d3fend_mappings:
   - iri: d3f:SystemCallAnalysis
     id: D3-SCA

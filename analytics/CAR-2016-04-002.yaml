@@ -47,7 +47,7 @@ implementations:
     code: |
       norm_id=WinServer ((channel="Security" event_id IN [1100,1102]) OR (channel="System" event_id=104))
     type: LogPoint
-    data_mode: LogPoint native
+    data_model: LogPoint native
   - name: Splunk search - Detecting log clearing with wevtutil
     description: This search query looks for  wevtutil, Clear-EventLog, Limit-EventLog, Remove-Item or Remove-EventLog inside a command that may cause the system to remove Windows Event logs.
     code: |

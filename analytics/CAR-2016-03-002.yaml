@@ -34,19 +34,19 @@ implementations:
     code: |
       index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\wmic.exe" CommandLine="* process call create *"|search CommandLine="* /node:*"
     type: Splunk
-    data_mode: Sysmon native
+    data_model: Sysmon native
   - description: EQL version of the above pseudocode.
     code: |
       process where subtype.create and
         (process_name == "wmic.exe" and command_line == "* process call create ")
         |filter command_line == "* /node:*"
     type: EQL
-    data_mode: EQL native
+    data_model: EQL native
   - description: LogPoint version of the above pseudocode.
     code: |
       norm_id=WindowsSysmon event_id=1 image="C:\\Windows\\*\\wmic.exe" command="* process call create *" command="* /node:*"
     type: LogPoint
-    data_mode: LogPoint native
+    data_model: LogPoint native
 data_model_references:
   - process/create/exe
   - process/create/command_line
