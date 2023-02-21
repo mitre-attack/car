@@ -3,12 +3,7 @@ sensor_name: Autoruns
 sensor_version: 13.98
 sensor_developer: Microsoft
 sensor_url: 'https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx'
-sensor_description: >
-  Autoruns reports Explorer shell extensions, toolbars, browser helper objects,
-  Winlogon notifications, auto-start services, etc.  It is provided as part of
-  the Windows Sysinternals suite of tools. It collects system information while
-  running in the background and supports storing the data in the Windows Event
-  Log.
+sensor_description: 'Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Winlogon notifications, auto-start services, etc.at is provided as part of the Windows Sysinternals suite of tools. It collects system information while running in the background and supports storing it in the Windows Event Log.'
 mappings:
   - object: file
     action: create
@@ -98,4 +93,4 @@ mappings:
       - name
       - value
 other_coverage:
-  - 'CAR-2013-01-002: Autorun Differences'
+  - 'CAR-2013-01-002: Autorun Differences'      
