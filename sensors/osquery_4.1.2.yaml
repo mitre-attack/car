@@ -3,7 +3,9 @@ sensor_name: osquery
 sensor_version: 4.1.2
 sensor_developer: osquery project
 sensor_url: 'https://osquery.io/'
-sensor_description: 'osquery exposes an operating system as a high-performance relational database. This allows you to write SQL-based queries to explore operating system data.'
+sensor_description: >
+  osquery exposes an operating system as a high-performance relational database.
+  This allows you to write SQL-based queries to explore operating system data.
 mappings:
   - object: file
     action: create
