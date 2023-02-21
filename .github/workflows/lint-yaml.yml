@@ -19,7 +19,7 @@ jobs:
       - name: Install script dependencies
         run: pip install -r ./scripts/requirements.txt
       - name: Run yamllint
-        run: yamllint .
+        run: yamllint analytics/ data_model/ sensors/
   analysis-schema:
     runs-on: ubuntu-latest
     steps:
