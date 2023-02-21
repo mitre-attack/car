@@ -1,3 +1,4 @@
+---
 title: Network Share Connection Removal
 submission_date: 2020/11/30
 information_domain: Host
@@ -10,7 +11,7 @@ analytic_types:
 contributors:
   - Olaf Hartong
 id: CAR-2020-11-007
-description: |-
+description: |
   Adversaries may use network shares to exfliltrate date; they will then remove the shares to cover their tracks. This analytic looks for the removal of network shares via commandline, which is otherwise a rare event.
 coverage:
   - technique: T1070
@@ -22,7 +23,7 @@ coverage:
 implementations:
   - name: Pseudocode - network shares being removed via the command line
     description: This is a pseudocode representation of the below splunk search.
-    code: |- 
+    code: |
       processes = search Process:Create
       target_processes = filter processes where (
         (exe="C:\\Windows\\System32\\net.exe" AND command_line="*delete*") OR
@@ -33,13 +34,13 @@ implementations:
     type: Pseudocode
   - name: Splunk Search - delete network shares
     description: looks network shares being deleted from the command line
-    code: |- 
+    code: |
       (index=__your_sysmon_index__ EventCode=1) ((Image="C:\\Windows\\System32\\net.exe" AND CommandLine="*delete*") OR CommandLine="*Remove-SmbShare*" OR CommandLine="*Remove-FileShare*")
     data_model: Sysmon native
     type: Splunk
   - name: LogPoint Search - delete network shares
     description: looks network shares being deleted from the command line
-    code: |- 
+    code: |
       norm_id=WindowsSysmon event_id=1 ((image="C:\Windows\System32\net.exe" command="*delete*") OR command="*Remove-SmbShare*" OR command="*Remove-FileShare*")
     data_model: LogPoint native
     type: LogPoint

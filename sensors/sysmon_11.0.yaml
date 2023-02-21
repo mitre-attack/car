@@ -141,4 +141,4 @@ mappings:
       - start_address
       - start_module
 other_coverage:
-  - 'CAR-2019-04-004: Credential Dumping via Mimikatz'      
+  - 'CAR-2019-04-004: Credential Dumping via Mimikatz'

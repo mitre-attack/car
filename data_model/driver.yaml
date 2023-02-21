@@ -39,4 +39,4 @@ fields:
     example: 1533
   - name: signature_valid
     description: Boolean indicator of whether the driver is signed and whether the signature is current and not revoked
-    example: True
+    example: true

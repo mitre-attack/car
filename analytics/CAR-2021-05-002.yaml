@@ -1,61 +1,61 @@
+---
 title: Batch File Write to System32
 submission_date: 2021/05/11
 information_domain: Analytic
 platforms:
-- Windows
+  - Windows
 subtypes:
-- Process
+  - Process
 analytic_types:
-- TTP
+  - TTP
 contributors:
-- Splunk Threat Research <research@splunk.com>
+  - Splunk Threat Research <research@splunk.com>
 id: CAR-2021-05-002
 description: While batch files are not inherently malicious, it is uncommon to see them created after OS installation, especially in the Windows directory. This analytic looks for the suspicious activity of a batch file being created within the C:\Windows\System32 directory tree. There will be only occasional false positives due to administrator actions.
 coverage:
-- technique: T1204
-  subtechniques: 
-  - T1204.002
-  tactics:
-  - TA0002
-  coverage: Moderate
+  - technique: T1204
+    subtechniques:
+      - T1204.002
+    tactics:
+      - TA0002
+    coverage: Moderate
 implementations:
-- name: Pseudocode – Batch file created in the Windows system32 directory tree
-  description: Pseudocode implementation of the Splunk search below
-  code: |- 
-      files = search File:create
-      batch_files = filter files where (
-        extension =".bat" AND file_path = "C:\Windows\system32*" )
-      output batch_files
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk code
-  description: You must be ingesting data that records the file-system activity from
-    your hosts to populate the Endpoint file-system data-model node. If you are using
-    Sysmon, you will need a Splunk Universal Forwarder on each endpoint from which
-    you want to collect data.
-  code: '| tstats count min(_time) as firstTime max(_time) as lastTime values(Filesystem.dest)
-    as dest values(Filesystem.file_name) as file_name values(Filesystem.user) as user
-    from datamodel=Endpoint.Filesystem by Filesystem.file_path   | rex field=file_name
-    "(?<file_extension>\.[^\.]+)$" | search file_path=*system32* AND file_extension=.bat'
-  type: Splunk
-  data_model: Endpoint
-
+  - name: Pseudocode – Batch file created in the Windows system32 directory tree
+    description: Pseudocode implementation of the Splunk search below
+    code: |
+        files = search File:create
+        batch_files = filter files where (
+          extension =".bat" AND file_path = "C:\Windows\system32*" )
+        output batch_files
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk code
+    description: You must be ingesting data that records the file-system activity from
+      your hosts to populate the Endpoint file-system data-model node. If you are using
+      Sysmon, you will need a Splunk Universal Forwarder on each endpoint from which
+      you want to collect data.
+    code: '| tstats count min(_time) as firstTime max(_time) as lastTime values(Filesystem.dest)
+      as dest values(Filesystem.file_name) as file_name values(Filesystem.user) as user
+      from datamodel=Endpoint.Filesystem by Filesystem.file_path   | rex field=file_name
+      "(?<file_extension>\.[^\.]+)$" | search file_path=*system32* AND file_extension=.bat'
+    type: Splunk
+    data_model: Endpoint
 unit_tests:
-- configurations:
-  - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
-  description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1204.002/batch_file_in_system32/windows-sysmon.log)  using
-    the Splunk attack range with the commands below
-  commands:
-  - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
-- configurations:
-  - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
-  description: execute the atomic test [T1204.002](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1204.002)
-    against a Windows target.
-  commands:
-  - Invoke-AtomicTest T1204.002
+  - configurations:
+      - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
+    description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1204.002/batch_file_in_system32/windows-sysmon.log) using
+      the Splunk attack range with the commands below
+    commands:
+      - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
+  - configurations:
+      - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
+    description: execute the atomic test [T1204.002](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1204.002)
+      against a Windows target.
+    commands:
+      - Invoke-AtomicTest T1204.002
 data_model_references:
-- file/create/extension
-- file/create/file_path
+  - file/create/extension
+  - file/create/file_path
 d3fend_mappings:
   - iri: d3f:ProcessSpawnAnalysis
     id: D3-PSA

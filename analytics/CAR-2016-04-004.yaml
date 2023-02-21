@@ -1,3 +1,4 @@
+---
 title: Successful Local Account Login
 submission_date: 2016/04/18
 information_domain: Host
@@ -19,13 +20,13 @@ coverage:
       - T1550.002
     coverage: Moderate
 implementations:
-  - description: 'This analytic will look for remote logins, using a non domain login, from one host to another, using NTL authentication where the account is not "ANONYMOUS LOGON" '
-    code: |-
+  - description: 'This analytic will look for remote logins, using a non domain login, from one host to another, using NTL authentication where the account is not "ANONYMOUS LOGON".'
+    code: |
       EventCode == 4624 and [target_user_name] != "ANONYMOUS LOGON" and
       [authentication_package_name] == "NTLM"
     type: pseudocode
 unit_tests:
-  - configurations: 
+  - configurations:
       - Windows 7
     description: As an adminstrator, create a new user. Then, logon to the host with that new user. This is generate the event.
     commands:

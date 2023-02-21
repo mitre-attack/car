@@ -1,61 +1,62 @@
+---
 title: Attempt To Add Certificate To Untrusted Store
 submission_date: 2021/05/11
 information_domain: Analytic
 platforms:
-- Windows
+  - Windows
 subtypes:
-- Process
+  - Process
 analytic_types:
-- TTP
+  - TTP
 contributors:
-- Splunk Threat Research <research@splunk.com>
+  - Splunk Threat Research <research@splunk.com>
 id: CAR-2021-05-001
-description: Adversaries may add their own root certificate to the certificate store, to cause the web browser to trust that certificate and not display a security warning when it encounters the previously unseen certificate. This action may be the precursor to malicious activity. 
+description: Adversaries may add their own root certificate to the certificate store, to cause the web browser to trust that certificate and not display a security warning when it encounters the previously unseen certificate. This action may be the precursor to malicious activity.
 coverage:
-- technique: T1553
-  tactics:
-  - TA0005
-  coverage: Moderate
-  subtechniques:
-  - T1553.004
+  - technique: T1553
+    tactics:
+      - TA0005
+    coverage: Moderate
+    subtechniques:
+      - T1553.004
 implementations:
-- name: Splunk code
-  description: You must be ingesting data that records process activity from your
-    hosts to populate the Endpoint data model in the Processes node. You must also
-    be ingesting logs with both the process name and command line from your endpoints.
-    The command-line arguments are mapped to the "process" field in the Endpoint data
-    model.
-  code: '| tstats count min(_time) as firstTime values(Processes.process) as process
-    max(_time) as lastTime from datamodel=Endpoint.Processes where Processes.process_name=*certutil*
-    (Processes.process=*-addstore*) by Processes.parent_process Processes.process_name
-    Processes.user'
-  type: Splunk
-  data_model: Endpoint
-- name: Pseudocode – detect attempts to add a certificate to a certificate store
-  description: Pseudocode implementation of the splunk search below
-  code: |- 
-      processes = search Process:Create
-      addstore_commands = filter processes where (
-        exe =”C:\Windows\System32\certutil.exe” AND command_line="*-addstore*” )
-      output addstore_commands
-  data_model: CAR native
-  type: Pseudocode
+  - name: Splunk code
+    description: You must be ingesting data that records process activity from your
+      hosts to populate the Endpoint data model in the Processes node. You must also
+      be ingesting logs with both the process name and command line from your endpoints.
+      The command-line arguments are mapped to the "process" field in the Endpoint data
+      model.
+    code: '| tstats count min(_time) as firstTime values(Processes.process) as process
+      max(_time) as lastTime from datamodel=Endpoint.Processes where Processes.process_name=*certutil*
+      (Processes.process=*-addstore*) by Processes.parent_process Processes.process_name
+      Processes.user'
+    type: Splunk
+    data_model: Endpoint
+  - name: Pseudocode – detect attempts to add a certificate to a certificate store
+    description: Pseudocode implementation of the splunk search below
+    code: |
+        processes = search Process:Create
+        addstore_commands = filter processes where (
+          exe =”C:\Windows\System32\certutil.exe” AND command_line="*-addstore*” )
+        output addstore_commands
+    data_model: CAR native
+    type: Pseudocode
 unit_tests:
-- configurations:
-  - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
-  description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1553.004/atomic_red_team/windows-sysmon.log)  using
-    the Splunk attack range with the commands below
-  commands:
-  - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
-- configurations:
-  - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
-  description: execute the atomic test [T1553.004](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1553.004)
-    against a Windows target.
-  commands:
-  - Invoke-AtomicTest T1553.004
+  - configurations:
+      - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
+    description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1553.004/atomic_red_team/windows-sysmon.log) using
+      the Splunk attack range with the commands below
+    commands:
+      - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
+  - configurations:
+      - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
+    description: execute the atomic test [T1553.004](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1553.004)
+      against a Windows target.
+    commands:
+      - Invoke-AtomicTest T1553.004
 data_model_references:
-- process/create/exe
-- process/create/command_line
+  - process/create/exe
+  - process/create/command_line
 d3fend_mappings:
   - iri: d3f:ProcessSpawnAnalysis
     id: D3-PSA

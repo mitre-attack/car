@@ -11,7 +11,7 @@ analytic_types:
 contributors:
   - Cyware Labs
 id: CAR-2021-01-002
-description: |-
+description: |
   Often, after a threat actor gains access to a system, they will attempt to run some kind of malware to further infect the victim machine. These malware often have long command line strings, which could be a possible indicator of attack. Here, we use sysmon and Splunk to first find the average command string length and search for command strings that stretch over multiple lines, thus identifying anomalies and possibly malicious commands.
 coverage:
   - technique: T1059
@@ -20,8 +20,8 @@ coverage:
       - TA0002
 implementations:
   - name: Splunk search - Identifying possible malware activity via unusually long command line strings
-    description:  This is a Splunk query that determines the average length of a command per user and searches for a command string that is multiple times longer than the average length
-    code: |-
+    description: This is a Splunk query that determines the average length of a command per user and searches for a command string that is multiple times longer than the average length
+    code: |
       index=* sourcetype="xmlwineventlog" EventCode=4688  |eval cmd_len=len(CommandLine) | eventstats avg(cmd_len) as avg by host| stats max(cmd_len) as maxlen, values(avg) as avgperhost by host, CommandLine | where maxlen > 10*avgperhost
     data_model: Sysmon native
     type: Splunk

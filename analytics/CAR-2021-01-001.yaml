@@ -20,12 +20,12 @@ coverage:
     tactics:
       - TA0007
 implementations:
-- name: Splunk search - Identifying Internal hosts and services for lateral movement
-  description: It should be noted that when a host/ port/ service scan is performed from a compromised machine, a single machine makes multiple calls to other hosts in the network to identify live hosts and services. This can be detected using the following query
-  code: |-
-    sourcetype='firewall_logs' dest_ip = 'internal_subnet' | stats dc(dest_port) as pcount by src_ip | where pcount >5
-  data_model: Sysmon native
-  type: Splunk
+  - name: Splunk search - Identifying Internal hosts and services for lateral movement
+    description: It should be noted that when a host/ port/ service scan is performed from a compromised machine, a single machine makes multiple calls to other hosts in the network to identify live hosts and services. This can be detected using the following query
+    code: |-
+      sourcetype='firewall_logs' dest_ip = 'internal_subnet' | stats dc(dest_port) as pcount by src_ip | where pcount >5
+    data_model: Sysmon native
+    type: Splunk
 data_model_references:
   - flow/start/dest_ip
 d3fend_mappings:

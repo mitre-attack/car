@@ -93,4 +93,4 @@ mappings:
       - name
       - value
 other_coverage:
-  - 'CAR-2013-01-002: Autorun Differences'      
+  - 'CAR-2013-01-002: Autorun Differences'

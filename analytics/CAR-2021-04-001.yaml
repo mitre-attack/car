@@ -11,7 +11,7 @@ analytic_types:
 contributors:
   - Sebastien Damaye
 id: CAR-2021-04-001
-description: |-
+description: |
   [Masquerading (T1036)](https://attack.mitre.org/techniques/T1036/) is defined by ATT&CK as follows:
 
   "Masquerading occurs when the name or location of an object, legitimate or malicious, is manipulated or abused for the sake of evading defenses and observation. This may include manipulating file metadata, tricking users into misidentifying the file type, and giving legitimate task or service names."
@@ -45,7 +45,7 @@ coverage:
 implementations:
   - name: Pseudocode - Common Windows Process Masquerading
     description: Looks for mismatches between process names and their image paths.
-    code: |- 
+    code: |
       processes = search Process:*
       suspicious_processes = filter processes where (
         (exe=svchost.exe AND (image_path!="C:\\Windows\\System32\\svchost.exe" OR process_path!="C:\\Windows\\SysWow64\\svchost.exe"))
@@ -58,13 +58,13 @@ implementations:
         OR (exe=services.exe AND image_path!="C:\\Windows\\System32\\services.exe")
         OR (exe=lsm.exe AND image_path!="C:\\Windows\\System32\\lsm.exe")
         OR (exe=explorer.exe AND image_path!="C:\\Windows\\explorer.exe")
-        ) 
+        )
       output suspicious_processes
     data_model: CAR native
     type: Pseudocode
   - name: Splunk Search - Common Windows Process Masquerading
     description: Splunk search version of the above pseudocode.
-    code: |-
+    code: |
       index=__your_sysmon_index__ source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" AND (
       (process_name=svchost.exe AND NOT (process_path="C:\\Windows\\System32\\svchost.exe" OR process_path="C:\\Windows\\SysWow64\\svchost.exe"))
       OR (process_name=smss.exe AND NOT process_path="C:\\Windows\\System32\\smss.exe")
@@ -76,7 +76,7 @@ implementations:
       OR (process_name=services.exe AND NOT process_path="C:\\Windows\\System32\\services.exe")
       OR (process_name=lsm.exe AND NOT process_path="C:\\Windows\\System32\\lsm.exe")
       OR (process_name=explorer.exe AND NOT process_path="C:\\Windows\\explorer.exe")
-      ) 
+      )
     data_model: Sysmon native
     type: Splunk
 data_model_references:
