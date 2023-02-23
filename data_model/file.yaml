@@ -90,7 +90,7 @@ fields:
     example: 0644 (linux) or NTFS ACL
   - name: signature_valid
     description: Boolean indicator of whether the signature is valid; empty if file is not signed.
-    example: True
+    example: true
   - name: uid
     description: The user ID or SID for the acting entity.
     example: S-1-5-18

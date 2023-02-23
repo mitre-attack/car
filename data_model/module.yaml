@@ -1,6 +1,6 @@
 ---
-name: Library
-description: Libraries correspond to executable (and potentially non-executable) content, and are loaded as a contiguous region of memory into the address space of a process. Each process will have the main image loaded as a shared library or module (DLLs in Windows) and their dependencies.
+name: Module
+description: Modules correspond to executable (and potentially non-executable) content, and are loaded as a contiguous region of memory into the address space of a process. Each process will have the main image loaded as a module and shared libraries (DLLs in Windows) and their dependencies.
 actions:
   - name: load
     description: A module load event occurs when a PE image (dll or exe) is loaded into a process.
@@ -45,4 +45,4 @@ fields:
     example: 50
   - name: signature_valid
     description: Boolean indicator of whether the signature is current and not revoked
-    example: True
+    example: true
