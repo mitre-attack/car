@@ -90,3 +90,21 @@ fields:
   - name: uid
     description: User ID or SID of the flow-handling entity.
     example: S-1-5-18
+coverage_map:
+  start:
+    dest_hostname: ["sysmon_13"]
+    dest_ip: ["sysmon_13"]
+    dest_port: ["sysmon_13"]
+    exe: ["sysmon_13"]
+    fqdn: ["sysmon_13"]
+    hostname: ["sysmon_13"]
+    image_path: ["sysmon_13"]
+    pid: ["sysmon_13"]
+    src_fdqn: ["sysmon_13"]
+    src_hostname: ["sysmon_13"]
+    src_ip: ["sysmon_13"]
+    src_port: ["sysmon_13"]
+    start_time: ["sysmon_13"]
+    transport_protocol: ["sysmon_13"]
+    uid: ["sysmon_13"]
+    user: ["sysmon_13"]

@@ -1,6 +1,6 @@
 ---
 name: Email
-description: Email events are at the email server level.
+description: Email events are at the mail server level.
 actions:
   - name: deliver
     description: The event corresponding to an email being sent to an end recipient.
