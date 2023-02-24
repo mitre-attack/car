@@ -76,7 +76,7 @@ user|The user context in which the thread that caused this event was running. Ma
     <th>user</th>
   </tr>
   <tr>
-    <td>acl_modify</td>
+    <th>acl_modify</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -105,7 +105,7 @@ user|The user context in which the thread that caused this event was running. Ma
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>create</td>
+    <th>create</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -134,7 +134,7 @@ user|The user context in which the thread that caused this event was running. Ma
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>delete</td>
+    <th>delete</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -163,7 +163,7 @@ user|The user context in which the thread that caused this event was running. Ma
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>modify</td>
+    <th>modify</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -192,7 +192,7 @@ user|The user context in which the thread that caused this event was running. Ma
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>read</td>
+    <th>read</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -221,7 +221,7 @@ user|The user context in which the thread that caused this event was running. Ma
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>timestomp</td>
+    <th>timestomp</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -250,7 +250,7 @@ user|The user context in which the thread that caused this event was running. Ma
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>write</td>
+    <th>write</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

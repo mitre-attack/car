@@ -45,7 +45,7 @@ tid|The thread ID of the thread responsible for the load or unload event.|50
     <th>tid</th>
   </tr>
   <tr>
-    <td>load</td>
+    <th>load</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -61,7 +61,7 @@ tid|The thread ID of the thread responsible for the load or unload event.|50
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>unload</td>
+    <th>unload</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

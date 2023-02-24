@@ -42,7 +42,7 @@ user|The user affiliated with the session. May be a local, domain or SYSTEM user
     <th>user</th>
   </tr>
   <tr>
-    <td>lock</td>
+    <th>lock</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -55,7 +55,7 @@ user|The user affiliated with the session. May be a local, domain or SYSTEM user
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>login</td>
+    <th>login</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -68,7 +68,7 @@ user|The user affiliated with the session. May be a local, domain or SYSTEM user
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>logout</td>
+    <th>logout</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -81,7 +81,7 @@ user|The user affiliated with the session. May be a local, domain or SYSTEM user
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>reconnect</td>
+    <th>reconnect</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -94,7 +94,7 @@ user|The user affiliated with the session. May be a local, domain or SYSTEM user
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>unlock</td>
+    <th>unlock</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

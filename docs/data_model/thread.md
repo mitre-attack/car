@@ -51,7 +51,7 @@ user_stack_limit|The limit of the thread's stack.|0
     <th>user_stack_limit</th>
   </tr>
   <tr>
-    <td>create</td>
+    <th>create</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -69,7 +69,7 @@ user_stack_limit|The limit of the thread's stack.|0
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>remote_create</td>
+    <th>remote_create</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -87,7 +87,7 @@ user_stack_limit|The limit of the thread's stack.|0
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>suspend</td>
+    <th>suspend</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -105,7 +105,7 @@ user_stack_limit|The limit of the thread's stack.|0
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>terminate</td>
+    <th>terminate</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

@@ -43,7 +43,7 @@ value|The descriptive name for the data being stored.|InstalledVersion
     <th>value</th>
   </tr>
   <tr>
-    <td>add</td>
+    <th>add</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -57,7 +57,7 @@ value|The descriptive name for the data being stored.|InstalledVersion
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>key_edit</td>
+    <th>key_edit</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -71,7 +71,7 @@ value|The descriptive name for the data being stored.|InstalledVersion
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>remove</td>
+    <th>remove</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -85,7 +85,7 @@ value|The descriptive name for the data being stored.|InstalledVersion
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>value_edit</td>
+    <th>value_edit</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

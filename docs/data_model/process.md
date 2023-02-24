@@ -78,7 +78,7 @@ user|The user token that process was created with. May be a local, domain or SYS
     <th>user</th>
   </tr>
   <tr>
-    <td>access</td>
+    <th>access</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -110,7 +110,7 @@ user|The user token that process was created with. May be a local, domain or SYS
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>create</td>
+    <th>create</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -142,7 +142,7 @@ user|The user token that process was created with. May be a local, domain or SYS
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>terminate</td>
+    <th>terminate</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

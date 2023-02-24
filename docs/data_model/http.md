@@ -55,7 +55,7 @@ user_agent_version|User Agent Version. Note that some User Agent strings may not
     <th>user_agent_version</th>
   </tr>
   <tr>
-    <td>get</td>
+    <th>get</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -75,7 +75,7 @@ user_agent_version|User Agent Version. Note that some User Agent strings may not
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>post</td>
+    <th>post</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -95,7 +95,7 @@ user_agent_version|User Agent Version. Note that some User Agent strings may not
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>put</td>
+    <th>put</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -115,7 +115,7 @@ user_agent_version|User Agent Version. Note that some User Agent strings may not
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>tunnel</td>
+    <th>tunnel</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

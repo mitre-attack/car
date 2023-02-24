@@ -74,7 +74,7 @@ user|The user that ran the process.|HOST1\LOCALUSER
     <th>user</th>
   </tr>
   <tr>
-    <td>end</td>
+    <th>end</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -104,7 +104,7 @@ user|The user that ran the process.|HOST1\LOCALUSER
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>message</td>
+    <th>message</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -134,7 +134,7 @@ user|The user that ran the process.|HOST1\LOCALUSER
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>start</td>
+    <th>start</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

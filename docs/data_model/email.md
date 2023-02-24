@@ -64,7 +64,7 @@ to|the content of the To field in the email header; does not necessarily match u
     <th>to</th>
   </tr>
   <tr>
-    <td>block</td>
+    <th>block</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -88,7 +88,7 @@ to|the content of the To field in the email header; does not necessarily match u
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>delete</td>
+    <th>delete</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -112,7 +112,7 @@ to|the content of the To field in the email header; does not necessarily match u
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>deliver</td>
+    <th>deliver</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -136,7 +136,7 @@ to|the content of the To field in the email header; does not necessarily match u
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>quarantine</td>
+    <th>quarantine</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -160,7 +160,7 @@ to|the content of the To field in the email header; does not necessarily match u
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>redirect</td>
+    <th>redirect</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

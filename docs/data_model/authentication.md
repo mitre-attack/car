@@ -58,7 +58,7 @@ user_type|type of user that initiated the request.|Administrator, Standard, Gues
     <th>user_type</th>
   </tr>
   <tr>
-    <td>error</td>
+    <th>error</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -80,7 +80,7 @@ user_type|type of user that initiated the request.|Administrator, Standard, Gues
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>failure</td>
+    <th>failure</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -102,7 +102,7 @@ user_type|type of user that initiated the request.|Administrator, Standard, Gues
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>success</td>
+    <th>success</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

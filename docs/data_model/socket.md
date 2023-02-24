@@ -40,7 +40,7 @@ success|Boolean indicator of whether the socket event was successful (e.g. the s
     <th>success</th>
   </tr>
   <tr>
-    <td>bind</td>
+    <th>bind</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -53,7 +53,7 @@ success|Boolean indicator of whether the socket event was successful (e.g. the s
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>close</td>
+    <th>close</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -66,7 +66,7 @@ success|Boolean indicator of whether the socket event was successful (e.g. the s
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>listen</td>
+    <th>listen</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

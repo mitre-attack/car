@@ -20,7 +20,7 @@ title: "{{ datamodel['name'] }}"
     <th>{{ field['name'] }}</th>{% endfor %}
   </tr>{% for action in datamodel['actions']|sort(attribute='name') %}
   <tr>
-    <td>{{ action['name'] }}</td>{% for field in datamodel['fields']|sort(attribute='name') %}
+    <th>{{ action['name'] }}</th>{% for field in datamodel['fields']|sort(attribute='name') %}
     <td style="white-space: pre-wrap;">{% if 'coverage_map' in datamodel and 'action' in datamodel['coverage_map'] and 'field' in datamodel['coverage_map']['action'] %}{{ datamodel['coverage_map'][action][field]|join('&#10') }}{% endif %}</td>{% endfor %}
   </tr>{% endfor %}
 </table>

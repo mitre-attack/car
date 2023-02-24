@@ -42,7 +42,7 @@ user|The user token that service was created with.|HOST1\LOCALUSER
     <th>user</th>
   </tr>
   <tr>
-    <td>create</td>
+    <th>create</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -55,7 +55,7 @@ user|The user token that service was created with.|HOST1\LOCALUSER
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>delete</td>
+    <th>delete</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -68,7 +68,7 @@ user|The user token that service was created with.|HOST1\LOCALUSER
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>pause</td>
+    <th>pause</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -81,7 +81,7 @@ user|The user token that service was created with.|HOST1\LOCALUSER
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>start</td>
+    <th>start</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -94,7 +94,7 @@ user|The user token that service was created with.|HOST1\LOCALUSER
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>stop</td>
+    <th>stop</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

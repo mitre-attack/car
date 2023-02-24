@@ -41,7 +41,7 @@ signer|The name of the organization which signed the driver.|Microsoft Corporati
     <th>signer</th>
   </tr>
   <tr>
-    <td>load</td>
+    <th>load</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -55,7 +55,7 @@ signer|The name of the organization which signed the driver.|Microsoft Corporati
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
-    <td>unload</td>
+    <th>unload</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
