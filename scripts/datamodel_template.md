@@ -11,7 +11,7 @@ title: "{{ datamodel['name'] }}"
 ## Fields
 |Field|Description|Example|
 |---|---|---|{% for field in datamodel['fields']|sort(attribute='name') %}
-{{ field['name'] }}|{{ field['description'] }}|{% if 'example' in field %}{{ field['example'] }}{% endif %}{% endfor %}
+{{ field['name'] }}|{{ field['description'] }}|{% if 'example' in field %}<code>{{ field['example'] }}</code>{% endif %}{% endfor %}
 
 ## Coverage Map
 <table>

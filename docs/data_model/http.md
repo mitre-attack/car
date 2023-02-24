@@ -14,23 +14,23 @@ HTTP events represents requests made over the network via the HTTP protocol.
 ## Fields
 |Field|Description|Example|
 |---|---|---|
-hostname|hostname on which the request was seen.|HOST1
-http_version|HTTP version that is specified in the header.|1.1
-request_body_bytes|Integer value corresponding to the total number of bytes in the request.|180
+hostname|hostname on which the request was seen.|<code>HOST1</code>
+http_version|HTTP version that is specified in the header.|<code>1.1</code>
+request_body_bytes|Integer value corresponding to the total number of bytes in the request.|<code>180</code>
 request_body_content|Body of the HTTP request; usually specifies the exact content being requested.|
-request_referrer|The URL from which the request was referred, if applicable.|http://cnn.com
-requester_ip_address|IP address from which the request was made.|10.0.211.200
-response_body_bytes|Integer value corresponding to the total number of bytes in the response.|2910
+request_referrer|The URL from which the request was referred, if applicable.|<code>http://cnn.com</code>
+requester_ip_address|IP address from which the request was made.|<code>10.0.211.200</code>
+response_body_bytes|Integer value corresponding to the total number of bytes in the response.|<code>2910</code>
 response_body_content|Content of the response (does not include header).|
-response_status_code|HTTP protocol status code in response header|200
-url_domain|Domain portion of the URL.|www.mitre.org
-url_full|URL to which the HTTP request was sent|https://www.mitre.org/about/corporate-overview
-url_remainder|the path after the root domain|/about/corporate-overview
-url_scheme|type of user that initiated the request.|https
-user_agent_device|Device type from which request was made, identified by user_agent substring|SM-G930VC (Samgsung Galaxy S7)
-user_agent_full|User agent string associated with the request|HOST1\LOCALUSER1
-user_agent_name|The user agent through which the request was made.|Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36
-user_agent_version|User Agent Version. Note that some User Agent strings may not label versions in the same way.|4.0
+response_status_code|HTTP protocol status code in response header|<code>200</code>
+url_domain|Domain portion of the URL.|<code>www.mitre.org</code>
+url_full|URL to which the HTTP request was sent|<code>https://www.mitre.org/about/corporate-overview</code>
+url_remainder|the path after the root domain|<code>/about/corporate-overview</code>
+url_scheme|type of user that initiated the request.|<code>https</code>
+user_agent_device|Device type from which request was made, identified by user_agent substring|<code>SM-G930VC (Samgsung Galaxy S7)</code>
+user_agent_full|User agent string associated with the request|<code>HOST1\LOCALUSER1</code>
+user_agent_name|The user agent through which the request was made.|<code>Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36</code>
+user_agent_version|User Agent Version. Note that some User Agent strings may not label versions in the same way.|<code>4.0</code>
 
 ## Coverage Map
 <table>

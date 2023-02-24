@@ -15,16 +15,16 @@ User sessions are the user activities undertaken on the computer in the course o
 ## Fields
 |Field|Description|Example|
 |---|---|---|
-dest_ip|The destination IP address of the user session. Only applicable to remote or RDP sessions.|192.168.1.5
-dest_port|The destination port of the user session. Only applicable to remote or RDP sessions.|1900
-hostname|The hostname of the host, without the domain.|HOST1
-login_id|A hex value corresponding to the session. The logon id will persist until logout occurs.|1008115
-login_successful|Boolean indicator of whether a login attempt was successful|False
-login_type|The type of login that was accomplished or attempted|interactive,local,rdp,remote
-src_ip|The source IP address of the user session. Only applicable to remote or RDP sessions.|10.0.0.54
-src_port|The source port of the user session. Only applicable to remote or RDP sessions.|50438
-uid|ID or SID of the user for which a session event ocurred|S-1-5-18
-user|The user affiliated with the session. May be a local, domain or SYSTEM user.|HOST1\LOCALUSER
+dest_ip|The destination IP address of the user session. Only applicable to remote or RDP sessions.|<code>192.168.1.5</code>
+dest_port|The destination port of the user session. Only applicable to remote or RDP sessions.|<code>1900</code>
+hostname|The hostname of the host, without the domain.|<code>HOST1</code>
+login_id|A hex value corresponding to the session. The logon id will persist until logout occurs.|<code>1008115</code>
+login_successful|Boolean indicator of whether a login attempt was successful|<code>False</code>
+login_type|The type of login that was accomplished or attempted|<code>interactive,local,rdp,remote</code>
+src_ip|The source IP address of the user session. Only applicable to remote or RDP sessions.|<code>10.0.0.54</code>
+src_port|The source port of the user session. Only applicable to remote or RDP sessions.|<code>50438</code>
+uid|ID or SID of the user for which a session event ocurred|<code>S-1-5-18</code>
+user|The user affiliated with the session. May be a local, domain or SYSTEM user.|<code>HOST1\LOCALUSER</code>
 
 ## Coverage Map
 <table>

@@ -15,16 +15,16 @@ Services, or a service application, can be started automatically at system boot,
 ## Fields
 |Field|Description|Example|
 |---|---|---|
-command_line|The command line that service is started with.|C:\windows\system32\svchost.exe -k rpcss
-exe|The executable for the service.|svchost.exe
-fqdn|The fully qualified domain name of the host. Contains the hostname appended with the domain.|HOST1.EXAMPLE_DOMAIN.COM
-hostname|The hostname of the host, without the domain.|HOST1
-image_path|Where in the file system the service executable is located.|C:\path\to\example.exe
-name|The name of the service.|RpcSs
-pid|The process ID for the process of the service, represented in decimal notation.|718
-ppid|The process ID of the process’s parent or the service, represented in decimal notation. In the parent process, this will be the pid field.|1860
-uid|The ID of SID of the user who acted on the service|S-1-5-18
-user|The user token that service was created with.|HOST1\LOCALUSER
+command_line|The command line that service is started with.|<code>C:\windows\system32\svchost.exe -k rpcss</code>
+exe|The executable for the service.|<code>svchost.exe</code>
+fqdn|The fully qualified domain name of the host. Contains the hostname appended with the domain.|<code>HOST1.EXAMPLE_DOMAIN.COM</code>
+hostname|The hostname of the host, without the domain.|<code>HOST1</code>
+image_path|Where in the file system the service executable is located.|<code>C:\path\to\example.exe</code>
+name|The name of the service.|<code>RpcSs</code>
+pid|The process ID for the process of the service, represented in decimal notation.|<code>718</code>
+ppid|The process ID of the process’s parent or the service, represented in decimal notation. In the parent process, this will be the pid field.|<code>1860</code>
+uid|The ID of SID of the user who acted on the service|<code>S-1-5-18</code>
+user|The user token that service was created with.|<code>HOST1\LOCALUSER</code>
 
 ## Coverage Map
 <table>
