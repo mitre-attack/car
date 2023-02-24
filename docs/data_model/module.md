@@ -47,18 +47,18 @@ tid|The thread ID of the thread responsible for the load or unload event.|<code>
   <tr>
     <th>load</th>
     <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
   </tr>
   <tr>
     <th>unload</th>

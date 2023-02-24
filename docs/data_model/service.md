@@ -43,11 +43,11 @@ user|The user token that service was created with.|<code>HOST1\LOCALUSER</code>
   </tr>
   <tr>
     <th>create</th>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
@@ -56,11 +56,11 @@ user|The user token that service was created with.|<code>HOST1\LOCALUSER</code>
   </tr>
   <tr>
     <th>delete</th>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
