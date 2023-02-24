@@ -28,59 +28,52 @@ tid|The thread ID of the thread responsible for the load or unload event.|50
 
 ## Coverage Map
 <table>
-  <thead>
-    <tr>
-      <th />
-      <th>base_address</th>
-      <th>fqdn</th>
-      <th>hostname</th>
-      <th>image_path</th>
-      <th>md5_hash</th>
-      <th>module_name</th>
-      <th>module_path</th>
-      <th>pid</th>
-      <th>sha1_hash</th>
-      <th>sha256_hash</th>
-      <th>signature_valid</th>
-      <th>signer</th>
-      <th>tid</th>
-    </tr>
-  </thead>
-  <tbody>
-    
-    <tr>
-      <td>load</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>unload</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-  </tbody>
+  <tr>
+    <th />
+    <th>base_address</th>
+    <th>fqdn</th>
+    <th>hostname</th>
+    <th>image_path</th>
+    <th>md5_hash</th>
+    <th>module_name</th>
+    <th>module_path</th>
+    <th>pid</th>
+    <th>sha1_hash</th>
+    <th>sha256_hash</th>
+    <th>signature_valid</th>
+    <th>signer</th>
+    <th>tid</th>
+  </tr>
+  <tr>
+    <td>load</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>unload</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
 </table>

@@ -34,113 +34,104 @@ user_agent_version|User Agent Version. Note that some User Agent strings may not
 
 ## Coverage Map
 <table>
-  <thead>
-    <tr>
-      <th />
-      <th>hostname</th>
-      <th>http_version</th>
-      <th>request_body_bytes</th>
-      <th>request_body_content</th>
-      <th>request_referrer</th>
-      <th>requester_ip_address</th>
-      <th>response_body_bytes</th>
-      <th>response_body_content</th>
-      <th>response_status_code</th>
-      <th>url_domain</th>
-      <th>url_full</th>
-      <th>url_remainder</th>
-      <th>url_scheme</th>
-      <th>user_agent_device</th>
-      <th>user_agent_full</th>
-      <th>user_agent_name</th>
-      <th>user_agent_version</th>
-    </tr>
-  </thead>
-  <tbody>
-    
-    <tr>
-      <td>get</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>post</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>put</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>tunnel</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-  </tbody>
+  <tr>
+    <th />
+    <th>hostname</th>
+    <th>http_version</th>
+    <th>request_body_bytes</th>
+    <th>request_body_content</th>
+    <th>request_referrer</th>
+    <th>requester_ip_address</th>
+    <th>response_body_bytes</th>
+    <th>response_body_content</th>
+    <th>response_status_code</th>
+    <th>url_domain</th>
+    <th>url_full</th>
+    <th>url_remainder</th>
+    <th>url_scheme</th>
+    <th>user_agent_device</th>
+    <th>user_agent_full</th>
+    <th>user_agent_name</th>
+    <th>user_agent_version</th>
+  </tr>
+  <tr>
+    <td>get</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>post</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>put</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>tunnel</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
 </table>

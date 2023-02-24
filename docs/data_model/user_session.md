@@ -28,92 +28,82 @@ user|The user affiliated with the session. May be a local, domain or SYSTEM user
 
 ## Coverage Map
 <table>
-  <thead>
-    <tr>
-      <th />
-      <th>dest_ip</th>
-      <th>dest_port</th>
-      <th>hostname</th>
-      <th>login_id</th>
-      <th>login_successful</th>
-      <th>login_type</th>
-      <th>src_ip</th>
-      <th>src_port</th>
-      <th>uid</th>
-      <th>user</th>
-    </tr>
-  </thead>
-  <tbody>
-    
-    <tr>
-      <td>lock</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>login</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>logout</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>reconnect</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>unlock</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-  </tbody>
+  <tr>
+    <th />
+    <th>dest_ip</th>
+    <th>dest_port</th>
+    <th>hostname</th>
+    <th>login_id</th>
+    <th>login_successful</th>
+    <th>login_type</th>
+    <th>src_ip</th>
+    <th>src_port</th>
+    <th>uid</th>
+    <th>user</th>
+  </tr>
+  <tr>
+    <td>lock</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>login</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>logout</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>reconnect</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>unlock</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
 </table>

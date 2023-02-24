@@ -32,103 +32,94 @@ user_stack_limit|The limit of the thread's stack.|0
 
 ## Coverage Map
 <table>
-  <thead>
-    <tr>
-      <th />
-      <th>hostname</th>
-      <th>src_pid</th>
-      <th>src_tid</th>
-      <th>stack_base</th>
-      <th>stack_limit</th>
-      <th>start_address</th>
-      <th>start_function</th>
-      <th>start_module</th>
-      <th>start_module_name</th>
-      <th>tgt_pid</th>
-      <th>tgt_tid</th>
-      <th>uid</th>
-      <th>user</th>
-      <th>user_stack_base</th>
-      <th>user_stack_limit</th>
-    </tr>
-  </thead>
-  <tbody>
-    
-    <tr>
-      <td>create</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>remote_create</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>suspend</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>terminate</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-  </tbody>
+  <tr>
+    <th />
+    <th>hostname</th>
+    <th>src_pid</th>
+    <th>src_tid</th>
+    <th>stack_base</th>
+    <th>stack_limit</th>
+    <th>start_address</th>
+    <th>start_function</th>
+    <th>start_module</th>
+    <th>start_module_name</th>
+    <th>tgt_pid</th>
+    <th>tgt_tid</th>
+    <th>uid</th>
+    <th>user</th>
+    <th>user_stack_base</th>
+    <th>user_stack_limit</th>
+  </tr>
+  <tr>
+    <td>create</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>remote_create</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>suspend</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>terminate</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
 </table>

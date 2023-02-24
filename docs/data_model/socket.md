@@ -26,64 +26,56 @@ success|Boolean indicator of whether the socket event was successful (e.g. the s
 
 ## Coverage Map
 <table>
-  <thead>
-    <tr>
-      <th />
-      <th>family</th>
-      <th>image_path</th>
-      <th>local_address</th>
-      <th>local_path</th>
-      <th>local_port</th>
-      <th>pid</th>
-      <th>protocol</th>
-      <th>remote_address</th>
-      <th>remote_port</th>
-      <th>success</th>
-    </tr>
-  </thead>
-  <tbody>
-    
-    <tr>
-      <td>bind</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>close</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-    <tr>
-      <td>listen</td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-      <td style="white-space: pre-wrap;"></td>
-    </tr>
-    
-  </tbody>
+  <tr>
+    <th />
+    <th>family</th>
+    <th>image_path</th>
+    <th>local_address</th>
+    <th>local_path</th>
+    <th>local_port</th>
+    <th>pid</th>
+    <th>protocol</th>
+    <th>remote_address</th>
+    <th>remote_port</th>
+    <th>success</th>
+  </tr>
+  <tr>
+    <td>bind</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>close</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
+  <tr>
+    <td>listen</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+  </tr>
 </table>
