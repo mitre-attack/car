@@ -106,30 +106,30 @@ user|The user context in which the thread that caused this event was running. Ma
   </tr>
   <tr>
     <th>create</th>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')&#10[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a>&#10<a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')&#10[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a>&#10<a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')&#10[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a>&#10<a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
   </tr>
@@ -141,53 +141,53 @@ user|The user context in which the thread that caused this event was running. Ma
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
     <th>modify</th>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
   </tr>
@@ -224,29 +224,29 @@ user|The user context in which the thread that caused this event was running. Ma
     <th>timestomp</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>

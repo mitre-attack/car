@@ -79,33 +79,33 @@ user|The user token that process was created with. May be a local, domain or SYS
   </tr>
   <tr>
     <th>access</th>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
   </tr>
@@ -113,25 +113,25 @@ user|The user token that process was created with. May be a local, domain or SYS
     <th>create</th>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>

@@ -41,41 +41,41 @@ success|Boolean indicator of whether the socket event was successful (e.g. the s
   </tr>
   <tr>
     <th>bind</th>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
     <th>close</th>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
     <th>listen</th>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
-    <td style="white-space: pre-wrap;">[osquery]('../sensors/osquery_4.6.0')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/osquery_4.6.0'>osquery</a></td>
     <td style="white-space: pre-wrap;"></td>
   </tr>
 </table>

@@ -43,16 +43,16 @@ signer|The name of the organization which signed the driver.|<code>Microsoft Cor
   <tr>
     <th>load</th>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
   </tr>
   <tr>
     <th>unload</th>

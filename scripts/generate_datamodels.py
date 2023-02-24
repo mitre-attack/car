@@ -25,15 +25,15 @@ def cached_load_sensor():
       return sensors[filename]
   return load_sensor
 
-def replace_sensor_names_with_markdown(datamodels, load_sensor):
-    def replace_sensor_name_with_markdown(sensor_filename):
-        return f"[{load_sensor(sensor_filename)['sensor_name']}]('../sensors/{sensor_filename}')"
+def replace_sensor_names_with_html(datamodels, load_sensor):
+    def replace_sensor_name_with_html(sensor_filename):
+        return f"<a href='../sensors/{sensor_filename}'>{load_sensor(sensor_filename)['sensor_name']}</a>"
 
     for model in datamodels.values():
         if 'coverage_map' in model:
             for action in model['coverage_map']:
                 for field, sensor_filenames in model['coverage_map'][action].items():
-                    model['coverage_map'][action][field] = [replace_sensor_name_with_markdown(sensor_filename) for sensor_filename in sensor_filenames]
+                    model['coverage_map'][action][field] = [replace_sensor_name_with_html(sensor_filename) for sensor_filename in sensor_filenames]
 
 def generate_markdown(datamodels):
     with open('datamodel_template.md') as f:
@@ -45,7 +45,7 @@ def generate_markdown(datamodels):
 def main():
     datamodels = parse_yaml()
     load_sensor = cached_load_sensor()
-    replace_sensor_names_with_markdown(datamodels, load_sensor)
+    replace_sensor_names_with_html(datamodels, load_sensor)
     generate_markdown(datamodels)
 
 if __name__ == "__main__":

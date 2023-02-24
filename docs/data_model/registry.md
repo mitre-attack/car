@@ -44,58 +44,58 @@ value|The descriptive name for the data being stored.|<code>InstalledVersion</co
   </tr>
   <tr>
     <th>add</th>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')&#10[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')&#10[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')&#10[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a>&#10<a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a>&#10<a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a>&#10<a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
   </tr>
   <tr>
     <th>key_edit</th>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')&#10[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')&#10[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')&#10[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')&#10[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')&#10[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a>&#10<a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a>&#10<a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a>&#10<a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a>&#10<a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a>&#10<a href='../sensors/sysmon_13'>Sysmon</a></td>
   </tr>
   <tr>
     <th>remove</th>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Sysmon]('../sensors/sysmon_13')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/sysmon_13'>Sysmon</a></td>
     <td style="white-space: pre-wrap;"></td>
   </tr>
   <tr>
     <th>value_edit</th>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
     <td style="white-space: pre-wrap;"></td>
-    <td style="white-space: pre-wrap;">[Autoruns]('../sensors/autoruns_13.98')</td>
+    <td style="white-space: pre-wrap;"><a href='../sensors/autoruns_13.98'>Autoruns</a></td>
   </tr>
 </table>
