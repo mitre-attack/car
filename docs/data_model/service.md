@@ -31,154 +31,88 @@ user|The user token that service was created with.|HOST1\LOCALUSER
   <thead>
     <tr>
       <th />
-      
       <th>command_line</th>
-      
       <th>exe</th>
-      
       <th>fqdn</th>
-      
       <th>hostname</th>
-      
       <th>image_path</th>
-      
       <th>name</th>
-      
       <th>pid</th>
-      
       <th>ppid</th>
-      
       <th>uid</th>
-      
       <th>user</th>
-      
     </tr>
   </thead>
   <tbody>
     
     <tr>
-      <th>create</th>
-      
+      <td>create</td>
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
     </tr>
     
     <tr>
-      <th>delete</th>
-      
+      <td>delete</td>
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
     </tr>
     
     <tr>
-      <th>pause</th>
-      
+      <td>pause</td>
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
     </tr>
     
     <tr>
-      <th>start</th>
-      
+      <td>start</td>
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
     </tr>
     
     <tr>
-      <th>stop</th>
-      
+      <td>stop</td>
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
     </tr>
     
   </tbody>

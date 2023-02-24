@@ -31,139 +31,79 @@ value|The descriptive name for the data being stored.|InstalledVersion
   <thead>
     <tr>
       <th />
-      
       <th>data</th>
-      
       <th>fqdn</th>
-      
       <th>hive</th>
-      
       <th>hostname</th>
-      
       <th>image_path</th>
-      
       <th>key</th>
-      
       <th>new_content</th>
-      
       <th>pid</th>
-      
       <th>type</th>
-      
       <th>user</th>
-      
       <th>value</th>
-      
     </tr>
   </thead>
   <tbody>
     
     <tr>
-      <th>add</th>
-      
+      <td>add</td>
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
     </tr>
     
     <tr>
-      <th>key_edit</th>
-      
+      <td>key_edit</td>
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
     </tr>
     
     <tr>
-      <th>remove</th>
-      
+      <td>remove</td>
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
     </tr>
     
     <tr>
-      <th>value_edit</th>
-      
+      <td>value_edit</td>
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
     </tr>
     
   </tbody>

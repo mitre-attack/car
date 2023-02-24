@@ -29,85 +29,49 @@ signer|The name of the organization which signed the driver.|Microsoft Corporati
   <thead>
     <tr>
       <th />
-      
       <th>base_address</th>
-      
       <th>fqdn</th>
-      
       <th>hostname</th>
-      
       <th>image_path</th>
-      
       <th>md5_hash</th>
-      
       <th>module_name</th>
-      
       <th>pid</th>
-      
       <th>sha1_hash</th>
-      
       <th>sha256_hash</th>
-      
       <th>signature_valid</th>
-      
       <th>signer</th>
-      
     </tr>
   </thead>
   <tbody>
     
     <tr>
-      <th>load</th>
-      
+      <td>load</td>
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
     </tr>
     
     <tr>
-      <th>unload</th>
-      
+      <td>unload</td>
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
       <td style="white-space: pre-wrap;"></td>
-      
     </tr>
     
   </tbody>
