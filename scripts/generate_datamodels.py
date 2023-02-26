@@ -12,7 +12,7 @@ def parse_yaml():
     datamodels = {}
     for file in datamodel_files:
         with open(file, encoding="utf-8") as f:
-            datamodels[file] = safe_load(f.read())
+            datamodels[Path(file).stem] = safe_load(f.read())
     return datamodels
 
 def cached_load_sensor():
@@ -39,7 +39,7 @@ def generate_markdown(datamodels):
     with open('datamodel_template.md') as f:
         datamodel_template = Template(f.read())
     for model in datamodels:
-        with open(f'../docs/data_model/{Path(model).stem}.md', 'w', encoding='utf-8') as f:
+        with open(f'../docs/data_model/{model}.md', 'w', encoding='utf-8') as f:
             f.write(datamodel_template.render(datamodel=datamodels[model]))
 
 def main():
