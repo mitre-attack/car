@@ -2,7 +2,7 @@
 This script generates the data model portion of the site for each YAML data model mapping file.
 """
 from glob import glob
-from jinja2 import Template
+from jinja2 import Environment, FileSystemLoader
 from os import path
 from pathlib import Path
 from yaml import safe_load
@@ -35,18 +35,33 @@ def replace_sensor_names_with_html(datamodels, load_sensor):
                 for field, sensor_filenames in model['coverage_map'][action].items():
                     model['coverage_map'][action][field] = [replace_sensor_name_with_html(sensor_filename) for sensor_filename in sensor_filenames]
 
-def generate_markdown(datamodels):
-    with open('datamodel_template.md') as f:
-        datamodel_template = Template(f.read())
+def create_jinja_environment():
+    def backtick_wrapper_filter(value):
+        return f'`{value}`'
+
+    # autoescape set to false since it's needed to have the html links be generated properly and cause the templates / input data are controlled by us
+    jinja_env = Environment(loader=FileSystemLoader('.'), autoescape=False)
+    jinja_env.filters['backtick'] = backtick_wrapper_filter
+
+    return jinja_env
+
+def generate_markdown(datamodels, jinja_env):
+    datamodel_template = jinja_env.get_template('datamodel_template.md')
     for model in datamodels:
         with open(f'../docs/data_model/{model}.md', 'w', encoding='utf-8') as f:
             f.write(datamodel_template.render(datamodel=datamodels[model]))
 
+def generate_index(datamodels, jinja_env):
+    index_template = jinja_env.get_template('datamodel_index_template.md')
+    with open('../docs/data_model/index.md', 'w', encoding='utf-8') as f:
+        f.write(index_template.render(datamodels=datamodels))
+
 def main():
     datamodels = parse_yaml()
-    load_sensor = cached_load_sensor()
-    replace_sensor_names_with_html(datamodels, load_sensor)
-    generate_markdown(datamodels)
+    replace_sensor_names_with_html(datamodels, cached_load_sensor())
+    jinja_env = create_jinja_environment()
+    generate_markdown(datamodels, jinja_env)
+    generate_index(datamodels, jinja_env)
 
 if __name__ == "__main__":
     main()
