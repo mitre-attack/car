@@ -20,6 +20,7 @@ Remote access to the registry can be achieved via
 All of these behaviors call into the Windows API, which uses the NamedPipe `WINREG` over SMB to handle the protocol information. This network can be decoded with wireshark or a similar sensor, and can also be detected by hooking the API function.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -55,6 +56,7 @@ winreg = filter flows where (dest_port == 445 and proto_info.pipe == "WINREG")
 winreg_modify = filter flows where (proto_info.function == "Create*" or proto_info.function == "SetValue*")
 
 output winreg_modify
+
 ```
 
 

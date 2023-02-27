@@ -18,6 +18,7 @@ Microsoft Windows allows for processes to remotely create threads within other p
 This behavior can be detected by looking for thread creations across processes, and resolving the entry point to determine the function name. If the function is `LoadLibraryA` or `LoadLibraryW`, then the intent of the remote thread is clearly to inject a DLL. When this is the case, the source process must be examined so that it can be ignored when it is both expected and a trusted process.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -56,6 +57,7 @@ remote_thread = filter (start_function == "LoadLibraryA" or start_function == "L
 remote_thread = filter (src_image_path != "C:\Path\To\TrustedProgram.exe")
 
 output remote_thread
+
 ```
 
 
@@ -66,6 +68,7 @@ LogPoint version of the above pseudocode.
 
 ```
 norm_id=WindowsSysmon event_id=8 start_function IN ["LoadLibraryA", "LoadLibraryW"] -source_image="C:\Path\To\TrustedProgram.exe"
+
 ```
 
 

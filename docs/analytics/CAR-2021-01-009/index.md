@@ -46,6 +46,7 @@ This query looks for the deletion or resizing of shadow copy volumes, which may 
 
 ```
 ((EventCode="4688" OR EventCode="1") (CommandLine="*vssadmin* *delete* *shadows*" OR CommandLine="*wmic* *shadowcopy* *delete*" OR CommandLine="*vssadmin* *resize* *shadowstorage*")) OR (EventCode="5857" ProviderName="MSVSS__PROVIDER") OR (EventCode="5858" Operation="*Win32_ShadowCopy*")
+
 ```
 
 
@@ -57,6 +58,7 @@ This query looks for the deletion or resizing of shadow copy volumes, which may 
 
 ```
 (EventCode:("4688" OR "1") AND process.command_line:(*vssadmin*\ *delete*\ *shadows* OR *wmic*\ *shadowcopy*\ *delete* OR *vssadmin*\ *resize*\ *shadowstorage*)) OR (EventCode:"5857" AND ProviderName:"MSVSS__PROVIDER") OR (EventCode:"5858" AND Operation:*Win32_ShadowCopy*)
+
 ```
 
 
@@ -68,6 +70,7 @@ This query looks for the deletion or resizing of shadow copy volumes, which may 
 
 ```
 (EventCode IN ["4688", "1"] CommandLine IN ["*vssadmin* *delete* *shadows*", "*wmic* *shadowcopy* *delete*", "*vssadmin* *resize* *shadowstorage*"]) OR (EventCode IN "5857" ProviderName IN "MSVSS__PROVIDER") OR (EventCode IN "5858" Operation IN "*Win32_ShadowCopy*")
+
 ```
 
 

@@ -12,6 +12,7 @@ applicable_platforms: Windows
 Often, after a threat actor gains access to a system, they will attempt to run some kind of malware to further infect the victim machine. These malware often have long command line strings, which could be a possible indicator of attack. Here, we use sysmon and Splunk to first find the average command string length and search for command strings that stretch over multiple lines, thus identifying anomalies and possibly malicious commands.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -45,6 +46,7 @@ This is a Splunk query that determines the average length of a command per user 
 
 ```
 index=* sourcetype="xmlwineventlog" EventCode=4688  |eval cmd_len=len(CommandLine) | eventstats avg(cmd_len) as avg by host| stats max(cmd_len) as maxlen, values(avg) as avgperhost by host, CommandLine | where maxlen > 10*avgperhost
+
 ```
 
 

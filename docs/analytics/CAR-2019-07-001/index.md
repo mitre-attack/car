@@ -74,7 +74,7 @@ output chmod_processes
 ```
 
 
-#### Logpoint
+#### Logpoint, LogPoint native
 
 LogPoint version of the above pseudocode for Windows.
 

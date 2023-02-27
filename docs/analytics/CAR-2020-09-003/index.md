@@ -12,6 +12,7 @@ applicable_platforms: Windows
 Adversaries may attempt to evade system defenses by unloading minifilter drivers used by host-based sensors such as Sysmon through the use of the fltmc command-line utility. Accordingly, this analytic looks for command-line invocations of this utility when used to unload minifilter drivers.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -49,6 +50,7 @@ processes = search Process:Create
 fltmc_processes = filter processes where (
   exe = "fltmc.exe" AND command_line = "*unload*")
 output fltmc_processes
+
 ```
 
 
@@ -59,7 +61,8 @@ This Splunk search looks for process create events for the fltmc.exe utility and
 
 
 ```
-index=client EventCode=1 CommandLine="*unload*" (Image="C:\\Windows\\SysWOW64\\fltMC.exe" OR Image="C:\\Windows\\System32\\fltMC.exe") 
+index=client EventCode=1 CommandLine="*unload*" (Image="C:\\Windows\\SysWOW64\\fltMC.exe" OR Image="C:\\Windows\\System32\\fltMC.exe")
+
 ```
 
 
@@ -70,7 +73,8 @@ This LogPoint search looks for process create events for the fltmc.exe utility a
 
 
 ```
-norm_id=WindowsSysmon command="*unload*" (image="C:\Windows\SysWOW64\fltMC.exe" OR image="C:\Windows\System32\fltMC.exe") 
+norm_id=WindowsSysmon command="*unload*" (image="C:\Windows\SysWOW64\fltMC.exe" OR image="C:\Windows\System32\fltMC.exe")
+
 ```
 
 

@@ -49,6 +49,7 @@ processes = search Process:Create
 certutil_downloads = filter processes where (
   exe =”C:\Windows\System32\certutil.exe” AND command_line = *decode* )
 output certutil_downloads
+
 ```
 
 
@@ -70,7 +71,7 @@ To successfully implement this search you need to be ingesting information on pr
 
 **Configurations:** Using Splunk [Attack Range](https://github.com/splunk/attack_range)
 
-Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1140/atomic_red_team/windows-sysmon.log)  using the Splunk attack range with the commands below
+Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1140/atomic_red_team/windows-sysmon.log) using the Splunk attack range with the commands below
 
 ```
 python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]

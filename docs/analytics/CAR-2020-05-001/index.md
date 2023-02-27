@@ -18,6 +18,7 @@ This analytic was tested both in a lab and in a production environment with a ve
 NOTE - this analytic has no corresponding pseudocode implementation because the CAR data model doesn't currently support process access events.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -48,7 +49,7 @@ index=__your_sysmon_index__ EventCode=10 TargetImage="C:\\windows\\system32\\lsa
 ```
 
 
-#### Logpoint
+#### Logpoint, LogPoint native
 
 LogPoint version of the above pseudocodes.
 

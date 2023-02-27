@@ -33,6 +33,7 @@ To make sure the rule doesn't miss cases where the executable would be started f
 `C:\Windows\System32\srv\svchost.exe`
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -82,8 +83,9 @@ suspicious_processes = filter processes where (
   OR (exe=services.exe AND image_path!="C:\\Windows\\System32\\services.exe")
   OR (exe=lsm.exe AND image_path!="C:\\Windows\\System32\\lsm.exe")
   OR (exe=explorer.exe AND image_path!="C:\\Windows\\explorer.exe")
-  ) 
+  )
 output suspicious_processes
+
 ```
 
 
@@ -105,7 +107,8 @@ OR (process_name=csrss.exe AND NOT process_path="C:\\Windows\\System32\\csrss.ex
 OR (process_name=services.exe AND NOT process_path="C:\\Windows\\System32\\services.exe")
 OR (process_name=lsm.exe AND NOT process_path="C:\\Windows\\System32\\lsm.exe")
 OR (process_name=explorer.exe AND NOT process_path="C:\\Windows\\explorer.exe")
-) 
+)
+
 ```
 
 

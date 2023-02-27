@@ -49,6 +49,7 @@ processes = search Process:Create
 certutil_downloads = filter processes where (
   (exe = C:\Windows\System32\net.exe OR exe = C:\Windows\System32\net1.exe ) AND command_line = * -exportPFX * )
 output certutil_downloads
+
 ```
 
 

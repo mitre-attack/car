@@ -14,6 +14,7 @@ The Sysinternals tool [Autoruns](../sensors/autoruns) checks the registry and fi
 Utilizes the Sysinternals autoruns tool (ignoring validated Microsoft entries). Primarily not a detection analytic by itself but through analysis of results by an analyst can be used for such. Building another analytic on top of this one identifying unusual entries would likely be a beneficial alternative.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|

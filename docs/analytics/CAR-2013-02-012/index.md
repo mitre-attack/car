@@ -18,6 +18,7 @@ Certain users will likely appear as being logged into several machines and may n
 User Name, Machines logged into, the earliest and latest times in which users were logged into the host, the type of logon, and logon ID.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|

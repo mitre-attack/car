@@ -49,6 +49,7 @@ files = search File:create
 batch_files = filter files where (
   extension =".bat" AND file_path = "C:\Windows\system32*" )
 output batch_files
+
 ```
 
 
@@ -70,7 +71,7 @@ You must be ingesting data that records the file-system activity from your hosts
 
 **Configurations:** Using Splunk [Attack Range](https://github.com/splunk/attack_range)
 
-Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1204.002/batch_file_in_system32/windows-sysmon.log)  using the Splunk attack range with the commands below
+Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1204.002/batch_file_in_system32/windows-sysmon.log) using the Splunk attack range with the commands below
 
 ```
 python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]

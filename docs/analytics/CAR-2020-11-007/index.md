@@ -12,6 +12,7 @@ applicable_platforms: Windows
 Adversaries may use network shares to exfliltrate date; they will then remove the shares to cover their tracks. This analytic looks for the removal of network shares via commandline, which is otherwise a rare event.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -51,6 +52,7 @@ target_processes = filter processes where (
   command_line="*Remove-SmbShare*" OR
   comman_line="*Remove-FileShare*" )
 output target_processes
+
 ```
 
 
@@ -62,6 +64,7 @@ looks network shares being deleted from the command line
 
 ```
 (index=__your_sysmon_index__ EventCode=1) ((Image="C:\\Windows\\System32\\net.exe" AND CommandLine="*delete*") OR CommandLine="*Remove-SmbShare*" OR CommandLine="*Remove-FileShare*")
+
 ```
 
 
@@ -73,6 +76,7 @@ looks network shares being deleted from the command line
 
 ```
 norm_id=WindowsSysmon event_id=1 ((image="C:\Windows\System32\net.exe" command="*delete*") OR command="*Remove-SmbShare*" OR command="*Remove-FileShare*")
+
 ```
 
 

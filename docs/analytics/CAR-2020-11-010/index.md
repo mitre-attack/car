@@ -51,6 +51,7 @@ target_processes = filter processes where (
   exe="C:\Windows\System32\CMSTP.exe" AND
   src_ip NOT IN [10.0.0.0/8,192.168.0.0/16, 172.16.0.0/12] )
 output target_processes
+
 ```
 
 
@@ -62,6 +63,7 @@ looks for instances of CMSTP.exe that are combined with external communication
 
 ```
 (index=__your_sysmon_index__ EventCode=3) Image="C:\\Windows\\System32\\CMSTP.exe" | where ((!cidrmatch("10.0.0.0/8", SourceIp) AND !cidrmatch("192.168.0.0/16", SourceIp) AND !cidrmatch("172.16.0.0/12", SourceIp))
+
 ```
 
 
@@ -73,6 +75,7 @@ looks for instances of CMSTP.exe that are combined with external communication
 
 ```
 norm_id=WindowsSysmon event_id=3 image="C:\Windows\System32\CMSTP.exe" -source_address IN HOMENET
+
 ```
 
 

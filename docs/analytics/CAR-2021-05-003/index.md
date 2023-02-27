@@ -50,6 +50,7 @@ processes = search Process:Create
 bcdedit_commands = filter processes where (
   exe = "C:\Windows\System32\bcdedit.exe" AND command_line="*recoveryenabled*" )
 output bcedit_commands
+
 ```
 
 

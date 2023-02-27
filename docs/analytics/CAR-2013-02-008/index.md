@@ -15,6 +15,7 @@ Logon events are Windows Event Code 4624 for Windows Vista and above, 518 for pr
 Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types table on Microsoft's [Audit Logon Events](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc787567(v=ws.10)) page.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -47,9 +48,10 @@ Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types
 ```
 users_list = search UserSession:Login
 users_grouped = group users_list by hostname
-users_grouped = from users_grouped select min(time) as earliest_time, max(time) as latest_time count(user) as user_count 
+users_grouped = from users_grouped select min(time) as earliest_time, max(time) as latest_time count(user) as user_count
 multiple_logins = filter users_grouped where (latest_time - earliest_time <= 1 hour and user_count > 1)
 output multiple_logins
+
 ```
 
 

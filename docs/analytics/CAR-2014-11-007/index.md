@@ -19,6 +19,7 @@ More about RPCSS at : [rpcss_dcom_interfaces.html](http://www.hsc.fr/ressources/
 Identifies the connection in which WMI traffic is seen, as well as the process(es) responsible for owning the connection.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -53,6 +54,7 @@ To detect WMI over RPC (using DCOM), a sensor needs to exist that has the insigh
 flows = search Flow:Message
 wmi_flow = filter flows where (dest_port == 135 and proto_info.rpc_interface == "IRemUnknown2")
 output wmi_flow
+
 ```
 
 

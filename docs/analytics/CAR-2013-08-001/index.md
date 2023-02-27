@@ -47,6 +47,7 @@ Look for instances of `schtasks.exe` running as processes. The `command_line` fi
 process = search Process:Create
 schtasks = filter process where (exe == "schtasks.exe")
 output schtasks
+
 ```
 
 
@@ -57,6 +58,7 @@ DNIF version of the above pseudocode.
 
 ```
 _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=schtasks.exe AND $Process=regex(.*(\/create|\/run|\/query|\/delete|\/change|\/end).*)i limit 100
+
 ```
 
 
@@ -67,6 +69,7 @@ LogPoint version of the above pseudocode.
 
 ```
 norm_id=WindowsSysmon event_id=1 image="*\schtasks.exe" command IN ["*/create*", "*/run*", "*/query*", "*/delete*", "*/change*", "*/end*"]
+
 ```
 
 
@@ -84,6 +87,7 @@ Create a new scheduled task with schtasks.exe and verify the analytic fires when
 * The program should execute at the time specified. This is what the analytic should fire on.
 * To remove the scheduled task, execute `schtasks /Delete /TN calctask`.
 * The program should respond with “SUCCESS: The scheduled task “calctask” was successfully deleted.”
+
 
 ```
 schtasks /Create /SC ONCE /ST 19:00 /TR C:\Windows\System32\calc.exe /TN calctask

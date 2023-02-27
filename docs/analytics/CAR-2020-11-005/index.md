@@ -12,6 +12,7 @@ applicable_platforms: Windows
 Adversaries may attempt to conceal their tracks by deleting the history of commands run within the Powershell console, or turning off history saving to begin with. This analytic looks for several commands that would do this. This does not capture the event if it is done within the console itself; only commandline-based commands are detected. Note that the command to remove the history file directly may very a bit if the history file is not saved in the default path on a particular system.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -49,6 +50,7 @@ processes = search Process:Create
 clear_commands = filter processes where (
   command_line ="*rm (Get-PSReadlineOption).HistorySavePath*" OR command_line="*del (Get-PSReadlineOption).HistorySavePath*" OR command_line="*Set-PSReadlineOption –HistorySaveStyle SaveNothing*" OR command_line="*Remove-Item (Get-PSReadlineOption).HistorySavePath*")  OR command_linee="del*Microsoft\Windows\Powershell\PSReadline\ConsoleHost_history.txt")
 output clear_commands
+
 ```
 
 
@@ -60,6 +62,7 @@ Look for powershell commands that would clear command history
 
 ```
 (index=__your_sysmon_index__ EventCode=1) (CommandLine="*rm (Get-PSReadlineOption).HistorySavePath*" OR CommandLine="*del (Get-PSReadlineOption).HistorySavePath*" OR CommandLine="*Set-PSReadlineOption –HistorySaveStyle SaveNothing*" OR CommandLine="*Remove-Item (Get-PSReadlineOption).HistorySavePath*" OR CommandLine="del*Microsoft\\Windows\\Powershell\\PSReadline\\ConsoleHost_history.txt")
+
 ```
 
 
@@ -71,6 +74,7 @@ Look for powershell commands that would clear command history
 
 ```
 norm_id=WindowsSysmon event_id=1 (command="*rm (Get-PSReadlineOption).HistorySavePath*" OR command="*del (Get-PSReadlineOption).HistorySavePath*" OR command="*Set-PSReadlineOption –HistorySaveStyle SaveNothing*" OR command="*Remove-Item (Get-PSReadlineOption).HistorySavePath*" OR command="del*Microsoft\Windows\Powershell\PSReadline\ConsoleHost_history.txt")
+
 ```
 
 

@@ -21,6 +21,7 @@ The sequence of processes that resulted in `reg.exe` being started from a shell.
 -   `reg.exe`
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -65,6 +66,7 @@ reg = filter processes where (exe == "reg.exe" and parent_exe == "cmd.exe")
 cmd = filter processes where (exe == "cmd.exe" and parent_exe != "explorer.exe"")
 reg_and_cmd = join (reg, cmd) where (reg.ppid == cmd.pid and reg.hostname == cmd.hostname)
 output reg_and_cmd
+
 ```
 
 
@@ -77,6 +79,7 @@ DNIF version of the above pseudocode.
 _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*reg\.exe.*)i AND $ParentProcess=regex(.*cmd\.exe.*)i as #A limit 100
 >>_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*cmd\.exe.*)i NOT $ParentProcess=regex(.*explorer\.exe.*)i as #B limit 100
 >>_checkif sjoin #B.$PPID = #A.$CPID str_compare #B.$SystemName eq #A.$SystemName include
+
 ```
 
 

@@ -48,6 +48,7 @@ Pseudocode implementation of the Splunk search below.
 services = search Service:create
 suspicious_services = filter services where image_path = "*\.exe" AND image_path does not contain ["C:\\Windows\\*", "%windir%\\*", "C:\\Program File*", "C:\\Programdata\\*", "%systemroot%\\*"] )
 output suspicious_services
+
 ```
 
 
@@ -69,7 +70,7 @@ To successfully implement this search, you need to be ingesting logs with the Se
 
 **Configurations:** Using Splunk [Attack Range](https://github.com/splunk/attack_range)
 
-Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/malware/clop/clop_a/windows-system.log)  using the Splunk attack range with the commands below
+Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/malware/clop/clop_a/windows-system.log) using the Splunk attack range with the commands below
 
 ```
 python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]

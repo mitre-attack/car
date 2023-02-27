@@ -47,6 +47,7 @@ Pseudocode implementation of the Splunk search below. The CAR data model does no
 remote_threads = search Thread:remote_create
 lsass_remote_create = filter remote_threads where "lsass" in raw event
 output lsass_remote_create
+
 ```
 
 
@@ -54,6 +55,7 @@ output lsass_remote_create
 
 
 This search needs Sysmon Logs with a Sysmon configuration, which includes EventCode 8 with lsass.exe. This search uses an input macro named `sysmon`. We strongly recommend that you specify your environment-specific configurations (index, source, sourcetype, etc.) for Windows Sysmon logs. Replace the macro definition with configurations for your Splunk environment. The search also uses a post-filter macro designed to filter out known false positives.
+
 
 
 ```
@@ -68,7 +70,8 @@ This search needs Sysmon Logs with a Sysmon configuration, which includes EventC
 
 **Configurations:** Using Splunk [Attack Range](https://github.com/splunk/attack_range)
 
-Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1003.001/atomic_red_team/windows-sysmon.log)  using the Splunk attack range with the commands below
+Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1003.001/atomic_red_team/windows-sysmon.log) using the Splunk attack range with the commands below
+
 
 ```
 python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]

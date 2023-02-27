@@ -14,6 +14,7 @@ Spyware and malware remain a serious problem and Microsoft developed security se
 Stopping services events are Windows Event Code 7036.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -43,16 +44,18 @@ log_name == "System" AND
 event_code == "7036"
 param1 in ["Windows Defender", "Windows Firewall"] AND
 param2 == "stopped"
+
 ```
 
 
-#### Logpoint
+#### Logpoint, LogPoint native
 
 LogPoint version of the above pseudocode.
 
 
 ```
 norm_id=WinServer channel="System" event_id=7036 param1 in ["Windows Defender", "Windows Firewall"] param2="stopped"
+
 ```
 
 

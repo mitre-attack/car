@@ -50,7 +50,7 @@ Look in the system logs for remote logons using RDP.
 
 
 
-#### Logpoint
+#### Logpoint, LogPoint native
 
 LogPoint version of the above pseudocode.
 

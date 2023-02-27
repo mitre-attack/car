@@ -29,6 +29,7 @@ Within the built-in Windows Commands:
 **Note** `dsquery` is only pre-existing on Windows servers.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -69,31 +70,33 @@ To be effective in deciphering malicious and benign activity, the full command l
 ```
 process = search Process:Create
 info_command = filter process where (
- exe == "hostname.exe" or 
- exe == "ipconfig.exe" or 
- exe == "net.exe" or 
- exe == "quser.exe" or 
+ exe == "hostname.exe" or
+ exe == "ipconfig.exe" or
+ exe == "net.exe" or
+ exe == "quser.exe" or
  exe == "qwinsta.exe" or
  exe == "sc" and (command_line match " query" or command_line match " qc")) or
- exe == "systeminfo.exe" or 
- exe == "tasklist.exe" or 
+ exe == "systeminfo.exe" or
+ exe == "tasklist.exe" or
  exe == "whoami.exe"
 )
 output info_command
+
 ```
 
 
-#### Splunk
+#### Splunk, Sysmon native
 
 Splunk version of the above pseudocode search.
 
 
 ```
 index=__your_sysmon_index__ EventCode=1 (Image="C:\\Windows\\*\\hostname.exe" OR Image="C:\\Windows\\*\\ipconfig.exe" OR Image="C:\\Windows\\*\\net.exe" OR Image="C:\\Windows\\*\\quser.exe" OR Image="C:\\Windows\\*\\qwinsta.exe" OR (Image="C:\\Windows\\*\\sc.exe" AND (CommandLine="* query *" OR CommandLine="* qc *")) OR Image="C:\\Windows\\*\\systeminfo.exe" OR Image="C:\\Windows\\*\\tasklist.exe" OR Image="C:\\Windows\\*\\whoami.exe")|stats values(Image) as "Images" values(CommandLine) as "Command Lines" by ComputerName
+
 ```
 
 
-#### Eql
+#### Eql, EQL native
 
 EQL version of the above pseudocode search.
 
@@ -101,6 +104,7 @@ EQL version of the above pseudocode search.
 ```
 process where subtype.create and
   (process_name == "hostname.exe" or process_name == "ipconfig.exe" or process_name == "net.exe" or process_name == "quser.exe" process_name == "qwinsta.exe" or process_name == "systeminfo.exe" or process_name == "tasklist.exe" or process_name == "whoami.exe" or (process_name == "sc.exe" and (command_line == "* query *" or command_line == "* qc *")))
+
 ```
 
 
@@ -111,6 +115,7 @@ LogPoint version of the above pseudocode.
 
 ```
 norm_id=WindowsSysmon event_id=1 (image in ["*\hostname.exe", "*\ipconfig.exe", "*\net.exe", "*\quser.exe", "*\qwinsta.exe", "*\systeminfo.exe", "*\tasklist.exe", "*\whoami.exe"] OR (image="*\sc.exe" command IN ["* query *", "* qc *"))
+
 ```
 
 

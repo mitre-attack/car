@@ -12,6 +12,7 @@ applicable_platforms: Windows
 Adversaries may use screensaver files to run malicious code. This analytic triggers on suspicious edits to the screensaver registry keys, which dictate which .scr file the screensaver runs.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -49,6 +50,7 @@ reg_events = search Registry:add or Registry:edit
 scr_reg_events = filter processes where (
   key="*\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop\\SCRNSAVE.EXE" AND
 output scr_reg_events
+
 ```
 
 
@@ -60,6 +62,7 @@ looks creations of edits of the SCRNSAVE.exe registry key
 
 ```
 index=your_sysmon_index (EventCode=12 OR EventCode=13 OR EventCode=14) TargetObject="*\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop\\SCRNSAVE.EXE"
+
 ```
 
 
@@ -71,6 +74,7 @@ looks creations of edits of the SCRNSAVE.exe registry key
 
 ```
 norm_id=WindowsSysmon event_id IN [12, 13, 14] target_object="*\Software\Policies\Microsoft\Windows\Control Panel\Desktop\SCRNSAVE.EXE"
+
 ```
 
 

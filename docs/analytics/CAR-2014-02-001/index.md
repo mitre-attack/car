@@ -16,6 +16,7 @@ Adversaries may modify the binary file for an existing service to achieve [Persi
 The Service Name and approximate time in which changes occurred on each host
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -58,12 +59,13 @@ file_change = search File:Create,Modify
 process = search Process:Create
 service_process = filter processes where (parent_exe == "services.exe")
 modified_service = join (search, filter) where (
- file_change.time < service_process.time and 
+ file_change.time < service_process.time and
  file_change.file_path == service_process.image_path
 )
 
 modified_service = filter modified_service where (modified_service.file_change.image_path not in legitimate_installers)
 output modified_service
+
 ```
 
 

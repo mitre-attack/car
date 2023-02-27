@@ -49,6 +49,7 @@ processes = search Process:Create
 certutil_downloads = filter processes where (
   exe ="C:\Windows\System32\certutil.exe" AND command_line = *urlcache* AND command_line = *split*)
 output certutil_downloads
+
 ```
 
 

@@ -46,6 +46,7 @@ This query looks for the specific use of reg.exe in correlation to commands aime
 
 ```
 sourcetype = __your_sysmon_index__ ParentImage = "C:\\Windows\\System32\\cmd.exe" | where like(CommandLine,"reg.exe%HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System%REG_DWORD /d 0%")
+
 ```
 
 
@@ -60,6 +61,7 @@ processes = search Process:Create
 cmd_processes = filter processes where (
                 (parent_image = "C:\\Windows\\System32\\cmd.exe") AND (command_line = "reg.exe%HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System%REG_DWORD /d 0%")
                 )
+
 ```
 
 

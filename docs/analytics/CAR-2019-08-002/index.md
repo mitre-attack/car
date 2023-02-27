@@ -14,6 +14,7 @@ The NTDSUtil tool may be used to dump a Microsoft Active Directory database to d
 This requires filesystem data to determine whether files have been created.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -52,6 +53,7 @@ ntds_dump = filter files where (
   file_name = "ntds.dit"  and
   image_path = "*ntdsutil.exe")
 output ntds_dump
+
 ```
 
 
@@ -63,6 +65,7 @@ A Splunk/Sysmon version of the above pseudocode.
 
 ```
 index=__your_sysmon_index__ EventCode=11 TargetFilename="*ntds.dit" Image="*ntdsutil.exe"
+
 ```
 
 
@@ -74,16 +77,18 @@ An EQL version of the above pseudocode.
 
 ```
 file where file_name == "ntds.dit" and process_name == "ntdsutil.exe"
+
 ```
 
 
-#### Logpoint
+#### Logpoint, LogPoint native
 
 LogPoint version of the above pseudocode.
 
 
 ```
 norm_id=WindowsSysmon event_id=11 file="*ntds.dit" source_image="*ntdsutil.exe"
+
 ```
 
 
@@ -94,5 +99,6 @@ norm_id=WindowsSysmon event_id=11 file="*ntds.dit" source_image="*ntdsutil.exe"
 
 1. Open a Windows Command Prompt or PowerShell instance as Administrator
 2. Execute `ntdsutil.exe “ac i ntds” “ifm” “create full c:\temp” q q`
+
 
 

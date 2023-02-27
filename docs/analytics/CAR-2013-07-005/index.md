@@ -14,6 +14,7 @@ Before [exfiltrating data](https://attack.mitre.org/tactics/TA0010) that an adve
 In addition to looking for RAR or 7z program names, command line usage of 7Zip or RAR can be detected with the flag usage of "`\* a \*`". This is helpful, as adversaries may change program names.
 
 
+
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
@@ -48,6 +49,7 @@ This analytic looks for the command line argument `a`, which is used by RAR. How
 processes = search Process:Create
 rar_argument = filter processes where (command_line == "* a *")
 output rar_argument
+
 ```
 
 
@@ -58,6 +60,7 @@ DNIF version of the above pseudocode.
 
 ```
 _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.* a .*)i limit 100
+
 ```
 
 
@@ -68,6 +71,7 @@ LogPoint version of the above pseudocode.
 
 ```
 norm_id=WindowsSysmon event_id=1 command="* a *"
+
 ```
 
 

@@ -48,6 +48,7 @@ flow = search Flow:Message
 smb_write = filter flow where (dest_port == "445" and protocol == "smb.write")
 smb_write.file_name = smb_write.proto_info.file_name
 output smb_write
+
 ```
 
 
