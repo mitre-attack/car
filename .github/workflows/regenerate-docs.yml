@@ -16,6 +16,9 @@ jobs:
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
+      - name: Clean /docs/data_model
+        shell: bash
+        run: rm -rfv ./docs/data_model
       - name: Clean /docs/analytics
         shell: bash
         run: rm -rfv ./docs/analytics

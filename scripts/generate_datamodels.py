@@ -62,6 +62,7 @@ def generate_index_with_sensors(datamodels, jinja_env):
 def main():
     datamodels = parse_yaml()
     replace_sensor_names_with_html(datamodels, cached_load_sensor())
+    Path('../docs/data_model').mkdir(exist_ok=True)
     jinja_env = create_jinja_environment()
     generate_markdown(datamodels, jinja_env)
     generate_index(datamodels, jinja_env)
