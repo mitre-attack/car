@@ -1,25 +1,23 @@
 """
 This script generates the data model portion of the site for each YAML data model mapping file.
 """
-from glob import glob
 from jinja2 import Environment, FileSystemLoader
-from os import path
 from pathlib import Path
 from yaml import safe_load
 
 def parse_yaml():
-    datamodel_files = glob(path.join(path.dirname(__file__), "..", "data_model", "*.yaml"))
+    datamodel_files = (Path(__file__).parents[1] / "data_model").glob("*.yaml")
     datamodels = {}
     for file in datamodel_files:
         with open(file, encoding="utf-8") as f:
-            datamodels[Path(file).stem] = safe_load(f.read())
+            datamodels[file.stem] = safe_load(f.read())
     return datamodels
 
 def cached_load_sensor():
   sensors = {}
   def load_sensor(filename):
       if filename not in sensors:
-          sensor_file = path.join(path.dirname(__file__), "..", "sensors", f"{filename}.yaml")
+          sensor_file = Path(__file__).parents[1] / "sensors" / f"{filename}.yaml"
           with open(sensor_file, encoding="utf-8") as f:
               sensors[filename] = safe_load(f.read())
       return sensors[filename]
