@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Microsoft Windows allows for processes to remotely create threads within other processes of the same privilege level. This functionality is provided via the Windows API [CreateRemoteThread](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682437.aspx). Both Windows and third-party software use this ability for legitimate purposes. For example, the Windows process [csrss.exe](https://en.wikipedia.org/wiki/Client/Server_Runtime_Subsystem) creates threads in programs to send signals to registered callback routines. Both adversaries and host-based security software use this functionality to [inject DLLs](https://attack.mitre.org/techniques/T1055), but for very different purposes. An adversary is likely to inject into a program to [evade defenses](https://attack.mitre.org/tactics/TA0005) or [bypass User Account Control](https://attack.mitre.org/techniques/T1548/002), but a security program might do this to gain increased monitoring of API calls. One of the most common methods of [DLL Injection](https://attack.mitre.org/techniques/T1055) is through the Windows API [LoadLibrary](https://msdn.microsoft.com/en-us/library/windows/desktop/ms684175.aspx).
 
 -   Allocate memory in the target program with [VirtualAllocEx](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366890.aspx)
@@ -17,6 +16,7 @@ Microsoft Windows allows for processes to remotely create threads within other p
 -   Create a new thread and set its entry point to [LoadLibrary](https://msdn.microsoft.com/en-us/library/windows/desktop/ms684175.aspx) using the API [CreateRemoteThread](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682437.aspx).
 
 This behavior can be detected by looking for thread creations across processes, and resolving the entry point to determine the function name. If the function is `LoadLibraryA` or `LoadLibraryW`, then the intent of the remote thread is clearly to inject a DLL. When this is the case, the source process must be examined so that it can be ignored when it is both expected and a trusted process.
+
 
 
 ### ATT&CK Detections
@@ -57,6 +57,7 @@ remote_thread = filter (start_function == "LoadLibraryA" or start_function == "L
 remote_thread = filter (src_image_path != "C:\Path\To\TrustedProgram.exe")
 
 output remote_thread
+
 ```
 
 
@@ -67,6 +68,7 @@ LogPoint version of the above pseudocode.
 
 ```
 norm_id=WindowsSysmon event_id=8 start_function IN ["LoadLibraryA", "LoadLibraryW"] -source_image="C:\Path\To\TrustedProgram.exe"
+
 ```
 
 

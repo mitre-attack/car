@@ -8,9 +8,9 @@ analytic_type: Situational Awareness
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
+<br><br>
+Adversaries may establish persistence or escalate privileges by executing malicious content triggered by hijacked references to Component Object Model (COM) objects. This is typically done by replacing COM object registry entries under the HKEY_CURRENT_USER\Software\Classes\CLSID or HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID keys. Accordingly, this analytic looks for any changes under these keys.
 
-
-Adversaries may establish persistence or escalate privileges by executing malicious content triggered by hijacked references to Component Object Model (COM) objects. This is typically done by replacing COM object registry entries under the HKEY_CURRENT_USER\Software\Classes\CLSID or HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID keys. Accordingly, this analytic looks for any changes under these keys. 
 
 
 ### ATT&CK Detections
@@ -47,10 +47,11 @@ This is a pseudocode representation of the below splunk search.
 
 
 ```
-registry_keys = search (Registry:Create AND Registry:Remove AND Registry:Edit) 
+registry_keys = search (Registry:Create AND Registry:Remove AND Registry:Edit)
 clsid_keys = filter registry_keys where (
   key = "*\Software\Classes\CLSID\*")
 output clsid_keys
+
 ```
 
 
@@ -62,6 +63,7 @@ This Splunk search looks for any registry keys that were created, deleted, or re
 
 ```
 index=__your_sysmon_index__ (EventCode=12 OR EventCode=13 OR EventCode=14) TargetObject="*\\Software\\Classes\\CLSID\\*"
+
 ```
 
 
@@ -73,6 +75,7 @@ This LogPoint search looks for any registry keys that were created, deleted, or 
 
 ```
 norm_id=WindowsSysmon event_id IN [12, 13, 14] target_object="*\Software\Classes\CLSID\*"
+
 ```
 
 

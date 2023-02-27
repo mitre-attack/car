@@ -8,11 +8,11 @@ analytic_type: TTP
 contributors: Tony Lambert/Red Canary
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 The Windows Task Manager may be used to dump the memory space of `lsass.exe` to disk for processing with a credential access tool such as Mimikatz. This is performed by launching Task Manager as a privileged user, selecting `lsass.exe`, and clicking "Create dump file". This saves a dump file to disk with a deterministic name that includes the name of the process being dumped.
 
 This requires filesystem data to determine whether files have been created.
+
 
 
 ### ATT&CK Detections
@@ -53,6 +53,7 @@ lsass_dump = filter files where (
   file_name = "lsass*.dmp"  and
   image_path = "C:\Windows\*\taskmgr.exe")
 output lsass_dump
+
 ```
 
 
@@ -64,6 +65,7 @@ A Splunk/Sysmon version of the above pseudocode.
 
 ```
 index=__your_sysmon_index__ EventCode=11 TargetFilename="*lsass*.dmp" Image="C:\\Windows\\*\\taskmgr.exe"
+
 ```
 
 
@@ -75,16 +77,18 @@ An EQL version of the above pseudocode.
 
 ```
 file where file_name == "lsass*.dmp" and process_name == "taskmgr.exe"
+
 ```
 
 
-#### Logpoint
+#### Logpoint, LogPoint native
 
 LogPoint version of the above pseudocode.
 
 
 ```
 norm_id=WindowsSysmon event_id=11 file="*lsass*.dmp" source_image="C:\Windows\*\taskmgr.exe"
+
 ```
 
 
@@ -96,6 +100,7 @@ norm_id=WindowsSysmon event_id=11 file="*lsass*.dmp" source_image="C:\Windows\*\
 1. Open Windows Task Manager as Administrator
 2. Select lsass.exe
 3. Right-click on lsass.exe and select "Create dump file".
+
 
 
 

@@ -6,7 +6,7 @@ import json
 import glob
 import yaml
 import sys
-from os import path
+from os import path, makedirs
 
 # Static ATT&CK Navigator layer JSON fields
 VERSION = "3.0"
@@ -67,6 +67,7 @@ for k,v in attack_mappings.items():
     layer_json["techniques"].append(technique)
 
 # Output JSON to docs directory
+makedirs('../docs/car_attack', exist_ok=True)
 outfile = open("../docs/car_attack/car_attack.json","w")
 json.dump(layer_json, outfile, indent=4)
 outfile.close()

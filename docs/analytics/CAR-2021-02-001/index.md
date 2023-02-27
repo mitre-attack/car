@@ -8,9 +8,9 @@ analytic_type: TTP
 contributors: Nichols Jasper
 applicable_platforms: Windows
 ---
+<br><br>
+A web shell is a web script placed on an openly accessible web server to allow an adversary to use the server as a gatway in a network. As the shell operates, commands will be issued from within the web application into the broader server operating system. This analytic looks for host enumeration executables initiated by any web service that would not normally be executed within that environment.
 
-
-A web shell is a web script placed on an openly accessible web server to allow an adversary to use the server as a gatway in a network. As the shell operates, commands will be issued from within the web application into the broader server operating system. This analytic looks for host enumeration executables initiated by any web service that would not normally be executed within that environment. 
 
 
 ### ATT&CK Detections
@@ -50,7 +50,7 @@ processes = search Process:Create
 suspicious_processes = filter processes where (
   (parent_exe == "w3wp.exe" OR
    parent_exe == "httpd.exe" OR
-   parent_exe == "tomcat*.exe" OR 
+   parent_exe == "tomcat*.exe" OR
    parent_exe == "nginx.exe" ) AND
   (exe == "cmd.exe" OR
    exe == "powershell.exe" OR
@@ -60,6 +60,7 @@ suspicious_processes = filter processes where (
    exe == "systeminfo.exe" OR
    exe == "ipconfig.exe) )
 output suspicious_processes
+
 ```
 
 
@@ -70,9 +71,10 @@ Look for host enumeration commands spawned by web services.
 
 
 ```
-(index=__your_sysmon_index__ EventCode=1) 
+(index=__your_sysmon_index__ EventCode=1)
 (ParentImage="C:\\Windows\\System32\\*w3wp.exe" OR ParentImage="*httpd.exe" OR ParentImage="*tomcat*.exe" OR ParentImage="*nginx.exe")
-(Image="C:\\Windows\\System32\\cmd.exe OR Image="C:\\Windows\\SysWOW64\\cmd.exe" OR Image="C:\\Windows\\System32\\*\\powershell.exe OR Image="C:\\Windows\SysWOW64\\*\powershell.exe OR Image="C:\\Windows\\System32\\net.exe" OR Image="C:\\Windows\\System32\\hostname.exe" OR Image="C:\\Windows\\System32\\whoami.exe" OR Image="*systeminfo.exe OR Image="C:\\Windows\\System32\\ipconfig.exe") 
+(Image="C:\\Windows\\System32\\cmd.exe OR Image="C:\\Windows\\SysWOW64\\cmd.exe" OR Image="C:\\Windows\\System32\\*\\powershell.exe OR Image="C:\\Windows\SysWOW64\\*\powershell.exe OR Image="C:\\Windows\\System32\\net.exe" OR Image="C:\\Windows\\System32\\hostname.exe" OR Image="C:\\Windows\\System32\\whoami.exe" OR Image="*systeminfo.exe OR Image="C:\\Windows\\System32\\ipconfig.exe")
+
 ```
 
 

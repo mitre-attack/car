@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: Olaf Hartong, MITRE
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 CMSTP.exe is the Microsoft Connection Manager Profile Installer, which can be leveraged to setup listeners that will receive and install malware from remote sources in trusted fashion.
 When CMSTP.exe is seen in combination with an external connection, it is a good indication of this TTP.
 
@@ -18,7 +17,7 @@ When CMSTP.exe is seen in combination with an external connection, it is a good 
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Signed Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|[CMSTP](https://attack.mitre.org/techniques/T1218/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|High|
+|[System Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|[CMSTP](https://attack.mitre.org/techniques/T1218/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|High|
 
 
 ### D3FEND Techniques
@@ -52,6 +51,7 @@ target_processes = filter processes where (
   exe="C:\Windows\System32\CMSTP.exe" AND
   src_ip NOT IN [10.0.0.0/8,192.168.0.0/16, 172.16.0.0/12] )
 output target_processes
+
 ```
 
 
@@ -63,6 +63,7 @@ looks for instances of CMSTP.exe that are combined with external communication
 
 ```
 (index=__your_sysmon_index__ EventCode=3) Image="C:\\Windows\\System32\\CMSTP.exe" | where ((!cidrmatch("10.0.0.0/8", SourceIp) AND !cidrmatch("192.168.0.0/16", SourceIp) AND !cidrmatch("172.16.0.0/12", SourceIp))
+
 ```
 
 
@@ -74,6 +75,7 @@ looks for instances of CMSTP.exe that are combined with external communication
 
 ```
 norm_id=WindowsSysmon event_id=3 image="C:\Windows\System32\CMSTP.exe" -source_address IN HOMENET
+
 ```
 
 

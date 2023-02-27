@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows, Linux, macOS
 ---
-
-
+<br><br>
 Executables are generally not renamed, thus a given hash of an executable should only have ever one name. Identifying instances where multiple process names share the same hash may find cases where tools are copied by attackers to different folders or hosts to [avoid detection](https://attack.mitre.org/tactics/TA0005).
 
 Although this analytic was initially based on MD5 hashes, it is equally applicable to any hashing convention.

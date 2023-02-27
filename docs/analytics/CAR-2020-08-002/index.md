@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 NTFS Alternate Data Streams (ADSs) may be used by adversaries as a means of evading security tools by storing malicious data or binaries in file attribute metadata. ADSs are also powerful because their contents can be directly executed by various Windows tools; accordingly, this analytic looks at common ways of executing ADSs using Living off the Land Binaries and Scripts (LOLBAS).
 
 #### References

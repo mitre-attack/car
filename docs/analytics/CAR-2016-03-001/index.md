@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows, Linux, macOS
 ---
-
-
+<br><br>
 When entering on a host for the first time, an adversary may try to [discover](https://attack.mitre.org/tactics/TA0007) information about the host. There are several built-in Windows commands that can be used to learn about the software configurations, active users, administrators, and networking configuration. These commands should be monitored to identify when an adversary is learning information about the system and environment. The information returned may impact choices an adversary can make when [establishing persistence](https://attack.mitre.org/tactics/TA0003), [escalating privileges](https://attack.mitre.org/tactics/TA0004), or [moving laterally](https://attack.mitre.org/tactics/TA0008).
 
 Because these commands are built in, they may be run frequently by power users or even by normal users. Thus, an analytic looking at this information should have well-defined white- or blacklists, and should consider looking at an anomaly detection approach, so that this information can be learned dynamically.
@@ -28,6 +27,7 @@ Within the built-in Windows Commands:
 -   `whoami`
 
 **Note** `dsquery` is only pre-existing on Windows servers.
+
 
 
 ### ATT&CK Detections
@@ -70,31 +70,33 @@ To be effective in deciphering malicious and benign activity, the full command l
 ```
 process = search Process:Create
 info_command = filter process where (
- exe == "hostname.exe" or 
- exe == "ipconfig.exe" or 
- exe == "net.exe" or 
- exe == "quser.exe" or 
+ exe == "hostname.exe" or
+ exe == "ipconfig.exe" or
+ exe == "net.exe" or
+ exe == "quser.exe" or
  exe == "qwinsta.exe" or
  exe == "sc" and (command_line match " query" or command_line match " qc")) or
- exe == "systeminfo.exe" or 
- exe == "tasklist.exe" or 
+ exe == "systeminfo.exe" or
+ exe == "tasklist.exe" or
  exe == "whoami.exe"
 )
 output info_command
+
 ```
 
 
-#### Splunk
+#### Splunk, Sysmon native
 
 Splunk version of the above pseudocode search.
 
 
 ```
 index=__your_sysmon_index__ EventCode=1 (Image="C:\\Windows\\*\\hostname.exe" OR Image="C:\\Windows\\*\\ipconfig.exe" OR Image="C:\\Windows\\*\\net.exe" OR Image="C:\\Windows\\*\\quser.exe" OR Image="C:\\Windows\\*\\qwinsta.exe" OR (Image="C:\\Windows\\*\\sc.exe" AND (CommandLine="* query *" OR CommandLine="* qc *")) OR Image="C:\\Windows\\*\\systeminfo.exe" OR Image="C:\\Windows\\*\\tasklist.exe" OR Image="C:\\Windows\\*\\whoami.exe")|stats values(Image) as "Images" values(CommandLine) as "Command Lines" by ComputerName
+
 ```
 
 
-#### Eql
+#### Eql, EQL native
 
 EQL version of the above pseudocode search.
 
@@ -102,6 +104,7 @@ EQL version of the above pseudocode search.
 ```
 process where subtype.create and
   (process_name == "hostname.exe" or process_name == "ipconfig.exe" or process_name == "net.exe" or process_name == "quser.exe" process_name == "qwinsta.exe" or process_name == "systeminfo.exe" or process_name == "tasklist.exe" or process_name == "whoami.exe" or (process_name == "sc.exe" and (command_line == "* query *" or command_line == "* qc *")))
+
 ```
 
 
@@ -112,6 +115,7 @@ LogPoint version of the above pseudocode.
 
 ```
 norm_id=WindowsSysmon event_id=1 (image in ["*\hostname.exe", "*\ipconfig.exe", "*\net.exe", "*\quser.exe", "*\qwinsta.exe", "*\systeminfo.exe", "*\tasklist.exe", "*\whoami.exe"] OR (image="*\sc.exe" command IN ["* query *", "* qc *"))
+
 ```
 
 

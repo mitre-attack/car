@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: Lucas Heiligenstein
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Detection of creation of registry key HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\SafeDllSearchMode. The key SafeDllSearchMode, if set to 0, will block the Windows mechanism for the search DLL order and adversaries may execute their own malicious dll.
 
 
@@ -52,6 +51,7 @@ safe_dll_search_processes = filter processes where command_line CONTAINS("*SafeD
 reg_keys = search Registry:value_edit
 safe_dll_reg_keys = filter reg_keys where value="SafeDllSearchMode" AND value_data="0"
 output safe_dll_search_processes, safe_dll_reg_keys
+
 ```
 
 
@@ -63,6 +63,7 @@ This is a Splunk representation of the above pseudocode.
 
 ```
 (source="WinEventLog:*" ((((EventCode="4688" OR EventCode="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) (CommandLine="*00000000*" OR CommandLine="*0*") CommandLine="*SafeDllSearchMode*") OR ((EventCode="4657") ObjectValueName="SafeDllSearchMode" value="0")) OR ((EventCode="13") EventType="SetValue" TargetObject="*SafeDllSearchMode" Details="DWORD (0x00000000)")))
+
 ```
 
 
@@ -74,6 +75,7 @@ This is an Elastic representation of the above pseudocode.
 
 ```
 (((EventCode:("4688" OR "1") AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:*Set\-ItemProperty* AND process.command_line:*\-value*)) AND process.command_line:(*00000000* OR *0*) AND process.command_line:*SafeDllSearchMode*) OR (EventCode:"4657" AND winlog.event_data.ObjectValueName:"SafeDllSearchMode" AND value:"0")) OR (EventCode:"13" AND winlog.event_data.EventType:"SetValue" AND winlog.event_data.TargetObject:*SafeDllSearchMode AND winlog.event_data.Details:"DWORD\ \(0x00000000\)"))
+
 ```
 
 
@@ -85,6 +87,7 @@ This is a LogPoint representation of the above pseudocode.
 
 ```
 (((EventCode IN ["4688", "1"] ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine IN ["*00000000*", "*0*"] CommandLine="*SafeDllSearchMode*") OR (EventCode IN "4657" ObjectValueName="SafeDllSearchMode" value="0")) OR (EventCode IN "13" EventType="SetValue" TargetObject="*SafeDllSearchMode" Details="DWORD (0x00000000)"))
+
 ```
 
 

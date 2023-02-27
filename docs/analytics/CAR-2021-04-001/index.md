@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: Sebastien Damaye
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 [Masquerading (T1036)](https://attack.mitre.org/techniques/T1036/) is defined by ATT&CK as follows:
 
 "Masquerading occurs when the name or location of an object, legitimate or malicious, is manipulated or abused for the sake of evading defenses and observation. This may include manipulating file metadata, tricking users into misidentifying the file type, and giving legitimate task or service names."
@@ -32,6 +31,7 @@ Examples (true positive):
 To make sure the rule doesn't miss cases where the executable would be started from a sub-folder of these locations, the entire path is checked for the process path. The below example should be considered as suspicious:
 
 `C:\Windows\System32\srv\svchost.exe`
+
 
 
 ### ATT&CK Detections
@@ -83,8 +83,9 @@ suspicious_processes = filter processes where (
   OR (exe=services.exe AND image_path!="C:\\Windows\\System32\\services.exe")
   OR (exe=lsm.exe AND image_path!="C:\\Windows\\System32\\lsm.exe")
   OR (exe=explorer.exe AND image_path!="C:\\Windows\\explorer.exe")
-  ) 
+  )
 output suspicious_processes
+
 ```
 
 
@@ -106,7 +107,8 @@ OR (process_name=csrss.exe AND NOT process_path="C:\\Windows\\System32\\csrss.ex
 OR (process_name=services.exe AND NOT process_path="C:\\Windows\\System32\\services.exe")
 OR (process_name=lsm.exe AND NOT process_path="C:\\Windows\\System32\\lsm.exe")
 OR (process_name=explorer.exe AND NOT process_path="C:\\Windows\\explorer.exe")
-) 
+)
+
 ```
 
 

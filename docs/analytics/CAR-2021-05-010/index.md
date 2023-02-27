@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: Splunk Threat Research <research@splunk.com>
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 This search looks for the creation of local administrator accounts using net.exe.
 
 
@@ -50,6 +49,7 @@ processes = search Process:Create
 certutil_downloads = filter processes where (
   (exe = C:\Windows\System32\net.exe OR exe = C:\Windows\System32\net1.exe ) AND command_line = * -exportPFX * )
 output certutil_downloads
+
 ```
 
 

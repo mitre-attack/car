@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: Splunk Threat Research <research@splunk.com>
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 The following query identifies Microsoft Background Intelligent Transfer Service utility `bitsadmin.exe` using the `transfer` parameter to download a remote object. In addition, look for `download` or `upload` on the command-line, the switches are not required to perform a transfer. Capture any files downloaded. Review the reputation of the IP or domain used. Typically once executed, a follow on command will be used to execute the dropped file. Note that the network connection or file modification events related will not spawn or create from `bitsadmin.exe`, but the artifacts will appear in a parallel process of `svchost.exe` with a command-line similar to `svchost.exe -k netsvcs -s BITS`. It's important to review all parallel and child processes to capture any behaviors and artifacts. In some suspicious and malicious instances, BITS jobs will be created. You can use `bitsadmin /list /verbose` to list out the jobs during investigation.
 
 
@@ -51,6 +50,7 @@ processes = search Process:Create
 bitsadmin_commands = filter processes where (
   exe ="C:\Windows\System32\bitsadmin.exe" AND command_line = *transfer*)
 output bitsadmin_commands
+
 ```
 
 
@@ -72,7 +72,7 @@ To successfully implement this search you need to be ingesting information on pr
 
 **Configurations:** Using Splunk [Attack Range](https://github.com/splunk/attack_range)
 
-Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1197/atomic_red_team/windows-sysmon.log)  using the Splunk attack range with the commands below
+Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1197/atomic_red_team/windows-sysmon.log) using the Splunk attack range with the commands below
 
 ```
 python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]

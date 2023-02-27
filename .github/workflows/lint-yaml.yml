@@ -1,0 +1,110 @@
+name: Lint the yaml
+
+on:
+  pull_request_target:
+  push:
+    branches: [master]
+
+jobs:
+  yamllint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull down repo
+        uses: actions/checkout@v3
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      - name: Install script dependencies
+        run: pip install -r ./scripts/requirements.txt
+      - name: Run yamllint
+        run: yamllint analytics/ data_model/ sensors/
+  analysis-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull down repo
+        uses: actions/checkout@v3
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      - name: Install script dependencies
+        run: pip install -r ./scripts/requirements.txt
+      - name: Validate against analysis schema
+        run: yamale -s scripts/analytic_schema.yaml --no-strict analytics/
+  datamodel-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull down repo
+        uses: actions/checkout@v3
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      - name: Install script dependencies
+        run: pip install -r ./scripts/requirements.txt
+      - name: Validate against data model schema
+        run: yamale -s scripts/datamodel_schema.yaml --no-strict data_model/
+  sensor-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull down repo
+        uses: actions/checkout@v3
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      - name: Install script dependencies
+        run: pip install -r ./scripts/requirements.txt
+      - name: Validate against sensor schema
+        run: yamale -s scripts/sensor_schema.yaml --no-strict sensors/
+  filetype-is-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull down repo
+        uses: actions/checkout@v3
+      - name: Files should be .yaml not .yml and should also be actual files (ex. not directories)
+        shell: bash
+        run: find analytics data_model sensors -mindepth 1 -maxdepth 1 \( ! -name "*.yaml" \) -o \( ! -type f \)
+  id-filename-equivalence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull down repo
+        uses: actions/checkout@v3
+      - name: Analytics files need to have their filename be '{id}.yaml'
+        run: >
+          ret=0;
+          for file in analytics/*.yaml; do
+            echo "Checking $file";
+            if ! [ "$(basename $file | sed -e "s/\.yaml$//")" = "$(yq '.id' < $file)" ]; then
+              echo "Failed";
+              ret=1;
+            fi;
+          done;
+          exit "$ret"
+      - name: Data model files need to have their filename be '{name but fully lowercase and with underscores replacing spaces}.yaml'
+        run: >
+          ret=0;
+          for file in data_model/*.yaml; do
+            echo "Checking $file";
+            if ! [ "$(basename $file | sed -e "s/\.yaml$//")" = "$(yq '.name | downcase | sub(" ", "_")' < $file)" ]; then
+              echo "Failed";
+              ret=1;
+            fi;
+          done;
+          exit "$ret"
+      - name: Sensor files need to have their filename be '{sensor_name but fully lowercase}_{sensor_version}.yaml'
+        run: >
+          ret=0;
+          for file in sensors/*.yaml; do
+            echo "Checking $file";
+            if ! [ "$(basename $file | sed -e "s/\.yaml$//")" = "$(yq '(.sensor_name | downcase) + "_" + .sensor_version' < $file)" ]; then
+              echo "Failed";
+              ret=1;
+            fi;
+          done;
+          exit "$ret"

@@ -1,3 +1,4 @@
+---
 title: Local Network Sniffing
 submission_date: 2020/11/30
 information_domain: Host
@@ -10,7 +11,7 @@ analytic_types:
 contributors:
   - Olaf Hartong
 id: CAR-2020-11-002
-description: |-
+description: |
   Adversaries may use a variety of tools to gain visibility on the current status of things on the network: which processes are listening on which ports, which services are running on other hosts, etc. This analytic looks for the names of the most common network sniffing tools. While this may be noisy on networks where sysadmins are using any of these tools on a regular basis, in most networks their use is noteworthy.
 coverage:
   - technique: T1040
@@ -21,7 +22,7 @@ coverage:
 implementations:
   - name: Pseudocode - commands containing known network sniffing application names
     description: This is a pseudocode representation of the below splunk search.
-    code: |- 
+    code: |
       processes = search Process:Create
       sniffer_processes = filter processes where (
         exe = "tshark.exe" OR
@@ -35,13 +36,13 @@ implementations:
     type: Pseudocode
   - name: Splunk Search - common network traffic sniffing apps being run
     description: look for common network traffic sniffing apps being run
-    code: |- 
+    code: |
       (index=__your_sysmon_index__ EventCode=1) (Image="*tshark.exe" OR Image="*windump.exe" OR (Image="*logman.exe" AND ParentImage!="?" AND ParentImage!="C:\\Program Files\\Windows Event Reporting\\Core\\EventReporting.AgentService.exe") OR Image="*tcpdump.exe" OR Image="*wprui.exe" OR Image="*wpr.exe")
     data_model: Sysmon native
     type: Splunk
   - name: LogPoint Search - common network traffic sniffing apps being run
     description: look for common network traffic sniffing apps being run
-    code: |- 
+    code: |
       norm_id=WindowsSysmon event_id=1 (image="*\tshark.exe" OR image="*\windump.exe" OR (image="*\logman.exe" -parent_image="?" -parent_image="C:\Program Files\Windows Event Reporting\Core\EventReporting.AgentService.exe") OR image="*\tcpdump.exe" OR image="*\wprui.exe" OR image="*\wpr.exe")
     data_model: LogPoint native
     type: LogPoint

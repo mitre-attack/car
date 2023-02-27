@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 In Windows, files should never execute out of certain directory locations. Any of these locations may exist for a variety of reasons, and executables may be present in the directory but should not execute. As a result, some defenders make the mistake of ignoring these directories and assuming that a process will never run from one. There are known TTPs that have taken advantage of this fact to go undetected. This fact should inform defenders to monitor these directories more closely, knowing that they should never contain running processes.
 
 Monitors the directories

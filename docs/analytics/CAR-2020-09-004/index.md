@@ -8,9 +8,9 @@ analytic_type: TTP
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Adversaries may search the Windows Registry on compromised systems for insecurely stored credentials for credential access. This can be accomplished using the query functionality of the reg.exe system utility, by looking for keys and values that contain strings such as "password". In addition, adversaries may use toolkits such as [PowerSploit](https://powersploit.readthedocs.io/en/latest/) in order to dump credentials from various applications such as IIS.Accordingly, this analytic looks for invocations of reg.exe in this capacity as well as that of several powersploit modules with similar functionality.
+
 
 
 ### ATT&CK Detections
@@ -47,15 +47,16 @@ This is a pseudocode representation of the below splunk search.
 ```
 processes = search Process:Create
   cred_processes = filter processes where (
-  command_line = "*reg* query HKLM /f password /t REG_SZ /s*" OR 
+  command_line = "*reg* query HKLM /f password /t REG_SZ /s*" OR
   command_line = "reg* query HKCU /f password /t REG_SZ /s" OR
   command_line = "*Get-UnattendedInstallFile*" OR
-  command_line = "*Get-Webconfig*" OR 
-  command_line = "*Get-ApplicationHost*" OR 
-  command_line = "*Get-SiteListPassword*" OR 
-  command_line = "*Get-CachedGPPPassword*" OR 
+  command_line = "*Get-Webconfig*" OR
+  command_line = "*Get-ApplicationHost*" OR
+  command_line = "*Get-SiteListPassword*" OR
+  command_line = "*Get-CachedGPPPassword*" OR
   command_line = "*Get-RegistryAutoLogon*")
 output cred_processes
+
 ```
 
 
@@ -66,7 +67,8 @@ This Splunk search looks for command lines of reg.exe used to search for passwor
 
 
 ```
-((index=__your_sysmon_index__ EventCode=1) OR (index=__your_win_syslog_index__ EventCode=4688)) (CommandLine="*reg* query HKLM /f password /t REG_SZ /s*" OR CommandLine="reg* query HKCU /f password /t REG_SZ /s" OR CommandLine="*Get-UnattendedInstallFile*" OR CommandLine="*Get-Webconfig*" OR CommandLine="*Get-ApplicationHost*" OR CommandLine="*Get-SiteListPassword*" OR CommandLine="*Get-CachedGPPPassword*" OR CommandLine="*Get-RegistryAutoLogon*") 
+((index=__your_sysmon_index__ EventCode=1) OR (index=__your_win_syslog_index__ EventCode=4688)) (CommandLine="*reg* query HKLM /f password /t REG_SZ /s*" OR CommandLine="reg* query HKCU /f password /t REG_SZ /s" OR CommandLine="*Get-UnattendedInstallFile*" OR CommandLine="*Get-Webconfig*" OR CommandLine="*Get-ApplicationHost*" OR CommandLine="*Get-SiteListPassword*" OR CommandLine="*Get-CachedGPPPassword*" OR CommandLine="*Get-RegistryAutoLogon*")
+
 ```
 
 
@@ -78,6 +80,7 @@ This LogPoint search looks for command lines of reg.exe used to search for passw
 
 ```
 norm_id=WindowsSysmon event_id=1 command IN ["*reg* query HKLM /f password /t REG_SZ /s*", "reg* query HKCU /f password /t REG_SZ /s", "*Get-UnattendedInstallFile*", "*Get-Webconfig*", "*Get-ApplicationHost*", "*Get-SiteListPassword*", "*Get-CachedGPPPassword*", "*Get-RegistryAutoLogon*"]
+
 ```
 
 

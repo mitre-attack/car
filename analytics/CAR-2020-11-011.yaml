@@ -1,3 +1,4 @@
+---
 title: Registry Edit from Screensaver
 submission_date: 2020/11/30
 information_domain: Host
@@ -10,7 +11,7 @@ analytic_types:
 contributors:
   - Olaf Hartong
 id: CAR-2020-11-011
-description: |-
+description: |
   Adversaries may use screensaver files to run malicious code. This analytic triggers on suspicious edits to the screensaver registry keys, which dictate which .scr file the screensaver runs.
 coverage:
   - technique: T1546
@@ -23,7 +24,7 @@ coverage:
 implementations:
   - name: Pseudocode - Screensaver
     description: This is a pseudocode representation of the below splunk search.
-    code: |- 
+    code: |
       reg_events = search Registry:add or Registry:edit
       scr_reg_events = filter processes where (
         key="*\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop\\SCRNSAVE.EXE" AND
@@ -32,13 +33,13 @@ implementations:
     type: Pseudocode
   - name: Splunk Search - Screensaver
     description: looks creations of edits of the SCRNSAVE.exe registry key
-    code: |- 
+    code: |
       index=your_sysmon_index (EventCode=12 OR EventCode=13 OR EventCode=14) TargetObject="*\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop\\SCRNSAVE.EXE"
     data_model: Sysmon native
     type: Splunk
   - name: LogPoint Search - Screensaver
     description: looks creations of edits of the SCRNSAVE.exe registry key
-    code: |- 
+    code: |
       norm_id=WindowsSysmon event_id IN [12, 13, 14] target_object="*\Software\Policies\Microsoft\Windows\Control Panel\Desktop\SCRNSAVE.EXE"
     data_model: LogPoint native
     type: LogPoint

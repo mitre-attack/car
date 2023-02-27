@@ -8,13 +8,13 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
-
-There are several ways to cause code to [execute](https://attack.mitre.org/tactics/TA0002) on a remote host. One of the most common methods is via the Windows [Service Control Manager](https://en.wikipedia.org/wiki/Service_Control_Manager) (SCM), which allows authorized users to remotely create and modify services. Several tools, such as [PsExec](https://attack.mitre.org/software/S0029), use this functionality. 
+<br><br>
+There are several ways to cause code to [execute](https://attack.mitre.org/tactics/TA0002) on a remote host. One of the most common methods is via the Windows [Service Control Manager](https://en.wikipedia.org/wiki/Service_Control_Manager) (SCM), which allows authorized users to remotely create and modify services. Several tools, such as [PsExec](https://attack.mitre.org/software/S0029), use this functionality.
 
 When a client remotely communicates with the Service Control Manager, there are two observable behaviors. First, the client connects to the [RPC Endpoint Mapper](../CAR-2014-05-001) over 135/tcp. This handles authentication, and tells the client what port the endpoint—in this case the SCM—is listening on. Then, the client connects directly to the listening port on `services.exe`. If the request is to start an existing service with a known command line, the the SCM process will run the corresponding command.
 
 This compound behavior can be detected by looking for `services.exe` receiving a network connection and immediately spawning a child process.
+
 
 
 ### ATT&CK Detections
@@ -60,6 +60,7 @@ remote_start = join (flow, service ) where (
  (flow.time < service.time < flow.time + 1 second)
 )
 output remote_start
+
 ```
 
 

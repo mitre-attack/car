@@ -14,12 +14,28 @@ osquery exposes an operating system as a high-performance relational database. T
 
 ## Data Model Coverage
 
+### [process](../data_model/process)
+
+| | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `create` |  | |✓|✓|✓|✓| | | |✓| |✓| | | | |✓|✓|✓|✓| | | | | | | |✓| |
+| `terminate` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+
 ### [driver](../data_model/driver)
 
 | | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` |
 |---|---|---|---|---|---|---|---|---|---|---|
 | `load` |  | | |✓|✓|✓| |✓|✓| | |
 | `unload` |  | | | | | | | | | | |
+
+### [flow](../data_model/flow)
+
+| | `application_protocol` | `content` | `dest_fqdn` | `dest_hostname` | `dest_ip` | `dest_port` | `end_time` | `exe` | `fqdn` | `hostname` | `image_path` | `in_bytes` | `network_direction` | `out_bytes` | `packet_count` | `pid` | `ppid` | `proto_info` | `src_fqdn` | `src_hostname` | `src_ip` | `src_port` | `start_time` | `tcp_flags` | `transport_protocol` | `uid` | `user` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `end` |  | | | |✓|✓| | | | |✓| | | | |✓| | | | |✓|✓|✓| | | |✓|
+| `message` |  | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `start` |  | | | |✓|✓| | | | |✓| | | | |✓| | | | |✓|✓|✓| | | |✓|
 
 ### [file](../data_model/file)
 
@@ -32,22 +48,6 @@ osquery exposes an operating system as a high-performance relational database. T
 | `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `timestomp` |  | |✓| |✓|✓| | | | |✓| |✓| |✓| | |✓|✓| |✓|✓| | | |✓|
 | `write` |  | |✓| |✓|✓| | | | |✓| |✓| |✓| | |✓|✓| |✓|✓| | | |✓|
-
-### [flow](../data_model/flow)
-
-| | `application_protocol` | `content` | `dest_fqdn` | `dest_hostname` | `dest_ip` | `dest_port` | `end_time` | `exe` | `fqdn` | `hostname` | `image_path` | `in_bytes` | `network_direction` | `out_bytes` | `packet_count` | `pid` | `ppid` | `proto_info` | `src_fqdn` | `src_hostname` | `src_ip` | `src_port` | `start_time` | `tcp_flags` | `transport_protocol` | `uid` | `user` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `end` |  | | | |✓|✓| | | | |✓| | | | |✓| | | | |✓|✓|✓| | | |✓|
-| `message` |  | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `start` |  | | | |✓|✓| | | | |✓| | | | |✓| | | | |✓|✓|✓| | | |✓|
-
-### [process](../data_model/process)
-
-| | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓|✓|✓|✓| | | |✓| |✓| | | | |✓|✓|✓|✓| | | | | | | |✓| |
-| `terminate` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 
 
 
@@ -81,13 +81,13 @@ osquery exposes an operating system as a high-performance relational database. T
  - [CAR-2014-12-001: Remotely Launched Executables via WMI](../analytics/CAR-2014-12-001)
  - [CAR-2016-03-001: Host Discovery Commands](../analytics/CAR-2016-03-001)
  - [CAR-2016-03-002: Create Remote Process via WMIC](../analytics/CAR-2016-03-002)
+ - [CAR-2016-04-002: User Activity from Clearing Event Logs](../analytics/CAR-2016-04-002)
  - [CAR-2019-04-001: UAC Bypass](../analytics/CAR-2019-04-001)
  - [CAR-2019-04-002: Generic Regsvr32](../analytics/CAR-2019-04-002)
  - [CAR-2019-04-003: Squiblydoo](../analytics/CAR-2019-04-003)
  - [CAR-2019-07-002: Lsass Process Dump via Procdump](../analytics/CAR-2019-07-002)
  - [CAR-2019-08-001: Credential Dumping via Windows Task Manager](../analytics/CAR-2019-08-001)
  - [CAR-2019-08-002: Active Directory Dumping via NTDSUtil](../analytics/CAR-2019-08-002)
- - [CAR-2020-04-001: Shadow Copy Deletion](../analytics/CAR-2020-04-001)
  - [CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities](../analytics/CAR-2020-08-001)
  - [CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS](../analytics/CAR-2020-08-002)
  - [CAR-2020-09-001: Scheduled Task - FileAccess](../analytics/CAR-2020-09-001)
@@ -113,7 +113,7 @@ osquery exposes an operating system as a high-performance relational database. T
  - [CAR-2021-01-006: Unusual Child Process spawned using DDE exploit](../analytics/CAR-2021-01-006)
  - [CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt](../analytics/CAR-2021-01-007)
  - [CAR-2021-01-008: Disable UAC](../analytics/CAR-2021-01-008)
- - [CAR-2021-01-009: Detecting Shadow Copy Deletion via Vssadmin.exe](../analytics/CAR-2021-01-009)
+ - [CAR-2021-01-009: Detecting Shadow Copy Deletion or Resize](../analytics/CAR-2021-01-009)
  - [CAR-2021-02-001: Webshell-Indicative Process Tree](../analytics/CAR-2021-02-001)
  - [CAR-2021-02-002: Get System Elevation](../analytics/CAR-2021-02-002)
  - [CAR-2021-04-001: Common Windows Process Masquerading](../analytics/CAR-2021-04-001)
@@ -127,4 +127,9 @@ osquery exposes an operating system as a high-performance relational database. T
  - [CAR-2021-05-008: Certutil exe certificate extraction](../analytics/CAR-2021-05-008)
  - [CAR-2021-05-009: CertUtil With Decode Argument](../analytics/CAR-2021-05-009)
  - [CAR-2021-05-010: Create local admin accounts using net exe](../analytics/CAR-2021-05-010)
+ - [CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0](../analytics/CAR-2021-11-001)
+ - [CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify](../analytics/CAR-2021-11-002)
+ - [CAR-2021-12-001: Scheduled Task Creation or Modification Containing Suspicious Scripts, Extensions or User Writable Paths](../analytics/CAR-2021-12-001)
+ - [CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'](../analytics/CAR-2021-12-002)
+ - [CAR-2022-03-001: Disable Windows Event Logging](../analytics/CAR-2022-03-001)
  - [N/A](../analytics/N/A)

@@ -8,9 +8,9 @@ analytic_type: TTP
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Trusted developer utilities such as MSBuild may be leveraged to run malicious code with elevated privileges. This analytic looks for any instances of msbuild.exe, which will execute any C# code placed within a given XML document; and msxsl.exe, which processes xsl transformation specifications for XML files and will execute a variaty of scripting languages contained within the XSL file. Both of these executables are rarely used outside of Visual Studio.
+
 
 
 ### ATT&CK Detections
@@ -51,6 +51,7 @@ target_processes = filter processes where (
   (exe="C:\Program Files (x86)\Microsoft Visual Studio\*\bin\MSBuild.exe" OR exe="C:\Windows\Microsoft.NET\Framework*\msbuild.exe" OR exe="C:\users\*\appdata\roaming\microsoft\msxsl.exe") AND
   image_path!="*Microsoft Visual Studio*")
 output target_processes
+
 ```
 
 
@@ -62,6 +63,7 @@ Looks for all instances of msbuild.exe or msxsl.exe
 
 ```
 (index=__your_sysmon_index__ EventCode=1) (Image="C:\\Program Files (x86)\\Microsoft Visual Studio\\*\\bin\\MSBuild.exe" OR Image="C:\\Windows\\Microsoft.NET\\Framework*\\msbuild.exe" OR Image="C:\\users\\*\\appdata\\roaming\\microsoft\\msxsl.exe") ParentImage!="*\\Microsoft Visual Studio*")
+
 ```
 
 
@@ -73,6 +75,7 @@ Looks for all instances of msbuild.exe or msxsl.exe
 
 ```
 norm_id=WindowsSysmon event_id=1 (image IN ["C:\Program Files (x86)\Microsoft Visual Studio\*\bin\MSBuild.exe", "C:\Windows\Microsoft.NET\Framework*\msbuild.exe", "C:\Users\*\appdata\roaming\microsoft\msxsl.exe") -parent_image="*\Microsoft Visual Studio*")
+
 ```
 
 

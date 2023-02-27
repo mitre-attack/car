@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: Lucas Heiligenstein
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Detection of the modification of the registry key `Common Startup` located in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\` and `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\`. When a user logs on, any files located in the Startup Folder are launched. Attackers may modify these folders with other files in order to evade detection set on these default folders. This detection focuses on EventIDs 4688 and 1 for process creation and EventID 4657 for the modification of the Registry Keys.
 
 
@@ -52,6 +51,7 @@ logon_reg_processes = filter processes where (command_line CONTAINS("*reg*") AND
 reg_keys = search Registry:value_edit
 logon_reg_keys = filter reg_keys where value="Common Startup"
 output logon_reg_processes, logon_reg_keys
+
 ```
 
 
@@ -63,6 +63,7 @@ This is a Splunk representation of the above pseudocode search.
 
 ```
 (((EventCode="4688" OR EventCode="1") (CommandLine="*reg*" AND CommandLine="*add*" AND CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" AND CommandLine="*-value*") CommandLine="*Common Startup*") OR ((EventCode="4657" ObjectValueName="Common Startup") OR (EventCode="13" TargetObject="*Common Startup")))
+
 ```
 
 
@@ -74,6 +75,7 @@ This is an ElasticSeearech representation of the above pseudocode search.
 
 ```
 ((EventLog:"Security" AND (winlog.event_id:"4688" OR winlog.event_id:"1") AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:*Set\-ItemProperty* AND process.command_line:*\-value*)) AND process.command_line:*Common\ Startup*) OR (winlog.event_id:"4657" AND winlog.event_data.ObjectValueName:"Common\ Startup") OR (winlog.event_id:"13" AND winlog.event_data.TargetObject:"*Common Startup"))
+
 ```
 
 
@@ -85,6 +87,7 @@ This is a LogPoint representation of the above pseudocode search.
 
 ```
 ((EventLog="Security" (event_id="4688" OR event_id="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine="*Common Startup*") OR (event_id="4657" ObjectValueName="Common Startup") OR (event_id="13" TargetObject="*Common Startup"))
+
 ```
 
 

@@ -8,9 +8,9 @@ analytic_type: Situational Awareness
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Adversaries may use a variety of tools to gain visibility on the current status of things on the network: which processes are listening on which ports, which services are running on other hosts, etc. This analytic looks for the names of the most common network sniffing tools. While this may be noisy on networks where sysadmins are using any of these tools on a regular basis, in most networks their use is noteworthy.
+
 
 
 ### ATT&CK Detections
@@ -55,6 +55,7 @@ sniffer_processes = filter processes where (
   exe = "wprui.exe" OR
   exe = "wpr.exe" )
 output sniffer_processes
+
 ```
 
 
@@ -66,6 +67,7 @@ look for common network traffic sniffing apps being run
 
 ```
 (index=__your_sysmon_index__ EventCode=1) (Image="*tshark.exe" OR Image="*windump.exe" OR (Image="*logman.exe" AND ParentImage!="?" AND ParentImage!="C:\\Program Files\\Windows Event Reporting\\Core\\EventReporting.AgentService.exe") OR Image="*tcpdump.exe" OR Image="*wprui.exe" OR Image="*wpr.exe")
+
 ```
 
 
@@ -77,6 +79,7 @@ look for common network traffic sniffing apps being run
 
 ```
 norm_id=WindowsSysmon event_id=1 (image="*\tshark.exe" OR image="*\windump.exe" OR (image="*\logman.exe" -parent_image="?" -parent_image="C:\Program Files\Windows Event Reporting\Core\EventReporting.AgentService.exe") OR image="*\tcpdump.exe" OR image="*\wprui.exe" OR image="*\wpr.exe")
+
 ```
 
 

@@ -8,8 +8,7 @@ analytic_type: Situational Awareness
 contributors: MITRE/NSA
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 The successful use of [Pass The Hash](https://attack.mitre.org/techniques/T1550/002/) for lateral movement between workstations would trigger event ID 4624, with an event level of Information, from the security log. This behavior would be a LogonType of 3 using NTLM authentication where it is not a domain logon and not the ANONYMOUS LOGON account.
 
 
@@ -34,12 +33,13 @@ The successful use of [Pass The Hash](https://attack.mitre.org/techniques/T1550/
 
 #### Pseudocode
 
-This analytic will look for remote logins, using a non domain login, from one host to another, using NTL authentication where the account is not "ANONYMOUS LOGON" 
+This analytic will look for remote logins, using a non domain login, from one host to another, using NTL authentication where the account is not "ANONYMOUS LOGON".
 
 
 ```
 EventCode == 4624 and [target_user_name] != "ANONYMOUS LOGON" and
 [authentication_package_name] == "NTLM"
+
 ```
 
 

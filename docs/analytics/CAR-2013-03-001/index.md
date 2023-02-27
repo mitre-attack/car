@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Registry modifications are often essential in establishing persistence via known Windows mechanisms. Many legitimate modifications are done graphically via `regedit.exe` or by using the corresponding channels, or even calling the Registry APIs directly. The built-in utility `reg.exe` provides a [command-line interface](https://en.wikipedia.org/wiki/Command-line_interface) to the registry, so that queries and modifications can be performed from a shell, such as `cmd.exe`. When a user is responsible for these actions, the parent of `cmd.exe` will likely be `explorer.exe`. Occasionally, power users and administrators write scripts that do this behavior as well, but likely from a different process tree. These background scripts must be learned so they can be tuned out accordingly.
 
 ### Output Description
@@ -20,6 +19,7 @@ The sequence of processes that resulted in `reg.exe` being started from a shell.
 -   `grand_parent.exe`
 -   `parent.exe`
 -   `reg.exe`
+
 
 
 ### ATT&CK Detections
@@ -66,6 +66,7 @@ reg = filter processes where (exe == "reg.exe" and parent_exe == "cmd.exe")
 cmd = filter processes where (exe == "cmd.exe" and parent_exe != "explorer.exe"")
 reg_and_cmd = join (reg, cmd) where (reg.ppid == cmd.pid and reg.hostname == cmd.hostname)
 output reg_and_cmd
+
 ```
 
 
@@ -78,6 +79,7 @@ DNIF version of the above pseudocode.
 _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*reg\.exe.*)i AND $ParentProcess=regex(.*cmd\.exe.*)i as #A limit 100
 >>_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*cmd\.exe.*)i NOT $ParentProcess=regex(.*explorer\.exe.*)i as #B limit 100
 >>_checkif sjoin #B.$PPID = #A.$CPID str_compare #B.$SystemName eq #A.$SystemName include
+
 ```
 
 

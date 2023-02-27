@@ -1,3 +1,4 @@
+---
 title: Registry Edit with Creation of SafeDllSearchMode Key Set to 0
 submission_date: 2021/11/24
 information_domain: Host
@@ -28,7 +29,7 @@ coverage:
 implementations:
   - name: Creation of SafeDllSearchMode
     description: This detects SafeDllSearchMode creation, either via a new process (command line) or direct registry manipulation.
-    code: |- 
+    code: |
       processes = search Process:create
       safe_dll_search_processes = filter processes where command_line CONTAINS("*SafeDllSearchMode*") AND ((command_line CONTAINS("*reg*") AND command_line CONTAINS("*add*") AND command_line CONTAINS("*/d*")) OR (command_line CONTAINS("*Set-ItemProperty*") AND command_line CONTAINS(*-value*)) OR ((command_line CONTAINS("*00000000*") AND command_line CONTAINS(*0*)))
       reg_keys = search Registry:value_edit
@@ -38,29 +39,29 @@ implementations:
     type: Pseudocode
   - name: Splunk Search - Creation of SafeDllSearchMode
     description: This is a Splunk representation of the above pseudocode.
-    code: |- 
+    code: |
       (source="WinEventLog:*" ((((EventCode="4688" OR EventCode="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) (CommandLine="*00000000*" OR CommandLine="*0*") CommandLine="*SafeDllSearchMode*") OR ((EventCode="4657") ObjectValueName="SafeDllSearchMode" value="0")) OR ((EventCode="13") EventType="SetValue" TargetObject="*SafeDllSearchMode" Details="DWORD (0x00000000)")))
     data_model: Win. Eventlog/Sysmon native
     type: Splunk
   - name: Elastic Search - Creation of SafeDllSearchMode
     description: This is an Elastic representation of the above pseudocode.
-    code: |- 
+    code: |
       (((EventCode:("4688" OR "1") AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:*Set\-ItemProperty* AND process.command_line:*\-value*)) AND process.command_line:(*00000000* OR *0*) AND process.command_line:*SafeDllSearchMode*) OR (EventCode:"4657" AND winlog.event_data.ObjectValueName:"SafeDllSearchMode" AND value:"0")) OR (EventCode:"13" AND winlog.event_data.EventType:"SetValue" AND winlog.event_data.TargetObject:*SafeDllSearchMode AND winlog.event_data.Details:"DWORD\ \(0x00000000\)"))
     data_model: Win. Eventlog/Sysmon native
     type: Elastic
   - name: LogPoint Search - Creation of SafeDllSearchMode
     description: This is a LogPoint representation of the above pseudocode.
-    code: |- 
+    code: |
       (((EventCode IN ["4688", "1"] ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine IN ["*00000000*", "*0*"] CommandLine="*SafeDllSearchMode*") OR (EventCode IN "4657" ObjectValueName="SafeDllSearchMode" value="0")) OR (EventCode IN "13" EventType="SetValue" TargetObject="*SafeDllSearchMode" Details="DWORD (0x00000000)"))
     data_model: Win. Eventlog/Sysmon native
     type: LogPoint
 unit_tests:
   - description: Execute command with cmd
     commands:
-    - reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager" /v SafeDllSearchMode /d 0
+      - reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager" /v SafeDllSearchMode /d 0
   - description: Execute command with powershell
     commands:
-    - Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Session Manager" -Name SafeDllSearchMode -Value 0
+      - Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Session Manager" -Name SafeDllSearchMode -Value 0
 data_model_references:
   - process/create/command_line
   - registry/add/key
