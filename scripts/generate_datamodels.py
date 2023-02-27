@@ -56,12 +56,18 @@ def generate_index(datamodels, jinja_env):
     with open('../docs/data_model/index.md', 'w', encoding='utf-8') as f:
         f.write(index_template.render(datamodels=datamodels))
 
+def generate_index_with_sensors(datamodels, jinja_env):
+    index_template = jinja_env.get_template('datamodel_index_with_sensors_template.md')
+    with open('../docs/data_model/data_model_with_sensors.md', 'w', encoding='utf-8') as f:
+        f.write(index_template.render(datamodels=datamodels))
+
 def main():
     datamodels = parse_yaml()
     replace_sensor_names_with_html(datamodels, cached_load_sensor())
     jinja_env = create_jinja_environment()
     generate_markdown(datamodels, jinja_env)
     generate_index(datamodels, jinja_env)
+    generate_index_with_sensors(datamodels, jinja_env)
 
 if __name__ == "__main__":
     main()
