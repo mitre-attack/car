@@ -56,3 +56,16 @@ fields:
   - name: uid
     description: The ID of SID of the user who directly or indirectly acted on the thread
     example: S-1-5-18
+coverage_map:
+  remote_create:
+    hostname: ["sysmon_13"]
+    src_pid: ["sysmon_13"]
+    src_tid: ["sysmon_13"]
+    start_address: ["sysmon_13"]
+    start_function: ["sysmon_13"]
+    start_module: ["sysmon_13"]
+    start_module_name: ["sysmon_13"]
+    tgt_pid: ["sysmon_13"]
+    tgt_tid: ["sysmon_13"]
+    uid: ["sysmon_13"]
+    user: ["sysmon_13"]

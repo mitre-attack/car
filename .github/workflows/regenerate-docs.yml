@@ -16,6 +16,9 @@ jobs:
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
+      - name: Clean /docs/data_model
+        shell: bash
+        run: rm -rfv ./docs/data_model
       - name: Clean /docs/analytics
         shell: bash
         run: rm -rfv ./docs/analytics
@@ -29,6 +32,9 @@ jobs:
           cache: 'pip'
       - name: Install script dependencies
         run: pip install -r ./scripts/requirements.txt
+      - name: Regenerate datamodels
+        working-directory: ./scripts
+        run: python generate_datamodels.py
       - name: Regenerate analytics
         working-directory: ./scripts
         run: python generate_analytics.py

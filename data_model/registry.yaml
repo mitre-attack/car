@@ -44,3 +44,43 @@ fields:
   - name: new_content
     description: The data within the new value, or the new name of a key, after an edit event.
     example: \%SystemRoot%\system32\svchost.exe, HKLM\SYSTEM\CurrentControlSet\services\RpcSs
+coverage_map:
+  add:
+    data: ["autoruns_13.98", "sysmon_13"]
+    fqdn: ["sysmon_13"]
+    hostname: ["autoruns_13.98"]
+    hive: ["autoruns_13.98", "sysmon_13"]
+    key: ["autoruns_13.98", "sysmon_13"]
+    image_path: ["sysmon_13"]
+    pid: ["sysmon_13"]
+    type: ["autoruns_13.98"]
+    user: ["sysmon_13"]
+    value: ["autoruns_13.98"]
+  key_edit:
+    data: ["autoruns_13.98", "sysmon_13"]
+    fqdn: ["sysmon_13"]
+    hostname: ["autoruns_13.98"]
+    hive: ["autoruns_13.98", "sysmon_13"]
+    key: ["autoruns_13.98", "sysmon_13"]
+    image_path: ["sysmon_13"]
+    new_content: ["autoruns_13.98", "sysmon_13"]
+    pid: ["sysmon_13"]
+    type: ["autoruns_13.98"]
+    user: ["sysmon_13"]
+    value: ["autoruns_13.98", "sysmon_13"]
+  remove:
+    data: ["sysmon_13"]
+    fqdn: ["sysmon_13"]
+    hive: ["sysmon_13"]
+    key: ["sysmon_13"]
+    image_path: ["sysmon_13"]
+    pid: ["sysmon_13"]
+    user: ["sysmon_13"]
+  value_edit:
+    data: ["autoruns_13.98"]
+    hostname: ["autoruns_13.98"]
+    hive: ["autoruns_13.98"]
+    key: ["autoruns_13.98"]
+    new_content: ["autoruns_13.98"]
+    type: ["autoruns_13.98"]
+    value: ["autoruns_13.98"]
