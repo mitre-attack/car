@@ -8,8 +8,7 @@ analytic_type: Situational Awareness
 contributors: MITRE
 applicable_platforms: Windows, Linux, macOS
 ---
-
-
+<br><br>
 An SMB write can be an indicator of lateral movement, especially when combined with other information such as execution of that written file. Named pipes are a subset of SMB write requests. Named pipes such as msftewds may not be alarming; however others, such as lsarpc, may.
 
 Monitoring SMB write requests still creates some noise, particulary with named pipes. As a result, SMB is now split between writing named pipes and writing other files.

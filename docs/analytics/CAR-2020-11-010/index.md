@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: Olaf Hartong, MITRE
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 CMSTP.exe is the Microsoft Connection Manager Profile Installer, which can be leveraged to setup listeners that will receive and install malware from remote sources in trusted fashion.
 When CMSTP.exe is seen in combination with an external connection, it is a good indication of this TTP.
 
@@ -18,7 +17,7 @@ When CMSTP.exe is seen in combination with an external connection, it is a good 
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Signed Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|[CMSTP](https://attack.mitre.org/techniques/T1218/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|High|
+|[System Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|[CMSTP](https://attack.mitre.org/techniques/T1218/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|High|
 
 
 ### D3FEND Techniques

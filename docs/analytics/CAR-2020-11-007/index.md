@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Adversaries may use network shares to exfliltrate date; they will then remove the shares to cover their tracks. This analytic looks for the removal of network shares via commandline, which is otherwise a rare event.
 
 
@@ -17,7 +16,7 @@ Adversaries may use network shares to exfliltrate date; they will then remove th
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Indicator Removal on Host](https://attack.mitre.org/techniques/T1070/)|[Network Share Connection Removal](https://attack.mitre.org/techniques/T1070/005/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|High|
+|[Indicator Removal](https://attack.mitre.org/techniques/T1070/)|[Network Share Connection Removal](https://attack.mitre.org/techniques/T1070/005/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|High|
 
 
 ### D3FEND Techniques

@@ -8,8 +8,7 @@ analytic_type: Detection
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 New executables that are started as a service are suspicious. This analytic looks for anomalous service executables.
 
 

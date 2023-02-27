@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: Lucas Heiligenstein
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Adversaries may disable Windows event logging to limit data that can be leveraged for detections and audits. Windows event logs record user and system activity such as login attempts, process creation, and much more. This data is used by security tools and analysts to generate detections. There are different ways to perform this attack.
 1. The first one is to create the Registry Key `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\MiniNt`. This action will not generate Security EventLog 4657 or Sysmon EventLog 13 because the value of the key remains empty. However, if an attacker uses powershell to perform this attack (and not cmd), a Security EventLog 4663 will be generated (but 4663 generates a lot of noise).
 2. The second way is to disable the service EventLog (display name Windows Event Log). After disabed, attacker must reboot the system. The action of disabling or put in manual the service will modify the Registry Key value `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\start`, therefore Security EventLog 4657 or Sysmon EventLog 13 will be generated on the system.

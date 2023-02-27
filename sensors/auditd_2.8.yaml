@@ -3,7 +3,8 @@ sensor_name: auditd
 sensor_version: 2.8
 sensor_developer: Red Hat
 sensor_url: 'https://people.redhat.com/sgrubb/audit/'
-sensor_description: 'auditd is the userspace component to the Linux Auditing System. It's responsible for writing audit records to the disk'
+sensor_description: |
+  auditd is the userspace component to the Linux Auditing System. It's responsible for writing audit records to the disk
 mappings:
   - object: file
     action: create

@@ -14,18 +14,6 @@ Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Wi
 
 ## Data Model Coverage
 
-### [file](../data_model/file)
-
-| | `company` | `content` | `creation_time` | `extension` | `file_name` | `file_path` | `fqdn` | `gid` | `group` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `owner` | `owner_uid` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `acl_modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` | ✓| |✓| |✓|✓|✓| | |✓|✓| |✓| | | | | | | |✓|✓| |✓| | |
-| `delete` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `modify` | ✓| |✓| |✓|✓|✓| | |✓|✓| |✓| | | | | | | |✓|✓| |✓| | |
-| `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `timestomp` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-
 ### [registry](../data_model/registry)
 
 | | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
@@ -45,6 +33,18 @@ Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Wi
 | `start` |  | | | | | | | | | |
 | `stop` |  | | | | | | | | | |
 
+### [file](../data_model/file)
+
+| | `company` | `content` | `creation_time` | `extension` | `file_name` | `file_path` | `fqdn` | `gid` | `group` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `owner` | `owner_uid` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `acl_modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `create` | ✓| |✓| |✓|✓|✓| | |✓|✓| |✓| | | | | | | |✓|✓| |✓| | |
+| `delete` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `modify` | ✓| |✓| |✓|✓|✓| | |✓|✓| |✓| | | | | | | |✓|✓| |✓| | |
+| `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `timestomp` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+
 
 
 
@@ -62,3 +62,7 @@ Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Wi
  - [CAR-2021-02-002: Get System Elevation](../analytics/CAR-2021-02-002)
  - [CAR-2021-05-002: Batch File Write to System32](../analytics/CAR-2021-05-002)
  - [CAR-2021-05-012: Create Service In Suspicious File Path](../analytics/CAR-2021-05-012)
+ - [CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0](../analytics/CAR-2021-11-001)
+ - [CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify](../analytics/CAR-2021-11-002)
+ - [CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'](../analytics/CAR-2021-12-002)
+ - [CAR-2022-03-001: Disable Windows Event Logging](../analytics/CAR-2022-03-001)
