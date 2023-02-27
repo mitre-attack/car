@@ -15,13 +15,17 @@ auditd is the userspace component to the Linux Auditing System. It's responsible
 
 ## Data Model Coverage
 
-### [process](../data_model/process)
+### [file](../data_model/file)
 
-| | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓|✓| |✓| | | |✓| |✓| | | | |✓|✓|✓|✓| | | | | | | | |✓|
-| `terminate` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| | `company` | `content` | `creation_time` | `extension` | `file_name` | `file_path` | `fqdn` | `gid` | `group` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `owner` | `owner_uid` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `acl_modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `create` |  | |✓| |✓|✓| | | | |✓| |✓| | | | |✓|✓| |✓|✓| | | |✓|
+| `delete` |  | |✓| |✓|✓| | | | |✓| |✓| | | | |✓|✓| |✓|✓| | | |✓|
+| `modify` |  | |✓| |✓|✓| | | | |✓| |✓| | | | |✓|✓| |✓|✓| | | |✓|
+| `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `timestomp` |  | |✓| |✓|✓| | | | |✓| |✓| | | | |✓|✓| |✓|✓| | | |✓|
+| `write` |  | |✓| |✓|✓| | | | |✓| |✓| | | | |✓|✓| |✓|✓| | | |✓|
 
 ### [driver](../data_model/driver)
 
@@ -38,17 +42,13 @@ auditd is the userspace component to the Linux Auditing System. It's responsible
 | `message` |  | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `start` |  | | | |✓|✓| | | | |✓| | | | |✓| | | | |✓|✓|✓| | | |✓|
 
-### [file](../data_model/file)
+### [process](../data_model/process)
 
-| | `company` | `content` | `creation_time` | `extension` | `file_name` | `file_path` | `fqdn` | `gid` | `group` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `owner` | `owner_uid` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `acl_modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓| |✓|✓| | | | |✓| |✓| | | | |✓|✓| |✓|✓| | | |✓|
-| `delete` |  | |✓| |✓|✓| | | | |✓| |✓| | | | |✓|✓| |✓|✓| | | |✓|
-| `modify` |  | |✓| |✓|✓| | | | |✓| |✓| | | | |✓|✓| |✓|✓| | | |✓|
-| `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `timestomp` |  | |✓| |✓|✓| | | | |✓| |✓| | | | |✓|✓| |✓|✓| | | |✓|
-| `write` |  | |✓| |✓|✓| | | | |✓| |✓| | | | |✓|✓| |✓|✓| | | |✓|
+| | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `create` |  | |✓|✓| |✓| | | |✓| |✓| | | | |✓|✓|✓|✓| | | | | | | | |✓|
+| `terminate` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 
 
 

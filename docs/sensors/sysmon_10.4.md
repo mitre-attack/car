@@ -14,13 +14,14 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 
 ## Data Model Coverage
 
-### [process](../data_model/process)
+### [thread](../data_model/thread)
 
-| | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓|✓| | |✓| | |✓|✓|✓|✓| | |✓|✓|✓|✓|✓| | | | | | | | |✓|
-| `terminate` |  | | | | | |✓| | |✓| | | | | | |✓| | | | | | | | | | | | |
+| | `hostname` | `src_pid` | `src_tid` | `stack_base` | `stack_limit` | `start_address` | `start_function` | `start_module` | `start_module_name` | `tgt_pid` | `tgt_tid` | `uid` | `user` | `user_stack_base` | `user_stack_limit` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
+| `remote_create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
+| `suspend` |  | | | | | | | | | | | | | | |
+| `terminate` |  | | | | | | | | | | | | | | |
 
 ### [registry](../data_model/registry)
 
@@ -30,6 +31,18 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `key_edit` |  | | | | | | | | | | |
 | `remove` |  |✓|✓| |✓|✓| |✓| | |✓|
 | `value_edit` |  | | | | | | | | | | |
+
+### [file](../data_model/file)
+
+| | `company` | `content` | `creation_time` | `extension` | `file_name` | `file_path` | `fqdn` | `gid` | `group` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `owner` | `owner_uid` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `acl_modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `create` |  | |✓| |✓| |✓| | | |✓| | | | | | |✓| | | | | | | | |
+| `delete` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `timestomp` |  | |✓| |✓| |✓| | | |✓| | | | | | |✓| |✓| | | | | | |
+| `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 
 ### [driver](../data_model/driver)
 
@@ -45,15 +58,6 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `load` |  |✓| |✓|✓| |✓|✓|✓|✓| |✓| |
 | `unload` |  | | | | | | | | | | | | |
 
-### [thread](../data_model/thread)
-
-| | `hostname` | `src_pid` | `src_tid` | `stack_base` | `stack_limit` | `start_address` | `start_function` | `start_module` | `start_module_name` | `tgt_pid` | `tgt_tid` | `uid` | `user` | `user_stack_base` | `user_stack_limit` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
-| `remote_create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
-| `suspend` |  | | | | | | | | | | | | | | |
-| `terminate` |  | | | | | | | | | | | | | | |
-
 ### [flow](../data_model/flow)
 
 | | `application_protocol` | `content` | `dest_fqdn` | `dest_hostname` | `dest_ip` | `dest_port` | `end_time` | `exe` | `fqdn` | `hostname` | `image_path` | `in_bytes` | `network_direction` | `out_bytes` | `packet_count` | `pid` | `ppid` | `proto_info` | `src_fqdn` | `src_hostname` | `src_ip` | `src_port` | `start_time` | `tcp_flags` | `transport_protocol` | `uid` | `user` |
@@ -62,17 +66,13 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `message` |  | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `start` |  | | |✓|✓|✓| | | | |✓| | | | |✓| | | |✓|✓|✓|✓| | | |✓|
 
-### [file](../data_model/file)
+### [process](../data_model/process)
 
-| | `company` | `content` | `creation_time` | `extension` | `file_name` | `file_path` | `fqdn` | `gid` | `group` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `owner` | `owner_uid` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `acl_modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓| |✓| |✓| | | |✓| | | | | | |✓| | | | | | | | |
-| `delete` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `timestomp` |  | |✓| |✓| |✓| | | |✓| | | | | | |✓| |✓| | | | | | |
-| `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `create` |  | |✓|✓| | |✓| | |✓|✓|✓|✓| | |✓|✓|✓|✓|✓| | | | | | | | |✓|
+| `terminate` |  | | | | | |✓| | |✓| | | | | | |✓| | | | | | | | | | | | |
 
 
 
