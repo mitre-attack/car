@@ -79,7 +79,7 @@ fields:
     example: "{f81d4fae-7dec-11d0-a765-00a0c91e6bf6}"
   - name: signature_valid
     description: Boolean indicator of whether signature is current and not revoked.
-    example: True
+    example: true
   - name: target_guid
     description: Global Unique Identifier for the target process (only for process access events).
   - name: target_pid

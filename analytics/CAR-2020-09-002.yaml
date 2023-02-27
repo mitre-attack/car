@@ -4,45 +4,45 @@ submission_date: 2020/09/10
 information_domain: 'Host'
 platforms:
   - Windows
-subtypes: 
+subtypes:
   - Registry
 analytic_types:
   - Situational Awareness
 contributors:
   - Olaf Hartong
 id: CAR-2020-09-002
-description: |-
-  Adversaries may establish persistence or escalate privileges by executing malicious content triggered by hijacked references to Component Object Model (COM) objects. This is typically done by replacing COM object registry entries under the HKEY_CURRENT_USER\Software\Classes\CLSID or HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID keys. Accordingly, this analytic looks for any changes under these keys. 
+description: |
+  Adversaries may establish persistence or escalate privileges by executing malicious content triggered by hijacked references to Component Object Model (COM) objects. This is typically done by replacing COM object registry entries under the HKEY_CURRENT_USER\Software\Classes\CLSID or HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID keys. Accordingly, this analytic looks for any changes under these keys.
 coverage:
-  - technique: T1546 
+  - technique: T1546
     coverage: Moderate
-    subtechniques: 
+    subtechniques:
       - T1546.015
-    tactics: 
+    tactics:
       - TA0003
       - TA0004
 implementations:
-- name: Pseudocode - COM object registry entry modification
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-    registry_keys = search (Registry:Create AND Registry:Remove AND Registry:Edit) 
-    clsid_keys = filter registry_keys where (
-      key = "*\Software\Classes\CLSID\*")
-    output clsid_keys
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk search - COM object registry entry modification
-  description: This Splunk search looks for any registry keys that were created, deleted, or renamed, as well as any registry values that were set or renamed under the Windows COM Object registry key. 
-  code: |- 
-    index=__your_sysmon_index__ (EventCode=12 OR EventCode=13 OR EventCode=14) TargetObject="*\\Software\\Classes\\CLSID\\*"
-  data_model: Sysmon native
-  type: Splunk
-- name: LogPoint search - COM object registry entry modification
-  description: This LogPoint search looks for any registry keys that were created, deleted, or renamed, as well as any registry values that were set or renamed under the Windows COM Object registry key.
-  code: |- 
-    norm_id=WindowsSysmon event_id IN [12, 13, 14] target_object="*\Software\Classes\CLSID\*"
-  data_model: LogPoint native
-  type: LogPoint
+  - name: Pseudocode - COM object registry entry modification
+    description: This is a pseudocode representation of the below splunk search.
+    code: |
+      registry_keys = search (Registry:Create AND Registry:Remove AND Registry:Edit)
+      clsid_keys = filter registry_keys where (
+        key = "*\Software\Classes\CLSID\*")
+      output clsid_keys
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk search - COM object registry entry modification
+    description: This Splunk search looks for any registry keys that were created, deleted, or renamed, as well as any registry values that were set or renamed under the Windows COM Object registry key.
+    code: |
+      index=__your_sysmon_index__ (EventCode=12 OR EventCode=13 OR EventCode=14) TargetObject="*\\Software\\Classes\\CLSID\\*"
+    data_model: Sysmon native
+    type: Splunk
+  - name: LogPoint search - COM object registry entry modification
+    description: This LogPoint search looks for any registry keys that were created, deleted, or renamed, as well as any registry values that were set or renamed under the Windows COM Object registry key.
+    code: |
+      norm_id=WindowsSysmon event_id IN [12, 13, 14] target_object="*\Software\Classes\CLSID\*"
+    data_model: LogPoint native
+    type: LogPoint
 data_model_references:
   - registry/add/key
   - registry/remove/key

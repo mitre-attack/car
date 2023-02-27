@@ -14,7 +14,7 @@ fields:
   - name: hostname
     description: hostname on which the request was seen.
     example: HOST1
-  - name:  request_body_bytes
+  - name: request_body_bytes
     description: Integer value corresponding to the total number of bytes in the request.
     example: 180
   - name: http_version
@@ -60,21 +60,3 @@ fields:
   - name: user_agent_version
     description: User Agent Version. Note that some User Agent strings may not label versions in the same way.
     example: 4.0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,59 +1,59 @@
+---
 title: Certutil exe certificate extraction
 submission_date: 2021/05/11
 information_domain: Analytic
 platforms:
-- Windows
+  - Windows
 subtypes:
-- Process
+  - Process
 analytic_types:
-- TTP
+  - TTP
 contributors:
-- Splunk Threat Research <research@splunk.com>
+  - Splunk Threat Research <research@splunk.com>
 id: CAR-2021-05-008
 description: This search looks for arguments to certutil.exe indicating the manipulation
   or extraction of Certificate. This certificate can then be used to sign new authentication
   tokens specially inside Federated environments such as Windows ADFS.
 coverage:
-- technique: T1606
-  subtechniques:
-  - T1606.002
-  tactics:
-  - TA0006
-  coverage: Moderate
+  - technique: T1606
+    subtechniques:
+      - T1606.002
+    tactics:
+      - TA0006
+    coverage: Moderate
 implementations:
-- name: Pseudocode – CertUtil certificate extraction
-  description: Pseudocode implementation of the Splunk search below
-  code: |- 
-      processes = search Process:Create
-      certutil_downloads = filter processes where (
-        exe =”C:\Windows\System32\certutil.exe” AND command_line = * -exportPFX * )
-      output certutil_downloads
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk code
-  description: Splunk implementation 
-  code: '| tstats count min(_time) as firstTime values(Processes.process) as process
-    max(_time) as lastTime from datamodel=Endpoint.Processes where Processes.process_name=certutil.exe
-    Processes.process = "* -exportPFX *" by Processes.parent_process Processes.process_name
-    Processes.process Processes.user'
-  type: Splunk
-  data_model: Endpoint
+  - name: Pseudocode – CertUtil certificate extraction
+    description: Pseudocode implementation of the Splunk search below
+    code: |
+        processes = search Process:Create
+        certutil_downloads = filter processes where (
+          exe =”C:\Windows\System32\certutil.exe” AND command_line = * -exportPFX * )
+        output certutil_downloads
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk code
+    description: Splunk implementation
+    code: '| tstats count min(_time) as firstTime values(Processes.process) as process
+      max(_time) as lastTime from datamodel=Endpoint.Processes where Processes.process_name=certutil.exe
+      Processes.process = "* -exportPFX *" by Processes.parent_process Processes.process_name
+      Processes.process Processes.user'
+    type: Splunk
+    data_model: Endpoint
 unit_tests:
-- configurations:
-  - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
-  description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/suspicious_behaviour/certutil_exe_certificate_extraction/windows-sysmon.log)  using
-    the Splunk attack range with the commands below
-  commands:
-  - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
-- configurations:
-  - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
-  description: execute the atomic test [T1606.002](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1606.002)
-    against a Windows target.
-  commands:
-  - Invoke-AtomicTest T1606.002
+  - configurations:
+      - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
+    description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/suspicious_behaviour/certutil_exe_certificate_extraction/windows-sysmon.log) using
+      the Splunk attack range with the commands below
+    commands:
+      - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
+  - configurations:
+      - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
+    description: Execute the atomic test [T1606.002](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1606.002) against a Windows target.
+    commands:
+      - Invoke-AtomicTest T1606.002
 data_model_references:
-- process/create/exe
-- process/create/command_line
+  - process/create/exe
+  - process/create/command_line
 d3fend_mappings:
   - iri: d3f:ProcessSpawnAnalysis
     id: D3-PSA

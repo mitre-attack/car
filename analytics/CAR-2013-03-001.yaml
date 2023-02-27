@@ -1,3 +1,4 @@
+---
 title: Reg.exe called from Command Shell
 submission_date: 2013/03/28
 information_domain: Host
@@ -10,7 +11,7 @@ analytic_types:
 contributors:
   - MITRE
 id: CAR-2013-03-001
-description: |-
+description: |
   Registry modifications are often essential in establishing persistence via known Windows mechanisms. Many legitimate modifications are done graphically via `regedit.exe` or by using the corresponding channels, or even calling the Registry APIs directly. The built-in utility `reg.exe` provides a [command-line interface](https://en.wikipedia.org/wiki/Command-line_interface) to the registry, so that queries and modifications can be performed from a shell, such as `cmd.exe`. When a user is responsible for these actions, the parent of `cmd.exe` will likely be `explorer.exe`. Occasionally, power users and administrators write scripts that do this behavior as well, but likely from a different process tree. These background scripts must be learned so they can be tuned out accordingly.
 
   ### Output Description
@@ -45,7 +46,7 @@ coverage:
     coverage: Moderate
 implementations:
   - description: 'To gain better context, it may be useful to also get information about the cmd process to know its parent. This may be helpful when tuning the analytic to an environment, if this behavior happens frequently. This may also help to rule out instances of users running '
-    code: |-
+    code: |
       processes = search Process:Create
       reg = filter processes where (exe == "reg.exe" and parent_exe == "cmd.exe")
       cmd = filter processes where (exe == "cmd.exe" and parent_exe != "explorer.exe"")
@@ -53,7 +54,7 @@ implementations:
       output reg_and_cmd
     type: pseudocode
   - description: DNIF version of the above pseudocode.
-    code: |-
+    code: |
       _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*reg\.exe.*)i AND $ParentProcess=regex(.*cmd\.exe.*)i as #A limit 100
       >>_fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $Process=regex(.*cmd\.exe.*)i NOT $ParentProcess=regex(.*explorer\.exe.*)i as #B limit 100
       >>_checkif sjoin #B.$PPID = #A.$CPID str_compare #B.$SystemName eq #A.$SystemName include

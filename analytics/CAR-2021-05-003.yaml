@@ -1,59 +1,60 @@
+---
 title: BCDEdit Failure Recovery Modification
 submission_date: 2021/05/11
 information_domain: Analytic
 platforms:
-- Windows
+  - Windows
 subtypes:
-- Process
+  - Process
 analytic_types:
-- TTP
+  - TTP
 contributors:
-- Splunk Threat Research <research@splunk.com>
+  - Splunk Threat Research <research@splunk.com>
 id: CAR-2021-05-003
 description: This search looks for flags passed to bcdedit.exe modifications to the
   built-in Windows error recovery boot configurations. This is typically used by ransomware
   to prevent recovery.
 coverage:
-- technique: T1490
-  tactics:
-  - TA0040
-  coverage: Moderate
+  - technique: T1490
+    tactics:
+      - TA0040
+    coverage: Moderate
 implementations:
-- name: Pseudocode – detect attempts to add a certificate to a certificate store
-  description: Pseudocode implementation of the splunk search below
-  code: |- 
-      processes = search Process:Create
-      bcdedit_commands = filter processes where (
-        exe = "C:\Windows\System32\bcdedit.exe" AND command_line="*recoveryenabled*" )
-      output bcedit_commands
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk code
-  description: You must be ingesting endpoint data that tracks process activity, including
-    parent-child relationships from your endpoints to populate the Endpoint data model
-    in the Processes node. Tune based on parent process names.
-  code: '| tstats count min(_time) as firstTime max(_time) as lastTime from datamodel=Endpoint.Processes
-    where Processes.process_name = bcdedit.exe Processes.process="*recoveryenabled*"
-    (Processes.process="* no*") by Processes.process_name Processes.process Processes.parent_process_name
-    Processes.dest Processes.user'
-  type: Splunk
-  data_model: Endpoint
+  - name: Pseudocode – detect attempts to add a certificate to a certificate store
+    description: Pseudocode implementation of the splunk search below
+    code: |
+        processes = search Process:Create
+        bcdedit_commands = filter processes where (
+          exe = "C:\Windows\System32\bcdedit.exe" AND command_line="*recoveryenabled*" )
+        output bcedit_commands
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk code
+    description: You must be ingesting endpoint data that tracks process activity, including
+      parent-child relationships from your endpoints to populate the Endpoint data model
+      in the Processes node. Tune based on parent process names.
+    code: '| tstats count min(_time) as firstTime max(_time) as lastTime from datamodel=Endpoint.Processes
+      where Processes.process_name = bcdedit.exe Processes.process="*recoveryenabled*"
+      (Processes.process="* no*") by Processes.process_name Processes.process Processes.parent_process_name
+      Processes.dest Processes.user'
+    type: Splunk
+    data_model: Endpoint
 unit_tests:
-- configurations:
-  - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
-  description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1490/atomic_red_team/windows-sysmon.log)  using
-    the Splunk attack range with the commands below
-  commands:
-  - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
-- configurations:
-  - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
-  description: execute the atomic test [T1490](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1490)
-    against a Windows target.
-  commands:
-  - Invoke-AtomicTest T1490
+  - configurations:
+      - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
+    description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1490/atomic_red_team/windows-sysmon.log)  using
+      the Splunk attack range with the commands below
+    commands:
+      - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
+  - configurations:
+      - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
+    description: execute the atomic test [T1490](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1490)
+      against a Windows target.
+    commands:
+      - Invoke-AtomicTest T1490
 data_model_references:
-- process/create/exe
-- process/create/command_line
+  - process/create/exe
+  - process/create/command_line
 d3fend_mappings:
   - iri: d3f:ProcessSpawnAnalysis
     id: D3-PSA

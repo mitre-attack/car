@@ -1,0 +1,43 @@
+---
+title: str()
+submission_date: regex('\d{4}/\d{2}/\d{2}', name='year/month/day')
+update_date: regex('\d{4}/\d{2}/\d{2}', name='year/month/day', required=False)
+information_domain: str()
+platforms: list(str(), required=False)
+subtypes: list(str())
+analytic_types: list(str())
+contributors: list(str(), required=False)
+id: str()
+description: str()
+coverage: list(include('coverage_item'), required=False)
+implementations: list(include('implementation'), required=False)
+unit_tests: list(include('unit_test'), required=False)
+true_positives: list(include('true_positive'), required=False)
+data_model_references: list(str(), required=False)
+references: list(str(), required=False)
+d3fend_mappings: list(include('d3fend_mapping'), required=False)
+---
+coverage_item:
+  technique: str()
+  subtechniques: list(str(), required=False)
+  tactics: list(str())
+  coverage: str()
+implementation:
+  name: str(required=False)
+  description: str(required=False)
+  code: str(required=False)
+  data_model: str(required=False)
+  type: str()
+unit_test:
+  configurations: list(str(), required=False)
+  description: subset(str())
+  commands: list(str(), required=False)
+true_positive:
+  source: str()
+  description: str(required=False)
+  event_snippet: str(required=False)
+  full_event: str(required=False)
+d3fend_mapping:
+  iri: str()
+  id: str()
+  label: str()

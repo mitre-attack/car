@@ -1,3 +1,4 @@
+---
 title: DLL Injection with Mavinject
 submission_date: 2020/11/30
 information_domain: Host
@@ -10,7 +11,7 @@ analytic_types:
 contributors:
   - Olaf Hartong
 id: CAR-2020-11-003
-description: |-
+description: |
   Injecting a malicious DLL into a process is a common adversary TTP. Although the ways of doing this are numerous, mavinject.exe is a commonly used tool for doing so because it roles up many of the necessary steps into one, and is available within Windows. Attackers may rename the executable, so we also use the common argument "INJECTRUNNING" as a related signature here. Whitelisting certain applications may be necessary to reduce noise for this analytic.
 coverage:
   - technique: T1055
@@ -23,7 +24,7 @@ coverage:
 implementations:
   - name: Pseudocode - mavinject process and its common argument
     description: This is a pseudocode representation of the below splunk search.
-    code: |- 
+    code: |
       processes = search Process:Create
       mavinject_processes = filter processes where (
         exe = "C:\\Windows\\SysWOW64\\mavinject.exe" OR Image="C:\\Windows\\System32\\mavinject.exe" OR command_line = "*/INJECTRUNNING*"
@@ -32,13 +33,13 @@ implementations:
     type: Pseudocode
   - name: Splunk Search - mavinject
     description: Search for instances of mavinject.exe or mavinject32.exe
-    code: |- 
+    code: |
       (index=__your_sysmon_index__ EventCode=1) (Image="C:\\Windows\\SysWOW64\\mavinject.exe" OR Image="C:\\Windows\\System32\\mavinject.exe" OR CommandLine="*\INJECTRUNNING*")
     data_model: Sysmon native
     type: Splunk
   - name: LogPoint Search - mavinject
     description: Search for instances of mavinject.exe or mavinject32.exe
-    code: |- 
+    code: |
       norm_id=WindowsSysmon event_id=1 (image="C:\Windows\SysWOW64\mavinject.exe" OR image="C:\Windows\System32\mavinject.exe" OR command="*\INJECTRUNNING*")
     data_model: LogPoint native
     type: LogPoint

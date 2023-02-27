@@ -1,14 +1,15 @@
+---
 title: CertUtil With Decode Argument
 submission_date: 2021/05/11
 information_domain: Analytic
 platforms:
-- Windows
+  - Windows
 subtypes:
-- Process
+  - Process
 analytic_types:
-- TTP
+  - TTP
 contributors:
-- Splunk Threat Research <research@splunk.com>
+  - Splunk Threat Research <research@splunk.com>
 id: CAR-2021-05-009
 description: CertUtil.exe may be used to `encode` and `decode` a file, including PE
   and script code. Encoding will convert a file to base64 with `-----BEGIN CERTIFICATE-----`
@@ -19,46 +20,46 @@ description: CertUtil.exe may be used to `encode` and `decode` a file, including
   further execution. During triage, identify the source of the file being decoded.
   Review its contents or execution behavior for further analysis.
 coverage:
-- technique: T1140
-  tactics:
-  - TA0005
-  coverage: Moderate
+  - technique: T1140
+    tactics:
+      - TA0005
+    coverage: Moderate
 implementations:
-- name: Pseudocode – CertUtil with Decode Argument
-  description: Pseudocode implementation of the Splunk search below
-  code: |- 
-      processes = search Process:Create
-      certutil_downloads = filter processes where (
-        exe =”C:\Windows\System32\certutil.exe” AND command_line = *decode* )
-      output certutil_downloads
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk code
-  description: To successfully implement this search you need to be ingesting information
-    on process that include the name of the process responsible for the changes from
-    your endpoints into the `Endpoint` datamodel in the `Processes` node.
-  code: '| tstats count min(_time) as firstTime max(_time) as lastTime from datamodel=Endpoint.Processes
-    where Processes.process_name=certutil.exe Processes.process=*decode* by Processes.dest
-    Processes.user Processes.parent_process Processes.process_name Processes.process
-    Processes.process_id Processes.parent_process_id'
-  type: Splunk
-  data_model: Endpoint
+  - name: Pseudocode – CertUtil with Decode Argument
+    description: Pseudocode implementation of the Splunk search below
+    code: |
+        processes = search Process:Create
+        certutil_downloads = filter processes where (
+          exe =”C:\Windows\System32\certutil.exe” AND command_line = *decode* )
+        output certutil_downloads
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk code
+    description: To successfully implement this search you need to be ingesting information
+      on process that include the name of the process responsible for the changes from
+      your endpoints into the `Endpoint` datamodel in the `Processes` node.
+    code: '| tstats count min(_time) as firstTime max(_time) as lastTime from datamodel=Endpoint.Processes
+      where Processes.process_name=certutil.exe Processes.process=*decode* by Processes.dest
+      Processes.user Processes.parent_process Processes.process_name Processes.process
+      Processes.process_id Processes.parent_process_id'
+    type: Splunk
+    data_model: Endpoint
 unit_tests:
-- configurations:
-  - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
-  description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1140/atomic_red_team/windows-sysmon.log)  using
-    the Splunk attack range with the commands below
-  commands:
-  - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
-- configurations:
-  - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
-  description: execute the atomic test [T1140](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1140)
-    against a Windows target.
-  commands:
-  - Invoke-AtomicTest T1140
+  - configurations:
+      - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
+    description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1140/atomic_red_team/windows-sysmon.log) using
+      the Splunk attack range with the commands below
+    commands:
+      - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
+  - configurations:
+      - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
+    description: execute the atomic test [T1140](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1140)
+      against a Windows target.
+    commands:
+      - Invoke-AtomicTest T1140
 data_model_references:
-- process/create/exe
-- process/create/command_line
+  - process/create/exe
+  - process/create/command_line
 d3fend_mappings:
   - iri: d3f:ProcessSpawnAnalysis
     id: D3-PSA

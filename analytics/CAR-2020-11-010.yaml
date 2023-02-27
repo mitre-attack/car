@@ -1,3 +1,4 @@
+---
 title: CMSTP
 submission_date: 2020/11/30
 information_domain: Host
@@ -24,7 +25,7 @@ coverage:
 implementations:
   - name: Pseudocode - CMSTP
     description: This is a pseudocode representation of the below splunk search.
-    code: |- 
+    code: |
       processes = search Process:Create
       target_processes = filter processes where (
         exe="C:\Windows\System32\CMSTP.exe" AND
@@ -34,13 +35,13 @@ implementations:
     type: Pseudocode
   - name: Splunk Search - CMSTP
     description: looks for instances of CMSTP.exe that are combined with external communication
-    code: |- 
+    code: |
       (index=__your_sysmon_index__ EventCode=3) Image="C:\\Windows\\System32\\CMSTP.exe" | where ((!cidrmatch("10.0.0.0/8", SourceIp) AND !cidrmatch("192.168.0.0/16", SourceIp) AND !cidrmatch("172.16.0.0/12", SourceIp))
     data_model: Sysmon native
     type: Splunk
   - name: LogPoint Search - CMSTP
     description: looks for instances of CMSTP.exe that are combined with external communication
-    code: |- 
+    code: |
       norm_id=WindowsSysmon event_id=3 image="C:\Windows\System32\CMSTP.exe" -source_address IN HOMENET
     data_model: LogPoint native
     type: LogPoint

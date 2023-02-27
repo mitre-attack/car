@@ -1,3 +1,4 @@
+---
 title: Remotely Launched Executables via Services
 submission_date: 2014/03/18
 information_domain: 'Host, Network'
@@ -11,8 +12,8 @@ analytic_types:
 contributors:
   - MITRE
 id: CAR-2014-03-005
-description: |-
-  There are several ways to cause code to [execute](https://attack.mitre.org/tactics/TA0002) on a remote host. One of the most common methods is via the Windows [Service Control Manager](https://en.wikipedia.org/wiki/Service_Control_Manager) (SCM), which allows authorized users to remotely create and modify services. Several tools, such as [PsExec](https://attack.mitre.org/software/S0029), use this functionality. 
+description: |
+  There are several ways to cause code to [execute](https://attack.mitre.org/tactics/TA0002) on a remote host. One of the most common methods is via the Windows [Service Control Manager](https://en.wikipedia.org/wiki/Service_Control_Manager) (SCM), which allows authorized users to remotely create and modify services. Several tools, such as [PsExec](https://attack.mitre.org/software/S0029), use this functionality.
 
   When a client remotely communicates with the Service Control Manager, there are two observable behaviors. First, the client connects to the [RPC Endpoint Mapper](../CAR-2014-05-001) over 135/tcp. This handles authentication, and tells the client what port the endpoint—in this case the SCM—is listening on. Then, the client connects directly to the listening port on `services.exe`. If the request is to start an existing service with a known command line, the the SCM process will run the corresponding command.
 
@@ -32,7 +33,7 @@ coverage:
     coverage: Moderate
 implementations:
   - description: 'Look for processes launched from `services.exe` within 1 second of services.exe receiving a network connection.'
-    code: |-
+    code: |
       process = search Process:Create
       flow = search Flow:Start
       service = filter process where (parent_exe == "services.exe")

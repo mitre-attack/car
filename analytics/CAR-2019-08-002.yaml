@@ -11,7 +11,7 @@ analytic_types:
 contributors:
   - Tony Lambert/Red Canary
 id: CAR-2019-08-002
-description: |-
+description: |
   The NTDSUtil tool may be used to dump a Microsoft Active Directory database to disk for processing with a credential access tool such as Mimikatz. This is performed by launching `ntdsutil.exe` as a privileged user with command line arguments indicating that media should be created for offline Active Directory installation and specifying a folder path. This process will create a copy of the Active Directory database, `ntds.dit`, to the specified folder path.
 
   This requires filesystem data to determine whether files have been created.
@@ -25,7 +25,7 @@ coverage:
 implementations:
   - name: NTDSUtil - File Create
     description: This base pseudocode looks for file create events where a file with a name of ntds.dit is created by the ntdsutil process.
-    code: |-
+    code: |
       files = search File:Create
       ntds_dump = filter files where (
         file_name = "ntds.dit"  and
@@ -34,26 +34,26 @@ implementations:
     type: Pseudocode
   - name: NTDSUtil - File Create
     description: A Splunk/Sysmon version of the above pseudocode.
-    code: |-
+    code: |
       index=__your_sysmon_index__ EventCode=11 TargetFilename="*ntds.dit" Image="*ntdsutil.exe"
     type: Splunk
     data_model: Sysmon native
   - name: NTDSUtil - File Create
     description: An EQL version of the above pseudocode.
-    code: |-
+    code: |
       file where file_name == "ntds.dit" and process_name == "ntdsutil.exe"
     type: EQL
     data_model: EQL native
   - description: LogPoint version of the above pseudocode.
-    code: |-
+    code: |
       norm_id=WindowsSysmon event_id=11 file="*ntds.dit" source_image="*ntdsutil.exe"
     type: LogPoint
-    data_mode: LogPoint native
+    data_model: LogPoint native
 data_model_references:
   - file/create/file_name
   - file/create/image_path
-unit_tests: 
-  - description: |-
+unit_tests:
+  - description: |
       1. Open a Windows Command Prompt or PowerShell instance as Administrator
       2. Execute `ntdsutil.exe “ac i ntds” “ifm” “create full c:\temp” q q`
 d3fend_mappings:

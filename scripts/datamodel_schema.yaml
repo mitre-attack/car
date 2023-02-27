@@ -1,0 +1,13 @@
+---
+name: str()
+description: str()
+actions: list(include('action'))
+fields: list(include('field'))
+---
+action:
+  name: str()
+  description: str()
+field:
+  name: str()
+  description: str()
+  example: subset(any(), allow_empty=True)

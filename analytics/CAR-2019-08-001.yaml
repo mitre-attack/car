@@ -11,7 +11,7 @@ analytic_types:
 contributors:
   - Tony Lambert/Red Canary
 id: CAR-2019-08-001
-description: |-
+description: |
   The Windows Task Manager may be used to dump the memory space of `lsass.exe` to disk for processing with a credential access tool such as Mimikatz. This is performed by launching Task Manager as a privileged user, selecting `lsass.exe`, and clicking "Create dump file". This saves a dump file to disk with a deterministic name that includes the name of the process being dumped.
 
   This requires filesystem data to determine whether files have been created.
@@ -25,7 +25,7 @@ coverage:
 implementations:
   - name: Procdump - File Create
     description: This base pseudocode looks for file create events where a file with a name similar to lsass.dmp is created by the Windows task manager process.
-    code: |-
+    code: |
       files = search File:Create
       lsass_dump = filter files where (
         file_name = "lsass*.dmp"  and
@@ -34,26 +34,26 @@ implementations:
     type: Pseudocode
   - name: Procdump - File Create
     description: A Splunk/Sysmon version of the above pseudocode.
-    code: |-
+    code: |
       index=__your_sysmon_index__ EventCode=11 TargetFilename="*lsass*.dmp" Image="C:\\Windows\\*\\taskmgr.exe"
     type: Splunk
     data_model: Sysmon native
   - name: Procdump - File Create
     description: An EQL version of the above pseudocode.
-    code: |-
+    code: |
       file where file_name == "lsass*.dmp" and process_name == "taskmgr.exe"
     type: EQL
     data_model: EQL native
   - description: LogPoint version of the above pseudocode.
-    code: |-
+    code: |
       norm_id=WindowsSysmon event_id=11 file="*lsass*.dmp" source_image="C:\Windows\*\taskmgr.exe"
     type: LogPoint
-    data_mode: LogPoint native
+    data_model: LogPoint native
 data_model_references:
   - file/create/file_name
   - file/create/image_path
-unit_tests: 
-  - description: |-
+unit_tests:
+  - description: |
       1. Open Windows Task Manager as Administrator
       2. Select lsass.exe
       3. Right-click on lsass.exe and select "Create dump file".
