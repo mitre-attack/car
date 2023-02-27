@@ -8,8 +8,7 @@ The Data Model, strongly inspired by [CybOX](https://cyboxproject.github.io/), i
 
 |Object|Actions|Fields|
 |---|---|---|{% for model_name, model in datamodels.items()|sort(attribute='0') %}
-|**[{{ model_name }}]({{ model_name }})**|{{ model['actions']|sort(attribute='name')|map(attribute='name')|map('backtick')|join('<br />') }}|{{ model['fields']|sort(attribute='name')|map(attribute='name')|map('backtick')|join('<br />') }}|
-{% endfor %}
+|**[{{ model_name }}]({{ model_name }})**|{{ model['actions']|sort(attribute='name')|map(attribute='name')|map('backtick')|join('<br />') }}|{{ model['fields']|sort(attribute='name')|map(attribute='name')|map('backtick')|join('<br />') }}|{% endfor %}
 
 ## What is the data model?
 
