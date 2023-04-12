@@ -14,46 +14,6 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 
 ## Data Model Coverage
 
-### [process](../data_model/process)
-
-| | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓|✓| | |✓| | |✓|✓|✓|✓| | |✓|✓|✓|✓|✓| | | | | | | | |✓|
-| `terminate` |  | | | | | |✓| | |✓| | | | | | |✓| | | | | | | | | | | | |
-
-### [registry](../data_model/registry)
-
-| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
-|---|---|---|---|---|---|---|---|---|---|---|
-| `add` |  |✓|✓| |✓|✓| |✓| | |✓|
-| `key_edit` |  | | | | | | | | | | |
-| `remove` |  |✓|✓| |✓|✓| |✓| | |✓|
-| `value_edit` |  | | | | | | | | | | |
-
-### [driver](../data_model/driver)
-
-| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` |
-|---|---|---|---|---|---|---|---|---|---|---|
-| `load` |  |✓| |✓|✓| | |✓|✓| |✓|
-| `unload` |  | | | | | | | | | | |
-
-### [module](../data_model/module)
-
-| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `module_path` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `tid` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `load` |  |✓| |✓|✓| |✓|✓|✓|✓| |✓| |
-| `unload` |  | | | | | | | | | | | | |
-
-### [thread](../data_model/thread)
-
-| | `hostname` | `src_pid` | `src_tid` | `stack_base` | `stack_limit` | `start_address` | `start_function` | `start_module` | `start_module_name` | `tgt_pid` | `tgt_tid` | `uid` | `user` | `user_stack_base` | `user_stack_limit` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
-| `remote_create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
-| `suspend` |  | | | | | | | | | | | | | | |
-| `terminate` |  | | | | | | | | | | | | | | |
-
 ### [flow](../data_model/flow)
 
 | | `application_protocol` | `content` | `dest_fqdn` | `dest_hostname` | `dest_ip` | `dest_port` | `end_time` | `exe` | `fqdn` | `hostname` | `image_path` | `in_bytes` | `network_direction` | `out_bytes` | `packet_count` | `pid` | `ppid` | `proto_info` | `src_fqdn` | `src_hostname` | `src_ip` | `src_port` | `start_time` | `tcp_flags` | `transport_protocol` | `uid` | `user` |
@@ -73,6 +33,46 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `timestomp` |  | |✓| |✓| |✓| | | |✓| | | | | | |✓| |✓| | | | | | |
 | `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+
+### [registry](../data_model/registry)
+
+| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `add` |  |✓|✓| |✓|✓| |✓| | |✓|
+| `key_edit` |  | | | | | | | | | | |
+| `remove` |  |✓|✓| |✓|✓| |✓| | |✓|
+| `value_edit` |  | | | | | | | | | | |
+
+### [module](../data_model/module)
+
+| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `module_path` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `tid` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `load` |  |✓| |✓|✓| |✓|✓|✓|✓| |✓| |
+| `unload` |  | | | | | | | | | | | | |
+
+### [process](../data_model/process)
+
+| | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `create` |  | |✓|✓| | |✓| | |✓|✓|✓|✓| | |✓|✓|✓|✓|✓| | | | | | | | |✓|
+| `terminate` |  | | | | | |✓| | |✓| | | | | | |✓| | | | | | | | | | | | |
+
+### [thread](../data_model/thread)
+
+| | `hostname` | `src_pid` | `src_tid` | `stack_base` | `stack_limit` | `start_address` | `start_function` | `start_module` | `start_module_name` | `tgt_pid` | `tgt_tid` | `uid` | `user` | `user_stack_base` | `user_stack_limit` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
+| `remote_create` | ✓|✓| | | |✓|✓|✓| |✓|✓| | | | |
+| `suspend` |  | | | | | | | | | | | | | | |
+| `terminate` |  | | | | | | | | | | | | | | |
+
+### [driver](../data_model/driver)
+
+| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `load` |  |✓| |✓|✓| | |✓|✓| |✓|
+| `unload` |  | | | | | | | | | | |
 
 
 
