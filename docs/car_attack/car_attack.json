@@ -5,6 +5,279 @@
     "domain": "mitre-enterprise",
     "techniques": [
         {
+            "techniqueID": "T1546",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-11-003: Debuggers for Accessibility Applications | CAR-2014-11-008: Command Launched from WinLogon | CAR-2020-09-002: Component Object Model Hijacking | CAR-2020-09-005: AppInit DLLs | CAR-2020-11-011: Registry Edit from Screensaver",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1546.008",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-11-003: Debuggers for Accessibility Applications | CAR-2014-11-008: Command Launched from WinLogon",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1543",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-09-005: Service Outlier Executables | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services | CAR-2014-05-002: Services launching Cmd",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1543.003",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-09-005: Service Outlier Executables | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services | CAR-2014-05-002: Services launching Cmd",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1574",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-02-001: Service Binary Modifications | CAR-2014-07-001: Service Search Path Interception | CAR-2020-05-003: Rare LolBAS Command Lines | CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1574.010",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-02-001: Service Binary Modifications",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1569",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services | CAR-2021-05-012: Create Service In Suspicious File Path",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1569.002",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services | CAR-2021-05-012: Create Service In Suspicious File Path",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1021",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-003: SMB Events Monitoring | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-05-003: SMB Write Request | CAR-2013-05-005: SMB Copy and Execution | CAR-2013-07-001: Suspicious Arguments | CAR-2013-07-002: RDP Connection Detection | CAR-2013-10-001: User Login Activity Monitoring | CAR-2014-05-001: RPC Activity | CAR-2014-11-004: Remote PowerShell Sessions | CAR-2014-11-006: Windows Remote Management (WinRM) | CAR-2016-04-005: Remote Desktop Logon",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1021.002",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-003: SMB Events Monitoring | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-05-003: SMB Write Request | CAR-2013-05-005: SMB Copy and Execution | CAR-2014-05-001: RPC Activity",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1021.003",
+            "color": "#c6dbef",
+            "comment": "CAR-2014-05-001: RPC Activity",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1021.006",
+            "color": "#c6dbef",
+            "comment": "CAR-2014-05-001: RPC Activity | CAR-2014-11-004: Remote PowerShell Sessions | CAR-2014-11-006: Windows Remote Management (WinRM)",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1047",
+            "color": "#c6dbef",
+            "comment": "CAR-2014-11-007: Remote Windows Management Instrumentation (WMI) over RPC | CAR-2014-12-001: Remotely Launched Executables via WMI | CAR-2016-03-002: Create Remote Process via WMIC",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1559",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-01-006: Unusual Child Process spawned using DDE exploit",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1559.002",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-01-006: Unusual Child Process spawned using DDE exploit",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1037",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2020-11-001: Boot or Logon Initialization Scripts",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1037.001",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2020-11-001: Boot or Logon Initialization Scripts",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1105",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-07-001: Suspicious Arguments | CAR-2021-05-005: BITSAdmin Download File | CAR-2021-05-006: CertUtil Download With URLCache and Split Arguments | CAR-2021-05-007: CertUtil Download With VerifyCtl and Split Arguments",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1546.002",
+            "color": "#c6dbef",
+            "comment": "CAR-2020-11-011: Registry Edit from Screensaver",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1560",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-07-005: Command Line Usage of Archiving Software",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1560.001",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-07-005: Command Line Usage of Archiving Software",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1222",
+            "color": "#c6dbef",
+            "comment": "CAR-2019-07-001: Access Permission Modification",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1222.001",
+            "color": "#c6dbef",
+            "comment": "CAR-2019-07-001: Access Permission Modification",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1222.002",
+            "color": "#c6dbef",
+            "comment": "CAR-2019-07-001: Access Permission Modification",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-07-001: Suspicious Arguments | CAR-2019-04-004: Credential Dumping via Mimikatz | CAR-2019-07-002: Lsass Process Dump via Procdump | CAR-2019-08-001: Credential Dumping via Windows Task Manager | CAR-2019-08-002: Active Directory Dumping via NTDSUtil | CAR-2020-05-001: MiniDump of LSASS | CAR-2021-05-011: Create Remote Thread into LSASS",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1003.001",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-07-001: Suspicious Arguments | CAR-2019-04-004: Credential Dumping via Mimikatz | CAR-2019-07-002: Lsass Process Dump via Procdump | CAR-2019-08-001: Credential Dumping via Windows Task Manager | CAR-2021-05-011: Create Remote Thread into LSASS",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1204",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-05-002: Batch File Write to System32",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1204.002",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-05-002: Batch File Write to System32",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1112",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-11-005: Remote Registry | CAR-2020-05-003: Rare LolBAS Command Lines | CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0 | CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify | CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1127",
+            "color": "#c6dbef",
+            "comment": "CAR-2020-11-008: MSBuild and msxsl",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1127.001",
+            "color": "#c6dbef",
+            "comment": "CAR-2020-11-008: MSBuild and msxsl",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-05-010: Create local admin accounts using net exe",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1136.001",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-05-010: Create local admin accounts using net exe",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1547",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2020-05-003: Rare LolBAS Command Lines | CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify | CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1547.001",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2020-05-003: Rare LolBAS Command Lines | CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1570",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-05-003: SMB Write Request | CAR-2013-05-005: SMB Copy and Execution | CAR-2014-03-001: SMB Write Request - NamedPipes",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1547.004",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1187",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-09-003: SMB Session Setups",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1562",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-04-003: User Activity from Stopping Windows Defensive Services | CAR-2020-09-003: Indicator Blocking - Driver Unloaded | CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt | CAR-2022-03-001: Disable Windows Event Logging",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1562.006",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2020-09-003: Indicator Blocking - Driver Unloaded",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1548",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-10-002: DLL Injection via Load Library | CAR-2019-04-001: UAC Bypass | CAR-2021-01-008: Disable UAC | CAR-2021-02-002: Get System Elevation",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1548.002",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-10-002: DLL Injection via Load Library | CAR-2019-04-001: UAC Bypass | CAR-2021-01-008: Disable UAC",
+            "enabled": true
+        },
+        {
             "techniqueID": "T1053",
             "color": "#c6dbef",
             "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-05-004: Execution with AT | CAR-2013-08-001: Execution with schtasks | CAR-2015-04-001: Remotely Scheduled Tasks via AT | CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks | CAR-2020-09-001: Scheduled Task - FileAccess | CAR-2021-12-001: Scheduled Task Creation or Modification Containing Suspicious Scripts, Extensions or User Writable Paths",
@@ -15,6 +288,38 @@
             "techniqueID": "T1053.005",
             "color": "#c6dbef",
             "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-08-001: Execution with schtasks | CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks | CAR-2020-09-001: Scheduled Task - FileAccess | CAR-2021-12-001: Scheduled Task Creation or Modification Containing Suspicious Scripts, Extensions or User Writable Paths",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070",
+            "color": "#c6dbef",
+            "comment": "CAR-2016-04-002: User Activity from Clearing Event Logs | CAR-2020-11-005: Clear Powershell Console Command History | CAR-2020-11-007: Network Share Connection Removal | CAR-2021-01-003: Clearing Windows Logs with Wevtutil",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1070.001",
+            "color": "#c6dbef",
+            "comment": "CAR-2016-04-002: User Activity from Clearing Event Logs | CAR-2021-01-003: Clearing Windows Logs with Wevtutil",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1505",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-02-001: Webshell-Indicative Process Tree",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1505.003",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-02-001: Webshell-Indicative Process Tree",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1569.001",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-05-012: Create Service In Suspicious File Path",
             "enabled": true
         },
         {
@@ -91,123 +396,17 @@
             "showSubtechniques": true
         },
         {
-            "techniqueID": "T1546",
+            "techniqueID": "T1039",
             "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-11-003: Debuggers for Accessibility Applications | CAR-2014-11-008: Command Launched from WinLogon | CAR-2020-09-002: Component Object Model Hijacking | CAR-2020-09-005: AppInit DLLs | CAR-2020-11-011: Registry Edit from Screensaver",
+            "comment": "CAR-2013-01-003: SMB Events Monitoring",
             "enabled": true,
             "showSubtechniques": true
         },
         {
-            "techniqueID": "T1546.010",
+            "techniqueID": "T1021.001",
             "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2020-09-005: AppInit DLLs",
+            "comment": "CAR-2013-07-002: RDP Connection Detection | CAR-2013-10-001: User Login Activity Monitoring | CAR-2016-04-005: Remote Desktop Logon",
             "enabled": true
-        },
-        {
-            "techniqueID": "T1574",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-02-001: Service Binary Modifications | CAR-2014-07-001: Service Search Path Interception | CAR-2020-05-003: Rare LolBAS Command Lines | CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1574.009",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-07-001: Service Search Path Interception",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1547",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2020-05-003: Rare LolBAS Command Lines | CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify | CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1547.004",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1112",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-11-005: Remote Registry | CAR-2020-05-003: Rare LolBAS Command Lines | CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0 | CAR-2021-11-002: Registry Edit with Modification of Userinit, Shell or Notify | CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1105",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-07-001: Suspicious Arguments | CAR-2021-05-005: BITSAdmin Download File | CAR-2021-05-006: CertUtil Download With URLCache and Split Arguments | CAR-2021-05-007: CertUtil Download With VerifyCtl and Split Arguments",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1059",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-02-003: Processes Spawning cmd.exe | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-04-003: Powershell Execution | CAR-2014-11-002: Outlier Parents of Cmd | CAR-2014-11-004: Remote PowerShell Sessions | CAR-2021-01-002: Unusually Long Command Line Strings",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1059.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2014-04-003: Powershell Execution | CAR-2014-11-004: Remote PowerShell Sessions",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1047",
-            "color": "#c6dbef",
-            "comment": "CAR-2014-11-007: Remote Windows Management Instrumentation (WMI) over RPC | CAR-2014-12-001: Remotely Launched Executables via WMI | CAR-2016-03-002: Create Remote Process via WMIC",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1040",
-            "color": "#c6dbef",
-            "comment": "CAR-2020-11-002: Local Network Sniffing",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1012",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2020-05-003: Rare LolBAS Command Lines",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1547.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2020-05-003: Rare LolBAS Command Lines | CAR-2021-12-002: Modification of Default Startup Folder in the Registry Key 'Common Startup'",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1574.011",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2020-05-003: Rare LolBAS Command Lines",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1562",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-04-003: User Activity from Stopping Windows Defensive Services | CAR-2020-09-003: Indicator Blocking - Driver Unloaded | CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt | CAR-2022-03-001: Disable Windows Event Logging",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1562.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-04-003: User Activity from Stopping Windows Defensive Services | CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1187",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-09-003: SMB Session Setups",
-            "enabled": true,
-            "showSubtechniques": true
         },
         {
             "techniqueID": "T1036",
@@ -221,103 +420,6 @@
             "color": "#c6dbef",
             "comment": "CAR-2013-05-009: Running executables with same hash and different names",
             "enabled": true
-        },
-        {
-            "techniqueID": "T1562.006",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2020-09-003: Indicator Blocking - Driver Unloaded",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1490",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-01-009: Detecting Shadow Copy Deletion or Resize | CAR-2021-05-003: BCDEdit Failure Recovery Modification",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1204",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-05-002: Batch File Write to System32",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1204.002",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-05-002: Batch File Write to System32",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1543",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-09-005: Service Outlier Executables | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services | CAR-2014-05-002: Services launching Cmd",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1543.003",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-09-005: Service Outlier Executables | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services | CAR-2014-05-002: Services launching Cmd",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1574.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1553",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-05-001: Attempt To Add Certificate To Untrusted Store",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1553.004",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-05-001: Attempt To Add Certificate To Untrusted Store",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1059.003",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-02-003: Processes Spawning cmd.exe | CAR-2014-11-002: Outlier Parents of Cmd",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1003",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-07-001: Suspicious Arguments | CAR-2019-04-004: Credential Dumping via Mimikatz | CAR-2019-07-002: Lsass Process Dump via Procdump | CAR-2019-08-001: Credential Dumping via Windows Task Manager | CAR-2019-08-002: Active Directory Dumping via NTDSUtil | CAR-2020-05-001: MiniDump of LSASS | CAR-2021-05-011: Create Remote Thread into LSASS",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1003.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-07-001: Suspicious Arguments | CAR-2019-04-004: Credential Dumping via Mimikatz | CAR-2019-07-002: Lsass Process Dump via Procdump | CAR-2019-08-001: Credential Dumping via Windows Task Manager | CAR-2021-05-011: Create Remote Thread into LSASS",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1021",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-01-003: SMB Events Monitoring | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-05-003: SMB Write Request | CAR-2013-05-005: SMB Copy and Execution | CAR-2013-07-001: Suspicious Arguments | CAR-2013-07-002: RDP Connection Detection | CAR-2013-10-001: User Login Activity Monitoring | CAR-2014-05-001: RPC Activity | CAR-2014-11-004: Remote PowerShell Sessions | CAR-2014-11-006: Windows Remote Management (WinRM) | CAR-2016-04-005: Remote Desktop Logon",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1021.006",
-            "color": "#c6dbef",
-            "comment": "CAR-2014-05-001: RPC Activity | CAR-2014-11-004: Remote PowerShell Sessions | CAR-2014-11-006: Windows Remote Management (WinRM)",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1570",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-05-003: SMB Write Request | CAR-2013-05-005: SMB Copy and Execution | CAR-2014-03-001: SMB Write Request - NamedPipes",
-            "enabled": true,
-            "showSubtechniques": true
         },
         {
             "techniqueID": "T1078",
@@ -339,79 +441,110 @@
             "enabled": true
         },
         {
+            "techniqueID": "T1003.003",
+            "color": "#c6dbef",
+            "comment": "CAR-2019-08-002: Active Directory Dumping via NTDSUtil | CAR-2020-05-001: MiniDump of LSASS",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-02-003: Processes Spawning cmd.exe | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-04-003: Powershell Execution | CAR-2014-11-002: Outlier Parents of Cmd | CAR-2014-11-004: Remote PowerShell Sessions | CAR-2021-01-002: Unusually Long Command Line Strings",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1059.003",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-02-003: Processes Spawning cmd.exe | CAR-2014-11-002: Outlier Parents of Cmd",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1550",
+            "color": "#c6dbef",
+            "comment": "CAR-2016-04-004: Successful Local Account Login",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1550.002",
+            "color": "#c6dbef",
+            "comment": "CAR-2016-04-004: Successful Local Account Login",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1606",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-05-008: Certutil exe certificate extraction",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1606.002",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-05-008: Certutil exe certificate extraction",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059.001",
+            "color": "#c6dbef",
+            "comment": "CAR-2014-04-003: Powershell Execution | CAR-2014-11-004: Remote PowerShell Sessions",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1574.009",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-07-001: Service Search Path Interception",
+            "enabled": true
+        },
+        {
             "techniqueID": "T1053.002",
             "color": "#c6dbef",
             "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-05-004: Execution with AT | CAR-2015-04-001: Remotely Scheduled Tasks via AT",
             "enabled": true
         },
         {
-            "techniqueID": "T1564",
+            "techniqueID": "T1546.010",
             "color": "#c6dbef",
-            "comment": "CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities | CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2020-09-005: AppInit DLLs",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1552",
+            "color": "#c6dbef",
+            "comment": "CAR-2020-09-004: Credentials in Files & Registry",
             "enabled": true,
             "showSubtechniques": true
         },
         {
-            "techniqueID": "T1564.004",
+            "techniqueID": "T1552.001",
             "color": "#c6dbef",
-            "comment": "CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities | CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS",
+            "comment": "CAR-2020-09-004: Credentials in Files & Registry",
             "enabled": true
         },
         {
-            "techniqueID": "T1546.015",
+            "techniqueID": "T1552.002",
             "color": "#c6dbef",
-            "comment": "CAR-2020-09-002: Component Object Model Hijacking",
+            "comment": "CAR-2020-09-004: Credentials in Files & Registry",
             "enabled": true
         },
         {
-            "techniqueID": "T1021.002",
+            "techniqueID": "T1012",
             "color": "#c6dbef",
-            "comment": "CAR-2013-01-003: SMB Events Monitoring | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2013-05-003: SMB Write Request | CAR-2013-05-005: SMB Copy and Execution | CAR-2014-05-001: RPC Activity",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1505",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-02-001: Webshell-Indicative Process Tree",
+            "comment": "CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2020-05-003: Rare LolBAS Command Lines",
             "enabled": true,
             "showSubtechniques": true
         },
         {
-            "techniqueID": "T1505.003",
+            "techniqueID": "T1574.011",
             "color": "#c6dbef",
-            "comment": "CAR-2021-02-001: Webshell-Indicative Process Tree",
+            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2013-03-001: Reg.exe called from Command Shell | CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2020-05-003: Rare LolBAS Command Lines",
             "enabled": true
         },
         {
-            "techniqueID": "T1574.010",
+            "techniqueID": "T1562.002",
             "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-02-001: Service Binary Modifications",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1569",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services | CAR-2021-05-012: Create Service In Suspicious File Path",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1569.002",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2014-02-001: Service Binary Modifications | CAR-2014-03-005: Remotely Launched Executables via Services | CAR-2021-05-012: Create Service In Suspicious File Path",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1070",
-            "color": "#c6dbef",
-            "comment": "CAR-2016-04-002: User Activity from Clearing Event Logs | CAR-2020-11-005: Clear Powershell Console Command History | CAR-2020-11-007: Network Share Connection Removal | CAR-2021-01-003: Clearing Windows Logs with Wevtutil",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1070.005",
-            "color": "#c6dbef",
-            "comment": "CAR-2020-11-007: Network Share Connection Removal",
+            "comment": "CAR-2022-03-001: Disable Windows Event Logging",
             "enabled": true
         },
         {
@@ -422,74 +555,9 @@
             "showSubtechniques": true
         },
         {
-            "techniqueID": "T1218.011",
+            "techniqueID": "T1218.010",
             "color": "#c6dbef",
-            "comment": "CAR-2014-03-006: RunDLL32.exe monitoring",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1037",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2020-11-001: Boot or Logon Initialization Scripts",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1037.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2020-11-001: Boot or Logon Initialization Scripts",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1140",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-05-009: CertUtil With Decode Argument",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1003.003",
-            "color": "#c6dbef",
-            "comment": "CAR-2019-08-002: Active Directory Dumping via NTDSUtil | CAR-2020-05-001: MiniDump of LSASS",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1055",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-10-002: DLL Injection via Load Library | CAR-2020-11-003: DLL Injection with Mavinject | CAR-2020-11-004: Processes Started From Irregular Parent",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1055.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-10-002: DLL Injection via Load Library | CAR-2020-11-003: DLL Injection with Mavinject",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1560",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-07-005: Command Line Usage of Archiving Software",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1560.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-07-005: Command Line Usage of Archiving Software",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1559",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-01-006: Unusual Child Process spawned using DDE exploit",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1559.002",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-01-006: Unusual Child Process spawned using DDE exploit",
+            "comment": "CAR-2019-04-002: Generic Regsvr32 | CAR-2019-04-003: Squiblydoo",
             "enabled": true
         },
         {
@@ -523,60 +591,30 @@
             "enabled": true
         },
         {
-            "techniqueID": "T1546.008",
+            "techniqueID": "T1546.015",
             "color": "#c6dbef",
-            "comment": "CAR-2013-01-002: Autorun Differences | CAR-2014-11-003: Debuggers for Accessibility Applications | CAR-2014-11-008: Command Launched from WinLogon",
+            "comment": "CAR-2020-09-002: Component Object Model Hijacking",
             "enabled": true
         },
         {
-            "techniqueID": "T1218.003",
+            "techniqueID": "T1055",
             "color": "#c6dbef",
-            "comment": "CAR-2020-11-010: CMSTP",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1569.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-05-012: Create Service In Suspicious File Path",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1546.002",
-            "color": "#c6dbef",
-            "comment": "CAR-2020-11-011: Registry Edit from Screensaver",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1021.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-07-002: RDP Connection Detection | CAR-2013-10-001: User Login Activity Monitoring | CAR-2016-04-005: Remote Desktop Logon",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1548",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-10-002: DLL Injection via Load Library | CAR-2019-04-001: UAC Bypass | CAR-2021-01-008: Disable UAC | CAR-2021-02-002: Get System Elevation",
+            "comment": "CAR-2013-10-002: DLL Injection via Load Library | CAR-2020-11-003: DLL Injection with Mavinject | CAR-2020-11-004: Processes Started From Irregular Parent",
             "enabled": true,
             "showSubtechniques": true
         },
         {
-            "techniqueID": "T1548.002",
+            "techniqueID": "T1055.001",
             "color": "#c6dbef",
-            "comment": "CAR-2013-10-002: DLL Injection via Load Library | CAR-2019-04-001: UAC Bypass | CAR-2021-01-008: Disable UAC",
+            "comment": "CAR-2013-10-002: DLL Injection via Load Library | CAR-2020-11-003: DLL Injection with Mavinject",
             "enabled": true
         },
         {
-            "techniqueID": "T1197",
+            "techniqueID": "T1046",
             "color": "#c6dbef",
-            "comment": "CAR-2021-05-004: BITS Job Persistence | CAR-2021-05-005: BITSAdmin Download File",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2021-01-001: Identifying Port Scanning Activity",
             "enabled": true,
             "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1218.010",
-            "color": "#c6dbef",
-            "comment": "CAR-2019-04-002: Generic Regsvr32 | CAR-2019-04-003: Squiblydoo",
-            "enabled": true
         },
         {
             "techniqueID": "T1068",
@@ -586,11 +624,67 @@
             "showSubtechniques": true
         },
         {
-            "techniqueID": "T1039",
+            "techniqueID": "T1055.012",
             "color": "#c6dbef",
-            "comment": "CAR-2013-01-003: SMB Events Monitoring",
+            "comment": "CAR-2020-11-004: Processes Started From Irregular Parent",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1490",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-01-009: Detecting Shadow Copy Deletion or Resize | CAR-2021-05-003: BCDEdit Failure Recovery Modification",
             "enabled": true,
             "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1036.005",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-04-001: Common Windows Process Masquerading",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.005",
+            "color": "#c6dbef",
+            "comment": "CAR-2020-11-007: Network Share Connection Removal",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1562.001",
+            "color": "#c6dbef",
+            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2016-04-003: User Activity from Stopping Windows Defensive Services | CAR-2021-01-007: Detecting Tampering of Windows Defender Command Prompt",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1218.003",
+            "color": "#c6dbef",
+            "comment": "CAR-2020-11-010: CMSTP",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1553",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-05-001: Attempt To Add Certificate To Untrusted Store",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1553.004",
+            "color": "#c6dbef",
+            "comment": "CAR-2021-05-001: Attempt To Add Certificate To Untrusted Store",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1564",
+            "color": "#c6dbef",
+            "comment": "CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities | CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS",
+            "enabled": true,
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1564.004",
+            "color": "#c6dbef",
+            "comment": "CAR-2020-08-001: NTFS Alternate Data Stream Execution - System Utilities | CAR-2020-08-002: NTFS Alternate Data Stream Execution - LOLBAS",
+            "enabled": true
         },
         {
             "techniqueID": "T1003.002",
@@ -640,13 +734,6 @@
             "enabled": true
         },
         {
-            "techniqueID": "T1046",
-            "color": "#c6dbef",
-            "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands | CAR-2021-01-001: Identifying Port Scanning Activity",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
             "techniqueID": "T1098",
             "color": "#c6dbef",
             "comment": "CAR-2013-04-002: Quick execution of a series of suspicious commands",
@@ -660,40 +747,22 @@
             "enabled": true
         },
         {
-            "techniqueID": "T1021.003",
+            "techniqueID": "T1218.001",
             "color": "#c6dbef",
-            "comment": "CAR-2014-05-001: RPC Activity",
+            "comment": "CAR-2020-11-009: Compiled HTML Access",
             "enabled": true
         },
         {
-            "techniqueID": "T1036.005",
+            "techniqueID": "T1197",
             "color": "#c6dbef",
-            "comment": "CAR-2021-04-001: Common Windows Process Masquerading",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1222",
-            "color": "#c6dbef",
-            "comment": "CAR-2019-07-001: Access Permission Modification",
+            "comment": "CAR-2021-05-004: BITS Job Persistence | CAR-2021-05-005: BITSAdmin Download File",
             "enabled": true,
             "showSubtechniques": true
         },
         {
-            "techniqueID": "T1222.001",
+            "techniqueID": "T1218.011",
             "color": "#c6dbef",
-            "comment": "CAR-2019-07-001: Access Permission Modification",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1222.002",
-            "color": "#c6dbef",
-            "comment": "CAR-2019-07-001: Access Permission Modification",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1055.012",
-            "color": "#c6dbef",
-            "comment": "CAR-2020-11-004: Processes Started From Irregular Parent",
+            "comment": "CAR-2014-03-006: RunDLL32.exe monitoring",
             "enabled": true
         },
         {
@@ -703,93 +772,24 @@
             "enabled": true
         },
         {
-            "techniqueID": "T1562.002",
+            "techniqueID": "T1140",
             "color": "#c6dbef",
-            "comment": "CAR-2022-03-001: Disable Windows Event Logging",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1136",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-05-010: Create local admin accounts using net exe",
+            "comment": "CAR-2021-05-009: CertUtil With Decode Argument",
             "enabled": true,
             "showSubtechniques": true
         },
         {
-            "techniqueID": "T1136.001",
+            "techniqueID": "T1574.001",
             "color": "#c6dbef",
-            "comment": "CAR-2021-05-010: Create local admin accounts using net exe",
+            "comment": "CAR-2021-11-001: Registry Edit with Creation of SafeDllSearchMode Key Set to 0",
             "enabled": true
         },
         {
-            "techniqueID": "T1606",
+            "techniqueID": "T1040",
             "color": "#c6dbef",
-            "comment": "CAR-2021-05-008: Certutil exe certificate extraction",
+            "comment": "CAR-2020-11-002: Local Network Sniffing",
             "enabled": true,
             "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1606.002",
-            "color": "#c6dbef",
-            "comment": "CAR-2021-05-008: Certutil exe certificate extraction",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1550",
-            "color": "#c6dbef",
-            "comment": "CAR-2016-04-004: Successful Local Account Login",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1550.002",
-            "color": "#c6dbef",
-            "comment": "CAR-2016-04-004: Successful Local Account Login",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1070.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2016-04-002: User Activity from Clearing Event Logs | CAR-2021-01-003: Clearing Windows Logs with Wevtutil",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1127",
-            "color": "#c6dbef",
-            "comment": "CAR-2020-11-008: MSBuild and msxsl",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1127.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2020-11-008: MSBuild and msxsl",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1552",
-            "color": "#c6dbef",
-            "comment": "CAR-2020-09-004: Credentials in Files & Registry",
-            "enabled": true,
-            "showSubtechniques": true
-        },
-        {
-            "techniqueID": "T1552.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2020-09-004: Credentials in Files & Registry",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1552.002",
-            "color": "#c6dbef",
-            "comment": "CAR-2020-09-004: Credentials in Files & Registry",
-            "enabled": true
-        },
-        {
-            "techniqueID": "T1218.001",
-            "color": "#c6dbef",
-            "comment": "CAR-2020-11-009: Compiled HTML Access",
-            "enabled": true
         }
     ]
 }
