@@ -1,3 +1,4 @@
+---
 title: Modification of Default Startup Folder in the Registry Key 'Common Startup'
 submission_date: 2021/12/06
 information_domain: Host
@@ -11,7 +12,7 @@ analytic_types:
 contributors:
   - Lucas Heiligenstein
 id: CAR-2021-12-002
-description: Detection of the modification of the registry key `Common Startup` located in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\` and `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\`. When a user logs on, any files located in the Startup Folder are launched. Attackers may modify these folders with other files in order to evade detection set on these default folders. This detection focuses on EventIDs 4688 and 1 for process creation and EventID 4657 for the modification of the Registry Keys. 
+description: Detection of the modification of the registry key `Common Startup` located in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\` and `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\`. When a user logs on, any files located in the Startup Folder are launched. Attackers may modify these folders with other files in order to evade detection set on these default folders. This detection focuses on EventIDs 4688 and 1 for process creation and EventID 4657 for the modification of the Registry Keys.
 coverage:
   - technique: T1547
     tactics:
@@ -27,7 +28,7 @@ coverage:
 implementations:
   - name: Common Startup Registry Key Modification
     description: This detects modification of the `Common Startup` registry key value, either via a new process (command line) or direct registry manipulation.
-    code: |- 
+    code: |
       processes = search Process:create
       logon_reg_processes = filter processes where (command_line CONTAINS("*reg*") AND command_line CONTAINS("*add*") AND command_line CONTAINS("*/d*") OR (command_line CONTAINS("*Set-ItemProperty*") AND command_line CONTAINS("*-value*")) AND command_line CONTAINS("*Common Startup*"))
       reg_keys = search Registry:value_edit
@@ -37,26 +38,26 @@ implementations:
     type: Pseudocode
   - name: Splunk Search - Modification of default Startup Folder in the Registry Key "Common Startup"
     description: This is a Splunk representation of the above pseudocode search.
-    code: |- 
+    code: |
       (((EventCode="4688" OR EventCode="1") (CommandLine="*reg*" AND CommandLine="*add*" AND CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" AND CommandLine="*-value*") CommandLine="*Common Startup*") OR ((EventCode="4657" ObjectValueName="Common Startup") OR (EventCode="13" TargetObject="*Common Startup")))
     type: Splunk
   - name: Elastic Search - Modification of default Startup Folder in the Registry Key "Common Startup"
     description: This is an ElasticSeearech representation of the above pseudocode search.
-    code: |- 
+    code: |
       ((EventLog:"Security" AND (winlog.event_id:"4688" OR winlog.event_id:"1") AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:*Set\-ItemProperty* AND process.command_line:*\-value*)) AND process.command_line:*Common\ Startup*) OR (winlog.event_id:"4657" AND winlog.event_data.ObjectValueName:"Common\ Startup") OR (winlog.event_id:"13" AND winlog.event_data.TargetObject:"*Common Startup"))
     type: Elastic
   - name: LogPoint Search - Modification of default Startup Folder in the Registry Key "Common Startup"
     description: This is a LogPoint representation of the above pseudocode search.
-    code: |- 
+    code: |
       ((EventLog="Security" (event_id="4688" OR event_id="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine="*Set-ItemProperty*" CommandLine="*-value*")) CommandLine="*Common Startup*") OR (event_id="4657" ObjectValueName="Common Startup") OR (event_id="13" TargetObject="*Common Startup"))
     type: LogPoint
 unit_tests:
-- description: Modification on Registry Key with cmd. Files in new_malicious_startup_folder will be launched when user logon
-  commands:
-  - reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Common Startup" /d "C:\Users\Lucas\Documents\new_malicious_startup_folder" /f
-- description: Modification on Registry Key with Powershell. Files in new_malicious_startup_folder will be launched when user logon
-  commands:
-  - Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" -Name "Common Startup" -Value C:\Users\Lucas\Documents\new_malicious_startup_folder
+  - description: Modification on Registry Key with cmd. Files in new_malicious_startup_folder will be launched when user logon
+    commands:
+      - reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Common Startup" /d "C:\Users\Lucas\Documents\new_malicious_startup_folder" /f
+  - description: Modification on Registry Key with Powershell. Files in new_malicious_startup_folder will be launched when user logon
+    commands:
+      - Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" -Name "Common Startup" -Value C:\Users\Lucas\Documents\new_malicious_startup_folder
 data_model_references:
   - process/create/command_line
   - registry/add/key

@@ -8,9 +8,9 @@ analytic_type: Situational Awareness
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 In order to gain persistence, privilege escalation, or remote execution, an adversary may use the Windows Task Scheduler to schedule a command to be run at a specified time, date, and even host. Task Scheduler stores tasks as files in two locations - C:\Windows\Tasks (legacy) or C:\Windows\System32\Tasks. Accordingly, this analytic looks for the creation of task files in these two locations.
+
 
 
 ### ATT&CK Detections
@@ -51,6 +51,7 @@ task_files = filter files where (
   (file_path = "C:\Windows\System32\Tasks\*" or file_path = "C:\Windows\Tasks\*")  and
   image_path != "C:\WINDOWS\system32\svchost.exe")
 output task_files
+
 ```
 
 
@@ -63,6 +64,7 @@ This Splunk search looks for any files created under the Windows tasks directori
 ```
 index=__your_sysmon_index__ EventCode=11 Image!="C:\\WINDOWS\\system32\\svchost.exe" (TargetFilename="C:\\Windows\\System32\\Tasks\\
 *" OR TargetFilename="C:\\Windows\\Tasks\\*")
+
 ```
 
 
@@ -74,6 +76,7 @@ This LogPoint search looks for any files created under the Windows tasks directo
 
 ```
 norm_id=WindowsSysmon event_id=11 -source_image="C:\WINDOWS\system32\svchost.exe" (path="C:\Windows\System32\Tasks*" OR path="C:\Windows\Tasks*")
+
 ```
 
 

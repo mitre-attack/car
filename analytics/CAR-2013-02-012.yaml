@@ -1,3 +1,4 @@
+---
 title: User Logged in to Multiple Hosts
 submission_date: 2013/02/27
 information_domain: Host
@@ -12,7 +13,7 @@ analytic_types:
 contributors:
   - MITRE
 id: CAR-2013-02-012
-description: |-
+description: |
   Most users use only one or two machines during the normal course of business. User accounts that log in to multiple machines, especially over a short period of time, may be compromised. Remote logins among multiple machines may be an indicator of [Lateral Movement](https://attack.mitre.org/tactics/TA0008).
 
   Certain users will likely appear as being logged into several machines and may need to be "whitelisted." Such users would include network admins or user names that are common to many hosts.
@@ -25,8 +26,8 @@ coverage:
     tactics:
       - TA0008
     subtechniques:
-       - T1078.002
-       - T1078.003
+      - T1078.002
+      - T1078.003
     coverage: Moderate
 d3fend_mappings:
   - iri: d3f:AuthenticationEventThresholding

@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: Splunk Threat Research <research@splunk.com>
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 This search looks for arguments to certutil.exe indicating the manipulation or extraction of Certificate. This certificate can then be used to sign new authentication tokens specially inside Federated environments such as Windows ADFS.
 
 
@@ -50,6 +49,7 @@ processes = search Process:Create
 certutil_downloads = filter processes where (
   exe =”C:\Windows\System32\certutil.exe” AND command_line = * -exportPFX * )
 output certutil_downloads
+
 ```
 
 
@@ -71,7 +71,7 @@ Splunk implementation
 
 **Configurations:** Using Splunk [Attack Range](https://github.com/splunk/attack_range)
 
-Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/suspicious_behaviour/certutil_exe_certificate_extraction/windows-sysmon.log)  using the Splunk attack range with the commands below
+Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/suspicious_behaviour/certutil_exe_certificate_extraction/windows-sysmon.log) using the Splunk attack range with the commands below
 
 ```
 python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
@@ -81,7 +81,7 @@ python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
 
 **Configurations:** Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
 
-execute the atomic test [T1606.002](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1606.002) against a Windows target.
+Execute the atomic test [T1606.002](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1606.002) against a Windows target.
 
 ```
 Invoke-AtomicTest T1606.002

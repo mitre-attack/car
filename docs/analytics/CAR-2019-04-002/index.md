@@ -8,16 +8,16 @@ analytic_type: Situational Awareness
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Regsvr32 can be used to execute arbitrary code in the context of a Windows signed binary, which can be used to bypass application whitelisting. This analytic looks for suspicious usage of the tool. It's not likely that you'll get millions of hits, but it does occur during normal activity so some form of baselining would be necessary for this to be an alerting analytic. Alternatively, it can be used for hunt by looking for new or anomalous DLLs manually.
+
 
 
 ### ATT&CK Detections
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Signed Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|[Regsvr32](https://attack.mitre.org/techniques/T1218/010/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
+|[System Binary Proxy Execution](https://attack.mitre.org/techniques/T1218/)|[Regsvr32](https://attack.mitre.org/techniques/T1218/010/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
 
 
 ### D3FEND Techniques
@@ -50,6 +50,7 @@ This just looks for all executions of regsvr32.exe that have a parent of regsvr3
 
 ```
 index=__your_sysmon_data__ EventCode=1 regsvr32.exe | search ParentImage="*regsvr32.exe" AND Image!="*regsvr32.exe*"
+
 ```
 
 
@@ -65,6 +66,7 @@ regsvr_processes = filter processes where (
   parent_image_path == "*regsvr32.exe" and image_path != "*regsvr32.exe*"
  )
 output regsvr_processes
+
 ```
 
 
@@ -77,6 +79,7 @@ This uses the same logic as above, but adds lightweight baselining by ignoring a
 ```
 index=__your_sysmon_data__ earliest=-d@d latest=now() EventCode=1 regsvr32.exe | search ParentImage="*regsvr32.exe" AND Image!="*regsvr32.exe*" | search NOT [
 search index=__your_sysmon_data__ earliest=-60d@d latest=-30d@d EventCode=1 regsvr32.exe | search ParentImage="*regsvr32.exe" AND Image!="*regsvr32.exe*" | dedup CommandLine | fields CommandLine ]
+
 ```
 
 
@@ -88,6 +91,7 @@ This looks for child processes that may be spawend by regsvr32, while attempting
 
 ```
 index=__your_sysmon_data__ EventCode=1 (ParentImage="C:\\Windows\\System32\\regsvr32.exe" OR ParentImage="C:\\Windows\\SysWOW64\\regsvr32.exe") AND Image!="C:\\Windows\\System32\\regsvr32.exe" AND Image!="C:\\Windows\\SysWOW64\\regsvr32.exe" AND Image!="C:\\WINDOWS\\System32\\regsvr32.exe" AND Image!="C:\\WINDOWS\\SysWOW64\\regsvr32.exe" AND Image!="C:\\Windows\\SysWOW64\\WerFault.exe" AND Image!="C:\\Windows\\System32\\wevtutil.exe" AND Image!="C:\\Windows\\System32\\WerFault.exe"|stats values(ComputerName) as "Computer Name" values(ParentCommandLine) as "Parent Command Line" count(Image) as ImageCount by Image
+
 ```
 
 
@@ -108,6 +112,7 @@ regsvr_processes = filter processes where (
   image_path != "C:\Windows\System32\wevtutil.exe"
  )
 output regsvr_processes
+
 ```
 
 
@@ -118,7 +123,8 @@ This looks for unsigned images that may be loaded by regsvr32, while attempting 
 
 
 ```
-index=__your_sysmon_data__ EventCode=7 (Image="C:\\Windows\\System32\\regsvr32.exe" OR Image="C:\\Windows\\SysWOW64\\regsvr32.exe") Signed=false ImageLoaded!="C:\\Program Files*" ImageLoaded!="C:\\Windows\\*"|stats values(ComputerName) as "Computer Name" count(ImageLoaded) as ImageLoadedCount by ImageLoaded    
+index=__your_sysmon_data__ EventCode=7 (Image="C:\\Windows\\System32\\regsvr32.exe" OR Image="C:\\Windows\\SysWOW64\\regsvr32.exe") Signed=false ImageLoaded!="C:\\Program Files*" ImageLoaded!="C:\\Windows\\*"|stats values(ComputerName) as "Computer Name" count(ImageLoaded) as ImageLoadedCount by ImageLoaded
+
 ```
 
 
@@ -132,11 +138,12 @@ This is a pseudocode version of the above Splunk query for loading unsigned imag
 modules = search Module:Load
 unsigned_modules = filter modules where (
   (image_path == "C:\Windows\System32\regsvr32.exe" or image_path == "C:\Windows\SysWOW64\regsvr32.exe") and
-  signer == null and 
+  signer == null and
   module_path != "C:\Program Files*" and
   module_path != "C:\Windows\*"
 )
 output unsigned_modules
+
 ```
 
 

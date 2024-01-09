@@ -39,4 +39,12 @@ fields:
     example: 1533
   - name: signature_valid
     description: Boolean indicator of whether the driver is signed and whether the signature is current and not revoked
-    example: True
+    example: true
+coverage_map:
+  load:
+    fqdn: ["sysmon_13"]
+    image_path: ["sysmon_13"]
+    pid: ["sysmon_13"]
+    sha256_hash: ["sysmon_13"]
+    signature_valid: ["sysmon_13"]
+    signer: ["sysmon_13"]

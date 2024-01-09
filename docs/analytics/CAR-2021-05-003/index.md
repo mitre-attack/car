@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: Splunk Threat Research <research@splunk.com>
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 This search looks for flags passed to bcdedit.exe modifications to the built-in Windows error recovery boot configurations. This is typically used by ransomware to prevent recovery.
 
 
@@ -51,6 +50,7 @@ processes = search Process:Create
 bcdedit_commands = filter processes where (
   exe = "C:\Windows\System32\bcdedit.exe" AND command_line="*recoveryenabled*" )
 output bcedit_commands
+
 ```
 
 

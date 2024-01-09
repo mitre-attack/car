@@ -3,7 +3,6 @@
 '''
 Author: Jose Hernandez <research@splunk.com>
 Purpose: Convert Splunk Security Content detections to CAR analytics
-
 '''
 
 import argparse
@@ -63,11 +62,11 @@ def generate_car_object(detection_yaml, car_id, DETECTION_PATH):
 
 def mitre_attack_object(technique, attack):
     mitre_attack = dict()
-    mitre_attack['technique'] = technique.id
+    mitre_attack['technique'] = technique.external_references[0].external_id
     # process tactics
     tactics = []
     for tactic in technique.tactics:
-        tactics.append(tactic.id)
+        tactics.append(tactic.external_references[0].external_id)
     mitre_attack['tactics'] = tactics
     mitre_attack['coverage'] = 'Moderate'
 
@@ -76,12 +75,12 @@ def mitre_attack_object(technique, attack):
 def get_mitre_enrichment_new(attack, mitre_attack_id):
     for technique in attack.enterprise.techniques:
         if '.' in mitre_attack_id:
-            for subtechnique in technique.subtechniques:
-                if mitre_attack_id == subtechnique.id:
+            for subtechnique in technique.techniques:
+                if mitre_attack_id == subtechnique.external_references[0].external_id:
                     mitre_attack = mitre_attack_object(subtechnique, attack)
                     return mitre_attack
 
-        elif mitre_attack_id == technique.id:
+        elif mitre_attack_id == technique.external_references[0].external_id:
             mitre_attack = mitre_attack_object(technique, attack)
             return mitre_attack
     return []

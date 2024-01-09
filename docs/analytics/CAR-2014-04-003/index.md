@@ -8,13 +8,13 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 [PowerShell](https://attack.mitre.org/techniques/T1059/001/) is a scripting environment included with Windows that is used by both attackers and administrators. Execution of PowerShell scripts in most Windows versions is opaque and not typically secured by antivirus which makes using PowerShell an easy way to circumvent security measures. This analytic detects execution of PowerShell scripts.
 
 Powershell can be used to hide monitored command line execution such as:
 -   `net use`
 -   `sc start`
+
 
 
 ### ATT&CK Detections
@@ -53,6 +53,7 @@ Look for versions of `PowerShell` that were not launched interactively.
 process = search Process:Create
 powershell = filter process where (exe == "powershell.exe" AND parent_exe != "explorer.exe" )
 output powershell
+
 ```
 
 
@@ -63,6 +64,7 @@ Splunk version of the above pseudocode.
 
 ```
 index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\*\\powershell.exe" ParentImage!="C:\\Windows\\explorer.exe"|stats values(CommandLine) as "Command Lines" values(ParentImage) as "Parent Images" by ComputerName
+
 ```
 
 
@@ -74,6 +76,7 @@ EQL version of the above pseudocode.
 ```
 process where subtype.create and
   (process_name == "powershell.exe" and parent_process_name != "explorer.exe")
+
 ```
 
 
@@ -84,6 +87,7 @@ DNIF version of the above pseudocode.
 
 ```
 _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=powershell.exe NOT $ParentProcess=regex(.*explorer.exe.*)i limit 30
+
 ```
 
 
@@ -94,6 +98,7 @@ LogPoint version of the above pseudocode.
 
 ```
 norm_id=WindowsSysmon event_id=1 image="*\powershell.exe" -parent_image="C:\Windows\explorer.exe"
+
 ```
 
 

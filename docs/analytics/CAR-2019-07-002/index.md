@@ -8,13 +8,13 @@ analytic_type: TTP
 contributors: Kaushal Parikh/Cyware Labs, Tony Lambert/Red Canary, MITRE
 applicable_platforms: Windows
 ---
-
-
-[ProcDump](https://docs.microsoft.com/en-us/sysinternals/downloads/procdump) is a sysinternal command-line utility whose primary purpose is monitoring an application for CPU spikes and generating crash dumps during a spike that an administrator or developer can use to determine the cause of the spike. 
+<br><br>
+[ProcDump](https://docs.microsoft.com/en-us/sysinternals/downloads/procdump) is a sysinternal command-line utility whose primary purpose is monitoring an application for CPU spikes and generating crash dumps during a spike that an administrator or developer can use to determine the cause of the spike.
 
 ProcDump may be used to dump the memory space of lsass.exe to disk for processing with a credential access tool such as Mimikatz. This is performed by launching procdump.exe as a privileged user with command line options indicating that lsass.exe should be dumped to a file with an arbitrary name.
 
 Note - the CAR data model currently does not support process access actions, so the pseudocode implementation is based around process creates.
+
 
 
 ### ATT&CK Detections
@@ -55,6 +55,7 @@ procdump_lsass = filter processes where (
   exe = "procdump*.exe"  and
   command_line = "*lsass*")
 output procdump_lsass
+
 ```
 
 
@@ -66,6 +67,7 @@ A Splunk/Sysmon version of the above pseudocode.
 
 ```
 index=__your_sysmon_index__ EventCode=1 Image="*\\procdump*.exe" CommandLine="*lsass*"
+
 ```
 
 
@@ -84,6 +86,7 @@ A related Splunk search, which instead of looking for process create events look
 
 ```
 index=__your_sysmon_index__ EventCode=10 TargetImage="C:\\WINDOWS\\system32\\lsass.exe" GrantedAccess="0x1FFFFF" ("procdump")
+
 ```
 
 
@@ -94,13 +97,14 @@ A [Sigma Version](https://github.com/Neo23x0/sigma/blob/master/rules/windows/sys
 
 
 
-#### Logpoint
+#### Logpoint, LogPoint native
 
 LogPoint version of the above pseudocode.
 
 
 ```
 norm_id=WindowsSysmon event_id=1 image="*\procdump*.exe" command="*lsass*"
+
 ```
 
 
@@ -112,5 +116,6 @@ norm_id=WindowsSysmon event_id=1 image="*\procdump*.exe" command="*lsass*"
 1. Open a Windows Command Prompt or PowerShell instance.
 2. Navigate to folder containing ProcDump.
 3. Execute procdump.exe -ma lsass.exe lsass_dump
+
 
 

@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 An adversary can remotely [manipulate the registry](https://attack.mitre.org/techniques/T1112) of another machine if the RemoteRegistry service is enabled and valid credentials are obtained. While the registry is remotely accessed, it can be used to prepare a [Lateral Movement](https://attack.mitre.org/tactics/TA0008) technique, [discover](https://attack.mitre.org/tactics/TA0007) the configuration of a host, achieve [Persistence](https://attack.mitre.org/tactics/TA0003), or anything that aids an adversary in achieving the mission. Like most ATT&CK techniques, this behavior can be used legitimately, and the reliability of an analytic depends on the proper identification of the pre-existing legitimate behaviors. Although this behavior is disabled in many Windows configurations, it is possible to [remotely enable](https://attack.mitre.org/techniques/T1569/002) the RemoteRegistry service, which can be detected with [CAR-2014-03-005](../CAR-2014-03-005).
 
 Remote access to the registry can be achieved via
@@ -19,6 +18,7 @@ Remote access to the registry can be achieved via
 -   graphically via `regedit.exe`
 
 All of these behaviors call into the Windows API, which uses the NamedPipe `WINREG` over SMB to handle the protocol information. This network can be decoded with wireshark or a similar sensor, and can also be detected by hooking the API function.
+
 
 
 ### ATT&CK Detections
@@ -56,6 +56,7 @@ winreg = filter flows where (dest_port == 445 and proto_info.pipe == "WINREG")
 winreg_modify = filter flows where (proto_info.function == "Create*" or proto_info.function == "SetValue*")
 
 output winreg_modify
+
 ```
 
 

@@ -79,7 +79,7 @@ fields:
     example: "{f81d4fae-7dec-11d0-a765-00a0c91e6bf6}"
   - name: signature_valid
     description: Boolean indicator of whether signature is current and not revoked.
-    example: True
+    example: true
   - name: target_guid
     description: Global Unique Identifier for the target process (only for process access events).
   - name: target_pid
@@ -93,3 +93,27 @@ fields:
   - name: uid
     description: User ID under which original process is running.
     example: 509
+coverage_map:
+  access:
+    access_level: ["sysmon_13"]
+    call_trace: ["sysmon_13"]
+    fqdn: ["sysmon_13"]
+    guid: ["sysmon_13"]
+    image_path: ["sysmon_13"]
+    pid: ["sysmon_13"]
+    sid: ["sysmon_13"]
+    target_guid: ["sysmon_13"]
+    target_pid: ["sysmon_13"]
+    target_name: ["sysmon_13"]
+  create:
+    command_line: ["sysmon_13"]
+    current_working_directory: ["sysmon_13"]
+    fqdn: ["sysmon_13"]
+    image_path: ["sysmon_13"]
+    integrity_level: ["sysmon_13"]
+    parent_command_line: ["sysmon_13"]
+    parent_guid: ["sysmon_13"]
+    pid: ["sysmon_13"]
+    ppid: ["sysmon_13"]
+    sha256_hash: ["sysmon_13"]
+    sid: ["sysmon_13"]

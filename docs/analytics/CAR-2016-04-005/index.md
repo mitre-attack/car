@@ -8,8 +8,7 @@ analytic_type: Situational Awareness
 contributors: MITRE/NSA
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 A remote desktop logon, through [RDP](https://attack.mitre.org/techniques/T1021/001), may be typical of a system administrator or IT support, but only from select workstations. Monitoring remote desktop logons and comparing to known/approved originating systems can detect lateral movement of an adversary.
 
 
@@ -51,7 +50,7 @@ Look in the system logs for remote logons using RDP.
 
 
 
-#### Logpoint
+#### Logpoint, LogPoint native
 
 LogPoint version of the above pseudocode.
 

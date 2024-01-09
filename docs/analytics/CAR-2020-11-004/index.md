@@ -8,9 +8,9 @@ analytic_type: TTP
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Adversaries may start legitimate processes and then use their memory space to run malicious code. This analytic looks for common Windows processes that have been abused this way in the past; when the processes are started for this purpose they may not have the standard parent that we would expect. This list is not exhaustive, and it is possible for cyber actors to avoid this discepency. These signatures only work if Sysmon reports the parent process, which may not always be the case if the parent dies before sysmon processes the event.
+
 
 
 ### ATT&CK Detections
@@ -60,6 +60,7 @@ mismatch_processes = filter processes where ( parent_exe exists AND
   (exe="taskhostw.exe" AND (parent_exe!="services.exe" AND parent_exe!="svchost.exe")) OR
   (exe="userinit.exe" AND (parent_exe!="dwm.exe" AND parent_exe!="winlogon.exe"))
 output mismatch_processes
+
 ```
 
 
@@ -82,6 +83,7 @@ Looks for processes that do not have the expected parent. Common Splunk forwarde
 (Image="C:\\Windows\\System32\\taskhost.exe" AND (ParentImage!="C:\\Windows\\System32\\services.exe" AND ParentImage!="C:\\Windows\\System32\\svchost.exe")) OR
 (Image="C:\\Windows\\System32\\taskhostw.exe" AND (ParentImage!="C:\\Windows\\System32\\services.exe" AND ParentImage!="C:\\Windows\\System32\\svchost.exe")) OR
 (Image="C:\\Windows\System32\\userinit.exe" AND (ParentImage!="C:\\Windows\\System32\\dwm.exe" AND ParentImage!="C:\\Windows\\System32\\winlogon.exe")))
+
 ```
 
 
@@ -92,13 +94,14 @@ Looks for processes that do not have the expected parent. Unique environments ma
 
 
 ```
-norm_id=WindowsSysmon event_id=1 -parent_image="?" ((image="*\smss.exe" (-parent_image="*\smss.exe" -parent_image="*\System")) OR 
-(image="*\csrss.exe" (-parent_image="*\smss.exe" -parent_image="*\svchost.exe")) OR (image="*\wininit.exe" -parent_image="*\smss.exe") OR 
-(image="*\winlogon.exe" -parent_image="*\smss.exe") OR (image="*\lsass.exe"  (-parent_image="*\wininit.exe"  -parent_image="*\winlogon.exe")) OR 
-(image="*\LogonUI.exe"  (-parent_image="*\winlogon.exe"  -parent_image="*\wininit.exe")) OR (image="*\services.exe"  -parent_image="*\wininit.exe") OR 
-(image="*\spoolsv.exe"  -parent_image="*\services.exe") OR (image="*\taskhost.exe"  (-parent_image="*\services.exe"  -parent_image="*\svchost.exe")) OR 
-(image="*\taskhostw.exe"  (-parent_image="*\services.exe"  -parent_image="*\svchost.exe")) OR 
+norm_id=WindowsSysmon event_id=1 -parent_image="?" ((image="*\smss.exe" (-parent_image="*\smss.exe" -parent_image="*\System")) OR
+(image="*\csrss.exe" (-parent_image="*\smss.exe" -parent_image="*\svchost.exe")) OR (image="*\wininit.exe" -parent_image="*\smss.exe") OR
+(image="*\winlogon.exe" -parent_image="*\smss.exe") OR (image="*\lsass.exe"  (-parent_image="*\wininit.exe"  -parent_image="*\winlogon.exe")) OR
+(image="*\LogonUI.exe"  (-parent_image="*\winlogon.exe"  -parent_image="*\wininit.exe")) OR (image="*\services.exe"  -parent_image="*\wininit.exe") OR
+(image="*\spoolsv.exe"  -parent_image="*\services.exe") OR (image="*\taskhost.exe"  (-parent_image="*\services.exe"  -parent_image="*\svchost.exe")) OR
+(image="*\taskhostw.exe"  (-parent_image="*\services.exe"  -parent_image="*\svchost.exe")) OR
 (image="*\userinit.exe"  (-parent_image="*\dwm.exe"  -parent_image="*\winlogon.exe")))
+
 ```
 
 

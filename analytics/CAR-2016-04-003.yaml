@@ -1,3 +1,4 @@
+---
 title: User Activity from Stopping Windows Defensive Services
 submission_date: 2016/04/15
 information_domain: Host
@@ -10,7 +11,7 @@ analytic_types:
 contributors:
   - MITRE/NSA
 id: CAR-2016-04-003
-description: |-
+description: |
   Spyware and malware remain a serious problem and Microsoft developed security services, Windows Defender and Windows Firewall, to combat this threat. In the event Windows Defender or Windows Firewall is turned off, administrators should correct the issue immediately to prevent the possibility of infection or further infection and investigate to determine if caused by crash or user manipulation.
 
   Stopping services events are Windows Event Code 7036.
@@ -23,19 +24,19 @@ coverage:
     coverage: Low
 implementations:
   - description: Windows Event code 7036 from the System log identifies if a service has stopped or started. This analytic looks for "Windows Defender" or "Windows Firewall" that has stopped.
-    code: |-
+    code: |
       log_name == "System" AND
       event_code == "7036"
       param1 in ["Windows Defender", "Windows Firewall"] AND
       param2 == "stopped"
     type: pseudocode
   - description: LogPoint version of the above pseudocode.
-    code: |-
+    code: |
       norm_id=WinServer channel="System" event_id=7036 param1 in ["Windows Defender", "Windows Firewall"] param2="stopped"
     type: LogPoint
-    data_mode: LogPoint native
+    data_model: LogPoint native
 unit_tests:
-  - configurations: 
+  - configurations:
       - Windows 7
     description: From an administrative user powershell console, run the Stop-Service command.
     commands:
@@ -45,4 +46,3 @@ d3fend_mappings:
   - iri: d3f:SystemDaemonMonitoring
     id: D3-SDM
     label: System Daemon Monitoring
-

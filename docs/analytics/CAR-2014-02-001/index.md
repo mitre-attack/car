@@ -8,13 +8,13 @@ analytic_type: Situational Awareness, TTP
 contributors: MITRE
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 Adversaries may modify the binary file for an existing service to achieve [Persistence](https://attack.mitre.org/tactics/TA0003) while potentially [evading defenses](https://attack.mitre.org/tactics/TA0005). If a newly created or modified runs as a service, it may indicate APT activity. However, services are frequently installed by legitimate software. A well-tuned baseline is essential to differentiating between benign and malicious service modifications.
 
 ### Output Description
 
 The Service Name and approximate time in which changes occurred on each host
+
 
 
 ### ATT&CK Detections
@@ -59,12 +59,13 @@ file_change = search File:Create,Modify
 process = search Process:Create
 service_process = filter processes where (parent_exe == "services.exe")
 modified_service = join (search, filter) where (
- file_change.time < service_process.time and 
+ file_change.time < service_process.time and
  file_change.file_path == service_process.image_path
 )
 
 modified_service = filter modified_service where (modified_service.file_change.image_path not in legitimate_installers)
 output modified_service
+
 ```
 
 

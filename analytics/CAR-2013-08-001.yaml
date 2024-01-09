@@ -1,3 +1,4 @@
+---
 title: Execution with schtasks
 submission_date: 2013/08/07
 information_domain: Host
@@ -20,18 +21,18 @@ coverage:
     coverage: Moderate
 implementations:
   - description: 'Look for instances of `schtasks.exe` running as processes. The `command_line` field is necessary to disambiguate between types of schtasks commands. These include the flags `/create`, `/run`, `/query`, `/delete`, `/change`, and `/end`.'
-    code: |-
+    code: |
       process = search Process:Create
       schtasks = filter process where (exe == "schtasks.exe")
       output schtasks
     type: pseudocode
   - description: DNIF version of the above pseudocode.
-    code: |-
+    code: |
       _fetch * from event where $LogName=WINDOWS-SYSMON AND $EventID=1 AND $App=schtasks.exe AND $Process=regex(.*(\/create|\/run|\/query|\/delete|\/change|\/end).*)i limit 100
     type: DNIF
     data_model: Sysmon native
   - description: LogPoint version of the above pseudocode.
-    code: |-
+    code: |
       norm_id=WindowsSysmon event_id=1 image="*\schtasks.exe" command IN ["*/create*", "*/run*", "*/query*", "*/delete*", "*/change*", "*/end*"]
     type: LogPoint
     data_model: LogPoint native
@@ -41,7 +42,7 @@ data_model_references:
 unit_tests:
   - configurations:
       - Windows 7
-    description: |-
+    description: |
       Create a new scheduled task with schtasks.exe and verify the analytic fires when the task executes.
       * From an admin account, open Windows command prompt (right click, run as administrator)
       * Execute `schtasks /Create /SC ONCE /ST 19:00 /TR C:\Windows\System32\calc.exe /TN calctask`, substituting a time in the near future for 19:00

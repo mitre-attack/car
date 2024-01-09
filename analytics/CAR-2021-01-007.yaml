@@ -11,7 +11,7 @@ analytic_types:
 contributors:
   - Cyware Labs
 id: CAR-2021-01-007
-description: |-
+description: |
   In an attempt to avoid detection after compromising a machine, threat actors often try to disable Windows Defender. This is often done using “sc” [service control], a legitimate tool provided by Microsoft for managing services. This action interferes with event detection and may lead to a security event going undetected, thereby potentially leading to further compromise of the network.
 coverage:
   - technique: T1562
@@ -21,21 +21,21 @@ coverage:
     tactics:
       - TA0005
 implementations:
-- name: Splunk search - Detecting Tampering of Windows Defender Command Prompt
-  description:  This query looks for the specific use of service control for querying or trying to stop Windows Defender.
-  code: |-
-    index= __your_sysmon__index__ EventCode=1 Image = "C:\\Windows\\System32\\sc.exe"  | regex CommandLine="^sc\s*(config|stop|query)\sWinDefend$"
-  data_model: Sysmon native
-  type: Splunk
-- name: Splunk search - Detecting Tampering of Windows Defender Command Prompt
-  description:  This query looks for the specific use of service control for querying or trying to stop Windows Defender.
-  code: |-
-    processes = search Process:Create
-    target_processes = filter processes where (
-                       (exe="C:\\Windows\\System32\\sc.exe") AND (command_line="sc *config*" OR command_line="sc *stop*" OR command_line="sc *query*")
-                       )
-    output target_processes
-  type: pseudocode
+  - name: Splunk search - Detecting Tampering of Windows Defender Command Prompt
+    description: This query looks for the specific use of service control for querying or trying to stop Windows Defender.
+    code: |
+      index= __your_sysmon__index__ EventCode=1 Image = "C:\\Windows\\System32\\sc.exe"  | regex CommandLine="^sc\s*(config|stop|query)\sWinDefend$"
+    data_model: Sysmon native
+    type: Splunk
+  - name: Splunk search - Detecting Tampering of Windows Defender Command Prompt
+    description: This query looks for the specific use of service control for querying or trying to stop Windows Defender.
+    code: |
+      processes = search Process:Create
+      target_processes = filter processes where (
+                         (exe="C:\\Windows\\System32\\sc.exe") AND (command_line="sc *config*" OR command_line="sc *stop*" OR command_line="sc *query*")
+                         )
+      output target_processes
+    type: pseudocode
 data_model_references:
   - process/create/command_line
 d3fend_mappings:

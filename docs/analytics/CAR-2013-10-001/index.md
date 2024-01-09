@@ -8,8 +8,7 @@ analytic_type: Situational Awareness
 contributors: MITRE
 applicable_platforms: Windows, Linux, macOS
 ---
-
-
+<br><br>
 Monitoring logon and logoff events for hosts on the network is very important for situational awareness. This information can be used as an indicator of unusual activity as well as to corroborate activity seen elsewhere.
 
 Could be applied to a number of different types of monitoring depending on what information is desired. Some use cases include monitoring for all remote connections and building login timelines for users.
@@ -18,6 +17,7 @@ Logon events are Windows Event Code 4624 for Windows Vista and above, 518 for pr
 ### Output Description
 
 The time of login events for distinct users on individual systems
+
 
 
 ### ATT&CK Detections
@@ -51,6 +51,7 @@ logon_events = search User_Session:Login
 filtered_logons = filter logon_events where (
   user NOT IN TOP30(user))
 output filtered_logons
+
 ```
 
 
@@ -62,6 +63,7 @@ Splunk version of the above pseudocode. NOTE - this is liable to be quite noisy 
 
 ```
 index=__your_win_event_log_index__ EventCode=4624|search NOT [search index=__your_win_event_log_index__ EventCode=4624|top 30 Account_Name|table Account_Name]
+
 ```
 
 
@@ -76,6 +78,7 @@ _fetch * from event where $LogName=WINDOWS-NXLOG-AUDIT AND $SubSystem=AUTHENTICA
 >>_store in_disk david_test win_top_30 stack_replace
 >>_fetch * from event where $LogName=WINDOWS-NXLOG-AUDIT AND $SubSystem=AUTHENTICATION AND $Action=LOGIN limit 10000
 >>_checkif lookup david_test win_top_30 join $ScopeID = $ScopeID str_compare $User eq $User exclude
+
 ```
 
 

@@ -1,3 +1,4 @@
+---
 title: DLL Injection via Load Library
 submission_date: 2013/10/07
 information_domain: Host
@@ -10,7 +11,7 @@ analytic_types:
 contributors:
   - MITRE
 id: CAR-2013-10-002
-description: |-
+description: |
   Microsoft Windows allows for processes to remotely create threads within other processes of the same privilege level. This functionality is provided via the Windows API [CreateRemoteThread](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682437.aspx). Both Windows and third-party software use this ability for legitimate purposes. For example, the Windows process [csrss.exe](https://en.wikipedia.org/wiki/Client/Server_Runtime_Subsystem) creates threads in programs to send signals to registered callback routines. Both adversaries and host-based security software use this functionality to [inject DLLs](https://attack.mitre.org/techniques/T1055), but for very different purposes. An adversary is likely to inject into a program to [evade defenses](https://attack.mitre.org/tactics/TA0005) or [bypass User Account Control](https://attack.mitre.org/techniques/T1548/002), but a security program might do this to gain increased monitoring of API calls. One of the most common methods of [DLL Injection](https://attack.mitre.org/techniques/T1055) is through the Windows API [LoadLibrary](https://msdn.microsoft.com/en-us/library/windows/desktop/ms684175.aspx).
 
   -   Allocate memory in the target program with [VirtualAllocEx](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366890.aspx)
@@ -33,7 +34,7 @@ coverage:
     coverage: Moderate
 implementations:
   - description: 'Search for remote thread creations that start at LoadLibraryA or LoadLibraryW. Depending on the tool, it may provide additional information about the DLL string that is an argument to the function. If there is any security software that legitimately injects DLLs, it must be carefully whitelisted. '
-    code: |-
+    code: |
       remote_thread = search Thread:RemoteCreate
       remote_thread = filter (start_function == "LoadLibraryA" or start_function == "LoadLibraryW")
       remote_thread = filter (src_image_path != "C:\Path\To\TrustedProgram.exe")
@@ -41,7 +42,7 @@ implementations:
       output remote_thread
     type: pseudocode
   - description: LogPoint version of the above pseudocode.
-    code: |-
+    code: |
       norm_id=WindowsSysmon event_id=8 start_function IN ["LoadLibraryA", "LoadLibraryW"] -source_image="C:\Path\To\TrustedProgram.exe"
     type: LogPoint
     data_model: LogPoint native

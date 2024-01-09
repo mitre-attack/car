@@ -8,9 +8,9 @@ analytic_type: TTP
 contributors: Cyware Labs
 applicable_platforms: Windows
 ---
-
-
+<br><br>
 In an attempt to avoid detection after compromising a machine, threat actors often try to disable Windows Defender. This is often done using “sc” [service control], a legitimate tool provided by Microsoft for managing services. This action interferes with event detection and may lead to a security event going undetected, thereby potentially leading to further compromise of the network.
+
 
 
 ### ATT&CK Detections
@@ -46,6 +46,7 @@ This query looks for the specific use of service control for querying or trying 
 
 ```
 index= __your_sysmon__index__ EventCode=1 Image = "C:\\Windows\\System32\\sc.exe"  | regex CommandLine="^sc\s*(config|stop|query)\sWinDefend$"
+
 ```
 
 
@@ -61,6 +62,7 @@ target_processes = filter processes where (
                    (exe="C:\\Windows\\System32\\sc.exe") AND (command_line="sc *config*" OR command_line="sc *stop*" OR command_line="sc *query*")
                    )
 output target_processes
+
 ```
 
 

@@ -8,9 +8,9 @@ analytic_type: TTP
 contributors: Olaf Hartong
 applicable_platforms: Windows
 ---
+<br><br>
+Adversaries may schedule software to run whenever a user logs into the system; this is done to establish persistence and sometimes for lateral movement. This trigger is established through the registry key HKEY_CURRENT_USER\Environment*UserInitMprLogonScript*. This signature looks edits to existing keys or creation of new keys in that path. Users purposefully adding benign scripts to this path will result in false positives; that case is rare, however. There are other ways of running a script at startup or login that are not covered in this signature. Note that this signature overlaps with the Windows Sysinternals Autoruns tool, which would also show changes to this registry path.
 
-
-Adversaries may schedule software to run whenever a user logs into the system; this is done to establish persistence and sometimes for lateral movement. This trigger is established through the registry key HKEY_CURRENT_USER\Environment*UserInitMprLogonScript*. This signature looks edits to existing keys or creation of new keys in that path. Users purposefully adding benign scripts to this path will result in false positives; that case is rare, however. There are other ways of running a script at startup or login that are not covered in this signature. Note that this signature overlaps with the Windows Sysinternals Autoruns tool, which would also show changes to this registry path.  
 
 
 ### ATT&CK Detections
@@ -55,6 +55,7 @@ registry = search (Registry:Add OR Registry:Edit)
 registry_logon_key_events = filter registry where (
   key = "*\Environment*UserInitMprLogonScript")
 output (logon_script_key_processes, registry_logon_key_events)
+
 ```
 
 
@@ -66,6 +67,7 @@ Look for commands for adding a logon script as a registry value, as well as dire
 
 ```
 (index=__your_sysmon_index__ EventCode=1 Image="C:\\Windows\\System32\\reg.exe" CommandLine="*add*\\Environment*UserInitMprLogonScript") OR (index=__your_sysmon_index__ (EventCode=12 OR EventCode=14 OR EventCode=13) TargetObject="*\\Environment*UserInitMprLogonScript")
+
 ```
 
 
@@ -77,6 +79,7 @@ Look for commands for adding a logon script as a registry value, as well as dire
 
 ```
 norm_id=WindowsSysmon ((event_id=1 image="C:\Windows\System32\reg.exe" command="*add*\Environment*UserInitMprLogonScript") OR (event_id IN [12, 13, 14] target_object="*\Environment*UserInitMprLogonScript"))
+
 ```
 
 

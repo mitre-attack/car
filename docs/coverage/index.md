@@ -1,7 +1,8 @@
 ---
     title: Analytic Coverage Comparison
     ---
-
+Generated on: December 30, 2022
+=======
     Generated on: January 08, 2024
 
     A cross-walk of CAR, [Sigma](https://github.com/SigmaHQ/sigma), [Elastic Detection](https://github.com/elastic/detection-rules), and [Splunk Security Content](https://github.com/splunk/security_content/tree/develop/detections) rules in terms of their coverage of ATT&CK Techniques and Sub-techniques. Note that some analytics may have coverage for multiple techniques, so there is not necessarily a 1:1 correlation between the number of hits in this table for a technique/sub-technique and the number of analytics in each repository. The below table is current as of the Generated On date at the top of this page.
@@ -14,8 +15,17 @@
 
     This table is sortable, so feel free to click on any column to sort by its values. Clicking on each of the CAR/Sigma/ES/Splunk results will search the corresponding repository for the analytics that contain coverage for the technique/sub-technique. 
 
-    This data is also available as:
+    This data is also available 
+* A [CSV file](/coverage/analytic_coverage_12_30_2022.csv).
+* Separate ATT&CK Navigator Layers:
+   * [CAR Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/car_analytic_coverage_12_30_2022.json).
+   * [Sigma Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/es_analytic_coverage_12_30_2022.json).
+   * [ES Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/es_analytic_coverage_12_30_2022.json).
+   * [Splunk Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/splunk_analytic_coverage_12_30_2022.json).
 
+<script type="text/javascript" src="/assets/sort-table.js"></script>
+<table class="js-sort-table" id="coverage-sort">
+=======
     * A [CSV file](/coverage/analytic_coverage_01_08_2024.csv).
     * Separate ATT&CK Navigator Layers:
     * [CAR Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/car_analytic_coverage_01_08_2024.json).
@@ -24,7 +34,7 @@
     * [Splunk Analytic Coverage](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/mitre-attack/car/master/docs/coverage/splunk_analytic_coverage_01_08_2024.json).
 
     <script type="text/javascript" src="/assets/sort-table.js"></script>
-    <table class="js-sort-table" id="coverage-sort">
+    <table class="js-sort-table" id="coverage-so
             <thead>
             <tr>
                 <th style="white-space:nowrap;">Technique ID</th>

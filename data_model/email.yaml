@@ -1,6 +1,6 @@
 ---
 name: Email
-description: Email events are at the email server level.
+description: Email events are at the mail server level.
 actions:
   - name: deliver
     description: The event corresponding to an email being sent to an end recipient.
@@ -16,7 +16,7 @@ fields:
   - name: action_reason
     description: The rationale given for blocking, redirecting, or quarantining an email.
     example: "Malformed Message"
-  - name:  attachment_name
+  - name: attachment_name
     description: Filename of any email attachment that may exist.
     example: "cuddly-cats.pdf"
   - name: attachment_size
@@ -75,20 +75,3 @@ fields:
   - name: to
     description: the content of the To field in the email header; does not necessarily match up with real recipients.
     example: "adam@example.com"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

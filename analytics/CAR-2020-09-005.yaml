@@ -11,40 +11,40 @@ analytic_types:
 contributors:
   - Olaf Hartong
 id: CAR-2020-09-005
-description: |-
-  Adversaries may establish persistence and/or elevate privileges by executing malicious content triggered by AppInit DLLs loaded into processes. Dynamic-link libraries (DLLs) that are specified in the AppInit_DLLs value in the Registry keys `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Windows` or `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows` are loaded by user32.dll into every process that loads user32.dll. These values can be abused to obtain elevated privileges by causing a malicious DLL to be loaded and run in the context of separate processes. Accordingly, this analytic looks for modifications to these registry keys that may be indicative of this type of abuse. 
+description: |
+  Adversaries may establish persistence and/or elevate privileges by executing malicious content triggered by AppInit DLLs loaded into processes. Dynamic-link libraries (DLLs) that are specified in the AppInit_DLLs value in the Registry keys `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Windows` or `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows` are loaded by user32.dll into every process that loads user32.dll. These values can be abused to obtain elevated privileges by causing a malicious DLL to be loaded and run in the context of separate processes. Accordingly, this analytic looks for modifications to these registry keys that may be indicative of this type of abuse.
 coverage:
   - technique: T1546
     coverage: Moderate
-    subtechniques: 
+    subtechniques:
       - T1546.010
-    tactics: 
+    tactics:
       - TA0003
       - TA0004
 implementations:
-- name: Pseudocode - AppInit DLL registry modification
-  description: This is a pseudocode representation of the below splunk search.
-  code: |- 
-    registry_keys = search (Registry:Create AND Registry:Remove AND Registry:Edit) 
-    appinit_keys = filter registry_keys where (
-      key = "*\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls\*" OR 
-      key = "*\SOFTWARE\\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls\*""
-      )
-    output clsid_keys
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk search - AppInit DLL registry modification
-  description: This Splunk search looks for any registry keys that were created, deleted, or renamed, as well as any registry values that were set or renamed under the Windows AppInit DLL registry keys.
-  code: |- 
-    index=__your_sysmon_index__ (EventCode=12 OR EventCode=13 OR EventCode=14) (TargetObject="*\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\Appinit_Dlls\\*" OR TargetObject="*\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\Appinit_Dlls\\*")
-  data_model: Sysmon native
-  type: Splunk
-- name: LogPoint search - AppInit DLL registry modification
-  description: This LogPoint search looks for any registry keys that were created, deleted, or renamed, as well as any registry values that were set or renamed under the Windows AppInit DLL registry keys.
-  code: |- 
-    norm_id=WindowsSysmon event_id IN [12, 13, 14] target_object IN ["*\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls\*", "*\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls\*"]
-  data_model: LogPoint native
-  type: LogPoint
+  - name: Pseudocode - AppInit DLL registry modification
+    description: This is a pseudocode representation of the below splunk search.
+    code: |
+      registry_keys = search (Registry:Create AND Registry:Remove AND Registry:Edit)
+      appinit_keys = filter registry_keys where (
+        key = "*\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls\*" OR
+        key = "*\SOFTWARE\\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls\*""
+        )
+      output clsid_keys
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk search - AppInit DLL registry modification
+    description: This Splunk search looks for any registry keys that were created, deleted, or renamed, as well as any registry values that were set or renamed under the Windows AppInit DLL registry keys.
+    code: |
+      index=__your_sysmon_index__ (EventCode=12 OR EventCode=13 OR EventCode=14) (TargetObject="*\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\Appinit_Dlls\\*" OR TargetObject="*\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\Appinit_Dlls\\*")
+    data_model: Sysmon native
+    type: Splunk
+  - name: LogPoint search - AppInit DLL registry modification
+    description: This LogPoint search looks for any registry keys that were created, deleted, or renamed, as well as any registry values that were set or renamed under the Windows AppInit DLL registry keys.
+    code: |
+      norm_id=WindowsSysmon event_id IN [12, 13, 14] target_object IN ["*\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls\*", "*\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls\*"]
+    data_model: LogPoint native
+    type: LogPoint
 data_model_references:
   - registry/add/key
   - registry/remove/key

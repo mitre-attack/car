@@ -1,3 +1,4 @@
+---
 title: Outlier Parents of Cmd
 submission_date: 2014/11/06
 information_domain: Host
@@ -11,10 +12,10 @@ analytic_types:
 contributors:
   - MITRE
 id: CAR-2014-11-002
-description: |-
+description: |
   Many programs create command prompts as part of their normal operation including malware used by attackers. This analytic attempts to identify suspicious programs spawning `cmd.exe` by looking for programs that do not normally create `cmd.exe`.
 
-  While this analytic does not take the user into account, doing so could generate further interesting results. 
+  While this analytic does not take the user into account, doing so could generate further interesting results.
   It is very common for some programs to spawn cmd.exe as a subprocess, for example to run batch files or windows commands. However many process don’t routinely launch a command prompt – for example Microsoft Outlook. A command prompt being launched from a process that normally doesn’t launch command prompts could be the result of malicious code being injected into that process, or of an attacker replacing a legitimate program with a malicious one.
 
 
@@ -31,7 +32,7 @@ coverage:
     coverage: Moderate
 implementations:
   - description: 'Create a baseline of parents of `cmd.exe` seen over the last 30 days and a list of parents of `cmd.exe` seen today. Remove parents in the baseline from parents seen today, leaving a list of new parents.'
-    code: |-
+    code: |
       processes = search Process:Create
       cmd = filter processes where (exe == "cmd.exe")
       cmd = from cmd select parent_exe

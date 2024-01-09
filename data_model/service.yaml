@@ -43,3 +43,16 @@ fields:
   - name: uid
     description: The ID of SID of the user who acted on the service
     example: S-1-5-18
+coverage_map:
+  create:
+    command_line: ["autoruns_13.98"]
+    exe: ["autoruns_13.98"]
+    fqdn: ["autoruns_13.98"]
+    hostname: ["autoruns_13.98"]
+    image_path: ["autoruns_13.98"]
+  delete:
+    command_line: ["autoruns_13.98"]
+    exe: ["autoruns_13.98"]
+    fqdn: ["autoruns_13.98"]
+    hostname: ["autoruns_13.98"]
+    image_path: ["autoruns_13.98"]

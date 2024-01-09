@@ -1,0 +1,14 @@
+---
+name: str()
+description: str()
+actions: list(include('action'))
+fields: list(include('field'))
+coverage: map(map(str(), key=str()), key=str(), required=False)
+---
+action:
+  name: str()
+  description: str()
+field:
+  name: str()
+  description: str()
+  example: subset(any(), allow_empty=True)

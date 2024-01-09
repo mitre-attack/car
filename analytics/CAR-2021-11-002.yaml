@@ -1,3 +1,4 @@
+---
 title: Registry Edit with Modification of Userinit, Shell or Notify
 submission_date: 2021/11/28
 information_domain: Host
@@ -11,7 +12,7 @@ analytic_types:
 contributors:
   - Lucas Heiligenstein
 id: CAR-2021-11-002
-description: |-
+description: |
   Detection of modification of the registry key values of `Notify`, `Userinit`, and `Shell` located in `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\` and `HKEY_LOCAL_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\`. When a user logs on, the Registry key values of `Notify`, `Userinit` and `Shell` are used to load dedicated Windows component. Attackers may insert malicious payload following the legitimate value to launch a malicious payload.
 coverage:
   - technique: T1547
@@ -28,7 +29,7 @@ coverage:
 implementations:
   - name: Userinit/Shell/Notify Registry Modifications
     description: This detects logon registry key modification, either via a new process (command line) or direct registry manipulation.
-    code: |- 
+    code: |
       processes = search Process:create
       logon_reg_processes = filter processes where command_line CONTAINS("*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*") AND (command_line CONTAINS("*Userinit*") OR command_line CONTAINS("*Shell*") OR command_line CONTAINS("*Notify*")) AND (((command_line CONTAINS("*reg*") OR command_line CONTAINS("*add*") OR command_line CONTAINS("*/d*")) OR (command_line CONTAINS("*Set-ItemProperty*") OR command_line CONTAINS("*New-ItemProperty*") OR command_line CONTAINS("*-value*"))))
       reg_keys = search Registry:value_edit
@@ -38,26 +39,26 @@ implementations:
     type: Pseudocode
   - name: Splunk Search - Modification of Userinit, Shell or Notify
     description: This is a Splunk representation of the above pseudocode.
-    code: |- 
+    code: |
       (((((EventCode="4688" OR EventCode="1") ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR ((CommandLine="*Set-ItemProperty*" OR CommandLine="*New-ItemProperty*") CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*" (CommandLine="*Userinit*" OR CommandLine="*Shell*" OR CommandLine="*Notify*")) OR ((EventCode="4657") (ObjectValueName="Userinit" OR ObjectValueName="Shell" OR ObjectValueName="Notify"))) OR ((EventCode="13") (TargetObject="*Userinit" OR TargetObject="*Shell" OR TargetObject="*Notify"))))
     type: Splunk
   - name: Elastic Search - Modification of Userinit, Shell or Notify
     description: This is an ElasticSearch representation of the above pseudocode.
-    code: |- 
+    code: |
       (((EventCode:("4688" OR "1") AND ((process.command_line:*reg* AND process.command_line:*add* AND process.command_line:*\/d*) OR (process.command_line:(*Set\-ItemProperty* OR *New\-ItemProperty*) AND process.command_line:*\-value*)) AND process.command_line:*\\Microsoft\\Windows\ NT\\CurrentVersion\\Winlogon* AND process.command_line:(*Userinit* OR *Shell* OR *Notify*)) OR (EventCode:"4657" AND winlog.event_data.ObjectValueName:("Userinit" OR "Shell" OR "Notify"))) OR (EventCode:"13" AND winlog.event_data.TargetObject:(*Userinit OR *Shell OR *Notify)))
     type: Elastic
   - name: LogPoint Search - Modification of Userinit, Shell or Notify
     description: This is a LogPoint representation of the above pseudocode.
-    code: |- 
+    code: |
       (((EventCode IN ["4688", "1"] ((CommandLine="*reg*" CommandLine="*add*" CommandLine="*/d*") OR (CommandLine IN ["*Set-ItemProperty*", "*New-ItemProperty*"] CommandLine="*-value*")) CommandLine="*\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*" CommandLine IN ["*Userinit*", "*Shell*", "*Notify*"]) OR (EventCode IN "4657" ObjectValueName IN ["Userinit", "Shell", "Notify"])) OR (EventCode IN "13" TargetObject IN ["*Userinit", "*Shell", "*Notify"]))
     type: LogPoint
 unit_tests:
-- description: Modification on Registry Key with cmd. Calc.exe will be launched when user will login
-  commands:
-  - reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Userinit /d C:\Windows\system32\userinit.exe,C:\Windows\system32\calc.exe
-- description: Modification on Registry Key with Powershell. Calc.exe will be launched when user will login
-  commands:
-  - Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" -Name Userinit -Value C:\Windows\system32\userinit.exe,C:\Windows\system32\calc.exe
+  - description: Modification on Registry Key with cmd. Calc.exe will be launched when user will login
+    commands:
+      - reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Userinit /d C:\Windows\system32\userinit.exe,C:\Windows\system32\calc.exe
+  - description: Modification on Registry Key with Powershell. Calc.exe will be launched when user will login
+    commands:
+      - Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" -Name Userinit -Value C:\Windows\system32\userinit.exe,C:\Windows\system32\calc.exe
 data_model_references:
   - process/create/command_line
   - registry/add/key

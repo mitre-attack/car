@@ -1,5 +1,5 @@
 ---
-name: User Sesssion
+name: User Session
 description: User sessions are the user activities undertaken on the computer in the course of conducting standard user actions.
 actions:
   - name: lock
@@ -42,5 +42,4 @@ fields:
     example: S-1-5-18
   - name: login_successful
     description: Boolean indicator of whether a login attempt was successful
-    example: False
-
+    example: false

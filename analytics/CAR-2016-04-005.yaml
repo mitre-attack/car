@@ -1,3 +1,4 @@
+---
 title: Remote Desktop Logon
 submission_date: 2016/04/19
 information_domain: Host
@@ -32,7 +33,7 @@ implementations:
     code: |-
       norm_id=WinServer event_id=4624 package="Negotiate" log_level="INFO" logon_type=10
     type: LogPoint
-    data_mode: LogPoint native
+    data_model: LogPoint native
 d3fend_mappings:
   - iri: d3f:RemoteTerminalSessionDetection
     id: D3-RTSD

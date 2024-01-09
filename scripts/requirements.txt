@@ -1,11 +1,11 @@
-certifi==2020.12.5
+certifi==2022.12.7
 chardet==4.0.0
 fire==0.3.1
 idna==2.10
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 pendulum==1.2.5
-Pillow==9.0.1
+Pillow==9.3.0
 pyattck==3.0.1
 pyfiglet==0.8.post1
 python-dateutil==2.8.1
@@ -17,3 +17,5 @@ six==1.15.0
 termcolor==1.1.0
 tzlocal==2.1
 urllib3==1.26.5
+yamale==4.0.4
+yamllint==1.29.0

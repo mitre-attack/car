@@ -1,6 +1,6 @@
 ---
 name: Authentication
-description: Authentication events occur whenever a user attempts to login to a system, or a user or process attempts to access a privileged system resource.
+description: An authentication event occurs whenever a user or process attempts to access a privileged system resource. Examples include logging into a system, or elevating privilege.
 actions:
   - name: success
     description: The event corresponding to an authentication service responding positively to an authentication request.
@@ -12,7 +12,7 @@ fields:
   - name: app_name
     description: Name of the application that made the authentication request
     example: ssh, win:local
-  - name:  method
+  - name: method
     description: The authentication method that was used.
     example: SMAL, Kerberos
   - name: auth_service
@@ -66,4 +66,3 @@ fields:
   - name: target_user
     description: Name of the user being authenticated; this only pertains to privilage escalation events where the current user is not necessarily the same as the target user.
     example: HOST1\LOCALUSER2
-

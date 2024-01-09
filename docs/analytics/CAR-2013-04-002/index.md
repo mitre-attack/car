@@ -8,8 +8,7 @@ analytic_type: TTP
 contributors: MITRE
 applicable_platforms: Windows, Linux, macOS
 ---
-
-
+<br><br>
 Certain commands are frequently used by malicious actors and infrequently used by normal users. By looking for execution of these commands in short periods of time, we can not only see when a malicious user was on the system but also get an idea of what they were doing.
 
   Commands of interest:
@@ -60,7 +59,7 @@ The host on which the commands were executed, the time of execution, and what co
 |[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|[Services Registry Permissions Weakness](https://attack.mitre.org/techniques/T1574/011/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)|Low|
 |[Remote System Discovery](https://attack.mitre.org/techniques/T1018/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
 |[System Services](https://attack.mitre.org/techniques/T1569/)|[Service Execution](https://attack.mitre.org/techniques/T1569/002/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Low|
-|[Scheduled Task/Job](https://attack.mitre.org/techniques/T1053/)|[At (Windows)](https://attack.mitre.org/techniques/T1053/002/), [Scheduled Task](https://attack.mitre.org/techniques/T1053/005/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Execution](https://attack.mitre.org/tactics/TA0002/)|Low|
+|[Scheduled Task/Job](https://attack.mitre.org/techniques/T1053/)|[At](https://attack.mitre.org/techniques/T1053/002/), [Scheduled Task](https://attack.mitre.org/techniques/T1053/005/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Execution](https://attack.mitre.org/tactics/TA0002/)|Low|
 |[Scheduled Transfer](https://attack.mitre.org/techniques/T1029/)|N/A|[Exfiltration](https://attack.mitre.org/tactics/TA0010/)|Low|
 |[System Owner/User Discovery](https://attack.mitre.org/techniques/T1033/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
 |[System Service Discovery](https://attack.mitre.org/techniques/T1007/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
@@ -69,7 +68,7 @@ The host on which the commands were executed, the time of execution, and what co
 |[System Network Configuration Discovery](https://attack.mitre.org/techniques/T1016/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
 |[Application Window Discovery](https://attack.mitre.org/techniques/T1010/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
 |[Software Discovery](https://attack.mitre.org/techniques/T1518/)|[Security Software Discovery](https://attack.mitre.org/techniques/T1518/001/)|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
-|[Network Service Scanning](https://attack.mitre.org/techniques/T1046/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
+|[Network Service Discovery](https://attack.mitre.org/techniques/T1046/)|N/A|[Discovery](https://attack.mitre.org/tactics/TA0007/)|Low|
 |[Impair Defenses](https://attack.mitre.org/techniques/T1562/)|[Disable or Modify Tools](https://attack.mitre.org/techniques/T1562/001/), [Indicator Blocking](https://attack.mitre.org/techniques/T1562/006/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Low|
 |[Account Manipulation](https://attack.mitre.org/techniques/T1098/)|N/A|[Credential Access](https://attack.mitre.org/tactics/TA0006/)|Low|
 |[Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059/)|[Visual Basic](https://attack.mitre.org/techniques/T1059/005/)|[Execution](https://attack.mitre.org/tactics/TA0002/)|Moderate|

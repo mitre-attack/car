@@ -90,7 +90,42 @@ fields:
     example: 0644 (linux) or NTFS ACL
   - name: signature_valid
     description: Boolean indicator of whether the signature is valid; empty if file is not signed.
-    example: True
+    example: true
   - name: uid
     description: The user ID or SID for the acting entity.
     example: S-1-5-18
+coverage_map:
+  create:
+    company: ["autoruns_13.98", "sysmon_13"]
+    creation_time: ["autoruns_13.98", "sysmon_13"]
+    file_name: ["autoruns_13.98"]
+    file_path: ["sysmon_13"]
+    fqdn: ["autoruns_13.98", "sysmon_13"]
+    hostname: ["autoruns_13.98"]
+    image_path: ["sysmon_13"]
+    md5_hash: ["autoruns_13.98"]
+    pid: ["sysmon_13"]
+    signer: ["sysmon_13"]
+  delete:
+    fqdn: ["sysmon_13"]
+    image_path: ["sysmon_13"]
+    pid: ["sysmon_13"]
+    uid: ["sysmon_13"]
+  modify:
+    company: ["autoruns_13.98"]
+    creation_time: ["autoruns_13.98"]
+    file_name: ["autoruns_13.98"]
+    fqdn: ["autoruns_13.98"]
+    hostname: ["autoruns_13.98"]
+    md5_hash: ["autoruns_13.98"]
+    sha256_hash: ["autoruns_13.98"]
+    signature_valid: ["autoruns_13.98"]
+    signer: ["autoruns_13.98"]
+  timestomp:
+    creation_time: ["sysmon_13"]
+    file_path: ["sysmon_13"]
+    fqdn: ["sysmon_13"]
+    image_path: ["sysmon_13"]
+    pid: ["sysmon_13"]
+    previous_creation_time: ["sysmon_13"]
+    uid: ["sysmon_13"]

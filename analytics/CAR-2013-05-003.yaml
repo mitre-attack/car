@@ -1,3 +1,4 @@
+---
 title: SMB Write Request
 submission_date: 2013/05/13
 information_domain: 'Host, Network'
@@ -35,7 +36,7 @@ coverage:
       - T1078.003
     coverage: Moderate
 implementations:
-  - code: |-
+  - code: |
       flow = search Flow:Message
       smb_write = filter flow where (dest_port == "445" and protocol == "smb.write")
       smb_write.file_name = smb_write.proto_info.file_name

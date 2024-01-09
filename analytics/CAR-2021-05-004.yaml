@@ -1,14 +1,15 @@
+---
 title: BITS Job Persistence
 submission_date: 2021/05/11
 information_domain: Analytic
 platforms:
-- Windows
+  - Windows
 subtypes:
-- Process
+  - Process
 analytic_types:
-- TTP
+  - TTP
 contributors:
-- Splunk Threat Research <research@splunk.com>
+  - Splunk Threat Research <research@splunk.com>
 id: CAR-2021-05-004
 description: The following query identifies Microsoft Background Intelligent Transfer
   Service utility `bitsadmin.exe` scheduling a BITS job to persist on an endpoint.
@@ -18,48 +19,48 @@ description: The following query identifies Microsoft Background Intelligent Tra
   to be used to upload files and this may require further network data analysis to
   identify. You can use `bitsadmin /list /verbose` to list out the jobs during investigation.
 coverage:
-- technique: T1197
-  tactics:
-  - TA0005
-  - TA0003
-  coverage: Moderate
+  - technique: T1197
+    tactics:
+      - TA0005
+      - TA0003
+    coverage: Moderate
 implementations:
-- name: Pseudocode – detect a BITS job being scheduled
-  description: Pseudocode implementation of the splunk search below
-  code: |- 
-      processes = search Process:Create
-      bitsadmin_commands = filter processes where (
-        exe ="C:\Windows\System32\bitsadmin.exe" AND command_line includes one of [*create*, *addfile*, *setnotifyflags*, *setnotifycmdline*, *setminretrydelay*, *setcustomheaders*,*resume*])
-      output bitsadmin_commands
-  data_model: CAR native
-  type: Pseudocode
-- name: Splunk code
-  description: To successfully implement this search you need to be ingesting information
-    on process that include the name of the process responsible for the changes from
-    your endpoints into the `Endpoint` datamodel in the `Processes` node.
-  code: '| tstats count min(_time) as firstTime max(_time) as lastTime from datamodel=Endpoint.Processes
-    where Processes.process_name=bitsadmin.exe Processes.process IN (*create*, *addfile*,
-    *setnotifyflags*, *setnotifycmdline*, *setminretrydelay*, *setcustomheaders*,
-    *resume* ) by Processes.dest Processes.user Processes.parent_process Processes.process_name
-    Processes.process Processes.process_id Processes.parent_process_id'
-  type: Splunk
-  data_model: Endpoint
+  - name: Pseudocode – detect a BITS job being scheduled
+    description: Pseudocode implementation of the splunk search below
+    code: |
+        processes = search Process:Create
+        bitsadmin_commands = filter processes where (
+          exe ="C:\Windows\System32\bitsadmin.exe" AND command_line includes one of [*create*, *addfile*, *setnotifyflags*, *setnotifycmdline*, *setminretrydelay*, *setcustomheaders*,*resume*])
+        output bitsadmin_commands
+    data_model: CAR native
+    type: Pseudocode
+  - name: Splunk code
+    description: To successfully implement this search you need to be ingesting information
+      on process that include the name of the process responsible for the changes from
+      your endpoints into the `Endpoint` datamodel in the `Processes` node.
+    code: '| tstats count min(_time) as firstTime max(_time) as lastTime from datamodel=Endpoint.Processes
+      where Processes.process_name=bitsadmin.exe Processes.process IN (*create*, *addfile*,
+      *setnotifyflags*, *setnotifycmdline*, *setminretrydelay*, *setcustomheaders*,
+      *resume* ) by Processes.dest Processes.user Processes.parent_process Processes.process_name
+      Processes.process Processes.process_id Processes.parent_process_id'
+    type: Splunk
+    data_model: Endpoint
 unit_tests:
-- configurations:
-  - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
-  description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1197/atomic_red_team/windows-sysmon.log)  using
-    the Splunk attack range with the commands below
-  commands:
-  - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
-- configurations:
-  - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
-  description: execute the atomic test [T1197](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1197)
-    against a Windows target.
-  commands:
-  - Invoke-AtomicTest T1197
+  - configurations:
+      - Using Splunk [Attack Range](https://github.com/splunk/attack_range)
+    description: Replay the detection [dataset](https://media.githubusercontent.com/media/splunk/attack_data/master/datasets/attack_techniques/T1197/atomic_red_team/windows-sysmon.log) using
+      the Splunk attack range with the commands below
+    commands:
+      - python attack_range.py replay -dn data_dump [--dump NAME_OF_DUMP]
+  - configurations:
+      - Using [Invoke-AtomicRedTeam](https://github.com/redcanaryco/invoke-atomicredteam)
+    description: execute the atomic test [T1197](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1197)
+      against a Windows target.
+    commands:
+      - Invoke-AtomicTest T1197
 data_model_references:
-- process/create/exe
-- process/create/command_line
+  - process/create/exe
+  - process/create/command_line
 d3fend_mappings:
   - iri: d3f:ProcessSpawnAnalysis
     id: D3-PSA

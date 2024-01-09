@@ -12,12 +12,12 @@ fields:
   - name: pid
     description: ID of the process that acted on the socket
     example: 3930
-  - name:  image_path
+  - name: image_path
     description: Path to the executable that initiated the socket event.
     example: C:/user/adam/malware.exe
   - name: success
     description: Boolean indicator of whether the socket event was successful (e.g. the socket was created as requested)
-    example: True
+    example: true
   - name: family
     description: The type of socket in question
     example: AF_UNIX, AF_INET, AF_INET6
@@ -39,20 +39,31 @@ fields:
   - name: local_path
     description: In the case that a socket is used for local interprocess communication, the socket binds to a local filepath, and will usually be visible in the filesystem. This is the case with AF_UNIX type sockets.
     example: "/tmp/foo"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+coverage_map:
+  bind:
+    family: ["osquery_4.6.0"]
+    image_path: ["osquery_4.6.0"]
+    local_address: ["osquery_4.6.0"]
+    local_port: ["osquery_4.6.0"]
+    pid: ["osquery_4.6.0"]
+    protocol: ["osquery_4.6.0"]
+    remote_address: ["osquery_4.6.0"]
+    remote_port: ["osquery_4.6.0"]
+  listen:
+    family: ["osquery_4.6.0"]
+    image_path: ["osquery_4.6.0"]
+    local_address: ["osquery_4.6.0"]
+    local_port: ["osquery_4.6.0"]
+    pid: ["osquery_4.6.0"]
+    protocol: ["osquery_4.6.0"]
+    remote_address: ["osquery_4.6.0"]
+    remote_port: ["osquery_4.6.0"]
+  close:
+    family: ["osquery_4.6.0"]
+    image_path: ["osquery_4.6.0"]
+    local_address: ["osquery_4.6.0"]
+    local_port: ["osquery_4.6.0"]
+    pid: ["osquery_4.6.0"]
+    protocol: ["osquery_4.6.0"]
+    remote_address: ["osquery_4.6.0"]
+    remote_port: ["osquery_4.6.0"]
