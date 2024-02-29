@@ -90,17 +90,19 @@ def generateSensorsForAnalytics(analytics, sensor_dict):
 
 # Get all analytics and load as list of dicts
 analytics_files = glob.glob(path.join(path.dirname(__file__), "..", "analytics", "*.yaml"))
-with open(analytic_file) as af:
-  analytic_data = yaml.safe_load(af)
-analytics.append(analytic_data)
+for analytic_file in analytics_files:
+  with open(analytic_file) as af:
+    analytic_data = yaml.safe_load(af)
+  analytics.append(analytic_data)
 #analytics = [yaml.load(open(analytic_file).read()) for analytic_file in analytics_files]
 
 # Get all sensor mappings and load as a list of dicts
 mapping_files = glob.glob(path.join(path.dirname(__file__), "..", "sensors", "*.yaml"))
 print("detected the following sensors: {}".format(str(mapping_files)))
-with open(mapping_file, encoding='utf-8') as mf:
-  mapping_data = yaml.safe_load(mf)
-mappings.append(mapping_data)
+for mapping_file in mapping_files:
+  with open(mapping_file, encoding='utf-8') as mf:
+    mapping_data = yaml.safe_load(mf)
+  mappings.append(mapping_data)
 #mappings = [yaml.load(open(mapping_file,encoding='utf-8').read()) for mapping_file in mapping_files]
 
 # Get all data models and load as list of dicts
