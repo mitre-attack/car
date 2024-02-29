@@ -3,7 +3,7 @@ title: Welcome to the Cyber Analytics Repository
 ---
 The MITRE Cyber Analytics Repository (CAR) is a knowledge base of analytics developed by [MITRE](https://www.mitre.org) based on the [MITRE ATT&CK](https://attack.mitre.org/) adversary model. CAR defines a data model that is leveraged in its pseudocode representations, but also includes implementations directly targeted at specific tools (e.g., Splunk, EQL) in its analytics. With respect to coverage, CAR is focused on providing a set of validated and well-explained analytics, in particular with regards to their operating theory and rationale.
 
-If you want to start exploring, try viewing the [Full Analytic List](analytics). Also, check out the [ATT&CK Navigator layer](https://mitre-attack.github.io/attack-navigator/enterprise/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcar_attack%2Fcar_attack.json) that captures the current set of ATT&CK tactics and techniques covered by CAR.
+If you want to start exploring, try viewing the [Full Analytic List](analytics). Also, check out the [ATT&CK Navigator layer](https://mitre-attack.github.io/attack-navigator/#layerURL=https%3A%2F%2Fraw.githubusercontent.com%2Fmitre-attack%2Fcar%2Fmaster%2Fdocs%2Fcar_attack%2Fcar_attack.json) that captures the current set of ATT&CK tactics and techniques covered by CAR.
 
 Analytics stored in CAR contain the following information:
 * a *hypothesis* which explains the idea behind the analytic
