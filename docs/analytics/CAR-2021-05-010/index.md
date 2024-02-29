@@ -47,7 +47,7 @@ Pseudocode implementation of the Splunk search below
 ```
 processes = search Process:Create
 certutil_downloads = filter processes where (
-  (exe = C:\Windows\System32\net.exe OR exe = C:\Windows\System32\net1.exe ) AND command_line = * -exportPFX * )
+  (exe = C:\Windows\System32\net.exe OR exe = C:\Windows\System32\net1.exe ) AND (command_line = *localgroup* OR command_line = */add* OR command_line = *user* ))
 output certutil_downloads
 
 ```
