@@ -22,7 +22,9 @@ analytics_files = glob.glob(path.join(path.dirname(__file__), "..", "analytics",
 analytics = []
 for af in analytics_files:
     print("appending {}".format(af))
-    analytics.append(yaml.load(open(af,encoding='utf-8').read()))
+    with open(af, encoding='utf-8') as f:
+        analytic_data = yaml.safe_load(f)
+    analytics.append(analytic_data)
 #analytics = [yaml.load(open(analytic_file).read()) for analytic_file in analytics_files]
 
 # Load ATT&CK content, which is needed to get names for technique IDs
