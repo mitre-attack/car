@@ -9,14 +9,18 @@ import sys
 from os import path, makedirs
 
 # Static ATT&CK Navigator layer JSON fields
-VERSION = "3.0"
+VERSION = "4.5"
 NAME = "CAR ATT&CK"
 DESCRIPTION = "CAR Analytics ATT&CK Coverage"
 DOMAIN = "mitre-enterprise"
 
 # Base ATT&CK Navigator layer
 layer_json = {
-        "version": VERSION,
+        "versions": {
+          "layer": VERSION,
+          "attack": "14",
+          "navigator": "4.9.4"
+        },
         "name": NAME,
         "description": DESCRIPTION,
         "domain": DOMAIN,
