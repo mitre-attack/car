@@ -95,7 +95,10 @@ analytics = [yaml.load(open(analytic_file).read()) for analytic_file in analytic
 # Get all sensor mappings and load as a list of dicts
 mapping_files = glob.glob(path.join(path.dirname(__file__), "..", "sensors", "*.yaml"))
 print("detected the following sensors: {}".format(str(mapping_files)))
-mappings = [yaml.load(open(mapping_file,encoding='utf-8').read()) for mapping_file in mapping_files]
+with open(mapping_file, encoding='utf-8') as mf:
+  mapping_data = yaml.safe_load(mf)
+mappings.append(mapping_data)
+#mappings = [yaml.load(open(mapping_file,encoding='utf-8').read()) for mapping_file in mapping_files]
 
 # Get all data models and load as list of dicts
 data_model_files = glob.glob(path.join(path.dirname(__file__), "..", "data_model", "*.yaml"))
