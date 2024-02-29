@@ -112,7 +112,10 @@ data_model_files = glob.glob(path.join(path.dirname(__file__), "..", "data_model
 data_models = []
 for dmf in data_model_files:
     print("working on {}".format(dmf))
-    data_models.append(yaml.load(open(dmf).read()))
+    with open(dmf) as d:
+      data_files = yaml.safe_load(d)
+    data_models.append(data_files)
+    #data_models.append(yaml.load(open(dmf).read()))
 #data_models = [yaml.load(open(data_model_file).read()) for data_model_file in data_model_files]
 
 # Parse each analytic to find its data model references (if any)
