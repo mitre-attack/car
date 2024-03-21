@@ -14,15 +14,6 @@ Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Wi
 
 ## Data Model Coverage
 
-### [registry](../data_model/registry)
-
-| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
-|---|---|---|---|---|---|---|---|---|---|---|
-| `add` | ✓|✓|✓|✓| |✓| | |✓| |✓|
-| `key_edit` | ✓|✓|✓|✓| |✓|✓| |✓| |✓|
-| `remove` |  | | | | | | | | | | |
-| `value_edit` | ✓|✓|✓|✓| |✓|✓| |✓| |✓|
-
 ### [service](../data_model/service)
 
 | | `command_line` | `exe` | `fqdn` | `hostname` | `image_path` | `name` | `pid` | `ppid` | `uid` | `user` |
@@ -44,6 +35,15 @@ Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Wi
 | `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `timestomp` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+
+### [registry](../data_model/registry)
+
+| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `add` | ✓|✓|✓|✓| |✓| | |✓| |✓|
+| `key_edit` | ✓|✓|✓|✓| |✓|✓| |✓| |✓|
+| `remove` |  | | | | | | | | | | |
+| `value_edit` | ✓|✓|✓|✓| |✓|✓| |✓| |✓|
 
 
 
