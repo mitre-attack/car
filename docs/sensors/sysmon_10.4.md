@@ -14,14 +14,17 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 
 ## Data Model Coverage
 
-### [registry](../data_model/registry)
+### [file](../data_model/file)
 
-| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
-|---|---|---|---|---|---|---|---|---|---|---|
-| `add` |  |✓|✓| |✓|✓| |✓| | |✓|
-| `key_edit` |  | | | | | | | | | | |
-| `remove` |  |✓|✓| |✓|✓| |✓| | |✓|
-| `value_edit` |  | | | | | | | | | | |
+| | `company` | `content` | `creation_time` | `extension` | `file_name` | `file_path` | `fqdn` | `gid` | `group` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `owner` | `owner_uid` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `acl_modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `create` |  | |✓| |✓| |✓| | | |✓| | | | | | |✓| | | | | | | | |
+| `delete` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `timestomp` |  | |✓| |✓| |✓| | | |✓| | | | | | |✓| |✓| | | | | | |
+| `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 
 ### [flow](../data_model/flow)
 
@@ -31,19 +34,14 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `message` |  | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `start` |  | | |✓|✓|✓| | | | |✓| | | | |✓| | | |✓|✓|✓|✓| | | |✓|
 
-### [module](../data_model/module)
+### [registry](../data_model/registry)
 
-| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `module_path` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `tid` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `load` |  |✓| |✓|✓| |✓|✓|✓|✓| |✓| |
-| `unload` |  | | | | | | | | | | | | |
-
-### [driver](../data_model/driver)
-
-| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` |
+| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `load` |  |✓| |✓|✓| | |✓|✓| |✓|
-| `unload` |  | | | | | | | | | | |
+| `add` |  |✓|✓| |✓|✓| |✓| | |✓|
+| `key_edit` |  | | | | | | | | | | |
+| `remove` |  |✓|✓| |✓|✓| |✓| | |✓|
+| `value_edit` |  | | | | | | | | | | |
 
 ### [process](../data_model/process)
 
@@ -62,17 +60,19 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `suspend` |  | | | | | | | | | | | | | | |
 | `terminate` |  | | | | | | | | | | | | | | |
 
-### [file](../data_model/file)
+### [module](../data_model/module)
 
-| | `company` | `content` | `creation_time` | `extension` | `file_name` | `file_path` | `fqdn` | `gid` | `group` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `owner` | `owner_uid` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `acl_modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓| |✓| |✓| | | |✓| | | | | | |✓| | | | | | | | |
-| `delete` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `modify` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `timestomp` |  | |✓| |✓| |✓| | | |✓| | | | | | |✓| |✓| | | | | | |
-| `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `module_path` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `tid` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `load` |  |✓| |✓|✓| |✓|✓|✓|✓| |✓| |
+| `unload` |  | | | | | | | | | | | | |
+
+### [driver](../data_model/driver)
+
+| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `load` |  |✓| |✓|✓| | |✓|✓| |✓|
+| `unload` |  | | | | | | | | | | |
 
 
 
