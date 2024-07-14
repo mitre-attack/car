@@ -14,25 +14,6 @@ Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Wi
 
 ## Data Model Coverage
 
-### [registry](../data_model/registry)
-
-| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
-|---|---|---|---|---|---|---|---|---|---|---|
-| `add` | ✓|✓|✓|✓| |✓| | |✓| |✓|
-| `key_edit` | ✓|✓|✓|✓| |✓|✓| |✓| |✓|
-| `remove` |  | | | | | | | | | | |
-| `value_edit` | ✓|✓|✓|✓| |✓|✓| |✓| |✓|
-
-### [service](../data_model/service)
-
-| | `command_line` | `exe` | `fqdn` | `hostname` | `image_path` | `name` | `pid` | `ppid` | `uid` | `user` |
-|---|---|---|---|---|---|---|---|---|---|
-| `create` | ✓|✓|✓|✓|✓|✓| | | | |
-| `delete` | ✓|✓|✓|✓|✓|✓| | | | |
-| `pause` |  | | | | | | | | | |
-| `start` |  | | | | | | | | | |
-| `stop` |  | | | | | | | | | |
-
 ### [file](../data_model/file)
 
 | | `company` | `content` | `creation_time` | `extension` | `file_name` | `file_path` | `fqdn` | `gid` | `group` | `hostname` | `image_path` | `link_target` | `md5_hash` | `mime_type` | `mode` | `owner` | `owner_uid` | `pid` | `ppid` | `previous_creation_time` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `uid` | `user` |
@@ -44,6 +25,25 @@ Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Wi
 | `read` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `timestomp` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `write` |  | | | | | | | | | | | | | | | | | | | | | | | | | |
+
+### [service](../data_model/service)
+
+| | `command_line` | `exe` | `fqdn` | `hostname` | `image_path` | `name` | `pid` | `ppid` | `uid` | `user` |
+|---|---|---|---|---|---|---|---|---|---|
+| `create` | ✓|✓|✓|✓|✓|✓| | | | |
+| `delete` | ✓|✓|✓|✓|✓|✓| | | | |
+| `pause` |  | | | | | | | | | |
+| `start` |  | | | | | | | | | |
+| `stop` |  | | | | | | | | | |
+
+### [registry](../data_model/registry)
+
+| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `add` | ✓|✓|✓|✓| |✓| | |✓| |✓|
+| `key_edit` | ✓|✓|✓|✓| |✓|✓| |✓| |✓|
+| `remove` |  | | | | | | | | | | |
+| `value_edit` | ✓|✓|✓|✓| |✓|✓| |✓| |✓|
 
 
 
