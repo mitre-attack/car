@@ -1,0 +1,8 @@
+LICENSE.txt
+NOTICE.txt
+README.md
+setup.py
+example_pypi.egg-info/PKG-INFO
+example_pypi.egg-info/SOURCES.txt
+example_pypi.egg-info/dependency_links.txt
+example_pypi.egg-info/top_level.txt

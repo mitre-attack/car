@@ -14,6 +14,14 @@ osquery exposes an operating system as a high-performance relational database. T
 
 ## Data Model Coverage
 
+### [process](../data_model/process)
+
+| | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `create` |  | |✓|✓|✓|✓| | | |✓| |✓| | | | |✓|✓|✓|✓| | | | | | | |✓| |
+| `terminate` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+
 ### [flow](../data_model/flow)
 
 | | `application_protocol` | `content` | `dest_fqdn` | `dest_hostname` | `dest_ip` | `dest_port` | `end_time` | `exe` | `fqdn` | `hostname` | `image_path` | `in_bytes` | `network_direction` | `out_bytes` | `packet_count` | `pid` | `ppid` | `proto_info` | `src_fqdn` | `src_hostname` | `src_ip` | `src_port` | `start_time` | `tcp_flags` | `transport_protocol` | `uid` | `user` |
@@ -28,14 +36,6 @@ osquery exposes an operating system as a high-performance relational database. T
 |---|---|---|---|---|---|---|---|---|---|---|
 | `load` |  | | |✓|✓|✓| |✓|✓| | |
 | `unload` |  | | | | | | | | | | |
-
-### [process](../data_model/process)
-
-| | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓|✓|✓|✓| | | |✓| |✓| | | | |✓|✓|✓|✓| | | | | | | |✓| |
-| `terminate` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 
 ### [file](../data_model/file)
 
