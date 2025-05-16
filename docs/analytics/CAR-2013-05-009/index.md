@@ -22,7 +22,7 @@ A list of hashes and the different executables associated with each one
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Rename System Utilities](https://attack.mitre.org/techniques/T1036/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+|[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Rename Legitimate Utilities](https://attack.mitre.org/techniques/T1036/003/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
 ### D3FEND Techniques

@@ -16,7 +16,7 @@ Detection of creation of registry key HKEY_LOCAL_MACHINE\System\CurrentControlSe
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|[DLL Search Order Hijacking](https://attack.mitre.org/techniques/T1574/001/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Medium|
+|[Hijack Execution Flow](https://attack.mitre.org/techniques/T1574/)|[DLL](https://attack.mitre.org/techniques/T1574/001/)|[Persistence](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation](https://attack.mitre.org/tactics/TA0004/), [Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Medium|
 |[Modify Registry](https://attack.mitre.org/techniques/T1112/)|N/A|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Medium|
 
 

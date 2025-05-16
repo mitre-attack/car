@@ -14,14 +14,20 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 
 ## Data Model Coverage
 
-### [registry](../data_model/registry)
+### [module](../data_model/module)
 
-| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
-|---|---|---|---|---|---|---|---|---|---|---|
-| `add` |  |✓|✓| |✓|✓| |✓| | |✓|
-| `key_edit` |  | | | | | | | | | | |
-| `remove` |  |✓|✓| |✓|✓| |✓| | |✓|
-| `value_edit` |  | | | | | | | | | | |
+| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `module_path` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `tid` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `load` |  |✓| |✓|✓| |✓|✓|✓|✓| |✓| |
+| `unload` |  | | | | | | | | | | | | |
+
+### [process](../data_model/process)
+
+| | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| `create` |  | |✓|✓| | |✓| | |✓|✓|✓|✓| | |✓|✓|✓|✓|✓| | | | | | | | |✓|
+| `terminate` |  | | | | | |✓| | |✓| | | | | | |✓| | | | | | | | | | | | |
 
 ### [flow](../data_model/flow)
 
@@ -31,12 +37,14 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 | `message` |  | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | `start` |  | | |✓|✓|✓| | | | |✓| | | | |✓| | | |✓|✓|✓|✓| | | |✓|
 
-### [module](../data_model/module)
+### [registry](../data_model/registry)
 
-| | `base_address` | `fqdn` | `hostname` | `image_path` | `md5_hash` | `module_name` | `module_path` | `pid` | `sha1_hash` | `sha256_hash` | `signature_valid` | `signer` | `tid` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `load` |  |✓| |✓|✓| |✓|✓|✓|✓| |✓| |
-| `unload` |  | | | | | | | | | | | | |
+| | `data` | `fqdn` | `hive` | `hostname` | `image_path` | `key` | `new_content` | `pid` | `type` | `user` | `value` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `add` |  |✓|✓| |✓|✓| |✓| | |✓|
+| `key_edit` |  | | | | | | | | | | |
+| `remove` |  |✓|✓| |✓|✓| |✓| | |✓|
+| `value_edit` |  | | | | | | | | | | |
 
 ### [driver](../data_model/driver)
 
@@ -44,14 +52,6 @@ Sysmon is a freely available program from Microsoft that is provided as part of 
 |---|---|---|---|---|---|---|---|---|---|---|
 | `load` |  |✓| |✓|✓| | |✓|✓| |✓|
 | `unload` |  | | | | | | | | | | |
-
-### [process](../data_model/process)
-
-| | `access_level` | `call_trace` | `command_line` | `current_working_directory` | `env_vars` | `exe` | `fqdn` | `guid` | `hostname` | `image_path` | `integrity_level` | `md5_hash` | `parent_command_line` | `parent_exe` | `parent_guid` | `parent_image_path` | `pid` | `ppid` | `sha1_hash` | `sha256_hash` | `sid` | `signature_valid` | `signer` | `target_address` | `target_guid` | `target_name` | `target_pid` | `uid` | `user` |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| `access` |  | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| `create` |  | |✓|✓| | |✓| | |✓|✓|✓|✓| | |✓|✓|✓|✓|✓| | | | | | | | |✓|
-| `terminate` |  | | | | | |✓| | |✓| | | | | | |✓| | | | | | | | | | | | |
 
 ### [thread](../data_model/thread)
 

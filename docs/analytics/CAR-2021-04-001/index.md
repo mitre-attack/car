@@ -38,7 +38,7 @@ To make sure the rule doesn't miss cases where the executable would be started f
 
 |Technique|Subtechnique(s)|Tactic(s)|Level of Coverage|
 |---|---|---|---|
-|[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Match Legitimate Name or Location](https://attack.mitre.org/techniques/T1036/005/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
+|[Masquerading](https://attack.mitre.org/techniques/T1036/)|[Match Legitimate Resource Name or Location](https://attack.mitre.org/techniques/T1036/005/)|[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)|Moderate|
 
 
 ### D3FEND Techniques
