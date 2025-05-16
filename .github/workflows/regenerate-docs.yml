@@ -1,7 +1,6 @@
 name: Regenerate /docs using the generate_*.py scripts
 
 on:
-  pull_request_target:
   push:
     branches: [master]
 
